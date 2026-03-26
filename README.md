@@ -23,7 +23,10 @@ TLU offloads cognitive load through its advanced "Dark" visualization suite ("Li
 ### 1\. Financial Dynamics & Phase Portraits
 
 Observe the "pulse" of your organization. TLU calculates **Velocity ($v$)** and **Acceleration ($a$)** and so forth of capital (energy) flows, plotting them in 3D phase space to identify stable attractors or chaotic drifts.
-*(Insert: 1\_3\_8\_\_phase\_portrait\_3d.jpg)*
+<img width="2187" height="1335" alt="1_12__network_topology t 00003" src="https://github.com/user-attachments/assets/f418bac3-b032-4983-9121-7cd62080c38c" />
+<img width="2187" height="1335" alt="1_12__network_topology t 00002" src="https://github.com/user-attachments/assets/5e7b7ba6-acea-4a65-9d80-c9c5a7cdf9e5" />
+<img width="2187" height="1335" alt="1_12__network_topology t 00001" src="https://github.com/user-attachments/assets/de605f2e-45c0-475b-b16a-97c7a9e155d3" />
+<img width="2187" height="1335" alt="1_12__network_topology t 00000" src="https://github.com/user-attachments/assets/0e00ce03-5507-4f6b-841b-c4b6f9991eb3" />
 
 ### 2\. Thermodynamic Health Check
 
