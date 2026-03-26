@@ -30,6 +30,7 @@ Observe the "pulse" of your organization. TLU calculates **Velocity ($v$)** and 
 <img width="1666" height="1324" alt="1_3_4__3d_dynamics_viscosity" src="https://github.com/user-attachments/assets/fda0249f-bf17-4288-a1c0-e9934dda2ee8" />
 <img width="1666" height="1324" alt="1_3_5__3d_dynamics_entropy" src="https://github.com/user-attachments/assets/21bc777f-7f61-4846-ba24-0a7df2a77e6e" />
 <img width="1666" height="1324" alt="1_3_6__3d_dynamics_complexity" src="https://github.com/user-attachments/assets/98054228-61d1-4db2-9f2d-f2a154e84243" />
+<img width="1879" height="1537" alt="1_3_8__phase_portrait_3d" src="https://github.com/user-attachments/assets/e6e380a3-2cd8-4402-b727-14842359f2ab" />
 
 ### 2\. Thermodynamic Health Check
 
