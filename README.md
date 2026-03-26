@@ -23,28 +23,30 @@ TLU offloads cognitive load through its advanced "Dark" visualization suite ("Li
 ### 1\. Financial Dynamics & Phase Portraits
 
 Observe the "pulse" of your organization. TLU calculates **Velocity ($v$)** and **Acceleration ($a$)** and so forth of capital (energy) flows, plotting them in 3D phase space to identify stable attractors or chaotic drifts.
-<img width="1666" height="1324" alt="1_3_6__3d_dynamics_complexity" src="https://github.com/user-attachments/assets/98054228-61d1-4db2-9f2d-f2a154e84243" />
-<img width="1666" height="1324" alt="1_3_5__3d_dynamics_entropy" src="https://github.com/user-attachments/assets/21bc777f-7f61-4846-ba24-0a7df2a77e6e" />
-<img width="1666" height="1324" alt="1_3_4__3d_dynamics_viscosity" src="https://github.com/user-attachments/assets/fda0249f-bf17-4288-a1c0-e9934dda2ee8" />
-<img width="1666" height="1324" alt="1_3_3__3d_dynamics_inertia" src="https://github.com/user-attachments/assets/7b84f2a0-86c5-4a79-a918-ce37c413d136" />
-<img width="1666" height="1324" alt="1_3_2__3d_dynamics_acceleration" src="https://github.com/user-attachments/assets/006abbf9-c505-4888-9809-c0908f04226a" />
-<img width="1666" height="1324" alt="1_3_1__3d_dynamics_velocity" src="https://github.com/user-attachments/assets/4a2f33e2-4a1a-460c-b88b-33186868f7f6" />
 
+<img width="1666" height="1324" alt="1_3_1__3d_dynamics_velocity" src="https://github.com/user-attachments/assets/4a2f33e2-4a1a-460c-b88b-33186868f7f6" />
+<img width="1666" height="1324" alt="1_3_2__3d_dynamics_acceleration" src="https://github.com/user-attachments/assets/006abbf9-c505-4888-9809-c0908f04226a" />
+<img width="1666" height="1324" alt="1_3_3__3d_dynamics_inertia" src="https://github.com/user-attachments/assets/7b84f2a0-86c5-4a79-a918-ce37c413d136" />
+<img width="1666" height="1324" alt="1_3_4__3d_dynamics_viscosity" src="https://github.com/user-attachments/assets/fda0249f-bf17-4288-a1c0-e9934dda2ee8" />
+<img width="1666" height="1324" alt="1_3_5__3d_dynamics_entropy" src="https://github.com/user-attachments/assets/21bc777f-7f61-4846-ba24-0a7df2a77e6e" />
+<img width="1666" height="1324" alt="1_3_6__3d_dynamics_complexity" src="https://github.com/user-attachments/assets/98054228-61d1-4db2-9f2d-f2a154e84243" />
 
 ### 2\. Thermodynamic Health Check
 
 Is your organization efficient? We measure **Free Energy ($F$)** and **Entropy ($S$)**. High entropy with low work output indicates "Heat" (dissipative costs/waste) building up in the system.
-<img width="1614" height="976" alt="1_5_3__thermodynamics_ts_diagram" src="https://github.com/user-attachments/assets/2a43d059-5bef-4f0a-afb5-94024d78252b" />
-<img width="1781" height="1030" alt="1_5_2__thermodynamics_energy_stack" src="https://github.com/user-attachments/assets/ae8cdbcd-d984-45a9-bb97-42f1212c2e25" />
+
 <img width="1784" height="1780" alt="1_5_1__thermodynamics_dashboard" src="https://github.com/user-attachments/assets/0c905567-6bb5-45a9-8273-3da58f973dd1" />
+<img width="1781" height="1030" alt="1_5_2__thermodynamics_energy_stack" src="https://github.com/user-attachments/assets/ae8cdbcd-d984-45a9-bb97-42f1212c2e25" />
+<img width="1614" height="976" alt="1_5_3__thermodynamics_ts_diagram" src="https://github.com/user-attachments/assets/2a43d059-5bef-4f0a-afb5-94024d78252b" />
 
 ### 3\. Structural Topology & Stiffness
 
 Visualize the "blood vessels" of your data. TLU's **Structural Stiffness** analysis uses partial correlations to reveal the true rigidity of connections between nodes, unmasking "hidden dependencies."
-<img width="2187" height="1335" alt="1_12__network_topology t 00003" src="https://github.com/user-attachments/assets/f418bac3-b032-4983-9121-7cd62080c38c" />
-<img width="2187" height="1335" alt="1_12__network_topology t 00002" src="https://github.com/user-attachments/assets/5e7b7ba6-acea-4a65-9d80-c9c5a7cdf9e5" />
-<img width="2187" height="1335" alt="1_12__network_topology t 00001" src="https://github.com/user-attachments/assets/de605f2e-45c0-475b-b16a-97c7a9e155d3" />
+
 <img width="2187" height="1335" alt="1_12__network_topology t 00000" src="https://github.com/user-attachments/assets/0e00ce03-5507-4f6b-841b-c4b6f9991eb3" />
+<img width="2187" height="1335" alt="1_12__network_topology t 00001" src="https://github.com/user-attachments/assets/de605f2e-45c0-475b-b16a-97c7a9e155d3" />
+<img width="2187" height="1335" alt="1_12__network_topology t 00002" src="https://github.com/user-attachments/assets/5e7b7ba6-acea-4a65-9d80-c9c5a7cdf9e5" />
+<img width="2187" height="1335" alt="1_12__network_topology t 00003" src="https://github.com/user-attachments/assets/f418bac3-b032-4983-9121-7cd62080c38c" />
 
 ### 4\. Optimal Control (LQR)
 
