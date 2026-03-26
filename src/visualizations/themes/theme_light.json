@@ -1,0 +1,94 @@
+{
+    "theme_name": "light_standard",
+    "mode": "light",
+    "ui_canvas": {
+        "background": "#FFFFFF",
+        "text_primary": "black",
+        "grid_line": "#404040",
+        "zero_line": "#101010",
+        "graph_bg": "lightgray",
+        "graph_edge": "black",
+        "legend_bg": "#F5F5F5",
+        "legend_edge": "#BDBDBD",
+        "data_normal": "tab:blue",
+        "trajectory_line": "darkgray"
+    },
+    "thermodynamics": {
+        "colors": {
+            "gross_activity_U": "tab:blue",
+            "friction_loss_TS": "tab:red",
+            "free_energy_F": "black",
+            "temperature_T": "tab:orange",
+            "entropy_S": "tab:green"
+        },
+        "colormaps": {
+            "volatility_T_map": "magma",
+            "disorder_S_map": "viridis",
+            "inertia_M_map": "viridis",
+            "viscosity_C_map": "magma"
+        }
+    },
+    "kinematics": {
+        "colors": {
+            "velocity_v": "tab:blue",
+            "acceleration_a": "tab:orange",
+            "external_force_F": "tab:red"
+        },
+        "colormaps": {
+            "displacement_delta_map": "coolwarm"
+        }
+    },
+    "control_theory": {
+        "colors": {
+            "optimal_input_u": "tab:blue",
+            "state_error_x": "tab:purple"
+        },
+        "colormaps": {}
+    },
+    "information_geometry": {
+        "colors": {
+            "curvature": "tab:orange",
+            "density": "tab:blue",
+            "stress_outlier": "darkred",
+            "stress_outlier_text": "darkred"
+        },
+        "colormaps": {
+            "distortion_map": "inferno",
+            "density_map": "viridis"
+        }
+    },
+    "forensics": {
+        "colors": {
+            "anomaly_outlier": "darkred",
+            "z_score_shock": "red",
+            "benford_actual": "tab:cyan",
+            "benford_theory": "red"
+        },
+        "colormaps": {
+            "z_score_heatmap": "RdBu_r",
+            "kl_drift_map": "inferno",
+            "z_score_shock_map": "viridis"
+        }
+    },
+    "forensics_cold": {
+        "colors": {
+            "gross_activity_U": "tab:blue",
+            "friction_loss_TS": "tab:red",
+            "free_energy_F": "black",
+            "temperature_T": "tab:orange",
+            "entropy_S": "tab:green"
+        },
+        "colormaps": {}
+    },
+    "topology_and_correlation": {
+        "colors": {
+            "correlation_base": "tab:blue",
+            "correlation_target": "tab:red"
+        },
+        "colormaps": {
+            "network_net_flux": "coolwarm_r",
+            "network_edge_stress": "YlOrRd",
+            "lag_matrix_map": "RdBu_r"
+        }
+    }
+}

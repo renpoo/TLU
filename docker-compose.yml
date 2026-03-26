@@ -1,0 +1,30 @@
+# ==========================================
+# docker-compose.yml
+# TLU System: Local TDD & Orchestration (Mac Optimized)
+# Version: Stream-Pipeline Ready
+# ==========================================
+
+services:
+  tlu-engine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tlu-engine:latest
+    container_name: tlu-engine-dev
+    
+    volumes:
+      # 【Mutable Zone】データ・設定・出力結果（フロントエンドとの接点）
+      # ローカルの相対パスとコンテナ内のパスを完全に同期させる
+      - ./workspace:/app/workspace
+      
+      # 【Immutable Zone】コードとスクリプトも同様にマウント
+      - ./src:/app/src
+      - ./tests:/app/tests
+      - ./bin:/app/bin
+    
+    # 標準ストリームをパイプ経由で受け取るため、コンテナをスリープ状態で常駐させる
+    tty: true
+    stdin_open: true
+    
+    # 作業ディレクトリの指定（すべてのスクリプトの実行起点）
+    working_dir: /app
