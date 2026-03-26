@@ -1,4 +1,4 @@
-# 🌌 Tensor-Link Utility (TLU)
+# Tensor-Link Utility (TLU)
 
 > **"Projecting Domain Complexity into Mathematical Clarity."**
 
@@ -6,7 +6,7 @@ TLU is a high-fidelity mathematical analysis pipeline designed to project transa
 
 -----
 
-## 🏗 System Architecture
+## System Architecture
 
 TLU follows the **Unix Philosophy**: small, specialized filters connected via streams.
 
@@ -16,7 +16,7 @@ TLU follows the **Unix Philosophy**: small, specialized filters connected via st
 
 -----
 
-## 📈 Visual Showcase (Empirical Evidence)
+## Visual Showcase (Empirical Evidence)
 
 TLU offloads cognitive load through its advanced "Dark" visualization suite ("Light" and "Colorblind-safe" color-theme is also available).
 
@@ -42,7 +42,7 @@ Stop guessing. Use **Linear-Quadratic Regulator** theory to calculate the mathem
 
 -----
 
-## 🚀 Quick Start
+## Quick Start
 
 TLU is fully containerized. You can go from zero to a full 3D analysis in minutes.
 
@@ -63,13 +63,13 @@ bash bin/batch_visualize_graphs.sh
 
 -----
 
-## ⚖️ License: AGPL-3.0
+## License: AGPL-3.0
 
 This project is a legacy of mathematical transparency. Under the **AGPL-3.0 license**, we ensure that the core logic remains open and inspectable by the community. If you build upon this engine, the world deserves to see the math.
 
 -----
 
-## 🧙 Built by Renpoo & Google Gemini 3.1 Pro
+## Built by Renpoo & Google Gemini 3.1 Pro
 
 TLU is developed with a strict adherence to **XP (Extreme Programming)** and **TDD (Test-Driven Development)** protocols. Every core mathematical function is verified against theoretical edge cases.
 
