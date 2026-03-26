@@ -74,7 +74,7 @@ bash bin/batch_processing.sh
 bash bin/batch_visualize_graphs.sh
 ```
 
-*(Note: TLU includes a built-in dummy data generator to help you explore the math immediately.)*
+*(Note: TLU "WILL" include a built-in dummy data generator to help you explore the math immediately.)*
 
 -----
 
