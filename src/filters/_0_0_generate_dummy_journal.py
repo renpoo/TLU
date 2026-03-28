@@ -3,7 +3,7 @@
 # _0_0_generate_dummy_journal.py
 # TLU System: Utility & Simulation Layer
 # Category: Dummy Data Generation (Event-Driven Causal Model)
-# Version: 3.0 (Strict SME Business Cycle & Topology)
+# Version: 4.0 (Complex Network & Stable Hub SME Model)
 # ==========================================
 
 import sys
@@ -14,16 +14,8 @@ import datetime
 import numpy as np
 from collections import defaultdict
 
-# --- 厳格なドメイン定義 (SME Chart of Accounts) ---
-# 部門ごとに発生しうる勘定科目を縛る（構造的剛性: Stiffness の源泉）
-DEPT_ACCOUNTS = {
-    "DPT_Sales": ["Sales_Revenue", "Travel_Exp", "Entertainment_Exp"],
-    "DPT_Ops": ["COGS", "Inventory", "Outsourcing_Exp", "Freight_Exp"],
-    "DPT_Admin": ["Cash", "Accounts_Receivable", "Accounts_Payable", "Payroll_Exp", "Rent_Exp", "IT_Exp"]
-}
-
 def setup_argparser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="TLU Event-Driven SME Journal Generator")
+    parser = argparse.ArgumentParser(description="TLU Event-Driven SME Complex Journal Generator")
     parser.add_argument("--months", type=int, default=24, help="生成する期間（月数）")
     parser.add_argument("--seed", type=int, default=42, help="乱数シード")
     return parser
@@ -43,17 +35,13 @@ def generate_stream(args):
     total_days = args.months * 30 
     
     global_entry_count = 1
-    
-    # イベントキュー: { day_index: [ task_function, ... ] }
-    # 未来の取引（売掛金の回収など）をスケジュールする
-    event_queue = defaultdict(list)
+    event_queue = defaultdict(list) # 未来のイベントをスケジュール
     
     writer = csv.writer(sys.stdout)
     writer.writerow(["Entry_ID", "Trans_Date", "Account_Name", "Dept_Name", "Debit", "Credit", "Memo"])
 
-    # --- 季節変動（サイン波）のベース ---
-    # 売上は年間を通じて波がある（例：夏と冬にピーク）
-    seasonal_wave = (np.sin(np.linspace(0, 4 * np.pi, total_days)) + 1) / 2 # 0.0 ~ 1.0
+    # 季節変動波形
+    seasonal_wave = (np.sin(np.linspace(0, 4 * np.pi, total_days)) + 1) / 2
 
     for day in range(total_days):
         current_date = start_date + datetime.timedelta(days=day)
@@ -61,7 +49,7 @@ def generate_stream(args):
         daily_entries = []
 
         # --------------------------------------------------
-        # 1. 予約されたイベント（過去の因果）の実行
+        # 1. イベントキューの消化（過去の因果・粘性の発現）
         # --------------------------------------------------
         if day in event_queue:
             for task in event_queue[day]:
@@ -70,73 +58,105 @@ def generate_stream(args):
             del event_queue[day]
 
         # --------------------------------------------------
-        # 2. 売上サイクルの発生（日々の波）
+        # 2. 売上・回収サイクル (Revenue Cycle)
         # --------------------------------------------------
-        # 季節変動 + ノイズで本日の売上件数を決定
-        base_sales_txns = 2 + (seasonal_wave[day] * 4) + np.random.normal(0, 1)
-        sales_txns = max(0, int(base_sales_txns))
-        
-        for _ in range(sales_txns):
-            # SMEの売上単価（対数正規分布でリアルに）
-            amount = np.random.lognormal(mean=np.log(2000), sigma=0.8)
+        base_sales = 2 + (seasonal_wave[day] * 3) + np.random.normal(0, 0.5)
+        for _ in range(max(0, int(base_sales))):
+            # Adminのスパイクを抑えるため、対数正規分布の分散(sigma)を小さく(0.4)設定
+            amount = np.random.lognormal(mean=np.log(1500), sigma=0.4)
             amount = max(100.0, amount)
 
-            # (A) 売上発生: 売掛金(Admin) / 売上高(Sales)
+            # [売上発生] AR(Admin) / Sales(Sales)
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, amount, 
                 "Accounts_Receivable", "DPT_Admin", "Sales_Revenue", "DPT_Sales", "Sales_Record"
             ))
             global_entry_count += 1
             
-            # (B) 売上原価の計上（売上の約60%）: COGS(Ops) / 在庫(Ops)
-            cogs_amount = amount * random.uniform(0.55, 0.65)
+            # [原価計上] COGS(Ops) / Inventory(Ops)
+            cogs_amount = amount * random.uniform(0.5, 0.6)
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, cogs_amount, 
                 "COGS", "DPT_Ops", "Inventory", "DPT_Ops", "COGS_Record"
             ))
             global_entry_count += 1
 
-            # (C) 未来への因果: 30〜45日後に現金回収イベントを仕込む (これが粘性を生む)
-            collection_delay = random.randint(30, 45)
-            collection_day = day + collection_delay
-            
-            # 遅延評価のためのクロージャ
-            def make_collection_task(amt):
-                def collection_task(d_str, e_count):
-                    ent = create_entry(
+            # [未来: 売掛金回収] 30〜45日後 Cash(Admin) / AR(Admin)
+            collection_day = day + random.randint(30, 45)
+            def make_collection(amt):
+                def task(d_str, e_count):
+                    return create_entry(
                         f"E_{e_count:06d}", d_str, amt,
                         "Cash", "DPT_Admin", "Accounts_Receivable", "DPT_Admin", "AR_Collection"
-                    )
-                    return ent, e_count + 1
-                return collection_task
-            
-            event_queue[collection_day].append(make_collection_task(amount))
+                    ), e_count + 1
+                return task
+            event_queue[collection_day].append(make_collection(amount))
 
         # --------------------------------------------------
-        # 3. 日常経費の発生
+        # 3. 購買・支払サイクル (Purchasing Cycle) - 孤島を繋ぐ架け橋
         # --------------------------------------------------
-        if random.random() < 0.3: # 30%の確率で交通費発生
-            amt = random.uniform(30, 150)
+        # 在庫が減った分を定期的に補充する（週に1回程度）
+        if day % 7 == 0:
+            purch_amount = np.random.normal(8000, 1000) # 変動は小さく
+            # [仕入発生] Inventory(Ops) / AP(Admin)
             daily_entries.extend(create_entry(
-                f"E_{global_entry_count:06d}", date_str, amt, 
-                "Travel_Exp", "DPT_Sales", "Cash", "DPT_Admin", "Travel_Reimburse"
+                f"E_{global_entry_count:06d}", date_str, purch_amount, 
+                "Inventory", "DPT_Ops", "Accounts_Payable", "DPT_Admin", "Inventory_Purchase"
+            ))
+            global_entry_count += 1
+            
+            # [未来: 買掛金支払] 30日後 AP(Admin) / Cash(Admin)
+            pay_day = day + 30
+            def make_payment(amt):
+                def task(d_str, e_count):
+                    return create_entry(
+                        f"E_{e_count:06d}", d_str, amt,
+                        "Accounts_Payable", "DPT_Admin", "Cash", "DPT_Admin", "AP_Payment"
+                    ), e_count + 1
+                return task
+            event_queue[pay_day].append(make_payment(purch_amount))
+
+        # --------------------------------------------------
+        # 4. 経費・バイパス回路 (Prepaid & Depreciation)
+        # --------------------------------------------------
+        # 月初に大きな前払費用を払い、各部門へ配賦する（クロスエッジの形成）
+        if current_date.day == 1:
+            # サーバー代年間一括払い等: Prepaid_Exp(Admin) / Cash(Admin)
+            prepaid_amt = 12000
+            daily_entries.extend(create_entry(
+                f"E_{global_entry_count:06d}", date_str, prepaid_amt, 
+                "Prepaid_Exp", "DPT_Admin", "Cash", "DPT_Admin", "Prepaid_IT_Annual"
+            ))
+            global_entry_count += 1
+            
+            # 毎月の償却・配賦 (1/12ずつ)
+            amort_amt = prepaid_amt / 12
+            # Sales部への配賦: IT_Exp(Sales) / Prepaid_Exp(Admin)
+            daily_entries.extend(create_entry(
+                f"E_{global_entry_count:06d}", date_str, amort_amt * 0.4, 
+                "IT_Exp", "DPT_Sales", "Prepaid_Exp", "DPT_Admin", "IT_Amortization"
+            ))
+            global_entry_count += 1
+            # Ops部への配賦: IT_Exp(Ops) / Prepaid_Exp(Admin)
+            daily_entries.extend(create_entry(
+                f"E_{global_entry_count:06d}", date_str, amort_amt * 0.6, 
+                "IT_Exp", "DPT_Ops", "Prepaid_Exp", "DPT_Admin", "IT_Amortization"
             ))
             global_entry_count += 1
 
         # --------------------------------------------------
-        # 4. 月末サイクルの発生（給与、家賃）
+        # 5. 月末サイクル（Adminの固定費・変動極小化）
         # --------------------------------------------------
-        # 毎月25日を給与日とする
         if current_date.day == 25:
-            # 給与は一定額ベースに微小な残業代ノイズ
-            payroll_amt = 15000 + np.random.normal(0, 500)
+            # 給与（極めて安定した固定費）
+            payroll_amt = 12000 + np.random.normal(0, 100)
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, payroll_amt, 
                 "Payroll_Exp", "DPT_Admin", "Cash", "DPT_Admin", "Monthly_Payroll"
             ))
             global_entry_count += 1
             
-            # 家賃（固定費）
+            # 家賃（完全な固定費）
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, 3000, 
                 "Rent_Exp", "DPT_Admin", "Cash", "DPT_Admin", "Monthly_Rent"
