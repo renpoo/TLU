@@ -18,7 +18,8 @@ def main():
     df['Account_Name'] = df['Account_Name'].apply(lambda x: f"ACC_{x}")
 
     # 部門には "DPT_" の prefix を付ける
-    df['Dept_Name'] = df['Dept_Name'].apply(lambda x: f"DPT_{x}")
+    # df['Dept_Name'] = df['Dept_Name'].apply(lambda x: f"DPT_{x}")
+    df['Dept_Name'] = df['Dept_Name'].apply(lambda x: f"{x}")
     
     # Debit と Credit を足して、新しい 'Amount' 列を作成する
     df['Amount'] = df['Debit'] + df['Credit']

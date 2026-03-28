@@ -26,9 +26,7 @@ echo "Running..."
 #    配置場所（src.generators など）に合わせて適宜変更してください。
 
 ${TLU_PY} -m src.filters._0_0_generate_dummy_journal \
-    --mode real \
     --months 24 \
-    --inject_anomalies \
     --seed 42 \
     > "${OUTPUT_FILE}"
 
