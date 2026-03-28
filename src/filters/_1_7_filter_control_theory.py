@@ -61,7 +61,7 @@ def main():
     parser.add_argument("--controllable_labels", type=str, default="", 
                         help="制御可能なノードラベル (例: 'DPT_Sales,DPT_Marketing')")
     parser.add_argument("--target_state", type=str, default="", 
-                        help="目標状態ベクトル (例: 'ACC_Sales Revenue:10000')")
+                        help="目標状態ベクトル (例: 'ACC_Sales_Revenue_Global:10000')")
     parser.add_argument("--q_weight", type=float, default=1.0, help="状態誤差ペナルティ重み (Q)")
     parser.add_argument("--r_weight", type=float, default=0.1, help="入力コストペナルティ重み (R)")
     

@@ -10,7 +10,7 @@ source "$(dirname "$0")/_tlu_env.sh"
 CONTROLLABLE="DPT_Marketing,DPT_Sales,DPT_R&D"
 
 # 達成したい目標状態 (例: 売上高を100,000にする)
-TARGETS="ACC_Sales Revenue:100000"
+TARGETS="ACC_Sales_Revenue_Global:100000"
 
 # 重みパラメータ (Q: 目標達成の執念, R: 予算節約の執念)
 Q_WEIGHT=1.0
@@ -18,7 +18,7 @@ R_WEIGHT=0.1
 
 # 2. パイプラインの実行
 run_tlu_pipeline "Control Theory (LQR) Filter" \
-    "Dept" "AccountName" \
+    "Src" "Tgt" \
     "src.filters._1_7_filter_control_theory" "result.1_7_filter_control_theory.analysis.csv" \
     --controllable_labels="${CONTROLLABLE}" \
     --target_state="${TARGETS}" \

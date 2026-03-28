@@ -12,7 +12,7 @@ KL_DRIFT_THRESH=2.0
 Z_SCORE_THRESH=3.0
 
 run_tlu_pipeline "Forensics Filter" \
-    "Dept" "AccountName" \
+    "Src" "Tgt" \
     "src.filters._1_8_filter_macro_forensics" "result.1_8_filter_forensics.analysis.csv" \
     --baseline_window=${BASELINE_WINDOW} \
     --leak_tolerance=${LEAK_TOLERANCE} \

@@ -2,6 +2,6 @@
 source "$(dirname "$0")/_tlu_env.sh"
 
 run_tlu_pipeline "Inverse Kinematics (IK) Filter" \
-    "AccountName" "Dept" \
+    "Src" "Tgt" \
     "src.filters._1_2_filter_ik_optimization" "result.1_2_filter_ik.analysis.csv" \
-    --target_labels="DPT_HR:100.0,DPT_Sales:200.0" --gamma=0.85 --max_k=5 --node_map="${TLU_NODE_MAP}"
+    --target_labels="ACC_Sales_Revenue_Global:100.0,ACC_Sales_Revenue_Global:200.0" --gamma=0.85 --max_k=5 --node_map="${TLU_NODE_MAP}"

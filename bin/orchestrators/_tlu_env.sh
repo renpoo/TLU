@@ -16,13 +16,13 @@ cd "${TLU_PROJECT_ROOT}"
 export PYTHONPATH="${TLU_PROJECT_ROOT}:${PYTHONPATH:-}"
 
 # --- 1. Docker Commands ---
-# export TLU_PY="python3"
-export TLU_PY="docker compose exec -T tlu-engine python3"
-# export TLU_AWK="awk"
-export TLU_AWK="docker compose exec -T tlu-engine awk"
+export TLU_PY="python3"
+# export TLU_PY="docker compose exec -T tlu-engine python3"
+export TLU_AWK="awk"
+# export TLU_AWK="docker compose exec -T tlu-engine awk"
 
 # --- 2. Common Paths ---
-export TLU_INPUT_CSV="workspace/input_stream/General-Ledger-Amount.csv"
+export TLU_INPUT_CSV="workspace/input_stream/Dummy_Journal_Stream_Amount.Monthly.csv"
 export TLU_OUT_DIR="workspace/output_data"
 export TLU_TIME_MAP="workspace/ephemeral/_time_map.csv"
 export TLU_NODE_MAP="workspace/ephemeral/_node_map.csv"
@@ -49,7 +49,7 @@ run_tlu_pipeline() {
     # ※ ここで確実に _node_map.csv が最後まで書き切られるのを待つ
     cat "${TLU_INPUT_CSV}" \
     | $TLU_PY -m src.filters._0_2_projector_to_coo \
-        --col_time="TxnDate" --col_src="${proj_src}" --col_tgt="${proj_tgt}" --col_val="Amount" \
+        --col_time="Trans_Date" --col_src="${proj_src}" --col_tgt="${proj_tgt}" --col_val="Amount" \
     > "${TLU_TMP_COO}"
 
     # Step 2: フィルタリング（数理解析）

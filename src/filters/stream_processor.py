@@ -18,19 +18,26 @@ class IndexRegistry:
             self.next_id += 1
         return self.labels[safe_label]
 
-# 【重要修正】クラスの外（独立した関数）に出しました
 def project_record(record, mapping_config, node_registry, time_registry):
     time_col = mapping_config.get("col_time")
     src_col  = mapping_config.get("col_src")
     tgt_col  = mapping_config.get("col_tgt")
     val_col  = mapping_config.get("col_val")
 
-    t_idx   = time_registry.assign_new_id(record.get(time_col))
-    src_idx = node_registry.assign_new_id(record.get(src_col))
-    tgt_idx = node_registry.assign_new_id(record.get(tgt_col))
+    # フェイルファスト: カラム名が存在しない場合は即座にエラーにする
+    for col_name in [time_col, src_col, tgt_col, val_col]:
+        if col_name not in record:
+            raise KeyError(f"CRITICAL: Column '{col_name}' not found in the input CSV. "
+                           f"Available columns are: {list(record.keys())}")
+
+    t_idx   = time_registry.assign_new_id(record[time_col])
+    
+    # テンソルの和集合トポロジーの原則（SDL_01）に基づき、同じレジストリ（node_registry）を使用する
+    src_idx = node_registry.assign_new_id(record[src_col])
+    tgt_idx = node_registry.assign_new_id(record[tgt_col])
     
     try:
-        val = float(record.get(val_col))
+        val = float(record[val_col])
     except (ValueError, TypeError):
         val = 0.0
 
