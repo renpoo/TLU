@@ -16,10 +16,10 @@ cd "${TLU_PROJECT_ROOT}"
 export PYTHONPATH="${TLU_PROJECT_ROOT}:${PYTHONPATH:-}"
 
 # --- 1. Docker Commands ---
-export TLU_PY="python3"
-# export TLU_PY="docker compose exec -T tlu-engine python3"
-export TLU_AWK="awk"
-# export TLU_AWK="docker compose exec -T tlu-engine awk"
+# export TLU_PY="python3"
+export TLU_PY="docker compose exec -T tlu-engine python3"
+# export TLU_AWK="awk"
+export TLU_AWK="docker compose exec -T tlu-engine awk"
 
 # --- 2. Common Paths ---
 export TLU_INPUT_CSV="workspace/input_stream/Dummy_Journal_Stream_Amount.Monthly.csv"
