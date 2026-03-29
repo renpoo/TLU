@@ -35,10 +35,10 @@ def main():
 
     # 4. 勘定科目と部門を ':' で連結し、一意のノード名を作成
     edges['Trans_Date'] = edges['Month']
-    edges['Src0'] = edges['Src_Account'].astype(str)
-    edges['Tgt0'] = edges['Tgt_Account'].astype(str)
-    edges['Src'] = edges['Src_Account'].astype(str) + ':' + edges['Src_Dept'].astype(str)
-    edges['Tgt'] = edges['Tgt_Account'].astype(str) + ':' + edges['Tgt_Dept'].astype(str)
+    edges['Src'] = edges['Src_Account'].astype(str)
+    edges['Tgt'] = edges['Tgt_Account'].astype(str)
+    # edges['Src'] = edges['Src_Account'].astype(str) + ':' + edges['Src_Dept'].astype(str)
+    # edges['Tgt'] = edges['Tgt_Account'].astype(str) + ':' + edges['Tgt_Dept'].astype(str)
 
     # 5. 月、Sourceノード、Targetノード の組み合わせで金額（Amount）を合計（集約）
     monthly_summary = edges.groupby(['Trans_Date', 'Src', 'Tgt'])['Amount'].sum().reset_index()

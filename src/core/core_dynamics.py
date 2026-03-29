@@ -49,7 +49,7 @@ def compute_optimal_time_lag(signal_A: np.ndarray, signal_B: np.ndarray, max_lag
     return best_lag, float(max_corr)
 
 
-def estimate_virtual_mass_and_viscosity(q_history: np.ndarray, v_history: np.ndarray, base_epsilon: float = 1e-9) -> tuple[np.ndarray, np.ndarray]:
+def estimate_virtual_mass_and_viscosity(q_history: np.ndarray, v_history: np.ndarray, base_epsilon: float = 1e-6) -> tuple[np.ndarray, np.ndarray]:
     """
     過去の履歴から、各ノードの仮想的な質量(M)と粘性(C)を推定する。
     

@@ -1,7 +1,9 @@
-*.csv
-*/*.csv
-*.png
-*/*.png
+!sample_data_and_plots
+
+workspace/config/*.csv
+workspace/ephemeral/*.csv
+workspace/output_data/*.csv
+workspace/output_plots/*.png
 
 __pycache__/
 */__pycache__/

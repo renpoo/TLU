@@ -64,6 +64,15 @@ def main():
     axis_labels = [f"{i:02d}: {node_labels.get(i, f'N_{i}')}" for i in range(N)]
     base_name, ext = os.path.splitext(args.filename)
     
+    symlog_norm = SymLogNorm(
+        linthresh=1e-1,
+        vmin=-1e-3,
+        vmax=1e-3, 
+        base=10
+    )
+
+    K_matrix_list = []
+
     for t_idx in tqdm(t_indices, desc="Rendering SymLog Stiffness Heatmaps"):
         df_slice = df[df['t_idx'] == t_idx]
         
@@ -82,12 +91,15 @@ def main():
         linthresh = max(vmax_robust * 1e-4, 1e-15)
         
         symlog_norm = SymLogNorm(
-            linthresh=linthresh, 
-            vmin=-vmax_robust, 
-            vmax=vmax_robust, 
+            linthresh=min(linthresh, symlog_norm.linthresh), 
+            vmin=-max(vmax_robust, symlog_norm.vmax), 
+            vmax=max(vmax_robust, symlog_norm.vmax), 
             base=10
         )
 
+        K_matrix_list.append(K_matrix)
+
+    for t_idx in tqdm(t_indices, desc="Rendering SymLog Stiffness Heatmaps"):
         current_time_label = time_labels.get(t_idx, f"t={t_idx}")
         title = f"Structural Stiffness (Precision Matrix) [SymLog Scale]\nTimeline: {current_time_label}"
         
@@ -95,7 +107,7 @@ def main():
         
         # _draw_matrix_heatmap への委譲をやめ、SymLogNormを適用して直接描画する
         sns.heatmap(
-            pd.DataFrame(K_matrix), 
+            pd.DataFrame(K_matrix_list[t_idx]), 
             ax=ax, 
             cmap=cmap_stiffness, 
             norm=symlog_norm,  # 対称対数スケールを適用

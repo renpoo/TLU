@@ -23,6 +23,7 @@ export TLU_AWK="awk"
 
 # --- 2. Common Paths ---
 export TLU_INPUT_CSV="workspace/input_stream/Dummy_Journal_Stream_Amount.Monthly.csv"
+# export TLU_INPUT_CSV="workspace/input_stream/General-Ledger-Amount.Src.Tgt.Monthly.csv"
 export TLU_OUT_DIR="workspace/output_data"
 export TLU_TIME_MAP="workspace/ephemeral/_time_map.csv"
 export TLU_NODE_MAP="workspace/ephemeral/_node_map.csv"
