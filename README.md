@@ -2,7 +2,7 @@
 
 > **"Projecting Domain Complexity into Mathematical Clarity."**
 
-TLU is a high-fidelity mathematical analysis pipeline designed to project transaction-based domain data (such as financial ledgers, communication logs, or supply chain flows) into an $N \times N$ tensor space. By applying models from **Kinematics (Robotics), Thermodynamics, Information Geometry, and Control Theory**, TLU uncovers hidden structural dynamics that traditional statistics often miss.
+TLU is a high-fidelity mathematical analysis pipeline designed to project transaction-based domain data (such as financial ledgers, communication logs, or supply chain flows) into an $N \times N$ tensor space. By applying models from **Kinematics (Robotics), Thermodynamics, Information Geometry, Control Theory and so forth**, TLU uncovers hidden structural dynamics that traditional statistics often miss.
 
 -----
 
@@ -19,6 +19,7 @@ TLU follows the **Unix Philosophy**: small, specialized filters connected via st
 ## Visual Showcase (Empirical Evidence)
 
 TLU offloads cognitive load through its advanced "Dark" visualization suite ("Light" and "Colorblind-safe" color-theme is also available).
+You can consider to ask your AI for understanding these analysis for given data, by sharing resulting data and its visualized graphs.
 
 ### 1\. Financial Dynamics & Phase Portraits
 
