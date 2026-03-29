@@ -70,11 +70,11 @@ cd TLU
 docker compose up -d
 
 # 3. Run the full pipeline with sample data
+(bash bin/batch_unittest.sh : Unit Test)
+bash bin/batch_generate_dummy_journal_data.sh
 bash bin/batch_processing.sh
 bash bin/batch_visualize_graphs.sh
 ```
-
-*(Note: TLU "WILL" include a built-in dummy data generator to help you explore the math immediately.)*
 
 -----
 
