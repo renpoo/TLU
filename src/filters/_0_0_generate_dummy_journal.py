@@ -18,8 +18,8 @@ def setup_argparser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="TLU Event-Driven SME Hub-and-Spoke Journal Generator")
     parser.add_argument("--months", type=int, default=12, help="生成する期間（月数）")
     parser.add_argument("--seed", type=int, default=42, help="乱数シード")
-    parser.add_argument("--sales-leak", type=float, default=0.0, help="売掛金が回収されない（args.sales_leakの確率で）")
-    parser.add_argument("--purchase-leak", type=float, default=0.0, help="買掛金が支払われない（args.purchase_leakの確率で）")
+    parser.add_argument("--sales-leak-prob", type=float, default=0.0, help="売掛金が回収されない（args.sales_leakの確率で）")
+    parser.add_argument("--purchase-leak-prob", type=float, default=0.0, help="買掛金が支払われない（args.purchase_leakの確率で）")
     return parser
 
 def create_entry(entry_id: str, date_str: str, amount: float, debit_acc: str, debit_dept: str, credit_acc: str, credit_dept: str, memo: str) -> list:
@@ -93,9 +93,9 @@ def generate_stream(args):
                     ), e_count + 1
                 return task
 
-            if (args.sales_leak > 0.00):
-                # Sales Leakage 1: 売掛金が回収されない（args.sales_leakの確率で）
-                if random.random() < args.sales_leak:
+            if (args.sales_leak_prob > 0.00):
+                # Sales Leakage 1: 売掛金が回収されない（args.sales_leak_probの確率で）
+                if random.random() < args.sales_leak_prob:
                     amount -= np.random.uniform(0, amount * 0.10)
             
             event_queue[collection_day].append(make_collection(amount))
@@ -122,9 +122,9 @@ def generate_stream(args):
                     ), e_count + 1
                 return task
 
-            if (args.purchase_leak > 0.00):
-                # Purchase Leak 1: 買掛金が支払えない（args.purchase_leakの確率で）
-                if random.random() < args.purchase_leak:
+            if (args.purchase_leak_prob > 0.00):
+                # Purchase Leak 1: 買掛金が支払えない（args.purchase_leak_probの確率で）
+                if random.random() < args.purchase_leak_prob:
                     purch_amount -= np.random.uniform(0, purch_amount * 0.05)
             
             event_queue[pay_day].append(make_payment(purch_amount))

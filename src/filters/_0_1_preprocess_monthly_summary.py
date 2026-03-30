@@ -37,6 +37,8 @@ def main():
     edges['Trans_Date'] = edges['Month']
     edges['Src'] = edges['Src_Account'].astype(str)
     edges['Tgt'] = edges['Tgt_Account'].astype(str)
+    # edges['Src'] = edges['Src_Dept'].astype(str)
+    # edges['Tgt'] = edges['Tgt_Dept'].astype(str)
     # edges['Src'] = edges['Src_Account'].astype(str) + ':' + edges['Src_Dept'].astype(str)
     # edges['Tgt'] = edges['Tgt_Account'].astype(str) + ':' + edges['Tgt_Dept'].astype(str)
 
