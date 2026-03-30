@@ -76,7 +76,7 @@ def main():
                 break
                 
             # ★ 修正: k=0 (単位行列) は構造情報を持たないため描画をスキップする
-            if k > 0:
+            if k >= 0:
                 fig, ax = plt.subplots(figsize=(12, 10))
                 
                 sns.heatmap(M_k, ax=ax, cmap=cmap_name, vmin=0.0, vmax=1.0,
