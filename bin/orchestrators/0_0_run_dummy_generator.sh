@@ -28,6 +28,8 @@ echo "Running..."
 ${TLU_PY} -m src.filters._0_0_generate_dummy_journal \
     --months 36 \
     --seed 42 \
+    --sales-leak true \
+    --purchase-leak true \
     > "${OUTPUT_FILE}"
 
 echo "Completed. Dummy stream has been successfully generated."

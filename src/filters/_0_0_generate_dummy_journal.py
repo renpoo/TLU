@@ -18,6 +18,8 @@ def setup_argparser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="TLU Event-Driven SME Hub-and-Spoke Journal Generator")
     parser.add_argument("--months", type=int, default=12, help="生成する期間（月数）")
     parser.add_argument("--seed", type=int, default=42, help="乱数シード")
+    parser.add_argument("--sales-leak", type=bool, default=False, help="売掛金が回収されない（1割の確率で）")
+    parser.add_argument("--purchase-leak", type=bool, default=False, help="買掛金が支払われない（0.5割の確率で）")
     return parser
 
 def create_entry(entry_id: str, date_str: str, amount: float, debit_acc: str, debit_dept: str, credit_acc: str, credit_dept: str, memo: str) -> list:
@@ -74,15 +76,15 @@ def generate_stream(args):
             global_entry_count += 1
             
             # [原価計上] (社内完結)
-            cogs_amount = amount * random.uniform(0.5, 0.6)
+            cogs_amount = amount * random.uniform(0.4, 0.7)
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, cogs_amount, 
                 "COGS", "DPT_Ops", "Inventory", "DPT_Ops", "COGS_Record"
             ))
             global_entry_count += 1
 
-            # [未来: 売掛金回収] 30〜45日後 (Admin内で完結)
-            collection_day = day + random.randint(30, 45)
+            # [未来: 売掛金回収] 30〜90日後 (Admin内で完結)
+            collection_day = day + random.randint(30, 90)
             def make_collection(amt):
                 def task(d_str, e_count):
                     return create_entry(
@@ -90,6 +92,12 @@ def generate_stream(args):
                         "Cash", "DPT_Admin", "Accounts_Receivable", "DPT_Admin", "AR_Collection"
                     ), e_count + 1
                 return task
+
+            if (args.sales_leak):
+                # Sales Leakage 1: 売掛金が回収されない（1割の確率で）
+                if random.random() < 0.1:
+                    amount -= np.random.uniform(0, amount * 0.15)
+            
             event_queue[collection_day].append(make_collection(amount))
 
         # --------------------------------------------------
@@ -104,8 +112,8 @@ def generate_stream(args):
             ))
             global_entry_count += 1
             
-            # [未来: 買掛金支払] 30日後 (Admin内で完結)
-            pay_day = day + 30
+            # [未来: 買掛金支払] 30〜90日後 (Admin内で完結)
+            pay_day = day + random.randint(30, 90)
             def make_payment(amt):
                 def task(d_str, e_count):
                     return create_entry(
@@ -113,6 +121,12 @@ def generate_stream(args):
                         "Accounts_Payable", "DPT_Admin", "Cash", "DPT_Admin", "AP_Payment"
                     ), e_count + 1
                 return task
+
+            if (args.purchase_leak):
+                # Purchase Leak 1: 買掛金が支払えない（0.5割の確率で）
+                if random.random() < 0.05:
+                    purch_amount -= np.random.uniform(0, purch_amount * 0.10)
+            
             event_queue[pay_day].append(make_payment(purch_amount))
 
         # --------------------------------------------------
