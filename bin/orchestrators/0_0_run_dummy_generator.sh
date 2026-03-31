@@ -22,15 +22,16 @@ echo "Running..."
 
 # 3. 生成スクリプトの実行
 # ${TLU_PY} により、Dockerコンテナ内またはローカル環境で透過的に実行されます。
-# ※ 00_generate_dummy_journal.py が src/filters/ ディレクトリに配置されていると仮定したモジュール指定です。
+# ※ _0_0_generate_dummy_journal.py が src/filters/ ディレクトリに配置されていると仮定したモジュール指定です。
 #    配置場所（src.generators など）に合わせて適宜変更してください。
 
 ${TLU_PY} -m src.filters._0_0_generate_dummy_journal \
-    --months 36 \
+    --months 24 \
     --seed 42 \
-    --sales-leak 0.01 \
-    --purchase-leak 0.005 \
     > "${OUTPUT_FILE}"
+    # --sales-leak 0.01 \
+    # --purchase-leak 0.005 \
+    # > "${OUTPUT_FILE}"
 
 echo "Completed. Dummy stream has been successfully generated."
 echo "=================================================="

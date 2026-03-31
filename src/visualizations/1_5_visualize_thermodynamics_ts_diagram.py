@@ -52,6 +52,7 @@ def main():
     T = df['temperature_T'].values
 
     T_max_idx = int(t.max()) + 1
+    # 辞書のロード
     time_labels = load_time_labels(args.time_map, T_max_idx)
 
     top_k_indices = df.nlargest(args.top_k, 'temperature_T')['t_idx'].astype(int).tolist()
@@ -60,25 +61,30 @@ def main():
     ax = fig.add_axes([0.10, 0.30, 0.40, 0.50], projection='3d')
     ax.view_init(elev=args.elev, azim=args.azim)
 
-    # 軌跡（線）の描画（テーマのグリッドカラーを利用）
+    # 軌跡（線）の描画
     ax.plot(t, S, T, color=trajectory_col, linestyle=':', alpha=0.5, linewidth=2, zorder=1)
 
     # プロット（点）の描画
     scatter = ax.scatter(t, S, T, c=T, cmap=cmap_name, s=120, 
                          edgecolor=text_col, linewidth=0.8, alpha=0.9, zorder=2)
 
-    # プロットラベルの描画と特異点のハイライト
+    # --- 修正箇所: プロット注釈のカレンダー表記（time_map）解決 ---
     for i in range(len(df)):
         t_val = int(t[i])
         offset = (T.max() - T.min()) * 0.02
         
+        # 辞書からカレンダー表記を取得
+        time_str = time_labels.get(t_val, f"t={t_val:02d}")
+        
         if t_val in top_k_indices:
             ax.scatter(t[i], S[i], T[i], color=c_outlier_marker, s=300, marker='*', edgecolor=text_col, zorder=3)
-            ax.text(t[i], S[i], T[i] + offset, f" t={t_val:02d}", fontsize=11, fontweight='bold', color=c_outlier_text, ha='center')
+            # 異常値のハイライト表記
+            ax.text(t[i], S[i], T[i] + offset, f" {time_str}", fontsize=11, fontweight='bold', color=c_outlier_text, ha='center')
         else:
-            ax.text(t[i], S[i], T[i] + offset, f" t={t_val:02d}", fontsize=9, alpha=0.8, color=text_col, ha='center')
+            # 通常値の表記
+            ax.text(t[i], S[i], T[i] + offset, f" {time_str}", fontsize=9, alpha=0.8, color=text_col, ha='center')
 
-    # 底面への影（射影）の描画（テーマのゼロラインカラーを利用）
+    # 底面への影（射影）の描画
     z_min = T.min() - (T.max() - T.min()) * 0.1 if T.max() > T.min() else T.min() - 1
     ax.set_zlim(z_min, T.max())
     ax.plot(t, S, zs=z_min, zdir='z', color=shadow_col, linestyle='--', alpha=0.5, zorder=0)
@@ -99,6 +105,7 @@ def main():
     cbar.ax.yaxis.set_tick_params(color=text_col)
     plt.setp(plt.getp(cbar.ax.axes, 'yticklabels'), color=text_col)
 
+    # --- 凡例はSource 27の元の通り（解決済み）を維持 ---
     handles, labels = [], []
     for i in range(T_max_idx):
         handles.append(mpatches.Patch(color='none'))

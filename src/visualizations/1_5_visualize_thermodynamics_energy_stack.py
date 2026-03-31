@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from src.visualizations.visualizer_utils import get_base_parser, apply_theme, save_plot
+from src.visualizations.visualizer_utils import get_base_parser, apply_theme, load_time_labels, save_plot
 
 def setup_argparser():
     parser = get_base_parser("Energy Stack: U, -TS, and F (Dimensionally Corrected)")
@@ -43,10 +43,14 @@ def main():
     if df.empty:
         print("Warning: Received empty data stream.", file=sys.stderr); sys.exit(0)
 
-    t = df['t_idx']
-    U = df['gross_activity_U']
-    S = df['entropy_S']
-    T_raw = df['temperature_T']
+    # 辞書のロード (Time)
+    T_max = int(df['t_idx'].max()) + 1
+    time_labels = load_time_labels(args.time_map, T_max)
+
+    t = df['t_idx'].values
+    U = df['gross_activity_U'].values
+    S = df['entropy_S'].values
+    T_raw = df['temperature_T'].values
     
     T_corrected = np.sqrt(np.maximum(T_raw, 0)) 
     TS = T_corrected * S
@@ -61,7 +65,12 @@ def main():
     
     ax.axhline(0, color=zero_col, linestyle='--', linewidth=1.5)
 
-    ax.set_xlabel('Time Step (t_idx)', fontsize=12, color=text_col)
+    # --- Time Label X-Axis Formatting ---
+    x_tick_labels = [time_labels.get(t_val, f"T_{int(t_val):02d}") for t_val in t]
+    ax.set_xticks(t)
+    ax.set_xticklabels(x_tick_labels, rotation=45, color=text_col, ha='right', fontsize=11)
+
+    ax.set_xlabel('Timeline', fontsize=12, color=text_col)
     ax.set_ylabel('Energy / Activity Scale', fontsize=12, color=text_col)
     ax.set_title('Thermodynamic Energy Stack: Efficiency & Friction Loss over Time', fontsize=15, pad=15, color=text_col, fontweight='bold')
     
@@ -75,7 +84,8 @@ def main():
         spine.set_color(text_col)
     ax.margins(0.05)
     
-    plt.tight_layout()
+    # 余白調整 (X軸ラベルが回転して見切れないように bottom を確保)
+    plt.subplots_adjust(bottom=0.15, left=0.08, right=0.85, top=0.92)
     save_plot(fig, args.out_dir, args.filename)
 
 if __name__ == "__main__":

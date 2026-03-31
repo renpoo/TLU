@@ -7,10 +7,10 @@ source "$(dirname "$0")/_tlu_env.sh"
 
 # 1. LQRのパラメータ定義
 # 予算を投下できる(介入可能な)部門
-CONTROLLABLE="DPT_Marketing,DPT_Sales,DPT_R&D"
+CONTROLLABLE="ACC_COGS,ACC_Rent_Exp,ACC_Payroll_Exp,ACC_Travel_Exp"
 
-# 達成したい目標状態 (例: 売上高を100,000にする)
-TARGETS="ACC_Sales_Revenue_Global:100000"
+# 達成したい目標状態 (例: 売上高を10,000にする)
+TARGETS="ACC_Sales_Revenue:10000"
 
 # 重みパラメータ (Q: 目標達成の執念, R: 予算節約の執念)
 Q_WEIGHT=1.0
