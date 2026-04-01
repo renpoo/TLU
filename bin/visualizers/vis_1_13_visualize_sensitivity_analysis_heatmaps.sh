@@ -11,5 +11,5 @@ run_tlu_visualization "Sensitivity Analysis Series Propagation Heatmap" \
     "1_13_visualize_sensitivity_analysis_series_heatmaps.py" \
     "1_13_2__sensitivity_analysis_series_heatmap.png" \
     "../ephemeral/_coo_stream.csv" \
-    --gamma 0.8 --max_k 5
+    --gamma 0.85 --max_k 5
 
