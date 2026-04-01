@@ -24,7 +24,7 @@ for r in rows:
 transactions = []
 
 start_date = datetime.date(2020, 1, 1)
-total_days = 12 * 3 * 30 
+total_days = 12 * 2 * 30 
 
 writer = csv.writer(sys.stdout)
 writer.writerow(["Trans_Date", "Src", "Tgt", "Amount"])
