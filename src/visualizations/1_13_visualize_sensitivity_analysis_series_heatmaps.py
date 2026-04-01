@@ -7,6 +7,7 @@ import sys
 import numpy as np
 import pandas as pd
 import seaborn as sns
+import japanize_matplotlib
 import matplotlib.pyplot as plt
 import os
 

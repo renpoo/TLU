@@ -8,6 +8,7 @@
 import sys
 import numpy as np
 import pandas as pd
+import japanize_matplotlib
 import matplotlib.pyplot as plt
 
 # 共通ユーティリティから _draw_matrix_heatmap をインポート

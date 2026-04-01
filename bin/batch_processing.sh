@@ -9,8 +9,8 @@ ORCH_DIR="./bin/orchestrators"
 
 # 実行するスクリプトの配列（実行順）
 SCRIPTS=(
-    "1_1_run_fk_simulation.sh"
-    "1_2_run_ik_optimization.sh"
+    # "1_1_run_fk_simulation.sh"
+    # "1_2_run_ik_optimization.sh"
     "1_3_run_dynamics_state.sh"
     "1_4_run_time_lag.sh"
     "1_5_run_thermodynamics_macro.sh"

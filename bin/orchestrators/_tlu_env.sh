@@ -22,7 +22,9 @@ export TLU_PY="docker compose exec -T tlu-engine python3"
 export TLU_AWK="docker compose exec -T tlu-engine awk"
 
 # --- 2. Common Paths ---
-export TLU_INPUT_CSV="workspace/input_stream/Dummy_Journal_Stream_Amount.Aggregated.csv"
+# export TLU_INPUT_CSV="workspace/input_stream/Dummy_Journal_Stream_Amount.Aggregated.csv"
+export TLU_INPUT_CSV="workspace/input_stream/Dummy_Kyoto_Traffic_Journal_Monthly.csv"
+
 export TLU_OUT_DIR="workspace/output_data"
 export TLU_TIME_MAP="workspace/ephemeral/_time_map.csv"
 export TLU_NODE_MAP="workspace/ephemeral/_node_map.csv"

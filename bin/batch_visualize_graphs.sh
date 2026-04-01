@@ -15,8 +15,8 @@ VIZ_ORCH_DIR="./bin/visualizers"
 
 # 実行する可視化ランチャーの配列（実行順）
 SCRIPTS=(
-    "vis_1_1_visualize_forward_kinematics.sh"
-    "vis_1_2_visualize_inverse_kinematics.sh"
+    # "vis_1_1_visualize_forward_kinematics.sh"
+    # "vis_1_2_visualize_inverse_kinematics.sh"
     "vis_1_3_visualize_dynamics.sh"
     "vis_1_5_visualize_macro_thermodynamics.sh"
     "vis_1_6_visualize_local_thermo.sh"

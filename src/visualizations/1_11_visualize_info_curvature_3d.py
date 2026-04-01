@@ -8,6 +8,7 @@
 import sys
 import pandas as pd
 import numpy as np
+import japanize_matplotlib
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 

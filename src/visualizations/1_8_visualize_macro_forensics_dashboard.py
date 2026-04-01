@@ -7,6 +7,7 @@
 
 import sys
 import pandas as pd
+import japanize_matplotlib
 import matplotlib.pyplot as plt
 
 from src.visualizations.visualizer_utils import get_base_parser, apply_theme, load_time_labels, save_plot

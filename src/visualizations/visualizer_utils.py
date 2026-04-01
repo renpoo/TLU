@@ -1,5 +1,6 @@
 import os, sys, argparse
 import pandas as pd
+import japanize_matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 import json

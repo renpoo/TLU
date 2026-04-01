@@ -8,6 +8,7 @@ import sys
 import os
 import pandas as pd
 import numpy as np
+import japanize_matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib.colors import SymLogNorm
