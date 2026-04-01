@@ -13,7 +13,7 @@ df['YearMonth'] = df['Trans_Date'].dt.strftime('%Y-%m')
 df_monthly = df.groupby(['YearMonth', 'Src', 'Tgt'], as_index=False)['Amount'].sum()
 
 # 5. 結果を新しいCSVファイルとして保存
-df_monthly.to_csv("workspace/input_stream/Dummy_Kyoto_Traffic_Journal_Monthly.csv", index=False, encoding="utf-8-sig")
+df_monthly.to_csv("workspace/input_stream/Dummy_Kyoto_Traffic_Journal_Monthly.csv", index=False, encoding="utf-8")
 
 # 確認用出力
 print(f"集約完了: {len(df_monthly)} 行の月次データを作成しました。")

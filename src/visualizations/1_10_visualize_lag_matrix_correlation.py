@@ -7,13 +7,10 @@
 
 import sys
 import pandas as pd
-import japanize_matplotlib
 import matplotlib.pyplot as plt
 
-# 共通ユーティリティから _draw_matrix_heatmap をインポート
-from src.visualizations.visualizer_utils import (
-    get_base_parser, apply_theme, load_node_labels, save_plot, _draw_matrix_heatmap
-)
+# 共通ユーティリティから draw_matrix_heatmap をインポート
+from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Lag Matrix: Cross-Correlation")
@@ -46,7 +43,7 @@ def main():
     
     # 共通描画ロジックへ委譲
     title = "Node-to-Node Cross-Correlation Matrix (Impact Strength)"
-    _draw_matrix_heatmap(
+    draw_matrix_heatmap(
         ax, pivot_corr, cmap_name, 'Max Correlation Coefficient', title, 
         axis_labels, text_col, vmin=-1.0, vmax=1.0
     )

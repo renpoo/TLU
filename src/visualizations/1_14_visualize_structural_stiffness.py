@@ -8,15 +8,12 @@ import sys
 import os
 import pandas as pd
 import numpy as np
-import japanize_matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib.colors import SymLogNorm
 from tqdm import tqdm
 
-from src.visualizations.visualizer_utils import (
-    get_base_parser, apply_theme, load_node_labels, load_time_labels, save_plot
-)
+from src.visualizations.visualizer_utils import *
 
 def validate_theme_keys(theme_dict):
     """テーマファイルに転用可能な発散色カラーマップが存在するか厳格にチェックする"""
@@ -106,7 +103,7 @@ def main():
         
         fig, ax = plt.subplots(figsize=(14, 12))
         
-        # _draw_matrix_heatmap への委譲をやめ、SymLogNormを適用して直接描画する
+        # draw_matrix_heatmap への委譲をやめ、SymLogNormを適用して直接描画する
         sns.heatmap(
             pd.DataFrame(K_matrix_list[t_idx]), 
             ax=ax, 

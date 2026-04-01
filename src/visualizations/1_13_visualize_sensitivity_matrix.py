@@ -7,11 +7,10 @@
 import sys
 import pandas as pd
 import numpy as np
-import japanize_matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
-from src.visualizations.visualizer_utils import get_base_parser, apply_theme, load_node_labels, save_plot
+from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Sensitivity Trade-off Matrix: Ripple vs Strain")

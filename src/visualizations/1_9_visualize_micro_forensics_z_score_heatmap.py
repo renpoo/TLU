@@ -7,14 +7,10 @@
 
 import sys
 import pandas as pd
-import japanize_matplotlib
 import matplotlib.pyplot as plt
 
 # 共通ユーティリティから _draw_single_heatmap もインポートする
-from src.visualizations.visualizer_utils import (
-    get_base_parser, apply_theme, load_node_labels, 
-    load_time_labels, save_plot, _draw_single_heatmap
-)
+from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Micro Forensics Heatmap (Generates Z-Score figures)")
@@ -57,7 +53,7 @@ def main():
     fig_z, ax_z = plt.subplots(figsize=(16, 7))
     
     # 共通ライブラリの描画ロジックへ委譲
-    _draw_single_heatmap(
+    draw_single_heatmap(
         ax_z, pivot_z, cmap_z, 'Z-Score (sigma)',
         "Micro Forensics B: Univariate Activity Shock (Node Z-Score)",
         x_tick_labels, y_tick_labels, top_k_idx, text_col, c_outlier_text

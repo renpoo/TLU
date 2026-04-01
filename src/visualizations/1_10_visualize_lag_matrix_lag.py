@@ -8,13 +8,10 @@
 import sys
 import numpy as np
 import pandas as pd
-import japanize_matplotlib
 import matplotlib.pyplot as plt
 
-# 共通ユーティリティから _draw_matrix_heatmap をインポート
-from src.visualizations.visualizer_utils import (
-    get_base_parser, apply_theme, load_node_labels, save_plot, _draw_matrix_heatmap
-)
+# 共通ユーティリティから draw_matrix_heatmap をインポート
+from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Lag Matrix: Optimal Time-Lag")
@@ -52,7 +49,7 @@ def main():
     
     # 共通描画ロジックへ委譲
     title = f"Node-to-Node Optimal Time-Lag Matrix (Masked |ρ| < {args.corr_thresh})"
-    _draw_matrix_heatmap(
+    draw_matrix_heatmap(
         ax, pivot_lag, cmap_name, 'Optimal Lag (Time Steps)', title, 
         axis_labels, text_col, bg_col=bg_col, mask=mask
     )

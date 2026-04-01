@@ -7,15 +7,15 @@ import sys
 import numpy as np
 import pandas as pd
 import seaborn as sns
-import japanize_matplotlib
 import matplotlib.pyplot as plt
 import os
 
-from src.visualizations.visualizer_utils import get_base_parser, apply_theme, load_node_labels, save_plot
+from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Sensitivity Analysis Series Propagation Heatmap")
     parser.add_argument("--gamma", type=float, default=0.85, help="減衰率 (Discount Factor)")
+    parser.add_argument("--max_k", type=int, default=10, help="最大展開次数 (Max Expansion Order)")
     parser.add_argument("--t_target", type=int, default=None, help="解析対象のタイムステップ (未指定なら全時刻t_idxを処理)")
     parser.add_argument("--epsilon", type=float, default=1e-5, help="零行列とみなす閾値")
     parser.set_defaults(filename="1_13_2__sensitivity_analysis_series_heatmap.png")
@@ -85,7 +85,7 @@ def main():
                             cbar_kws={'label': f'Impact Intensity (gamma={args.gamma})'})
                             
                 ax.set_title(f"Sensitivity Analysis Series Propagation: Order k={k}\n(Time Step: {target_t})", 
-                             fontsize=16, color=text_col, pad=20, fontweight='bold')
+                             fontsize=16, color=text_col, pad=args.max_k, fontweight='bold')
                 ax.set_xlabel("Target Node (Impact Received)", color=text_col, fontsize=12)
                 ax.set_ylabel("Source Node (Shock Origin)", color=text_col, fontsize=12)
                 ax.tick_params(axis='x', rotation=45, colors=text_col)
@@ -106,8 +106,8 @@ def main():
             k += 1
             
             # 安全装置
-            if k > 20:
-                print(f"Reached maximum expansion order (k=20) at t={target_t}. Stopping.", file=sys.stderr)
+            if k > args.max_k:
+                print(f"Reached maximum expansion order (k={args.max_k}) at t={target_t}. Stopping.", file=sys.stderr)
                 break
 
 if __name__ == "__main__":

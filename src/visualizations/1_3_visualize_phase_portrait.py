@@ -7,13 +7,12 @@
 import sys
 import pandas as pd
 import numpy as np
-import japanize_matplotlib
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import colorsys
 
 # 共通可視化基盤のインポート
-from src.visualizations.visualizer_utils import get_base_parser, apply_theme, load_node_labels, save_plot
+from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("3D Phase Space: Chromatic Node Trajectories (q, v, a)")

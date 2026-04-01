@@ -6,7 +6,7 @@ import sys
 
 # 1. 設定：9x9の格子（京都の通り名をイメージ）
 # rows = ["一条", "二条", "三条", "四条", "五条", "六条", "七条", "八条", "九条"]
-# cols = ["堀川", "新町", "室町", "烏丸", "車屋", "東洞", "不明", "堺町", "柳馬"]
+# cols = ["堀川", "新町", "室町", "烏丸", "車屋", "東洞", "間之町", "堺町", "柳馬"]
 rows = ["一条", "二条", "三条", "四条", "五条"]
 cols = ["堀川", "新町", "室町", "烏丸", "車屋"]
 # rows = ["Ichijo", "Nijo", "Sanjo", "Shijo", "Gojo", "Rokujo", "Shichijo", "Hachijo", "Kujo"]
@@ -49,7 +49,7 @@ for day in range(total_days):
                 # 往復のトラフィックを生成（仕訳日記帳形式）
                 # 交通量は中心部（四条烏丸付近）ほど多くなるよう重み付け
                 dist_from_center = abs(r_idx - 3) + abs(c_idx - 3)
-                base_volume = max(10, 100 - dist_from_center * 10)
+                base_volume = max(10, 100 - dist_from_center * 5)
                 
                 # A -> B
                 transactions.append({

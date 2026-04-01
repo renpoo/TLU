@@ -8,7 +8,6 @@
 import sys
 import numpy as np
 import pandas as pd
-import japanize_matplotlib
 import matplotlib.pyplot as plt
 import networkx as nx
 from matplotlib.colors import Normalize
@@ -16,7 +15,7 @@ from matplotlib.cm import ScalarMappable
 import matplotlib.patches as mpatches
 
 # 共通ユーティリティのインポート
-from src.visualizations.visualizer_utils import get_base_parser, apply_theme, load_node_labels, load_time_labels, save_plot
+from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Network Topology: Flow and Structural Stress (Sequential Generator)")

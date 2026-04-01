@@ -14,6 +14,13 @@ RUN apt-get update && \
     jq \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update && apt-get install -y \
+    fonts-noto-cjk \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN rm -rf /root/.cache/matplotlib
+
 # コンテナ内の作業ディレクトリ（Immutable Zone）
 WORKDIR /app
 

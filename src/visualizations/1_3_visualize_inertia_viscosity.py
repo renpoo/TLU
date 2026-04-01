@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
 # 共通可視化基盤のインポート
-from src.visualizations.visualizer_utils import get_base_parser, apply_theme, load_node_labels, save_plot
+from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Dynamics Phase Space: Inertia vs Viscosity Scatter Plot")
