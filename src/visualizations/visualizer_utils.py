@@ -1,8 +1,12 @@
 import os, sys, argparse
 import pandas as pd
+import japanize_matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 import json
+
+plt.rcParams['font.family'] = 'Noto Sans CJK JP'
+plt.rcParams['font.monospace'] = ['Noto Sans CJK JP'] + plt.rcParams['font.monospace']
 
 def get_base_parser(description: str) -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=description)
@@ -75,15 +79,7 @@ def load_time_labels(time_map_path: str, max_n: int) -> dict:
 
     return idx_to_label
 
-def save_plot(fig, out_dir: str, filename: str):
-    os.makedirs(out_dir, exist_ok=True)
-    base_name = os.path.splitext(filename)[0]
-    out_path = os.path.join(out_dir, f"{base_name}.png")
-    fig.savefig(out_path, dpi=150, bbox_inches='tight')
-    print(f"✅ Saved: {out_path}", file=sys.stderr)
-
-
-def _draw_single_heatmap(ax, pivot_df, cmap, cbar_label, title_text, x_labels, y_labels, top_k_idx, text_col, outlier_col):
+def draw_single_heatmap(ax, pivot_df, cmap, cbar_label, title_text, x_labels, y_labels, top_k_idx, text_col, outlier_col):
     """ [Pure Drawing Logic] 単一のヒートマップを描画し、装飾を施す """
     sns.heatmap(pivot_df, ax=ax, cmap=cmap, robust=True, 
                 cbar_kws={'label': cbar_label}, 
@@ -106,7 +102,9 @@ def _draw_single_heatmap(ax, pivot_df, cmap, cbar_label, title_text, x_labels, y
             label.set_color(text_col)
             label.set_alpha(0.8)
 
-def _draw_matrix_heatmap(ax, pivot_df, cmap, cbar_label, title_text, axis_labels, text_col, bg_col=None, mask=None, vmin=None, vmax=None):
+    return
+
+def draw_matrix_heatmap(ax, pivot_df, cmap, cbar_label, title_text, axis_labels, text_col, bg_col=None, mask=None, vmin=None, vmax=None):
     """ [Pure Drawing Logic] N x N の相関・ラグ行列ヒートマップを描画する """
     import seaborn as sns
     sns.heatmap(pivot_df, ax=ax, cmap=cmap, mask=mask, vmin=vmin, vmax=vmax,
@@ -122,3 +120,13 @@ def _draw_matrix_heatmap(ax, pivot_df, cmap, cbar_label, title_text, axis_labels
     
     if bg_col:
         ax.set_facecolor(bg_col)
+
+    return
+
+def save_plot(fig, out_dir: str, filename: str):
+    os.makedirs(out_dir, exist_ok=True)
+    base_name = os.path.splitext(filename)[0]
+    out_path = os.path.join(out_dir, f"{base_name}.png")
+    fig.savefig(out_path, dpi=150, bbox_inches='tight')
+    print(f"✅ Saved: {out_path}", file=sys.stderr)
+

@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.patches as mpatches
 
-from src.visualizations.visualizer_utils import get_base_parser, apply_theme, save_plot, load_time_labels
+from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("3D Extended T-S Diagram: Timeline View (X=t, Y=S, Z=T)")

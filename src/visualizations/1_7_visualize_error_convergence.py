@@ -8,7 +8,8 @@
 import sys
 import pandas as pd
 import matplotlib.pyplot as plt
-from src.visualizations.visualizer_utils import get_base_parser, apply_theme, load_node_labels, load_time_labels, save_plot
+
+from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("State Error Convergence Tracking (|x|)")

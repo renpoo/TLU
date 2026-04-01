@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # システム共通基盤のインポート
-from src.visualizations.visualizer_utils import get_base_parser, apply_theme, save_plot, load_time_labels
+from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Thermodynamics Dashboard (X=t, Y=S, Z=T)")

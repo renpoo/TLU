@@ -9,11 +9,7 @@ import sys
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# 共通ユーティリティから _draw_single_heatmap もインポートする
-from src.visualizations.visualizer_utils import (
-    get_base_parser, apply_theme, load_node_labels, 
-    load_time_labels, save_plot, _draw_single_heatmap
-)
+from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Micro Forensics Heatmap (Generates KL Drift figures)")
@@ -56,7 +52,7 @@ def main():
     fig_kl, ax_kl = plt.subplots(figsize=(16, 7))
     
     # 共通ライブラリの描画ロジックへ委譲
-    _draw_single_heatmap(
+    draw_single_heatmap(
         ax_kl, pivot_kl, cmap_kl, 'KL Divergence', 
         "Micro Forensics A: Structural Pattern Mutation (Node KL Drift)",
         x_tick_labels, y_tick_labels, top_k_idx, text_col, c_outlier_text
