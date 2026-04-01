@@ -52,7 +52,8 @@ def main():
     S = df['entropy_S'].values
     T_raw = df['temperature_T'].values
     
-    T_corrected = np.sqrt(np.maximum(T_raw, 0)) 
+    # T_corrected = np.sqrt(np.maximum(T_raw, 0)) 
+    T_corrected = T_raw
     TS = T_corrected * S
     F_corrected = U - TS
 

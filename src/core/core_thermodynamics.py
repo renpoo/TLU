@@ -45,16 +45,18 @@ def compute_helmholtz_free_energy(U: float, T: float, S: float) -> float:
     """
     ヘルムホルツの自由エネルギー F を算出する。
     F = U - TS
+    (※ T は U と同次元である標準偏差スケールに矯正されていること)
     """
     return U - T * S
 
 def compute_macro_temperature(q_history_window: np.ndarray) -> float:
     """
     ネットワーク全体の温度 T を算出する。
-    T = 系全体の純フラックスの分散の総和
+    T = 系全体の純フラックスの「標準偏差」の総和 (次元を合わせるための修正)
     """
-    node_variances = np.var(q_history_window, axis=0, ddof=0)
-    T = float(np.sum(node_variances))
+    # 修正: np.var(分散) から np.std(標準偏差) へ変更し、次元を1次(円)に引き下げる
+    node_std = np.std(q_history_window, axis=0, ddof=0)
+    T = float(np.sum(node_std))
     return T
 
 # ==========================================
@@ -76,13 +78,14 @@ def compute_local_internal_energy(T_slice: np.ndarray) -> np.ndarray:
 def compute_local_temperature(q_history_window: np.ndarray) -> np.ndarray:
     """
     ネットワークの各ノードにおける局所温度 T_i を算出する。
-    T_i = 各ノードの純フラックスの分散（タイムウィンドウ内）
+    T_i = 各ノードの純フラックスの「標準偏差」（タイムウィンドウ内）
     
     Returns:
         np.ndarray: 形状 (N,) の局所温度配列
     """
-    # 履歴が不足している（1ステップしかない）場合は分散0を返す
+    # 履歴が不足している（1ステップしかない）場合は0を返す
     if len(q_history_window) < 2:
         return np.zeros(q_history_window.shape[1], dtype=float)
         
-    return np.var(q_history_window, axis=0, ddof=0)
+    # 修正: np.var(分散) から np.std(標準偏差) へ変更
+    return np.std(q_history_window, axis=0, ddof=0)

@@ -7,8 +7,8 @@ source "$(dirname "$0")/_tlu_env.sh"
 
 # 1. 物理的役割（仕事と熱）のドメインラベル定義
 # ※カンマ区切り、スペースなしで指定します
-WORK_LABELS="ACC_Sales_Revenue_Global,ACC_Online_Sales"
-HEAT_LABELS="ACC_Travel_Expense,ACC_Payroll_Expense"
+WORK_LABELS="ACC_Sales_Revenue"
+HEAT_LABELS="ACC_Travel_Exp,ACC_Rent_Exp,ACC_Payroll_Exp,ACC_COGS"
 
 # 2. パイプラインの実行
 run_tlu_pipeline "Macro Thermodynamics Filter" \
