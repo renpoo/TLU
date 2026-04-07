@@ -63,6 +63,9 @@ Unmask anomalies hiding in the data's "blood vessels." TLU calculates **Topologi
 
 *(Supports Forward Kinematics for simulating the ripple effects of virtual investments, and Inverse Kinematics for calculating the required target intervention while considering stiffness penalties.)*
 
+<img width="1704" height="1323" alt="1_2__3d_kinematics_ik" src="https://github.com/user-attachments/assets/5b440ab3-33e3-4edc-b4f5-17bc9c94d304" />
+<img width="1704" height="1323" alt="1_1__3d_kinematics_fk" src="https://github.com/user-attachments/assets/f7be0c01-e524-44b7-8a7e-2732faf23a67" />
+
 ### 004_ Control Theory & Systems Engineering
 
 Stop guessing. Use **Linear-Quadratic Regulator (LQR)** theory to calculate the mathematically optimal resource allocation trajectory to reach a target state while minimizing organizational friction (strain energy).
