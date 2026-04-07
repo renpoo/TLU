@@ -30,7 +30,7 @@ To achieve maximum testability (via Test-Driven Development) and reduce cognitiv
 * **Host Sterilization:** The user's host operating system requires only `Docker` and `bash`. Python, NumPy, SciPy, NetworkX, and Matplotlib are strictly confined within the `tlu-engine` container.
 * **Transparent Wrapper (`_tlu_env.sh`):** TLU provides a shell wrapper that transparently translates local commands into containerized executions (e.g., `docker compose exec -T tlu-engine python3`). The data flows seamlessly between the host's filesystem and the isolated container via standard streams, making the container feel like a native binary.
 
-## 4. Invisible GitOps & Audit Trails
+## 4. Invisible GitOps & Audit Trails (:FUTURE IMPLEMENTATIONS)
 
 In corporate strategy and forensics, the *provenance* of an insight is just as important as the insight itself. If a structural anomaly was detected last month, you must be able to prove exactly what parameters and data triggered that alert.
 

@@ -16,10 +16,10 @@ Real-world organizations do not reach their goals in a single, instantaneous jum
 
 $x(t+1) = A \cdot x(t) + B \cdot u(t)$
 
-* **State ($x(t)$):** The current status of all nodes in the network.
+* **State ($ x(t) $):** The current status of all nodes in the network.
 * **System Dynamics ($A$):** The natural transition or autoregressive tendencies of the system, derived from historical baselines.
 * **Control Input Matrix ($B$):** Maps which specific nodes are "controllable" (e.g., you can inject cash into R&D, but you cannot directly mandate an increase in "Customer Love").
-* **Intervention ($u(t)$):** The actual effort, budget, or force applied to the controllable nodes at time $t$.
+* **Intervention ($ u(t) $):** The actual effort, budget, or force applied to the controllable nodes at time $t$.
 
 ### The Linear-Quadratic Regulator (LQR)
 
