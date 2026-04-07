@@ -63,8 +63,8 @@ Unmask anomalies hiding in the data's "blood vessels." TLU calculates **Topologi
 
 *(Supports Forward Kinematics for simulating the ripple effects of virtual investments, and Inverse Kinematics for calculating the required target intervention while considering stiffness penalties.)*
 
-<img width="1717" height="1324" alt="1_2__3d_kinematics_ik" src="https://github.com/user-attachments/assets/8f2022ea-50e0-4cd4-8ef5-b102cf7cc359" />
 <img width="1717" height="1324" alt="1_1__3d_kinematics_fk" src="https://github.com/user-attachments/assets/47fe78fa-5d1e-4935-95c1-3324ff9e6dd9" />
+<img width="1717" height="1324" alt="1_2__3d_kinematics_ik" src="https://github.com/user-attachments/assets/8f2022ea-50e0-4cd4-8ef5-b102cf7cc359" />
 
 ### 004_ Control Theory & Systems Engineering
 
