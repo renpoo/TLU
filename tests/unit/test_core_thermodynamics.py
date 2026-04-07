@@ -56,8 +56,9 @@ class TestCoreThermodynamics(unittest.TestCase):
             [20.0, -20.0]
         ])
         T = compute_macro_temperature(q_history)
-        expected_var = np.var([10.0, 15.0, 20.0]) + np.var([-10.0, -15.0, -20.0])
-        self.assertAlmostEqual(T, expected_var)
+        
+        expected_std = np.std([10.0, 15.0, 20.0]) + np.std([-10.0, -15.0, -20.0])
+        self.assertAlmostEqual(T, expected_std)
 
     # --- Local Thermodynamics Tests (新規追加) ---
     def test_compute_local_internal_energy(self):
@@ -78,7 +79,9 @@ class TestCoreThermodynamics(unittest.TestCase):
             [10.0, 10.0, -5.0],
             [10.0, 10.0,  5.0]
         ])
-        expected_t_local = np.array([0.0, 56.25, 12.5])
+        
+        expected_t_local = np.std(q_history, axis=0, ddof=0)
+        
         t_local = compute_local_temperature(q_history)
         self.assertEqual(t_local.shape, (3,))
         np.testing.assert_array_almost_equal(t_local, expected_t_local)
