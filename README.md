@@ -97,7 +97,7 @@ TLU is fully containerized. You can go from zero to a full 3D analysis dashboard
 
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/renpoo/TLU.git](https://github.com/renpoo/TLU.git)
+git clone https://github.com/renpoo/TLU.git
 cd TLU
 
 # 2. Spin up the environment (Zero Local Dependency)
