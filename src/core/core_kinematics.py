@@ -40,7 +40,7 @@ def solve_ik_with_safe_stiffness(J, K_safe, target_dr):
     """
     # 1. 剛性行列 K の擬似逆行列（＝柔軟性/共分散）を計算
     # SDL_04: compute_safe_pinv を使用
-    K_inv = compute_safe_pinv(K_safe, lambda_reg=1e-6)
+    K_inv = compute_safe_pinv(K_safe, lambda_reg=suggest_lambda(K_safe))
     
     # 2. ヤコビアン J の形状調整 (1次元ベクトルの場合も行列として扱う)
     if J.ndim == 1:
@@ -59,8 +59,8 @@ def solve_ik_with_safe_stiffness(J, K_safe, target_dr):
     return dq_opt.flatten()
 
 def suggest_lambda(M):
-    # 行列のノルム（大きさ）の 1e-6 倍程度を正則化の基準にするなど
-    return np.linalg.norm(M) * 1e-6
+    # 行列のノルム（大きさ）の 1e-4 倍程度を正則化の基準にするなど
+    return np.linalg.norm(M) * 1e-4
 
 def compute_derivatives(q_history):
     """
