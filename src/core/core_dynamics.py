@@ -66,13 +66,21 @@ def estimate_virtual_mass_and_viscosity(q_history: np.ndarray, v_history: np.nda
     M = np.mean(np.abs(q_history), axis=0)
     
     # 粘性 C (摩擦): 速度の変動が少ないほど摩擦が大きい（動きが固定されている）と仮定
-    # 速度の標準偏差(ボラティリティ)の逆数をとる。
-    v_std = np.std(v_history, axis=0)
-    
-    # 完全に凪いでいる（標準偏差が0の）場合のゼロ除算を防ぐため、微小値(epsilon)を加算
-    global_v_scale = np.mean(v_std)
-    dynamic_epsilon = max(base_epsilon, global_v_scale * 1e-6)
-    C = 1.0 / (v_std + dynamic_epsilon)
+    if v_history.shape[0] <= 1:
+        # t_idx = 0 の場合（履歴が1ステップしかない場合）、すべての要素をゼロにする
+        C = np.zeros(v_history.shape[1])
+    else:
+        # 速度の標準偏差(ボラティリティ)の逆数をとる。
+        v_std = np.std(v_history, axis=0)
+        
+        # 完全に凪いでいる（標準偏差が0の）場合のゼロ除算を防ぐため、微小値(epsilon)を加算
+        if (v_std == 0.0).all():
+            global_v_scale = np.mean(v_std)
+            dynamic_epsilon = max(base_epsilon, global_v_scale * 1e-6)
+        else:
+            dynamic_epsilon = 0.0
+
+        C = 1.0 / (v_std + dynamic_epsilon)
     
     return M, C
 
