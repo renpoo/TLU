@@ -18,6 +18,10 @@ In classical mechanics, the state of a system is fully described by its position
 * **Velocity (v):** The rate of change of the net flux over time (the first derivative).
 * **Acceleration (a):** The rate of change of the velocity (the second derivative).
 
+<img width="1704" height="1323" alt="000_1_6__3d_dynamics_net_flux" src="https://github.com/user-attachments/assets/8a980a32-324b-4107-8fb9-59c650c9f11e" />
+<img width="1704" height="1323" alt="000_1_1__3d_dynamics_velocity" src="https://github.com/user-attachments/assets/7055aab8-6408-4769-b6d2-1554145e4b4a" />
+<img width="1704" height="1323" alt="000_1_2__3d_dynamics_acceleration" src="https://github.com/user-attachments/assets/3155838c-7037-4022-9824-bf30802e64d8" />
+
 ### Defining Inertia and Friction
 
 Not all nodes react to change equally. A massive, historically stable core department resists change much more than an agile, peripheral team.
@@ -25,6 +29,10 @@ Not all nodes react to change equally. A massive, historically stable core depar
 * **Virtual Mass / Inertia (M):** Calculated as the historical average of absolute flux: `M = mean(|q(t)|)`. The larger the historical volume of activity, the greater the node's "Inertia" (resistance to being moved).
 * **Virtual Viscosity / Friction (C):** Calculated as the inverse of velocity volatility: `C = 1 / std(v(t))`. Nodes that exhibit highly stable, unchanging velocities are modeled as having high "Friction" dragging them down.
 * **External Force Residual (F_ext):** Using Newton's Second Law combined with damping (`F = M * a + C * v`), TLU calculates the unknown, external force that must be acting upon the node to produce its currently observed motion.
+
+<img width="1704" height="1323" alt="000_1_3__3d_dynamics_inertia" src="https://github.com/user-attachments/assets/8fd98605-b0fd-4346-b0e6-35499b28e411" />
+<img width="1704" height="1323" alt="000_1_4__3d_dynamics_viscosity" src="https://github.com/user-attachments/assets/520071af-ba83-4441-857c-f28e024c6129" />
+<img width="1704" height="1323" alt="000_1_5__3d_dynamics_external_force" src="https://github.com/user-attachments/assets/4353e5de-867d-4c08-9324-b8fda894a164" />
 
 ## 2. Structural Stiffness & Partial Correlation (000_2_1)
 
@@ -35,6 +43,10 @@ While Phase Space Mechanics focuses on individual nodes, Solid Mechanics examine
 TLU calculates the covariance matrix of velocity changes across the entire network, and then computes its safe pseudo-inverse. The resulting inverse covariance matrix is known as the **Precision Matrix (K)**.
 
 * A higher value in the Precision Matrix indicates a mathematically "stiff" relationship between two nodes. They move together rigidly, meaning a shock to one will violently transfer to the other.
+
+<img width="2002" height="1783" alt="000_2_1__structural_stiffness t 00002" src="https://github.com/user-attachments/assets/0dd951d6-51d5-435c-9057-70fab8421e73" />
+<img width="2002" height="1783" alt="000_2_1__structural_stiffness t 00004" src="https://github.com/user-attachments/assets/a7a3a7c5-8a5a-460c-b965-0bb0a0c58258" />
+<img width="2002" height="1783" alt="000_2_1__structural_stiffness t 00006" src="https://github.com/user-attachments/assets/8cebae6e-9184-47de-a95a-3337d2992e97" />
 
 ### The Partial Correlation Pivot (Ver 8.0.0)
 

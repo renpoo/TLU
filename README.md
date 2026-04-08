@@ -97,7 +97,7 @@ TLU is fully containerized. You can go from zero to a full 3D analysis dashboard
 
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/renpoo/TLU.git](https://github.com/renpoo/TLU.git)
+git clone https://github.com/renpoo/TLU.git
 cd TLU
 
 # 2. Spin up the environment (Zero Local Dependency)
@@ -108,7 +108,7 @@ docker compose up -d
 bash bin/batch_generate_dummy_journal_data.sh
 bash bin/batch_processing.sh
 bash bin/batch_visualize_graphs.sh
-
+```
 
 # License: AGPL-3.0
 This project is a legacy of mathematical transparency. Under the AGPL-3.0 license, we ensure that the core logic remains open and verifiable by the community. If you build upon this engine, the world deserves to see the math.

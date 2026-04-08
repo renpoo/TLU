@@ -23,9 +23,13 @@ $M_{echo} = I + \gamma P + (\gamma P)^2 + \dots + (\gamma P)^k$
 * **Max Steps ($k$):** The horizon of the simulation. We only trace the impact up to $k$ degrees of separation before the signal is lost to noise.
 * **Forward Impact:** By multiplying an input vector (a virtual investment $\Delta q_{input}$) by $M_{echo}$, TLU predicts exactly which downstream nodes will swell with flux, and by how much, in the near future.
 
+<img width="1704" height="1323" alt="003_1_1__3d_kinematics_fk" src="https://github.com/user-attachments/assets/7a195560-47dc-42f5-8181-118545b844b0" />
+
 ## 2. Inverse Kinematics: Goal-Seeking Optimization (003_1_2)
 
 While FK asks, "If I push here, what happens?", **Inverse Kinematics (IK)** asks the far more valuable question: *"If I want this specific outcome, where and how hard must I push?"*
+
+<img width="1704" height="1323" alt="003_1_2__3d_kinematics_ik" src="https://github.com/user-attachments/assets/f17a9d5d-c486-4079-8101-584aed8d5a36" />
 
 ### Strain Energy Minimization
 
