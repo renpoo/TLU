@@ -29,6 +29,7 @@ The macro state variables can be projected down to individual nodes to identify 
 * **Local Complexity ($s_i$):** Does this node distribute its outputs to 2 predictable targets, or 50 random ones? High local entropy indicates a node burdened with complex, scattered responsibilities.
 * **Local Volatility ($t_i$):** How erratic is the flow through this specific node? Nodes with high local temperature are often bottlenecks suffering from inconsistent inputs.
 
+<img width="1704" height="1323" alt="001_1_2_1__3d_local_entropy" src="https://github.com/user-attachments/assets/fc6ead05-b03d-4b1f-8f50-44667aad4f77" />
 <img width="1704" height="1323" alt="001_1_2_2__3d_local_temperature" src="https://github.com/user-attachments/assets/f80a2f0c-b9d2-41be-915d-2b2b6543e5a0" />
 <img width="1898" height="1135" alt="001_1_2_3__local_thermo_volatility" src="https://github.com/user-attachments/assets/b0e2dd40-9f39-48ae-b174-bfac0824e544" />
 <img width="1894" height="1135" alt="001_1_2_4__local_thermo_complexity" src="https://github.com/user-attachments/assets/efe0361d-e04c-49ba-870e-51b008f6dac7" />
