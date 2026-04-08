@@ -12,6 +12,9 @@ It transitions the system from isolated, one-off goal-seeking (Inverse Kinematic
 
 Real-world organizations do not reach their goals in a single, instantaneous jump. Interventions must be applied continuously over time, adjusting as the system reacts. TLU formulates the entire network as a discrete-time **State-Space Model** and solves for the optimal intervention trajectory.
 
+<img width="1840" height="1004" alt="004_1_1__control_input_trajectory" src="https://github.com/user-attachments/assets/ea6ae99f-73c0-41da-a9aa-909b988199ef" />
+<img width="1719" height="1004" alt="004_1_2__control_error_convergence" src="https://github.com/user-attachments/assets/a16535d7-1e4e-48f5-b25a-3373d3240e85" />
+
 ### The State-Space Formulation
 
 $x(t+1) = A \cdot x(t) + B \cdot u(t)$
@@ -33,6 +36,8 @@ This equation balances two fundamentally opposing business desires:
 
 By solving the Discrete Algebraic Riccati Equation (DARE), TLU computes the optimal feedback gain $K$. It provides leadership with a precise, multi-step trajectory: exactly how much resource to allocate, to which specific nodes, at what specific time step, to reach the goal with mathematical efficiency.
 
+<img width="1922" height="1131" alt="004_1_3__control_lqr_performance_space" src="https://github.com/user-attachments/assets/50e879dd-ab69-4d80-b85a-01874a39d3f7" />
+
 ## 2. System Sensitivity Matrix (004_2_1)
 
 If LQR is a surgical scalpel for a specific goal, the **System Sensitivity Matrix** is a sweeping radar scan of the entire battlefield. It performs an exhaustive, brute-force sensitivity analysis across every single node to find the ultimate management trade-offs.
@@ -43,6 +48,13 @@ TLU automatically injects a uniform virtual investment ($\Delta$) into each node
 
 1. **Ripple Effect (FK-based ROI):** How much total systemic flux (Internal Energy) does this specific investment generate across the entire network via the Neumann Echo?
 2. **Strain Energy (IK/Stiffness-based Friction):** Based on the Precision Matrix ($K$), how much structural "pain" or resistance does the organization experience when this node is forcefully expanded?
+
+<img width="1564" height="1352" alt="004_2_1__sensitivity_analysis_series_heatmap k 00000 t 00001" src="https://github.com/user-attachments/assets/df5111b4-e7fc-44ea-b89e-475333fbf0fd" />
+<img width="1564" height="1352" alt="004_2_1__sensitivity_analysis_series_heatmap k 00001 t 00001" src="https://github.com/user-attachments/assets/b7b53ae2-ee82-42a4-a512-3f3249410f1f" />
+<img width="1564" height="1352" alt="004_2_1__sensitivity_analysis_series_heatmap k 00002 t 00001" src="https://github.com/user-attachments/assets/53e31f51-5495-4a39-8198-9f64fc0f0b91" />
+<img width="1564" height="1352" alt="004_2_1__sensitivity_analysis_series_heatmap k 00003 t 00001" src="https://github.com/user-attachments/assets/b33bc296-cf80-4d0b-a829-1801ff4b7e78" />
+<img width="1564" height="1352" alt="004_2_1__sensitivity_analysis_series_heatmap k 00004 t 00001" src="https://github.com/user-attachments/assets/fa29c71d-dbfc-4318-9a9d-455ff045f635" />
+<img width="1564" height="1352" alt="004_2_1__sensitivity_analysis_series_heatmap k 00005 t 00001" src="https://github.com/user-attachments/assets/9be57fcb-320d-465d-a021-90d9bee30d1b" />
 
 ### The Strategic Matrix
 
