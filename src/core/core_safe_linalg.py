@@ -2,7 +2,7 @@
 # core_safe_linalg.py
 import numpy as np
 
-def compute_safe_pinv(M_singular, rcond=1e-6, lambda_reg=1e-1):
+def compute_safe_pinv(M_singular, rcond=1e-6, lambda_reg=1e-6):
     """
     特異行列の擬似逆行列を安全に計算する。
     真のチコノフ正則化 (M^T * M + lambda*I)^(-1) * M^T に基づく実装。

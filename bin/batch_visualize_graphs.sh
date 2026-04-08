@@ -15,24 +15,26 @@ VIZ_ORCH_DIR="./bin/visualizers"
 
 # 実行する可視化ランチャーの配列（実行順）
 SCRIPTS=(
-    "vis_1_1_visualize_forward_kinematics.sh"
-    "vis_1_2_visualize_inverse_kinematics.sh"
-    "vis_1_3_visualize_dynamics.sh"
-    "vis_1_5_visualize_macro_thermodynamics.sh"
-    "vis_1_6_visualize_local_thermo.sh"
-    "vis_1_7_visualize_control_theory.sh"
-    "vis_1_8_visualize_macro_forensics.sh"
-    "vis_1_9_visualize_micro_forensics.sh"
-    "vis_1_10_visualize_lag_matrix.sh"
-    "vis_1_11_visualize_info_geometry.sh"
-    "vis_1_12_visualize_topology.sh"
-    "vis_1_13_visualize_sensitivity_matrix.sh"
-    "vis_1_13_visualize_sensitivity_analysis_heatmaps.sh"
-    "vis_1_14_visualize_structural_stiffness.sh"
+    "vis_000_1_1_visualize_dynamics_state.sh"
+    "vis_000_2_1_visualize_structural_stiffness.sh"
+    "vis_001_1_1_visualize_macro_thermodynamics.sh"
+    "vis_001_2_1_visualize_local_thermodynamics.sh"
+    "vis_001_2_2_visualize_lag_matrix.sh"
+    "vis_002_1_1_visualize_info_geometry.sh"
+    "vis_002_1_2_visualize_network_topology.sh"
+    "vis_002_2_1_visualize_macro_forensics.sh"
+    "vis_002_2_2_visualize_micro_forensics.sh"
+    "vis_003_1_1_visualize_fk_simulation.sh"
+    "vis_003_1_2_visualize_ik_optimization.sh"
+    "vis_004_1_1_visualize_control_theory.sh"
+    "vis_004_2_1_visualize_sensitivity_matrix.sh"
+    "vis_004_2_2_visualize_sensitivity_analysis_heatmaps.sh"
 )
 
 echo "🚀 Starting TLU Visualization Pipeline (Theme: ${TLU_THEME})..."
 echo "--------------------------------------------------"
+
+rm -rf workspace/output_plots/*
 
 for script in "${SCRIPTS[@]}"; do
     # スクリプトが存在する場合のみ実行

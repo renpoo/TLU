@@ -28,20 +28,19 @@ TEST_MODULES=(
     "tests.unit.test_core_topology"
     
     # --- Integration Tests ---
-    "tests.integration.test_1_1_filter_fk_simulation"
-    "tests.integration.test_1_2_filter_ik_optimization"
-    "tests.integration.test_1_3_filter_dynamics_state"
-    "tests.integration.test_1_4_filter_time_lag"
-    "tests.integration.test_1_5_filter_thermodynamics_macro"
-    "tests.integration.test_1_6_filter_local_thermo"
-    "tests.integration.test_1_7_filter_control_theory"
-    "tests.integration.test_1_8_filter_macro_forensics"
-    "tests.integration.test_1_9_filter_micro_forensics"
-    "tests.integration.test_1_10_filter_lag_matrix"
-    "tests.integration.test_1_11_filter_info_curvature"
-    "tests.integration.test_1_12_filter_network_topology"
-    "tests.integration.test_1_13_filter_sensitivity"
-    "tests.integration.test_1_14_filter_structural_stiffness"
+    "tests.integration.test_000_1_1_filter_dynamics_state"
+    "tests.integration.test_000_2_1_filter_structural_stiffness"
+    "tests.integration.test_001_1_1_filter_macro_thermodynamics"
+    "tests.integration.test_001_1_2_filter_local_thermodynamics"
+    "tests.integration.test_001_2_1_filter_lag_matrix"
+    "tests.integration.test_002_1_1_filter_info_curvature"
+    "tests.integration.test_002_1_2_filter_network_topology"
+    "tests.integration.test_002_2_1_filter_macro_forensics"
+    "tests.integration.test_002_2_2_filter_micro_forensics"
+    "tests.integration.test_003_1_1_filter_fk_simulation"
+    "tests.integration.test_003_1_2_filter_ik_optimization"
+    "tests.integration.test_004_1_1_filter_control_theory"
+    "tests.integration.test_004_2_1_filter_sensitivity"
 )
 
 for module in "${TEST_MODULES[@]}"; do
