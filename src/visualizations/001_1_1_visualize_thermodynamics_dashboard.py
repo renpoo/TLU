@@ -54,7 +54,7 @@ def main():
     T_max_idx = int(t.max()) + 1
     time_labels = load_time_labels(args.time_map, T_max_idx)
     
-    T_corrected = np.sqrt(np.maximum(T_raw, 0))
+    T_corrected = np.maximum(T_raw, 0)
     TS = T_corrected * S
     F_corrected = U - TS
 

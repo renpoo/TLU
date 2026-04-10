@@ -51,3 +51,25 @@ By monitoring the Thermodynamic and Fluctuation metrics, decision-makers can ans
 1. **Is the organization burning out?** (High $U$, High $T$, but shrinking $F$).
 2. **Are processes becoming dangerously chaotic?** (A steady upward drift in global $S$).
 3. **What is the true ROI timeline?** (Using the Lag Matrix to know exactly *when* an investment will hit the target node, rather than just assuming it happens instantly).
+
+## 5. CAUTION - Epistemological and Operational Limits
+
+The application of macroscopic thermodynamic models to microscopic social systems (nodes, departments, accounts) provides a powerful heuristic for anomaly detection. However, users MUST strictly acknowledge the following epistemological limitations and operational hazards.
+
+### 1. Strong Dependence on Coarse-Graining (Observation Time Scales)
+
+The calculated Temperature ($T$) and Entropy ($S$) are highly dependent on the chosen time window for data aggregation (e.g., Daily, Weekly, Monthly, Quaterly).
+A violent micro-fluctuation (high temperature) observed in a short-term window may appear as a smooth, steady flow (low temperature) from a long-term macroscopic perspective. **These indicators are not absolute truths; they are strictly relative landscapes bound by the configured time scale.**
+
+### 2. Conflation of "State Variables" and "Process (Flow) Variables"
+
+This thermodynamic filter evaluates the **fluid characteristics of transactions** passing through a node, not the internal structure of the node itself.
+Do not erroneously equate "high entropy" with "the organization is in chaos." Instead, accurately interpret it as "the destinations of the resources passing through this organization are highly diverse and complex." Confusing a flow metric with an internal state metric will lead to misguided interventions.
+
+### 3. Absolute Prohibition of KPI-ization (Avoiding Goodhart's Law)
+
+**It is strictly prohibited to set the "Maximization of Free Energy ($F$)" or "Minimization of $T$ and $S$" as organizational goals or KPIs.**
+Unlike physical particles, human beings and organizations possess agency. If they know they are being evaluated by these metrics, they will artificially alter their behavior to optimize the numbers (Goodhart's Law).
+Artificially suppressing friction ($T$) or diversity ($S$) to improve the score will lead to the cessation of experimental transactions, innovation, and network exploration—ultimately resulting in the "Thermal Death" of the organization.
+
+**This system is exclusively an early-warning radar for anomalies. It is NEVER a target to be optimized.**
