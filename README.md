@@ -89,6 +89,8 @@ For detailed mathematical logic, operational protocols, and API references, plea
 * [003_Applied_Kinematics.md](docs/physics/003_Applied_Kinematics.md)
 * [004_Control_Theory_and_Systems_Engineering.md](docs/physics/004_Control_Theory_and_Systems_Engineering.md)
 
+* [DISCUSSION.md](DISCUSSION.md)
+
 ---
 
 ## Quick Start
