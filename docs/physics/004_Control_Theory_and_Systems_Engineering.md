@@ -1,6 +1,6 @@
 # 004. Control Theory & Systems Engineering
 
-> **"To merely observe the system is to be subjected to its whims. To understand its mechanics is to simulate its future. But to control it—that is the essence of engineering."**
+> **"To merely observe the system is to be subjected to its whims. To understand its mechanics is to simulate its future. But to control it —- that is the essence of engineering."**
 
 Category **004** represents the absolute culmination of the Tensor-Link Utility (TLU) pipeline. Drawing upon the physical properties (Mass, Stiffness), thermodynamic health, geometric distortions, and causal pathways uncovered in Categories 000 through 003, this final layer provides strategic leadership with mathematically optimal execution plans.
 
