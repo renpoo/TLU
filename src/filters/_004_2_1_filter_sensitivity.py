@@ -43,7 +43,7 @@ def run_sensitivity_analysis(
     if len(q_hist_arr) > 2:
         dq_history = np.diff(q_hist_arr, axis=0)
         covariance = csl.compute_covariance_matrix(dq_history)
-        K_safe = csl.compute_safe_pinv(covariance, lambda_reg=1e-1)
+        K_safe = csl.compute_safe_pinv(covariance, rcond=1e-15, lambda_reg=1e-4)
     else:
         K_safe = np.eye(N)
 
@@ -68,7 +68,7 @@ def run_sensitivity_analysis(
         # ノードi を無理やり delta だけ押し上げたら、全体にどれだけの負荷がかかるか？
         # ------------------------------------------------
         J = M_echo[:, [i]].T 
-        dq_opt = ck.solve_ik_with_safe_stiffness(J, K_safe, [delta])
+        dq_opt = ck.solve_ik_with_safe_stiffness(J, K_safe, [delta], lambda_ratio=1e-4)
         
         strain_energy = 0.5 * np.dot(dq_opt.T, np.dot(K_safe, dq_opt))  # 組織全体への摩擦/負荷
         ik_adjust_others = np.copy(dq_opt)

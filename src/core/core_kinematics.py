@@ -29,18 +29,23 @@ def run_forward_simulation(P, dq_input, gamma, max_k):
         
     return total_dq
 
-def solve_ik_with_safe_stiffness(J, K_safe, target_dr):
+def suggest_lambda(M: np.ndarray, lambda_ratio: float) -> float:
+    """
+    行列のスケールに基づく動的な正則化パラメータを提案する。
+    ※ 1e-4のような固定値ではなく、外部からの lambda_ratio を使用する。
+    """
+    return float(np.linalg.norm(M) * lambda_ratio)
+
+def solve_ik_with_safe_stiffness(J: np.ndarray, K_safe: np.ndarray, target_dr: float, lambda_ratio: float):
     """
     [双剣の2: 逆運動学とひずみ最適化]
     目標変動量 target_dr に対し、ひずみエネルギー U = 1/2 * dq^T * K_safe * dq 
     を最小化する全体変位 dq_opt を算出する。
     
-    解法: 重み付き最小二乗（制約付き最適化）
-    dq = K_safe_pinv * J.T * pinv(J * K_safe_pinv * J.T) * target_dr
+    ※ lambda_ratio を外部から受け取り、スケール不変な正則化を行う。
     """
     # 1. 剛性行列 K の擬似逆行列（＝柔軟性/共分散）を計算
-    # SDL_04: compute_safe_pinv を使用
-    K_inv = compute_safe_pinv(K_safe, lambda_reg=suggest_lambda(K_safe))
+    K_inv = compute_safe_pinv(K_safe, rcond=1e-15, lambda_reg=suggest_lambda(K_safe, lambda_ratio))
     
     # 2. ヤコビアン J の形状調整 (1次元ベクトルの場合も行列として扱う)
     if J.ndim == 1:
@@ -50,7 +55,7 @@ def solve_ik_with_safe_stiffness(J, K_safe, target_dr):
     A = np.dot(J, np.dot(K_inv, J.T))
     
     # 4. A の安全な逆行列を計算
-    A_inv = compute_safe_pinv(A, lambda_reg=suggest_lambda(A))
+    A_inv = compute_safe_pinv(A, rcond=1e-15, lambda_reg=suggest_lambda(A, lambda_ratio))
     
     # 5. 最適変位 dq_opt の算出
     dr_vec = np.array([target_dr]) if np.isscalar(target_dr) else np.array(target_dr)
@@ -58,14 +63,10 @@ def solve_ik_with_safe_stiffness(J, K_safe, target_dr):
     
     return dq_opt.flatten()
 
-def suggest_lambda(M):
-    # 行列のノルム（大きさ）の 1e-4 倍程度を正則化の基準にするなど
-    return np.linalg.norm(M) * 1e-4
-
 def compute_derivatives(q_history):
     """
-    状態ベクトル(q)の時系列履歴から、最新の速度(v)と加速度(a)を算出する。
-    
+    状態ベクトル(q)の時系列履歴から、最新の速度(v)と加速度(a)を算出する。    
+
     Args:
         q_history: 過去の状態ベクトル履歴 (Time_steps x Nodes)
                    時系列順に並んでいること（最も古い履歴が先頭）。

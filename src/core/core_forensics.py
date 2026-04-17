@@ -3,9 +3,10 @@
 import numpy as np
 from src.core.core_information_geometry import compute_kl_divergence
 
-def check_conservation_law(q_current: np.ndarray, tolerance: float = 1e-5) -> tuple[float, bool]:
+def check_conservation_law(q_current: np.ndarray, tolerance: float) -> tuple[float, bool]:
     """
     ネットワーク全体の純フラックスの総和を計算し、保存則の残差（漏電）を検知する。
+    ※ tolerance（許容誤差）は呼び出し元から明示的に注入されること。
     """
     # 系全体の流入・流出の総和。複式簿記等の閉鎖系であれば本来は0になる。
     residual = float(np.sum(q_current))
@@ -51,12 +52,15 @@ def compute_multivariate_anomaly(q_current: np.ndarray, q_mean: np.ndarray, K_pr
 def evaluate_anomaly_flags(residual: float, kl_div: float, z_score: float, thresholds: dict) -> int:
     """
     各種異常スコアが閾値を超過しているかを判定し、1（異常）または 0（正常）を返す。
+    ※ スケール不変性を保つため、内部での暗黙のデフォルト値は持たない。
+    ※ thresholds には必ず 'leak_tolerance', 'kl_drift_thresh', 'z_score_thresh' が含まれていること。
     """
-    if residual > thresholds.get('leak_tolerance', 1e-5):
+    # 意図的なFail-Fast: キーが存在しない場合は明示的にKeyErrorを発生させる
+    if residual > thresholds['leak_tolerance']:
         return 1
-    if kl_div > thresholds.get('kl_drift_thresh', 3.0):
+    if kl_div > thresholds['kl_drift_thresh']:
         return 1
-    if z_score > thresholds.get('z_score_thresh', 3.0):
+    if z_score > thresholds['z_score_thresh']:
         return 1
     
     return 0

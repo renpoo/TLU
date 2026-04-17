@@ -51,7 +51,7 @@ class TestCoreDynamics(unittest.TestCase):
         ])
 
         # 実行 (Act)
-        M, C = estimate_virtual_mass_and_viscosity(q_history, v_history)
+        M, C = estimate_virtual_mass_and_viscosity(q_history, v_history, base_epsilon=1e-10, velocity_scale_ratio=0.1)
 
         # 検証 (Assert)
         # 1. 質量 M: 活動スケールが大きい Node 0 の方が、Node 1 より大きいはず

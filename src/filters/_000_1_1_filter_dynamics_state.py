@@ -34,7 +34,7 @@ def run_dynamics_state_analysis(
     temp_v_hist = np.array(v_history + [v_current])
     
     # 3. 仮想質量 M と 粘性 C
-    M, C = estimate_virtual_mass_and_viscosity(temp_q_hist, temp_v_hist)
+    M, C = estimate_virtual_mass_and_viscosity(temp_q_hist, temp_v_hist, base_epsilon=1e-10, velocity_scale_ratio=0.1)
 
     # 4. 外部入力 (F_ext)
     K = np.zeros(N, dtype=float)

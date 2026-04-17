@@ -13,7 +13,7 @@ class TestCoreForensics(unittest.TestCase):
     def test_check_conservation_law(self):
         # ネットワーク全体の純フラックスの総和がゼロ（保存則）を満たしているか
         q_balanced = np.array([100.0, -50.0, -50.0])
-        residual, is_leaking = check_conservation_law(q_balanced)
+        residual, is_leaking = check_conservation_law(q_balanced, tolerance=1e-15)
         self.assertAlmostEqual(residual, 0.0)
         self.assertFalse(is_leaking)
 

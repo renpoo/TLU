@@ -42,7 +42,7 @@ def run_ik_analysis(
     if len(q_hist_arr) > 2:
         dq_history = np.diff(q_hist_arr, axis=0)
         covariance = csl.compute_covariance_matrix(dq_history)
-        K_safe = csl.compute_safe_pinv(covariance)
+        K_safe = csl.compute_safe_pinv(covariance, rcond=1e-15, lambda_reg=1e-4)
     else:
         K_safe = np.eye(N)
 
@@ -54,7 +54,7 @@ def run_ik_analysis(
     M_echo = ck.build_echo_matrix(P_current, gamma, max_k)
     J = M_echo[:, target_ids].T 
     
-    suggested_ik_dq = ck.solve_ik_with_safe_stiffness(J, K_safe, target_dr_values)
+    suggested_ik_dq = ck.solve_ik_with_safe_stiffness(J, K_safe, target_dr_values, lambda_ratio=1e-4)
     strain_energy = 0.5 * np.dot(suggested_ik_dq.T, np.dot(K_safe, suggested_ik_dq))
 
     for i in range(N):

@@ -28,7 +28,6 @@ def compute_optimal_time_lag(signal_A: np.ndarray, signal_B: np.ndarray, max_lag
 
     for lag in range(actual_max_lag + 1):
         # シグナルAを基準とし、シグナルBを lag 分だけ「過去に引き戻して（左シフトして）」比較する
-        # 例 lag=2: Aは[0]〜[N-3]まで、Bは[2]〜[N-1]までを使用
         slice_A = signal_A[: N - lag]
         slice_B = signal_B[lag :]
         
@@ -49,20 +48,22 @@ def compute_optimal_time_lag(signal_A: np.ndarray, signal_B: np.ndarray, max_lag
     return best_lag, float(max_corr)
 
 
-def estimate_virtual_mass_and_viscosity(q_history: np.ndarray, v_history: np.ndarray, base_epsilon: float = 1e-6) -> tuple[np.ndarray, np.ndarray]:
+def estimate_virtual_mass_and_viscosity(q_history: np.ndarray, v_history: np.ndarray, base_epsilon: float, velocity_scale_ratio: float) -> tuple[np.ndarray, np.ndarray]:
     """
     過去の履歴から、各ノードの仮想的な質量(M)と粘性(C)を推定する。
+    ※ スケール依存のマジックナンバーを排除し、微小値パラメータは外部から注入する。
     
     Args:
         q_history: 状態ベクトルの履歴 (Time_steps x Nodes)
         v_history: 速度ベクトルの履歴 (Time_steps x Nodes)
+        base_epsilon: ゼロ除算を防ぐための絶対的な微小値
+        velocity_scale_ratio: 速度スケールに基づく動的な微小値の比率
         
     Returns:
         M: ノードごとの仮想質量 (Nodes,)
         C: ノードごとの粘性抵抗 (Nodes,)
     """
     # 質量 M (慣性): 過去の活動量の蓄積（スケール）に比例すると仮定
-    # 単純に、q_historyの絶対値の時間平均を「動かしにくさ」の指標とする
     M = np.mean(np.abs(q_history), axis=0)
     
     # 粘性 C (摩擦): 速度の変動が少ないほど摩擦が大きい（動きが固定されている）と仮定
@@ -73,10 +74,11 @@ def estimate_virtual_mass_and_viscosity(q_history: np.ndarray, v_history: np.nda
         # 速度の標準偏差(ボラティリティ)の逆数をとる。
         v_std = np.std(v_history, axis=0)
         
-        # 完全に凪いでいる（標準偏差が0の）場合のゼロ除算を防ぐため、微小値(epsilon)を加算
+        # 完全に凪いでいる（標準偏差が0の）場合のゼロ除算を防ぐため、動的な微小値を計算
         if (v_std == 0.0).all():
             global_v_scale = np.mean(v_std)
-            dynamic_epsilon = max(base_epsilon, global_v_scale * 1e-6)
+            # 外部から注入された比率(velocity_scale_ratio)を使用
+            dynamic_epsilon = max(base_epsilon, global_v_scale * velocity_scale_ratio)
         else:
             dynamic_epsilon = 0.0
 

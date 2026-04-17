@@ -2,10 +2,13 @@
 # core_safe_linalg.py
 import numpy as np
 
-def compute_safe_pinv(M_singular, rcond=1e-15, lambda_reg=1e-4):
+def compute_safe_pinv(M_singular, rcond, lambda_reg):
     """
     特異行列の擬似逆行列を安全に計算する。
     真のチコノフ正則化 (M^T * M + lambda*I)^(-1) * M^T に基づく実装。
+    
+    ※ スケール不変性を担保するため、rcond および lambda_reg のデフォルト値は持たない。
+    ※ 呼び出し元（上位レイヤー）が系のスケールに応じてこれらを供給すること。
     
     Args:
         M_singular: 特異行列 (N x M)

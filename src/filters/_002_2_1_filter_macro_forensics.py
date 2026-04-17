@@ -43,7 +43,7 @@ def run_forensics_analysis(
         # 履歴から期待値(平均)と精度行列(共分散の逆行列)を計算
         q_mean = np.mean(q_history_window, axis=0)
         cov_matrix = compute_covariance_matrix(np.array(q_history_window))
-        K_precision = compute_safe_pinv(cov_matrix)
+        K_precision = compute_safe_pinv(cov_matrix, rcond=1e-15, lambda_reg=1e-4)
         
         z_score = compute_multivariate_anomaly(q_current, q_mean, K_precision)
     else:
