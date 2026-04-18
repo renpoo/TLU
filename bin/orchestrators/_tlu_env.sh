@@ -34,6 +34,29 @@ export TLU_TMP_COO="workspace/ephemeral/_coo_stream.csv"
 export TLU_PLOT_DIR="workspace/output_plots"
 export TLU_VIZ_DIR="src/visualizations"
 
+# ==========================================
+# 2.5 Dynamic Hyperparameter Injection
+# ==========================================
+# CSVに定義された定数を、システム全域の環境変数 ($TLU_*) として展開する
+if [ -f "${TLU_SYS_PARAMS}" ]; then
+    # echo "[INFO] Loading system parameters from ${TLU_SYS_PARAMS}..."
+    while IFS=, read -r key value || [ -n "$key" ]; do
+        # 空行やコメント行をスキップ
+        [[ -z "$key" || "$key" == \#* ]] && continue
+        
+        # スペースとキャリッジリターンを除去して正規化
+        clean_key=$(echo "$key" | xargs)
+        clean_value=$(echo "$value" | tr -d '\r' | xargs)
+        
+        # 例: damping_factor -> TLU_DAMPING_FACTOR
+        # macOS 標準の Bash (v3.2) では ${var^^} がサポートされていないため、tr コマンドで大文字化します。
+        upper_key=$(echo "$clean_key" | tr '[:lower:]' '[:upper:]')
+        export "TLU_${upper_key}=${clean_value}"
+    done < "${TLU_SYS_PARAMS}"
+else
+    echo "[WARN] Parameter file ${TLU_SYS_PARAMS} not found. Subsequent runs may fail if variables are missing."
+fi
+
 # --- 3. Unified Pipeline Runner ---
 # 使い方: run_tlu_pipeline <説明> <始点カラム> <終点カラム> <実行モジュール> <出力ファイル名> [追加引数...]
 run_tlu_pipeline() {

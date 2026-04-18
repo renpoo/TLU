@@ -5,12 +5,14 @@
 # ==========================================
 set -euo pipefail
 
-echo "Running unit tests..."
+echo "=================================================="
+echo "TLU System: Unit & Integration Test Runner"
+echo "=================================================="
 
-# 環境変数の読み込み
+# 1. 環境変数の読み込み
 source "$(dirname "$0")/orchestrators/_tlu_env.sh"
 
-# テスト対象モジュールのリスト
+# 2. テスト対象モジュールの定義
 TEST_MODULES=(
     # --- Unit Tests ---
     "tests.unit.test_cli_parser"
@@ -43,9 +45,13 @@ TEST_MODULES=(
     "tests.integration.test_004_2_1_filter_sensitivity"
 )
 
+# 3. テストの逐次実行
 for module in "${TEST_MODULES[@]}"; do
-    echo -e "\nExecuting: ${module}"
+    echo -e "\n[EXECUTING] ${module}"
     $TLU_PY -m "${module}"
 done
 
-echo -e "\n✅ All tests completed successfully."
+echo ""
+echo "=================================================="
+echo "✅ All tests completed successfully."
+echo "=================================================="

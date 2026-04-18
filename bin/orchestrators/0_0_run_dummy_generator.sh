@@ -20,14 +20,18 @@ echo "Anomalies: Enabled (Z-Spikes, Drifts, Leaks will be injected)"
 echo "Output: ${OUTPUT_FILE}"
 echo "Running..."
 
-# 3. 生成スクリプトの実行
+# 3. パラメータの取得と Fail-Fast 検証
+MONTHS="${TLU_DUMMY_DURATION_MONTHS:?環境変数 TLU_DUMMY_DURATION_MONTHS が設定されていません。}"
+SEED="${TLU_DUMMY_RANDOM_SEED:?環境変数 TLU_DUMMY_RANDOM_SEED が設定されていません。}"
+
+# 4. 生成スクリプトの実行
 # ${TLU_PY} により、Dockerコンテナ内またはローカル環境で透過的に実行されます。
 # ※ _0_0_generate_dummy_journal.py が src/filters/ ディレクトリに配置されていると仮定したモジュール指定です。
 #    配置場所（src.generators など）に合わせて適宜変更してください。
 
 ${TLU_PY} -m src.filters._0_0_generate_dummy_journal \
-    --months 24 \
-    --seed 42 \
+    --months "${MONTHS}" \
+    --seed "${SEED}" \
     > "${OUTPUT_FILE}"
     # --sales-leak 0.01 \
     # --purchase-leak 0.005 \

@@ -5,6 +5,10 @@
 # ==========================================
 set -euo pipefail
 
+# 1. 共通環境の読み込み（パスとハイパーパラメータの初期化）
+# batch_processing.sh がプロジェクトルートにあると仮定
+source "./bin/orchestrators/_tlu_env.sh"
+
 ORCH_DIR="./bin/orchestrators"
 
 # 実行するスクリプトの配列（実行順）
@@ -24,12 +28,19 @@ SCRIPTS=(
     "004_2_1_run_sensitivity.sh"
 )
 
-echo "Starting batch processing..."
+echo "Starting TLU batch processing..."
 
-rm -rf workspace/output_data/*
+# 2. 出力ディレクトリのクリーンアップ（共通定義パスを使用）
+if [ -d "${TLU_OUT_DIR}" ]; then
+    echo "Cleaning up output directory: ${TLU_OUT_DIR}"
+    rm -rf "${TLU_OUT_DIR}"/*
+else
+    mkdir -p "${TLU_OUT_DIR}"
+fi
 
+# 3. 各解析プロセスの逐次実行
 for script in "${SCRIPTS[@]}"; do
-    echo -e "\nRunning ${script}..."
+    echo -e "\n[EXECUTING] ${script}"
     bash "${ORCH_DIR}/${script}"
 done
 
