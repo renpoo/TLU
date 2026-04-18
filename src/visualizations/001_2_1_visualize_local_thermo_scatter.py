@@ -15,8 +15,8 @@ from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Local Thermodynamics Phase Space: Scale vs Volatility/Complexity")
-    parser.add_argument("--mode", type=str, choices=['temperature', 'entropy'], required=True, 
-                        help="Select metric for Y-axis (temperature=volatility, entropy=complexity/dispersion)")
+    parser.add_argument("--mode", type=str, choices=['temperature', 'entropy', 'gradient'], required=True, 
+                        help="Select metric for Y-axis (temperature=volatility, entropy=complexity, gradient=thermal-friction)")
     parser.add_argument("--top_k", type=int, default=3, help="Number of singular points to highlight")
     return parser
 
@@ -60,11 +60,16 @@ def main():
         y_label = 'Local Temperature (Log10 $t_i$) - Volatility'
         title = 'Local Thermo Portfolio: Scale vs Volatility (Risk Identification)'
         highlight_metric = 'local_temperature_t' 
-    else:
+    elif args.mode == 'entropy':
         y_data = df_mean['local_entropy_s']
         y_label = 'Local Entropy ($s_i$) - Complexity & Dispersion'
         title = 'Local Thermo Portfolio: Scale vs Complexity (Hub Identification)'
         highlight_metric = 'local_entropy_s' 
+    else: # gradient
+        y_data = df_mean['local_grad_t']
+        y_label = 'Local Temperature Gradient ($\\nabla t_i$) - Friction & Force'
+        title = 'Local Thermo Portfolio: Scale vs Thermal Gradient (Bottleneck Identification)'
+        highlight_metric = 'local_grad_t'
 
     df_mean['plot_y'] = y_data
     top_k_df = df_mean.nlargest(args.top_k, highlight_metric)

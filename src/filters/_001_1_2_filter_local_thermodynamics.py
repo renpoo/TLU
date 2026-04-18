@@ -16,7 +16,8 @@ from src.core.core_tensor_ops import compute_net_flux, compute_transition_matrix
 from src.core.core_information_geometry import compute_shannon_entropy
 from src.core.core_thermodynamics import (
     compute_local_internal_energy,
-    compute_local_temperature
+    compute_local_temperature,
+    compute_local_temperature_gradient
 )
 
 def run_local_thermo_analysis(
@@ -61,12 +62,15 @@ def run_local_thermo_analysis(
     else:
         t_local = np.zeros(N)
 
-    # 4. Record format
+    # 4. Local temperature gradient grad_t_i (Topological spatial difference)
+    grad_t_local = compute_local_temperature_gradient(t_local, T_slice)
+
+    # 5. Record format
     records = []
     for i in range(N):
         records.append([
             t_idx, i, 
-            f"{u_local[i]:.4f}", f"{s_local[i]:.4f}", f"{t_local[i]:.4f}"
+            f"{u_local[i]:.4f}", f"{s_local[i]:.4f}", f"{t_local[i]:.4f}", f"{grad_t_local[i]:.4f}"
         ])
 
     return records, q_current
@@ -75,7 +79,7 @@ def main():
     parser = get_base_parser("TLU Local Thermodynamics Filter")
     parser.add_argument("--temp_window", type=int, default=3, help="Time window width for local temperature (volatility) calculation")
     
-    output_header = ["t_idx", "node_idx", "local_internal_energy_u", "local_entropy_s", "local_temperature_t"]
+    output_header = ["t_idx", "node_idx", "local_internal_energy_u", "local_entropy_s", "local_temperature_t", "local_grad_t"]
     args, N, reader, writer = setup_pipeline(parser, output_header)
 
     q_history_window = []

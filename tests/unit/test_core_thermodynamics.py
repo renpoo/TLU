@@ -10,7 +10,8 @@ from src.core.core_thermodynamics import (
     compute_helmholtz_free_energy, 
     compute_macro_temperature,
     compute_local_internal_energy,
-    compute_local_temperature
+    compute_local_temperature,
+    compute_local_temperature_gradient
 )
 
 class TestCoreThermodynamics(unittest.TestCase):
@@ -85,6 +86,22 @@ class TestCoreThermodynamics(unittest.TestCase):
         t_local = compute_local_temperature(q_history)
         self.assertEqual(t_local.shape, (3,))
         np.testing.assert_array_almost_equal(t_local, expected_t_local)
+
+    def test_compute_local_temperature_gradient(self):
+        T_slice = np.array([
+            [0.0, 10.0,  0.0],
+            [5.0,  0.0, 20.0],
+            [0.0,  0.0,  0.0]
+        ])
+        t_local = np.array([1.0, 5.0, 2.0])
+        
+        # Node 0 connects to 1. t_1 - t_0 = 5.0 - 1.0 = 4.0
+        # Node 1 connects to 0 and 2. (t_0 - t_1) + (t_2 - t_1) = (1.0 - 5.0) + (2.0 - 5.0) = -4.0 - 3.0 = -7.0
+        # Node 2 connects to 1. t_1 - t_2 = 5.0 - 2.0 = 3.0
+        expected_grad_t = np.array([4.0, -7.0, 3.0])
+        
+        grad_t = compute_local_temperature_gradient(t_local, T_slice)
+        np.testing.assert_array_almost_equal(grad_t, expected_grad_t)
 
 if __name__ == '__main__':
     unittest.main()

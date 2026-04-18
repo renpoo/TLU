@@ -175,3 +175,34 @@ def compute_local_temperature(q_history_window: np.ndarray) -> np.ndarray:
         
     # Fix: Changed from np.var (variance) to np.std (standard deviation)
     return np.std(q_history_window, axis=0, ddof=0)
+
+def compute_local_temperature_gradient(t_local: np.ndarray, T_slice: np.ndarray) -> np.ndarray:
+    """!
+    @brief Calculate the local spatial temperature gradient for each topological network node.
+    @details Evaluates the sum of temperature differences between a node and its bounded neighbors tracking bottleneck constraints.
+
+    @param t_local 1D array of extracted absolute local node temperatures.
+    @param T_slice Transition flux interaction graph defining connectivity matrices.
+
+    @return A 1D numpy array representing directional thermal gradient stress variables bounds.
+
+    @pre
+        - Length of `t_local` structurally identical to bounded dimensionality `N` representing columns and rows.
+    @post
+        - Extracts positive gradients indicating downstream sinks relative to heavily constrained isolated hot points.
+    @invariant
+        - Structurally derives completely unweighted geometric distance shifts mapped strictly topographically minimizing numeric scaling biases.
+    """
+    N = T_slice.shape[0]
+    
+    # Force undirected boundaries defining edge limits structurally bounded across isolated links
+    A = ((T_slice + T_slice.T) > 0).astype(float)
+    np.fill_diagonal(A, 0.0)
+    
+    # Compute topological degrees
+    D = np.sum(A, axis=1)
+    
+    # Extract structural geometric limits representing relative thermal friction: (A * T) - (D * T)
+    grad_t = A.dot(t_local) - D * t_local
+    
+    return grad_t

@@ -28,9 +28,9 @@ class TestFilterLocalThermo(unittest.TestCase):
         self.assertEqual(len(records), N)
         self.assertEqual(q_current.shape, (2,))
         
-        # Record structure: [t_idx, node_idx, u_i, s_i, t_i]
+        # Record structure: [t_idx, node_idx, u_i, s_i, t_i, grad_t_i]
         node0_rec = records[0]
-        self.assertEqual(len(node0_rec), 5)
+        self.assertEqual(len(node0_rec), 6)
         self.assertEqual(node0_rec[0], 0)
         self.assertEqual(node0_rec[1], 0)
         self.assertTrue(isinstance(node0_rec[2], str))
