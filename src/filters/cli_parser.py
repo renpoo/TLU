@@ -26,14 +26,22 @@ def load_sys_params(filepath: str) -> Dict[str, float]:
         with open(filepath, 'r', encoding='utf-8') as f:
             reader = csv.reader(f)
             first_row = next(reader, None)
-            if first_row and not first_row[1].replace('.','',1).isdigit():
-                pass
-            elif first_row:
-                params[first_row[0].strip()] = float(first_row[1].strip())
+            if first_row and len(first_row) >= 2:
+                key = first_row[0].strip()
+                val = first_row[1].strip()
+                try:
+                    params[key] = float(val)
+                except ValueError:
+                    params[key] = val
             
             for row in reader:
                 if len(row) >= 2:
-                    params[row[0].strip()] = float(row[1].strip())
+                    key = row[0].strip()
+                    val = row[1].strip()
+                    try:
+                        params[key] = float(val)
+                    except ValueError:
+                        params[key] = val
     except FileNotFoundError:
         print(f"[WARN] {filepath} not found. Using defaults.", file=sys.stderr)
     return params
@@ -83,7 +91,21 @@ def parse_projector_args(args_list: list[str]) -> dict:
     parsed, _ = parser.parse_known_args(args_list)
     result = vars(parsed)
     
-    for col in ["col_time", "col_src", "col_tgt", "col_val"]:
+    # Gracefully merge loaded system parameter baselines resolving omitted stream aliases
+    sys_params = load_sys_params("workspace/config/_sys_params.csv")
+    
+    col_mapping = ["col_time", "col_src", "col_tgt", "col_val"]
+    
+    # 1. Provide defaults safely natively enforcing `_sys_params.csv` mapping over empty parsing outputs
+    for col in col_mapping:
+        if not result.get(col):
+            # Try specific map key inside sys params (e.g. col_trans_date natively mapped on workspace logic)
+            if col == "col_time": result[col] = sys_params.get("col_trans_date", "Trans_Date")
+            elif col == "col_src": result[col] = sys_params.get("col_src", "Src")
+            elif col == "col_tgt": result[col] = sys_params.get("col_tgt", "Tgt")
+            elif col == "col_val": result[col] = sys_params.get("col_amount", "Amount")
+
+    for col in col_mapping:
         val = result.get(col, "")
         if isinstance(val, str) and val.isdigit():
             result[col] = int(val)
