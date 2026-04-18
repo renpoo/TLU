@@ -38,5 +38,23 @@ class TestFilterLocalThermo(unittest.TestCase):
         # Proof that the passed list did not mutate
         self.assertEqual(len(q_history), 0)
 
+    def test_local_thermo_isolated_node(self):
+        """[Red->Green] Test metrics evaluation safely returning limits mapping totally isolated topologies without NaN exceptions"""
+        N = 3
+        # Node 2 is absolutely disconnected
+        T_slice = np.array([
+            [0.0, 10.0, 0.0],
+            [0.0,  0.0, 0.0],
+            [0.0,  0.0, 0.0]
+        ])
+        t_idx = 0
+        records, q_current = run_local_thermo_analysis(t_idx, T_slice, [])
+        self.assertEqual(len(records), N)
+        node2_rec = records[2]
+        self.assertEqual(node2_rec[1], 2)
+        # Should gracefully return float representations without NaN
+        self.assertFalse('nan' in node2_rec[2].lower())
+        self.assertFalse('nan' in node2_rec[3].lower())
+
 if __name__ == '__main__':
     unittest.main()

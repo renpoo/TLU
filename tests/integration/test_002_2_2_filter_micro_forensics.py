@@ -49,5 +49,30 @@ class TestFilterMicroForensics(unittest.TestCase):
         self.assertEqual(len(q_history), 2)
         self.assertEqual(len(P_history), 2)
 
+    def test_micro_forensics_extreme_thresholds(self):
+        """[Red->Green] Verify bounds constraints evaluate anomalies safely against absolute extreme float values"""
+        N = 2
+        T_slice = np.array([
+            [0.0, 1000.0],
+            [0.0, 0.0]
+        ])
+        t_idx = 0
+        q_history = [np.array([5.0, -5.0]), np.array([10.0, -10.0])]
+        P_history = [np.array([[0.0, 1.0], [0.0, 0.0]]), np.array([[0.0, 1.0], [0.0, 0.0]])]
+        
+        # Test with practically unreachable thresholds
+        thresholds = {
+            'kl_drift_thresh': 1e9,
+            'z_score_thresh': 1e9
+        }
+        
+        records, _, _ = run_micro_forensics_analysis(
+            t_idx, T_slice, q_history, P_history, thresholds
+        )
+        
+        # Anomaly flag should be strictly 0 despite massive inputs
+        for rec in records:
+            self.assertEqual(rec[4], 0)
+
 if __name__ == '__main__':
     unittest.main()

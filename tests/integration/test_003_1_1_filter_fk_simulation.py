@@ -50,5 +50,20 @@ class TestFilterFKSimulation(unittest.TestCase):
         # FK output is calculated (formatted as string)
         self.assertNotEqual(node0_rec[2], "0.0000")
 
+    def test_run_fk_analysis_impulse(self):
+        """[Red->Green] Pure function test evaluating isolated 'impulse' offset extraction bindings"""
+        records, q_current = run_fk_analysis(
+            t_idx=self.t_idx, 
+            T_slice=self.T_slice, 
+            q_history=self.q_history,
+            fk_input_mode='impulse', 
+            static_dq_input=np.zeros(3),
+            gamma=self.gamma, 
+            max_k=self.max_k
+        )
+        # Impulse mode mathematically defaults subtracting the historic mean gracefully
+        self.assertEqual(len(records), self.N)
+        self.assertNotEqual(records[0][2], "nan")
+
 if __name__ == '__main__':
     unittest.main()

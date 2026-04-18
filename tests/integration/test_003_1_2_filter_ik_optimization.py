@@ -49,5 +49,27 @@ class TestFilterIKOptimization(unittest.TestCase):
         self.assertNotEqual(node0_rec[2], "0.0000")
         self.assertNotEqual(node0_rec[3], "0.0000")
 
+    def test_ik_unreachable_target(self):
+        """[Red->Green] Test injection of penalty_arr (rigid constraints) mapping absolute zero limits"""
+        target_ids = [2]
+        target_dr_values = np.array([50.0])
+        # Force penalty: make node 0 completely rigid effectively making inverse solutions unreachable
+        penalty_arr = np.array([1e9, 0.0, 0.0])
+
+        records, _ = run_ik_analysis(
+            t_idx=self.t_idx, 
+            T_slice=self.T_slice, 
+            q_history=self.q_history,
+            target_ids=target_ids, 
+            target_dr_values=target_dr_values,
+            gamma=self.gamma, 
+            max_k=self.max_k,
+            penalty_arr=penalty_arr
+        )
+        
+        # Node 0 suggested delta should theoretically approach zero due to infinite stiffness penalty constraint
+        node0_delta = float(records[0][2])
+        self.assertTrue(abs(node0_delta) < 0.1)
+
 if __name__ == '__main__':
     unittest.main()

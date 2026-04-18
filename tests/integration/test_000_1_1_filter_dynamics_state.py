@@ -34,5 +34,23 @@ class TestFilterDynamicsState(unittest.TestCase):
         self.assertTrue(isinstance(node0_record[2], str))
         self.assertTrue(isinstance(node0_record[3], str))
 
+    def test_run_dynamics_state_analysis_empty_history(self):
+        """[Red->Green] Verify safe boundary constraints mapping zero initialized histories safely"""
+        N = 2
+        T_slice = np.array([
+            [0.0, 5.0],
+            [0.0, 0.0]
+        ])
+        t_idx = 0
+        records, q_current, v_current = run_dynamics_state_analysis(
+            t_idx, T_slice, [], []
+        )
+        self.assertEqual(len(records), N)
+        self.assertEqual(q_current.shape, (2,)) 
+        self.assertEqual(v_current.shape, (2,))
+        node1_record = records[1]
+        self.assertEqual(len(node1_record), 8)
+        self.assertEqual(node1_record[0], 0)
+
 if __name__ == '__main__':
     unittest.main()
