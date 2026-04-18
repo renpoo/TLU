@@ -24,7 +24,23 @@ def run_local_thermo_analysis(
         T_slice: np.ndarray, 
         q_history_window: List[np.ndarray]
 ) -> Tuple[List[list], np.ndarray]:
-    """ [Pure Orchestration Function] """
+    """!
+    @brief [Pure Orchestration Function] Run local thermodynamic bounds.
+    @details Tracks individual structural node energy balances isolating scalar interactions.
+
+    @param t_idx Current temporal state map sequence.
+    @param T_slice Total graph transition matrix.
+    @param q_history_window Historical tensor tracking pure flux vector shifts.
+
+    @return Tuple (Flattened record list, raw generic flux).
+
+    @pre
+        - Variables dynamically match topological constants N.
+    @post
+        - Synthesizes absolute energy bounds securely discarding context dependencies.
+    @invariant
+        - Temperature enforces statistical baseline variance metrics bounded physically per node.
+    """
     N = T_slice.shape[0]
 
     # 1. Local internal energy u_i (Absolute activity)

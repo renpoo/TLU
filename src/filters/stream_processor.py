@@ -19,6 +19,24 @@ class IndexRegistry:
         return self.labels[safe_label]
 
 def project_record(record, mapping_config, node_registry, time_registry):
+    """!
+    @brief Projects a raw CSV record into the normalized TLU tuple format.
+    @details Ensures structural integrity via strict fail-fast validation against expected columns.
+
+    @param record Dictionary representing a single CSV row.
+    @param mapping_config Setup mapping defining source schema columns.
+    @param node_registry State registry resolving node topology IDs.
+    @param time_registry State registry resolving time sequence IDs.
+
+    @return A tuple (t_idx, src_idx, tgt_idx, val).
+
+    @pre
+        - Target mapping configuration keys ('col_time', 'col_src', 'col_tgt', 'col_val') must exist in `record`.
+    @post
+        - Unconditionally yields strongly typed tuple formats regardless of empty strings or missing schema configurations.
+    @invariant
+        - Node indices dynamically expand without resetting across different time slices (Topological Union).
+    """
     time_col = mapping_config.get("col_time")
     src_col  = mapping_config.get("col_src")
     tgt_col  = mapping_config.get("col_tgt")
@@ -44,6 +62,23 @@ def project_record(record, mapping_config, node_registry, time_registry):
     return (t_idx, src_idx, tgt_idx, val)
 
 def process_csv_stream(in_stream, out_stream, mapping_config, node_registry, time_registry):
+    """!
+    @brief Core I/O loop: project raw stream tuples into flattened COO formats.
+    @details Orchestrates the extraction mapping sequentially.
+
+    @param in_stream Input readable stream (sys.stdin).
+    @param out_stream Output writable stream (sys.stdout).
+    @param mapping_config Pipeline translation dictionary.
+    @param node_registry Topological state mapper.
+    @param time_registry Temporal state mapper.
+    
+    @pre
+        - `in_stream` inherently formatted as CSV with valid headers.
+    @post
+        - Generates COO formatted flat outputs directly resolving out_stream targets.
+    @invariant
+        - Operates in strict O(1) space complexity scaling indefinitely across row counts.
+    """
     reader = csv.DictReader(in_stream)
     writer = csv.writer(out_stream, lineterminator='\n')
     writer.writerow(["t_idx", "src_idx", "tgt_idx", "value"])
@@ -60,6 +95,22 @@ def export_registry(registry, out_stream, idx_col_name, label_col_name):
     out_stream.flush()
 
 def yield_time_slices(csv_reader, N: int):
+    """!
+    @brief Generator function tracking sequential time step tensor slices.
+    @details Yields sparse N x N matrices aggregating standard flat COO format fluxes row by row.
+
+    @param csv_reader Sequential flattened input iterator source.
+    @param N Pre-loaded configuration boundary dimension bounds.
+
+    @return Generator yielding (t_idx, T_slice) pairs natively structured.
+
+    @pre
+        - Input source is strictly ordered sequentially by `t_idx`.
+    @post
+        - Automatically flushes isolated time slices releasing garbage variables continuously.
+    @invariant
+        - Aggregated T_slices unconditionally obey N x N topological alignment restrictions.
+    """
     current_t_idx = None
     T_slice = np.zeros((N, N), dtype=float)
 
@@ -84,7 +135,22 @@ def yield_time_slices(csv_reader, N: int):
         yield current_t_idx, T_slice
 
 def setup_pipeline(parser: argparse.ArgumentParser, output_header: list[str]):
-    """Common setup function to reduce boilerplate"""
+    """!
+    @brief Common setup function to reduce initialization boilerplate.
+    @details Synchronously loads explicit topology domains natively configuring default parsing arguments.
+
+    @param parser Raw initialized CLI namespace.
+    @param output_header Formatting structural strings denoting expected stream output.
+
+    @return Extracted tuple (args, N, reader, writer).
+
+    @pre
+        - Namespace structurally implements `--node_map` explicitly.
+    @post
+        - Immediately fails the container returning non-zero sys exit codes preventing silent logic faults.
+    @invariant
+        - Fails Fast ensuring the topological size `N` strictly remains greater than zero.
+    """
     args = parser.parse_args()
     try:
         df_map = pd.read_csv(args.node_map)

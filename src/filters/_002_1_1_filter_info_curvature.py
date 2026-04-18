@@ -22,7 +22,23 @@ def run_info_curvature_analysis(
         T_slice: np.ndarray, 
         q_history_window: List[np.ndarray]
 ) -> Tuple[List[list], np.ndarray]:
-    """ [Pure Orchestration Function] """
+    """!
+    @brief [Pure Orchestration Function] Extract local information curvature dynamics.
+    @details Evaluates spatial bounds analyzing pure state density shifts per structure.
+
+    @param t_idx Coordinate sequence index.
+    @param T_slice Current transition tensor boundary slice.
+    @param q_history_window Chronological arrays tracking pure unrolled dynamics.
+
+    @return Tuple (Flattened record tuples, Generic physical net flux array).
+
+    @pre
+        - Structural parameters safely ordered minimizing memory state mutation.
+    @post
+        - Enforces strict geometry isolating explicit metrics without context coupling.
+    @invariant
+        - Preserves strict independence calculating local acceleration boundaries correctly.
+    """
     N = T_slice.shape[0]
     
     # 1. Calculate the latest pure flux

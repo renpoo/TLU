@@ -23,7 +23,26 @@ def run_control_theory_analysis(
         Q_weight: float = 1.0,
         R_weight: float = 0.1
 ) -> Tuple[List[list], np.ndarray]:
-    """ [Pure Orchestration Function] """
+    """!
+    @brief [Pure Orchestration Function] Run linear quadratic regulator feedback bounds.
+    @details Implements classical feedback gain controllers tracing target vectors systematically.
+
+    @param t_idx Boundary tracking chronological integer block.
+    @param T_slice Current physical geometry extraction domain bounds.
+    @param target_q Objective reference states mapped structurally.
+    @param controllable_indices Matrix domains explicitly marked as affine control domains.
+    @param Q_weight Stability tracking matrix bounds limits.
+    @param R_weight Controller limit input energy configuration bound.
+
+    @return Tuple (Flattened record array block, unrolled raw generic flux).
+
+    @pre
+        - Dynamic limits `Q_weight`, `R_weight` bounds initialized positively.
+    @post
+        - Yields strictly empty feedback (zero output) unconditionally mapped if target limits disabled structurally.
+    @invariant
+        - Produces identical mathematical affine loops mapping target state geometry configurations stably.
+    """
     q_current = compute_net_flux(T_slice)
     N = len(q_current)
 

@@ -9,50 +9,120 @@ from src.core.core_information_geometry import compute_shannon_entropy
 # ==========================================
 
 def compute_internal_energy(T_slice: np.ndarray) -> float:
-    """
-    Calculate the internal energy (U) for one time slice of the network.
-    U = Total activity of the entire system (sum of absolute values of total flux)
+    """!
+    @brief Calculate the macro internal energy (U) for the network.
+    @details U is defined as the total sum of absolute values of the total transition slice.
+
+    @param T_slice Current transition or flux matrix (Nodes x Nodes).
+
+    @return Macro internal energy U.
+
+    @pre
+        - `T_slice` must be a valid numeric 2D numpy array.
+    @post
+        - Returns a unconditionally non-negative float.
+    @invariant
+        - U acts as a macroscopic scalar representation of system-wide activity.
     """
     return float(np.sum(np.abs(T_slice)))
 
 def compute_work(q_vector: np.ndarray, work_indices: List[int]) -> float:
-    """
-    Calculate the effective work (W) extracted from the system.
-    W = Total pure inflow to nodes designated as work_sink
+    """!
+    @brief Calculate the effective work (W) extracted from the system.
+    @details Work is defined as the sum of pure inflow to nodes designated as work_sink.
+
+    @param q_vector Pure net flux vector (1D array).
+    @param work_indices List of node indices designated to extract work.
+
+    @return Extracted work W as a float.
+
+    @pre
+        - `work_indices` must be valid integer indices boundary-checked against `q_vector`.
+    @post
+        - Returns 0.0 if `work_indices` is empty.
+    @invariant
+        - Work represents energy physically removed from the system loop.
     """
     if not work_indices:
         return 0.0
     return float(np.sum(q_vector[work_indices]))
 
 def compute_heat(q_vector: np.ndarray, heat_indices: List[int]) -> float:
-    """
-    Calculate the dissipated heat (Q) lost from the system.
-    Q = Total pure inflow to nodes designated as heat_sink
+    """!
+    @brief Calculate the dissipated heat (Q) lost from the system.
+    @details Heat is defined as the total pure inflow to nodes designated as heat_sink.
+
+    @param q_vector Pure net flux vector (1D array).
+    @param heat_indices List of node indices designated for dissipation.
+
+    @return Dissipated heat Q as a float.
+
+    @pre
+        - `heat_indices` must be valid integer indices boundary-checked against `q_vector`.
+    @post
+        - Returns 0.0 if `heat_indices` is empty.
+    @invariant
+        - Heat represents energy irrecoverably lost to the environment.
     """
     if not heat_indices:
         return 0.0
     return float(np.sum(q_vector[heat_indices]))
 
 def compute_macro_entropy(P: np.ndarray) -> float:
-    """
-    Calculate the macroscopic entropy S of the entire network.
+    """!
+    @brief Calculate the macroscopic entropy S of the entire network.
+    @details Sums the Shannon entropy of each individual node.
+
+    @param P Transition probability matrix (Nodes x Nodes).
+
+    @return Macroscopic entropy S.
+
+    @pre
+        - `P` must be a valid Markov-chain transition probability matrix.
+    @post
+        - Returns a non-negative float.
+    @invariant
+        - Entropy evaluates system stochasticity and degrees of freedom.
     """
     node_entropies = compute_shannon_entropy(P)
     S = float(np.sum(node_entropies))
     return S
 
 def compute_helmholtz_free_energy(U: float, T: float, S: float) -> float:
-    """
-    Calculate the Helmholtz free energy F.
-    F = U - TS
-    (* T must be corrected to a standard deviation scale that has the same dimension as U)
+    """!
+    @brief Calculate the Helmholtz free energy F.
+    @details Formula: F = U - TS. Represents the total useful work derivable from the system.
+
+    @param U Internal energy.
+    @param T Macroscopic temperature.
+    @param S Macroscopic entropy.
+
+    @return Helmholtz free energy F as a float.
+
+    @pre
+        - T must be corrected to a standard deviation scale that has the same dimension as U.
+    @post
+        - Returns a float. Can be negative depending on entropic expansion.
+    @invariant
+        - Follows fundamental classical thermodynamics laws.
     """
     return U - T * S
 
 def compute_macro_temperature(q_history_window: np.ndarray) -> float:
-    """
-    Calculate the temperature T of the entire network.
-    T = Sum of the "standard deviation" of the pure flux of the entire system (adjusted to match dimensions)
+    """!
+    @brief Calculate the temperature T of the entire network.
+    @details T is the sum of the standard deviation of pure flux across the network.
+
+    @param q_history_window History window of flux vectors.
+
+    @return Macroscopic temperature T.
+
+    @pre
+        - `q_history_window` must be an array of at least shape (m>=1, N).
+    @post
+        - Returns a strictly non-negative float.
+    @invariant
+        - Lowered to 1st degree order standard deviation to structurally align physical dimensions with U.
     """
     # Fix: Changed from np.var (variance) to np.std (standard deviation) to lower dimension to 1st degree (circle)
     node_std = np.std(q_history_window, axis=0, ddof=0)
@@ -64,24 +134,40 @@ def compute_macro_temperature(q_history_window: np.ndarray) -> float:
 # ==========================================
 
 def compute_local_internal_energy(T_slice: np.ndarray) -> np.ndarray:
-    """
-    Calculate the node-specific local internal energy (u_i) in one time slice of the network.
-    u_i = Sum of the absolute values of all inflows and outflows for that node
-    
-    Returns:
-        np.ndarray: Local internal energy array of shape (N,)
+    """!
+    @brief Calculate the node-specific local internal energy (u_i).
+    @details Assesses absolute sums of inflows and outflows dimensionally constrained per node.
+
+    @param T_slice Transition or flux matrix.
+
+    @return A 1D numpy array of local internal energies.
+
+    @pre
+        - `T_slice` must be a 2D numpy array.
+    @post
+        - Result is unconditionally positive or zero.
+    @invariant
+        - Represents isolated local node activity, disregarding cross-network aggregation.
     """
     inflow = np.sum(np.abs(T_slice), axis=0)
     outflow = np.sum(np.abs(T_slice), axis=1)
     return inflow + outflow
 
 def compute_local_temperature(q_history_window: np.ndarray) -> np.ndarray:
-    """
-    Calculate the local temperature T_i at each node in the network.
-    T_i = "Standard deviation" of the pure flux of each node (within a time window)
-    
-    Returns:
-        np.ndarray: Local temperature array of shape (N,)
+    """!
+    @brief Calculate the local temperature T_i at each node in the network.
+    @details Defines local T as the univariate standard deviation of pure flux for that node.
+
+    @param q_history_window Historical net flux (Time_steps x Nodes).
+
+    @return A 1D numpy array of node temperatures.
+
+    @pre
+        - `q_history_window` must be a valid 2D array.
+    @post
+        - Automatically returns zero vectors if historical depth is insufficient (< 2).
+    @invariant
+        - Satisfies zero sum baseline shifts under stationary limits.
     """
     # Return 0 if history is insufficient (only 1 step)
     if len(q_history_window) < 2:

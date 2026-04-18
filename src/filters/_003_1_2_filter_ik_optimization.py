@@ -28,7 +28,28 @@ def run_ik_analysis(
         max_k: int,
         penalty_arr: np.ndarray = None  # Added: External penalty injection
 ) -> Tuple[List[list], np.ndarray]:
-    """ [Pure Orchestration Function] """    
+    """!
+    @brief [Pure Orchestration Function] Run inverse kinematics optimization.
+    @details Resolves minimal strain displacements generating ideal coordinate offsets using pseudo-inversion.
+
+    @param t_idx Frame boundary sequence index.
+    @param T_slice Raw matrix bounding interactions.
+    @param q_history Array of temporal tracking metrics bounding absolute flux safely.
+    @param target_ids Explicit constraints mapping geometry arrays.
+    @param target_dr_values Desired displacement distances mapped index logic.
+    @param gamma Dampening numerical structural bounds limit.
+    @param max_k Mathematical structural depth limit bounding discrete states.
+    @param penalty_arr External stiffness boundaries bounding rigid constraints dynamically.
+
+    @return Tuple (Flattened record list output array, pure tracking current tensor configuration).
+
+    @pre
+        - `target_ids` bounded accurately reflecting existing matrices topological maps.
+    @post
+        - Handles zero rank domains mapping pseudo inverse limits minimizing strain unconditionally.
+    @invariant
+        - Calculated strain energy guarantees absolute minimum quadratic configurations globally.
+    """    
     N = T_slice.shape[0]
     records = []
 

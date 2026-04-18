@@ -3,16 +3,21 @@
 import numpy as np
 
 def compute_edge_stress(T_current: np.ndarray, T_history_window: list[np.ndarray]) -> np.ndarray:
-    """
-    Calculate the current edge-wise stress from the history of past transition probability (or flux) matrices.
-    Stress is defined as the degree of deviation (univariate Z-score) from the past average.
-    
-    Args:
-        T_current: Current matrix (Nodes x Nodes)
-        T_history_window: List of past matrices
-        
-    Returns:
-        stress_matrix: Edge-wise stress matrix (Nodes x Nodes)
+    """!
+    @brief Calculate the current edge-wise stress from historical transition matrices.
+    @details Stress is defined dimensionally as a univariate Z-score against the temporal average.
+
+    @param T_current Current transition or flux matrix (Nodes x Nodes).
+    @param T_history_window List of temporal matrix histories.
+
+    @return Edge-wise stress matrix (Nodes x Nodes).
+
+    @pre
+        - All elements inside `T_history_window` must structurally match `T_current` sizes.
+    @post
+        - Z-score strictly resolves to 0.0 if standard deviation hits zero to prevent crashes.
+    @invariant
+        - Yields unitless standard variation indices.
     """
     N = T_current.shape[0]
     if len(T_history_window) < 2:

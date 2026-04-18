@@ -17,9 +17,20 @@ import src.core.core_tensor_ops as cto
 import src.core.core_safe_linalg as csl
 
 def compute_partial_correlation(K_precision: np.ndarray) -> np.ndarray:
-    """ 
-    [Pure Math] Calculate Partial Correlation matrix from Precision matrix (K).
-    Values are always normalized in the range of -1.0 (perfect direct inverse correlation / strong binding) to 1.0.
+    """!
+    @brief [Pure Math] Calculate Partial Correlation matrix from Precision matrix.
+    @details Resolves independent correlations mathematically mitigating false structural influences.
+
+    @param K_precision Precision matrix (Inverse covariance).
+
+    @return Formatted Partial Correlation Matrix.
+
+    @pre
+        - `K_precision` resolves to a mathematically robust inverted matrix.
+    @post
+        - Unconditionally yields values clipped exactly between [-1.0, 1.0].
+    @invariant
+        - Self partial correlation perfectly evaluates to 1.0.
     """
     N = K_precision.shape[0]
     R_partial = np.zeros((N, N), dtype=float)
@@ -46,7 +57,23 @@ def run_structural_stiffness_analysis(
         T_slice: np.ndarray, 
         q_history: List[np.ndarray]
 ) -> Tuple[List[list], np.ndarray]:
-    """ [Pure Orchestration Function] """    
+    """!
+    @brief [Pure Orchestration Function] Run structural stiffness resolution.
+    @details Isolates elasticity constraints coupling the domain.
+
+    @param t_idx Current evaluation time step.
+    @param T_slice Current transition tensor.
+    @param q_history Array of pure flux vectors temporal domain.
+
+    @return Tuple (Flattened records, current pure flux).
+
+    @pre
+        - Historical domains align structurally matching `N` scales.
+    @post
+        - Automatically returns zero bounds avoiding matrix inversion crashes.
+    @invariant
+        - Represents exact constrained geometry interactions safely isolated.
+    """    
     N = T_slice.shape[0]
     records = []
 

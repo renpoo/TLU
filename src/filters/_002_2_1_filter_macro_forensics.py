@@ -28,7 +28,25 @@ def run_forensics_analysis(
         P_history_window: List[np.ndarray],
         thresholds: Dict[str, float]
 ) -> Tuple[List[list], np.ndarray, np.ndarray]:
-    """ [Pure Orchestration Function] """
+    """!
+    @brief [Pure Orchestration Function] Run macroscopic forensics evaluation bounds.
+    @details Identifies graph-wide global anomaly conditions using multi-metric covariance tracking.
+
+    @param t_idx Frame boundary index.
+    @param T_slice Unfiltered interaction weight slice matrix.
+    @param q_history_window Bounded tracking tensor for absolute shifts over temporal domains.
+    @param P_history_window Tracking domains mapping stochastic baseline boundaries.
+    @param thresholds Externally injected bounds mitigating explicit rigid parameters.
+
+    @return Tuple (Flattened indicator rows list, pure flux vector, extracted P matrix).
+
+    @pre
+        - System strictly implements `leak_tolerance`, `kl_drift_thresh`, `z_score_thresh` definitions dynamically.
+    @post
+        - Degrades mathematically mitigating calculation bugs outputting safe zero boundaries implicitly.
+    @invariant
+        - Generates strict 1:1 scalar diagnostic mappings tracking network scale states.
+    """
     q_current = compute_net_flux(T_slice)
     P_current = compute_transition_matrix(T_slice)
 

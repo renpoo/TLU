@@ -20,10 +20,20 @@ def get_base_parser(description: str) -> argparse.ArgumentParser:
     return parser
 
 def apply_theme(theme_name="dark"):
-    """
-    Loads the JSON of the specified theme name, applies Matplotlib's global settings,
-    and returns a dictionary of semantic colors.
-    * Based on the fail-fast philosophy, it crashes without mercy if files are missing or parsing errors occur.
+    """!
+    @brief Apply the UI visual theme JSON settings configuring Matplotlib globally.
+    @details Implements Fail-Fast execution crashing immediately upon failure locating or parsing theme limits.
+
+    @param theme_name Keyword identifier dictating the target base style bounds.
+
+    @return Extracted parameter JSON dictionary configuring the target layout colors natively.
+
+    @pre
+        - Target `theme_name` JSON identically mapped on disk.
+    @post
+        - Implicitly transforms the Pyplot state system fully enforcing global attributes unconditionally.
+    @invariant
+        - Generates consistent graphical themes irrespective of previous rendering commands.
     """
     # Absolute path as a distribution package (absolute rule in container)
     json_path = f"src/visualizations/themes/theme_{theme_name}.json"
@@ -42,9 +52,21 @@ def apply_theme(theme_name="dark"):
     return theme_cfg
 
 def load_node_labels(node_map_path: str, max_n: int) -> dict:
-    """
-    Load node labels from CSV.
-    Eliminate the generation of default values (dummy labels). File absence or column name mismatch immediately crashes.
+    """!
+    @brief Extract formatted topological identifier string mappings safely.
+    @details Implements strict logical boundaries enforcing fail-fast execution bypassing silently generated parameters explicitly.
+
+    @param node_map_path Local relative file extraction map.
+    @param max_n Strict dimensional limits structurally formatting iterations.
+
+    @return Extracted parameter mapped ID structure dictionary.
+
+    @pre
+        - Bounded layout `max_n` explicitly matching dataset size safely.
+    @post
+        - Fail-fast strictly crashes eliminating runtime variable fallbacks unconditionally on data exceptions.
+    @invariant
+        - Preserves index integer representations aligned identically to sequential matrix indices.
     """
     if not os.path.exists(node_map_path):
         raise FileNotFoundError(f"❌ Node map file not found: {node_map_path}")
@@ -61,9 +83,21 @@ def load_node_labels(node_map_path: str, max_n: int) -> dict:
     return idx_to_label
 
 def load_time_labels(time_map_path: str, max_n: int) -> dict:
-    """
-    Load time labels from CSV.
-    Similarly eliminate default values and completely apply fail-fast.
+    """!
+    @brief Extract formatted sequential temporal target identifier map structures securely.
+    @details Exerts tight parameter bounds enforcing early failure states overriding silent string derivations universally.
+
+    @param time_map_path Sequence temporal bounds mapping parameter limits.
+    @param max_n System configuration parameter upper time bound sequences.
+
+    @return Dictionary sequence resolving mapping limits correctly.
+
+    @pre
+        - File map target securely existing structurally natively.
+    @post
+        - Fail-fast aborts runtime configurations preventing string generation anomalies dynamically.
+    @invariant
+        - Temporal integer configurations bounds accurately reflecting original pipeline logic layouts.
     """
     if not os.path.exists(time_map_path):
         raise FileNotFoundError(f"❌ Time map file not found: {time_map_path}")
@@ -80,7 +114,10 @@ def load_time_labels(time_map_path: str, max_n: int) -> dict:
     return idx_to_label
 
 def draw_single_heatmap(ax, pivot_df, cmap, cbar_label, title_text, x_labels, y_labels, top_k_idx, text_col, outlier_col):
-    """ [Pure Drawing Logic] Draws a single heatmap and applies decoration. """
+    """!
+    @brief [Pure Drawing Logic] Draws a single heatmap and applies decoration safely.
+    @details Applies visual structure maps bounding configuration metrics isolating aesthetic constraints cleanly.
+    """
     sns.heatmap(pivot_df, ax=ax, cmap=cmap, robust=True, 
                 cbar_kws={'label': cbar_label}, 
                 xticklabels=x_labels) # Fix: Always pass X-axis labels
@@ -105,7 +142,10 @@ def draw_single_heatmap(ax, pivot_df, cmap, cbar_label, title_text, x_labels, y_
     return
 
 def draw_matrix_heatmap(ax, pivot_df, cmap, cbar_label, title_text, axis_labels, text_col, bg_col=None, mask=None, vmin=None, vmax=None):
-    """ [Pure Drawing Logic] Draws an N x N correlation/lag matrix heatmap. """
+    """!
+    @brief [Pure Drawing Logic] Draws an N x N correlation/lag matrix heatmap mapping visual metrics strictly.
+    @details Renders pure target geometry formatting isolating variables independently.
+    """
     import seaborn as sns
     sns.heatmap(pivot_df, ax=ax, cmap=cmap, mask=mask, vmin=vmin, vmax=vmax,
                 xticklabels=axis_labels, yticklabels=axis_labels, 

@@ -4,7 +4,24 @@ import numpy as np
 from src.core.core_safe_linalg import compute_safe_pinv
 
 def build_echo_matrix(P: np.ndarray, gamma: float, max_k: int) -> np.ndarray:
-    """Build the finite echo matrix M_echo from the transition probability matrix P"""
+    """!
+    @brief Build the finite echo matrix M_echo from the transition probability matrix P.
+    @details Sums up k-th order propagations geometric series matrix.
+
+    @param P Transition probability matrix (N x N).
+    @param gamma Damping factor (scalar).
+    @param max_k Maximum propagation step count.
+
+    @return Unrolled finite echo matrix (N x N).
+
+    @pre
+        - `P` must be a square stochastic matrix.
+        - `max_k` must be >= 0.
+    @post
+        - Returns an N x N numerically stable finite approximation array.
+    @invariant
+        - Series converges boundedly if gamma < 1.0.
+    """
     N = P.shape[0]
     M_echo = np.eye(N)
     current_P = np.eye(N)
@@ -14,10 +31,23 @@ def build_echo_matrix(P: np.ndarray, gamma: float, max_k: int) -> np.ndarray:
     return M_echo
 
 def run_forward_simulation(P, dq_input, gamma, max_k):
-    """
-    [Twin Swords 1: Propagation Simulation]
-    Sequentially apply the finite propagation model M_echo = I + (gamma*P) + ... + (gamma*P)^max_k
-    to the input displacement dq_input to calculate the final propagation impact.
+    """!
+    @brief [Twin Swords 1: Propagation Simulation] Simulate forward wave propagation.
+    @details Sequentially applies the finite propagation model M_echo = I + (gamma*P) + ... + (gamma*P)^max_k to input displacement.
+
+    @param P Transition probability matrix (N x N).
+    @param dq_input Initial displacement vector (1D array).
+    @param gamma Damping coefficient.
+    @param max_k Maximum step count of wave spread.
+
+    @return The final aggregated displacement vector.
+
+    @pre
+        - Dimensions of `P` and `dq_input` must align.
+    @post
+        - Function resolves propagation analytically without recursive state mutations.
+    @invariant
+        - Energy is structurally damped per step by a factor of gamma.
     """
     total_dq = np.copy(dq_input)
     current_wave = np.copy(dq_input)
@@ -30,19 +60,42 @@ def run_forward_simulation(P, dq_input, gamma, max_k):
     return total_dq
 
 def suggest_lambda(M: np.ndarray, lambda_ratio: float) -> float:
-    """
-    Propose a dynamic regularization parameter based on the scale of the matrix.
-    * Use lambda_ratio from the outside instead of a fixed value like 1e-4.
+    """!
+    @brief Propose a dynamic regularization parameter based on matrix scale.
+    @details Enforces scale-invariance dynamically substituting fixed magic number thresholds.
+
+    @param M Target singular matrix.
+    @param lambda_ratio Scale-free regularization ratio scalar.
+
+    @return Suggested lambda (float).
+
+    @pre
+        - `M` is a valid 2D numerical matrix.
+    @post
+        - Returns a non-negative float value.
+    @invariant
+        - Dynamically tracks matrix magnitude norm.
     """
     return float(np.linalg.norm(M) * lambda_ratio)
 
 def solve_ik_with_safe_stiffness(J: np.ndarray, K_safe: np.ndarray, target_dr: float, lambda_ratio: float):
-    """
-    [Twin Swords 2: Inverse Kinematics and Strain Optimization]
-    Calculate the total displacement dq_opt that minimizes the strain energy U = 1/2 * dq^T * K_safe * dq 
-    for the target fluctuation target_dr.
-    
-    * Receive lambda_ratio from the outside to perform scale-invariant regularization.
+    """!
+    @brief [Twin Swords 2: Inverse Kinematics and Strain Optimization] Solve node displacements minimizing strain energy.
+    @details Calculates the total displacement dq_opt that minimizes U = 1/2 * dq^T * K_safe * dq.
+
+    @param J Jacobian matrix constraint mapping.
+    @param K_safe Stiffness scaling block matrix.
+    @param target_dr Target distance scalar fluctuation.
+    @param lambda_ratio Regularization magnitude ratio parameter.
+
+    @return Optimal flattened displacement vector dq_opt.
+
+    @pre
+        - Valid dimensional alignment between `J` and `K_safe`.
+    @post
+        - The resulting vector intrinsically achieves pseudo inverse-based minimal norm projection.
+    @invariant
+        - Solves exact constrained least squares optimization.
     """
     # 1. Calculate the pseudo-inverse (flexibility/covariance) of the stiffness matrix K
     K_inv = compute_safe_pinv(K_safe, rcond=1e-15, lambda_reg=suggest_lambda(K_safe, lambda_ratio))
@@ -64,16 +117,21 @@ def solve_ik_with_safe_stiffness(J: np.ndarray, K_safe: np.ndarray, target_dr: f
     return dq_opt.flatten()
 
 def compute_derivatives(q_history):
-    """
-    Calculate the latest velocity (v) and acceleration (a) from the time-series history of the state vector (q).    
+    """!
+    @brief Calculate the latest physical velocity (v) and acceleration (a).
+    @details Derives kinematics differentials from chronologically ordered state vector memory.
 
-    Args:
-        q_history: Past state vector history (Time_steps x Nodes)
-                   Must be in chronological order (oldest history first).
-        
-    Returns:
-        v: Latest velocity vector (Nodes,)
-        a: Latest acceleration vector (Nodes,)
+    @param q_history State vector history (Time_steps x Nodes). Oldest first.
+
+    @return Tuple of velocity (Nodes,) and acceleration (Nodes,).
+
+    @pre
+        - `q_history` must be a valid 2D array ordered chronologically.
+    @post
+        - Safely returns zero-filled vectors if bounds assert insufficiently (T < 2).
+    @invariant
+        - First order differentiation v(t) = q(t) - q(t-1)
+        - Second order differentiation a(t) = v(t) - v(t-1)
     """
     T = q_history.shape[0]
     

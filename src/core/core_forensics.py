@@ -4,9 +4,23 @@ import numpy as np
 from src.core.core_information_geometry import compute_kl_divergence
 
 def check_conservation_law(q_current: np.ndarray, tolerance: float) -> tuple[float, bool]:
-    """
-    Calculate the total sum of the pure flux across the entire network to detect conservation law residuals (leaks).
-    * tolerance must be explicitly injected by the caller.
+    """!
+    @brief Calculate the total sum of the pure flux across the entire network to detect conservation law residuals (leaks).
+    @details Evaluates the closed-system integrity by summing the net flux.
+
+    @param q_current Net flux vector for all nodes (shape: N).
+    @param tolerance Floating point tolerance limit for leak detection.
+
+    @return A tuple (abs_residual, is_leaking) representing the absolute residual and leak status.
+
+    @pre
+        - `q_current` must be a valid 1D numpy array.
+        - `tolerance` must be explicitly injected by the caller and greater than or equal to 0.
+    @post
+        - Returns a non-negative float for the residual.
+        - System variables remain un-mutated (pure function).
+    @invariant
+        - Total flux entering and leaving the closed system theoretically sums to 0.
     """
     # Total inflow and outflow of the entire system. For closed systems like double-entry bookkeeping, this should inherently be 0.
     residual = float(np.sum(q_current))
@@ -18,8 +32,22 @@ def check_conservation_law(q_current: np.ndarray, tolerance: float) -> tuple[flo
     return abs_residual, is_leaking
 
 def compute_structural_drift(P_current: np.ndarray, P_history: list[np.ndarray]) -> float:
-    """
-    Calculate the baseline from the history of past transition probability matrices, and return the total sum of KL divergence against the current distribution.
+    """!
+    @brief Calculate the structural drift using KL divergence.
+    @details Computes the baseline from the history of past transition matrices, and returns the total sum of KL divergence.
+
+    @param P_current Current transition probability matrix (N x N).
+    @param P_history List of historical transition probability matrices.
+
+    @return The total sum of KL divergence for the entire network.
+
+    @pre
+        - `P_current` and matrices in `P_history` must be valid N x N matrices.
+    @post
+        - Returns 0.0 if `P_history` is empty.
+        - Returns a non-negative float representing structural change.
+    @invariant
+        - Transition probabilities are non-negative and stable over time.
     """
     if not P_history:
         return 0.0
@@ -34,8 +62,23 @@ def compute_structural_drift(P_current: np.ndarray, P_history: list[np.ndarray])
     return float(np.sum(kl_div_array))
 
 def compute_multivariate_anomaly(q_current: np.ndarray, q_mean: np.ndarray, K_precision: np.ndarray) -> float:
-    """
-    Calculate the Mahalanobis distance (Z-score) of the current state vector using the precision matrix (inverse of the covariance matrix).
+    """!
+    @brief Calculate the multivariate anomaly using Mahalanobis distance (Z-score).
+    @details Calculates the Mahalanobis distance of the current state vector using the precision matrix.
+
+    @param q_current Current state vector.
+    @param q_mean Historical mean of the state vector.
+    @param K_precision Precision matrix (inverse covariance).
+
+    @return The Z-score (Mahalanobis distance) as a float.
+
+    @pre
+        - Dimensions of `q_current`, `q_mean`, and `K_precision` must match correctly.
+        - `K_precision` must be safely calculated (e.g., via pseudoinverse) by the caller.
+    @post
+        - Returns a unconditionally non-negative float distance.
+    @invariant
+        - The distance metric strictly satisfies non-negativity.
     """
     # Deviation from the expected value (displacement vector)
     delta = q_current - q_mean
@@ -50,10 +93,23 @@ def compute_multivariate_anomaly(q_current: np.ndarray, q_mean: np.ndarray, K_pr
     return float(z_score)
 
 def evaluate_anomaly_flags(residual: float, kl_div: float, z_score: float, thresholds: dict) -> int:
-    """
-    Determine if the various anomaly scores exceed the thresholds and return 1 (anomaly) or 0 (normal).
-    * To maintain scale invariance, no implicit default values are held internally.
-    * thresholds MUST contain 'leak_tolerance', 'kl_drift_thresh', 'z_score_thresh'.
+    """!
+    @brief Determine if the anomaly scores exceed given thresholds.
+    @details Evaluates anomaly scores against explicit thresholds. Strict Fail-Fast on missing keys.
+
+    @param residual Calculated leak residual.
+    @param kl_div Calculated KL divergence drift.
+    @param z_score Calculated Mahalanobis Z-score.
+    @param thresholds Dictionary containing detection limits.
+
+    @return 1 if an anomaly is detected, 0 otherwise (normal).
+
+    @pre
+        - `thresholds` MUST contain 'leak_tolerance', 'kl_drift_thresh', and 'z_score_thresh'.
+    @post
+        - Returns strictly an integer 0 or 1.
+    @invariant
+        - Scale invariance: no implicit default values are maintained internally.
     """
     # Intentional Fail-Fast: explicitly raise a KeyError if a key does not exist
     if residual > thresholds['leak_tolerance']:

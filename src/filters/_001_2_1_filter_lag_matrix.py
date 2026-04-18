@@ -14,7 +14,22 @@ from src.core.core_tensor_ops import compute_net_flux
 from src.core.core_dynamics import compute_optimal_time_lag
 
 def run_lag_matrix_analysis(q_history_list: List[np.ndarray], max_lag: int) -> List[list]:
-    """ [Pure Orchestration Function] """
+    """!
+    @brief [Pure Orchestration Function] Run correlation bounding arrays.
+    @details Exposes lag constraints across independent dimensional combinations.
+
+    @param q_history_list Complete history of sequentially bounded structural flux limits.
+    @param max_lag Theoretical bound representing causality offset limit.
+
+    @return Returns flattened array elements (src_idx, tgt_idx, optimal_lag, max_correlation).
+
+    @pre
+        - Elements correctly bounded geometrically matching constant target step bounds.
+    @post
+        - Strictly asserts causality variables within maximum index constraints.
+    @invariant
+        - Automatically asserts cross-covariance structures geometrically aligned in discrete time.
+    """
     if not q_history_list:
         return []
 

@@ -17,7 +17,23 @@ def run_network_topology_analysis(
         T_slice: np.ndarray, 
         T_history_window: List[np.ndarray]
 ) -> List[list]:
-    """ [Pure Orchestration Function] """
+    """!
+    @brief [Pure Orchestration Function] Run network topology analysis.
+    @details Determines sparse edge configurations tracking spatial stress limits.
+
+    @param t_idx Sequence temporal index.
+    @param T_slice Transaction layout matrix bounds.
+    @param T_history_window Array list of tensors framing memory offsets.
+
+    @return Aggregated edge list formatted for I/O routing.
+
+    @pre
+        - T_history_window holds correctly sized matrix structures.
+    @post
+        - Unconditionally filters entirely zero-weighted interactions conserving memory bounds securely.
+    @invariant
+        - Calculates uncoupled pure bounds preserving structural density.
+    """
     N = T_slice.shape[0]
     
     # Calculate edge stress (Z-score)

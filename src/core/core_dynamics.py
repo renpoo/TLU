@@ -3,17 +3,24 @@
 import numpy as np
 
 def compute_optimal_time_lag(signal_A: np.ndarray, signal_B: np.ndarray, max_lag: int) -> tuple[int, float]:
-    """
-    Calculate the cross-correlation between two time-series signals and identify the time lag that maximizes the correlation.
-    
-    Args:
-        signal_A: Time-series array for the cause side (1D np.ndarray) ex: ad spend
-        signal_B: Time-series array for the effect side (1D np.ndarray) ex: sales
-        max_lag: Maximum number of time lag steps to search (int)
-        
-    Returns:
-        best_lag: Time lag with the highest waveform match (int)
-        max_corr: Correlation coefficient at that lag (float)
+    """!
+    @brief Calculate the cross-correlation and optimal time lag between two signals.
+    @details Identifies the time lag that maximizes the Pearson correlation between signal A (cause) and signal B (effect).
+
+    @param signal_A Time-series array for the cause side (1D array).
+    @param signal_B Time-series array for the effect side (1D array).
+    @param max_lag Maximum number of time lag steps to search.
+
+    @return A tuple (best_lag, max_corr).
+
+    @pre
+        - `signal_A` and `signal_B` must be 1D numpy arrays of the same length.
+        - `max_lag` must be a non-negative integer.
+    @post
+        - Returns (0, 0.0) if the array length is too short to compute correlation.
+        - `best_lag` is guaranteed to be in the range [0, min(max_lag, N-2)].
+    @invariant
+        - The correlation coefficient is always bounded within [-1.0, 1.0].
     """
     N = len(signal_A)
     best_lag = 0
@@ -49,19 +56,26 @@ def compute_optimal_time_lag(signal_A: np.ndarray, signal_B: np.ndarray, max_lag
 
 
 def estimate_virtual_mass_and_viscosity(q_history: np.ndarray, v_history: np.ndarray, base_epsilon: float, velocity_scale_ratio: float) -> tuple[np.ndarray, np.ndarray]:
-    """
-    Estimate the virtual mass (M) and viscosity (C) of each node from the past history.
-    * Eliminate scale-dependent magic numbers and inject minute value parameters externally.
-    
-    Args:
-        q_history: State vector history (Time_steps x Nodes)
-        v_history: Velocity vector history (Time_steps x Nodes)
-        base_epsilon: Absolute minute value to prevent zero division
-        velocity_scale_ratio: Dynamic minute value ratio based on velocity scale
-        
-    Returns:
-        M: Virtual mass per node (Nodes,)
-        C: Viscous resistance per node (Nodes,)
+    """!
+    @brief Estimate the virtual mass (M) and viscosity (C) of each node.
+    @details Derives structural inertia (mass) and friction (viscosity) based on the volatility and scale of the historical flux and velocity. Eliminates scale-dependent magic numbers.
+
+    @param q_history State vector history (Time_steps x Nodes).
+    @param v_history Velocity vector history (Time_steps x Nodes).
+    @param base_epsilon Absolute minute value to prevent zero division.
+    @param velocity_scale_ratio Dynamic minute value ratio based on velocity scale.
+
+    @return A tuple of (M, C) arrays.
+
+    @pre
+        - `q_history` and `v_history` must be 2D array-like structs.
+        - `base_epsilon` and `velocity_scale_ratio` must be positive floats.
+    @post
+        - Both `M` and `C` arrays are strictly non-negative.
+        - Safely falls back (C=0) if `v_history` has length <= 1.
+    @invariant
+        - M is strictly proportional to the accumulation of past scale.
+        - C is inversely proportional to the variance of velocity.
     """
     # Mass M (Inertia): Assumed to be proportional to the accumulation of past activity (scale)
     M = np.mean(np.abs(q_history), axis=0)
@@ -87,8 +101,25 @@ def estimate_virtual_mass_and_viscosity(q_history: np.ndarray, v_history: np.nda
     return M, C
 
 def compute_external_force_residual(M: np.ndarray, C: np.ndarray, K: np.ndarray, a: np.ndarray, v: np.ndarray, dq: np.ndarray) -> np.ndarray:
-    """
-    Backcalculate the abnormal external shock (F_external) from the observed state of the system (M, C, K, a, v, dq).
+    """!
+    @brief Backcalculate the abnormal external shock (F_external).
+    @details Resolves the second-order physical dynamics equation: F = Ma + Cv + Kdq
+
+    @param M Virtual mass array.
+    @param C Viscosity array.
+    @param K Stiffness matrix or vector equivalent.
+    @param a Acceleration vector.
+    @param v Velocity vector.
+    @param dq State difference vector.
+
+    @return Formatted external force array.
+
+    @pre
+        - All input tensors must be geometrically compatible in shape.
+    @post
+        - Returns a numerical tensor without side-effects.
+    @invariant
+        - Computes standard Newtonian equilibrium: Sum of internal forces + residual = external force.
     """
     # F_external = Ma + Cv + Kdq
     return M * a + C * v + K * dq

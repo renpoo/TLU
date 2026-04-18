@@ -62,7 +62,10 @@ def evaluate_micro_anomaly_flags(
         z_vector: np.ndarray, 
         thresholds: Dict[str, float]
 ) -> List[int]:
-    """ [Pure Logic] Set flag if KL or Z exceeds the threshold """
+    """!
+    @brief [Pure Logic] Evaluate micro anomaly boolean vectors.
+    @details Sets flag mapping bounds enforcing strict limits dynamically decoupled.
+    """
     N = len(kl_vector)
     flags = []
     for i in range(N):
@@ -80,7 +83,25 @@ def run_micro_forensics_analysis(
         P_history_window: List[np.ndarray],
         thresholds: Dict[str, float]
 ) -> Tuple[List[list], np.ndarray, np.ndarray]:
-    """ [Pure Orchestration] """
+    """!
+    @brief [Pure Orchestration Function] Run micro anomaly heuristics on individual active structures.
+    @details Exerts tight thresholds tracing univariate activity shocks over decoupled boundaries autonomously.
+
+    @param t_idx Frame interval target sequence.
+    @param T_slice Raw bounds slice configurations.
+    @param q_history_window Scalar temporal domain maps absolute shifts securely.
+    @param P_history_window Statistical temporal domain limits probability shifts safely.
+    @param thresholds Mapped limits configuring strict constraints physically decoupled.
+
+    @return Tuple (Record iteration list, pure generic tracking vector, tracking probability matrix).
+
+    @pre
+        - Historical variables scale memory footprint independently preserving topological parameters `N`.
+    @post
+        - Accurately asserts constraints flagging independent variables deterministically based on static logic definitions.
+    @invariant
+        - Preserves strict node-by-node parameter evaluation devoid of arbitrary macro interference patterns.
+    """
     N = T_slice.shape[0]
     q_current = compute_net_flux(T_slice)
     P_current = compute_transition_matrix(T_slice)

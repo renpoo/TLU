@@ -24,10 +24,25 @@ def run_sensitivity_analysis(
         gamma: float, 
         max_k: int
 ) -> Tuple[List[list], np.ndarray]:
-    """ 
-    [Pure Orchestration Function]
-    Apply 'Virtual Investment (FK)' and 'Virtual Target (IK)' to all nodes using brute force,
-    and calculate the sensitivity (ripple effect and strain energy) of the entire organization.
+    """!
+    @brief [Pure Orchestration Function] Exert sensitivity test mapping across exhaustive network domains.
+    @details Implements brute force iteration extracting structural bounds coupling Forward and Inverse kinematics concurrently.
+
+    @param t_idx Chronological string map iteration sequences.
+    @param T_slice Structural adjacency configuration snapshot.
+    @param q_history Flux variables temporally constrained arrays limit track.
+    @param delta Explicitly modeled constant forcing boundaries mathematically.
+    @param gamma Mathematical step scaling limit fraction bounds.
+    @param max_k Recursive integer step bounding approximations limits.
+
+    @return Tuple (Aggregated data iteration lists tracking maximal limits, unrolled generic tracking array).
+
+    @pre
+        - History initialized mapping covariance metrics bounds without crashing conditionally.
+    @post
+        - Exhaustively validates all node independent states outputting maximum perturbation matrices boundaries strictly.
+    @invariant
+        - Extracted variables decouple self-influence mapping structurally maximizing independent propagation geometry.
     """    
     N = T_slice.shape[0]
     records = []

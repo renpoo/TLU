@@ -5,6 +5,22 @@ import scipy.linalg as la
 from src.core.core_safe_linalg import compute_safe_pinv
 
 def build_state_space_matrices(transition_P: np.ndarray, controllable_indices: list[int]) -> tuple[np.ndarray, np.ndarray]:
+    """!
+    @brief Initialize generic state space mapping system matrices.
+    @details Synthesizes dynamic mapping A blocks and input influence geometry B blocks.
+
+    @param transition_P The temporal adjacency state probability.
+    @param controllable_indices Vector representing boolean topological controllers.
+
+    @return Mapped system geometry parameters A and B in classical configuration.
+
+    @pre
+        - `controllable_indices` properly align within the dimensions of `transition_P`.
+    @post
+        - Deterministically emits (N,N) and (N, M) parameter matrices.
+    @invariant
+        - Formulates discrete affine control spaces functionally.
+    """
     N = transition_P.shape[0]
     A = transition_P.copy()
     
@@ -17,9 +33,25 @@ def build_state_space_matrices(transition_P: np.ndarray, controllable_indices: l
     return A, B
 
 def build_QR_matrices(N: int, num_inputs: int, weight_Q: float, weight_R: float, target_indices: list[int], min_weight_R: float = 0.0) -> tuple[np.ndarray, np.ndarray]:
-    """
-    Build the weight matrices Q, R for LQR control.
-    min_weight_R: Minimum allowable value for R matrix elements to prevent zero-matrix formation. Inject based on external scale.
+    """!
+    @brief Build the tracking weight cost matrices Q and R for optimal LQR limits.
+    @details Configures optimal response thresholds with dynamic external safeguards applied to the baseline state cost and control cost.
+
+    @param N Node dimension count.
+    @param num_inputs Controllable indices domain size.
+    @param weight_Q Scale for tracking stability.
+    @param weight_R Scale for input energy limits.
+    @param target_indices Subset geometry vectors tracking reference norms.
+    @param min_weight_R decoupled minimum scalar boundary threshold preventing singularities.
+
+    @return Formulated weight block matrices Q and R.
+
+    @pre
+        - Numerical parameter scaling injected successfully via pipeline runtime.
+    @post
+        - Enforces implicit non-zero positive definiteness bounded by `min_weight_R`.
+    @invariant
+        - Avoids all instances of mathematically zero R matrix conditions.
     """
     Q = np.zeros((N, N), dtype=float)
     for idx in target_indices:
@@ -32,9 +64,25 @@ def build_QR_matrices(N: int, num_inputs: int, weight_Q: float, weight_R: float,
     return Q, R
 
 def solve_lqr_gain(A: np.ndarray, B: np.ndarray, Q: np.ndarray, R: np.ndarray, rcond: float = 1e-15, lambda_reg: float = 0.0) -> np.ndarray:
-    """
-    Calculate the optimal feedback gain K for discrete-time LQR.
-    rcond, lambda_reg: Parameters to avoid singular matrices. Can be injected externally based on the target system scale.
+    """!
+    @brief Calculate the optimal deterministic feedback geometric gain K block.
+    @details Solves discrete algebraic Riccati equations while strictly mitigating rank deficiencies via pseudo inverse bounds.
+
+    @param A The system shift map geometry.
+    @param B Controllable unit mapping domain.
+    @param Q Configured stability weight objective.
+    @param R Configured actuation constraints threshold.
+    @param rcond Truncation condition scalar bound.
+    @param lambda_reg Parameter explicit for Tikhonov geometry regularization limits.
+
+    @return Controller response boundary feedback map K.
+
+    @pre
+        - Dimensional geometry properly scaled through pre-synthesis.
+    @post
+        - Strictly falls back gracefully via empty blocks if linear equations completely fail.
+    @invariant
+        - Unconditionally bounds to a linear state quadratic formulation limits.
     """
     if B.shape[1] == 0 or np.all(B == 0):
         return np.zeros((0, A.shape[0]))
@@ -53,6 +101,23 @@ def solve_lqr_gain(A: np.ndarray, B: np.ndarray, Q: np.ndarray, R: np.ndarray, r
         return np.zeros((B.shape[1], A.shape[0]))
 
 def compute_optimal_input(K_lqr: np.ndarray, current_state: np.ndarray, target_state: np.ndarray) -> np.ndarray:
+    """!
+    @brief Backcalculate optimal spatial controller impulses tracking target errors.
+    @details Translates scalar divergence mapped across K into pure actionable domains.
+
+    @param K_lqr Linear Quadratic feedback gain loop matrix.
+    @param current_state Current temporal network snapshot geometry block.
+    @param target_state Theoretical baseline configuration anchor.
+
+    @return Formulated spatial response vector `u`.
+
+    @pre
+        - Geometries inherently coupled dimensionally.
+    @post
+        - Outputs mathematically empty vector safely if control architecture is structurally disabled.
+    @invariant
+        - Imposes exact negative affine feedback responses u = -K * error.
+    """
     if K_lqr.shape[0] == 0:
         return np.array([])
         

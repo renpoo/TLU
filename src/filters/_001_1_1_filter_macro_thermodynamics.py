@@ -30,7 +30,25 @@ def run_thermodynamics_analysis(
         work_indices: List[int], 
         heat_indices: List[int]
 ) -> Tuple[List[list], np.ndarray]:
-    """ [Pure Orchestration Function] """
+    """!
+    @brief [Pure Orchestration Function] Execute macro thermodynamic bounds.
+    @details Tracks global system energy balances defining core structural stability.
+
+    @param t_idx Current temporal state map sequence.
+    @param T_slice Total graph transition matrix.
+    @param q_history_window Historical tensor tracking pure flux vector shifts.
+    @param work_indices Valid boundaries tracking productive utility parameters.
+    @param heat_indices Valid boundaries evaluating lost boundary sinks.
+
+    @return Tuple (Global aggregated records block, raw generic flux).
+
+    @pre
+        - System arrays accurately decoupled without arbitrary dependencies.
+    @post
+        - Executes strictly non-negative energy metric extraction routines stably.
+    @invariant
+        - Tracks strictly conservation metrics aligned geometrically to classical statistical formulations.
+    """
     # 1. Internal energy U (Total activity)
     U = compute_internal_energy(T_slice)
     

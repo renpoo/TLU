@@ -25,7 +25,27 @@ def run_fk_analysis(
         gamma: float, 
         max_k: int
 ) -> Tuple[List[list], np.ndarray]:
-    """ [Pure Orchestration Function] """    
+    """!
+    @brief [Pure Orchestration Function] Apply wave propagation bounds using initial impulses.
+    @details Aggregates unrolled finite echo dynamics modeling theoretical step constraints over pure flux.
+
+    @param t_idx Execution bounded step index sequence.
+    @param T_slice Extracted temporal baseline flux domain.
+    @param q_history Absolute mapping historical tracker array slice.
+    @param fk_input_mode Behavioral enum parameter explicit logic limit flag.
+    @param static_dq_input Parameter explicit static base state injection bounds.
+    @param gamma Extinction variable dampening numerical step bounds.
+    @param max_k Numerical bounds limit representing discrete physical limits.
+
+    @return Tuple (Structured node impact values layout array, Unbounded current raw mapping limits vector).
+
+    @pre
+        - Function parameter models strictly bound string choices against expected internal conditional structures logically correctly.
+    @post
+        - Unconditionally yields analytical approximations simulating structural wave bounds dynamically scaling inputs correctly.
+    @invariant
+        - Ensures spatial mappings analytically decay exponentially limiting structural variance perfectly safely within theoretical limitations.
+    """    
     N = T_slice.shape[0]
     records = []
 

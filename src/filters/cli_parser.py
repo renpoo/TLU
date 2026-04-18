@@ -6,7 +6,21 @@ import sys
 from typing import Dict
 
 def load_sys_params(filepath: str) -> Dict[str, float]:
-    """Load _sys_params.csv and return it as a dictionary."""
+    """!
+    @brief Load system context parameters into a mapped dictionary.
+    @details Recursively aggregates configuration baseline bounds eliminating missing variable bugs.
+
+    @param filepath Absolute or relative configurations structure path.
+
+    @return Extracted parameter dictionary instance.
+
+    @pre
+        - Struct is generally expected to exist (although logic allows default fallbacks).
+    @post
+        - Bypasses header rows safely while coercing implicit type definitions to float bounds.
+    @invariant
+        - Degrades gracefully emitting explicit [WARN] traces returning cleanly initialized dictionaries natively.
+    """
     params = {}
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
@@ -25,7 +39,19 @@ def load_sys_params(filepath: str) -> Dict[str, float]:
     return params
 
 def get_base_parser(description: str) -> argparse.ArgumentParser:
-    """Generate a base parser commonly used across all filters."""
+    """!
+    @brief Generate a base parser commonly configured across all sequential filters.
+    @details Asserts expected boundaries preventing missing explicit arguments structurally.
+
+    @param description Meta string characterizing the execution target domain.
+
+    @return Core ArgumentParser populated identically with namespace foundations.
+
+    @pre
+        - Standard execution depends implicitly on `--time_map` and `--node_map`.
+    @post
+        - Defines configuration variables targeting standard workspace ephemeral data outputs.
+    """
     parser = argparse.ArgumentParser(description=description)
     parser.add_argument("--time_map", type=str, default="workspace/ephemeral/_time_map.csv")
     parser.add_argument("--node_map", type=str, default="workspace/ephemeral/_node_map.csv")
@@ -34,7 +60,19 @@ def get_base_parser(description: str) -> argparse.ArgumentParser:
     return parser
 
 def parse_projector_args(args_list: list[str]) -> dict:
-    """[Phase 1 Only] Parse CLI arguments for the Projector and return as a dictionary"""
+    """!
+    @brief Parse CLI arguments explicitly overriding extraction projection limits.
+    @details Generates mapped representations natively executing early stream phase parameters.
+
+    @param args_list The system argv parameter list mapping source targets.
+
+    @return Parsed parameter mapping configurations targeting dynamic variables.
+
+    @pre
+        - Target list dynamically configured.
+    @post
+        - Implicitly coerces strictly integer representations scaling strings naturally.
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument("--col_time", type=str, default="")
     parser.add_argument("--col_src", type=str, default="")

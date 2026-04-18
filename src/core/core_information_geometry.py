@@ -3,14 +3,20 @@
 import numpy as np
 
 def compute_shannon_entropy(P_matrix):
-    """
-    Calculate the Shannon entropy per node from the transition probability matrix (P).
-    
-    Args:
-        P_matrix: Transition probability matrix (Nodes x Nodes)
-        
-    Returns:
-        entropy: Shannon entropy per node (Nodes,)
+    """!
+    @brief Calculate the Shannon entropy per node from the transition probability matrix (P).
+    @details Handles zero values gracefully to avoid numerical instability.
+
+    @param P_matrix Transition probability matrix (Nodes x Nodes).
+
+    @return Shannon entropy vector per node (Nodes,).
+
+    @pre
+        - `P_matrix` must be a valid 2D numpy array of probabilities.
+    @post
+        - Returns a 1D numpy array of non-negative entropy values.
+    @invariant
+        - Values in `P_matrix` are bounded between 0 and 1.
     """
     # Handling zero: 0 * log(0) is treated as 0
     # np.log2(0) produces -inf, so mask it beforehand and substitute 0
@@ -26,16 +32,22 @@ def compute_shannon_entropy(P_matrix):
     return entropy
 
 def compute_kl_divergence(P_current, P_baseline):
-    """
-    Calculate the KL divergence (Kullback-Leibler divergence: informational distance) per node 
-    between the current transition probability (P_current) and the past baseline (P_baseline).
-    
-    Args:
-        P_current: Current transition probability matrix (Nodes x Nodes)
-        P_baseline: Past baseline transition probability matrix (Nodes x Nodes)
-        
-    Returns:
-        kl_divergence: KL divergence per node (Nodes,)
+    """!
+    @brief Calculate the KL divergence between the current transition probability and the past baseline.
+    @details Computes the informational distance. Handles zeroes via masking.
+
+    @param P_current Current transition probability matrix (Nodes x Nodes).
+    @param P_baseline Past baseline transition probability matrix (Nodes x Nodes).
+
+    @return KL divergence vector per node (Nodes,).
+
+    @pre
+        - Both `P_current` and `P_baseline` must be valid 2D numpy arrays.
+        - Shapes of `P_current` and `P_baseline` must match perfectly.
+    @post
+        - Returns a 1D numpy array of non-negative KL divergence values.
+    @invariant
+        - Information distance is robust to zero-probability states via masking.
     """
     # Handling zero: If p=0 or q=0, p*log(p/q) is treated as 0
     # np.log2(0) produces -inf, so mask it beforehand and substitute 0
@@ -57,15 +69,22 @@ def compute_kl_divergence(P_current, P_baseline):
     return kl_divergence
 
 def compute_information_curvature(q_history_window: np.ndarray) -> np.ndarray:
-    """
-    Calculate the information curvature (absolute value of 2nd order difference, effectively acceleration distortion) 
-    per node from the pure flux history.
-    
-    Args:
-        q_history_window: (Steps x Nodes) array. Requires Steps >= 3.
-        
-    Returns:
-        curvature: Curvature vector per node (Nodes,)
+    """!
+    @brief Calculate the information curvature from pure flux history.
+    @details Represents acceleration distortion by computing the absolute value of the 2nd order difference.
+
+    @param q_history_window History window of flux (Steps x Nodes array).
+
+    @return Curvature vector per node (Nodes,).
+
+    @pre
+        - `q_history_window` must be a 2D numpy array.
+        - Requires at least 3 historical steps (Steps >= 3) to compute 2nd order difference.
+    @post
+        - Returns 0 for all nodes if history length < 3.
+        - Returns a 1D numpy array of absolute curvature values.
+    @invariant
+        - Physical interpretation adheres to classical kinematics formulation: a(t) = v(t) - v(t-1).
     """
     if q_history_window.shape[0] < 3:
         return np.zeros(q_history_window.shape[1], dtype=float)
@@ -75,15 +94,20 @@ def compute_information_curvature(q_history_window: np.ndarray) -> np.ndarray:
     return np.abs(accel)
 
 def compute_information_density(T_slice: np.ndarray) -> np.ndarray:
-    """
-    Calculate the information density (total sum of absolute inflows and outflows) per node 
-    from the current transition slice.
-    
-    Args:
-        T_slice: Current transition probability (or flux) matrix (Nodes x Nodes)
-        
-    Returns:
-        density: Information density vector per node (Nodes,)
+    """!
+    @brief Calculate the information density per node.
+    @details Computes the total sum of absolute inflows and outflows for each node.
+
+    @param T_slice Current transition or flux matrix (Nodes x Nodes).
+
+    @return Information density vector per node (Nodes,).
+
+    @pre
+        - `T_slice` must be a valid 2D numpy array.
+    @post
+        - Returns a 1D numpy array of non-negative values.
+    @invariant
+        - Density is purely additive based on graph edges.
     """
     # Sum of outflows (axis=1) + Sum of inflows (axis=0)
     outflow = np.sum(np.abs(T_slice), axis=1)

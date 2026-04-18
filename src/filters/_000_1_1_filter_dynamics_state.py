@@ -21,7 +21,24 @@ def run_dynamics_state_analysis(
         q_history: List[np.ndarray], 
         v_history: List[np.ndarray]
 ) -> Tuple[List[list], np.ndarray, np.ndarray]:
-    """ [Pure Orchestration Function] """
+    """!
+    @brief [Pure Orchestration Function] Run dynamics state analysis.
+    @details Coordinates transformation from pure flux into secondary phase space attributes.
+
+    @param t_idx Current time step integer.
+    @param T_slice Current transition or flux matrix (Nodes x Nodes).
+    @param q_history List of historical state vectors.
+    @param v_history List of historical velocity vectors.
+
+    @return Tuple (Formatted records list, current flux, current velocity).
+
+    @pre
+        - `T_slice` correctly bounded geometrically.
+    @post
+        - Strictly evaluates variables without side effects.
+    @invariant
+        - Phase space representation bounds velocity and acceleration exactly as difference operators.
+    """
     N = T_slice.shape[0]
     
     # 1. Current pure flux (this becomes q in phase space)
