@@ -14,6 +14,7 @@ __pycache__/
 */.DS_Store
 
 .vscode/
+.gemini/
 
 error.*.log
 */error.*.log
