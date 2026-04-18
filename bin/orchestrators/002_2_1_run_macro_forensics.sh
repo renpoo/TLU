@@ -3,20 +3,20 @@
 # 002_2_1_run_forensics.sh
 # TLU System: Forensics & Anomaly Detection Orchestrator
 # ==========================================
-# 1. 共通環境の読み込み（ここで _sys_params.csv の内容が環境変数として展開される）
+# 1. Load common environment (_sys_params.csv is expanded into environment variables here)
 source "$(dirname "$0")/_tlu_env.sh"
 
-# 2. パラメータの取得と Fail-Fast 検証
-# 設定値がCSV(環境変数)に存在しない場合、明確なエラーメッセージを出力して即座に処理を停止する
-BASELINE_WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?環境変数 TLU_OBSERVATION_WINDOW_MONTHS が設定されていません。_sys_params.csv を確認してください。}"
-Z_SCORE_THRESH="${TLU_ANOMALY_Z_SCORE_THRESHOLD:?環境変数 TLU_ANOMALY_Z_SCORE_THRESHOLD が設定されていません。}"
+# 2. Parameter retrieval and Fail-Fast verification
+# If a setting is missing in the CSV (envvars), output a clear error and halt immediately.
+BASELINE_WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?Environment variable TLU_OBSERVATION_WINDOW_MONTHS is not set. Please check _sys_params.csv.}"
+Z_SCORE_THRESH="${TLU_ANOMALY_Z_SCORE_THRESHOLD:?Environment variable TLU_ANOMALY_Z_SCORE_THRESHOLD is not set.}"
 
-# 注意: LEAK_TOLERANCE と KL_DRIFT_THRESH は初期の _sys_params.csv には存在しませんでした。
-# CSVに追加されることを前提に、取得を強制します。
-LEAK_TOLERANCE="${TLU_LEAK_TOLERANCE:?環境変数 TLU_LEAK_TOLERANCE が設定されていません。_sys_params.csv に leak_tolerance を追加してください。}"
-KL_DRIFT_THRESH="${TLU_KL_DRIFT_THRESH:?環境変数 TLU_KL_DRIFT_THRESH が設定されていません。_sys_params.csv に kl_drift_thresh を追加してください。}"
+# Note: LEAK_TOLERANCE and KL_DRIFT_THRESH were not in the initial _sys_params.csv.
+# Assumes they are added to the CSV, forcing retrieval.
+LEAK_TOLERANCE="${TLU_LEAK_TOLERANCE:?Environment variable TLU_LEAK_TOLERANCE is not set. Please add leak_tolerance to _sys_params.csv.}"
+KL_DRIFT_THRESH="${TLU_KL_DRIFT_THRESH:?Environment variable TLU_KL_DRIFT_THRESH is not set. Please add kl_drift_thresh to _sys_params.csv.}"
 
-# 3. Pythonコアへの注入 (Dependency Injection)
+# 3. Injection into Python core (Dependency Injection)
 run_tlu_pipeline "Forensics Filter" \
     "Src" "Tgt" \
     "src.filters._002_2_1_filter_macro_forensics" "result.002_2_1_filter_macro_forensics.analysis.csv" \

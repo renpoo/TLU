@@ -6,13 +6,13 @@
 set -euo pipefail
 
 # --- 0. Project Root & Python Path Resolution ---
-# _tlu_env.sh の絶対位置 (bin/orchestrators/) から逆算してプロジェクトルートを特定
+# Determine project root by backtracking from _tlu_env.sh absolute path (bin/orchestrators/)
 export TLU_PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
-# どこからスクリプトが呼ばれても、必ずプロジェクトルートに移動して実行する
+# Ensure execution from the project root regardless of where the script is called from
 cd "${TLU_PROJECT_ROOT}"
 
-# Pythonが 'src' フォルダをモジュールとして認識できるように PYTHONPATH をエクスポート
+# Export PYTHONPATH so Python can recognize 'src' folder as a module
 export PYTHONPATH="${TLU_PROJECT_ROOT}:${PYTHONPATH:-}"
 
 # --- 1. Docker Commands ---
@@ -37,19 +37,19 @@ export TLU_VIZ_DIR="src/visualizations"
 # ==========================================
 # 2.5 Dynamic Hyperparameter Injection
 # ==========================================
-# CSVに定義された定数を、システム全域の環境変数 ($TLU_*) として展開する
+# Expand constants defined in CSV as system-wide environment variables ($TLU_*)
 if [ -f "${TLU_SYS_PARAMS}" ]; then
     # echo "[INFO] Loading system parameters from ${TLU_SYS_PARAMS}..."
     while IFS=, read -r key value || [ -n "$key" ]; do
-        # 空行やコメント行をスキップ
+        # Skip empty lines and comments
         [[ -z "$key" || "$key" == \#* ]] && continue
         
-        # スペースとキャリッジリターンを除去して正規化
+        # Remove spaces and carriage returns to normalize
         clean_key=$(echo "$key" | xargs)
         clean_value=$(echo "$value" | tr -d '\r' | xargs)
         
-        # 例: damping_factor -> TLU_DAMPING_FACTOR
-        # macOS 標準の Bash (v3.2) では ${var^^} がサポートされていないため、tr コマンドで大文字化します。
+        # Example: damping_factor -> TLU_DAMPING_FACTOR
+        # macOS default Bash (v3.2) does not support ${var^^}, so use tr to uppercase.
         upper_key=$(echo "$clean_key" | tr '[:lower:]' '[:upper:]')
         export "TLU_${upper_key}=${clean_value}"
     done < "${TLU_SYS_PARAMS}"
@@ -58,7 +58,7 @@ else
 fi
 
 # --- 3. Unified Pipeline Runner ---
-# 使い方: run_tlu_pipeline <説明> <始点カラム> <終点カラム> <実行モジュール> <出力ファイル名> [追加引数...]
+# Usage: run_tlu_pipeline <description> <src_col> <tgt_col> <execution_module> <output_filename> [extra_args...]
 run_tlu_pipeline() {
     local filter_desc="$1"
     local proj_src="$2"
@@ -70,15 +70,15 @@ run_tlu_pipeline() {
 
     echo "Running ${filter_desc}..."
 
-    # Step 1: プロジェクション（事象の無名化と辞書の生成）
-    # ※ ここで確実に _node_map.csv が最後まで書き切られるのを待つ
+    # Step 1: Projection (Anonymization of events and dictionary generation)
+    # Ensure _node_map.csv is fully written before proceeding
     cat "${TLU_INPUT_CSV}" \
     | $TLU_PY -m src.filters._0_2_projector_to_coo \
         --col_time="Trans_Date" --col_src="${proj_src}" --col_tgt="${proj_tgt}" --col_val="Amount" \
     > "${TLU_TMP_COO}"
 
-    # Step 2: フィルタリング（数理解析）
-    # ※ 完成した最新の _node_map.csv を読み込んで安全に実行される
+    # Step 2: Filtering (Mathematical Analysis)
+    # Safely execute by reading the completed latest _node_map.csv
     cat "${TLU_TMP_COO}" \
     | $TLU_PY -m "${filter_module}" "${extra_args[@]:-}" \
     > "${TLU_OUT_DIR}/${out_filename}"
@@ -88,7 +88,7 @@ run_tlu_pipeline() {
 }
 
 # --- 4. Unified Visualization Runner ---
-# 使い方: run_tlu_visualization <ステップ/説明> <スクリプト名> <出力ファイル名> <入力ファイル名> [追加引数...]
+# Usage: run_tlu_visualization <step/description> <script_name> <output_filename> <input_filename> [extra_args...]
 run_tlu_visualization() {
     local step_desc="$1"
     local script="$2"
@@ -97,16 +97,16 @@ run_tlu_visualization() {
     shift 4
     local extra_args=("$@")
 
-    # THEMEは環境変数から取得（未設定ならdark）
+    # Get THEME from environment variables (fallback to dark if unset)
     local theme="${TLU_THEME:-dark}"
     
-    # スクリプト名から拡張子を取り除き、Pythonのモジュールパス記法に変換
+    # Remove extension from script name and convert to Python module path notation
     local module_path="src.visualizations.${script%.py}"
 
     echo "  -> Generating [${theme}]: ${step_desc}..."
     
-    # 追加引数の有無で安全に分岐させる（空文字引数の混入を完全に防止）
-    # 呼び出しをすべて -m (モジュール実行) に統一し、カレントディレクトリからのパス解決を保証する
+    # Safely branch based on presence of extra arguments (completely prevents empty string args)
+    # Unify all calls to -m (module execution) to guarantee path resolution from current directory
     if [ ${#extra_args[@]} -gt 0 ]; then
         $TLU_PY -m "${module_path}" \
             --theme "${theme}" \

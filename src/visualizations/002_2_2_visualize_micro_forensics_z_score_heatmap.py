@@ -9,12 +9,12 @@ import sys
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# 共通ユーティリティから _draw_single_heatmap もインポートする
+# Import _draw_single_heatmap from common utilities as well
 from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Micro Forensics Heatmap (Generates Z-Score figures)")
-    parser.add_argument("--top_k", type=int, default=5, help="ハイライトする危険特異点の数")
+    parser.add_argument("--top_k", type=int, default=5, help="Number of critical outliers to highlight")
     parser.set_defaults(filename="1_9_micro_forensics_z_score_heatmap.png")
     return parser
 
@@ -22,7 +22,7 @@ def main():
     parser = setup_argparser()
     args = parser.parse_args()
 
-    # フォールバックの排除とフェイルファスト
+    # Eliminate fallbacks and enforce fail-fast
     theme_cfg = apply_theme(args.theme)
     ui_canvas = theme_cfg['ui_canvas']
     text_col = ui_canvas['text_primary']
@@ -52,7 +52,7 @@ def main():
 
     fig_z, ax_z = plt.subplots(figsize=(16, 7))
     
-    # 共通ライブラリの描画ロジックへ委譲
+    # Delegate to common library drawing logic
     draw_single_heatmap(
         ax_z, pivot_z, cmap_z, 'Z-Score (sigma)',
         "Micro Forensics B: Univariate Activity Shock (Node Z-Score)",

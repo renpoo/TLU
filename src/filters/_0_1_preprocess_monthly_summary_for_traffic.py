@@ -7,21 +7,21 @@
 
 import pandas as pd
 
-# 1. データの読み込み
+# 1. Read data
 df = pd.read_csv("workspace/input_stream/Dummy_Kyoto_Traffic_Journal_Amount.csv")
 
-# 2. Trans_Date列を日付（datetime）型に変換
+# 2. Convert Trans_Date column to datetime type
 df['Trans_Date'] = pd.to_datetime(df['Trans_Date'])
 
-# 3. 日付から「年月（YYYY-MM）」形式の新しい列を作成
+# 3. Create a new "YearMonth (YYYY-MM)" column from date
 df['YearMonth'] = df['Trans_Date'].dt.strftime('%Y-%m')
 
-# 4. 年月, Src, Tgt でグループ化し、Amountを合計（sum）
+# 4. Group by YearMonth, Src, Tgt and sum the Amount
 df_monthly = df.groupby(['YearMonth', 'Src', 'Tgt'], as_index=False)['Amount'].sum()
 
-# 5. 結果を新しいCSVファイルとして保存
+# 5. Save the result as a new CSV file
 df_monthly.to_csv("workspace/input_stream/Dummy_Kyoto_Traffic_Journal_Aggregated.csv", index=False, encoding="utf-8")
 
-# 確認用出力
-print(f"集約完了: {len(df_monthly)} 行の月次データを作成しました。")
+# Output for confirmation
+print(f"Aggregation complete: Created {len(df_monthly)} rows of monthly data.")
 print(df_monthly.head())

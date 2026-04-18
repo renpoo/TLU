@@ -4,15 +4,15 @@ import numpy as np
 
 def compute_edge_stress(T_current: np.ndarray, T_history_window: list[np.ndarray]) -> np.ndarray:
     """
-    過去の遷移確率(またはフラックス)行列の履歴から、現在のエッジごとの応力(Stress)を計算する。
-    応力は、過去の平均からの逸脱度（単変量Zスコア）として定義される。
+    Calculate the current edge-wise stress from the history of past transition probability (or flux) matrices.
+    Stress is defined as the degree of deviation (univariate Z-score) from the past average.
     
     Args:
-        T_current: 現在の行列 (Nodes x Nodes)
-        T_history_window: 過去の行列のリスト
+        T_current: Current matrix (Nodes x Nodes)
+        T_history_window: List of past matrices
         
     Returns:
-        stress_matrix: エッジごとの応力行列 (Nodes x Nodes)
+        stress_matrix: Edge-wise stress matrix (Nodes x Nodes)
     """
     N = T_current.shape[0]
     if len(T_history_window) < 2:
@@ -22,10 +22,10 @@ def compute_edge_stress(T_current: np.ndarray, T_history_window: list[np.ndarray
     mean_tensor = np.mean(hist_arr, axis=0)
     std_tensor = np.std(hist_arr, axis=0)
     
-    # 逸脱度の計算
+    # Calculate deviation
     deviation = np.abs(T_current - mean_tensor)
     
-    # ゼロ除算の回避: 標準偏差が0のエッジ（常に一定額の取引）は、応力を0とする
+    # Avoid zero division: Stress is 0 for edges with a standard deviation of 0 (always constant transaction amount)
     stress_matrix = np.divide(
         deviation, 
         std_tensor, 

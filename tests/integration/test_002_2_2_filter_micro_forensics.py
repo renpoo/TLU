@@ -7,8 +7,8 @@ from src.filters._002_2_2_filter_micro_forensics import run_micro_forensics_anal
 class TestFilterMicroForensics(unittest.TestCase):
     def test_run_micro_forensics_analysis_shape(self):
         """
-        [Red->Green] N=2のT_sliceを渡したとき、
-        副作用なしに2行(N行)のミクロ指標レコードが返ることを確認。
+        [Red->Green] When T_slice with N=2 is passed,
+        verification that 2 rows (N rows) of micro indicator records are returned without side effects.
         """
         N = 2
         T_slice = np.array([
@@ -17,7 +17,7 @@ class TestFilterMicroForensics(unittest.TestCase):
         ])
         t_idx = 0
         
-        # 履歴のモック（直近の2ステップ分をリストとして渡す）
+        # History mock (pass the latest 2 steps as a list)
         q_history = [np.array([-5.0, 5.0]), np.array([-8.0, 8.0])]
         P_history = [np.array([[0.0, 1.0], [0.0, 0.0]]), np.array([[0.0, 1.0], [0.0, 0.0]])]
         
@@ -26,26 +26,26 @@ class TestFilterMicroForensics(unittest.TestCase):
             'z_score_thresh': 3.0
         }
 
-        # 実行
+        # Act
         records, q_current, P_current = run_micro_forensics_analysis(
             t_idx, T_slice, q_history, P_history, thresholds
         )
 
-        # 検証: N行のレコード
+        # Assert: N rows of records
         self.assertEqual(len(records), N)
         self.assertEqual(q_current.shape, (N,))
         self.assertEqual(P_current.shape, (N, N))
         
-        # レコード構造: [t_idx, node_idx, node_kl_drift, node_univariate_z_score, micro_anomaly_flag]
+        # Record structure: [t_idx, node_idx, node_kl_drift, node_univariate_z_score, micro_anomaly_flag]
         node0_rec = records[0]
         self.assertEqual(len(node0_rec), 5) 
         self.assertEqual(node0_rec[0], 0) # t_idx
         self.assertEqual(node0_rec[1], 0) # node_idx
 
         node1_rec = records[1]
-        self.assertEqual(node1_rec[1], 1) # node_idx が連番になっていること
+        self.assertEqual(node1_rec[1], 1) # node_idx is sequential
 
-        # 渡したリストが変異（mutate）していないことの証明
+        # Proof that the passed list did not mutate
         self.assertEqual(len(q_history), 2)
         self.assertEqual(len(P_history), 2)
 

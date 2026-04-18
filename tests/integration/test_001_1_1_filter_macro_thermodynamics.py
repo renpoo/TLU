@@ -7,37 +7,37 @@ from src.filters._001_1_1_filter_macro_thermodynamics import run_thermodynamics_
 class TestFilterThermodynamicsMacro(unittest.TestCase):
     def test_run_thermodynamics_analysis_basic(self):
         """
-        [Red->Green] 純粋な数理ロジック層が、I/Oから完全に独立して
-        熱力学指標（U, S, T, W, Q, F）を正しく計算し返すことを確認する。
+        [Red->Green] Verify that the pure mathematical logic layer correctly calculates and returns
+        thermodynamic indicators (U, S, T, W, Q, F) completely independently of I/O.
         """
-        # 準備 (Arrange)
-        # ノード0 から ノード1 へ 10.0 の移動
+        # Arrange
+        # Transfer of 10.0 from Node 0 to Node 1
         T_slice = np.array([
             [0.0, 10.0],
             [0.0,  0.0]
         ])
         q_history = []
-        work_indices = [1] # ノード1への流入を「仕事」とする
-        heat_indices = [0] # ノード0への流入を「散逸熱」とする
+        work_indices = [1] # Consider inflow to Node 1 as "work"
+        heat_indices = [0] # Consider inflow to Node 0 as "dissipated heat"
         t_idx = 0
 
-        # 実行 (Act)
+        # Act
         records, q_current = run_thermodynamics_analysis(
             t_idx, T_slice, q_history, work_indices, heat_indices
         )
 
-        # 検証 (Assert)
-        # マクロ熱力学指標なので、出力レコードはシステム全体で1行のみ
+        # Assert
+        # Since it's a macro thermodynamic indicator, the output record is only 1 row for the entire system
         self.assertEqual(len(records), 1)
         self.assertEqual(q_current.shape, (2,))
         
-        # レコード構造: [t_idx, U, S, T, W, Q, gradT, F]
+        # Record structure: [t_idx, U, S, T, W, Q, gradT, F]
         rec = records[0]
         self.assertEqual(len(rec), 8)
         self.assertEqual(rec[0], 0)
-        self.assertTrue(isinstance(rec[1], str)) # Uなどが文字列フォーマットされているか
+        self.assertTrue(isinstance(rec[1], str)) # Check if U etc. are formatted as string
 
-        # 具体的な値の簡単な検算 (T_sliceの総活動量 U = 10.0 になるはず)
+        # Simple check of specific values (total activity U of T_slice should be 10.0)
         self.assertEqual(float(rec[1]), 10.0)
 
 if __name__ == '__main__':

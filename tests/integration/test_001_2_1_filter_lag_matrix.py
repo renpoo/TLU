@@ -7,10 +7,10 @@ from src.filters._001_2_1_filter_lag_matrix import run_lag_matrix_analysis
 class TestFilterLagMatrix(unittest.TestCase):
     def test_run_lag_matrix_analysis_basic(self):
         """
-        [Red->Green] 蓄積された履歴を渡したとき、I/Oに依存せずに
-        N x N 全ペアのタイムラグと相関係数が計算されることを確認。
+        [Red->Green] When accumulated history is passed, without depending on I/O,
+        verification that the time lag and correlation coefficient for all N x N pairs are calculated.
         """
-        # 準備 (Arrange)
+        # Arrange
         q_history_list = [
             np.array([10.0,  0.0]), # t=0
             np.array([ 0.0, 10.0]), # t=1
@@ -19,18 +19,18 @@ class TestFilterLagMatrix(unittest.TestCase):
         ]
         max_lag = 2
 
-        # 実行 (Act)
+        # Act
         records = run_lag_matrix_analysis(q_history_list, max_lag)
 
-        # 検証 (Assert)
+        # Assert
         self.assertEqual(len(records), 4)
 
-        # レコード構造: [src_idx, tgt_idx, optimal_lag, max_correlation]
-        # Node 0 から Node 1 への波及関係をテスト
+        # Record structure: [src_idx, tgt_idx, optimal_lag, max_correlation]
+        # Test the ripple relationship from Node 0 to Node 1
         record_0_to_1 = next(r for r in records if r[0] == 0 and r[1] == 1)
         
         self.assertEqual(len(record_0_to_1), 4)
-        self.assertEqual(record_0_to_1[2], 1) # 1ステップ遅れている
+        self.assertEqual(record_0_to_1[2], 1) # 1 step behind
         self.assertTrue(isinstance(record_0_to_1[3], str))
         self.assertIn("1.0", record_0_to_1[3])
 

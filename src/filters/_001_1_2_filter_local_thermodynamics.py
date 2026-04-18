@@ -27,17 +27,17 @@ def run_local_thermo_analysis(
     """ [Pure Orchestration Function] """
     N = T_slice.shape[0]
 
-    # 1. 局所内部エネルギー u_i (絶対的な活動量)
+    # 1. Local internal energy u_i (Absolute activity)
     u_local = compute_local_internal_energy(T_slice)
 
-    # 2. 局所シャノンエントロピー s_i (分散度)
+    # 2. Local Shannon entropy s_i (Degree of dispersion)
     P_mat = compute_transition_matrix(T_slice)
     s_local = compute_shannon_entropy(P_mat)
     
-    # 3. 局所温度 t_i (フラックスの分散)
+    # 3. Local temperature t_i (Flux variance)
     q_current = compute_net_flux(T_slice)
     
-    # 温度計算のため、一時的に現在状態を結合（呼び出し元でpopされる前提）
+    # Temporarily combine the current state for temperature calculation (assumes it will be popped by the caller)
     temp_q_hist = np.array(q_history_window + [q_current])
     
     if len(temp_q_hist) > 1:
@@ -45,7 +45,7 @@ def run_local_thermo_analysis(
     else:
         t_local = np.zeros(N)
 
-    # 4. レコードのフォーマット
+    # 4. Record format
     records = []
     for i in range(N):
         records.append([
@@ -57,7 +57,7 @@ def run_local_thermo_analysis(
 
 def main():
     parser = get_base_parser("TLU Local Thermodynamics Filter")
-    parser.add_argument("--temp_window", type=int, default=3, help="局所温度(ボラティリティ)計算用のタイムウィンドウ幅")
+    parser.add_argument("--temp_window", type=int, default=3, help="Time window width for local temperature (volatility) calculation")
     
     output_header = ["t_idx", "node_idx", "local_internal_energy_u", "local_entropy_s", "local_temperature_t"]
     args, N, reader, writer = setup_pipeline(parser, output_header)
@@ -69,7 +69,7 @@ def main():
             t_idx, T_slice, q_history_window
         )
         
-        # 履歴の安全な更新（スライディング・ウィンドウ）
+        # Safe update of history (Sliding window)
         q_history_window.append(q_current)
         if len(q_history_window) > args.temp_window:
             q_history_window.pop(0)

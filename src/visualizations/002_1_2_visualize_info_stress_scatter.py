@@ -14,7 +14,7 @@ from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Structural Stress Matrix: Density vs Curvature")
-    parser.add_argument("--top_k", type=int, default=3, help="ハイライトする危険特異点の数")
+    parser.add_argument("--top_k", type=int, default=3, help="Number of critical outliers to highlight")
     parser.set_defaults(filename="26_info_stress_scatter.png")
     return parser
 
@@ -22,7 +22,7 @@ def main():
     parser = setup_argparser()
     args = parser.parse_args()
 
-    # フォールバック排除
+    # Eliminate fallbacks
     theme_cfg = apply_theme(args.theme)
     ui_canvas = theme_cfg['ui_canvas']
     text_col = ui_canvas['text_primary']
@@ -32,8 +32,8 @@ def main():
     
     c_normal = ui_canvas['data_normal']
     
-    # 以前の Forensics からの Context Bleed を解消。
-    # 意図的なFail-fastのため、情報幾何学ドメイン用のキーを要求する。
+    # Eliminate Context Bleed from the previous Forensics.
+    # Request keys for information geometry domain for intentional fail-fast.
     info_colors = theme_cfg['information_geometry']['colors']
     c_danger = info_colors['stress_outlier']
     c_danger_text = info_colors['stress_outlier_text']

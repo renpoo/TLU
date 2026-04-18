@@ -10,7 +10,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-# システム共通基盤のインポート
+# Import system common infrastructure
 from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
@@ -22,7 +22,7 @@ def main():
     parser = setup_argparser()
     args = parser.parse_args()
 
-    # フォールバックを駆逐し、厳格なキー参照（Fail-Fast）を強制
+    # Eliminate fallbacks and enforce strict key reference (Fail-Fast)
     theme_cfg = apply_theme(args.theme)
     ui_canvas = theme_cfg['ui_canvas']
     text_col = ui_canvas['text_primary']
@@ -31,7 +31,7 @@ def main():
     grid_line_col = ui_canvas['grid_line']
     zero_line_col = ui_canvas['zero_line']
 
-    # セマンティック・カラーの厳格抽出
+    # Strict extraction of semantic colors
     colors = theme_cfg['thermodynamics']['colors']
     c_U = colors['gross_activity_U']
     c_F = colors['free_energy_F']
@@ -60,7 +60,7 @@ def main():
 
     fig, axes = plt.subplots(4, 1, figsize=(12, 12), sharex=True)
     
-    # --- 1段目: Internal Energy (U) ---
+    # --- 1st row: Internal Energy (U) ---
     axes[0].plot(t, U, color=c_U, marker='s', markersize=5, linewidth=2, label='Internal Energy (U)')
     axes[0].axhline(0, color=zero_line_col, linestyle='--', linewidth=1)
     axes[0].set_title("1. Internal Energy (U) : Gross Activity Scale", loc='left', fontweight='bold', color=text_col)
@@ -69,7 +69,7 @@ def main():
     for text in leg0.get_texts(): text.set_color(text_col)
     axes[0].grid(True, linestyle=':', alpha=0.8, color=grid_line_col)
 
-    # --- 2段目: Free Energy (F) ---
+    # --- 2nd row: Free Energy (F) ---
     axes[1].plot(t, F_corrected, color=c_F, marker='o', markersize=5, linewidth=2, label='Free Energy (F)')
     axes[1].axhline(0, color=zero_line_col, linestyle='--', linewidth=1)
     axes[1].set_title("2. Free Energy (F) : Net Available Power (Corrected)", loc='left', fontweight='bold', color=text_col)
@@ -78,7 +78,7 @@ def main():
     for text in leg1.get_texts(): text.set_color(text_col)
     axes[1].grid(True, linestyle=':', alpha=0.8, color=grid_line_col)
 
-    # --- 3段目: Temperature (T) ---
+    # --- 3rd row: Temperature (T) ---
     axes[2].plot(t, T_corrected, color=c_T, marker='^', markersize=5, linewidth=2, label='Temperature (T)')
     axes[2].axhline(0, color=zero_line_col, linestyle='--', linewidth=1)
     axes[2].set_title("3. Temperature (T) : Volatility / Friction Level (Corrected)", loc='left', fontweight='bold', color=text_col)
@@ -87,7 +87,7 @@ def main():
     for text in leg2.get_texts(): text.set_color(text_col)
     axes[2].grid(True, linestyle=':', alpha=0.8, color=grid_line_col)
 
-    # --- 4段目: Entropy (S) ---
+    # --- 4th row: Entropy (S) ---
     axes[3].plot(t, S, color=c_S, marker='x', markersize=5, linewidth=2, label='Entropy (S)')
     axes[3].axhline(0, color=zero_line_col, linestyle='--', linewidth=1)
     axes[3].set_title("4. Entropy (S) : Structural Disorder & Information Dispersion", loc='left', fontweight='bold', color=text_col)
@@ -96,7 +96,7 @@ def main():
     for text in leg3.get_texts(): text.set_color(text_col)
     axes[3].grid(True, linestyle=':', alpha=0.8, color=grid_line_col)
 
-    # X軸ラベルの結合とフォーマット
+    # Combine and format X-axis labels
     bottom_ax = axes[3]
     ticks = df['t_idx'].values
     labels = [str(time_labels.get(t, t)) for t in ticks]

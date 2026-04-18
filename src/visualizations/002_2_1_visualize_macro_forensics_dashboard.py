@@ -20,7 +20,7 @@ def main():
     parser = setup_argparser()
     args = parser.parse_args()
 
-    # フォールバックの排除
+    # Eliminate fallbacks
     theme_cfg = apply_theme(args.theme)
     ui_canvas = theme_cfg['ui_canvas']
     text_col = ui_canvas['text_primary']

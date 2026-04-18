@@ -16,19 +16,19 @@ from collections import defaultdict
 
 def setup_argparser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="TLU Event-Driven SME Hub-and-Spoke Journal Generator")
-    parser.add_argument("--months", type=int, default=12, help="生成する期間（月数）")
-    parser.add_argument("--seed", type=int, default=42, help="乱数シード")
-    parser.add_argument("--sales-leak-prob", type=float, default=0.0, help="売掛金が回収されない（args.sales_leakの確率で）")
-    parser.add_argument("--purchase-leak-prob", type=float, default=0.0, help="買掛金が支払われない（args.purchase_leakの確率で）")
+    parser.add_argument("--months", type=int, default=12, help="Period to generate (in months)")
+    parser.add_argument("--seed", type=int, default=42, help="Random seed")
+    parser.add_argument("--sales-leak-prob", type=float, default=0.0, help="Accounts receivable not collected (with probability args.sales_leak_prob)")
+    parser.add_argument("--purchase-leak-prob", type=float, default=0.0, help="Accounts payable not paid (with probability args.purchase_leak_prob)")
     return parser
 
 def create_entry(entry_id: str, date_str: str, amount: float, debit_acc: str, debit_dept: str, credit_acc: str, credit_dept: str, memo: str) -> list:
-    """1つの複式簿記取引（2行）を生成する"""
+    """Generate one double-entry bookkeeping transaction (2 rows)"""
     amount = round(amount, 2)
     entry = []
-    # 貸方 (Credit: 資金の流出元)
+    # Credit (Source of funds outflow)
     entry.append([entry_id, date_str, credit_acc, credit_dept, "0.0", str(amount), f"{memo}_CR"])
-    # 借方 (Debit: 資金の流入先)
+    # Debit (Destination of funds inflow)
     entry.append([entry_id, date_str, debit_acc, debit_dept, str(amount), "0.0", f"{memo}_DR"])
     return entry
 
@@ -37,12 +37,12 @@ def generate_stream(args):
     total_days = args.months * 30 
     
     global_entry_count = 1
-    event_queue = defaultdict(list) # 未来のイベントをスケジュール
+    event_queue = defaultdict(list) # Schedule future events
     
     writer = csv.writer(sys.stdout)
     writer.writerow(["Entry_ID", "Trans_Date", "Account_Name", "Dept_Name", "Debit", "Credit", "Memo"])
 
-    # 季節変動波形（売上の波）
+    # Seasonal fluctuation wave (sales wave)
     seasonal_wave = (np.sin(np.linspace(0, 4 * np.pi, total_days)) + 1) / 2
 
     for day in range(total_days):
@@ -51,7 +51,7 @@ def generate_stream(args):
         daily_entries = []
 
         # --------------------------------------------------
-        # 1. イベントキューの消化（過去の因果・粘性の発現）
+        # 1. Process event queue (manifestation of past causality and viscosity)
         # --------------------------------------------------
         if day in event_queue:
             for task in event_queue[day]:
@@ -60,22 +60,22 @@ def generate_stream(args):
             del event_queue[day]
 
         # --------------------------------------------------
-        # 2. 売上・回収サイクル (Cross-Dept: Sales -> Admin)
+        # 2. Sales and collection cycle (Cross-Dept: Sales -> Admin)
         # --------------------------------------------------
         base_sales = 2 + (seasonal_wave[day] * 3) + np.random.normal(0, 0.5)
         for _ in range(max(0, int(base_sales))):
             amount = np.random.lognormal(mean=np.log(800), sigma=0.4)
             amount = max(100.0, amount)
 
-            # [売上発生]
-            # 営業部(Sales)が売上を上げるが、債権(AR)を管理するのは本社(Admin)
+            # [Sales generated]
+            # Sales department generates sales, but accounts receivable (AR) are managed by Admin
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, amount, 
                 "Accounts_Receivable", "DPT_Admin", "Sales_Revenue", "DPT_Sales", "Sales_Record"
             ))
             global_entry_count += 1
             
-            # [原価計上] (社内完結)
+            # [Cost of goods sold recorded] (internal)
             cogs_amount = amount * random.uniform(0.4, 0.7)
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, cogs_amount, 
@@ -83,7 +83,7 @@ def generate_stream(args):
             ))
             global_entry_count += 1
 
-            # [未来: 売掛金回収] 30〜90日後 (Admin内で完結)
+            # [Future: AR collection] 30-90 days later (completed within Admin)
             collection_day = day + random.randint(30, 90)
             def make_collection(amt):
                 def task(d_str, e_count):
@@ -94,16 +94,16 @@ def generate_stream(args):
                 return task
 
             if (args.sales_leak_prob > 0.00):
-                # Sales Leakage 1: 売掛金が回収されない（args.sales_leak_probの確率で）
+                # Sales Leakage 1: AR not collected (with probability args.sales_leak_prob)
                 if random.random() < args.sales_leak_prob:
                     amount -= np.random.uniform(0, amount * 0.10)
             
             event_queue[collection_day].append(make_collection(amount))
 
         # --------------------------------------------------
-        # 3. 購買・支払サイクル (Cross-Dept: Admin -> Ops)
+        # 3. Purchase and payment cycle (Cross-Dept: Admin -> Ops)
         # --------------------------------------------------
-        # Opsが在庫を補充するが、債務(AP)を負うのはAdmin
+        # Ops replenishes inventory, but accounts payable (AP) are held by Admin
         if day % 7 == 0:
             purch_amount = np.random.normal(8000, 1000)
             daily_entries.extend(create_entry(
@@ -112,7 +112,7 @@ def generate_stream(args):
             ))
             global_entry_count += 1
             
-            # [未来: 買掛金支払] 30〜90日後 (Admin内で完結)
+            # [Future: AP payment] 30-90 days later (completed within Admin)
             pay_day = day + random.randint(30, 90)
             def make_payment(amt):
                 def task(d_str, e_count):
@@ -123,16 +123,16 @@ def generate_stream(args):
                 return task
 
             if (args.purchase_leak_prob > 0.00):
-                # Purchase Leak 1: 買掛金が支払えない（args.purchase_leak_probの確率で）
+                # Purchase Leak 1: AP cannot be paid (with probability args.purchase_leak_prob)
                 if random.random() < args.purchase_leak_prob:
                     purch_amount -= np.random.uniform(0, purch_amount * 0.05)
             
             event_queue[pay_day].append(make_payment(purch_amount))
 
         # --------------------------------------------------
-        # 4. 経費の精算 (Cross-Dept: Admin -> Sales/Ops)
+        # 4. Expense reimbursement (Cross-Dept: Admin -> Sales/Ops)
         # --------------------------------------------------
-        # 営業マンの交通費（Salesの経費だが、AdminのCashから出る）
+        # Salesperson travel expenses (Sales expense, paid from Admin Cash)
         if random.random() < 0.4:
             travel_amt = random.uniform(30, 1200)
             daily_entries.extend(create_entry(
@@ -142,37 +142,37 @@ def generate_stream(args):
             global_entry_count += 1
 
         # --------------------------------------------------
-        # 5. 月末サイクル（全社的な固定費）
+        # 5. Month-end cycle (company-wide fixed costs)
         # --------------------------------------------------
         if current_date.day == 25:
-            # 各部門の給与（経費は各部門につくが、支払いはすべてAdminのCash）
-            # Ops部門の給与
+            # Department salaries (expense per dept, paid from Admin Cash)
+            # Ops department salary
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, 8000 + np.random.normal(0, 1000), 
                 "Payroll_Exp", "DPT_Ops", "Cash", "DPT_Admin", "Payroll_Ops"
             ))
             global_entry_count += 1
-            # Sales部門の給与
+            # Sales department salary
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, 6000 + np.random.normal(0, 1200), 
                 "Payroll_Exp", "DPT_Sales", "Cash", "DPT_Admin", "Payroll_Sales"
             ))
             global_entry_count += 1
-            # Admin部門自身の給与
+            # Admin department salary
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, 4000 + np.random.normal(0, 800), 
                 "Payroll_Exp", "DPT_Admin", "Cash", "DPT_Admin", "Payroll_Admin"
             ))
             global_entry_count += 1
             
-            # 本社家賃（Admin完結）
+            # Office rent (completed within Admin)
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, 5000 + np.random.normal(0, 1200),
                 "Rent_Exp", "DPT_Admin", "Cash", "DPT_Admin", "Monthly_Rent"
             ))
             global_entry_count += 1
 
-        # ストリーム出力
+        # Stream output
         for row in daily_entries:
             writer.writerow(row)
 

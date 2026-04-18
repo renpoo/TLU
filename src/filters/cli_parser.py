@@ -6,7 +6,7 @@ import sys
 from typing import Dict
 
 def load_sys_params(filepath: str) -> Dict[str, float]:
-    """_sys_params.csv を読み込み、辞書として返す。"""
+    """Load _sys_params.csv and return it as a dictionary."""
     params = {}
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
@@ -25,7 +25,7 @@ def load_sys_params(filepath: str) -> Dict[str, float]:
     return params
 
 def get_base_parser(description: str) -> argparse.ArgumentParser:
-    """すべてのフィルターで共通して使用する基底パーサーを生成する。"""
+    """Generate a base parser commonly used across all filters."""
     parser = argparse.ArgumentParser(description=description)
     parser.add_argument("--time_map", type=str, default="workspace/ephemeral/_time_map.csv")
     parser.add_argument("--node_map", type=str, default="workspace/ephemeral/_node_map.csv")
@@ -34,7 +34,7 @@ def get_base_parser(description: str) -> argparse.ArgumentParser:
     return parser
 
 def parse_projector_args(args_list: list[str]) -> dict:
-    """[Phase 1 専用] Projector用のCLI引数をパースし、辞書として返す"""
+    """[Phase 1 Only] Parse CLI arguments for the Projector and return as a dictionary"""
     parser = argparse.ArgumentParser()
     parser.add_argument("--col_time", type=str, default="")
     parser.add_argument("--col_src", type=str, default="")

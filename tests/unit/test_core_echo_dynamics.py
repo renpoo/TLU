@@ -7,23 +7,23 @@ from src.core.core_echo_dynamics import compute_finite_echo, compute_decomposed_
 class TestEchoDynamics(unittest.TestCase):
     def test_compute_finite_echo_basic(self):
         """
-        有限波及行列（Echo）の総和を計算するテスト。
-        2ノード間で質量がピンポンする単純なモデルで、減衰率(gamma)とステップ数(k)を検証。
+        Test to calculate the sum of finite ripple matrix (Echo).
+        Verify decay rate (gamma) and step count (k) in a simple model where mass ping-pongs between 2 nodes.
         """
-        # P: 遷移確率行列 (ノード0は100%ノード1へ、ノード1は100%ノード0へ)
+        # P: Transition probability matrix (Node 0 goes 100% to Node 1, Node 1 goes 100% to Node 0)
         P_matrix = np.array([
             [0.0, 1.0],
             [1.0, 0.0]
         ])
         
-        gamma = 0.5  # 減衰率（摩擦係数）
-        max_k = 2    # 波及ステップ数 (0次, 1次, 2次)
+        gamma = 0.5  # Decay rate (friction coefficient)
+        max_k = 2    # Ripple step count (0th order, 1st order, 2nd order)
 
-        # 期待される波及行列 M_echo
-        # 0次波及 (k=0): 単位行列 I = [[1, 0], [0, 1]]
-        # 1次波及 (k=1): gamma^1 * P = [[0, 0.5], [0.5, 0]]
-        # 2次波及 (k=2): gamma^2 * P^2 = 0.25 * [[1, 0], [0, 1]] = [[0.25, 0], [0, 0.25]]
-        # 合計 M_echo: [[1.25, 0.5], [0.5, 1.25]]
+        # Expected ripple matrix M_echo
+        # 0th order ripple (k=0): Identity matrix I = [[1, 0], [0, 1]]
+        # 1st order ripple (k=1): gamma^1 * P = [[0, 0.5], [0.5, 0]]
+        # 2nd order ripple (k=2): gamma^2 * P^2 = 0.25 * [[1, 0], [0, 1]] = [[0.25, 0], [0, 0.25]]
+        # Total M_echo: [[1.25, 0.5], [0.5, 1.25]]
         expected_M_echo = np.array([
             [1.25, 0.5],
             [0.5,  1.25]
@@ -36,7 +36,7 @@ class TestEchoDynamics(unittest.TestCase):
 
     def test_compute_decomposed_echoes_basic(self):
         """
-        波及を合算せず、k次波及ごとに分解してリストとして返すテスト。
+        Test to return decomposed k-th order ripples as a list without summing them up.
         """
         P_matrix = np.array([
             [0.0, 1.0],
@@ -46,10 +46,10 @@ class TestEchoDynamics(unittest.TestCase):
         gamma = 0.5
         max_k = 2
 
-        # 期待される分解された波及エコーのリスト
-        # インデックス0: 1次波及 (gamma^1 * P)
-        # インデックス1: 2次波及 (gamma^2 * P^2)
-        # ※0次波及（単位行列）は含まない仕様とする
+        # Expected list of decomposed ripple echoes
+        # Index 0: 1st order ripple (gamma^1 * P)
+        # Index 1: 2nd order ripple (gamma^2 * P^2)
+        # * Specification does not include 0th order ripple (identity matrix)
         expected_echoes = [
             np.array([[0.0, 0.5], [0.5, 0.0]]),   # 1st order
             np.array([[0.25, 0.0], [0.0, 0.25]])  # 2nd order
@@ -57,17 +57,17 @@ class TestEchoDynamics(unittest.TestCase):
 
         actual_echoes = compute_decomposed_echoes(P_matrix, gamma, max_k)
 
-        # リストの長さが一致することを確認
+        # Verify that the lengths of the lists match
         assert len(actual_echoes) == len(expected_echoes)
         
-        # 各階層の行列が一致することを確認
+        # Verify that the matrices at each level match
         for actual, expected in zip(actual_echoes, expected_echoes):
             np.testing.assert_array_almost_equal(actual, expected)
 
 
     def test_compute_decomposed_echoes_identity_matrix(self):
         """
-        波及を合算せず、k次波及ごとに分解してリストとして返すテスト。
+        Test to return decomposed k-th order ripples as a list without summing them up.
         """
         P_matrix = np.array([
             [1.0, 0.0],
@@ -77,10 +77,10 @@ class TestEchoDynamics(unittest.TestCase):
         gamma = 1.0
         max_k = 2
 
-        # 期待される分解された波及エコーのリスト
-        # インデックス0: 1次波及 (gamma^1 * P)
-        # インデックス1: 2次波及 (gamma^2 * P^2)
-        # ※0次波及（単位行列）は含まない仕様とする
+        # Expected list of decomposed ripple echoes
+        # Index 0: 1st order ripple (gamma^1 * P)
+        # Index 1: 2nd order ripple (gamma^2 * P^2)
+        # * Specification does not include 0th order ripple (identity matrix)
         expected_echoes = [
             np.array([[1.0, 0.0], [0.0, 1.0]]),   # 1st order
             np.array([[1.0, 0.0], [0.0, 1.0]])   # 2nd order
@@ -88,26 +88,26 @@ class TestEchoDynamics(unittest.TestCase):
 
         actual_echoes = compute_decomposed_echoes(P_matrix, gamma, max_k)
 
-        # リストの長さが一致することを確認
+        # Verify that the lengths of the lists match
         assert len(actual_echoes) == len(expected_echoes)
         
-        # 各階層の行列が一致することを確認
+        # Verify that the matrices at each level match
         for actual, expected in zip(actual_echoes, expected_echoes):
             np.testing.assert_array_almost_equal(actual, expected)
 
 
     def test_compute_finite_echo_native_2x2(self):
         """
-        純粋な波及エコー関数の正常系テスト（2x2）。
+        Normal system test of pure ripple echo function (2x2).
         """
         P_matrix = np.array([
             [0.5, 0.5],
             [1.0, 0.0]
         ])
         gamma = 0.5
-        max_k = 50  # 50回もループさせれば、無限等比級数の極限にほぼ到達する
+        max_k = 50  # Looping 50 times almost reaches the limit of infinite geometric series
 
-        # 期待される無限波及行列（手計算での厳密な極限値）
+        # Expected infinite ripple matrix (exact limit value by hand calculation)
         expected_M_echo = np.array([
             [1.6, 0.4],
             [0.8, 1.2]
@@ -115,12 +115,12 @@ class TestEchoDynamics(unittest.TestCase):
 
         actual_M_echo = compute_finite_echo(P_matrix, gamma, max_k)
 
-        # 50回の有限ループで、無限極限に「6桁の精度で」近似できているかをテストする
+        # Test if it can approximate to the infinite limit "with 6 digits accuracy" in 50 finite loops
         np.testing.assert_array_almost_equal(actual_M_echo, expected_M_echo, decimal=5)
 
     def test_compute_finite_echo_native_3x3(self):
         """
-        純粋な波及エコー関数の正常系テスト（3x3）。
+        Normal system test of pure ripple echo function (3x3).
         """
         P_matrix = np.array([
             [0.0, 0.5, 0.5],
@@ -143,52 +143,52 @@ class TestEchoDynamics(unittest.TestCase):
 
     def test_compute_finite_echo_as_inverse_matrix(self):
         """
-        一般的な行列 M の逆行列 M^-1 を、
-        波及エコー関数(compute_finite_echo)の無限級数近似を利用して求めるテスト。
+        Test to find the inverse matrix M^-1 of a general matrix M
+        by using infinite series approximation of ripple echo function (compute_finite_echo).
         """
-        # 1. 解きたい一般的な行列 M
+        # 1. General matrix M to solve
         M = np.array([
             [4.0, 7.0],
             [2.0, 6.0]
         ])
         
-        # 期待される真の逆行列 (行列式=10)
+        # Expected true inverse matrix (determinant=10)
         expected_M_inv = np.array([
             [ 0.6, -0.7],
             [-0.2,  0.4]
         ])
 
         # --------------------------------------------------------
-        # 2. 波及エコー形式 ( I - P ) への「翻訳」プロセス
+        # 2. Process of "translation" to ripple echo format ( I - P )
         # --------------------------------------------------------
-        # M をそのまま P にすると波及が爆発するため、
-        # 行列全体をすっぽり包み込む仮想の「枠の大きさ (c)」を定義します。
-        # ここでは M の要素より少し大きい c = 10.0 とします。
+        # If M is used as P exactly, the ripple will explode,
+        # so define a virtual "frame size (c)" that completely wraps the entire matrix.
+        # Here, let's say c = 10.0 is slightly larger than the elements of M.
         c = 10.0
         
-        # M = c * (I - P) となるような、仮想の遷移確率行列 P を逆算します。
+        # Back-calculate virtual transition probability matrix P such that M = c * (I - P).
         # P = I - (M / c)
         I = np.eye(2)
         P_matrix = I - (M / c)
         
-        # 3. エコーの実行
-        # 摩擦なし(gamma=1.0) で、波及を100ステップ(max_k=100)回します。
+        # 3. Execute echo
+        # Loop ripple 100 steps (max_k=100) without friction (gamma=1.0).
         gamma = 1.0
         max_k = 100
         
-        # エコー関数が計算するのは (I - P)^-1 の近似値です。
+        # The echo function calculates an approximation of (I - P)^-1.
         echo_result = compute_finite_echo(P_matrix, gamma, max_k)
         
-        # 4. 翻訳の巻き戻し
-        # M = c * (I - P) なので、M^-1 = (1/c) * (I - P)^-1 です。
-        # したがって、エコーの結果を c で割れば、Mの逆行列が復元されます。
+        # 4. Rewind translation
+        # Since M = c * (I - P), M^-1 = (1/c) * (I - P)^-1.
+        # Therefore, dividing the echo result by c restores the inverse matrix of M.
         actual_M_inv_approx = echo_result / c
         
         # --------------------------------------------------------
-        # 5. 検証
+        # 5. Verification
         # --------------------------------------------------------
-        # エコー(足し算と掛け算のループ)だけで求めた近似値が、
-        # 真の逆行列と「小数点以下5桁まで」完全に一致することを証明します。
+        # Verify that the approximate value obtained only by echo (addition and multiplication loops)
+        # perfectly matches the true inverse matrix "up to 5 decimal places".
         np.testing.assert_array_almost_equal(actual_M_inv_approx, expected_M_inv, decimal=5)
 
 

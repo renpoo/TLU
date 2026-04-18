@@ -5,12 +5,12 @@
 # ==========================================
 source "$(dirname "$0")/_tlu_env.sh"
 
-# 1. パラメータの取得と Fail-Fast 検証
-WORK_LABELS="${TLU_THERMO_WORK_LABELS:?環境変数 TLU_THERMO_WORK_LABELS が設定されていません。}"
-HEAT_LABELS="${TLU_THERMO_HEAT_LABELS:?環境変数 TLU_THERMO_HEAT_LABELS が設定されていません。}"
-TEMP_WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?環境変数 TLU_OBSERVATION_WINDOW_MONTHS が設定されていません。}"
+# 1. Parameter retrieval and Fail-Fast verification
+WORK_LABELS="${TLU_THERMO_WORK_LABELS:?Environment variable TLU_THERMO_WORK_LABELS is not set.}"
+HEAT_LABELS="${TLU_THERMO_HEAT_LABELS:?Environment variable TLU_THERMO_HEAT_LABELS is not set.}"
+TEMP_WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?Environment variable TLU_OBSERVATION_WINDOW_MONTHS is not set.}"
 
-# 2. パイプラインの実行
+# 2. Execute pipeline
 run_tlu_pipeline "Macro Thermodynamics Filter" \
     "Src" "Tgt" \
     "src.filters._001_1_1_filter_macro_thermodynamics" "result.001_1_1_filter_macro_thermodynamics.analysis.csv" \

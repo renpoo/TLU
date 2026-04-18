@@ -14,7 +14,7 @@ from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("LQR Performance Space: Control Effort vs Final Error")
-    parser.add_argument("--top_k", type=int, default=3, help="制御誤差の大きい最悪のノードをハイライト")
+    parser.add_argument("--top_k", type=int, default=3, help="Highlight worst nodes with max control error")
     parser.set_defaults(filename="21_control_lqr_performance_space.png")
     return parser
 
@@ -22,7 +22,7 @@ def main():
     parser = setup_argparser()
     args = parser.parse_args()
 
-    # フォールバックを駆逐し、厳格なキー参照を強制
+    # Eliminate fallbacks and enforce strict key reference
     theme_cfg = apply_theme(args.theme)
     ui_canvas = theme_cfg['ui_canvas']
     text_col = ui_canvas['text_primary']
@@ -37,7 +37,7 @@ def main():
     df = pd.read_csv(sys.stdin)
     if df.empty: sys.exit(0)
 
-    # コスト計算と最終誤差の結合
+    # Combine cost calculation and final error
     df['abs_u'] = df['optimal_input_u'].abs()
     cost_df = df.groupby('node_idx')['abs_u'].sum().reset_index()
     max_t = df['t_idx'].max()
@@ -51,18 +51,18 @@ def main():
 
     fig, ax = plt.subplots(figsize=(14, 8))
 
-    # 最悪の誤差を持つトップKをハイライト
+    # Highlight top K with worst errors
     top_k_df = merged.nlargest(args.top_k, 'state_error_x')
     normals = merged.drop(top_k_df.index)
     top_k_indices = top_k_df['node_idx'].astype(int).tolist()
 
-    # プロット描画 (ハードコード 'tab:purple' を c_normal へ置換)
+    # Plot drawing (Replace hardcoded 'tab:purple' with c_normal)
     ax.scatter(normals['abs_u'], normals['state_error_x'], 
                color=c_normal, s=120, alpha=0.6, edgecolors=text_col)
     ax.scatter(top_k_df['abs_u'], top_k_df['state_error_x'], 
                color=c_outlier, s=300, alpha=0.9, edgecolors=text_col, marker='*')
 
-    # プロットラベルの純化
+    # Purify plot labels
     for _, row in top_k_df.iterrows():
         idx = int(row['node_idx'])
         ax.text(row['abs_u'], row['state_error_x'], f"  {idx:02d}", 
@@ -72,7 +72,7 @@ def main():
         ax.text(row['abs_u'], row['state_error_x'], f"  {idx:02d}", 
                 color=text_col, fontsize=10, alpha=0.7, va='center', ha='left')
 
-    # カスタム凡例（ハイライト同期）
+    # Custom legend (Highlight sync)
     handles, labels = [], []
     display_count = min(N, args.max_legend)
     for i in range(display_count):

@@ -12,7 +12,7 @@ def get_base_parser(description: str) -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=description)
     parser.add_argument("--out_dir", type=str, default="workspace/output_plots/")
     parser.add_argument("--filename", type=str, default=None)
-    # デフォルトのテーマは 'dark'（ユーザー合意に基づく唯一の起点）
+    # Default theme is 'dark' (only starting point based on user agreement)
     parser.add_argument("--theme", type=str, default='dark')
     parser.add_argument("--node_map", type=str, default="_node_map.csv")
     parser.add_argument("--time_map", type=str, default="_time_map.csv")
@@ -21,11 +21,11 @@ def get_base_parser(description: str) -> argparse.ArgumentParser:
 
 def apply_theme(theme_name="dark"):
     """
-    指定されたテーマ名のJSONを読み込み、Matplotlibのグローバル設定を適用しつつ、
-    セマンティックカラーの辞書を返す。
-    ※フェイルファスト思想に基づき、ファイル欠損やパースエラー時は容赦なくクラッシュさせる。
+    Loads the JSON of the specified theme name, applies Matplotlib's global settings,
+    and returns a dictionary of semantic colors.
+    * Based on the fail-fast philosophy, it crashes without mercy if files are missing or parsing errors occur.
     """
-    # 配布パッケージとしての絶対パス（コンテナ内の絶対法則）
+    # Absolute path as a distribution package (absolute rule in container)
     json_path = f"src/visualizations/themes/theme_{theme_name}.json"
     
     if not os.path.exists(json_path):
@@ -34,7 +34,7 @@ def apply_theme(theme_name="dark"):
     with open(json_path, 'r', encoding='utf-8') as f:
         theme_cfg = json.load(f)
 
-    # デフォルト値を駆逐: JSON内に 'mode' が無ければ KeyError でクラッシュさせる
+    # Eliminate default values: crash with KeyError if 'mode' is not in JSON
     mode = theme_cfg["mode"]
     plt.style.use('dark_background' if mode == 'dark' else 'default')
     plt.rcParams['savefig.format'] = 'png'
@@ -43,8 +43,8 @@ def apply_theme(theme_name="dark"):
 
 def load_node_labels(node_map_path: str, max_n: int) -> dict:
     """
-    CSVからノードラベルを読み込む。
-    デフォルト値（ダミーラベル）の生成を駆逐。ファイル不在や列名不一致は即座にクラッシュさせる。
+    Load node labels from CSV.
+    Eliminate the generation of default values (dummy labels). File absence or column name mismatch immediately crashes.
     """
     if not os.path.exists(node_map_path):
         raise FileNotFoundError(f"❌ Node map file not found: {node_map_path}")
@@ -62,8 +62,8 @@ def load_node_labels(node_map_path: str, max_n: int) -> dict:
 
 def load_time_labels(time_map_path: str, max_n: int) -> dict:
     """
-    CSVから時間ラベルを読み込む。
-    こちらも同様にデフォルト値を駆逐し、完全なフェイルファストを適用。
+    Load time labels from CSV.
+    Similarly eliminate default values and completely apply fail-fast.
     """
     if not os.path.exists(time_map_path):
         raise FileNotFoundError(f"❌ Time map file not found: {time_map_path}")
@@ -80,20 +80,20 @@ def load_time_labels(time_map_path: str, max_n: int) -> dict:
     return idx_to_label
 
 def draw_single_heatmap(ax, pivot_df, cmap, cbar_label, title_text, x_labels, y_labels, top_k_idx, text_col, outlier_col):
-    """ [Pure Drawing Logic] 単一のヒートマップを描画し、装飾を施す """
+    """ [Pure Drawing Logic] Draws a single heatmap and applies decoration. """
     sns.heatmap(pivot_df, ax=ax, cmap=cmap, robust=True, 
                 cbar_kws={'label': cbar_label}, 
-                xticklabels=x_labels) # 修正: X軸ラベルを必ず渡す
+                xticklabels=x_labels) # Fix: Always pass X-axis labels
 
     ax.set_title(title_text, fontsize=15, color=text_col, loc='left', fontweight='bold')
     ax.set_ylabel("Node (Dept/Account)", color=text_col, fontsize=12)
     ax.set_xlabel("Timeline", color=text_col, fontsize=12)
 
-    # 軸目盛りの調整
+    # Adjust axis tick marks
     ax.tick_params(axis='x', rotation=45, colors=text_col, labelsize=10)
     ax.set_yticklabels(y_labels, fontsize=10, rotation=0)
 
-    # Y軸ラベルのハイライト処理
+    # Y-axis label highlight processing
     for i, label in enumerate(ax.get_yticklabels()):
         if i in top_k_idx:
             label.set_color(outlier_col)
@@ -105,7 +105,7 @@ def draw_single_heatmap(ax, pivot_df, cmap, cbar_label, title_text, x_labels, y_
     return
 
 def draw_matrix_heatmap(ax, pivot_df, cmap, cbar_label, title_text, axis_labels, text_col, bg_col=None, mask=None, vmin=None, vmax=None):
-    """ [Pure Drawing Logic] N x N の相関・ラグ行列ヒートマップを描画する """
+    """ [Pure Drawing Logic] Draws an N x N correlation/lag matrix heatmap. """
     import seaborn as sns
     sns.heatmap(pivot_df, ax=ax, cmap=cmap, mask=mask, vmin=vmin, vmax=vmax,
                 xticklabels=axis_labels, yticklabels=axis_labels, 

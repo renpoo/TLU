@@ -24,7 +24,7 @@ def project_record(record, mapping_config, node_registry, time_registry):
     tgt_col  = mapping_config.get("col_tgt")
     val_col  = mapping_config.get("col_val")
 
-    # フェイルファスト: カラム名が存在しない場合は即座にエラーにする
+    # Fail-Fast: Immediately error out if the column name does not exist
     for col_name in [time_col, src_col, tgt_col, val_col]:
         if col_name not in record:
             raise KeyError(f"CRITICAL: Column '{col_name}' not found in the input CSV. "
@@ -32,7 +32,7 @@ def project_record(record, mapping_config, node_registry, time_registry):
 
     t_idx   = time_registry.assign_new_id(record[time_col])
     
-    # テンソルの和集合トポロジーの原則（SDL_01）に基づき、同じレジストリ（node_registry）を使用する
+    # Use the same node registry according to the tensor union topology principle (SDL_01)
     src_idx = node_registry.assign_new_id(record[src_col])
     tgt_idx = node_registry.assign_new_id(record[tgt_col])
     
@@ -84,7 +84,7 @@ def yield_time_slices(csv_reader, N: int):
         yield current_t_idx, T_slice
 
 def setup_pipeline(parser: argparse.ArgumentParser, output_header: list[str]):
-    """ボイラープレートを削減するための共通セットアップ関数"""
+    """Common setup function to reduce boilerplate"""
     args = parser.parse_args()
     try:
         df_map = pd.read_csv(args.node_map)

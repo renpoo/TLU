@@ -11,7 +11,7 @@ from src.core.core_control_theory import (
 
 class TestControlTheory(unittest.TestCase):
     def test_build_state_space_matrices(self):
-        # 3ノードのシステム。ノード0と2が制御可能（リソース投下可能）
+        # 3-node system. Nodes 0 and 2 are controllable (resource dropable)
         P_matrix = np.array([
             [0.8, 0.2, 0.0],
             [0.1, 0.9, 0.0],
@@ -21,14 +21,14 @@ class TestControlTheory(unittest.TestCase):
         
         A, B = build_state_space_matrices(P_matrix, controllable_indices)
         
-        # A行列はP行列と一致するはず（今回はLTIシステムとしてPをそのまま使用）
+        # A matrix should match P matrix (this time use P as is as LTI system)
         np.testing.assert_array_equal(A, P_matrix)
         
-        # B行列は (3 x 2) のマッピング行列になるはず
+        # B matrix should be a (3 x 2) mapping matrix
         expected_B = np.array([
-            [1.0, 0.0], # Node 0 への入力
-            [0.0, 0.0], # Node 1 は制御不可
-            [0.0, 1.0]  # Node 2 への入力
+            [1.0, 0.0], # Input to Node 0
+            [0.0, 0.0], # Node 1 is uncontrollable
+            [0.0, 1.0]  # Input to Node 2
         ])
         np.testing.assert_array_equal(B, expected_B)
 
@@ -37,40 +37,40 @@ class TestControlTheory(unittest.TestCase):
         num_inputs = 2
         weight_Q = 10.0
         weight_R = 1.0
-        target_indices = [1] # Node 1 の目標達成を重視
+        target_indices = [1] # Emphasize achieving the goal of Node 1
         
         Q, R = build_QR_matrices(N, num_inputs, weight_Q, weight_R, target_indices)
         
-        # Q は (3 x 3)。ターゲットである Node 1 (インデックス1) の重みが 10.0 になる
+        # Q is (3 x 3). The weight of target Node 1 (index 1) becomes 10.0
         expected_Q = np.diag([0.0, 10.0, 0.0])
-        # R は (2 x 2)。入力に対するペナルティが 1.0
+        # R is (2 x 2). Penalty for input is 1.0
         expected_R = np.diag([1.0, 1.0])
         
         np.testing.assert_array_equal(Q, expected_Q)
         np.testing.assert_array_equal(R, expected_R)
 
     def test_solve_lqr_gain_and_optimal_input(self):
-        # 非常に単純な1次元システムでの検算
+        # Verification with a very simple 1D system
         # x(t+1) = 1.0 * x(t) + 1.0 * u(t)
         A = np.array([[1.0]])
         B = np.array([[1.0]])
-        Q = np.array([[10.0]]) # 目標とのズレを非常に嫌う
-        R = np.array([[1.0]])  # コストは少しだけ気にする
+        Q = np.array([[10.0]]) # Hate deviation from target very much
+        R = np.array([[1.0]])  # Care a little bit about cost
         
         K_lqr = solve_lqr_gain(A, B, Q, R)
         
-        # DAREの厳密解に基づく K は約 0.916 程度になる
+        # K based on exact solution of DARE is about 0.916
         self.assertEqual(K_lqr.shape, (1, 1))
-        self.assertTrue(K_lqr[0, 0] > 0.0) # 正のフィードバックゲインが掛かること
+        self.assertTrue(K_lqr[0, 0] > 0.0) # Positive feedback gain must be applied
         
-        # 現在状態が 50.0、目標が 100.0 の場合
+        # When current state is 50.0 and target is 100.0
         current_state = np.array([50.0])
         target_state = np.array([100.0])
         
         u = compute_optimal_input(K_lqr, current_state, target_state)
         
         # u = -K * (current - target) = -K * (-50) = K * 50
-        # ゲインが約 0.9 なので、入力は約 45.0 程度になるはず（一気に埋めようとする）
+        # Since the gain is about 0.9, the input should be about 45.0 (tries to close the gap at once)
         self.assertTrue(u[0] > 40.0)
 
 if __name__ == '__main__':

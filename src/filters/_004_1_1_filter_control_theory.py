@@ -39,10 +39,10 @@ def run_control_theory_analysis(
 
     K = solve_lqr_gain(A_matrix, B_matrix, Q_mat, R_mat)
 
-    # 修正: core_control_theory.py のシグネチャに合わせて3つの引数を渡す
+    # Fix: Pass 3 arguments to match the signature in core_control_theory.py
     u_input = compute_optimal_input(K, q_current, target_q)
 
-    # 状態誤差 x (フィルター側でも出力用に計算)
+    # State error x (calculated for output on the filter side as well)
     x_error = q_current - target_q
     abs_x_error = np.abs(x_error)
 
@@ -59,11 +59,11 @@ def run_control_theory_analysis(
 def main():
     parser = get_base_parser("TLU Control Theory Filter (LQR)")
     parser.add_argument("--controllable_labels", type=str, default="", 
-                        help="制御可能なノードラベル (例: 'DPT_Sales,DPT_Marketing')")
+                        help="Controllable node labels (e.g., 'DPT_Sales,DPT_Marketing')")
     parser.add_argument("--target_state", type=str, default="", 
-                        help="目標状態ベクトル (例: 'ACC_Sales_Revenue_Global:10000')")
-    parser.add_argument("--q_weight", type=float, default=1.0, help="状態誤差ペナルティ重み (Q)")
-    parser.add_argument("--r_weight", type=float, default=0.1, help="入力コストペナルティ重み (R)")
+                        help="Target state vector (e.g., 'ACC_Sales_Revenue_Global:10000')")
+    parser.add_argument("--q_weight", type=float, default=1.0, help="State error penalty weight (Q)")
+    parser.add_argument("--r_weight", type=float, default=0.1, help="Input cost penalty weight (R)")
     
     output_header = ["t_idx", "node_idx", "optimal_input_u", "state_error_x"]
     args, N, reader, writer = setup_pipeline(parser, output_header)

@@ -60,7 +60,7 @@ class TestCoreThermodynamics(unittest.TestCase):
         expected_std = np.std([10.0, 15.0, 20.0]) + np.std([-10.0, -15.0, -20.0])
         self.assertAlmostEqual(T, expected_std)
 
-    # --- Local Thermodynamics Tests (新規追加) ---
+    # --- Local Thermodynamics Tests (Newly added) ---
     def test_compute_local_internal_energy(self):
         T_slice = np.array([
             [0.0, 20.0, 10.0],

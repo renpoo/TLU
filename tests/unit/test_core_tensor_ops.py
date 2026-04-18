@@ -8,23 +8,23 @@ from src.core.core_tensor_ops import compute_net_flux, compute_transition_matrix
 class TestStreamProcessor(unittest.TestCase):
     def test_compute_net_flux_basic(self):
         """
-        3x3の単純な遷移テンソル（行列）における純フラックスを計算するテスト。
-        ドメイン（科目や部門）の意味は一切持たない、純粋な質量移動の観測。
+        Test to calculate the net flux in a simple 3x3 transition tensor (matrix).
+        Pure observation of mass transfer, without any meaning of domains (accounts or departments).
         """
-        # 3ノード間の質量移動 (T_matrix[src, tgt] = value)
-        # ノード0 -> ノード1: 10
-        # ノード1 -> ノード2: 5
-        # ノード2 -> ノード0: 2
+        # Mass transfer between 3 nodes (T_matrix[src, tgt] = value)
+        # Node 0 -> Node 1: 10
+        # Node 1 -> Node 2: 5
+        # Node 2 -> Node 0: 2
         T_matrix = np.array([
             [0, 10,  0],
             [0,  0,  5],
             [2,  0,  0]
         ])
     
-        # 期待される純フラックス q (流入 - 流出)
-        # ノード0: 流入(2) - 流出(10) = -8
-        # ノード1: 流入(10) - 流出(5) = 5
-        # ノード2: 流入(5) - 流出(2) = 3
+        # Expected net flux q (Inflow - Outflow)
+        # Node 0: Inflow(2) - Outflow(10) = -8
+        # Node 1: Inflow(10) - Outflow(5) = 5
+        # Node 2: Inflow(5) - Outflow(2) = 3
         expected_q = np.array([-8, 5, 3])
     
         actual_q = compute_net_flux(T_matrix)
@@ -34,16 +34,16 @@ class TestStreamProcessor(unittest.TestCase):
 
     def test_compute_transition_matrix_basic_and_zero_div(self):
         """
-        遷移確率行列（分配比率）の計算と、ゼロ除算の回避テスト。
+        Test of calculating the transition probability matrix (distribution ratio) and avoiding zero division.
         """
         T_matrix = np.array([
-            [0, 8, 2],  # ノード0: 総流出10 (ノード1へ80%, ノード2へ20%)
-            [0, 0, 0],  # ノード1: 総流出0 (ゼロ除算の危機！)
-            [5, 5, 0]   # ノード2: 総流出10 (ノード0へ50%, ノード1へ50%)
+            [0, 8, 2],  # Node 0: Total outflow 10 (80% to Node 1, 20% to Node 2)
+            [0, 0, 0],  # Node 1: Total outflow 0 (Zero division crisis!)
+            [5, 5, 0]   # Node 2: Total outflow 10 (50% to Node 0, 50% to Node 1)
         ])
         
-        # 期待される遷移行列 P
-        # 割り算が不可能なノード1の行は、すべて0のまま安全に処理されること。
+        # Expected transition matrix P
+        # The row for node 1, which cannot be divided, should be safely processed as all 0s.
         expected_P = np.array([
             [0.0, 0.8, 0.2],
             [0.0, 0.0, 0.0],
@@ -57,16 +57,16 @@ class TestStreamProcessor(unittest.TestCase):
 
     def test_compute_net_flux_basic(self):
         """
-        3ノードの単純な系での純フラックス算出テスト
+        Test of calculating net flux in a simple system of 3 nodes
         Node 0 -> Node 1: 100
         Node 1 -> Node 2: 30
         
-        期待される純フラックス q:
-        Node 0: -100 (流出のみ)
+        Expected net flux q:
+        Node 0: -100 (Outflow only)
         Node 1: +100 - 30 = 70
-        Node 2: +30 (流入のみ)
+        Node 2: +30 (Inflow only)
         """
-        # 隣接行列 T (行: src, 列: tgt)
+        # Adjacency matrix T (Rows: src, Columns: tgt)
         T = np.array([
             [0, 100,   0],
             [0,   0,  30],
@@ -75,10 +75,10 @@ class TestStreamProcessor(unittest.TestCase):
         
         expected_q = np.array([-100, 70, 30])
         
-        # 実行
+        # Act
         actual_q = compute_net_flux(T)
         
-        # 検証
+        # Assert
         np.testing.assert_array_almost_equal(actual_q, expected_q)
 
 

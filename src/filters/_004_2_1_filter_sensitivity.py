@@ -26,18 +26,18 @@ def run_sensitivity_analysis(
 ) -> Tuple[List[list], np.ndarray]:
     """ 
     [Pure Orchestration Function]
-    全ノードに対して「仮想投資(FK)」と「仮想目標(IK)」を総当たりで適用し、
-    組織全体の感度（波及効果とひずみエネルギー）を算出する。
+    Apply 'Virtual Investment (FK)' and 'Virtual Target (IK)' to all nodes using brute force,
+    and calculate the sensitivity (ripple effect and strain energy) of the entire organization.
     """    
     N = T_slice.shape[0]
     records = []
 
-    # 現在の状態と推移確率の計算
+    # Calculation of current state and transition probability
     q_current = cto.compute_net_flux(T_slice)
     P_current = cto.compute_transition_matrix(T_slice)
     M_echo = ck.build_echo_matrix(P_current, gamma, max_k)
     
-    # 共分散と剛性行列 (K_safe) の計算
+    # Calculation of covariance and stiffness matrix (K_safe)
     temp_history = q_history + [q_current]
     q_hist_arr = np.array(temp_history)
     if len(q_hist_arr) > 2:
@@ -47,32 +47,32 @@ def run_sensitivity_analysis(
     else:
         K_safe = np.eye(N)
 
-    # 全ノードに対して総当たりシミュレーション
+    # Brute-force simulation for all nodes
     for i in range(N):
         # ------------------------------------------------
-        # 1. FK Sensitivity (波及効率のテスト)
-        # ノードi に delta の投資（ショック）を与えたら、全体がどう動くか？
+        # 1. FK Sensitivity (Ripple efficiency test)
+        # How does the whole system move if a delta investment (shock) is applied to node i?
         # ------------------------------------------------
         static_dq = np.zeros(N)
         static_dq[i] = delta
         echo_impact = ck.run_forward_simulation(P_current, static_dq, gamma, max_k)
         
-        fk_total_ripple = np.sum(np.abs(echo_impact))  # 全体への波及量総和
+        fk_total_ripple = np.sum(np.abs(echo_impact))  # Total sum of ripple amount to the whole
         fk_impact_others = np.copy(echo_impact)
-        fk_impact_others[i] = 0.0  # 自分自身への影響は除外
+        fk_impact_others[i] = 0.0  # Exclude impact on itself
         fk_max_node = int(np.argmax(np.abs(fk_impact_others)))
         fk_max_impact = fk_impact_others[fk_max_node]
 
         # ------------------------------------------------
-        # 2. IK Sensitivity (目標達成のひずみテスト)
-        # ノードi を無理やり delta だけ押し上げたら、全体にどれだけの負荷がかかるか？
+        # 2. IK Sensitivity (Strain test for achieving target)
+        # How much load is applied to the whole if node i is forcibly pushed up by delta?
         # ------------------------------------------------
         J = M_echo[:, [i]].T 
         dq_opt = ck.solve_ik_with_safe_stiffness(J, K_safe, [delta], lambda_ratio=1e-4)
         
-        strain_energy = 0.5 * np.dot(dq_opt.T, np.dot(K_safe, dq_opt))  # 組織全体への摩擦/負荷
+        strain_energy = 0.5 * np.dot(dq_opt.T, np.dot(K_safe, dq_opt))  # Friction/load to the entire organization
         ik_adjust_others = np.copy(dq_opt)
-        ik_adjust_others[i] = 0.0  # 自分自身の変動は除外
+        ik_adjust_others[i] = 0.0  # Exclude its own fluctuation
         ik_max_node = int(np.argmax(np.abs(ik_adjust_others)))
         ik_max_adjust = ik_adjust_others[ik_max_node]
 
@@ -86,7 +86,7 @@ def run_sensitivity_analysis(
 
 def main():
     parser = get_base_parser("TLU Sensitivity & Trade-off Meta-Filter")
-    parser.add_argument("--delta", type=float, default=10.0, help="仮想投資量 / 仮想目標変位量")
+    parser.add_argument("--delta", type=float, default=10.0, help="Virtual investment amount / Virtual target displacement")
     parser.add_argument("--gamma", type=float, default=0.85)
     parser.add_argument("--max_k", type=int, default=5)
     parser.add_argument("--history_window", type=int, default=100)

@@ -14,17 +14,17 @@ from matplotlib.colors import Normalize
 from matplotlib.cm import ScalarMappable
 import matplotlib.patches as mpatches
 
-# 共通ユーティリティのインポート
+# Import common utilities
 from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Network Topology: Flow and Structural Stress (Sequential Generator)")
     parser.add_argument("--t_target", type=int, default=None, 
-                        help="描画対象のタイムステップ (指定がない場合は全時刻を連番で生成)")
+                        help="Target time step for drawing (if omitted, sequential numbers are generated for all times)")
     parser.add_argument("--layout_seed", type=int, default=42, 
-                        help="ネットワーク配置の乱数シード")
+                        help="Random seed for network layout")
     parser.add_argument("--top_k", type=int, default=3, 
-                        help="絶対純流入出（Net Flux）が大きい特異点ノードのハイライト数")
+                        help="Number of singular node highlights with large absolute Net Flux")
     parser.set_defaults(filename="27_network_topology.png")
     return parser
 
@@ -38,7 +38,7 @@ def main():
     bg_col = ui_canvas.get('legend_bg', 'black')
     edge_col = ui_canvas.get('legend_edge', 'gray')
 
-    # テーマからのカラー設定と直感化（マイナス＝赤、プラス＝青 へ反転）
+    # Color setting and intuition from the theme (inverted: minus = red, plus = blue)
     cmap_node = theme_cfg.get('thermodynamics', {}).get('colormaps', {}).get('displacement_delta_map', 'coolwarm')
     if not cmap_node.endswith('_r'):
         cmap_node = f"{cmap_node}_r"
@@ -60,18 +60,18 @@ def main():
     time_labels = load_time_labels(args.time_map, T_max)
 
     # ==========================================================
-    # 1. アニメーションのための固定レイアウト（Fixed Positioning）の計算
+    # 1. Calculation of fixed layout (Fixed Positioning) for animation
     # ==========================================================
     G_global = nx.DiGraph()
     G_global.add_nodes_from(range(N))
     for _, row in df.iterrows():
         G_global.add_edge(int(row['src_idx']), int(row['tgt_idx']))
         
-    # [修正箇所] 斥力を強め（k=2.5）、スケールを広げて（scale=1.5）ノードを分散させる
+    # [Fix] Strengthen repulsive force (k=2.5) and widen scale (scale=1.5) to disperse nodes
     pos = nx.spring_layout(G_global, k=2.5, iterations=100, scale=1.5, seed=args.layout_seed)
 
     # ==========================================================
-    # 2. ロバスト・スケーリング（95パーセンタイル）の事前計算
+    # 2. Pre-calculation of robust scaling (95th percentile)
     # ==========================================================
     global_max_weight = np.percentile(df['weight'], 95) if len(df) > 0 else 1.0
     global_max_stress = np.percentile(df['stress'], 95) if len(df) > 0 else 1.0
@@ -94,7 +94,7 @@ def main():
     t_targets = [args.t_target] if args.t_target is not None else sorted(df['t_idx'].unique())
 
     # ==========================================================
-    # 3. 各タイムステップごとの連番描画ループ
+    # 3. Sequential drawing loop for each time step
     # ==========================================================
     for t in t_targets:
         t = int(t)
@@ -113,7 +113,7 @@ def main():
         top_k_indices = np.argsort(np.abs(net_flux))[-args.top_k:].tolist()
 
         fig = plt.figure(figsize=(16, 10))
-        # ネットワークの描画領域（scale=1.5に合わせて少し調整）
+        # Network drawing area (adjusted slightly to match scale=1.5)
         ax = fig.add_axes([0.15, 0.1, 0.60, 0.80])
 
         node_colors = [net_flux[i] for i in range(N)]

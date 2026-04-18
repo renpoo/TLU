@@ -5,13 +5,13 @@
 # ==========================================
 set -euo pipefail
 
-# 1. 共通環境の読み込み（パスとハイパーパラメータの初期化）
-# batch_processing.sh がプロジェクトルートにあると仮定
+# 1. Load common environment (Initialize paths and hyperparameters)
+# Assumes batch_processing.sh is executed from the project root
 source "./bin/orchestrators/_tlu_env.sh"
 
 ORCH_DIR="./bin/orchestrators"
 
-# 実行するスクリプトの配列（実行順）
+# Array of scripts to execute (in sequential order)
 SCRIPTS=(
     "000_1_1_run_dynamics_state.sh"
     "000_2_1_run_structural_stiffness.sh"
@@ -30,7 +30,7 @@ SCRIPTS=(
 
 echo "Starting TLU batch processing..."
 
-# 2. 出力ディレクトリのクリーンアップ（共通定義パスを使用）
+# 2. Output directory cleanup (using commonly defined paths)
 if [ -d "${TLU_OUT_DIR}" ]; then
     echo "Cleaning up output directory: ${TLU_OUT_DIR}"
     rm -rf "${TLU_OUT_DIR}"/*
@@ -38,7 +38,7 @@ else
     mkdir -p "${TLU_OUT_DIR}"
 fi
 
-# 3. 各解析プロセスの逐次実行
+# 3. Sequential execution of each analysis process
 for script in "${SCRIPTS[@]}"; do
     echo -e "\n[EXECUTING] ${script}"
     bash "${ORCH_DIR}/${script}"

@@ -11,12 +11,12 @@ import japanize_matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
-# 共通可視化基盤のインポート
+# Import common visualization infrastructure
 from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Dynamics Phase Space: Inertia vs Viscosity Scatter Plot")
-    parser.add_argument("--top_k", type=int, default=3, help="ハイライト表示する特異点の数")
+    parser.add_argument("--top_k", type=int, default=3, help="Number of singular points to highlight")
     parser.set_defaults(filename="1_3_7_inertia_viscosity_scatter.png") 
     return parser
 
@@ -24,7 +24,7 @@ def main():
     parser = setup_argparser()
     args = parser.parse_args()
 
-    # フォールバックを駆逐し、厳格なキー参照（Fail-Fast）を強制
+    # Eliminate fallbacks and enforce strict key reference (Fail-Fast)
     theme_cfg = apply_theme(args.theme)
     ui_canvas = theme_cfg['ui_canvas']
     text_col = ui_canvas['text_primary']
@@ -32,7 +32,7 @@ def main():
     legend_edge_col = ui_canvas['legend_edge']
     grid_line_col = ui_canvas['grid_line']
     
-    # 【追加要件】正常データの普遍的なプロット色（JSON側への追加を強制する）
+    # [Additional Requirement] Universal plot color for normal data (enforce addition to JSON side)
     c_normal = ui_canvas['data_normal']
 
     forensics_colors = theme_cfg['forensics']['colors']
@@ -46,31 +46,31 @@ def main():
         
     if df.empty: sys.exit(0)
 
-    # 時間平均を取る
+    # Take the time average
     df_mean = df.groupby('node_idx').mean().reset_index()
 
-    # 粘性(C)は対数スケールに変換
+    # Convert viscosity (C) to logarithmic scale
     df_mean['log_C'] = np.log10(np.where(df_mean['viscosity_C'] <= 0, 1e-6, df_mean['viscosity_C']))
 
     N = int(df_mean['node_idx'].max()) + 1
     idx_to_label = load_node_labels(args.node_map, N)
 
-    # 凡例領域を確保するため横長のキャンバスを設定
+    # Set a landscape canvas to secure the legend area
     fig, ax = plt.subplots(figsize=(14, 8))
     
-    # 質量M上位を特異点としてハイライト
+    # Highlight top mass M as singular points
     top_k_df = df_mean.nlargest(args.top_k, 'inertia_M')
     normals = df_mean.drop(top_k_df.index)
 
-    # 正常ノードのプロット（ハードコード 'tab:blue' をパージ）
+    # Plot normal nodes (purge hardcoded 'tab:blue')
     ax.scatter(normals['inertia_M'], normals['log_C'], 
                color=c_normal, s=120, alpha=0.7, edgecolors=text_col, linewidths=1.0)
     
-    # 特異点（重いノード）のプロット（星型）
+    # Plot singular points (heavy nodes) (star-shaped)
     ax.scatter(top_k_df['inertia_M'], top_k_df['log_C'], 
                color=c_outlier, s=300, alpha=0.9, edgecolors=text_col, marker='*', linewidths=1.2)
 
-    # プロットラベルの純化
+    # Purify plot labels
     for _, row in top_k_df.iterrows():
         idx = int(row['node_idx'])
         ax.text(row['inertia_M'], row['log_C'], f"  {idx:02d}", 
@@ -81,7 +81,7 @@ def main():
         ax.text(row['inertia_M'], row['log_C'], f"  {idx:02d}", 
                 color=text_col, fontsize=10, alpha=0.9, va='bottom', ha='left')
 
-    # 外出しの凡例（Node Map）ハイライト対応版
+    # External legend (Node Map) highlight-supported version
     top_k_indices = top_k_df['node_idx'].astype(int).tolist()
     
     handles = []

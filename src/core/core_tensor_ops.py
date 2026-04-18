@@ -10,13 +10,13 @@ def _compute_inflow(T_matrix):
     
 def compute_net_flux(T_matrix):
     """
-    与えられた遷移テンソル（行列）から純フラックスを計算する。
+    Calculate pure flux from the given transition tensor (matrix).
     """
     return _compute_inflow(T_matrix) - _compute_outflow(T_matrix)
 
 def compute_transition_matrix(T_matrix):
     """
-    与えられた遷移テンソル（行列）から遷移確率行列（分配比率）を計算する。
+    Calculate transition probability matrix (distribution ratio) from the given transition tensor (matrix).
     """
     outflow = _compute_outflow(T_matrix)
     outflow_col = outflow[:, np.newaxis]

@@ -25,17 +25,17 @@ def run_info_curvature_analysis(
     """ [Pure Orchestration Function] """
     N = T_slice.shape[0]
     
-    # 1. 最新の純フラックスを算出
+    # 1. Calculate the latest pure flux
     q_current = compute_net_flux(T_slice)
     
-    # 曲率計算のため、現在状態を含めたテンポラリな履歴を作成
+    # Create a temporary history including the current state for curvature calculation
     temp_hist = np.array(q_history_window + [q_current])
     
-    # 2. 曲率(Curvature) と 密度(Density) の計算
+    # 2. Calculate Curvature and Density
     curvature_vec = compute_information_curvature(temp_hist)
     density_vec = compute_information_density(T_slice)
     
-    # 3. レコードのフォーマット (ラベルは排除し、純粋なテンソルデータにする)
+    # 3. Record format (exclude labels and make it pure tensor data)
     records = []
     for i in range(N):
         records.append([
@@ -48,7 +48,7 @@ def run_info_curvature_analysis(
 
 def main():
     parser = get_base_parser("TLU Information Curvature Filter")
-    parser.add_argument("--window", type=int, default=3, help="曲率計算用のタイムウィンドウ幅（最小3）")
+    parser.add_argument("--window", type=int, default=3, help="Time window width for curvature calculation (minimum 3)")
     
     output_header = ["t_idx", "node_idx", "curvature", "density"]
     args, N, reader, writer = setup_pipeline(parser, output_header)
@@ -60,9 +60,9 @@ def main():
             t_idx, T_slice, q_history_window
         )
         
-        # 履歴の安全な更新
+        # Safe update of history
         q_history_window.append(q_current)
-        # 呼び出し元で temp_hist に q_current を足すため、ウィンドウサイズ-1 を保持する
+        # Retain window size - 1, since the caller will append q_current to temp_hist
         if len(q_history_window) > max(args.window, 3) - 1:
             q_history_window.pop(0)
             

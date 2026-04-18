@@ -7,8 +7,8 @@ from src.filters._002_2_1_filter_macro_forensics import run_forensics_analysis
 class TestFilterForensics(unittest.TestCase):
     def test_run_forensics_analysis_basic(self):
         """
-        [Red->Green] 1タイムスライスを渡したとき、I/Oに依存せずに
-        システム全体のマクロ異常検知指標が計算されることを確認。
+        [Red->Green] When 1 time slice is passed, without depending on I/O,
+        verification that macroeconomic anomaly detection indicators for the entire system are calculated.
         """
         T_slice = np.array([
             [0.0, 10.0],
@@ -29,10 +29,10 @@ class TestFilterForensics(unittest.TestCase):
             t_idx, T_slice, q_history, P_history, thresholds
         )
 
-        # 全体で1行のレコードが返る
+        # Returns 1 row of record in total
         self.assertEqual(len(records), 1)
         
-        # レコード構造: [t_idx, conservation_residual, kl_divergence_drift, mahalanobis_z_score, anomaly_flag]
+        # Record structure: [t_idx, conservation_residual, kl_divergence_drift, mahalanobis_z_score, anomaly_flag]
         sys_rec = records[0]
         self.assertEqual(len(sys_rec), 5) 
         self.assertEqual(sys_rec[0], 0)

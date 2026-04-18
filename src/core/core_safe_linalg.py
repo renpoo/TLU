@@ -4,47 +4,47 @@ import numpy as np
 
 def compute_safe_pinv(M_singular, rcond, lambda_reg):
     """
-    特異行列の擬似逆行列を安全に計算する。
-    真のチコノフ正則化 (M^T * M + lambda*I)^(-1) * M^T に基づく実装。
+    Safely calculate the pseudo-inverse of a singular matrix.
+    Implementation based on true Tikhonov regularization (M^T * M + lambda*I)^(-1) * M^T.
     
-    ※ スケール不変性を担保するため、rcond および lambda_reg のデフォルト値は持たない。
-    ※ 呼び出し元（上位レイヤー）が系のスケールに応じてこれらを供給すること。
+    * To ensure scale invariance, rcond and lambda_reg do not have default values.
+    * The caller (upper layer) must supply these according to the scale of the system.
     
     Args:
-        M_singular: 特異行列 (N x M)
-        rcond: ランク判定の閾値 (float)
-        lambda_reg: チコノフ正則化項 (float)
+        M_singular: Singular matrix (N x M)
+        rcond: Rank determination threshold (float)
+        lambda_reg: Tikhonov regularization term (float)
         
     Returns:
-        M_pinv: 安全な擬似逆行列 (M x N)
+        M_pinv: Safe pseudo-inverse matrix (M x N)
     """
     if lambda_reg > 0.0:
         M_singular_T = M_singular.T
-        # M^T M + lambda * I の構築
+        # Construct M^T M + lambda * I
         N_cols = M_singular.shape[1]
         M_reg = np.dot(M_singular_T, M_singular) + lambda_reg * np.eye(N_cols, dtype=float)
         
-        # 逆行列の代わりに、rcondを用いたpinvでさらなる安全保障をかける
+        # Apply additional safety using pinv with rcond instead of direct inverse
         pinv_reg = np.linalg.pinv(M_reg, rcond=rcond)
         
-        # 最後に M^T を掛ける
+        # Finally, multiply by M^T
         return np.dot(pinv_reg, M_singular_T)
     else:
-        # 正則化なしの場合は標準のSVDカットオフのみ
+        # Standard SVD cutoff only if no regularization is applied
         return np.linalg.pinv(M_singular, rcond=rcond)
 
 def compute_covariance_matrix(dq_history):
     """
-    過去の変位履歴から、ノード間の共分散行列を計算する。
+    Calculate the covariance matrix between nodes from past displacement history.
     
     Args:
-        dq_history: 過去の変位履歴 (Time_steps x Nodes)
+        dq_history: Past displacement history (Time_steps x Nodes)
         
     Returns:
-        covariance_matrix: 共分散行列 (Nodes x Nodes)
+        covariance_matrix: Covariance matrix (Nodes x Nodes)
     """
-    # numpyのnp.covを使用。デフォルトでは不偏分散を計算してくれる。
-    # dq_historyが (T, N) の場合、np.covのデフォルト動作では (N, N) の共分散行列が返る。
-    # ddof=1で不偏分散（分母がN-1）が保証される。
+    # Uses numpy's np.cov. Calculates unbiased variance by default.
+    # If dq_history is (T, N), np.cov's default behavior returns an (N, N) covariance matrix.
+    # ddof=1 guarantees unbiased variance (denominator is N-1).
     covariance_matrix = np.cov(dq_history, rowvar=False, ddof=1)
     return covariance_matrix

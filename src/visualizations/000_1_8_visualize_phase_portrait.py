@@ -11,13 +11,13 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import colorsys
 
-# 共通可視化基盤のインポート
+# Import common visualization infrastructure
 from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("3D Phase Space: Chromatic Node Trajectories (q, v, a)")
-    parser.add_argument("--elev", type=float, default=25.0, help="仰角 (Elevation)")
-    parser.add_argument("--azim", type=float, default=-65.0, help="方位角 (Azimuth)")
+    parser.add_argument("--elev", type=float, default=25.0, help="Elevation angle")
+    parser.add_argument("--azim", type=float, default=-65.0, help="Azimuth angle")
     parser.set_defaults(filename="18_phase_portrait_3d.png")
     return parser
 
@@ -25,7 +25,7 @@ def main():
     parser = setup_argparser()
     args = parser.parse_args()
 
-    # フォールバックを駆逐し、厳格なキー参照（Fail-Fast）を強制
+    # Eliminate fallbacks and enforce strict key reference (Fail-Fast)
     theme_cfg = apply_theme(args.theme)
     ui_canvas = theme_cfg['ui_canvas']
     text_col = ui_canvas['text_primary']
@@ -39,7 +39,7 @@ def main():
         
     if df.empty: sys.exit(0)
 
-    # カラム名の同期
+    # Synchronize column names
     col_q = 'net_flux_q'
     col_v = 'velocity_v'
     col_a = 'acceleration_a'
@@ -50,16 +50,16 @@ def main():
 
     fig = plt.figure(figsize=(16, 16))
     
-    # 【修正】3Dプロットエリアを左に寄せ、幅を広げる。
-    # 旧: [0.12, 0.18, 0.55, 0.65] (左マージン12%, 幅55%)
-    # 新: [0.05, 0.18, 0.60, 0.65] (左マージン5%, 幅60%)
-    # これにより、プロットが左に寄り、右マージンが広がります。
+    # [Fix] Move 3D plot area to the left and widen it.
+    # Old: [0.12, 0.18, 0.55, 0.65] (left margin 12%, width 55%)
+    # New: [0.05, 0.18, 0.60, 0.65] (left margin 5%, width 60%)
+    # This moves the plot to the left and widens the right margin.
     ax = fig.add_axes([0.05, 0.20, 0.60, 0.65], projection='3d')
     ax.view_init(elev=args.elev, azim=args.azim)
 
-    # 軌跡の色（色相）割り当て。
-    # HLS空間でのグラデーション計算（時間軸の進行による明度変化）が必要なため、
-    # Hue（色相）の等分生成という数理的アプローチは維持します。
+    # Allocation of trajectory color (hue).
+    # Because gradient calculation in HLS space (lightness change over time) is required,
+    # we maintain the mathematical approach of evenly dividing Hue.
     hues = np.linspace(0, 1, N, endpoint=False)
     legend_elements = []
 
@@ -73,18 +73,18 @@ def main():
         t_vals = node_df['t_idx'].values
         hue = hues[n]
 
-        # 軌跡の描画
+        # Drawing the trajectories
         for i in range(len(t_vals) - 1):
             progress = t_vals[i] / (max_t - 1) if max_t > 1 else 1.0
             lightness = 0.2 + 0.6 * progress
             rgb = colorsys.hls_to_rgb(hue, lightness, 0.9)
             ax.plot(q[i:i+2], v[i:i+2], a[i:i+2], color=rgb, linewidth=2.0)
         
-        # 最終到達点のプロット
+        # Plotting final destinations
         final_rgb = colorsys.hls_to_rgb(hue, 0.8, 0.9)
         ax.scatter(q[-1], v[-1], a[-1], color=final_rgb, s=50, edgecolors=text_col, alpha=1.0)
         
-        # 凡例用のライン要素
+        # Line elements for legend
         legend_rgb = colorsys.hls_to_rgb(hue, 0.6, 0.9)
         label = node_labels.get(n, f"N_{n:02d}")[:18] 
         if len(legend_elements) < args.max_legend:
@@ -115,8 +115,8 @@ def main():
         spine.set_color(text_col)
 
     if legend_elements:
-        # 【修正】凡例タイトルの区切り線を短くする（ハイフン30個 -> 20個）。
-        # これにより、凡例の幅が狭くなり、重なりが解消されます。
+        # [Fix] Shorten the separator line in the legend title (30 hyphens -> 20 hyphens).
+        # This narrows the legend width and eliminates overlapping.
         leg = ax.legend(handles=legend_elements, loc='center left', bbox_to_anchor=(1.05, 0.5), 
                         title="Node Map (Index -> Name):\n" + "-"*24,
                         facecolor=bg_col, edgecolor=edge_col, 

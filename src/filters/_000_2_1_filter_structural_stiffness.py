@@ -18,27 +18,27 @@ import src.core.core_safe_linalg as csl
 
 def compute_partial_correlation(K_precision: np.ndarray) -> np.ndarray:
     """ 
-    [Pure Math] 精度行列 (K) から偏相関行列 (Partial Correlation) を算出する。
-    値は常に -1.0 (完全な直接的逆相関/強い束縛) から 1.0 の範囲に正規化される。
+    [Pure Math] Calculate Partial Correlation matrix from Precision matrix (K).
+    Values are always normalized in the range of -1.0 (perfect direct inverse correlation / strong binding) to 1.0.
     """
     N = K_precision.shape[0]
     R_partial = np.zeros((N, N), dtype=float)
     
-    # 対角成分 (自己剛性)
+    # Diagonal components (Self-stiffness)
     diag_K = np.diag(K_precision)
-    # ゼロ割や負の平方根を防ぐための安全処理
+    # Safety handling to prevent zero division and negative square roots
     safe_diag = np.where(diag_K > 0, diag_K, 1e-15)
     
     for i in range(N):
         for j in range(N):
             if i == j:
-                R_partial[i, j] = 1.0  # 自己の偏相関は定義上1.0とする
+                R_partial[i, j] = 1.0  # Self partial correlation is 1.0 by definition
             else:
-                # 偏相関係数の公式: r_ij = -K_ij / sqrt(K_ii * K_jj)
+                # Partial correlation coefficient formula: r_ij = -K_ij / sqrt(K_ii * K_jj)
                 val = -K_precision[i, j] / np.sqrt(safe_diag[i] * safe_diag[j])
                 R_partial[i, j] = val
                 
-    # 数値計算上の微小な誤差で [-1.0, 1.0] を超えないようクリップ
+    # Clip to prevent exceeding [-1.0, 1.0] due to minute numerical calculation errors
     return np.clip(R_partial, -1.0, 1.0)
 
 def run_structural_stiffness_analysis(
@@ -59,7 +59,7 @@ def run_structural_stiffness_analysis(
         dq_history = np.diff(q_hist_arr, axis=0)
         covariance = csl.compute_covariance_matrix(dq_history)
         K_safe = csl.compute_safe_pinv(covariance, rcond=1e-15, lambda_reg=1e-4)
-        # ★ 追加: 偏相関行列への変換（人間界向けの正規化）
+        # * Added: Conversion to Partial Correlation matrix (normalization for human interpretation)
         R_partial = compute_partial_correlation(K_safe)
     else:
         K_safe = np.zeros((N, N))
@@ -70,16 +70,16 @@ def run_structural_stiffness_analysis(
             records.append([
                 t_idx, i, j, 
                 f"{K_safe[i, j]:.12f}",
-                f"{R_partial[i, j]:.4f}" # ★ 追加: 偏相関係数（-1.0 ~ 1.0）
+                f"{R_partial[i, j]:.4f}" # * Added: Partial correlation coefficient (-1.0 to 1.0)
             ])
             
     return records, q_current
 
 def main():
     parser = get_base_parser("TLU Structural Stiffness Matrix Filter")
-    parser.add_argument("--history_window", type=int, default=12, help="共分散計算に用いる履歴の長さ")
+    parser.add_argument("--history_window", type=int, default=12, help="Length of history used for covariance calculation")
     
-    # ★ 修正: ヘッダーに partial_corr を追加
+    # * Fix: Added partial_corr to the header
     output_header = ["t_idx", "src_idx", "tgt_idx", "stiffness_k", "partial_corr"]
     args, N, reader, writer = setup_pipeline(parser, output_header)
     

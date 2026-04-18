@@ -13,7 +13,7 @@ from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Micro Forensics Heatmap (Generates KL Drift figures)")
-    parser.add_argument("--top_k", type=int, default=5, help="ハイライトする危険特異点の数")
+    parser.add_argument("--top_k", type=int, default=5, help="Number of critical outliers to highlight")
     parser.set_defaults(filename="1_9_1__micro_KL_drift_heatmap.png")
     return parser
 
@@ -21,7 +21,7 @@ def main():
     parser = setup_argparser()
     args = parser.parse_args()
 
-    # フォールバックの排除とフェイルファスト
+    # Eliminate fallbacks and enforce fail-fast
     theme_cfg = apply_theme(args.theme)
     ui_canvas = theme_cfg['ui_canvas']
     text_col = ui_canvas['text_primary']
@@ -51,7 +51,7 @@ def main():
 
     fig_kl, ax_kl = plt.subplots(figsize=(16, 7))
     
-    # 共通ライブラリの描画ロジックへ委譲
+    # Delegate to common library drawing logic
     draw_single_heatmap(
         ax_kl, pivot_kl, cmap_kl, 'KL Divergence', 
         "Micro Forensics A: Structural Pattern Mutation (Node KL Drift)",

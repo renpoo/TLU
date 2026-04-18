@@ -5,12 +5,12 @@
 # ==========================================
 source "$(dirname "$0")/_tlu_env.sh"
 
-# 2. パラメータの取得と Fail-Fast 検証
-BASELINE_WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?環境変数 TLU_OBSERVATION_WINDOW_MONTHS が設定されていません。}"
-KL_DRIFT_THRESH="${TLU_KL_DRIFT_THRESH:?環境変数 TLU_KL_DRIFT_THRESH が設定されていません。}"
-Z_SCORE_THRESH="${TLU_ANOMALY_Z_SCORE_THRESHOLD:?環境変数 TLU_ANOMALY_Z_SCORE_THRESHOLD が設定されていません。}"
+# 2. Parameter retrieval and Fail-Fast verification
+BASELINE_WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?Environment variable TLU_OBSERVATION_WINDOW_MONTHS is not set.}"
+KL_DRIFT_THRESH="${TLU_KL_DRIFT_THRESH:?Environment variable TLU_KL_DRIFT_THRESH is not set.}"
+Z_SCORE_THRESH="${TLU_ANOMALY_Z_SCORE_THRESHOLD:?Environment variable TLU_ANOMALY_Z_SCORE_THRESHOLD is not set.}"
 
-# 3. パイプラインの実行
+# 3. Execute pipeline
 run_tlu_pipeline "Micro Forensics Filter" \
     "Src" "Tgt" \
     "src.filters._002_2_2_filter_micro_forensics" "result.002_2_2_filter_micro_forensics.analysis.csv" \

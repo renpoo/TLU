@@ -14,15 +14,15 @@ from src.visualizations.visualizer_utils import get_base_parser, apply_theme, lo
 
 def setup_argparser():
     parser = get_base_parser("Universal 3D Surface Plotter")
-    parser.add_argument("--target_col", type=str, required=True, help="Z軸（高さ）にプロットするカラム名")
-    parser.add_argument("--color_col", type=str, default=None, help="表面の色にマッピングするカラム名（未指定時はtarget_col）")
-    parser.add_argument("--z_label", type=str, default=None, help="Z軸の表示ラベル")
-    parser.add_argument("--c_label", type=str, default=None, help="カラーバーの表示ラベル")
+    parser.add_argument("--target_col", type=str, required=True, help="Column name to plot on Z-axis (height)")
+    parser.add_argument("--color_col", type=str, default=None, help="Column name to map to surface color (target_col if unspecified)")
+    parser.add_argument("--z_label", type=str, default=None, help="Z-axis display label")
+    parser.add_argument("--c_label", type=str, default=None, help="Colorbar display label")
     parser.set_defaults(filename="3d_surface.png")
     return parser
 
 def resolve_colormap(target_col: str, theme_cfg: dict) -> str:
-    """ [Pure Logic] カラム名から最適なカラーマップを推論・解決する """
+    """ [Pure Logic] Infer and resolve optimal colormap from column name """
     cmap_name = 'viridis'
     for category, config in theme_cfg.items():
         if not isinstance(config, dict): continue
@@ -73,7 +73,7 @@ def main():
     z_matrix = df.pivot(index='node_idx', columns='t_idx', values=args.target_col).reindex(index=range(max_n), columns=range(max_t)).fillna(0).values
     c_matrix = df.pivot(index='node_idx', columns='t_idx', values=color_target).reindex(index=range(max_n), columns=range(max_t)).fillna(0).values
 
-    # グラフ領域を画面いっぱいに贅沢に使用する（凡例は存在しないため）
+    # Luxuriously use the graph area to fill the screen (since there is no legend)
     fig = plt.figure(figsize=(18, 14))
     ax = fig.add_axes([0.10, 0.20, 0.60, 0.60], projection='3d')
 
@@ -90,7 +90,7 @@ def main():
     z_axis_label = args.z_label if args.z_label else args.target_col
     c_axis_label = args.c_label if args.c_label else color_target
 
-    # 軸タイトルのパディング（ラベル文字との衝突回避）
+    # Padding for axis titles (collision avoidance with label characters)
     x_tick_labels = [time_labels.get(i, f"T_{i:02d}") for i in range(max_t)]
     y_tick_labels = [node_labels.get(i, '')[:20] for i in range(max_n)]
     max_len_x = max(len(label) for label in x_tick_labels)
@@ -105,14 +105,14 @@ def main():
         title_str += f"\n(Height: {args.target_col} / Color: {args.color_col})"
     ax.set_title(title_str, fontsize=16, pad=2, color=text_col, fontweight='bold')
 
-    # --- 真・パターンC: 直接ラベリングとパディングの調整 ---
+    # --- True Pattern C: Direct labeling and padding adjustment ---
     ax.set_xticks(np.arange(max_t))
-    # x軸ラベル：45度回転し、パディングを広げてメッシュから離す
+    # x-axis label: Rotate 45 degrees, expand padding to keep away from mesh
     ax.set_xticklabels(x_tick_labels, rotation=45, ha='right', va='center', fontsize=10, color=text_col)
     ax.tick_params(axis='x', pad=max_len_x / MAX_LEN_X * 15.0)
 
     ax.set_yticks(np.arange(max_n))
-    # y軸ラベル：角度をつけ、さらにパディングを大きく取ってグラフ本体から離す
+    # y-axis label: Add angle, increase padding further to keep away from main graph body
     ax.set_yticklabels(y_tick_labels, rotation=-15, ha='left', va='center', fontsize=10, color=text_col)
     ax.tick_params(axis='y', pad=max_len_y / MAX_LEN_Y * 5.0 )
 
@@ -120,7 +120,7 @@ def main():
     for spine in ax.spines.values():
         spine.set_color(text_col)
 
-    # 視認性の向上：時間推移を長く見せる直方体アスペクト比
+    # Improve visibility: rectangular aspect ratio to make time transition look longer
     try:
         ax.set_box_aspect(aspect=(2.5, 1.5, 1.0))
     except AttributeError:
@@ -128,7 +128,7 @@ def main():
 
     ax.view_init(elev=30, azim=-55)
     
-    # カラーバーの配置（グラフの左側にスリムに配置）
+    # Layout of colorbar (slender placement on the left side of graph)
     cax = fig.add_axes([0.1, 0.3, 0.02, 0.4])
     mappable = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
     mappable.set_array(c_matrix)

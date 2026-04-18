@@ -1,10 +1,10 @@
 #!/bin/bash
 source "$(dirname "$0")/_tlu_env.sh"
 
-# 2. パラメータの取得と Fail-Fast 検証
-GAMMA="${TLU_DAMPING_FACTOR:?環境変数 TLU_DAMPING_FACTOR が設定されていません。}"
+# 2. Parameter retrieval and Fail-Fast verification
+GAMMA="${TLU_DAMPING_FACTOR:?Environment variable TLU_DAMPING_FACTOR is not set.}"
 
-# 3. パイプラインの実行
+# 3. Execute pipeline
 run_tlu_pipeline "Inverse Kinematics (IK) Filter" \
     "Tgt" "Src" \
     "src.filters._003_1_2_filter_ik_optimization" "result.003_1_2_filter_ik.analysis.csv" \

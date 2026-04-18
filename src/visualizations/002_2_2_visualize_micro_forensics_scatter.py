@@ -12,8 +12,8 @@ from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Forensics Phase Space: Z-Score vs KL Drift")
-    parser.add_argument("--z_thresh", type=float, default=3.0, help="Zスコアの警告ライン")
-    parser.add_argument("--kl_thresh", type=float, default=2.0, help="KLドリフトの警告ライン")
+    parser.add_argument("--z_thresh", type=float, default=3.0, help="Warning line for Z-score")
+    parser.add_argument("--kl_thresh", type=float, default=2.0, help="Warning line for KL drift")
     parser.set_defaults(filename="23_forensics_scatter_space.png")
     return parser
 
@@ -34,7 +34,7 @@ def main():
     df = pd.read_csv(sys.stdin)
     if df.empty: sys.exit(0)
 
-    # 【修正】ミクロ（ノード単位）のカラム名に同期
+    # [Fix] Synchronize with micro (node-level) column names
     max_anomalies = df.groupby('node_idx').agg({
         'node_univariate_z_score': 'max',
         'node_kl_drift': 'max'

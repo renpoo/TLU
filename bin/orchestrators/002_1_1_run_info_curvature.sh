@@ -5,10 +5,10 @@
 # ==========================================
 source "$(dirname "$0")/_tlu_env.sh"
 
-# 1. パラメータの取得と Fail-Fast 検証
-WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?環境変数 TLU_OBSERVATION_WINDOW_MONTHS が設定されていません。}"
+# 1. Parameter retrieval and Fail-Fast verification
+WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?Environment variable TLU_OBSERVATION_WINDOW_MONTHS is not set.}"
 
-# 2. パイプラインの実行
+# 2. Execute pipeline
 run_tlu_pipeline "Information Curvature Filter" \
     "Src" "Tgt" \
     "src.filters._002_1_1_filter_info_curvature" "result.002_1_1_filter_info_curvature.analysis.csv" \

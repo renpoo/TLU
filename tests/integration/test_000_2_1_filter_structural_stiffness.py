@@ -7,14 +7,14 @@ from src.filters._000_2_1_filter_structural_stiffness import run_structural_stif
 class TestFilterStructuralStiffness(unittest.TestCase):
     def setUp(self):
         self.N = 3
-        # ノード間の移動スライス
+        # Movement slice between nodes
         self.T_slice = np.array([
             [0.0, 10.0, 0.0],
             [0.0,  0.0, 5.0],
             [0.0,  0.0, 0.0]
         ])
         self.t_idx = 1
-        # K_safeを計算できるよう、最低3件の履歴をモック（差分をとるため）
+        # Mock at least 3 history records to allow calculation of K_safe (to take the difference)
         self.q_history = [
             np.array([-5.0, 5.0, 0.0]),
             np.array([-8.0, 3.0, 5.0]),
@@ -22,7 +22,7 @@ class TestFilterStructuralStiffness(unittest.TestCase):
         ]
 
     def test_run_structural_stiffness_analysis(self):
-        """[Red->Green] 剛性行列 (K) が N x N のレコードとして出力されることを確認"""
+        """[Red->Green] Verify that the stiffness matrix (K) is output as an N x N record"""
         
         records, q_current = run_structural_stiffness_analysis(
             t_idx=self.t_idx,
@@ -30,31 +30,31 @@ class TestFilterStructuralStiffness(unittest.TestCase):
             q_history=self.q_history
         )
 
-        # 1タイムステップにつき N * N = 9 行のレコードが返ること
+        # N * N = 9 rows of records are returned per time step
         self.assertEqual(len(records), self.N * self.N)
         
-        # 現在の純フラックスが返されていること
+        # The current net flux is returned
         self.assertEqual(q_current.shape, (self.N,))
         
-        # レコードの構造チェック: [t_idx, src_idx, tgt_idx, stiffness_k]
+        # Record structure check: [t_idx, src_idx, tgt_idx, stiffness_k]
         first_record = records[0]
         self.assertEqual(len(first_record), 5)
         self.assertEqual(first_record[0], self.t_idx)
         self.assertEqual(first_record[1], 0) # src_idx
         self.assertEqual(first_record[2], 0) # tgt_idx
         
-        # stiffness は文字列としてフォーマットされていること
+        # stiffness should be formatted as a string
         self.assertTrue(isinstance(first_record[3], str))
 
     def test_run_structural_stiffness_short_history(self):
-        """履歴が不足している場合、ゼロ行列として安全にフォールバックすること"""
+        """If history is insufficient, safely fallback as a zero matrix"""
         records, _ = run_structural_stiffness_analysis(
             t_idx=self.t_idx,
             T_slice=self.T_slice,
-            q_history=[] # 履歴なし
+            q_history=[] # No history
         )
         
-        # すべての剛性が 0.000000 になるはず
+        # All stiffness should be 0.000000
         for rec in records:
             self.assertEqual(float(rec[3]), 0.0)
 

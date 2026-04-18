@@ -28,10 +28,10 @@ def run_lag_matrix_analysis(q_history_list: List[np.ndarray], max_lag: int) -> L
             sig_A = q_hist_arr[:, i]
             sig_B = q_hist_arr[:, j]
             
-            # sig_A に対して sig_B がどれくらい遅れている(lag)か、またその時の相関係数
+            # How much sig_B is delayed (lag) compared to sig_A, and the correlation coefficient at that time
             best_lag, max_corr = compute_optimal_time_lag(sig_A, sig_B, max_lag)
             
-            # ラベルは排除し、純粋なインデックスと数値のみを返す
+            # Exclude labels and return only pure indices and numerical values
             records.append([
                 i, j, best_lag, f"{max_corr:.4f}"
             ])
@@ -40,22 +40,22 @@ def run_lag_matrix_analysis(q_history_list: List[np.ndarray], max_lag: int) -> L
 
 def main():
     parser = get_base_parser("TLU Full Matrix Time-Lag Filter")
-    parser.add_argument("--max_lag", type=int, default=6, help="探索する最大タイムラグ（ステップ数）")
+    parser.add_argument("--max_lag", type=int, default=6, help="Maximum time lag to search (number of steps)")
     
     output_header = ["src_idx", "tgt_idx", "optimal_lag", "max_correlation"]
     args, N, reader, writer = setup_pipeline(parser, output_header)
 
     q_history_list = []
     
-    # 1. ストリームから全期間の純フラックスを蓄積
+    # 1. Accumulate pure flux for the entire period from the stream
     for _, T_slice in yield_time_slices(reader, N):
         q_current = compute_net_flux(T_slice)
         q_history_list.append(q_current)
 
-    # 2. 全データが揃った後に一括で N x N の相関マトリクスを計算
+    # 2. After all data is collected, calculate the N x N correlation matrix in one go
     records = run_lag_matrix_analysis(q_history_list, args.max_lag)
 
-    # 3. 結果の出力
+    # 3. Output the result
     for rec in records:
         writer.writerow(rec)
 

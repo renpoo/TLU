@@ -16,15 +16,15 @@ from src.visualizations.visualizer_utils import *
 def setup_argparser():
     parser = get_base_parser("Local Thermodynamics Phase Space: Scale vs Volatility/Complexity")
     parser.add_argument("--mode", type=str, choices=['temperature', 'entropy'], required=True, 
-                        help="Y軸に取る指標を選択（temperature=ボラティリティ, entropy=複雑性/分散度）")
-    parser.add_argument("--top_k", type=int, default=3, help="ハイライト表示する特異点の数")
+                        help="Select metric for Y-axis (temperature=volatility, entropy=complexity/dispersion)")
+    parser.add_argument("--top_k", type=int, default=3, help="Number of singular points to highlight")
     return parser
 
 def main():
     parser = setup_argparser()
     args = parser.parse_args()
 
-    # フォールバックを駆逐し、厳格なキー参照（Fail-Fast）を強制
+    # Eliminate fallbacks and enforce strict key reference (Fail-Fast)
     theme_cfg = apply_theme(args.theme)
     ui_canvas = theme_cfg['ui_canvas']
     text_col = ui_canvas['text_primary']
@@ -32,7 +32,7 @@ def main():
     edge_col = ui_canvas['legend_edge']
     grid_col = ui_canvas['grid_line']
     
-    # 正常データの普遍的なプロット色を厳格に要求
+    # Strictly require universal plot color for normal data
     c_normal = ui_canvas['data_normal']
 
     forensics_colors = theme_cfg['forensics']['colors']
@@ -71,15 +71,15 @@ def main():
     normals = df_mean.drop(top_k_df.index)
     top_k_indices = top_k_df['node_idx'].astype(int).tolist()
 
-    # 正常ノードのプロット（ハードコード 'tab:blue' を c_normal へ置換）
+    # Plot normal nodes (Replace hardcoded 'tab:blue' with c_normal)
     ax.scatter(normals['local_internal_energy_u'], normals['plot_y'], 
                color=c_normal, s=120, alpha=0.6, edgecolors=text_col)
                
-    # 特異点（重いノード）のプロット
+    # Plot singular points (heavy nodes)
     ax.scatter(top_k_df['local_internal_energy_u'], top_k_df['plot_y'], 
                color=c_outlier, s=300, alpha=0.9, edgecolors=text_col, marker='*')
 
-    # プロットラベルの純化
+    # Purify plot labels
     for _, row in top_k_df.iterrows():
         idx = int(row['node_idx'])
         ax.text(row['local_internal_energy_u'], row['plot_y'], f"  {idx:02d}", 
@@ -89,7 +89,7 @@ def main():
         ax.text(row['local_internal_energy_u'], row['plot_y'], f"  {idx:02d}", 
                 color=text_col, fontsize=10, alpha=0.7, va='center', ha='left')
 
-    # カスタム凡例（ハイライト同期）
+    # Custom legend (Highlight sync)
     handles, labels = [], []
     display_count = min(N, args.max_legend)
     for i in range(display_count):

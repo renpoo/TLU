@@ -20,7 +20,7 @@ def main():
     parser = setup_argparser()
     args = parser.parse_args()
     
-    # フォールバックの排除
+    # Eliminate fallbacks
     theme_cfg = apply_theme(args.theme)
     ui_canvas = theme_cfg['ui_canvas']
     text_col = ui_canvas['text_primary']
@@ -32,10 +32,10 @@ def main():
     df = pd.read_csv(sys.stdin)
     if df.empty: sys.exit(0)
 
-    # 型の安全保障
+    # Type safety
     df['state_error_x'] = df['state_error_x'].astype(float)
 
-    # 辞書のロード (Time & Node)
+    # Load dictionary (Time & Node)
     N = int(df['node_idx'].max()) + 1
     T_max = int(df['t_idx'].max()) + 1
     labels = load_node_labels(args.node_map, N)
@@ -60,7 +60,7 @@ def main():
         ax.set_xticks(x_values)
         ax.set_xticklabels(x_tick_labels, rotation=45, color=text_col, ha='right', fontsize=11)
 
-    # ゼロエラーライン
+    # Zero error line
     ax.axhline(0, color=zero_line_col, linestyle='--', linewidth=1.5, label='Zero Error State')
     
     ax.set_title("State Error Convergence Tracking ($|x| = |q - q_{target}|$)", fontsize=15, color=text_col)
@@ -75,7 +75,7 @@ def main():
     if not pivot_gap.empty:
         ax.legend(loc='upper right', facecolor=bg_col, edgecolor=edge_col, labelcolor=text_col)
     
-    # 余白調整 (X軸ラベルが回転して見切れないように bottom を確保)
+    # Margin adjustment (Ensure bottom so X-axis labels do not get cut off when rotated)
     plt.subplots_adjust(bottom=0.15, left=0.08, right=0.95, top=0.92)
     save_plot(fig, args.out_dir, args.filename)
 

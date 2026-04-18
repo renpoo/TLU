@@ -9,7 +9,7 @@ import sys
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# 共通ユーティリティから draw_matrix_heatmap をインポート
+# Import draw_matrix_heatmap from common utilities
 from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
@@ -41,7 +41,7 @@ def main():
 
     fig, ax = plt.subplots(figsize=(14, 12))
     
-    # 共通描画ロジックへ委譲
+    # Delegate to common drawing logic
     title = "Node-to-Node Cross-Correlation Matrix (Impact Strength)"
     draw_matrix_heatmap(
         ax, pivot_corr, cmap_name, 'Max Correlation Coefficient', title, 

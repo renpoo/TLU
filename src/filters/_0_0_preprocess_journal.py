@@ -4,36 +4,36 @@ import pandas as pd
 import sys
 
 def main():
-    # コマンドライン引数から入力ファイルと出力ファイルを受け取る（デフォルトも設定）
+    # Receive input and output files from command line arguments (with defaults)
     input_file = sys.argv[1] if len(sys.argv) > 1 else 'workspace/input_stream/Dummy_Journal_Stream.csv'
     output_file = sys.argv[2] if len(sys.argv) > 2 else 'workspace/input_stream/Dummy_Journal_Stream_Amount.csv'
 
-    # CSVを読み込む
+    # Read CSV
     df = pd.read_csv(input_file)
 
-    # 日付でソート
+    # Sort by date
     df = df.sort_values(by='Trans_Date')
 
-    # 勘定科目には "ACC_" の prefix を付ける
+    # Add "ACC_" prefix to Account_Name
     df['Account_Name'] = df['Account_Name'].apply(lambda x: f"ACC_{x}")
 
-    # 部門には "DPT_" の prefix を付ける
+    # Add "DPT_" prefix to Dept_Name
     # df['Dept_Name'] = df['Dept_Name'].apply(lambda x: f"DPT_{x}")
     df['Dept_Name'] = df['Dept_Name'].apply(lambda x: f"{x}")
     
-    # Debit と Credit を足して、新しい 'Amount' 列を作成する
+    # Add Debit and Credit to create a new 'Amount' column
     df['Amount'] = df['Debit'] + df['Credit']
 
 
-    # 各フィールドでソート
+    # Sort by each field
     df = df.sort_values(by='Dept_Name')
     df = df.sort_values(by='Account_Name')
     df = df.sort_values(by='Trans_Date')
     df = df.sort_values(by='Entry_ID')
 
-    # 新しいCSVとして保存する (インデックス番号は出力しない)
+    # Save as a new CSV (do not output index numbers)
     df.to_csv(output_file, index=False)
-    print(f"✅ 'Amount'列を追加し、{output_file} に保存しました。")
+    print(f"✅ Added 'Amount' column and saved to {output_file}.")
 
 if __name__ == '__main__':
     main()

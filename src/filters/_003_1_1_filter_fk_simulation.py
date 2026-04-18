@@ -63,7 +63,7 @@ def main():
     output_header = ["t_idx", "node_idx", "fk_echo_impact"]
     args, N, reader, writer = setup_pipeline(parser, output_header)
     
-    # [I/O層でのドメイン解決] 最新の _node_map.csv を用いて文字列から数値配列を生成
+    # [Domain resolution at I/O layer] Generate numerical array from string using the latest _node_map.csv
     static_dq_arr = np.zeros(N)
     if args.static_dq_labels:
         try:

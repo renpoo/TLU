@@ -10,12 +10,12 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# 共通ユーティリティから draw_matrix_heatmap をインポート
+# Import draw_matrix_heatmap from common utilities
 from src.visualizations.visualizer_utils import *
 
 def setup_argparser():
     parser = get_base_parser("Lag Matrix: Optimal Time-Lag")
-    parser.add_argument("--corr_thresh", type=float, default=0.5, help="ラグを表示する相関係数の閾値")
+    parser.add_argument("--corr_thresh", type=float, default=0.5, help="Threshold for correlation coefficient to display lag")
     parser.set_defaults(filename="1_10_lag_matrix_optimal_lag.png")
     return parser
 
@@ -47,7 +47,7 @@ def main():
 
     fig, ax = plt.subplots(figsize=(14, 12))
     
-    # 共通描画ロジックへ委譲
+    # Delegate to common drawing logic
     title = f"Node-to-Node Optimal Time-Lag Matrix (Masked |ρ| < {args.corr_thresh})"
     draw_matrix_heatmap(
         ax, pivot_lag, cmap_name, 'Optimal Lag (Time Steps)', title, 

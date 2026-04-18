@@ -20,7 +20,7 @@ def main():
     parser = setup_argparser()
     args = parser.parse_args()
     
-    # テーマ変数の適用
+    # Apply theme variables
     theme_cfg = apply_theme(args.theme)
     ui_canvas = theme_cfg['ui_canvas']
     text_col = ui_canvas['text_primary']
@@ -28,20 +28,20 @@ def main():
     edge_col = ui_canvas['legend_edge']
     grid_col = ui_canvas['grid_line']
 
-    # 標準入力からストリームを読み込む
+    # Read stream from standard input
     df = pd.read_csv(sys.stdin)
     if df.empty: sys.exit(0)
 
-    # 型の安全保障
+    # Type safety
     df['optimal_input_u'] = df['optimal_input_u'].astype(float)
 
-    # 辞書のロード (Time & Node)
+    # Load dictionary (Time & Node)
     N = int(df['node_idx'].max()) + 1
     T_max = int(df['t_idx'].max()) + 1
     labels = load_node_labels(args.node_map, N)
     time_labels = load_time_labels(args.time_map, T_max)
 
-    # 活動ノードの抽出（絶対値の合計で判定）
+    # Extract active nodes (determined by the sum of absolute values)
     active_nodes_series = df.groupby('node_idx')['optimal_input_u'].apply(lambda x: x.abs().sum())
     active_nodes = active_nodes_series[active_nodes_series > 0].index.tolist()
     
@@ -51,12 +51,12 @@ def main():
     fig, ax = plt.subplots(figsize=(12, 7))
     
     if not pivot_u.empty:
-        # プロット描画
+        # Draw plot
         for col in pivot_u.columns:
             label_str = f"{col:02d}: {labels.get(col, '')}"
             ax.plot(pivot_u.index, pivot_u[col], marker='o', linewidth=2, label=label_str)
             
-        # ニュートラルライン
+        # Neutral line
         ax.axhline(0, color=grid_col, linewidth=1.5, linestyle='--')
         
         # --- Time Label X-Axis Formatting ---
@@ -79,7 +79,7 @@ def main():
         ax.legend(loc='upper left', bbox_to_anchor=(1.02, 1), 
                   facecolor=bg_col, edgecolor=edge_col, labelcolor=text_col)
     
-    # 余白調整 (X軸ラベルが回転して見切れないように bottom を少し確保)
+    # Margin adjustment (Ensure a little bottom so X-axis labels do not get cut off when rotated)
     plt.subplots_adjust(bottom=0.15, left=0.08, right=0.85, top=0.92)
     save_plot(fig, args.out_dir, args.filename)
 

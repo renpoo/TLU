@@ -5,15 +5,15 @@
 # ==========================================
 set -euo pipefail
 
-# 環境変数の読み込み
+# Load environment variables
 source "$(dirname "$0")/orchestrators/_tlu_env.sh"
 
-# テーマを環境変数としてエクスポート（個別スクリプト群が参照する）
+# Export theme as an environment variable (referenced by individual visualization scripts)
 export TLU_THEME="${1:-dark}"
 
 VIZ_ORCH_DIR="./bin/visualizers"
 
-# 実行する可視化ランチャーの配列（実行順）
+# Array of visualization launchers to execute (in sequential order)
 SCRIPTS=(
     "vis_000_1_1_visualize_dynamics_state.sh"
     "vis_000_2_1_visualize_structural_stiffness.sh"
@@ -37,7 +37,7 @@ echo "--------------------------------------------------"
 rm -rf workspace/output_plots/*
 
 for script in "${SCRIPTS[@]}"; do
-    # スクリプトが存在する場合のみ実行
+    # Execute only if the script exists
     if [ -f "${VIZ_ORCH_DIR}/${script}" ]; then
         bash "${VIZ_ORCH_DIR}/${script}"
     else

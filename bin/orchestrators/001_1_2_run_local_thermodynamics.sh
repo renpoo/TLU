@@ -5,10 +5,10 @@
 # ==========================================
 source "$(dirname "$0")/_tlu_env.sh"
 
-# 1. パラメータの取得と Fail-Fast 検証
-TEMP_WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?環境変数 TLU_OBSERVATION_WINDOW_MONTHS が設定されていません。}"
+# 1. Parameter retrieval and Fail-Fast verification
+TEMP_WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?Environment variable TLU_OBSERVATION_WINDOW_MONTHS is not set.}"
 
-# 2. パイプラインの実行
+# 2. Execute pipeline
 run_tlu_pipeline "Local Thermodynamics Filter" \
     "Src" "Tgt" \
     "src.filters._001_1_2_filter_local_thermodynamics" "result.001_1_2_filter_local_thermodynamics.analysis.csv" \

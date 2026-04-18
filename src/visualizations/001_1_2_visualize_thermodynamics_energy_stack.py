@@ -21,7 +21,7 @@ def main():
     parser = setup_argparser()
     args = parser.parse_args()
 
-    # フォールバックを駆逐し、厳格なキー参照（Fail-Fast）を強制
+    # Eliminate fallbacks and enforce strict key reference (Fail-Fast)
     theme_cfg = apply_theme(args.theme)
     ui_canvas = theme_cfg['ui_canvas']
     text_col = ui_canvas['text_primary']
@@ -43,7 +43,7 @@ def main():
     if df.empty:
         print("Warning: Received empty data stream.", file=sys.stderr); sys.exit(0)
 
-    # 辞書のロード (Time)
+    # Load dictionary (Time)
     T_max = int(df['t_idx'].max()) + 1
     time_labels = load_time_labels(args.time_map, T_max)
 
@@ -85,7 +85,7 @@ def main():
         spine.set_color(text_col)
     ax.margins(0.05)
     
-    # 余白調整 (X軸ラベルが回転して見切れないように bottom を確保)
+    # Margin adjustment (Ensure bottom so X-axis labels do not get cut off when rotated)
     plt.subplots_adjust(bottom=0.15, left=0.08, right=0.85, top=0.92)
     save_plot(fig, args.out_dir, args.filename)
 

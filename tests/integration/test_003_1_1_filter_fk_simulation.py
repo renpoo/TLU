@@ -7,7 +7,7 @@ from src.filters._003_1_1_filter_fk_simulation import run_fk_analysis
 class TestFilterFKSimulation(unittest.TestCase):
     def setUp(self):
         self.N = 3
-        # ノード0 -> ノード1 (10.0), ノード1 -> ノード2 (5.0)
+        # Node 0 -> Node 1 (10.0), Node 1 -> Node 2 (5.0)
         self.T_slice = np.array([
             [0.0, 10.0, 0.0],
             [0.0,  0.0, 5.0],
@@ -23,8 +23,8 @@ class TestFilterFKSimulation(unittest.TestCase):
         self.max_k = 5
 
     def test_run_fk_analysis_static(self):
-        """[Red->Green] FK系統 (Staticモード) の純粋関数テスト"""
-        static_dq_input = np.array([100.0, 0.0, 0.0]) # ノード0に+100のショック
+        """[Red->Green] Pure function test of FK system (Static mode)"""
+        static_dq_input = np.array([100.0, 0.0, 0.0]) # Shock of +100 to Node 0
         
         records, q_current = run_fk_analysis(
             t_idx=self.t_idx, 
@@ -36,18 +36,18 @@ class TestFilterFKSimulation(unittest.TestCase):
             max_k=self.max_k
         )
         
-        # N件のレコードが返ること
+        # N records are returned
         self.assertEqual(len(records), self.N)
         
-        # q_currentが正しく計算されて返ること ([-10, 5, 5])
+        # q_current is correctly calculated and returned ([-10, 5, 5])
         self.assertEqual(q_current.shape, (3,))
         
-        # レコード構造: [t_idx, node_idx, fk_echo_impact]
+        # Record structure: [t_idx, node_idx, fk_echo_impact]
         node0_rec = records[0]
         self.assertEqual(node0_rec[0], self.t_idx)
         self.assertEqual(node0_rec[1], 0)
         
-        # FKの出力が計算されていること (文字列としてフォーマットされている)
+        # FK output is calculated (formatted as string)
         self.assertNotEqual(node0_rec[2], "0.0000")
 
 if __name__ == '__main__':

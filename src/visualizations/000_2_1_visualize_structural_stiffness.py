@@ -16,7 +16,7 @@ from tqdm import tqdm
 from src.visualizations.visualizer_utils import *
 
 def validate_theme_keys(theme_dict):
-    """テーマファイルに転用可能な発散色カラーマップが存在するか厳格にチェックする"""
+    """Strictly check if there is a divergent colormap that can be diverted to the theme file"""
     try:
         _ = theme_dict['forensics']['colormaps']['z_score_heatmap']
     except KeyError as e:
@@ -53,7 +53,7 @@ def main():
     
     validate_theme_keys(theme_cfg) 
 
-    # 正負の符号を維持した発散色（RdBu_r等）を適用
+    # Apply divergent color (e.g., RdBu_r) keeping positive/negative signs
     cmap_stiffness = theme_cfg['forensics']['colormaps']['z_score_heatmap']
     vmax_p = theme_cfg.get("theme_robust_percentile", 95) 
 
@@ -78,14 +78,14 @@ def main():
         for _, row in df_slice.iterrows():
             K_matrix[int(row['src_idx']), int(row['tgt_idx'])] = row['stiffness_k']
 
-        # ロバスト・スケーリングの算出
+        # Calculate robust scaling
         vmax_robust = np.percentile(np.abs(K_matrix), vmax_p)
         if vmax_robust == 0:
              vmax_robust = 1e-6 
 
-        # --- SymLogNorm (対称対数正規化) の設定 ---
-        # ゼロ付近で log(0) となり計算が破綻するのを防ぐための線形領域 (linthresh) を設定。
-        # 最大オーダーの 1/10000 程度を境界とし、それ以上は対数スケールで描画する。
+        # --- SymLogNorm (Symmetric Logarithmic Normalization) Settings ---
+        # Set a linear region (linthresh) to prevent calculation breakdown due to log(0) near zero.
+        # Set the boundary around 1/10000 of the maximum order, and draw logarithmically beyond that.
         linthresh = max(vmax_robust * 1e-4, 1e-15)
         
         symlog_norm = SymLogNorm(
@@ -103,18 +103,18 @@ def main():
         
         fig, ax = plt.subplots(figsize=(14, 12))
         
-        # draw_matrix_heatmap への委譲をやめ、SymLogNormを適用して直接描画する
+        # Stop delegating to draw_matrix_heatmap and draw directly applying SymLogNorm
         sns.heatmap(
             pd.DataFrame(K_matrix_list[t_idx]), 
             ax=ax, 
             cmap=cmap_stiffness, 
-            norm=symlog_norm,  # 対称対数スケールを適用
+            norm=symlog_norm,  # Apply symmetric logarithmic scale
             xticklabels=axis_labels, 
             yticklabels=axis_labels,
             cbar_kws={'label': "Stiffness / Precision (SymLog10 Scale)", 'extend': 'both'}
         )
         
-        # 標準的なフォーマットの適用
+        # Apply standard formatting
         ax.set_title(title, fontsize=16, color=text_col, pad=20, fontweight='bold')
         ax.set_xlabel("Target Node (Effect)", color=text_col, fontsize=12)
         ax.set_ylabel("Source Node (Cause)", color=text_col, fontsize=12)

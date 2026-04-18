@@ -7,34 +7,34 @@ from src.filters._004_1_1_filter_control_theory import run_control_theory_analys
 class TestFilterControlTheory(unittest.TestCase):
     def test_run_control_theory_analysis_basic(self):
         """
-        [Red->Green] 純粋関数が文字列や外部ファイルに依存せず、
-        ターゲットベクトルと制御可能インデックスのみを受け取り、
-        最適入力 u とギャップを正しく計算して返すことを確認する。
+        [Red->Green] Verify that the pure function, without depending on strings or external files,
+        receives only the target vector and controllable indices,
+        and correctly calculates and returns the optimal input u and the gap.
         """
         N = 2
-        # ノード0 から ノード1 へ 10.0 の移動
+        # Transfer of 10.0 from Node 0 to Node 1
         T_slice = np.array([
             [0.0, 10.0],
             [0.0,  0.0]
         ])
         
-        # ノード1 の目標値を 20.0 とする
+        # Set the target value of Node 1 to 20.0
         target_q = np.array([0.0, 20.0])
-        # ノード0 のみを予算投下(制御)可能とする
+        # Make only Node 0 capable of budget injection (control)
         controllable_indices = [0]
         t_idx = 0
 
-        # 実行 (重みはデフォルト)
+        # Act (weights are default)
         records, q_current = run_control_theory_analysis(
             t_idx, T_slice, target_q, controllable_indices
         )
 
-        # 検証
+        # Assert
         self.assertEqual(len(records), N)
         self.assertEqual(q_current.shape, (2,))
         
-        # 修正: カラム名を最新の純粋数理モデルに同期
-        # レコード構造: [t_idx, node_idx, optimal_input_u, state_error_x]
+        # Fix: Synchronize column names with the latest pure mathematical model
+        # Record structure: [t_idx, node_idx, optimal_input_u, state_error_x]
         node0_rec = records[0]
         self.assertEqual(len(node0_rec), 4)
         self.assertEqual(node0_rec[0], 0)
@@ -42,7 +42,7 @@ class TestFilterControlTheory(unittest.TestCase):
         self.assertTrue(isinstance(node0_rec[2], str)) # optimal_input_u
         self.assertTrue(isinstance(node0_rec[3], str)) # state_error_x
         
-        # ノード1は制御不能なので、推奨入力 u は 0.0000 に強制されているはず
+        # Since Node 1 is uncontrollable, the recommended input u should be forced to 0.0000
         node1_rec = records[1]
         self.assertEqual(float(node1_rec[2]), 0.0)
 

@@ -31,34 +31,34 @@ def run_thermodynamics_analysis(
         heat_indices: List[int]
 ) -> Tuple[List[list], np.ndarray]:
     """ [Pure Orchestration Function] """
-    # 1. 内部エネルギー U (総活動量)
+    # 1. Internal energy U (Total activity)
     U = compute_internal_energy(T_slice)
     
-    # 2. 純フラックス
+    # 2. Pure flux
     q_current = compute_net_flux(T_slice)
     
-    # 温度計算のため、一時的に現在状態を結合（呼び出し元でpopされる前提）
+    # Temporarily combine the current state for temperature calculation (assumes it will be popped by the caller)
     temp_q_hist = np.array(q_history_window + [q_current])
 
-    # 3. 有効仕事(W) と 散逸熱(Q)
+    # 3. Effective work (W) and Dissipated heat (Q)
     W = compute_work(q_current, work_indices)
     Q_heat = compute_heat(q_current, heat_indices)
 
-    # 4. マクロエントロピー S
+    # 4. Macro entropy S
     P = compute_transition_matrix(T_slice)
     S = compute_macro_entropy(P)
 
-    # 5. マクロ温度 T (ボラティリティ)
+    # 5. Macro temperature T (Volatility)
     if len(temp_q_hist) > 1:
         T = compute_macro_temperature(temp_q_hist)
     else:
         T = 0.0
 
-    # 6. 自由エネルギー F = U - TS
-    gradT = 0.0 # マクロ指標では勾配は概念上ゼロ
+    # 6. Free energy F = U - TS
+    gradT = 0.0 # Gradient is conceptually zero for macro indicators
     F = compute_helmholtz_free_energy(U, T, S)
 
-    # ネットワーク全体の指標なので、出力は1タイムスライスにつき1行のみ
+    # Since it is an indicator for the entire network, output is only 1 row per time slice
     record = [
         t_idx, 
         f"{U:.4f}", f"{S:.4f}", f"{T:.4f}", 
@@ -69,14 +69,14 @@ def run_thermodynamics_analysis(
 
 def main():
     parser = get_base_parser("TLU Macro Thermodynamics Filter")
-    parser.add_argument("--temp_window", type=int, default=3, help="温度計算用のタイムウィンドウ幅")
-    parser.add_argument("--work_labels", type=str, default="", help="有効仕事(W)とみなすノードラベル (例: 'ACC_Sales,ACC_Profit')")
-    parser.add_argument("--heat_labels", type=str, default="", help="散逸熱(Q)とみなすノードラベル (例: 'ACC_Waste,ACC_Loss')")
+    parser.add_argument("--temp_window", type=int, default=3, help="Time window width for temperature calculation")
+    parser.add_argument("--work_labels", type=str, default="", help="Node labels considered as effective work (W) (e.g., 'ACC_Sales,ACC_Profit')")
+    parser.add_argument("--heat_labels", type=str, default="", help="Node labels considered as dissipated heat (Q) (e.g., 'ACC_Waste,ACC_Loss')")
     
     output_header = ["t_idx", "gross_activity_U", "entropy_S", "temperature_T", "work_W", "heat_Q", "grad_T", "free_energy_F"]
     args, N, reader, writer = setup_pipeline(parser, output_header)
 
-    # [I/O層でのドメイン解決] 最新の _node_map.csv を用いて文字列からインデックスを抽出
+    # [Domain resolution at I/O layer] Extract index from string using the latest _node_map.csv
     work_indices = []
     heat_indices = []
     if args.work_labels or args.heat_labels:
@@ -105,7 +105,7 @@ def main():
             t_idx, T_slice, q_history_window, work_indices, heat_indices
         )
         
-        # 履歴の安全な更新（スライディング・ウィンドウ）
+        # Safe update of history (Sliding window)
         q_history_window.append(q_current)
         if len(q_history_window) > args.temp_window:
             q_history_window.pop(0)

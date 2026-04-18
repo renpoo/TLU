@@ -5,11 +5,11 @@
 # Phase 0: The Source Stream
 # ==========================================
 
-# 1. 環境変数の読み込み（_tlu_env.sh の呼び出し）
+# 1. Load environment variables (_tlu_env.sh)
 source "$(dirname "$0")/_tlu_env.sh"
 
-# 2. 出力先の定義
-# 既存の環境変数 TLU_PROJECT_ROOT を利用し、後続パイプラインの入力となるディレクトリへ出力します。
+# 2. Define output destination
+# Output to the directory that becomes the input for subsequent pipelines using TLU_PROJECT_ROOT.
 OUTPUT_FILE="${TLU_PROJECT_ROOT}/workspace/input_stream/Dummy_Journal_Stream.csv"
 
 echo "=================================================="
@@ -20,14 +20,14 @@ echo "Anomalies: Enabled (Z-Spikes, Drifts, Leaks will be injected)"
 echo "Output: ${OUTPUT_FILE}"
 echo "Running..."
 
-# 3. パラメータの取得と Fail-Fast 検証
-MONTHS="${TLU_DUMMY_DURATION_MONTHS:?環境変数 TLU_DUMMY_DURATION_MONTHS が設定されていません。}"
-SEED="${TLU_DUMMY_RANDOM_SEED:?環境変数 TLU_DUMMY_RANDOM_SEED が設定されていません。}"
+# 3. Parameter retrieval and Fail-Fast verification
+MONTHS="${TLU_DUMMY_DURATION_MONTHS:?Environment variable TLU_DUMMY_DURATION_MONTHS is not set.}"
+SEED="${TLU_DUMMY_RANDOM_SEED:?Environment variable TLU_DUMMY_RANDOM_SEED is not set.}"
 
-# 4. 生成スクリプトの実行
-# ${TLU_PY} により、Dockerコンテナ内またはローカル環境で透過的に実行されます。
-# ※ _0_0_generate_dummy_journal.py が src/filters/ ディレクトリに配置されていると仮定したモジュール指定です。
-#    配置場所（src.generators など）に合わせて適宜変更してください。
+# 4. Execute generator script
+# Executes transparently in the Docker container or local environment via ${TLU_PY}.
+# Note: Assumes _0_0_generate_dummy_journal.py is in src/filters/.
+# Adjust module path if placed elsewhere (e.g. src.generators).
 
 ${TLU_PY} -m src.filters._0_0_generate_dummy_journal \
     --months "${MONTHS}" \

@@ -7,28 +7,28 @@ from src.core.core_kinematics import compute_derivatives
 class TestKinematics(unittest.TestCase):
     def test_compute_derivatives_basic(self):
         """
-        状態ベクトル(q)の時系列履歴から、最新の速度(v)と加速度(a)を算出するテスト。
+        Test to calculate the latest velocity (v) and acceleration (a) from the time-series history of the state vector (q).
         """
-        # q_history: 時系列順に並んだ状態ベクトル (Time_steps x Nodes)
-        # 3ステップ(T=3)、2ノード(N=2)を想定
-        # ノード0: [10, 15, 18] -> 速度は徐々に落ちている
-        # ノード1: [100, 90, 80] -> 一定の速度で減少している
+        # q_history: State vectors arranged in chronological order (Time_steps x Nodes)
+        # Assuming 3 steps (T=3) and 2 nodes (N=2)
+        # Node 0: [10, 15, 18] -> Speed is gradually decreasing
+        # Node 1: [100, 90, 80] -> Decreasing at a constant speed
         q_history = np.array([
             [10.0, 100.0],  # t=0
             [15.0,  90.0],  # t=1
-            [18.0,  80.0]   # t=2 (最新)
+            [18.0,  80.0]   # t=2 (latest)
         ])
         
-        # 期待される速度ベクトル v (最新の1階差分: q[t] - q[t-1])
-        # ノード0: 18 - 15 = 3.0
-        # ノード1: 80 - 90 = -10.0
+        # Expected velocity vector v (Latest 1st order difference: q[t] - q[t-1])
+        # Node 0: 18 - 15 = 3.0
+        # Node 1: 80 - 90 = -10.0
         expected_v = np.array([3.0, -10.0])
         
-        # 期待される加速度ベクトル a (最新の2階差分: v[t] - v[t-1])
-        # 直前の速度 v[t-1] を計算 -> ノード0: 15-10=5.0, ノード1: 90-100=-10.0
-        # 加速度 a = 最新の速度 - 直前の速度
-        # ノード0: 3.0 - 5.0 = -2.0 (減速している)
-        # ノード1: -10.0 - (-10.0) = 0.0 (等速運動)
+        # Expected acceleration vector a (Latest 2nd order difference: v[t] - v[t-1])
+        # Calculate previous velocity v[t-1] -> Node 0: 15-10=5.0, Node 1: 90-100=-10.0
+        # Acceleration a = Latest velocity - Previous velocity
+        # Node 0: 3.0 - 5.0 = -2.0 (Decelerating)
+        # Node 1: -10.0 - (-10.0) = 0.0 (Constant velocity motion)
         expected_a = np.array([-2.0, 0.0])
         
         actual_v, actual_a = compute_derivatives(q_history)
@@ -38,15 +38,15 @@ class TestKinematics(unittest.TestCase):
 
     def test_compute_derivatives_insufficient_history(self):
         """
-        履歴が足りず、速度や加速度が計算できない場合のテスト。
-        安全にゼロベクトルを返すこと。
+        Test when history is insufficient and velocity or acceleration cannot be calculated.
+        Safely return a zero vector.
         """
-        # T=1 (最新のみ)
+        # T=1 (Latest only)
         q_history_short = np.array([[10.0, 100.0]])
         
         actual_v, actual_a = compute_derivatives(q_history_short)
         
-        # 履歴が足りない場合はゼロベクトルを返す安全設計
+        # Safe design to return a zero vector if history is insufficient
         expected_zeros = np.array([0.0, 0.0])
         np.testing.assert_array_almost_equal(actual_v, expected_zeros)
         np.testing.assert_array_almost_equal(actual_a, expected_zeros)

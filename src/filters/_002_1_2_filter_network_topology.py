@@ -20,17 +20,17 @@ def run_network_topology_analysis(
     """ [Pure Orchestration Function] """
     N = T_slice.shape[0]
     
-    # エッジの応力(Zスコア)を計算
+    # Calculate edge stress (Z-score)
     stress_matrix = compute_edge_stress(T_slice, T_history_window)
     
     records = []
-    # すべてのノードペアについて、取引(weight)がゼロより大きいエッジのみを抽出
+    # Extract only edges with transaction (weight) greater than zero for all node pairs
     for i in range(N):
         for j in range(N):
             weight = T_slice[i, j]
             if weight > 0:
                 stress = stress_matrix[i, j]
-                # 出力フォーマット: [t_idx, src_idx, tgt_idx, weight, stress]
+                # Output format: [t_idx, src_idx, tgt_idx, weight, stress]
                 records.append([
                     t_idx, i, j, 
                     f"{weight:.4f}", f"{stress:.4f}"
@@ -40,7 +40,7 @@ def run_network_topology_analysis(
 
 def main():
     parser = get_base_parser("TLU Network Topology & Edge Stress Filter")
-    parser.add_argument("--baseline_window", type=int, default=12, help="応力計算のベースライン期間")
+    parser.add_argument("--baseline_window", type=int, default=12, help="Baseline period for stress calculation")
     
     output_header = ["t_idx", "src_idx", "tgt_idx", "weight", "stress"]
     args, N, reader, writer = setup_pipeline(parser, output_header)
@@ -50,7 +50,7 @@ def main():
     for t_idx, T_slice in yield_time_slices(reader, N):
         records = run_network_topology_analysis(t_idx, T_slice, T_history_window)
         
-        # 履歴の安全な更新
+        # Safe update of history
         T_history_window.append(T_slice.copy())
         if len(T_history_window) > args.baseline_window:
             T_history_window.pop(0)

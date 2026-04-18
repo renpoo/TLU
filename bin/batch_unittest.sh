@@ -9,10 +9,10 @@ echo "=================================================="
 echo "TLU System: Unit & Integration Test Runner"
 echo "=================================================="
 
-# 1. 環境変数の読み込み
+# 1. Load environment variables
 source "$(dirname "$0")/orchestrators/_tlu_env.sh"
 
-# 2. テスト対象モジュールの定義
+# 2. Define test modules
 TEST_MODULES=(
     # --- Unit Tests ---
     "tests.unit.test_cli_parser"
@@ -45,7 +45,7 @@ TEST_MODULES=(
     "tests.integration.test_004_2_1_filter_sensitivity"
 )
 
-# 3. テストの逐次実行
+# 3. Sequential execution of tests
 for module in "${TEST_MODULES[@]}"; do
     echo -e "\n[EXECUTING] ${module}"
     $TLU_PY -m "${module}"

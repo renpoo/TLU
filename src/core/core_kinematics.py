@@ -4,7 +4,7 @@ import numpy as np
 from src.core.core_safe_linalg import compute_safe_pinv
 
 def build_echo_matrix(P: np.ndarray, gamma: float, max_k: int) -> np.ndarray:
-    """推移確率行列Pから、有限波及エコー行列 M_echo を構築する"""
+    """Build the finite echo matrix M_echo from the transition probability matrix P"""
     N = P.shape[0]
     M_echo = np.eye(N)
     current_P = np.eye(N)
@@ -15,15 +15,15 @@ def build_echo_matrix(P: np.ndarray, gamma: float, max_k: int) -> np.ndarray:
 
 def run_forward_simulation(P, dq_input, gamma, max_k):
     """
-    [双剣の1: 波及シミュレーション]
-    有限波及モデル M_echo = I + (gamma*P) + ... + (gamma*P)^max_k を
-    入力変位 dq_input に対して逐次適用し、最終的な波及影響を算出する。
+    [Twin Swords 1: Propagation Simulation]
+    Sequentially apply the finite propagation model M_echo = I + (gamma*P) + ... + (gamma*P)^max_k
+    to the input displacement dq_input to calculate the final propagation impact.
     """
     total_dq = np.copy(dq_input)
     current_wave = np.copy(dq_input)
     
     for k in range(1, max_k + 1):
-        # 行列累乗を直接計算せず、前ステップの波及分に (gamma * P) を掛ける (効率化)
+        # Optimize by multiplying (gamma * P) to the propagation from the previous step instead of calculating matrix powers directly
         current_wave = gamma * np.dot(current_wave, P)
         total_dq += current_wave
         
@@ -31,33 +31,33 @@ def run_forward_simulation(P, dq_input, gamma, max_k):
 
 def suggest_lambda(M: np.ndarray, lambda_ratio: float) -> float:
     """
-    行列のスケールに基づく動的な正則化パラメータを提案する。
-    ※ 1e-4のような固定値ではなく、外部からの lambda_ratio を使用する。
+    Propose a dynamic regularization parameter based on the scale of the matrix.
+    * Use lambda_ratio from the outside instead of a fixed value like 1e-4.
     """
     return float(np.linalg.norm(M) * lambda_ratio)
 
 def solve_ik_with_safe_stiffness(J: np.ndarray, K_safe: np.ndarray, target_dr: float, lambda_ratio: float):
     """
-    [双剣の2: 逆運動学とひずみ最適化]
-    目標変動量 target_dr に対し、ひずみエネルギー U = 1/2 * dq^T * K_safe * dq 
-    を最小化する全体変位 dq_opt を算出する。
+    [Twin Swords 2: Inverse Kinematics and Strain Optimization]
+    Calculate the total displacement dq_opt that minimizes the strain energy U = 1/2 * dq^T * K_safe * dq 
+    for the target fluctuation target_dr.
     
-    ※ lambda_ratio を外部から受け取り、スケール不変な正則化を行う。
+    * Receive lambda_ratio from the outside to perform scale-invariant regularization.
     """
-    # 1. 剛性行列 K の擬似逆行列（＝柔軟性/共分散）を計算
+    # 1. Calculate the pseudo-inverse (flexibility/covariance) of the stiffness matrix K
     K_inv = compute_safe_pinv(K_safe, rcond=1e-15, lambda_reg=suggest_lambda(K_safe, lambda_ratio))
     
-    # 2. ヤコビアン J の形状調整 (1次元ベクトルの場合も行列として扱う)
+    # 2. Adjust Jacobian J shape (treat 1D vector as a matrix)
     if J.ndim == 1:
         J = J.reshape(1, -1)
         
-    # 3. 投影空間での Gram 行列 A = J * K_inv * J.T を計算
+    # 3. Calculate Gram matrix A = J * K_inv * J.T in projection space
     A = np.dot(J, np.dot(K_inv, J.T))
     
-    # 4. A の安全な逆行列を計算
+    # 4. Calculate safe inverse of A
     A_inv = compute_safe_pinv(A, rcond=1e-15, lambda_reg=suggest_lambda(A, lambda_ratio))
     
-    # 5. 最適変位 dq_opt の算出
+    # 5. Calculate optimal displacement dq_opt
     dr_vec = np.array([target_dr]) if np.isscalar(target_dr) else np.array(target_dr)
     dq_opt = np.dot(K_inv, np.dot(J.T, np.dot(A_inv, dr_vec)))
     
@@ -65,32 +65,32 @@ def solve_ik_with_safe_stiffness(J: np.ndarray, K_safe: np.ndarray, target_dr: f
 
 def compute_derivatives(q_history):
     """
-    状態ベクトル(q)の時系列履歴から、最新の速度(v)と加速度(a)を算出する。    
+    Calculate the latest velocity (v) and acceleration (a) from the time-series history of the state vector (q).    
 
     Args:
-        q_history: 過去の状態ベクトル履歴 (Time_steps x Nodes)
-                   時系列順に並んでいること（最も古い履歴が先頭）。
+        q_history: Past state vector history (Time_steps x Nodes)
+                   Must be in chronological order (oldest history first).
         
     Returns:
-        v: 最新の速度ベクトル (Nodes,)
-        a: 最新の加速度ベクトル (Nodes,)
+        v: Latest velocity vector (Nodes,)
+        a: Latest acceleration vector (Nodes,)
     """
     T = q_history.shape[0]
     
-    # 履歴が足りない場合（1ステップ分しかない場合）はゼロベクトルを返す
+    # Return zero vectors if history is insufficient (only 1 step)
     if T < 2:
         N = q_history.shape[1]
         return np.zeros(N, dtype=float), np.zeros(N, dtype=float)
     
-    # 最新の2ステップを取得
+    # Get the latest 2 steps
     q_latest = q_history[-1]   # t
     q_prev = q_history[-2]     # t-1
     
-    # 速度 v(t) = q(t) - q(t-1)
+    # Velocity v(t) = q(t) - q(t-1)
     v = q_latest - q_prev
     
-    # 加速度 a(t) = v(t) - v(t-1)
-    # v(t-1) を計算
+    # Acceleration a(t) = v(t) - v(t-1)
+    # Calculate v(t-1)
     v_prev = q_prev - q_history[-3] if T >= 3 else v
     
     a = v - v_prev

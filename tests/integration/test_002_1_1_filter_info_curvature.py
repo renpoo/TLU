@@ -7,8 +7,8 @@ from src.filters._002_1_1_filter_info_curvature import run_info_curvature_analys
 class TestFilterInfoCurvature(unittest.TestCase):
     def test_run_info_curvature_analysis_logic(self):
         """
-        [Red->Green] 1タイムスライスを渡したとき、I/Oに依存せずに
-        各ノードの曲率(Curvature)と密度(Density)が計算されることを確認。
+        [Red->Green] When 1 time slice is passed, without depending on I/O,
+        verification that the Curvature and Density of each node are calculated.
         """
         N = 3
         t_idx = 3
@@ -18,29 +18,29 @@ class TestFilterInfoCurvature(unittest.TestCase):
             [2.0,  0.0, 0.0]
         ])
         
-        # 過去2ステップ分の履歴 (最新の T_slice 分と合わせて3ステップになる)
+        # History of the past 2 steps (combined with the latest T_slice, it becomes 3 steps)
         q_history = [
             np.array([10.0, 5.0, 2.0]),   # t=1
             np.array([12.0, 8.0, 5.0])    # t=2
         ]
 
-        # 実行
+        # Act
         records, q_current = run_info_curvature_analysis(t_idx, T_slice, q_history)
 
-        # 検証
+        # Assert
         self.assertEqual(len(records), N)
         self.assertEqual(q_current.shape, (N,))
 
-        # レコード構造: [t_idx, node_idx, curvature, density]
+        # Record structure: [t_idx, node_idx, curvature, density]
         rec0 = records[0]
         self.assertEqual(rec0[0], t_idx)
         self.assertEqual(rec0[1], 0)
         
-        # 値が文字列としてフォーマットされているか
+        # Check if the value is formatted as a string
         self.assertTrue(isinstance(rec0[2], str)) # curvature
         self.assertTrue(isinstance(rec0[3], str)) # density
 
-        # 渡したリストが変異（mutate）していないことの証明
+        # Proof that the passed list did not mutate
         self.assertEqual(len(q_history), 2)
 
 if __name__ == '__main__':
