@@ -16,7 +16,7 @@ The core of TLU lies in its ability to aggregate and project vast amounts of tra
 
 ### 4. Anomaly Detection Logic
 
-By applying Kirchhoff’s Current Law (the physical principle that total inflow must equal total outflow at any point) to accounting data, the system identifies any resulting deviation as an anomaly signal, $ \Delta $.When $ \Delta = 0 $: The system is in a "closed" and healthy state, where the axioms of bookkeeping are fully maintained.When $ \Delta \neq 0 $: This indicates "energy dissipation" (friction or leakage). In a business context, this signal highlights specific anomalies such as unrecorded transactions, unauthorized fund outflows, or data entry errors.
+By applying Kirchhoff’s Current Law (the physical principle that total inflow must equal total outflow at any point) to accounting data, the system identifies any resulting deviation as an anomaly signal, ` \Delta `. When ` \Delta = 0 `: The system is in a "closed" and healthy state, where the axioms of bookkeeping are fully maintained. When ` \Delta \neq 0 `: This indicates "energy dissipation" (friction or leakage). In a business context, this signal highlights specific anomalies such as unrecorded transactions, unauthorized fund outflows, or data entry errors.
 
 ### 5. Practical Significance
 
