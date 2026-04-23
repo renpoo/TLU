@@ -79,6 +79,7 @@ Stop guessing. Use **Linear-Quadratic Regulator (LQR)** theory to calculate the 
 
 For detailed mathematical logic, operational protocols, and API references, please consult the "Spoke" manuals linked below:
 
+* [OVERVIEW.md](OVERVIEW.md)
 * [01_System_Philosophy_and_Operations.md](docs/architecture/01_System_Philosophy_and_Operations.md)
 * [02_Data_Topology_and_Projection.md](docs/architecture/02_Data_Topology_and_Projection.md)
 * [03_Visualizer_and_Theme_Engine.md](docs/architecture/03_Visualizer_and_Theme_Engine.md)
@@ -113,8 +114,9 @@ bash bin/batch_visualize_graphs.sh
 ```
 
 # License: AGPL-3.0
+
 This project is a legacy of mathematical transparency. Under the AGPL-3.0 license, we ensure that the core logic remains open and verifiable by the community. If you build upon this engine, the world deserves to see the math.
 
 # Built by Renpoo & Google Gemini
-TLU is developed with a strict adherence to XP (Extreme Programming) and TDD (Test-Driven Development) protocols. Every core mathematical function is verified against theoretical edge cases.
 
+TLU is developed with a strict adherence to XP (Extreme Programming) and TDD (Test-Driven Development) protocols. Every core mathematical function is verified against theoretical edge cases.
