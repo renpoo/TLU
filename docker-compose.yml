@@ -17,6 +17,9 @@ services:
       # ローカルの相対パスとコンテナ内のパスを完全に同期させる
       - ./workspace:/app/workspace
       
+      # アーカイブデータへのアクセス許可（履歴の可視化用）
+      - ./archives:/app/archives
+      
       # 【Immutable Zone】コードとスクリプトも同様にマウント
       - ./src:/app/src
       - ./tests:/app/tests

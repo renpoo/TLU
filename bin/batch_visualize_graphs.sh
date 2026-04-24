@@ -5,11 +5,26 @@
 # ==========================================
 set -euo pipefail
 
-# Load environment variables
-source "$(dirname "$0")/orchestrators/_tlu_env.sh"
+# Parse command line arguments first so they are available when sourcing the environment
+export TLU_THEME="dark"
+export TARGET_ENV=""
 
-# Export theme as an environment variable (referenced by individual visualization scripts)
-export TLU_THEME="${1:-dark}"
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    --target_env)
+      export TARGET_ENV="$2"
+      shift 2
+      ;;
+    *)
+      # Assume Theme fallback backward compatibility
+      export TLU_THEME="$1"
+      shift
+      ;;
+  esac
+done
+
+# Load environment variables AFTER parsing TARGET_ENV
+source "$(dirname "$0")/orchestrators/_tlu_env.sh"
 
 VIZ_ORCH_DIR="./bin/visualizers"
 
@@ -32,9 +47,14 @@ SCRIPTS=(
 )
 
 echo "🚀 Starting TLU Visualization Pipeline (Theme: ${TLU_THEME})..."
+if [ -n "${TARGET_ENV}" ]; then
+    echo "📂 Target Environment: ${TARGET_ENV}"
+fi
 echo "--------------------------------------------------"
 
-rm -rf workspace/output_plots/*
+# Clean the effectively mapped output plots directory to prevent lingering geometric artifacts
+echo "🧹 Cleaning previous outputs in: ${TLU_PLOT_DIR}"
+rm -rf "${TLU_PLOT_DIR}"/*
 
 for script in "${SCRIPTS[@]}"; do
     # Execute only if the script exists

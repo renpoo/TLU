@@ -21,18 +21,34 @@ export TLU_PY="docker compose exec -T tlu-engine python3"
 # export TLU_AWK="awk"
 export TLU_AWK="docker compose exec -T tlu-engine awk"
 
-# --- 2. Common Paths ---
+# --- 2. Common Paths (Dynamic Validation) ---
 export TLU_INPUT_CSV="workspace/input_stream/Dummy_Journal_Stream_Amount.Aggregated.csv"
-# export TLU_INPUT_CSV="workspace/input_stream/Dummy_Kyoto_Traffic_Journal_Aggregated.csv"
 
-export TLU_OUT_DIR="workspace/output_data"
-export TLU_TIME_MAP="workspace/ephemeral/_time_map.csv"
-export TLU_NODE_MAP="workspace/ephemeral/_node_map.csv"
-export TLU_DOMAIN_TAGS="workspace/config/_domain_tags.csv"
-export TLU_SYS_PARAMS="workspace/config/_sys_params.csv"
-export TLU_TMP_COO="workspace/ephemeral/_coo_stream.csv"
-export TLU_PLOT_DIR="workspace/output_plots"
 export TLU_VIZ_DIR="src/visualizations"
+
+if [ -n "${TARGET_ENV:-}" ]; then
+    export TLU_OUT_DIR="${TARGET_ENV}/output_data"
+    export TLU_TIME_MAP="${TARGET_ENV}/ephemeral/_time_map.csv"
+    export TLU_NODE_MAP="${TARGET_ENV}/ephemeral/_node_map.csv"
+    export TLU_DOMAIN_TAGS="${TARGET_ENV}/config/_domain_tags.csv"
+    export TLU_SYS_PARAMS="${TARGET_ENV}/config/_sys_params.csv"
+    export TLU_TMP_COO="${TARGET_ENV}/ephemeral/_coo_stream.csv"
+    
+    # In Target Mode, plots explicitly render inside the archive folder
+    export TLU_PLOT_DIR="${TARGET_ENV}/output_plots"
+else
+    # Default Paths
+    export TLU_OUT_DIR="workspace/output_data"
+    export TLU_TIME_MAP="workspace/ephemeral/_time_map.csv"
+    export TLU_NODE_MAP="workspace/ephemeral/_node_map.csv"
+    export TLU_DOMAIN_TAGS="workspace/config/_domain_tags.csv"
+    export TLU_SYS_PARAMS="workspace/config/_sys_params.csv"
+    export TLU_TMP_COO="workspace/ephemeral/_coo_stream.csv"
+    export TLU_PLOT_DIR="workspace/output_plots"
+fi
+
+# Ensure tracking plot environments exist safely without crashing executions
+mkdir -p "${TLU_PLOT_DIR}"
 
 # ==========================================
 # 2.5 Dynamic Hyperparameter Injection
