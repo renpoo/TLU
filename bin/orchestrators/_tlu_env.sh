@@ -5,6 +5,13 @@
 # ==========================================
 set -euo pipefail
 
+# --- Global CLI Argument Scanning ---
+for arg in "$@"; do
+    if [ "$arg" == "--interactive" ]; then
+        export TLU_INTERACTIVE="true"
+    fi
+done
+
 # --- 0. Project Root & Python Path Resolution ---
 # Determine project root by backtracking from _tlu_env.sh absolute path (bin/orchestrators/)
 export TLU_PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
@@ -16,8 +23,9 @@ cd "${TLU_PROJECT_ROOT}"
 export PYTHONPATH="${TLU_PROJECT_ROOT}:${PYTHONPATH:-}"
 
 # --- 1. Docker Commands ---
-# export TLU_PY="python3"
-export TLU_PY="docker compose exec -T tlu-engine python3"
+export TLU_PY="python3"
+# export TLU_PY="docker compose exec -T tlu-engine python3"
+
 # export TLU_AWK="awk"
 export TLU_AWK="docker compose exec -T tlu-engine awk"
 
@@ -112,6 +120,10 @@ run_tlu_visualization() {
     local in_file="$4"
     shift 4
     local extra_args=("$@")
+
+    if [ "${TLU_INTERACTIVE:-false}" == "true" ]; then
+        extra_args+=("--interactive")
+    fi
 
     # Get THEME from environment variables (fallback to dark if unset)
     local theme="${TLU_THEME:-dark}"

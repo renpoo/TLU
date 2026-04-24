@@ -15,6 +15,10 @@ while [[ $# -gt 0 ]]; do
       export TARGET_ENV="$2"
       shift 2
       ;;
+    --interactive)
+      export TLU_INTERACTIVE="true"
+      shift
+      ;;
     *)
       # Assume Theme fallback backward compatibility
       export TLU_THEME="$1"

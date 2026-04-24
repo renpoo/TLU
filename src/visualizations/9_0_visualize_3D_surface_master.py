@@ -75,7 +75,7 @@ def main():
 
     # Luxuriously use the graph area to fill the screen (since there is no legend)
     fig = plt.figure(figsize=(18, 14))
-    ax = fig.add_axes([0.10, 0.20, 0.60, 0.60], projection='3d')
+    ax = fig.add_axes([0.15, 0.10, 0.80, 0.80], projection='3d')
 
     T_mesh, N_mesh = np.meshgrid(np.arange(max_t), np.arange(max_n))
     norm = plt.Normalize(c_matrix.min(), c_matrix.max())
@@ -129,7 +129,7 @@ def main():
     ax.view_init(elev=30, azim=-55)
     
     # Layout of colorbar (slender placement on the left side of graph)
-    cax = fig.add_axes([0.1, 0.3, 0.02, 0.4])
+    cax = fig.add_axes([0.05, 0.3, 0.02, 0.4])
     mappable = plt.cm.ScalarMappable(norm=norm, cmap=cmap)
     mappable.set_array(c_matrix)
     cbar = fig.colorbar(mappable, cax=cax)

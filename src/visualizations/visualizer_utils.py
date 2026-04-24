@@ -17,6 +17,7 @@ def get_base_parser(description: str) -> argparse.ArgumentParser:
     parser.add_argument("--node_map", type=str, default="_node_map.csv")
     parser.add_argument("--time_map", type=str, default="_time_map.csv")
     parser.add_argument("--max_legend", type=int, default=25)
+    parser.add_argument("--interactive", action="store_true", help="Keep the plot window open for interactive inspection")
     return parser
 
 def apply_theme(theme_name="dark"):
@@ -169,4 +170,8 @@ def save_plot(fig, out_dir: str, filename: str):
     out_path = os.path.join(out_dir, f"{base_name}.png")
     fig.savefig(out_path, dpi=150, bbox_inches='tight')
     print(f"✅ Saved: {out_path}", file=sys.stderr)
+    
+    # Intentionally freeze execution natively displaying GUI interactively
+    if '--interactive' in sys.argv:
+        plt.show()
 
