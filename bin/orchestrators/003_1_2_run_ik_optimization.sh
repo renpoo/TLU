@@ -8,7 +8,7 @@ TARGETS="${TLU_IK_TARGET_LABELS:?Environment variable TLU_IK_TARGET_LABELS is no
 
 # 3. Execute pipeline
 run_tlu_pipeline "Inverse Kinematics (IK) Filter" \
-    "Tgt" "Src" \
+    "${TLU_COL_TGT:?}" "${TLU_COL_SRC:?}" \
     "src.filters._003_1_2_filter_ik_optimization" "result.003_1_2_filter_ik.analysis.csv" \
     --target_labels="${TARGETS}" \
     --gamma="${GAMMA}" \

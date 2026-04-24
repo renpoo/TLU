@@ -90,7 +90,7 @@ run_tlu_pipeline() {
     # Ensure _node_map.csv is fully written before proceeding
     cat "${TLU_INPUT_CSV}" \
     | $TLU_PY -m src.filters._0_2_projector_to_coo \
-        --col_time="Trans_Date" --col_src="${proj_src}" --col_tgt="${proj_tgt}" --col_val="Amount" \
+        --col_time="${TLU_COL_TRANS_DATE:?}" --col_src="${proj_src}" --col_tgt="${proj_tgt}" --col_val="${TLU_COL_AMOUNT:?}" \
     > "${TLU_TMP_COO}"
 
     # Step 2: Filtering (Mathematical Analysis)

@@ -18,7 +18,7 @@ KL_DRIFT_THRESH="${TLU_KL_DRIFT_THRESH:?Environment variable TLU_KL_DRIFT_THRESH
 
 # 3. Injection into Python core (Dependency Injection)
 run_tlu_pipeline "Forensics Filter" \
-    "Src" "Tgt" \
+    "${TLU_COL_SRC:?}" "${TLU_COL_TGT:?}" \
     "src.filters._002_2_1_filter_macro_forensics" "result.002_2_1_filter_macro_forensics.analysis.csv" \
     --baseline_window="${BASELINE_WINDOW}" \
     --leak_tolerance="${LEAK_TOLERANCE}" \

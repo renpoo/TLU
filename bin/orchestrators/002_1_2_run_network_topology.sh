@@ -10,7 +10,7 @@ BASELINE_WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?Environment variable TLU_OBSER
 
 # 3. Execute pipeline
 run_tlu_pipeline "Network Topology Filter" \
-    "Src" "Tgt" \
+    "${TLU_COL_SRC:?}" "${TLU_COL_TGT:?}" \
     "src.filters._002_1_2_filter_network_topology" "result.002_1_2_filter_network_topology.analysis.csv" \
     --baseline_window="${BASELINE_WINDOW}" \
     --node_map="${TLU_NODE_MAP}"

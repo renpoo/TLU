@@ -10,7 +10,7 @@ STATIC_LABELS="${TLU_FK_STATIC_DQ_LABELS:-}"
 
 # 3. Execute pipeline
 run_tlu_pipeline "Forward Kinematics (FK) Filter" \
-    "Src" "Tgt" \
+    "${TLU_COL_SRC:?}" "${TLU_COL_TGT:?}" \
     "src.filters._003_1_1_filter_fk_simulation" "result.003_1_1_filter_fk.analysis.csv" \
     --fk_input_mode="${FK_MODE}" \
     --static_dq_labels="${STATIC_LABELS}" \

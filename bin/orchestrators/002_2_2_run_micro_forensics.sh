@@ -12,7 +12,7 @@ Z_SCORE_THRESH="${TLU_ANOMALY_Z_SCORE_THRESHOLD:?Environment variable TLU_ANOMAL
 
 # 3. Execute pipeline
 run_tlu_pipeline "Micro Forensics Filter" \
-    "Src" "Tgt" \
+    "${TLU_COL_SRC:?}" "${TLU_COL_TGT:?}" \
     "src.filters._002_2_2_filter_micro_forensics" "result.002_2_2_filter_micro_forensics.analysis.csv" \
     --baseline_window="${BASELINE_WINDOW}" \
     --kl_drift_thresh="${KL_DRIFT_THRESH}" \

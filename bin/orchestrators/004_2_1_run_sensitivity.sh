@@ -12,6 +12,6 @@ DELTA="${TLU_SENSITIVITY_DELTA:?Environment variable TLU_SENSITIVITY_DELTA is no
 
 # 3. Execute pipeline
 run_tlu_pipeline "Sensitivity & Trade-off Filter" \
-    "Src" "Tgt" \
+    "${TLU_COL_SRC:?}" "${TLU_COL_TGT:?}" \
     "src.filters._004_2_1_filter_sensitivity" "result.004_2_1_filter_sensitivity.analysis.csv" \
     --delta="${DELTA}" --gamma="${GAMMA}" --max_k="${MAX_K}" --node_map="${TLU_NODE_MAP}"

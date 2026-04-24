@@ -12,6 +12,6 @@ TEMP_WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?Environment variable TLU_OBSERVATI
 
 # 2. Execute pipeline
 run_tlu_pipeline "Macro Thermodynamics Filter" \
-    "Src" "Tgt" \
+    "${TLU_COL_SRC:?}" "${TLU_COL_TGT:?}" \
     "src.filters._001_1_1_filter_macro_thermodynamics" "result.001_1_1_filter_macro_thermodynamics.analysis.csv" \
     --work_labels="${WORK_LABELS}" --heat_labels="${HEAT_LABELS}" --temp_window="${TEMP_WINDOW}" --node_map="${TLU_NODE_MAP}"

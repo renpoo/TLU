@@ -10,6 +10,6 @@ TEMP_WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?Environment variable TLU_OBSERVATI
 
 # 2. Execute pipeline
 run_tlu_pipeline "Local Thermodynamics Filter" \
-    "Src" "Tgt" \
+    "${TLU_COL_SRC:?}" "${TLU_COL_TGT:?}" \
     "src.filters._001_1_2_filter_local_thermodynamics" "result.001_1_2_filter_local_thermodynamics.analysis.csv" \
     --temp_window="${TEMP_WINDOW}" --node_map="${TLU_NODE_MAP}"

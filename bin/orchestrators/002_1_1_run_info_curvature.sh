@@ -10,7 +10,7 @@ WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?Environment variable TLU_OBSERVATION_WI
 
 # 2. Execute pipeline
 run_tlu_pipeline "Information Curvature Filter" \
-    "Src" "Tgt" \
+    "${TLU_COL_SRC:?}" "${TLU_COL_TGT:?}" \
     "src.filters._002_1_1_filter_info_curvature" "result.002_1_1_filter_info_curvature.analysis.csv" \
     --window="${WINDOW}" \
     --node_map="${TLU_NODE_MAP}"

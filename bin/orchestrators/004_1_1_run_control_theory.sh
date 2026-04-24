@@ -13,7 +13,7 @@ R_WEIGHT="${TLU_LQR_R_WEIGHT:?Environment variable TLU_LQR_R_WEIGHT is not set.}
 
 # 2. Execute pipeline
 run_tlu_pipeline "Control Theory (LQR) Filter" \
-    "Src" "Tgt" \
+    "${TLU_COL_SRC:?}" "${TLU_COL_TGT:?}" \
     "src.filters._004_1_1_filter_control_theory" "result.004_1_1_filter_control_theory.analysis.csv" \
     --controllable_labels="${CONTROLLABLE}" \
     --target_state="${TARGETS}" \
