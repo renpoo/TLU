@@ -5,8 +5,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import json
 
-plt.rcParams['font.family'] = 'Noto Sans CJK JP'
-plt.rcParams['font.monospace'] = ['Noto Sans CJK JP'] + plt.rcParams['font.monospace']
+try:
+    import japanize_matplotlib
+    # Ensure explicit 'family': 'monospace' properties also support Japanese characters
+    plt.rcParams['font.monospace'] = ['IPAexGothic'] + plt.rcParams['font.monospace']
+except ImportError:
+    plt.rcParams['font.family'] = ['Noto Sans CJK JP', 'Hiragino Sans', 'YuGothic', 'sans-serif']
+    plt.rcParams['font.monospace'] = ['Noto Sans CJK JP', 'Hiragino Sans'] + plt.rcParams['font.monospace']
 
 def get_base_parser(description: str) -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=description)

@@ -23,15 +23,13 @@ cd "${TLU_PROJECT_ROOT}"
 export PYTHONPATH="${TLU_PROJECT_ROOT}:${PYTHONPATH:-}"
 
 # --- 1. Docker Commands ---
-export TLU_PY="python3"
-# export TLU_PY="docker compose exec -T tlu-engine python3"
+# export TLU_PY="python3"
+export TLU_PY="docker compose exec -T tlu-engine python3"
 
 # export TLU_AWK="awk"
 export TLU_AWK="docker compose exec -T tlu-engine awk"
 
 # --- 2. Common Paths (Dynamic Validation) ---
-export TLU_INPUT_CSV="workspace/input_stream/Dummy_Journal_Stream_Amount.Aggregated.csv"
-
 export TLU_VIZ_DIR="src/visualizations"
 
 if [ -n "${TARGET_ENV:-}" ]; then
@@ -78,6 +76,9 @@ if [ -f "${TLU_SYS_PARAMS}" ]; then
 else
     echo "[WARN] Parameter file ${TLU_SYS_PARAMS} not found. Subsequent runs may fail if variables are missing."
 fi
+
+# Dynamically construct the absolute path to the input CSV based on the active target environment
+export TLU_INPUT_CSV="${TARGET_ENV:-workspace}/${TLU_INPUT_CSV:?Environment variable TLU_INPUT_CSV is missing. Please define input_csv in _sys_params.csv}"
 
 # --- 3. Unified Pipeline Runner ---
 # Usage: run_tlu_pipeline <description> <src_col> <tgt_col> <execution_module> <output_filename> [extra_args...]

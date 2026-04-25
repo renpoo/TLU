@@ -7,8 +7,8 @@ import sys
 # 1. Configuration: 9x9 grid (inspired by Kyoto street names)
 # rows = ["Ichijo", "Nijo", "Sanjo", "Shijo", "Gojo", "Rokujo", "Shichijo", "Hachijo", "Kujo"]
 # cols = ["Horikawa", "Shinmachi", "Muromachi", "Karasuma", "Kurumaya", "Higashinotoin", "Ainomachi", "Sakaimachi", "Yanaginobanba"]
-rows = ["Ichijo", "Nijo", "Sanjo", "Shijo", "Gojo"]
-cols = ["Horikawa", "Shinmachi", "Muromachi", "Karasuma", "Kurumaya"]
+rows = ["一条", "二条", "三条", "四条", "五条"]
+cols = ["堀川", "新町", "室町", "烏丸", "車屋町"]
 
 
 nodes = []
