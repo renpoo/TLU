@@ -13,8 +13,9 @@ By sequentially applying paradigms from **Classical Mechanics, Thermodynamics & 
 TLU avoids giant monoliths and is built upon the **Unix Philosophy**, connecting single-responsibility filters via standard streams.
 
 * **Zero Local Dependency:** Does not pollute the host OS. All analysis engines are completely isolated within Docker containers.
-* **Fail-Fast UX:** When data inconsistencies or missing color themes are detected, the system immediately halts without implicit fallbacks. This physically prevents erroneous management decisions caused by mismatched contexts (Context Bleed).
-* **Invisible GitOps:** Automatically commits the workspace (input data and configurations) upon execution, guaranteeing 100% reproducibility of past analysis results without manual version control.
+* **Fail-Fast UX:** When data inconsistencies or missing parameters are detected, the system immediately halts without implicit fallbacks. This physically prevents erroneous management decisions caused by mismatched contexts.
+* **Declarative Experiment Control (SSOT):** The entire experimental condition—including input datasets, kinematic constraints, LQR weights, and anomaly thresholds—is centrally defined in a single `workspace/config/_sys_params.csv`. Modifying this file is the *only* way to alter the pipeline's behavior, ensuring absolute clarity.
+* **Immutable Archive Reproducibility:** Upon completion, the entire `workspace/` (including the executed `_sys_params.csv` and outputs) can be snapshotted into an `archives/` directory using `bash bin/archive_experimental_run.sh`. By simply pointing the pipeline to an archived workspace, the exact same mathematical conditions and visualizations can be reproduced anytime.
 
 ### The Pipeline Phases
 
@@ -111,6 +112,9 @@ docker compose up -d
 bash bin/batch_generate_dummy_journal_data.sh
 bash bin/batch_processing.sh
 bash bin/batch_visualize_graphs.sh
+
+# 4. Snapshot the experiment for perfect reproducibility
+bash bin/archive_experimental_run.sh
 ```
 
 # License: AGPL-3.0

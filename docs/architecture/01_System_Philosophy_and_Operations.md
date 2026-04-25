@@ -30,10 +30,24 @@ To achieve maximum testability (via Test-Driven Development) and reduce cognitiv
 * **Host Sterilization:** The user's host operating system requires only `Docker` and `bash`. Python, NumPy, SciPy, NetworkX, and Matplotlib are strictly confined within the `tlu-engine` container.
 * **Transparent Wrapper (`_tlu_env.sh`):** TLU provides a shell wrapper that transparently translates local commands into containerized executions (e.g., `docker compose exec -T tlu-engine python3`). The data flows seamlessly between the host's filesystem and the isolated container via standard streams, making the container feel like a native binary.
 
-## 4. Invisible GitOps & Audit Trails (:FUTURE IMPLEMENTATIONS)
+## 4. Declarative Experiment Control (SSOT)
 
-In corporate strategy and forensics, the *provenance* of an insight is just as important as the insight itself. If a structural anomaly was detected last month, you must be able to prove exactly what parameters and data triggered that alert.
+In complex corporate simulations, the *provenance* of an insight is just as important as the insight itself. To guarantee reproducibility, TLU relies on a Single Source of Truth (SSOT).
 
-* **No Manual Versioning:** Users are not trusted to consistently version their configuration files or source data manually.
-* **Automated Pre-flight Commits:** Before any batch execution (e.g., `batch_processing.sh`), the system automatically executes a `git commit` encompassing the entire `workspace/` (input data streams, system parameters, and ephemeral dictionaries).
-* **Immutable Truth:** By anchoring every execution to a specific Git hash, TLU ensures 100% reproducibility. You can always revert to a previous commit and re-run the pipeline to achieve the exact same state and visual dashboards.
+* **The `_sys_params.csv` Paradigm:** Users are strictly forbidden from modifying shell scripts or python source code to change experimental conditions (e.g., input data sources, target simulation nodes, anomaly thresholds). Every single boundary condition and constraint is declaratively defined in `workspace/config/_sys_params.csv`.
+* **Parameter as Code:** This configuration file serves as the definitive "blueprint" for the experiment. By isolating parameters from execution logic, the system prevents accidental configuration drift.
+
+## 5. Immutable Archive Reproducibility
+
+To enforce complete auditability without relying on external Git repositories, TLU employs a local snapshotting architecture.
+
+* **Workspace Snapshots:** Upon executing a significant pipeline run, the entire `workspace/` directory (which includes the input streams, the precise `_sys_params.csv` used, and all output data) can be snapshotted into an `archives/run_YYYYMMDD_HHMMSS/` directory by simply running:
+  ```bash
+  bash bin/archive_experimental_run.sh
+  ```
+  *(Note: Output plots are excluded from the archive to save disk space, as they can be deterministically regenerated).*
+* **Time-Travel Execution:** Because the pipeline dynamically references the configuration relative to its target environment, a user can effortlessly reproduce past calculations or regenerate dashboards. By pointing the orchestration scripts to a past archive, the pipeline behaves exactly as it did at the exact moment of that historical snapshot:
+  ```bash
+  # Regenerate 3D visualization dashboards from a past experiment
+  bash bin/batch_visualize_graphs.sh dark --target_env archives/run_20260425_094806/workspace
+  ```

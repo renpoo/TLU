@@ -53,3 +53,13 @@ For phase spaces, thermodynamic complexities, and information curvature, TLU rel
 * **Surface Color:** Overlaid with an independent metric (like Density or Temperature) to provide a 4th dimension of insight on a single 3D surface.
 
 Through these strict, semantically mapped visual engines, TLU ensures that the complexity of the domain is projected into absolute mathematical—and visual—clarity.
+
+## 5. Interactive Exploration Mode (GUI Inspection)
+
+Visualizing highly dimensional data—especially 3D phase spaces or dense network topologies—often requires manual inspection to uncover hidden insights. While TLU defaults to a headless, high-speed batch rendering mode (automatically saving PNGs and exiting), it natively supports an **Interactive Mode**.
+
+* **Invocation:** By appending the `--interactive` flag to any visualization script or the main batch orchestrator (`bash bin/batch_visualize_graphs.sh dark --interactive`), the pipeline dynamically pauses after generating each frame.
+* **Functionality:** This triggers the native Matplotlib GUI window, allowing the analyst to use the mouse to:
+  * **Rotate 3D Surfaces:** Freely spin phase portraits and thermodynamic manifolds to find the optimal viewing angle.
+  * **Pan & Zoom:** Dive into dense clusters of a network topology.
+* **Pipeline Integration:** The system intelligently waits for the user to close the GUI window before proceeding to the next mathematical frame or saving the image, seamlessly blending human intuition with automated batch processing.
