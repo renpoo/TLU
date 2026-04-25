@@ -85,6 +85,7 @@ For detailed mathematical logic, operational protocols, and API references, plea
 * [02_Data_Topology_and_Projection.md](docs/architecture/02_Data_Topology_and_Projection.md)
 * [03_Visualizer_and_Theme_Engine.md](docs/architecture/03_Visualizer_and_Theme_Engine.md)
 * [04_Simulation_and_TDD.md](docs/architecture/04_Simulation_and_TDD.md)
+* [05_Meta_Analytical_Methodology_and_AI_Collaboration.md](docs/architecture/05_Meta_Analytical_Methodology_and_AI_Collaboration.md)
 * [000_Classical_Mechanics.md](docs/physics/000_Classical_Mechanics.md)
 * [001_Thermodynamics_and_Fluctuations.md](docs/physics/001_Thermodynamics_and_Fluctuations.md)
 * [002_Information_Geometry_and_Forensics.md](docs/physics/002_Information_Geometry_and_Forensics.md)
