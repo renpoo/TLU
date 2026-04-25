@@ -64,7 +64,6 @@ def get_base_parser(description: str) -> argparse.ArgumentParser:
     parser.add_argument("--time_map", type=str, default="workspace/ephemeral/_time_map.csv")
     parser.add_argument("--node_map", type=str, default="workspace/ephemeral/_node_map.csv")
     parser.add_argument("--sys_params", type=str, default="workspace/config/_sys_params.csv")
-    parser.add_argument("--domain_tags", type=str, default="workspace/config/_domain_tags.csv")
     return parser
 
 def parse_projector_args(args_list: list[str]) -> dict:

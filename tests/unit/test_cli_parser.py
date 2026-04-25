@@ -10,7 +10,6 @@ class TestCLIParser(unittest.TestCase):
         self.assertEqual(args.node_map, "workspace/ephemeral/_node_map.csv")
         self.assertEqual(args.time_map, "workspace/ephemeral/_time_map.csv")
         self.assertEqual(args.sys_params, "workspace/config/_sys_params.csv")
-        self.assertEqual(args.domain_tags, "workspace/config/_domain_tags.csv")
 
     def test_extend_parser_for_specific_filter(self):
         parser = get_base_parser("Extended Parser")
