@@ -32,9 +32,9 @@ SEED="${TLU_DUMMY_RANDOM_SEED:?Environment variable TLU_DUMMY_RANDOM_SEED is not
 ${TLU_PY} -m src.filters._0_0_generate_dummy_journal \
     --months "${MONTHS}" \
     --seed "${SEED}" \
+    --sales-leak 0.01 \
+    --purchase-leak 0.005 \
     > "${OUTPUT_FILE}"
-    # --sales-leak 0.01 \
-    # --purchase-leak 0.005 \
     # > "${OUTPUT_FILE}"
 
 echo "Completed. Dummy stream has been successfully generated."
