@@ -15,7 +15,6 @@ def main():
     col_tgt = mapping_config.get("col_tgt", "Tgt")
     col_val = mapping_config.get("col_val", "Amount")
     try:
-        # 1. Read stream from standard input
         df = pd.read_csv(sys.stdin)
     except Exception as e:
         print(f"Error reading input: {e}", file=sys.stderr)
@@ -24,32 +23,60 @@ def main():
     if df.empty:
         sys.exit(0)
 
-    # 2. Create weekly labels in 'YYYY-W##' format using Pandas ISO calendar
+    # 2. Create weekly labels
     dt_col = pd.to_datetime(df[col_time])
     df['Week'] = dt_col.dt.isocalendar().year.astype(str) + "-W" + dt_col.dt.isocalendar().week.astype(str).str.zfill(2)
 
-    # 3. Reconstruct debit / credit flux into a single "movement between nodes (From -> To)"
-    debits = df[df['Debit'] > 0][['Entry_ID', 'Week', 'Account_Name', 'Dept_Name', 'Debit']].rename(
-        columns={'Account_Name': 'Tgt_Account', 'Dept_Name': 'Tgt_Dept', 'Debit': col_val}
-    )
-    
-    credits = df[df['Credit'] > 0][['Entry_ID', 'Account_Name', 'Dept_Name']].rename(
-        columns={'Account_Name': 'Src_Account', 'Dept_Name': 'Src_Dept'}
-    )
-    
-    # Join on Entry_ID and represent Source -> Target in 1 row
-    edges = pd.merge(debits, credits, on='Entry_ID', how='inner')
+    # 3. Aggregate Debits and Credits by Entry_ID
+    debits = df[df['Debit'] > 0].groupby('Entry_ID').agg({'Account_Name': 'first', 'Dept_Name': 'first', 'Debit': 'sum', 'Week': 'first'}).reset_index()
+    debits = debits.rename(columns={'Account_Name': 'Tgt_Account', 'Dept_Name': 'Tgt_Dept', 'Debit': 'Debit_Amt'})
 
-    # 4. Concatenate Account and Dept with ':' to create a unique node name
-    edges[col_time] = edges['Week']
-    edges[col_src] = edges['Src_Account'].astype(str)
-    edges[col_tgt] = edges['Tgt_Account'].astype(str)
+    credits = df[df['Credit'] > 0].groupby('Entry_ID').agg({'Account_Name': 'first', 'Dept_Name': 'first', 'Credit': 'sum'}).reset_index()
+    credits = credits.rename(columns={'Account_Name': 'Src_Account', 'Dept_Name': 'Src_Dept', 'Credit': 'Credit_Amt'})
 
-    # 5. Sum (aggregate) Amount by combination of Week, Source Node, Target Node
-    weekly_summary = edges.groupby([col_time, col_src, col_tgt])[col_val].sum().reset_index()
+    # Join on Entry_ID (Outer join to catch unmatched entries)
+    edges = pd.merge(debits, credits, on='Entry_ID', how='outer')
+    edges['Debit_Amt'] = edges['Debit_Amt'].fillna(0)
+    edges['Credit_Amt'] = edges['Credit_Amt'].fillna(0)
 
-    # 6. Reformat into a flat COO format readable by TLU Projector
-    weekly_summary.to_csv(sys.stdout, index=False)
+    # Resolve Base Amount (Min of Debit and Credit)
+    edges['Base_Amount'] = edges[['Debit_Amt', 'Credit_Amt']].min(axis=1)
+
+    # Reconstruct edges including UNKNOWN_LEAK for discrepancies
+    final_edges = []
+    for _, row in edges.iterrows():
+        base_amt = row['Base_Amount']
+        dr = row['Debit_Amt']
+        cr = row['Credit_Amt']
+        
+        t_val = row.get('Week', None)
+        if pd.isna(t_val):
+            continue 
+
+        src = str(row['Src_Account']) if pd.notna(row['Src_Account']) else 'UNKNOWN_LEAK'
+        tgt = str(row['Tgt_Account']) if pd.notna(row['Tgt_Account']) else 'UNKNOWN_LEAK'
+
+        if base_amt > 0:
+            final_edges.append({col_time: t_val, col_src: src, col_tgt: tgt, col_val: base_amt})
+        
+        diff_cr = cr - base_amt
+        if diff_cr > 0:
+            final_edges.append({col_time: t_val, col_src: src, col_tgt: 'UNKNOWN_LEAK', col_val: diff_cr})
+            
+        diff_dr = dr - base_amt
+        if diff_dr > 0:
+            final_edges.append({col_time: t_val, col_src: 'UNKNOWN_LEAK', col_tgt: tgt, col_val: diff_dr})
+
+    if not final_edges:
+        sys.exit(0)
+
+    final_df = pd.DataFrame(final_edges)
+
+    # 5. Sum (aggregate) Amount by combination
+    summary = final_df.groupby([col_time, col_src, col_tgt])[col_val].sum().reset_index()
+
+    # 6. Reformat into a flat COO format
+    summary.to_csv(sys.stdout, index=False)
 
 if __name__ == "__main__":
     main()

@@ -3,27 +3,23 @@
 import numpy as np
 from src.core.core_information_geometry import compute_kl_divergence
 
-def check_conservation_law(q_current: np.ndarray, tolerance: float) -> tuple[float, bool]:
+def check_conservation_law(q_current: np.ndarray, tolerance: float, leak_idx: int = -1) -> tuple[float, bool]:
     """!
     @brief Calculate the total sum of the pure flux across the entire network to detect conservation law residuals (leaks).
-    @details Evaluates the closed-system integrity by summing the net flux.
+    @details Evaluates the closed-system integrity by summing the net flux. If leak_idx is provided, uses its accumulation as the residual.
 
     @param q_current Net flux vector for all nodes (shape: N).
     @param tolerance Floating point tolerance limit for leak detection.
+    @param leak_idx Optional index of the UNKNOWN_LEAK node.
 
     @return A tuple (abs_residual, is_leaking) representing the absolute residual and leak status.
-
-    @pre
-        - `q_current` must be a valid 1D numpy array.
-        - `tolerance` must be explicitly injected by the caller and greater than or equal to 0.
-    @post
-        - Returns a non-negative float for the residual.
-        - System variables remain un-mutated (pure function).
-    @invariant
-        - Total flux entering and leaving the closed system theoretically sums to 0.
     """
-    # Total inflow and outflow of the entire system. For closed systems like double-entry bookkeeping, this should inherently be 0.
-    residual = float(np.sum(q_current))
+    if leak_idx >= 0 and leak_idx < len(q_current):
+        residual = float(q_current[leak_idx])
+    else:
+        # Total inflow and outflow of the entire system. For closed systems like double-entry bookkeeping, this should inherently be 0.
+        residual = float(np.sum(q_current))
+        
     abs_residual = abs(residual)
     
     # Determine as a "leak" if it exceeds the floating-point arithmetic error (tolerance)

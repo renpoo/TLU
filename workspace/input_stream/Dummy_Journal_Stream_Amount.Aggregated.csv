@@ -207,6 +207,7 @@ Trans_Date,Src,Tgt,Amount
 2020-W35,ACC_Sales_Revenue,ACC_Accounts_Receivable,12745.34
 2020-W36,ACC_Accounts_Payable,ACC_Inventory,7011.41
 2020-W36,ACC_Accounts_Receivable,ACC_Cash,17479.7
+2020-W36,ACC_Accounts_Receivable,UNKNOWN_LEAK,953.55
 2020-W36,ACC_Cash,ACC_Accounts_Payable,7547.69
 2020-W36,ACC_Cash,ACC_Travel_Exp,1384.52
 2020-W36,ACC_Inventory,ACC_COGS,4588.87
@@ -361,6 +362,7 @@ Trans_Date,Src,Tgt,Amount
 2021-W07,ACC_Sales_Revenue,ACC_Accounts_Receivable,23034.38
 2021-W08,ACC_Accounts_Payable,ACC_Inventory,7254.53
 2021-W08,ACC_Accounts_Receivable,ACC_Cash,25083.34
+2021-W08,ACC_Accounts_Receivable,UNKNOWN_LEAK,655.6899999999999
 2021-W08,ACC_Cash,ACC_Accounts_Payable,7696.34
 2021-W08,ACC_Cash,ACC_Payroll_Exp,15750.970000000001
 2021-W08,ACC_Cash,ACC_Rent_Exp,2797.21
@@ -379,6 +381,7 @@ Trans_Date,Src,Tgt,Amount
 2021-W10,ACC_Sales_Revenue,ACC_Accounts_Receivable,30674.16
 2021-W11,ACC_Accounts_Payable,ACC_Inventory,8584.5
 2021-W11,ACC_Accounts_Receivable,ACC_Cash,25005.81
+2021-W11,ACC_Accounts_Receivable,UNKNOWN_LEAK,165.20999999999998
 2021-W11,ACC_Cash,ACC_Accounts_Payable,15161.060000000001
 2021-W11,ACC_Cash,ACC_Travel_Exp,1121.79
 2021-W11,ACC_Inventory,ACC_COGS,14618.66
@@ -446,6 +449,7 @@ Trans_Date,Src,Tgt,Amount
 2021-W21,ACC_Sales_Revenue,ACC_Accounts_Receivable,21205.36
 2021-W22,ACC_Accounts_Payable,ACC_Inventory,7785.09
 2021-W22,ACC_Accounts_Receivable,ACC_Cash,30039.489999999998
+2021-W22,ACC_Accounts_Receivable,UNKNOWN_LEAK,266.89
 2021-W22,ACC_Cash,ACC_Accounts_Payable,15831.119999999999
 2021-W22,ACC_Cash,ACC_Travel_Exp,1473.3
 2021-W22,ACC_Inventory,ACC_COGS,14049.28
@@ -492,6 +496,7 @@ Trans_Date,Src,Tgt,Amount
 2021-W29,ACC_Sales_Revenue,ACC_Accounts_Receivable,17517.35
 2021-W30,ACC_Accounts_Payable,ACC_Inventory,6577.99
 2021-W30,ACC_Accounts_Receivable,ACC_Cash,27641.77
+2021-W30,ACC_Accounts_Receivable,UNKNOWN_LEAK,933.91
 2021-W30,ACC_Cash,ACC_Accounts_Payable,17376.87
 2021-W30,ACC_Cash,ACC_Travel_Exp,2352.93
 2021-W30,ACC_Inventory,ACC_COGS,7825.61
@@ -536,6 +541,7 @@ Trans_Date,Src,Tgt,Amount
 2021-W36,ACC_Sales_Revenue,ACC_Accounts_Receivable,6174.63
 2021-W37,ACC_Accounts_Payable,ACC_Inventory,7166.94
 2021-W37,ACC_Accounts_Receivable,ACC_Cash,18105.94
+2021-W37,ACC_Accounts_Receivable,UNKNOWN_LEAK,531.0500000000001
 2021-W37,ACC_Cash,ACC_Travel_Exp,1831.39
 2021-W37,ACC_Inventory,ACC_COGS,6071.61
 2021-W37,ACC_Sales_Revenue,ACC_Accounts_Receivable,11862.09

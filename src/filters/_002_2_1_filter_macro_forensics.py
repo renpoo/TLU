@@ -51,7 +51,11 @@ def run_forensics_analysis(
     P_current = compute_transition_matrix(T_slice)
 
     # 1. Check conservation of mass (System-wide residual)
-    abs_residual, _ = check_conservation_law(q_current, thresholds.get('leak_tolerance', 1e-5))
+    abs_residual, _ = check_conservation_law(
+        q_current, 
+        thresholds.get('leak_tolerance', 1e-5),
+        thresholds.get('leak_idx', -1)
+    )
 
     # 2. Structural drift (Sum of KL divergence)
     kl_drift = compute_structural_drift(P_current, P_history_window)
@@ -95,10 +99,21 @@ def main():
     ]
     args, N, reader, writer = setup_pipeline(parser, output_header)
 
+    import pandas as pd
+    leak_idx = -1
+    try:
+        df_map = pd.read_csv(args.node_map)
+        leak_row = df_map[df_map['node_label'] == 'UNKNOWN_LEAK']
+        if not leak_row.empty:
+            leak_idx = int(leak_row['node_idx'].iloc[0])
+    except Exception as e:
+        print(f"Warning: could not read UNKNOWN_LEAK index: {e}", file=sys.stderr)
+
     thresholds = {
         'leak_tolerance': args.leak_tolerance,
         'kl_drift_thresh': args.kl_drift_thresh,
-        'z_score_thresh': args.z_score_thresh
+        'z_score_thresh': args.z_score_thresh,
+        'leak_idx': leak_idx
     }
 
     q_history_window = []
