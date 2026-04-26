@@ -4,7 +4,19 @@
 
 TLU is a high-fidelity mathematical analysis pipeline designed to project directed transaction data (such as financial ledgers, communication logs, or supply chain flows) into a pure $N \times N$ tensor space to uncover hidden structural dynamics.
 
-By sequentially applying paradigms from **Classical Mechanics, Thermodynamics & Statistical Mechanics, Information Geometry, Applied Kinematics, and Control Theory**, TLU visualizes "organizational stiffness," "energy dissipation," and "structural distortion" that traditional statistical methods often miss, deriving optimal intervention strategies.
+By sequentially applying paradigms from **Classical Mechanics, Thermodynamics & Statistical Mechanics, Information Geometry, Applied Kinematics, Control Theory, and Signal Processing**, TLU visualizes "organizational stiffness," "energy dissipation," and "structural distortion" that traditional statistical methods often miss, deriving optimal intervention strategies.
+
+## Theoretical Foundation: The Ledger as a Coupled Oscillator Network
+
+A common critique of applying physical equations to accounting is the risk of a "category error"—ledgers do not possess literal physical mass or friction. However, TLU's theoretical foundation rests not on literal physics, but on the universally applied mathematical abstraction of **Continuum Mechanics and Coupled Oscillators**.
+
+When physicists model the stress propagation, heat dissipation, or resonant frequencies of a solid object, they discretize it into a network of **point masses ($M$)** connected by invisible **springs ($K$)** and **dampers ($C$)**. TLU applies this exact same mathematically rigorous abstraction to an organization:
+
+* **Mass ($M$) / Inertia**: An account's capacity to store potential energy and resist sudden state changes (based on historical volume/volatility).
+* **Stiffness ($K$) / Springs**: The structural strength and deterministic causal links of transaction channels (e.g., Sales $\to$ Accounts Receivable).
+* **Viscosity ($C$) / Dampers**: The temporal friction, dissipation, and delays inherent in the transactional flow.
+
+By treating the organization as a **discrete elastic medium (a Mass-Spring-Damper network)**, TLU legitimately applies the equation of motion ($M\ddot{x} + C\dot{x} + Kx = F$) to calculate how external financial shocks (anomalies, fraud, market shifts) propagate, resonate, and decay through the business structure. TLU does not claim that a company obeys Newton's laws; rather, it uses these equations as an extraordinarily sensitive **Physics-Informed Feature Extractor** to surface anomalies that traditional accounting X-rays miss.
 
 ---
 
@@ -42,6 +54,7 @@ Observe the "pulse" and "stiffness" of your organization. TLU calculates **Veloc
 <img width="1666" height="1324" alt="1_3_8__phase_portrait_3d" src="https://github.com/user-attachments/assets/e6e380a3-2cd8-4402-b727-14842359f2ab" />
 
 ### Principal Axes (PCA)
+
 TLU also extracts the **Principal Axes** of the network by calculating the eigenvalues and eigenvectors of the covariance matrix. This reveals the dominant "dimensions" of variance—the primary directions in which the organization's resources naturally flow and fluctuate.
 
 <img width="1800" height="900" alt="000_2_2__principal_axes" src="https://github.com/user-attachments/assets/placeholder_for_pca" />
@@ -66,6 +79,7 @@ Unmask anomalies hiding in the data's "blood vessels." TLU calculates **Topologi
 <img width="2187" height="1335" alt="1_12__network_topology t 00003" src="https://github.com/user-attachments/assets/f418bac3-b032-4983-9121-7cd62080c38c" />
 
 ### Manifold Dimensionality (SVD)
+
 By performing Singular Value Decomposition (SVD) on the transition matrix, TLU calculates the **Effective Rank** of the network. If the network becomes over-centralized or collapses into a few hubs, the effective dimensionality drops, acting as an early warning for structural fragility.
 
 <img width="1800" height="900" alt="002_1_3__manifold_dimensionality" src="https://github.com/user-attachments/assets/placeholder_for_svd" />
@@ -85,6 +99,7 @@ Stop guessing. Use **Linear-Quadratic Regulator (LQR)** theory to calculate the 
 <img width="1997" height="1124" alt="1_7_3__control_lqr_performance_space" src="https://github.com/user-attachments/assets/98f2dc6b-3034-4520-90d2-bb887449b4eb" />
 
 ### System Stability (Spectral Radius)
+
 Is the system spinning out of control? By calculating the maximum eigenvalue (**Spectral Radius**) of the transition matrix, TLU detects topological cycles (e.g., Wash Trading or recursive loops). If the radius approaches or exceeds 1.0, the system is mathematically unstable and prone to exponential divergence.
 
 <img width="1800" height="900" alt="004_1_2__system_stability" src="https://github.com/user-attachments/assets/placeholder_for_stability" />
