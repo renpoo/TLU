@@ -35,7 +35,7 @@ generate_sample() {
 
     bash bin/batch_generate_dummy_journal_data.sh
     bash bin/batch_processing.sh
-    bash bin/batch_visualize_graphs.sh
+    # bash bin/batch_visualize_graphs.sh
 }
 
 # 0_Healthy
@@ -60,6 +60,6 @@ export TARGET_ENV="samples/Sample_5_Kyoto_Traffic"
 # We need to run batch_generate_dummy_traffic_data.sh but modify it first to support TARGET_ENV
 bash bin/batch_generate_dummy_traffic_data.sh
 bash bin/batch_processing.sh
-bash bin/batch_visualize_graphs.sh
+# bash bin/batch_visualize_graphs.sh
 
 echo "All samples generated."

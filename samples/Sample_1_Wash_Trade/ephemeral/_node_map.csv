@@ -1,0 +1,10 @@
+node_idx,node_label
+0,ACC_Accounts_Payable
+1,ACC_Inventory
+2,ACC_Accounts_Receivable
+3,ACC_Cash
+4,ACC_Travel_Exp
+5,ACC_COGS
+6,ACC_Sales_Revenue
+7,ACC_Payroll_Exp
+8,ACC_Rent_Exp
