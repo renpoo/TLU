@@ -37,42 +37,52 @@ def main():
     df_thermo    = safe_read_csv(os.path.join(output_data_dir, "result.001_1_1_filter_macro_thermodynamics.analysis.csv"))
     df_micro_for = safe_read_csv(os.path.join(output_data_dir, "result.002_2_2_filter_micro_forensics.analysis.csv"))
 
-    # 2. Extract Metrics
+    # 2. Extract Metrics & Convert to Scale-Invariant Ratios
     metrics = {
-        "max_residual": 0.0,
+        "max_abs_residual": 0.0,
+        "mean_gross_activity": 1e-9,  # Prevent div-by-zero
+        "relative_leak_ratio": 0.0,
         "max_spectral": 0.0,
         "min_free_energy": 0.0,
+        "min_relative_free_energy": 0.0,
         "max_z_score": 0.0
     }
     
+    if df_thermo is not None and 'gross_activity_U' in df_thermo.columns:
+        metrics["mean_gross_activity"] = df_thermo['gross_activity_U'].mean()
+        if 'free_energy_F' in df_thermo.columns:
+            metrics["min_free_energy"] = df_thermo['free_energy_F'].min()
+            # Calculate Relative Energy Depletion
+            # We want the minimum (most negative) ratio of Free Energy to Gross Activity
+            metrics["min_relative_free_energy"] = (df_thermo['free_energy_F'] / df_thermo['gross_activity_U']).min()
+
     if df_macro_for is not None and 'conservation_residual' in df_macro_for.columns:
-        metrics["max_residual"] = df_macro_for['conservation_residual'].abs().max()
+        metrics["max_abs_residual"] = df_macro_for['conservation_residual'].abs().max()
+        # Calculate Relative Mass Leakage
+        metrics["relative_leak_ratio"] = metrics["max_abs_residual"] / metrics["mean_gross_activity"]
         
     if df_stability is not None and 'spectral_radius' in df_stability.columns:
         metrics["max_spectral"] = df_stability['spectral_radius'].max()
         
-    if df_thermo is not None and 'free_energy_F' in df_thermo.columns:
-        metrics["min_free_energy"] = df_thermo['free_energy_F'].min()
-        
     if df_micro_for is not None and 'node_univariate_z_score' in df_micro_for.columns:
         metrics["max_z_score"] = df_micro_for['node_univariate_z_score'].max()
 
-    # 3. Decision Tree Logic
-    # Thresholds
-    T_RESIDUAL = 1.0        # More than 1 unit of leak
-    T_SPECTRAL = 0.90       # Nearing 1.0 instability
-    T_FREE_ENERGY = -100.0  # Deep negative energy
-    T_Z_SCORE = 3.0         # 3 Sigma anomaly
+    # 3. Decision Tree Logic (Using SCALE-INVARIANT Thresholds)
+    # Dimensionless Ratios
+    T_REL_LEAK = 0.001          # 0.1% systemic mass leak
+    T_SPECTRAL = 0.90           # Nearing 1.0 instability
+    T_REL_FREE_ENERGY = -0.10   # Free energy drops to -10% of total activity
+    T_Z_SCORE = 3.0             # 3 Sigma anomaly
     
     diagnoses = []
     
     # Rule 1: Mass Conservation (Syntax Error / Direct Leak)
-    if metrics["max_residual"] > T_RESIDUAL:
+    if metrics["relative_leak_ratio"] > T_REL_LEAK:
         diagnoses.append({
             "pathology": "Unbalanced Journal Mistake (Conservation Violation)",
             "severity": "CRITICAL",
-            "evidence": f"Conservation Residual reached {metrics['max_residual']:.2f} (Threshold: {T_RESIDUAL}).",
-            "interpretation": "The fundamental law of mass conservation is broken. Funds are appearing or disappearing from the ledger without an offsetting entry."
+            "evidence": f"Relative Leak Ratio reached {metrics['relative_leak_ratio']:.4f} (Threshold: {T_REL_LEAK}). Raw residual: {metrics['max_abs_residual']:.2f}",
+            "interpretation": "The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere."
         })
         
     # Rule 2: Topological Loop (Wash Trade / Cycling)
@@ -81,16 +91,16 @@ def main():
             "pathology": "Topological Feedback Loop (Wash Trade)",
             "severity": "HIGH",
             "evidence": f"Spectral Radius reached {metrics['max_spectral']:.4f} (Threshold: {T_SPECTRAL}).",
-            "interpretation": "An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of Wash Trading."
+            "interpretation": "An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading)."
         })
         
     # Rule 3: Thermodynamic Depletion (Embezzlement / Leak)
-    if metrics["min_free_energy"] < T_FREE_ENERGY:
+    if metrics["min_relative_free_energy"] < T_REL_FREE_ENERGY:
         diagnoses.append({
             "pathology": "Thermodynamic Energy Depletion (Embezzlement/Leak)",
             "severity": "HIGH",
-            "evidence": f"Free Energy sank to {metrics['min_free_energy']:.2f} (Threshold: {T_FREE_ENERGY}).",
-            "interpretation": "Despite high transaction volume, the operational 'blood' of the system is leaking outwards, causing the network's capacity to perform work to collapse."
+            "evidence": f"Relative Free Energy Ratio sank to {metrics['min_relative_free_energy']:.4f} (Threshold: {T_REL_FREE_ENERGY}). Raw F: {metrics['min_free_energy']:.2f}",
+            "interpretation": "Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale."
         })
         
     # Rule 4: Local Pathological Stress
@@ -134,13 +144,13 @@ def main():
             f.write(f"- **Evidence:** {d['evidence']}\n")
             f.write(f"- **Interpretation:** {d['interpretation']}\n\n")
 
-        f.write("---\n## 2. Raw Diagnostic Metrics\n\n")
+        f.write("---\n## 2. Scale-Invariant Diagnostic Metrics\n\n")
         f.write("| Physical Domain | Extracted Metric | Value | Threshold |\n")
         f.write("|-----------------|------------------|-------|-----------|\n")
-        f.write(f"| Macro Forensics | Max Abs Residual | {metrics['max_residual']:.2f} | > {T_RESIDUAL} |\n")
-        f.write(f"| Control Theory  | Max Spectral Rad.| {metrics['max_spectral']:.4f} | >= {T_SPECTRAL} |\n")
-        f.write(f"| Thermodynamics  | Min Free Energy  | {metrics['min_free_energy']:.2f} | < {T_FREE_ENERGY} |\n")
-        f.write(f"| Micro Forensics | Max Z-Score      | {metrics['max_z_score']:.2f} | > {T_Z_SCORE} |\n")
+        f.write(f"| Macro Forensics | Relative Mass Leak Ratio | {metrics['relative_leak_ratio']:.4f} | > {T_REL_LEAK} |\n")
+        f.write(f"| Control Theory  | Max Spectral Radius      | {metrics['max_spectral']:.4f} | >= {T_SPECTRAL} |\n")
+        f.write(f"| Thermodynamics  | Relative Free Energy Ratio| {metrics['min_relative_free_energy']:.4f} | < {T_REL_FREE_ENERGY} |\n")
+        f.write(f"| Micro Forensics | Max Local Z-Score        | {metrics['max_z_score']:.2f} | > {T_Z_SCORE} |\n")
         
         f.write("\n> *Generated automatically by the TLU Meta-Diagnosis Engine.*")
 

@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_3_Unbalanced_Mistake`
-**Date Analyzed:** 2026-04-26 07:31:47
+**Date Analyzed:** 2026-04-26 23:51:07
 
 ## 1. Final Diagnosis
 
@@ -10,13 +10,13 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🔴 Unbalanced Journal Mistake (Conservation Violation)
 - **Severity:** CRITICAL
-- **Evidence:** Conservation Residual reached 1009.24 (Threshold: 1.0).
-- **Interpretation:** The fundamental law of mass conservation is broken. Funds are appearing or disappearing from the ledger without an offsetting entry.
+- **Evidence:** Relative Leak Ratio reached 0.0149 (Threshold: 0.001). Raw residual: 1009.24
+- **Interpretation:** The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere.
 
 ### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
 - **Severity:** HIGH
-- **Evidence:** Free Energy sank to -17943.83 (Threshold: -100.0).
-- **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards, causing the network's capacity to perform work to collapse.
+- **Evidence:** Relative Free Energy Ratio sank to -0.2140 (Threshold: -0.1). Raw F: -17943.83
+- **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
 
 ### 🟡 Local Pathological Stress (Micro Singularity)
 - **Severity:** MEDIUM
@@ -24,13 +24,13 @@ The system is suffering from multiple overlapping structural failures.
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
-## 2. Raw Diagnostic Metrics
+## 2. Scale-Invariant Diagnostic Metrics
 
 | Physical Domain | Extracted Metric | Value | Threshold |
 |-----------------|------------------|-------|-----------|
-| Macro Forensics | Max Abs Residual | 1009.24 | > 1.0 |
-| Control Theory  | Max Spectral Rad.| 0.0000 | >= 0.9 |
-| Thermodynamics  | Min Free Energy  | -17943.83 | < -100.0 |
-| Micro Forensics | Max Z-Score      | 142.32 | > 3.0 |
+| Macro Forensics | Relative Mass Leak Ratio | 0.0149 | > 0.001 |
+| Control Theory  | Max Spectral Radius      | 0.0000 | >= 0.9 |
+| Thermodynamics  | Relative Free Energy Ratio| -0.2140 | < -0.1 |
+| Micro Forensics | Max Local Z-Score        | 142.32 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*

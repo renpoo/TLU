@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_2_Embezzlement_Leak`
-**Date Analyzed:** 2026-04-26 07:31:46
+**Date Analyzed:** 2026-04-26 23:51:06
 
 ## 1. Final Diagnosis
 
@@ -10,8 +10,8 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
 - **Severity:** HIGH
-- **Evidence:** Free Energy sank to -19910.47 (Threshold: -100.0).
-- **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards, causing the network's capacity to perform work to collapse.
+- **Evidence:** Relative Free Energy Ratio sank to -0.3052 (Threshold: -0.1). Raw F: -19910.47
+- **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
 
 ### 🟡 Local Pathological Stress (Micro Singularity)
 - **Severity:** MEDIUM
@@ -19,13 +19,13 @@ The system is suffering from multiple overlapping structural failures.
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
-## 2. Raw Diagnostic Metrics
+## 2. Scale-Invariant Diagnostic Metrics
 
 | Physical Domain | Extracted Metric | Value | Threshold |
 |-----------------|------------------|-------|-----------|
-| Macro Forensics | Max Abs Residual | 0.00 | > 1.0 |
-| Control Theory  | Max Spectral Rad.| 0.0000 | >= 0.9 |
-| Thermodynamics  | Min Free Energy  | -19910.47 | < -100.0 |
-| Micro Forensics | Max Z-Score      | 198.24 | > 3.0 |
+| Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
+| Control Theory  | Max Spectral Radius      | 0.0000 | >= 0.9 |
+| Thermodynamics  | Relative Free Energy Ratio| -0.3052 | < -0.1 |
+| Micro Forensics | Max Local Z-Score        | 198.24 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
