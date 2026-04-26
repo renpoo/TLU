@@ -5,8 +5,9 @@ from src.filters.cli_parser import parse_projector_args
 from src.filters.stream_processor import IndexRegistry, process_csv_stream, export_registry
 
 def main():
-
-    path = "workspace/ephemeral/"
+    import os
+    env_dir = os.environ.get("TARGET_ENV", "workspace")
+    path = f"{env_dir}/ephemeral/"
 
     # 1. Parse CLI arguments (pass arguments after script name using sys.argv[1:])
     mapping_config = parse_projector_args(sys.argv[1:])

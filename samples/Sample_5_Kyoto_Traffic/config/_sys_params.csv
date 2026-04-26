@@ -1,0 +1,73 @@
+# ==============================================================================
+# TLU System Configuration Parameters (_sys_params.csv)
+# Ordered by pipeline execution phases and shared global usage.
+# ==============================================================================
+
+# ---------------------------------------------------------
+# STREAM I/O COLUMN DEFINITIONS (Data Mapping)
+# ---------------------------------------------------------
+input_csv,input_stream/Dummy_Kyoto_Traffic_Journal_Aggregated.csv
+col_trans_date,Trans_Date
+col_src,Src
+col_tgt,Tgt
+col_amount,Amount
+
+# ---------------------------------------------------------
+# GLOBAL / SHARED HYPERPARAMETERS
+# ---------------------------------------------------------
+# Base observation scale to coarse-grain (macroscopize) the entire system
+# (Unifies all window sizes for Thermodynamics, Geometry, Forensics, Connectivity, etc.)
+# Note: Now treating this as 'steps' (weeks) instead of months. 24 weeks = ~6 months.
+observation_window_months,24
+
+# Damping factor (gamma) for propagation depth (used in FK/IK & Sensitivity)
+damping_factor,0.85
+# Safe inversion penalty to prevent divergence (Tikhonov regularization)
+tikhonov_lambda,0.0001
+
+# ---------------------------------------------------------
+# [0_0] PHASE 0: Dummy Journal Stream Generator
+# ---------------------------------------------------------
+dummy_duration_months,24
+dummy_random_seed,42
+
+# ---------------------------------------------------------
+# [001] PHASE 1: Macro/Local Thermodynamics & Time-Lag
+# ---------------------------------------------------------
+# Definition of systemic Work vs. Heat (001_1_1)
+thermo_work_labels,Higashiyama_Sanjo
+thermo_heat_labels,Gion,Kiyomizu_dera
+
+# ---------------------------------------------------------
+# [002] PHASE 2: Information Curvature, Topology & Forensics
+# ---------------------------------------------------------
+# Thresholds for Anomaly Detection, Isolation & Pathological Drifts (002_2_x)
+anomaly_z_score_threshold,3.0
+leak_tolerance,1.0
+kl_drift_thresh,2.0
+
+# ---------------------------------------------------------
+# [003/004] PHASE 3 & 4: Optimal Control Theory (LQR)
+# ---------------------------------------------------------
+# Budget-allocable departments (intervention knobs for 004_1_1)
+lqr_controllable_labels,Kyoto_Station,Karasuma_Oike
+# Intended absolute target state (e.g., Sales Revenue goal: 004_1_1)
+lqr_target_state,ACC_Sales_Revenue:10000
+# LQR weight parameters (Q: target adherence priority, R: budget saving austerity)
+lqr_q_weight,1.0
+lqr_r_weight,0.1
+
+# Maximum propagation depth for kinematics/sensitivity
+kinematics_max_k,5
+
+# Forward Kinematics (FK)
+fk_input_mode,actual
+# Static delta q to inject if fk_input_mode is "static"
+fk_static_dq_labels,ACC_Sales_Revenue:10000
+
+# Inverse Kinematics (IK)
+ik_target_labels,ACC_Sales_Revenue:10000.0
+
+# Sensitivity Analysis
+sensitivity_delta,10.0
+

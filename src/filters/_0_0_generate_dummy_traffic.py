@@ -63,8 +63,10 @@ for day in range(total_days):
                 })
 
 # 3. Save as CSV
+import os
+env_dir = os.environ.get("TARGET_ENV", "workspace")
 df = pd.DataFrame(transactions)
-df.to_csv("workspace/input_stream/Dummy_Kyoto_Traffic_Journal_Amount.csv", index=False, encoding="utf-8")
+df.to_csv(f"{env_dir}/input_stream/Dummy_Kyoto_Traffic_Journal_Amount.csv", index=False, encoding="utf-8")
 
 print(f"Generation complete: Created {len(df)} rows of traffic data.")
 print(df.head())

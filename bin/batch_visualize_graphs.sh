@@ -7,7 +7,7 @@ set -euo pipefail
 
 # Parse command line arguments first so they are available when sourcing the environment
 export TLU_THEME="dark"
-export TARGET_ENV=""
+export TARGET_ENV="${TARGET_ENV:-}"
 
 while [[ $# -gt 0 ]]; do
   case $1 in

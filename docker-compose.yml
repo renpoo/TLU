@@ -20,6 +20,9 @@ services:
       # アーカイブデータへのアクセス許可（履歴の可視化用）
       - ./archives:/app/archives
       
+      # サンプルデータへのアクセス許可
+      - ./samples:/app/samples
+      
       # 【Immutable Zone】コードとスクリプトも同様にマウント
       - ./src:/app/src
       - ./tests:/app/tests

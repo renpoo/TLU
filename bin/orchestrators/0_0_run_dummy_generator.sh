@@ -10,7 +10,8 @@ source "$(dirname "$0")/_tlu_env.sh"
 
 # 2. Define output destination
 # Output to the directory that becomes the input for subsequent pipelines using TLU_PROJECT_ROOT.
-OUTPUT_FILE="${TLU_PROJECT_ROOT}/workspace/input_stream/Dummy_Journal_Stream.csv"
+ENV_DIR="${TARGET_ENV:-workspace}"
+OUTPUT_FILE="${TLU_PROJECT_ROOT}/${ENV_DIR}/input_stream/Dummy_Journal_Stream.csv"
 
 echo "=================================================="
 echo "TLU Phase 0: Dummy Journal Generator"
@@ -32,10 +33,10 @@ SEED="${TLU_DUMMY_RANDOM_SEED:?Environment variable TLU_DUMMY_RANDOM_SEED is not
 ${TLU_PY} -m src.filters._0_0_generate_dummy_journal \
     --months "${MONTHS}" \
     --seed "${SEED}" \
-    --sales-leak-prob 0.005 \
-    --purchase-leak-prob 0.01 \
-    --wash-trade-prob 0.005 \
-    --unbalanced-mistake-prob 0.005 \
+    --sales-leak-prob "${TLU_SALES_LEAK_PROB:-0.0}" \
+    --purchase-leak-prob "${TLU_PURCHASE_LEAK_PROB:-0.0}" \
+    --wash-trade-prob "${TLU_WASH_TRADE_PROB:-0.0}" \
+    --unbalanced-mistake-prob "${TLU_UNBALANCED_PROB:-0.0}" \
     > "${OUTPUT_FILE}"
     # > "${OUTPUT_FILE}"
 

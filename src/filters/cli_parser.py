@@ -60,10 +60,12 @@ def get_base_parser(description: str) -> argparse.ArgumentParser:
     @post
         - Defines configuration variables targeting standard workspace ephemeral data outputs.
     """
+    import os
+    env_dir = os.environ.get("TARGET_ENV", "workspace")
     parser = argparse.ArgumentParser(description=description)
-    parser.add_argument("--time_map", type=str, default="workspace/ephemeral/_time_map.csv")
-    parser.add_argument("--node_map", type=str, default="workspace/ephemeral/_node_map.csv")
-    parser.add_argument("--sys_params", type=str, default="workspace/config/_sys_params.csv")
+    parser.add_argument("--time_map", type=str, default=f"{env_dir}/ephemeral/_time_map.csv")
+    parser.add_argument("--node_map", type=str, default=f"{env_dir}/ephemeral/_node_map.csv")
+    parser.add_argument("--sys_params", type=str, default=f"{env_dir}/config/_sys_params.csv")
     return parser
 
 def parse_projector_args(args_list: list[str]) -> dict:
@@ -90,8 +92,10 @@ def parse_projector_args(args_list: list[str]) -> dict:
     parsed, _ = parser.parse_known_args(args_list)
     result = vars(parsed)
     
+    import os
+    env_dir = os.environ.get("TARGET_ENV", "workspace")
     # Gracefully merge loaded system parameter baselines resolving omitted stream aliases
-    sys_params = load_sys_params("workspace/config/_sys_params.csv")
+    sys_params = load_sys_params(f"{env_dir}/config/_sys_params.csv")
     
     col_mapping = ["col_time", "col_src", "col_tgt", "col_val"]
     
