@@ -104,7 +104,7 @@ Stop guessing. Use **Linear-Quadratic Regulator (LQR)** theory to calculate the 
 
 Is the system spinning out of control? By calculating the maximum eigenvalue (**Spectral Radius**) of the transition matrix, TLU detects topological cycles (e.g., Wash Trading or recursive loops). If the radius approaches or exceeds 1.0, the system is mathematically unstable and prone to exponential divergence.
 
-<img width="1800" height="900" alt="004_1_2__system_stability" src="https://github.com/user-attachments/assets/placeholder_for_stability" />
+<img width="1680" height="1018" alt="004_1_2__system_stability" src="https://github.com/user-attachments/assets/b4944e8d-8253-409a-b6a4-79c234efed57" />
 
 ---
 
