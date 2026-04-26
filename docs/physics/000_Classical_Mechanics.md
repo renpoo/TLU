@@ -61,7 +61,21 @@ This normalization projects the stiffness into a strict `[-1.0, 1.0]` space:
 * **Negative Stiffness (Trade-off):** A direct zero-sum constraint. Investing energy here mathematically drains energy from there.
 * **Zero Stiffness:** They are structurally independent, even if they appear correlated on the surface.
 
-## 3. Business Implications
+## 3. Principal Axes & Variance Dimensions (000_2_2)
+
+While the Precision Matrix measures the direct stiffness between individual node pairs, **Principal Axes (PCA)** extracts the macro-level "dimensions" of the entire organization's movement.
+
+### Eigenvalues and Eigenvectors
+
+By calculating the covariance matrix of the flux history and performing an eigendecomposition, TLU identifies the Principal Components of the network:
+
+* **Eigenvectors (The Axes):** The primary directions in which resources flow together as a cohesive block.
+* **Eigenvalues (The Variance):** How much of the organization's total energy (variance) is captured by each axis.
+* **Explained Variance Ratio:** Shows whether the organization is heavily centralized (e.g., the first principal component explains 80% of all movement) or decentralized (variance is evenly spread across many dimensions).
+
+This allows leadership to understand the underlying "factors" driving the organization, stripping away the noise of individual node fluctuations.
+
+## 4. Business Implications
 
 By visualizing Phase Space and Structural Stiffness, leadership can definitively answer:
 

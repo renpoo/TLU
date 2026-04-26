@@ -34,6 +34,13 @@ While curvature looks at regions, this filter looks at the specific "blood vesse
 <img width="2104" height="1337" alt="002_1_2__network_topology t 00003" src="https://github.com/user-attachments/assets/dc5c3f12-c08f-4e4f-9290-93ffff503f72" />
 <img width="2104" height="1337" alt="002_1_2__network_topology t 00004" src="https://github.com/user-attachments/assets/b94fbeea-a0f6-4223-8bd6-8496693e657f" />
 
+### Manifold Dimensionality (SVD) (002_1_3)
+
+While Curvature identifies local stress points, **Manifold Dimensionality** assesses the global structural integrity of the network using Singular Value Decomposition (SVD).
+
+* **Effective Rank:** TLU calculates the number of significant singular values of the transition matrix. If a network with 100 nodes suddenly drops to an effective rank of 5, it means the entire manifold has "collapsed." 
+* **Detection of Over-Centralization:** This collapse indicates that instead of resources flowing naturally across the diverse network, almost all traffic is being artificially routed through just a handful of dominant hubs (e.g., a monopoly forming, or a massive traffic jam freezing the logistics grid).
+
 ## 2. Statistical Forensics & Conservation Laws
 
 Forensics relies on mathematical invariants. If a fundamental law of the system is broken, it flags an anomaly—whether caused by data corruption, sudden market shifts, or intentional fraud.

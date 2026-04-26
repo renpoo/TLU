@@ -39,7 +39,12 @@ Observe the "pulse" and "stiffness" of your organization. TLU calculates **Veloc
 <img width="1666" height="1324" alt="1_3_2__3d_dynamics_acceleration" src="https://github.com/user-attachments/assets/006abbf9-c505-4888-9809-c0908f04226a" />
 <img width="1666" height="1324" alt="1_3_3__3d_dynamics_inertia" src="https://github.com/user-attachments/assets/7b84f2a0-86c5-4a79-a918-ce37c413d136" />
 <img width="1666" height="1324" alt="1_3_4__3d_dynamics_viscosity" src="https://github.com/user-attachments/assets/fda0249f-bf17-4288-a1c0-e9934dda2ee8" />
-<img width="1879" height="1537" alt="1_3_8__phase_portrait_3d" src="https://github.com/user-attachments/assets/e6e380a3-2cd8-4402-b727-14842359f2ab" />
+<img width="1666" height="1324" alt="1_3_8__phase_portrait_3d" src="https://github.com/user-attachments/assets/e6e380a3-2cd8-4402-b727-14842359f2ab" />
+
+### Principal Axes (PCA)
+TLU also extracts the **Principal Axes** of the network by calculating the eigenvalues and eigenvectors of the covariance matrix. This reveals the dominant "dimensions" of variance—the primary directions in which the organization's resources naturally flow and fluctuate.
+
+<img width="1800" height="900" alt="000_2_2__principal_axes" src="https://github.com/user-attachments/assets/placeholder_for_pca" />
 
 ### 001_ Thermodynamics & Statistical Mechanics
 
@@ -60,6 +65,11 @@ Unmask anomalies hiding in the data's "blood vessels." TLU calculates **Topologi
 <img width="2187" height="1335" alt="1_12__network_topology t 00002" src="https://github.com/user-attachments/assets/5e7b7ba6-acea-4a65-9d80-c9c5a7cdf9e5" />
 <img width="2187" height="1335" alt="1_12__network_topology t 00003" src="https://github.com/user-attachments/assets/f418bac3-b032-4983-9121-7cd62080c38c" />
 
+### Manifold Dimensionality (SVD)
+By performing Singular Value Decomposition (SVD) on the transition matrix, TLU calculates the **Effective Rank** of the network. If the network becomes over-centralized or collapses into a few hubs, the effective dimensionality drops, acting as an early warning for structural fragility.
+
+<img width="1800" height="900" alt="002_1_3__manifold_dimensionality" src="https://github.com/user-attachments/assets/placeholder_for_svd" />
+
 ### 003_ Applied Kinematics & Robotics
 
 *(Supports Forward Kinematics for simulating the ripple effects of virtual investments, and Inverse Kinematics for calculating the required target intervention while considering stiffness penalties.)*
@@ -74,6 +84,11 @@ Stop guessing. Use **Linear-Quadratic Regulator (LQR)** theory to calculate the 
 <img width="1781" height="1026" alt="1_7_2__control_error_convergence" src="https://github.com/user-attachments/assets/93fd6e45-940e-435d-9777-ce99502e1eaa" />
 <img width="1997" height="1124" alt="1_7_3__control_lqr_performance_space" src="https://github.com/user-attachments/assets/98f2dc6b-3034-4520-90d2-bb887449b4eb" />
 
+### System Stability (Spectral Radius)
+Is the system spinning out of control? By calculating the maximum eigenvalue (**Spectral Radius**) of the transition matrix, TLU detects topological cycles (e.g., Wash Trading or recursive loops). If the radius approaches or exceeds 1.0, the system is mathematically unstable and prone to exponential divergence.
+
+<img width="1800" height="900" alt="004_1_2__system_stability" src="https://github.com/user-attachments/assets/placeholder_for_stability" />
+
 ---
 
 ## Documentation (Hub & Spoke)
@@ -86,6 +101,7 @@ For detailed mathematical logic, operational protocols, and API references, plea
 * [03_Visualizer_and_Theme_Engine.md](docs/architecture/03_Visualizer_and_Theme_Engine.md)
 * [04_Simulation_and_TDD.md](docs/architecture/04_Simulation_and_TDD.md)
 * [05_Meta_Analytical_Methodology_and_AI_Collaboration.md](docs/architecture/05_Meta_Analytical_Methodology_and_AI_Collaboration.md)
+* [06_Dummy_Data_Generators.md](docs/architecture/06_Dummy_Data_Generators.md)
 * [000_Classical_Mechanics.md](docs/physics/000_Classical_Mechanics.md)
 * [001_Thermodynamics_and_Fluctuations.md](docs/physics/001_Thermodynamics_and_Fluctuations.md)
 * [002_Information_Geometry_and_Forensics.md](docs/physics/002_Information_Geometry_and_Forensics.md)
