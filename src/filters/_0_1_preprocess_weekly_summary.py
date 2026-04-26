@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # ==========================================
-# _0_1_preprocess_monthly_summary.py
+# _0_1_preprocess_weekly_summary.py
 # TLU System: Pre-filtering Layer
-# Action: Monthly Aggregation of Journal Entries (Account:Dept Level)
+# Action: Weekly Aggregation of Journal Entries (Account:Dept Level)
 # ==========================================
 import sys
 import pandas as pd
@@ -24,17 +24,12 @@ def main():
     if df.empty:
         sys.exit(0)
 
-    # 2. Create quarterly labels in 'YYYY-Q#' format using Pandas datetime properties
-    df['Month'] = pd.to_datetime(df[col_time]).dt.strftime('%Y-%m')
-    
-    # Use Pandas built-in quarter functionality
+    # 2. Create weekly labels in 'YYYY-W##' format using Pandas ISO calendar
     dt_col = pd.to_datetime(df[col_time])
-    df["Quarter"] = "Y" + dt_col.dt.year.astype(str) + "-Q" + dt_col.dt.quarter.astype(str)
-    
-    df = df.sort_values(["Quarter", "Month"])
+    df['Week'] = dt_col.dt.isocalendar().year.astype(str) + "-W" + dt_col.dt.isocalendar().week.astype(str).str.zfill(2)
 
-    # 3. Reconstruct Debit/Credit flux into a single 'inter-node movement (From -> To)'
-    debits = df[df['Debit'] > 0][['Entry_ID', 'Quarter', 'Account_Name', 'Dept_Name', 'Debit']].rename(
+    # 3. Reconstruct debit / credit flux into a single "movement between nodes (From -> To)"
+    debits = df[df['Debit'] > 0][['Entry_ID', 'Week', 'Account_Name', 'Dept_Name', 'Debit']].rename(
         columns={'Account_Name': 'Tgt_Account', 'Dept_Name': 'Tgt_Dept', 'Debit': col_val}
     )
     
@@ -42,19 +37,19 @@ def main():
         columns={'Account_Name': 'Src_Account', 'Dept_Name': 'Src_Dept'}
     )
     
-    # Join by Entry_ID to express Source -> Target in one row
+    # Join on Entry_ID and represent Source -> Target in 1 row
     edges = pd.merge(debits, credits, on='Entry_ID', how='inner')
 
     # 4. Concatenate Account and Dept with ':' to create a unique node name
-    edges[col_time] = edges['Quarter']
+    edges[col_time] = edges['Week']
     edges[col_src] = edges['Src_Account'].astype(str)
     edges[col_tgt] = edges['Tgt_Account'].astype(str)
 
-    # 5. Aggregate (sum) exactly by dynamically configured mapped keys identically
-    monthly_summary = edges.groupby([col_time, col_src, col_tgt])[col_val].sum().reset_index()
+    # 5. Sum (aggregate) Amount by combination of Week, Source Node, Target Node
+    weekly_summary = edges.groupby([col_time, col_src, col_tgt])[col_val].sum().reset_index()
 
-    # 6. Reformat into a flat COO format readable by the TLU Projector
-    monthly_summary.to_csv(sys.stdout, index=False)
+    # 6. Reformat into a flat COO format readable by TLU Projector
+    weekly_summary.to_csv(sys.stdout, index=False)
 
 if __name__ == "__main__":
     main()
