@@ -29,10 +29,7 @@ TEST_MODULES=(
     "tests.unit.test_core_control_theory"
     "tests.unit.test_core_topology"
     "tests.unit.test_filter_linear_algebra"
-    "tests.unit.test_filter_resonant_frequency"
     "tests.unit.test_filter_phase_shift"
-    "tests.unit.test_filter_traversing_ccf"
-    "tests.unit.test_filter_fractal_noise"
     
     # --- Integration Tests ---
     "tests.integration.test_000_1_1_filter_dynamics_state"
@@ -48,6 +45,9 @@ TEST_MODULES=(
     "tests.integration.test_003_1_2_filter_ik_optimization"
     "tests.integration.test_004_1_1_filter_control_theory"
     "tests.integration.test_004_2_1_filter_sensitivity"
+    "tests.integration.test_005_1_1_filter_resonant_frequency"
+    "tests.integration.test_005_1_2_filter_phase_shift_coherence"
+    "tests.integration.test_005_2_1_filter_fractal_noise"
 )
 
 # 3. Sequential execution of tests
