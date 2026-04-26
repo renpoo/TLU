@@ -84,7 +84,7 @@ Unmask anomalies hiding in the data's "blood vessels." TLU calculates **Topologi
 
 By performing Singular Value Decomposition (SVD) on the transition matrix, TLU calculates the **Effective Rank** of the network. If the network becomes over-centralized or collapses into a few hubs, the effective dimensionality drops, acting as an early warning for structural fragility.
 
-<img width="1800" height="900" alt="002_1_3__manifold_dimensionality" src="https://github.com/user-attachments/assets/placeholder_for_svd" />
+<img width="1688" height="1018" alt="002_1_3__manifold_dimensionality" src="https://github.com/user-attachments/assets/3ed10e21-82c7-4d1c-b1bf-58cbdfabe4d5" />
 
 ### 003_ Applied Kinematics & Robotics
 
