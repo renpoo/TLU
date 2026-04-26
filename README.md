@@ -18,6 +18,8 @@ When physicists model the stress propagation, heat dissipation, or resonant freq
 
 By treating the organization as a **discrete elastic medium (a Mass-Spring-Damper network)**, TLU legitimately applies the equation of motion ($M\ddot{x} + C\dot{x} + Kx = F$) to calculate how external financial shocks (anomalies, fraud, market shifts) propagate, resonate, and decay through the business structure. TLU does not claim that a company obeys Newton's laws; rather, it uses these equations as an extraordinarily sensitive **Physics-Informed Feature Extractor** to surface anomalies that traditional accounting X-rays miss.
 
+<img width="2816" height="1536" alt="Gemini_Generated_Image_e285yee285yee285" src="https://github.com/user-attachments/assets/6de49c8b-f38a-4b9e-94fd-d6406496018b" />
+
 ---
 
 ## Core Philosophy & Architecture (Ver 8.0.0)
