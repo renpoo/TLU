@@ -1,0 +1,7 @@
+Environment,Max_Conservation_Residual,Max_Spectral_Radius,Min_Free_Energy,Max_Local_Z_Score
+Sample_0_Healthy,0.0,0.0,-19226.6677,142.318
+Sample_1_Wash_Trade,0.0,0.972392,-21548.7002,38.5957
+Sample_2_Embezzlement_Leak,0.0,0.0,-19910.4673,198.2444
+Sample_3_Unbalanced_Mistake,1009.24,0.0,-17943.8339,142.318
+Sample_4_Composite_Chaos,953.55,0.966542,-16025.8279,28.7189
+Sample_5_Kyoto_Traffic,0.0,1.0,39396.2358,18.6

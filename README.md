@@ -163,8 +163,17 @@ bash bin/batch_generate_dummy_journal_data.sh
 bash bin/batch_processing.sh
 bash bin/batch_visualize_graphs.sh
 
-# 4. Snapshot the experiment for perfect reproducibility
+# 4. Check the Diagnosis
+# The batch_processing.sh script automatically runs the Meta-Diagnosis Engine 
+# at the very end. Check your output directory for the final medical chart:
+cat workspace/output_data/_99_diagnosis_report.md
+
+# 5. Snapshot the experiment for perfect reproducibility
 bash bin/archive_experimental_run.sh
+
+# 6. (Optional) Cross-Environment Comparison
+# Compare multiple experiments or samples side-by-side
+bash bin/batch_meta_analysis.sh --envs "samples/Sample_*" --out "samples"
 ```
 
 # License: AGPL-3.0

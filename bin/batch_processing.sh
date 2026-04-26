@@ -50,4 +50,7 @@ for script in "${SCRIPTS[@]}"; do
     bash "${ORCH_DIR}/${script}"
 done
 
+echo -e "\n[EXECUTING] Meta-Diagnosis Engine"
+bash "bin/run_meta_diagnosis.sh"
+
 echo -e "\nBatch processing completed successfully."
