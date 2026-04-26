@@ -30,6 +30,9 @@ TEST_MODULES=(
     "tests.unit.test_core_topology"
     "tests.unit.test_filter_linear_algebra"
     "tests.unit.test_filter_resonant_frequency"
+    "tests.unit.test_filter_phase_shift"
+    "tests.unit.test_filter_traversing_ccf"
+    "tests.unit.test_filter_fractal_noise"
     
     # --- Integration Tests ---
     "tests.integration.test_000_1_1_filter_dynamics_state"

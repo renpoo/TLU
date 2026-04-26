@@ -102,9 +102,15 @@ run_tlu_pipeline() {
 
     # Step 2: Filtering (Mathematical Analysis)
     # Safely execute by reading the completed latest _node_map.csv
-    cat "${TLU_TMP_COO}" \
-    | $TLU_PY -m "${filter_module}" "${extra_args[@]:-}" \
-    > "${TLU_OUT_DIR}/${out_filename}"
+    if [ ${#extra_args[@]} -gt 0 ]; then
+        cat "${TLU_TMP_COO}" \
+        | $TLU_PY -m "${filter_module}" "${extra_args[@]}" \
+        > "${TLU_OUT_DIR}/${out_filename}"
+    else
+        cat "${TLU_TMP_COO}" \
+        | $TLU_PY -m "${filter_module}" \
+        > "${TLU_OUT_DIR}/${out_filename}"
+    fi
 
     echo "${filter_desc} completed."
     echo ""

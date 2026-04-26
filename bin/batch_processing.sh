@@ -29,6 +29,9 @@ SCRIPTS=(
     "004_1_1_run_control_theory.sh"
     "004_1_2_run_system_stability.sh"
     "004_2_1_run_sensitivity.sh"
+    "005_1_1_run_resonant_frequency.sh"
+    "005_1_2_run_phase_shift.sh"
+    "005_2_1_run_fractal_noise.sh"
 )
 
 echo "Starting TLU batch processing..."
