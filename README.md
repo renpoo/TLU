@@ -59,7 +59,7 @@ Observe the "pulse" and "stiffness" of your organization. TLU calculates **Veloc
 
 TLU also extracts the **Principal Axes** of the network by calculating the eigenvalues and eigenvectors of the covariance matrix. This reveals the dominant "dimensions" of variance—the primary directions in which the organization's resources naturally flow and fluctuate.
 
-<img width="1800" height="900" alt="000_2_2__principal_axes" src="https://github.com/user-attachments/assets/placeholder_for_pca" />
+<img width="1674" height="1018" alt="000_2_2__principal_axes_ratio" src="https://github.com/user-attachments/assets/e24452b1-757b-4d61-acc9-490da73ea7a8" />
 
 ### 001_ Thermodynamics & Statistical Mechanics
 
