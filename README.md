@@ -93,6 +93,7 @@ For detailed mathematical logic, operational protocols, and API references, plea
 * [004_Control_Theory_and_Systems_Engineering.md](docs/physics/004_Control_Theory_and_Systems_Engineering.md)
 
 * [DISCUSSION.md](DISCUSSION.md)
+* [CAUTION.md](CAUTION.md)
 
 ---
 

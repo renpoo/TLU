@@ -20,6 +20,7 @@ def setup_argparser() -> argparse.ArgumentParser:
     parser.add_argument("--seed", type=int, default=42, help="Random seed")
     parser.add_argument("--sales-leak-prob", type=float, default=0.0, help="Accounts receivable not collected (with probability args.sales_leak_prob)")
     parser.add_argument("--purchase-leak-prob", type=float, default=0.0, help="Accounts payable not paid (with probability args.purchase_leak_prob)")
+    parser.add_argument("--wash-trade-prob", type=float, default=0.0, help="Probability of triggering a Wash Trading (Round-tripping) cycle per day")
     return parser
 
 def create_entry(entry_id: str, date_str: str, amount: float, debit_acc: str, debit_dept: str, credit_acc: str, credit_dept: str, memo: str) -> list:
@@ -169,6 +170,33 @@ def generate_stream(args):
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, 5000 + np.random.normal(0, 1200),
                 "Rent_Exp", "DPT_Admin", "Cash", "DPT_Admin", "Monthly_Rent"
+            ))
+            global_entry_count += 1
+        # --------------------------------------------------
+        # 6. Anomaly Injection: Wash Trading (Round-tripping)
+        # --------------------------------------------------
+        if args.wash_trade_prob > 0.0 and random.random() < args.wash_trade_prob:
+            wash_amount = np.random.normal(15000, 3000)
+            wash_amount = max(5000.0, wash_amount)
+            
+            # Step 1: Fund the shell company (CR Cash -> DR Accounts_Receivable)
+            daily_entries.extend(create_entry(
+                f"E_{global_entry_count:06d}", date_str, wash_amount,
+                "Accounts_Receivable", "DPT_Admin", "Cash", "DPT_Admin", "Wash_Funding"
+            ))
+            global_entry_count += 1
+            
+            # Step 2: Fake Sale to the shell company (CR Sales_Revenue -> DR Accounts_Receivable)
+            daily_entries.extend(create_entry(
+                f"E_{global_entry_count:06d}", date_str, wash_amount,
+                "Accounts_Receivable", "DPT_Admin", "Sales_Revenue", "DPT_Sales", "Wash_Sale"
+            ))
+            global_entry_count += 1
+            
+            # Step 3: Shell company pays using the funded cash (CR Accounts_Receivable -> DR Cash)
+            daily_entries.extend(create_entry(
+                f"E_{global_entry_count:06d}", date_str, wash_amount,
+                "Cash", "DPT_Admin", "Accounts_Receivable", "DPT_Admin", "Wash_Collection"
             ))
             global_entry_count += 1
 

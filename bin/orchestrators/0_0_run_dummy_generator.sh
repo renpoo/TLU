@@ -32,8 +32,9 @@ SEED="${TLU_DUMMY_RANDOM_SEED:?Environment variable TLU_DUMMY_RANDOM_SEED is not
 ${TLU_PY} -m src.filters._0_0_generate_dummy_journal \
     --months "${MONTHS}" \
     --seed "${SEED}" \
-    --sales-leak 0.01 \
-    --purchase-leak 0.005 \
+    --sales-leak-prob 0.01 \
+    --purchase-leak-prob 0.005 \
+    --wash-trade-prob 0.05 \
     > "${OUTPUT_FILE}"
     # > "${OUTPUT_FILE}"
 
