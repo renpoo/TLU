@@ -108,6 +108,21 @@ Is the system spinning out of control? By calculating the maximum eigenvalue (**
 
 ---
 
+## Sample Datasets & Hands-on Tutorials
+
+To help you understand how TLU works in practice without the cognitive overload of mixed signals, we provide a suite of **6 isolated sample datasets**. These datasets simulate both financial ledgers and spatial traffic networks under various controlled pathological conditions (e.g., Wash Trades, Embezzlement, Journaling Errors).
+
+You can find them in the `samples/` directory. Each sample includes a dedicated `README.md` explaining the anomaly injected, the physical reasoning behind it, and **the exact command you need to run to generate the visualization graphs** on your local machine.
+
+* `samples/Sample_0_Healthy/`: A perfectly balanced baseline.
+* `samples/Sample_1_Wash_Trade/`: Explains System Stability (Eigenvalues).
+* `samples/Sample_2_Embezzlement_Leak/`: Explains Thermodynamics (Free Energy).
+* `samples/Sample_3_Unbalanced_Mistake/`: Explains Macro Forensics (Conservation Law).
+* `samples/Sample_4_Composite_Chaos/`: A real-world chaotic mix of all anomalies.
+* `samples/Sample_5_Kyoto_Traffic/`: A pure spatial network (Open System) control experiment.
+
+---
+
 ## Documentation (Hub & Spoke)
 
 For detailed mathematical logic, operational protocols, and API references, please consult the "Spoke" manuals linked below:
