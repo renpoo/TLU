@@ -23,7 +23,8 @@ The generator deliberately injects specific structural and volume anomalies to t
 1. **Z-Spike (Outlier Expenditure):** A sudden, massive one-off transaction. Easily caught by standard Z-score analysis (Micro Forensics).
 2. **Leak (Embezzlement/Conservation Loss):** Funds are moved out of the system without a balancing entry. Caught by the Macro Forensics Conservation Leak detector.
 3. **Drift (Silent Supplier Swap):** The total expenditure of a department remains perfectly normal, but the *destination* of the funds suddenly shifts to a new vendor. Invisible to Z-scores, but creates a massive spike in **Local KL Drift**.
-4. **Wash Trading (Circular Transactions):** A series of transactions specifically designed to form a closed loop (e.g., `Cash -> AR -> Sales -> Cash`). This breaks the natural Directed Acyclic Graph (DAG) structure of the accounting ledger and is instantly flagged by the **System Stability (Spectral Radius)** filter.
+4. **Unbalanced Mistake (Journaling Error / Outside Leak):** A transaction is generated where Debits $\neq$ Credits (e.g. data loss or funds disappearing outside the ledger boundaries). This violates Kirchhoff's Current Law and is instantly detected by the Macro Forensics **Conservation Residual** sensor.
+5. **Wash Trading (Circular Transactions):** A series of transactions specifically designed to form a closed loop (e.g., `Cash -> AR -> Sales -> Cash`). This breaks the natural Directed Acyclic Graph (DAG) structure of the accounting ledger and is instantly flagged by the **System Stability (Spectral Radius)** filter.
 
 ---
 

@@ -21,16 +21,18 @@ def setup_argparser() -> argparse.ArgumentParser:
     parser.add_argument("--sales-leak-prob", type=float, default=0.0, help="Accounts receivable not collected (with probability args.sales_leak_prob)")
     parser.add_argument("--purchase-leak-prob", type=float, default=0.0, help="Accounts payable not paid (with probability args.purchase_leak_prob)")
     parser.add_argument("--wash-trade-prob", type=float, default=0.0, help="Probability of triggering a Wash Trading (Round-tripping) cycle per day")
+    parser.add_argument("--unbalanced-mistake-prob", type=float, default=0.0, help="Probability of a journaling mistake where Debit != Credit")
     return parser
 
-def create_entry(entry_id: str, date_str: str, amount: float, debit_acc: str, debit_dept: str, credit_acc: str, credit_dept: str, memo: str) -> list:
+def create_entry(entry_id: str, date_str: str, amount: float, debit_acc: str, debit_dept: str, credit_acc: str, credit_dept: str, memo: str, unbalanced_debit: float = None) -> list:
     """Generate one double-entry bookkeeping transaction (2 rows)"""
     amount = round(amount, 2)
+    debit_amt = round(unbalanced_debit, 2) if unbalanced_debit is not None else amount
     entry = []
     # Credit (Source of funds outflow)
     entry.append([entry_id, date_str, credit_acc, credit_dept, "0.0", str(amount), f"{memo}_CR"])
     # Debit (Destination of funds inflow)
-    entry.append([entry_id, date_str, debit_acc, debit_dept, str(amount), "0.0", f"{memo}_DR"])
+    entry.append([entry_id, date_str, debit_acc, debit_dept, str(debit_amt), "0.0", f"{memo}_DR"])
     return entry
 
 def generate_stream(args):
@@ -88,9 +90,14 @@ def generate_stream(args):
             collection_day = day + random.randint(30, 90)
             def make_collection(amt):
                 def task(d_str, e_count):
+                    unbalanced_debit = None
+                    if args.unbalanced_mistake_prob > 0.0 and random.random() < args.unbalanced_mistake_prob:
+                        unbalanced_debit = amt * random.uniform(0.0, 0.9) # Debit != Credit
+
                     return create_entry(
                         f"E_{e_count:06d}", d_str, amt,
-                        "Cash", "DPT_Admin", "Accounts_Receivable", "DPT_Admin", "AR_Collection"
+                        "Cash", "DPT_Admin", "Accounts_Receivable", "DPT_Admin", "AR_Collection",
+                        unbalanced_debit=unbalanced_debit
                     ), e_count + 1
                 return task
 
