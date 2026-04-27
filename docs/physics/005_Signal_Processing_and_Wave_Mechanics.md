@@ -16,7 +16,7 @@ Every healthy organization has a natural "heartbeat" or operational rhythm—for
 * **Dominant Frequency:** The specific periodic cycle at which the node vibrates most strongly.
 * **Spectral Power:** The intensity or strength of that specific frequency relative to the rest of the noise.
 
-<img width="1704" height="1323" alt="005_1_1__resonant_frequency" src="https://github.com/user-attachments/assets/6de49c8b-f38a-4b9e-94fd-d6406496018b" />
+![005_1_1__resonant_frequency](../readme_plots/005_1_1_resonant_frequency.png)
 
 ### Pathological Resonance
 If a massive, unexpected spectral peak appears at an unnatural frequency (e.g., a massive spike at exactly "3 days" that has never existed before in the company's history), it strongly suggests an artificial process has been introduced. In financial data, this is the fingerprint of a programmed bot or an automated embezzlement script siphoning micro-amounts of money at exact, mechanical intervals.
@@ -29,7 +29,7 @@ While Category 001 uses simple time-lag correlation, Category 005 evaluates the 
 * **Coherence:** A measure of how well the wave patterns of two nodes match each other at a specific frequency (a value from 0 to 1). High coherence means the two departments are moving perfectly in sync.
 * **Phase Shift ($\Delta \phi$):** The angular difference (time lag) between the two coherent waves. 
 
-<img width="1704" height="1323" alt="005_1_2__phase_drift_heatmap" src="https://github.com/user-attachments/assets/8a980a32-324b-4107-8fb9-59c650c9f11e" />
+![005_1_2__phase_drift_heatmap](../readme_plots/005_1_2__phase_drift_heatmap.png)
 
 ### Detecting Process Bottlenecks
 By plotting the Phase Shift over time in a rolling window, TLU creates a **Phase Drift Heatmap**. If the phase shift between "Sales" and "Cash Collection" suddenly begins to stretch (drift positively), it means the collection cycle is slowing down. The total assets on the Balance Sheet might look perfectly healthy, but the *velocity* of cash conversion is grinding to a halt—a critical early warning for an impending liquidity crisis.
@@ -45,7 +45,7 @@ TLU calculates the Power Spectral Density (PSD) decay and extracts the **Spectra
 * **Pink Noise ($\beta \approx 1$):** Fractal, long-memory processes. The hallmark of complex human and organic systems.
 * **Brown Noise ($\beta \approx 2$):** A random walk. Highly correlated short-term movements, but drifting aimlessly over the long term.
 
-<img width="1704" height="1323" alt="005_2_1__fractal_noise_spectrum" src="https://github.com/user-attachments/assets/7055aab8-6408-4769-b6d2-1554145e4b4a" />
+![005_2_1__fractal_noise_spectrum](../readme_plots/005_2_1_fractal_noise_spectrum.png)
 
 ### Detecting Data Fabrication
 Humans are notoriously terrible at generating true random variance. If an accountant manually fabricates thousands of fake ledger entries to hide a loss, or if a crude random number generator is used to pad a dataset, the resulting data will mathematically collapse into "White Noise." 

@@ -18,9 +18,9 @@ To understand the systemic health of the organization, TLU calculates four globa
 * **Entropy ($S$):** Calculated using Shannon Entropy on the distribution of flux. It measures the "disorder" or complexity of the allocation rules. A sudden spike in Entropy often precedes a structural regime shift or a breakdown of established processes.
 * **Free Energy ($F$):** Defined as $F = U - T \cdot S$. This is the most critical metric for leadership. It represents the actual potential of the system to do *useful work*, after subtracting the energy lost to chaos ($S$) and volatility ($T$). An organization with high Internal Energy but low Free Energy is highly active but highly inefficient—it is essentially a space heater.
 
-<img width="1784" height="1784" alt="001_1_1__thermodynamics_dashboard" src="https://github.com/user-attachments/assets/68679c55-c464-44ae-a01e-d91078811332" />
-<img width="1881" height="1019" alt="001_1_2__thermodynamics_energy_stack" src="https://github.com/user-attachments/assets/f652b264-b9df-404a-9f97-a2df486fbf63" />
-<img width="1509" height="976" alt="001_1_3__thermodynamics_ts_diagram" src="https://github.com/user-attachments/assets/8794da75-0075-4b49-8a61-846249824648" />
+![001_1_1__thermodynamics_dashboard](../readme_plots/001_1_1__thermodynamics_dashboard.png)
+![001_1_2__thermodynamics_energy_stack](../readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![001_1_3__thermodynamics_ts_diagram](../readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 ## 2. Local Thermodynamics (001_1_2)
 *Implementation: `src/filters/_001_1_2_filter_local_thermodynamics.py`*
@@ -31,10 +31,10 @@ The macro state variables can be projected down to individual nodes to identify 
 * **Local Complexity ($s_i$):** Does this node distribute its outputs to 2 predictable targets, or 50 random ones? High local entropy indicates a node burdened with complex, scattered responsibilities.
 * **Local Volatility ($t_i$):** How erratic is the flow through this specific node? Nodes with high local temperature are often bottlenecks suffering from inconsistent inputs.
 
-<img width="1704" height="1323" alt="001_1_2_1__3d_local_entropy" src="https://github.com/user-attachments/assets/fc6ead05-b03d-4b1f-8f50-44667aad4f77" />
-<img width="1704" height="1323" alt="001_1_2_2__3d_local_temperature" src="https://github.com/user-attachments/assets/f80a2f0c-b9d2-41be-915d-2b2b6543e5a0" />
-<img width="1898" height="1135" alt="001_1_2_3__local_thermo_volatility" src="https://github.com/user-attachments/assets/b0e2dd40-9f39-48ae-b174-bfac0824e544" />
-<img width="1894" height="1135" alt="001_1_2_4__local_thermo_complexity" src="https://github.com/user-attachments/assets/efe0361d-e04c-49ba-870e-51b008f6dac7" />
+![001_1_2_1__3d_local_entropy](../readme_plots/001_1_2_1__3d_local_entropy.png)
+![001_1_2_2__3d_local_temperature](../readme_plots/001_1_2_2__3d_local_temperature.png)
+![001_1_2_3__local_thermo_volatility](../readme_plots/001_1_2_4__local_thermo_volatility.png)
+![001_1_2_4__local_thermo_complexity](../readme_plots/001_1_2_5__local_thermo_complexity.png)
 
 ## 3. Statistical Fluctuations and Time Lag (001_2_1 & 001_2_2)
 *Implementation: `src/filters/_001_2_1_filter_lag_matrix.py`*
@@ -44,8 +44,8 @@ In complex systems, cause and effect are rarely instantaneous. A marketing inves
 * **Cross-Correlation Lag:** By calculating the Pearson correlation coefficient between two time-series signals while shifting one along the time axis (lag), TLU identifies the exact "phase shift" where the two waveforms align perfectly.
 * **The Full Lag Matrix:** TLU computes this optimal time lag for every single possible node pair ($N \times N$) in the network. This uncovers the true causal delays across the organization, distinguishing between immediate operational impacts and long-term strategic echoes.
 
-<img width="1868" height="1630" alt="001_2_1_1__lag_matrix_correlation" src="https://github.com/user-attachments/assets/c5fa435e-c599-4cab-a304-478864cca8f1" />
-<img width="1828" height="1631" alt="001_2_1_2__lag_matrix_optimal_lag" src="https://github.com/user-attachments/assets/9ca8f759-6530-4cba-8a50-334a90b8d07a" />
+![001_2_1_1__lag_matrix_correlation](../readme_plots/001_2_1_1__lag_matrix_correlation.png)
+![001_2_1_2__lag_matrix_optimal_lag](../readme_plots/001_2_1_2__lag_matrix_optimal_lag.png)
 
 ## 4. Business Implications
 
