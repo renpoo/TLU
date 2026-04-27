@@ -5,7 +5,7 @@ workspace/ephemeral/*.csv
 workspace/output_data/*.csv
 workspace/output_data/*.json
 workspace/output_data/*.md
-workspace/output_plots/**/*.png
+workspace/output_plots/**
 archives
 
 __pycache__/
