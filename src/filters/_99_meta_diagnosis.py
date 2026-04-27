@@ -2,6 +2,7 @@
 # _99_meta_diagnosis.py
 # TLU System: Automated Meta-Diagnosis Engine
 import os
+import json
 import argparse
 import pandas as pd
 from datetime import datetime
@@ -152,7 +153,34 @@ def main():
         f.write(f"| Thermodynamics  | Relative Free Energy Ratio| {metrics['min_relative_free_energy']:.4f} | < {T_REL_FREE_ENERGY} |\n")
         f.write(f"| Micro Forensics | Max Local Z-Score        | {metrics['max_z_score']:.2f} | > {T_Z_SCORE} |\n")
         
-        f.write("\n> *Generated automatically by the TLU Meta-Diagnosis Engine.*")
+        f.write("\n> *Generated automatically by the TLU Meta-Diagnosis Engine.*\n\n")
+
+        # 5. Generate LLM Context Block
+        f.write("<!--\n")
+        f.write("<LLM_DIAGNOSTIC_CONTEXT>\n")
+        
+        # Try to load financial statements for LLM context
+        financial_summary = None
+        fin_path = os.path.join(output_data_dir, "_00_financial_statements.json")
+        if os.path.exists(fin_path):
+            try:
+                with open(fin_path, 'r') as jf:
+                    fin_data = json.load(jf)
+                    if fin_data and len(fin_data) > 0:
+                        financial_summary = fin_data[-1] # The last period represents the cumulative state
+            except Exception as e:
+                pass
+
+        llm_context = {
+            "timestamp": datetime.now().isoformat(),
+            "environment": env_dir,
+            "physics_metrics": metrics,
+            "detected_pathologies": diagnoses,
+            "financial_baseline": financial_summary
+        }
+        f.write(json.dumps(llm_context, indent=2))
+        f.write("\n</LLM_DIAGNOSTIC_CONTEXT>\n")
+        f.write("-->\n")
 
     print(f"✅ Diagnosis Complete! Report saved to: {report_path}")
 
