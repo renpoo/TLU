@@ -13,9 +13,10 @@ On the surface, the Balance Sheet is perfectly balanced and the organization boa
 * **Severity:** CRITICAL
 * **Physical Evidence:**
   * **Max Spectral Radius:** **0.9740** (Exceeds the 0.9 threshold. The system has entered a "death spiral" of mathematical divergence).
-    ![System Stability](output_plots/004_1_2__system_stability.png)
+<img width="1680" height="1027" alt="004_1_2__system_stability" src="https://github.com/user-attachments/assets/1299b939-7874-4bdd-bfa1-1fe99086f4b2" />
+
   * **Relative Free Energy Ratio:** **-0.2510** (Far below the -0.1 threshold. A massive amount of operational energy is being wasted without generating true value).
-    ![Thermodynamic Energy Stack](output_plots/001_1_2__thermodynamics_energy_stack.png)
+<img width="1900" height="1045" alt="001_1_2__thermodynamics_energy_stack" src="https://github.com/user-attachments/assets/c7e6bbd1-e4e4-4d55-bcf4-9fa62129983a" />
 * **Financial Evidence:**
   Surface-level Sales Revenue is extremely high ($993,681), and Net Income looks fantastic ($100,858). Crucially, the Mass Leak Ratio is `0.0`, meaning the perpetrators are strictly adhering to double-entry accounting rules to artificially inflate transaction volume between specific accounts without breaking the ledger's balance.
 
