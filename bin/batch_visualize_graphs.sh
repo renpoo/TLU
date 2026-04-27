@@ -61,7 +61,8 @@ echo "--------------------------------------------------"
 
 # Clean the effectively mapped output plots directory to prevent lingering geometric artifacts
 echo "🧹 Cleaning previous outputs in: ${TLU_PLOT_DIR}"
-rm -rf "${TLU_PLOT_DIR}"/*
+# rm -rf "${TLU_PLOT_DIR}"/*
+rm -rf "${TLU_PLOT_DIR}"
 
 for script in "${SCRIPTS[@]}"; do
     # Execute only if the script exists

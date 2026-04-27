@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_5_Kyoto_Traffic`
-**Date Analyzed:** 2026-04-27 00:16:40
+**Date Analyzed:** 2026-04-27 01:18:24
 
 ## 1. Final Diagnosis
 
@@ -15,7 +15,7 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🟡 Local Pathological Stress (Micro Singularity)
 - **Severity:** MEDIUM
-- **Evidence:** Maximum local Z-Score reached 18.60 (Threshold: 3.0).
+- **Evidence:** Maximum local Z-Score reached 24.54 (Threshold: 3.0).
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
@@ -25,7 +25,7 @@ The system is suffering from multiple overlapping structural failures.
 |-----------------|------------------|-------|-----------|
 | Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 1.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| 0.2452 | < -0.1 |
-| Micro Forensics | Max Local Z-Score        | 18.60 | > 3.0 |
+| Thermodynamics  | Relative Free Energy Ratio| 0.2278 | < -0.1 |
+| Micro Forensics | Max Local Z-Score        | 24.54 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*

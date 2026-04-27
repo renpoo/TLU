@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_3_Unbalanced_Mistake`
-**Date Analyzed:** 2026-04-27 00:15:47
+**Date Analyzed:** 2026-04-27 01:17:29
 
 ## 1. Final Diagnosis
 
@@ -12,11 +12,6 @@ The system is suffering from multiple overlapping structural failures.
 - **Severity:** CRITICAL
 - **Evidence:** Relative Leak Ratio reached 0.0149 (Threshold: 0.001). Raw residual: 1009.24
 - **Interpretation:** The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere.
-
-### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
-- **Severity:** HIGH
-- **Evidence:** Relative Free Energy Ratio sank to -0.2140 (Threshold: -0.1). Raw F: -17943.83
-- **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
 
 ### 🟡 Local Pathological Stress (Micro Singularity)
 - **Severity:** MEDIUM
@@ -30,7 +25,7 @@ The system is suffering from multiple overlapping structural failures.
 |-----------------|------------------|-------|-----------|
 | Macro Forensics | Relative Mass Leak Ratio | 0.0149 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 0.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| -0.2140 | < -0.1 |
+| Thermodynamics  | Relative Free Energy Ratio| -0.0952 | < -0.1 |
 | Micro Forensics | Max Local Z-Score        | 142.32 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
