@@ -31,7 +31,7 @@ Applying the 【Tier 3】 logic of the LLM Manual to urban planning: The physica
 
 **【Action Plan】**
 While the macro traffic volume appears stable, the localized Z-Score (32.29) indicates critical congestion at specific intersections (Micro Singularity). 
-![Micro Z-Score Heatmap](output_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+![Micro Z-Score Heatmap](samples/Sample_5_Kyoto_Traffic/output_plots/002_2_2_2__micro_Z_Score_heatmap.png)
 
 To break this infinite loop, urban planners must apply Control Theory interventions: create a forced "escape route" (one-way street) leading out of the closed block (bounded by Sanjo, Shijo, Karasuma, and Muromachi) to artificially lower the Spectral Radius below 0.9 and relieve the topological pressure.
 
