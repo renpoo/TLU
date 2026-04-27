@@ -46,11 +46,11 @@ TLU avoids giant monoliths and is built upon the **Unix Philosophy**, connecting
 ### The Pipeline Phases
 
 * **Phase 0: Pre-processing:** Cleansing source data and aggregating it into directional flux formats.
-* **Phase 0.5: Traditional Accounting (IR):** Automatically generating standard B/S and P/L statements to serve as a baseline for human analysts.
-* **Phase 1: Projection:** Stripping domain vocabulary and projecting data into a pure tensor space (COO stream).
-* **Phase 2: Core Analysis:** A suite of pure mathematical filters based on physical paradigms (Categories 000–004).
-* **Phase 3: Presentation:** High-density dashboard rendering driven by the Fail-Fast theme engine.
-* **Phase 4: Orchestration:** Pipeline control and audit trail preservation within the containerized environment.
+* **Phase 1: Traditional Accounting (IR):** Automatically generating standard B/S and P/L statements to serve as a baseline for human analysts.
+* **Phase 3: Projection:** Stripping domain vocabulary and projecting data into a pure tensor space (COO stream).
+* **Phase 4: Core Analysis:** A suite of pure mathematical filters based on physical paradigms (Categories 000–005).
+* **Phase 5: Presentation:** High-density dashboard rendering driven by the Fail-Fast theme engine.
+* **Phase 6: Orchestration:** Pipeline control and audit trail preservation within the containerized environment.
 
 ## Visual Showcase (Empirical Evidence)
 
@@ -125,12 +125,12 @@ To help you understand how TLU works in practice without the cognitive overload 
 
 You can find them in the `samples/` directory. Each sample includes a dedicated `README.md` explaining the anomaly injected, the physical reasoning behind it, and **the exact command you need to run to generate the visualization graphs** on your local machine.
 
-* `samples/Sample_0_Healthy/`: A perfectly balanced baseline.
-* `samples/Sample_1_Wash_Trade/`: Explains System Stability (Eigenvalues).
-* `samples/Sample_2_Embezzlement_Leak/`: Explains Thermodynamics (Free Energy).
-* `samples/Sample_3_Unbalanced_Mistake/`: Explains Macro Forensics (Conservation Law).
-* `samples/Sample_4_Composite_Chaos/`: A real-world chaotic mix of all anomalies.
-* `samples/Sample_5_Kyoto_Traffic/`: A pure spatial network (Open System) control experiment.
+* [`samples/Sample_0_Healthy/`](samples/Sample_0_Healthy/): A perfectly balanced baseline.
+* [`samples/Sample_1_Wash_Trade/`](samples/Sample_1_Wash_Trade/): Explains System Stability (Eigenvalues).
+* [`samples/Sample_2_Embezzlement_Leak/`](samples/Sample_2_Embezzlement_Leak/): Explains Thermodynamics (Free Energy).
+* [`samples/Sample_3_Unbalanced_Mistake/`](samples/Sample_3_Unbalanced_Mistake/): Explains Macro Forensics (Conservation Law).
+* [`samples/Sample_4_Composite_Chaos/`](samples/Sample_4_Composite_Chaos/): A real-world chaotic mix of all anomalies.
+* [`samples/Sample_5_Kyoto_Traffic/`](samples/Sample_5_Kyoto_Traffic/): A pure spatial network (Open System) control experiment.
 
 ---
 
