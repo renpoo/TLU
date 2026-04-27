@@ -44,6 +44,20 @@ def load_sys_params(filepath: str) -> Dict[str, float]:
                         params[key] = val
     except FileNotFoundError:
         print(f"[WARN] {filepath} not found. Using defaults.", file=sys.stderr)
+        
+    # Inject dynamically tuned parameters if auto-calibration was run
+    import os, json
+    env_dir = os.environ.get("TARGET_ENV", "workspace")
+    tuned_params_path = os.path.join(env_dir, "ephemeral", "_tuned_params.json")
+    if os.path.exists(tuned_params_path):
+        try:
+            with open(tuned_params_path, 'r') as f:
+                tuned = json.load(f)
+                for k, v in tuned.items():
+                    params[k] = v
+        except Exception:
+            pass
+            
     return params
 
 def get_base_parser(description: str) -> argparse.ArgumentParser:

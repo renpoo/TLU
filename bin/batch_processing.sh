@@ -13,6 +13,7 @@ ORCH_DIR="./bin/orchestrators"
 
 # Array of scripts to execute (in sequential order)
 SCRIPTS=(
+    "0_0_run_auto_calibrate.sh"
     "000_1_1_run_dynamics_state.sh"
     "000_2_1_run_structural_stiffness.sh"
     "000_2_2_run_principal_axes.sh"

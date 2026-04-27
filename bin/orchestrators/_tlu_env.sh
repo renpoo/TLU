@@ -70,9 +70,24 @@ if [ -f "${TLU_SYS_PARAMS}" ]; then
         
         # Example: damping_factor -> TLU_DAMPING_FACTOR
         # macOS default Bash (v3.2) does not support ${var^^}, so use tr to uppercase.
-        upper_key=$(echo "$clean_key" | tr '[:lower:]' '[:upper:]')
-        export "TLU_${upper_key}=${clean_value}"
+        env_var_name=$(echo "TLU_$clean_key" | tr 'a-z' 'A-Z')
+        export "$env_var_name=$clean_value"
     done < "${TLU_SYS_PARAMS}"
+
+    # Apply auto-tuned overrides if available
+    TUNED_PARAMS="${TARGET_ENV:-workspace}/ephemeral/_tuned_params.json"
+    if [ -f "$TUNED_PARAMS" ]; then
+        # Parse simple JSON keys into TLU_ environment variables
+        # e.g. "target_phase_frequency": 0.25 -> TLU_TARGET_PHASE_FREQUENCY=0.25
+        while read -r line; do
+            if [[ $line =~ \"([a-zA-Z0-9_]+)\"[[:space:]]*:[[:space:]]*([0-9.]+) ]]; then
+                key="${BASH_REMATCH[1]}"
+                val="${BASH_REMATCH[2]}"
+                env_var_name=$(echo "TLU_$key" | tr 'a-z' 'A-Z')
+                export "$env_var_name=$val"
+            fi
+        done < "$TUNED_PARAMS"
+    fi
 else
     echo "[WARN] Parameter file ${TLU_SYS_PARAMS} not found. Subsequent runs may fail if variables are missing."
 fi

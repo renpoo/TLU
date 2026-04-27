@@ -15,7 +15,8 @@ from src.filters.stream_processor import setup_pipeline, yield_time_slices
 def run_manifold_dimensionality_analysis(
         t_idx: int, 
         T_slice: np.ndarray,
-        top_k: int
+        top_k: int,
+        threshold: float
 ) -> list:
     """!
     @brief [Pure Orchestration Function] Run Manifold Dimensionality (SVD) resolution.
@@ -36,7 +37,6 @@ def run_manifold_dimensionality_analysis(
     
     # S contains singular values in descending order
     # Calculate effective rank (number of singular values > threshold)
-    threshold = args.thresh_manifold_svd
     effective_rank = np.sum(S > threshold)
     
     total_s = np.sum(S)
@@ -71,7 +71,8 @@ def main():
         records = run_manifold_dimensionality_analysis(
             t_idx=t_idx, 
             T_slice=T_slice,
-            top_k=args.top_k
+            top_k=args.top_k,
+            threshold=args.thresh_manifold_svd
         )
         
         for rec in records:

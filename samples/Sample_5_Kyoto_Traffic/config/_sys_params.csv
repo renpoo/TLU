@@ -81,3 +81,9 @@ ik_target_labels,ACC_Sales_Revenue:10000.0
 # Sensitivity Analysis
 sensitivity_delta,10.0
 
+
+# ---------------------------------------------------------
+# AUTO-CALIBRATION (Baseline Tuning)
+# ---------------------------------------------------------
+auto_tune_enabled,True
+auto_tune_burn_in_period,24
