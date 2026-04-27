@@ -18,11 +18,11 @@ On the surface, the Balance Sheet is perfectly balanced and the organization boa
   * **Relative Free Energy Ratio:** **-0.2510** (Far below the -0.1 threshold. A massive amount of operational energy is being wasted without generating true value).
 <img width="1900" height="1045" alt="001_1_2__thermodynamics_energy_stack" src="https://github.com/user-attachments/assets/c7e6bbd1-e4e4-4d55-bcf4-9fa62129983a" />
 * **Financial Evidence:**
-  Surface-level Sales Revenue is extremely high ($993,681), and Net Income looks fantastic \$100,858. Crucially, the Mass Leak Ratio is `0.0`, meaning the perpetrators are strictly adhering to double-entry accounting rules to artificially inflate transaction volume between specific accounts without breaking the ledger's balance.
+  Surface-level Sales Revenue is extremely high ( $993,681 ), and Net Income looks fantastic ( $100,858 ). Crucially, the Mass Leak Ratio is `0.0`, meaning the perpetrators are strictly adhering to double-entry accounting rules to artificially inflate transaction volume between specific accounts without breaking the ledger's balance.
 
 ### 3. Business Translation & Action Plan
 
 Traditional accounting audits (checking for unbalanced ledgers or analyzing profit margins) will completely fail to detect this fraud because the perpetrators know how to balance the books. However, TLU analyzes the *geometric shape* of the money flow and instantly detected that funds are being unnaturally juggled back and forth in a closed loop.
 
 **【Action Plan】**
-Deploy forensic auditors immediately to trace the transaction loops involving Sales Revenue and Accounts Receivable \$154,570. There is a near certainty of fake invoices circulating among specific clients or shell companies. Furthermore, because the system is operating in a mathematically unstable regime (Spectral Radius $\approx$ 1.0), this artificial loop must be severed immediately before it triggers an uncontrollable liquidity collapse.
+Deploy forensic auditors immediately to trace the transaction loops involving Sales Revenue and Accounts Receivable ( $154,570 ). There is a near certainty of fake invoices circulating among specific clients or shell companies. Furthermore, because the system is operating in a mathematically unstable regime (Spectral Radius approximatly equal to 1.0), this artificial loop must be severed immediately before it triggers an uncontrollable liquidity collapse.
