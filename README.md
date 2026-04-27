@@ -5,9 +5,10 @@
 TLU is an **Autonomous Auditing Engine powered by the Cognitive Triad (Physics + Financials + LLM)**. It is a high-fidelity mathematical analysis pipeline designed to project directed transaction data (such as financial ledgers or supply chain flows) into a pure tensor space to uncover hidden structural dynamics that traditional accounting models miss.
 
 ### The Limitations of Traditional Accounting
+
 Traditional double-entry bookkeeping requires all journal entries to be perfectly consistent before any calculation can begin. Because of this absolute axiom, it is mathematically difficult to extract the underlying reality when records are missing or intentionally manipulated (e.g., Wash Trading).
 
-TLU solves this by removing the requirement for a balanced state from the initial analysis phase. By redefining accounting data as a flow of energy—analogous to fluids in a pipe—TLU applies physical laws like Kirchhoff's Current Law and non-equilibrium thermodynamics to calculate true financial dynamics even from incomplete or "broken" datasets. 
+TLU solves this by removing the requirement for a balanced state from the initial analysis phase. By redefining accounting data as a flow of energy—analogous to fluids in a pipe—TLU applies physical laws like Kirchhoff's Current Law and non-equilibrium thermodynamics to calculate true financial dynamics even from incomplete or "broken" datasets.
 
 ## 🤖 The Cognitive Triad (AI Autonomous Auditing)
 
@@ -50,8 +51,6 @@ TLU avoids giant monoliths and is built upon the **Unix Philosophy**, connecting
 * **Phase 2: Core Analysis:** A suite of pure mathematical filters based on physical paradigms (Categories 000–004).
 * **Phase 3: Presentation:** High-density dashboard rendering driven by the Fail-Fast theme engine.
 * **Phase 4: Orchestration:** Pipeline control and audit trail preservation within the containerized environment.
-
-
 
 ## Visual Showcase (Empirical Evidence)
 
@@ -152,6 +151,7 @@ For detailed mathematical logic, operational protocols, and API references, plea
 * [002_Information_Geometry_and_Forensics.md](docs/physics/002_Information_Geometry_and_Forensics.md)
 * [003_Applied_Kinematics.md](docs/physics/003_Applied_Kinematics.md)
 * [004_Control_Theory_and_Systems_Engineering.md](docs/physics/004_Control_Theory_and_Systems_Engineering.md)
+* [005_Signal_Processing_and_Wave_Mechanics.md](docs/physics/005_Signal_Processing_and_Wave_Mechanics.md)
 
 * [Graph_Interpretation_Guide.md](docs/interpretations/Graph_Interpretation_Guide.md)
 * [LLM_Diagnostic_Manual.md](docs/LLM_Diagnostic_Manual.md)
