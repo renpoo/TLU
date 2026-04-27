@@ -7,6 +7,7 @@
 import sys
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 
 from src.visualizations.visualizer_utils import *
 
@@ -41,7 +42,12 @@ def main():
     }).reset_index()
 
     N = int(max_anomalies['node_idx'].max()) + 1
-    labels = load_node_labels(args.node_map, N)
+    idx_to_label = load_node_labels(args.node_map, N)
+
+    top_k_indices = max_anomalies[
+        (max_anomalies['node_univariate_z_score'] >= args.z_thresh) | 
+        (max_anomalies['node_kl_drift'] >= args.kl_thresh)
+    ]['node_idx'].astype(int).tolist()
 
     fig, ax = plt.subplots(figsize=(12, 8))
     
@@ -66,12 +72,35 @@ def main():
     ax.grid(True, linestyle=':', alpha=0.5, color=grid_col)
     ax.tick_params(colors=text_col)
     
-    ax.legend(loc='upper right', facecolor=bg_col, edgecolor=edge_col, labelcolor=text_col)
+    # Remove the old upper right legend because it will conflict with the main legend
+    # ax.legend(loc='upper right', facecolor=bg_col, edgecolor=edge_col, labelcolor=text_col)
 
-    node_lines = [f"{i:02d}: {labels.get(i, '')}" for i in range(min(N, args.max_legend))]
-    fig.text(0.78, 0.5, "Node Index Map:\n" + "-"*15 + "\n" + "\n".join(node_lines), 
-             fontsize=9, color=text_col, verticalalignment='center', family='monospace', 
-             bbox=dict(facecolor=bg_col, alpha=0.8, edgecolor=edge_col))
+    handles, legend_labels = [], []
+    display_count = min(N, args.max_legend)
+    for i in range(display_count):
+        handles.append(mpatches.Patch(color='none'))
+        legend_labels.append(f"{i:02d} : {idx_to_label.get(i, f'Node_{i}')}")
+    if N > args.max_legend:
+        handles.append(mpatches.Patch(color='none'))
+        legend_labels.append(f"... and {N - args.max_legend} more nodes")
+
+    leg = ax.legend(handles, legend_labels, title="Node Map (Index -> Name):\n" + "-"*30,
+                    loc='center left', bbox_to_anchor=(1.02, 0.5),
+                    facecolor=bg_col, edgecolor=edge_col,
+                    handlelength=0, handletextpad=0, prop={'family': 'monospace', 'size': 10})
+    plt.setp(leg.get_title(), color=text_col, family='monospace')
+
+    for text_obj in leg.get_texts():
+        text_str = text_obj.get_text()
+        if ":" in text_str:
+            idx_str = text_str.split(":")[0].strip()
+            if idx_str.isdigit() and int(idx_str) in top_k_indices:
+                text_obj.set_color(c_alert)
+                text_obj.set_fontweight('bold')
+            else:
+                text_obj.set_color(text_col)
+        else:
+            text_obj.set_color(text_col)
     plt.subplots_adjust(right=0.75)
     
     save_plot(fig, args.out_dir, args.filename)
