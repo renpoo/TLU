@@ -1,4 +1,4 @@
-# 004_ControlTheory_and_Stability
+# 004. Control Theory and Stability
 
 This phase answers the question: "How do we steer this organization back to health without tearing it apart?" TLU uses advanced control systems engineering to calculate the optimal path forward and warns of impending structural collapse.
 

@@ -1,4 +1,4 @@
-# 001_Thermodynamics_and_Entropy
+# 001. Thermodynamics and Entropy
 
 This phase applies statistical mechanics to the financial ledger. It treats money as "energy" and measures how efficiently the organization uses that energy (Work) versus how much is lost to chaos, friction, or poor processes (Entropy/Heat).
 

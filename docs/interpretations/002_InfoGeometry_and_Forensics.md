@@ -1,4 +1,4 @@
-# 002_InfoGeometry_and_Forensics
+# 002. Info Geometry and Forensics
 
 This is the most critical phase for **fraud detection and auditing**. By analyzing the shape (geometry) of the data distribution and strictly enforcing conservation laws, TLU detects hidden manipulation that traditional balancing methods miss.
 

@@ -1,4 +1,4 @@
-# 000_Classical Mechanics & Stiffness
+# 000. Classical Mechanics & Stiffness
 
 Once the data is pre-processed, TLU projects the financial ledgers into a physics engine. This phase calculates the fundamental kinematic properties (Velocity, Acceleration) and the structural properties (Stiffness, Inertia, Viscosity) of the organization.
 
