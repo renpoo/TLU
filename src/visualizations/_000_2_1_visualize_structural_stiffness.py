@@ -118,7 +118,7 @@ def main():
         ax.set_title(title, fontsize=16, color=text_col, pad=20, fontweight='bold')
         ax.set_xlabel("Target Node (Effect)", color=text_col, fontsize=12)
         ax.set_ylabel("Source Node (Cause)", color=text_col, fontsize=12)
-        ax.tick_params(axis='x', rotation=45, colors=text_col)
+        ax.tick_params(axis='x', rotation=90, colors=text_col)
         ax.tick_params(axis='y', rotation=0, colors=text_col)
         
         plt.tight_layout()

@@ -57,8 +57,7 @@ def main():
         x_values = pivot_gap.index.values
         x_tick_labels = [time_labels.get(t, f"T_{int(t):02d}") for t in x_values]
         
-        ax.set_xticks(x_values)
-        ax.set_xticklabels(x_tick_labels, rotation=45, color=text_col, ha='right', fontsize=11)
+        apply_smart_x_labels(ax, x_values, x_tick_labels, text_col)
 
     # Zero error line
     ax.axhline(0, color=zero_line_col, linestyle='--', linewidth=1.5, label='Zero Error State')

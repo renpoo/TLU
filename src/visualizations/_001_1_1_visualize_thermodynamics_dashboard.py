@@ -101,7 +101,7 @@ def main():
     ticks = df['t_idx'].values
     labels = [str(time_labels.get(t, t)) for t in ticks]
     bottom_ax.set_xticks(ticks)
-    bottom_ax.set_xticklabels(labels, rotation=45, ha='right', color=text_col)
+    bottom_ax.set_xticklabels(labels, rotation=90, ha='center', color=text_col)
     bottom_ax.set_xlabel("Timeline", color=text_col, fontsize=12)
 
     for ax in axes:

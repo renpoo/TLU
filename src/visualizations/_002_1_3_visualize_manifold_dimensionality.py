@@ -46,8 +46,7 @@ def main():
         x_values = df_unique['t_idx'].values
         x_tick_labels = [time_labels.get(t, f"T_{int(t):02d}") for t in x_values]
         
-        ax.set_xticks(x_values)
-        ax.set_xticklabels(x_tick_labels, rotation=45, color=text_col, ha='right', fontsize=11)
+        apply_smart_x_labels(ax, x_values, x_tick_labels, text_col)
 
     ax.set_title("Information Geometry: Manifold Effective Dimensionality (Rank)", fontsize=15, color=text_col)
     ax.set_xlabel("Timeline", fontsize=12, color=text_col)

@@ -68,8 +68,7 @@ def main():
 
     # --- Time Label X-Axis Formatting ---
     x_tick_labels = [time_labels.get(t_val, f"T_{int(t_val):02d}") for t_val in t]
-    ax.set_xticks(t)
-    ax.set_xticklabels(x_tick_labels, rotation=45, color=text_col, ha='right', fontsize=11)
+    apply_smart_x_labels(ax, x_values, x_tick_labels, text_col)
 
     ax.set_xlabel('Timeline', fontsize=12, color=text_col)
     ax.set_ylabel('Energy / Activity Scale', fontsize=12, color=text_col)

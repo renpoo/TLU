@@ -70,6 +70,11 @@ def apply_theme(theme_name="dark"):
     mode = theme_cfg["mode"]
     plt.style.use('dark_background' if mode == 'dark' else 'default')
     plt.rcParams['savefig.format'] = 'png'
+    
+    # Expand graph margins globally so lines don't overlap with legends
+    plt.rcParams['axes.xmargin'] = 0.05
+    plt.rcParams['axes.ymargin'] = 0.20
+
         
     return theme_cfg
 
@@ -149,7 +154,7 @@ def draw_single_heatmap(ax, pivot_df, cmap, cbar_label, title_text, x_labels, y_
     ax.set_xlabel("Timeline", color=text_col, fontsize=12)
 
     # Adjust axis tick marks
-    ax.tick_params(axis='x', rotation=45, colors=text_col, labelsize=10)
+    ax.tick_params(axis='x', rotation=90, colors=text_col, labelsize=10)
     ax.set_yticklabels(y_labels, fontsize=10, rotation=0)
 
     # Y-axis label highlight processing
@@ -177,7 +182,7 @@ def draw_matrix_heatmap(ax, pivot_df, cmap, cbar_label, title_text, axis_labels,
     ax.set_xlabel("Target Node (Effect)", color=text_col, fontsize=12)
     ax.set_ylabel("Source Node (Cause)", color=text_col, fontsize=12)
 
-    ax.tick_params(axis='x', rotation=45, colors=text_col)
+    ax.tick_params(axis='x', rotation=90, colors=text_col)
     ax.tick_params(axis='y', rotation=0, colors=text_col)
     
     if bg_col:
@@ -196,3 +201,9 @@ def save_plot(fig, out_dir: str, filename: str):
     if '--interactive' in sys.argv:
         plt.show()
 
+
+def apply_smart_x_labels(ax, x_values, x_labels, text_col, max_labels=15):
+    if len(x_values) == 0: return
+    step = max(1, len(x_values) // max_labels)
+    ax.set_xticks(x_values[::step])
+    ax.set_xticklabels(x_labels[::step], rotation=90, color=text_col, ha='center', fontsize=10)

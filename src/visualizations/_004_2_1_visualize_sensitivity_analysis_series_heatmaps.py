@@ -88,7 +88,7 @@ def main():
                              fontsize=16, color=text_col, pad=args.max_k, fontweight='bold')
                 ax.set_xlabel("Target Node (Impact Received)", color=text_col, fontsize=12)
                 ax.set_ylabel("Source Node (Shock Origin)", color=text_col, fontsize=12)
-                ax.tick_params(axis='x', rotation=45, colors=text_col)
+                ax.tick_params(axis='x', rotation=90, colors=text_col)
                 ax.tick_params(axis='y', rotation=0, colors=text_col)
                 ax.set_facecolor(bg_col)
                 

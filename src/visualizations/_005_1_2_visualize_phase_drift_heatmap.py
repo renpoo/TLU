@@ -78,9 +78,9 @@ def main():
     if n_ticks > 20:
         step = n_ticks // 20
         ax.set_xticks(np.arange(0, n_ticks, step) + 0.5)
-        ax.set_xticklabels(x_labels[::step], rotation=45)
+        ax.set_xticklabels(x_labels[::step], rotation=90)
     else:
-        ax.tick_params(axis='x', rotation=45)
+        ax.tick_params(axis='x', rotation=90)
 
     ax.tick_params(colors=text_col)
     

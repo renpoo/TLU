@@ -66,8 +66,7 @@ def main():
     axes[2].axhline(args.thresh_z_score, color=grid_col, linestyle='--', alpha=0.8, label=f'Threshold ({args.thresh_z_score})')
     axes[2].legend(loc='upper right', facecolor=ui_canvas['legend_bg'], edgecolor=ui_canvas['legend_edge'], labelcolor=text_col)
 
-    axes[2].set_xticks(x_values)
-    axes[2].set_xticklabels(x_tick_labels, rotation=45, color=text_col, ha='right', fontsize=11)
+    apply_smart_x_labels(axes[2], x_values, x_tick_labels, text_col)
 
     for ax in axes:
         ax.tick_params(axis='y', colors=text_col)
