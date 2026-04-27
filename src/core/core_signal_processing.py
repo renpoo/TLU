@@ -107,8 +107,13 @@ def compute_phase_shift_coherence(x: np.ndarray, y: np.ndarray, target_freq: flo
         # Coherence is always 1 for a single FFT realization, so this is just an approximation
         Cxy = np.ones_like(f) if np.sum(np.abs(Pxx)*np.abs(Pyy)) > 0 else np.zeros_like(f)
     else:
-        f, Cxy = signal.coherence(x, y, fs=1.0, nperseg=window_size)
-        f, Pxy = signal.csd(x, y, fs=1.0, nperseg=window_size)
+        with np.errstate(divide='ignore', invalid='ignore'):
+            f, Cxy = signal.coherence(x, y, fs=1.0, nperseg=window_size)
+            f, Pxy = signal.csd(x, y, fs=1.0, nperseg=window_size)
+            
+            # Replace NaN with 0.0 (or default) in case of zero division (flat signals)
+            Cxy = np.nan_to_num(Cxy, nan=0.0)
+            Pxy = np.nan_to_num(Pxy)
         
     # Find the frequency bin closest to target_freq
     idx = np.argmin(np.abs(f - target_freq))

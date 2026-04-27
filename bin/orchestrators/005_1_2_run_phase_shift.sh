@@ -18,8 +18,3 @@ run_tlu_pipeline "Phase Shift & Coherence Filter (Traversing)" \
     --window_size="${WINDOW_SIZE}" \
     --step_size="${STEP_SIZE}"
 
-run_tlu_visualization "Phase Drift Heatmap (Node)" \
-    "_005_1_2_visualize_phase_drift_heatmap" \
-    "005_1_2_phase_drift_heatmap.png" \
-    "result.005_1_2_filter_phase_shift_coherence.analysis.csv" \
-    --master_node="${MASTER_NODE}"

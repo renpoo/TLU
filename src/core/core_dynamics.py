@@ -88,15 +88,13 @@ def estimate_virtual_mass_and_viscosity(q_history: np.ndarray, v_history: np.nda
         # Take the reciprocal of the standard deviation (volatility) of velocity.
         v_std = np.std(v_history, axis=0)
         
-        # Calculate a dynamic minute value to prevent zero division when completely still (standard deviation is 0)
-        if (v_std == 0.0).all():
-            global_v_scale = np.mean(v_std)
-            # Use the externally injected ratio (velocity_scale_ratio)
-            dynamic_epsilon = max(base_epsilon, global_v_scale * velocity_scale_ratio)
-        else:
-            dynamic_epsilon = 0.0
-
-        C = 1.0 / (v_std + dynamic_epsilon)
+        # Calculate a dynamic minute value to prevent zero division
+        global_v_scale = np.mean(v_std)
+        dynamic_epsilon = max(base_epsilon, global_v_scale * velocity_scale_ratio)
+        
+        # Apply epsilon only where v_std is exactly 0.0
+        v_std_safe = np.where(v_std == 0.0, dynamic_epsilon, v_std)
+        C = 1.0 / v_std_safe
     
     return M, C
 

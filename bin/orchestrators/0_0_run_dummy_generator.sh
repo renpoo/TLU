@@ -21,9 +21,10 @@ echo "Anomalies: Enabled (Z-Spikes, Drifts, Leaks will be injected)"
 echo "Output: ${OUTPUT_FILE}"
 echo "Running..."
 
-# 3. Parameter retrieval and Fail-Fast verification
-MONTHS="${TLU_DUMMY_DURATION_MONTHS:?Environment variable TLU_DUMMY_DURATION_MONTHS is not set.}"
-SEED="${TLU_DUMMY_RANDOM_SEED:?Environment variable TLU_DUMMY_RANDOM_SEED is not set.}"
+# 3. Parameter retrieval (Decoupled from _sys_params.csv)
+# Set via environment variables in generate_all_samples.sh, with safe defaults.
+MONTHS="${DUMMY_DURATION_MONTHS:-12}"
+SEED="${DUMMY_RANDOM_SEED:-42}"
 
 # 4. Execute generator script
 # Executes transparently in the Docker container or local environment via ${TLU_PY}.

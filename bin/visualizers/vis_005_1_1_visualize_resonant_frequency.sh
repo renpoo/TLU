@@ -3,7 +3,7 @@
 # 005_1_1_visualize_resonant_frequency.sh
 # TLU System: Visualize Resonant Frequency
 # ==========================================
-source "$(dirname "$0")/_tlu_env.sh"
+source "$(dirname "$0")/../orchestrators/_tlu_env.sh"
 
 run_tlu_visualization "Resonant Frequency & Power" \
     "_005_1_1_visualize_resonant_frequency" \

@@ -51,6 +51,9 @@ SCRIPTS=(
     "vis_004_1_2_visualize_system_stability.sh"
     "vis_004_2_1_visualize_sensitivity_matrix.sh"
     "vis_004_2_2_visualize_sensitivity_analysis_heatmaps.sh"
+    "vis_005_1_1_visualize_resonant_frequency.sh"
+    "vis_005_1_2_visualize_phase_drift_heatmap.sh"
+    "vis_005_2_1_visualize_fractal_noise.sh"
 )
 
 echo "🚀 Starting TLU Visualization Pipeline (Theme: ${TLU_THEME})..."
