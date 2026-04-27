@@ -28,8 +28,8 @@ tikhonov_lambda,0.0001
 # ---------------------------------------------------------
 # [0_0] PHASE 0: Dummy Journal Stream Generator
 # ---------------------------------------------------------
-dummy_duration_months,24
-dummy_random_seed,42
+# Note: Dummy generation parameters (duration, seed) are decoupled and set 
+# directly in scratch/generate_all_samples.sh to ensure loose coupling.
 
 # ---------------------------------------------------------
 # [001] PHASE 1: Macro/Local Thermodynamics & Time-Lag
@@ -86,4 +86,4 @@ sensitivity_delta,10.0
 # AUTO-CALIBRATION (Baseline Tuning)
 # ---------------------------------------------------------
 auto_tune_enabled,True
-auto_tune_burn_in_period,24
+auto_tune_burn_in_period,12

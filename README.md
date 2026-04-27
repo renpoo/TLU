@@ -136,6 +136,7 @@ For detailed mathematical logic, operational protocols, and API references, plea
 * [05_Meta_Analytical_Methodology_and_AI_Collaboration.md](docs/architecture/05_Meta_Analytical_Methodology_and_AI_Collaboration.md)
 * [06_Dummy_Data_Generators.md](docs/architecture/06_Dummy_Data_Generators.md)
 * [07_Graph_Interpretation_Guide.md](docs/07_Graph_Interpretation_Guide.md)
+* [LLM_Diagnostic_Manual.md](docs/LLM_Diagnostic_Manual.md)
 * [000_Classical_Mechanics.md](docs/physics/000_Classical_Mechanics.md)
 * [001_Thermodynamics_and_Fluctuations.md](docs/physics/001_Thermodynamics_and_Fluctuations.md)
 * [002_Information_Geometry_and_Forensics.md](docs/physics/002_Information_Geometry_and_Forensics.md)

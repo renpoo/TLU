@@ -1,3 +1,4 @@
 {
-    "target_phase_frequency": 0.0417
+    "target_phase_frequency": 0.5,
+    "thresh_z_score": 5.18
 }

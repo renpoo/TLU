@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_3_Unbalanced_Mistake`
-**Date Analyzed:** 2026-04-27 01:17:29
+**Date Analyzed:** 2026-04-27 05:20:16
 
 ## 1. Final Diagnosis
 
@@ -10,12 +10,17 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🔴 Unbalanced Journal Mistake (Conservation Violation)
 - **Severity:** CRITICAL
-- **Evidence:** Relative Leak Ratio reached 0.0149 (Threshold: 0.001). Raw residual: 1009.24
+- **Evidence:** Relative Leak Ratio reached 0.0116 (Threshold: 0.001). Raw residual: 778.56
 - **Interpretation:** The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere.
+
+### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
+- **Severity:** HIGH
+- **Evidence:** Relative Free Energy Ratio sank to -0.1263 (Threshold: -0.1). Raw F: -10145.07
+- **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
 
 ### 🟡 Local Pathological Stress (Micro Singularity)
 - **Severity:** MEDIUM
-- **Evidence:** Maximum local Z-Score reached 142.32 (Threshold: 3.0).
+- **Evidence:** Maximum local Z-Score reached 121.13 (Threshold: 3.0).
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
@@ -23,9 +28,112 @@ The system is suffering from multiple overlapping structural failures.
 
 | Physical Domain | Extracted Metric | Value | Threshold |
 |-----------------|------------------|-------|-----------|
-| Macro Forensics | Relative Mass Leak Ratio | 0.0149 | > 0.001 |
+| Macro Forensics | Relative Mass Leak Ratio | 0.0116 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 0.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| -0.0952 | < -0.1 |
-| Micro Forensics | Max Local Z-Score        | 142.32 | > 3.0 |
+| Thermodynamics  | Relative Free Energy Ratio| -0.1263 | < -0.1 |
+| Micro Forensics | Max Local Z-Score        | 121.13 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
+
+<!--
+<LLM_DIAGNOSTIC_CONTEXT>
+{
+  "timestamp": "2026-04-27T05:20:16.613063",
+  "environment": "samples/Sample_3_Unbalanced_Mistake",
+  "physics_metrics": {
+    "max_abs_residual": 778.56,
+    "mean_gross_activity": 66945.32038461538,
+    "relative_leak_ratio": 0.011629789737759175,
+    "max_spectral": 0.0,
+    "min_free_energy": -10145.0746,
+    "min_relative_free_energy": -0.12625464522207772,
+    "max_z_score": 121.1314
+  },
+  "detected_pathologies": [
+    {
+      "pathology": "Unbalanced Journal Mistake (Conservation Violation)",
+      "severity": "CRITICAL",
+      "evidence": "Relative Leak Ratio reached 0.0116 (Threshold: 0.001). Raw residual: 778.56",
+      "interpretation": "The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere."
+    },
+    {
+      "pathology": "Thermodynamic Energy Depletion (Embezzlement/Leak)",
+      "severity": "HIGH",
+      "evidence": "Relative Free Energy Ratio sank to -0.1263 (Threshold: -0.1). Raw F: -10145.07",
+      "interpretation": "Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale."
+    },
+    {
+      "pathology": "Local Pathological Stress (Micro Singularity)",
+      "severity": "MEDIUM",
+      "evidence": "Maximum local Z-Score reached 121.13 (Threshold: 3.0).",
+      "interpretation": "Specific nodes (departments) are experiencing statistical strain far beyond their historical norm."
+    }
+  ],
+  "financial_baseline": {
+    "week": "2020-W52",
+    "assets": 106554.39999999956,
+    "liabilities": 65185.369999999995,
+    "equity": 0.0,
+    "net_income": 41369.02999999968,
+    "total_liab_eq": 106554.39999999967,
+    "revenue": 955157.5599999998,
+    "expense": 913788.5300000001,
+    "is_balanced": true,
+    "bs_items": [
+      [
+        "ACC_Accounts_Payable",
+        "Liability",
+        65185.369999999995
+      ],
+      [
+        "ACC_Accounts_Receivable",
+        "Asset",
+        112015.41999999993
+      ],
+      [
+        "ACC_Cash",
+        "Asset",
+        106657.48999999976
+      ],
+      [
+        "ACC_Inventory",
+        "Asset",
+        -112118.51000000013
+      ]
+    ],
+    "pl_items": [
+      [
+        "ACC_COGS",
+        "Expense",
+        529951.8500000002
+      ],
+      [
+        "ACC_Payroll_Exp",
+        "Expense",
+        220971.34
+      ],
+      [
+        "ACC_Rent_Exp",
+        "Expense",
+        62009.74
+      ],
+      [
+        "ACC_Sales_Revenue",
+        "Revenue",
+        955157.5599999998
+      ],
+      [
+        "ACC_Travel_Exp",
+        "Expense",
+        99442.72
+      ],
+      [
+        "UNKNOWN_LEAK",
+        "Expense",
+        1412.8799999999999
+      ]
+    ]
+  }
+}
+</LLM_DIAGNOSTIC_CONTEXT>
+-->

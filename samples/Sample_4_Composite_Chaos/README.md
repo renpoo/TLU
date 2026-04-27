@@ -1,41 +1,22 @@
-# Sample 4: Composite Chaos (Real-World Scenario)
+# Sample 4: Composite Chaos
 
-## Dataset Overview
-This dataset simulates the **chaos of real-world ledgers**. All the anomalies explained previously are injected simultaneously at random intervals.
+## 🩺 Meta-Diagnosis Synthesis Report
 
-- **Wash Trade**: 0.5% probability
-- **Sales Leak**: 0.5% probability
-- **Purchase Leak**: 1.0% probability
-- **Unbalanced Mistake**: 0.5% probability
+### 1. Executive Summary
+**CRITICAL: Broken Mass Conservation (Total Data Chaos)**
+The target environment (`Sample_4_Composite_Chaos`) is triggering every single catastrophic physical alarm in the TLU arsenal. However, strictly adhering to the LLM Diagnostic Manual's Tier logic, the primary pathology is identified as a **Mass Conservation Violation**. Because the fundamental double-entry structure of the data is broken, the concurrent alarms for Wash Trading and Thermodynamic Collapse are highly likely to be secondary artifacts caused by the corrupted mathematical space. The system is in total chaos.
 
-When data is this chaotic, traditional anomaly detection models struggle to identify causality, simply flagging the entire dataset as "too noisy."
+### 2. Core Pathology (Primary Finding)
+* **Diagnosis:** Unbalanced Journal Mistake (Conservation Violation) & Composite Chaos
+* **Severity:** CRITICAL
+* **Physical Evidence:** 
+  * **Relative Mass Leak Ratio:** **0.0161** (Exceeds threshold by 16x).
+  * For reference, the Spectral Radius (0.9580) and Free Energy (-0.1552) are also deep in the critical zones. However, in a non-conservative physical field (where mass is not preserved), Hamiltonian/Lagrangian mechanics break down, rendering these advanced metrics mathematically unreliable.
+* **Financial Evidence:** 
+  While Net Income appears falsely high at $128,741, the P/L explicitly contains an **`UNKNOWN_LEAK` ($2,321.27)**. Simultaneously, Accounts Receivable has ballooned to $178,852. The environment is suffering from the "worst-case scenario" combination of missing data and highly suspect revenue inflation.
 
-## How to Visualize
-To keep the repository lightweight, pre-rendered graph images (.png) are excluded. You can generate the full suite of visualizations for this specific dataset by running the following command from the project root:
-```bash
-bash bin/batch_visualize_graphs.sh --target_env samples/Sample_4_Composite_Chaos
-```
-The generated graphs will be saved in the `samples/Sample_4_Composite_Chaos/output_plots/` directory.
+### 3. Business Translation & Action Plan
+The LLM Manual's 【Tier 2 Veto】 is active. This organization's network is suffering from a chaotic blend of intentional manipulation (fake invoices/loops) and incredibly sloppy bookkeeping (missing journal entries). The data is entirely untrustworthy.
 
-## TLU Analysis Results (What to look for)
-
-This sample demonstrates the true **dissection and discrimination capability** of TLU.
-Even when all anomalies are mixed together, TLU's diverse physical filters perfectly isolate and capture each underlying pathology.
-
-### 1. Extracting Mass Conservation Violations (Journaling Mistakes)
-- **Data**: `output_data/002_2_1__macro_forensics.csv`
-- **Graph**: `output_plots/002_2_1__macro_forensics_dashboard.png` (if generated)
-- Regardless of what other anomalies are occurring, the exact moment a non-zero value appears in the `conservation_residual`, an "unbalanced debit/credit error" definitely exists. This metric is completely unaffected by other phenomena.
-
-### 2. Extracting Topological Loops (Wash Trades)
-- **Data**: `output_data/004_1_2__system_stability.csv`
-- **Graph**: `output_plots/004_1_2__system_stability.png` (if generated)
-- Whether funds are being concealed or journaling mistakes are happening, the `spectral_radius` spikes toward `1.0` *only* when an artificial "loop" is formed in the network.
-
-### 3. Extracting Energy Depletion (Embezzlement / Leaks)
-- **Data**: `output_data/001_1_1__macro_thermodynamics.csv`
-- **Graph**: `output_plots/001_1_3__thermodynamics_ts_diagram.png` (if generated)
-- While localized anomalies (like Z-Score spikes) occur throughout the system, the specific periods where the `Free_Energy_F` sinks into negative values indicate that "necessary operational funds are actively leaking to the outside."
-
-### Conclusion
-TLU is not a black-box model that spits out a single "anomaly score." By observing the numerical data through **multiple lenses of physics**, it elegantly untangles complex, intertwined pathologies—much like a doctor simultaneously analyzing MRI, ECG, and blood test results.
+**【Action Plan】**
+Halt all strategic business analysis immediately. You must first resolve the $2,321.27 `UNKNOWN_LEAK` to restore Mass Conservation (Leak Ratio = 0.0) to the ledger. Once the data integrity is restored, re-run the TLU analysis. If the Spectral Radius remains near 1.0 after the data is fixed, escalate immediately to external auditors or legal authorities, as you are dealing with a massive, overt Wash Trading scheme.
