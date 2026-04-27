@@ -14,15 +14,15 @@ These guides are not meant to explain the deep mathematical formulas (for that, 
 
 ## The Interpretation Directory
 
-The guides are split by the logical phases of the TLU pipeline to prevent cognitive overload.
+The guides are split by the logical Categories (000 - 005) of the Core Analysis (Phase 2) pipeline to prevent cognitive overload.
 
 * **[00. Financial Statements (Phase 0.5)](00_Financial_Statements.md)**: Your baseline. How to read the standard B/S and P/L before diving into physics.
-* **[01. Classical Mechanics & Stiffness (Phase 1.1 - 1.3)](01_Classical_Mechanics_and_Stiffness.md)**: Reading the 3D phase spaces of Velocity, Acceleration, and the Structural Stiffness matrices.
-* **[02. Thermodynamics & Entropy (Phase 1.5 - 1.6)](02_Thermodynamics_and_Entropy.md)**: Reading the T-S diagrams and Free Energy stacks.
-* **[03. Info Geometry & Forensics (Phase 1.8 - 1.9)](03_InfoGeometry_and_Forensics.md)**: Reading the Z-Score topologies and Network Manifolds.
-* **[04. Applied Kinematics (Phase 1.1 - 1.2)](04_Kinematics.md)**: Reading the FK and IK robotics simulations.
-* **[05. Control Theory & Stability (Phase 1.7)](05_ControlTheory_and_Stability.md)**: Reading the Spectral Radius and LQR Convergence.
-* **[06. Signals & Noise (Phase 1.10 - 1.14)](06_Signals_and_Noise.md)**: Reading the Phase Drift Heatmaps and Resonant Frequencies.
+* **[01. Classical Mechanics & Stiffness (Category 000)](01_Classical_Mechanics_and_Stiffness.md)**: Reading the 3D phase spaces of Velocity, Acceleration, and the Structural Stiffness matrices.
+* **[02. Thermodynamics & Entropy (Category 001)](02_Thermodynamics_and_Entropy.md)**: Reading the T-S diagrams and Free Energy stacks.
+* **[03. Info Geometry & Forensics (Category 002)](03_InfoGeometry_and_Forensics.md)**: Reading the Z-Score topologies and Network Manifolds.
+* **[04. Applied Kinematics (Category 003)](04_Kinematics.md)**: Reading the FK and IK robotics simulations.
+* **[05. Control Theory & Stability (Category 004)](05_ControlTheory_and_Stability.md)**: Reading the Spectral Radius and LQR Convergence.
+* **[06. Signals & Noise (Category 005)](06_Signals_and_Noise.md)**: Reading the Phase Drift Heatmaps and Resonant Frequencies.
 
 ---
 

@@ -9,6 +9,7 @@ It transitions the system from isolated, one-off goal-seeking (Inverse Kinematic
 ---
 
 ## 1. Optimal Control Theory & LQR (004_1_1)
+*Implementation: `src/filters/_004_1_1_filter_control_theory.py`*
 
 Real-world organizations do not reach their goals in a single, instantaneous jump. Interventions must be applied continuously over time, adjusting as the system reacts. TLU formulates the entire network as a discrete-time **State-Space Model** and solves for the optimal intervention trajectory.
 
@@ -39,6 +40,7 @@ By solving the Discrete Algebraic Riccati Equation (DARE), TLU computes the opti
 <img width="1922" height="1131" alt="004_1_3__control_lqr_performance_space" src="https://github.com/user-attachments/assets/50e879dd-ab69-4d80-b85a-01874a39d3f7" />
 
 ### System Stability & Spectral Radius (004_1_2)
+*Implementation: `src/filters/_004_1_2_filter_system_stability.py`*
 
 Before applying optimal control, leadership must know if the system is inherently stable. TLU assesses this by calculating the **Spectral Radius** (the maximum absolute eigenvalue) of the transition matrix.
 
@@ -46,6 +48,7 @@ Before applying optimal control, leadership must know if the system is inherentl
 * **Detecting Cycles (Wash Trading):** If the spectral radius spikes above `0.0`, it mathematically proves that a closed loop or cycle has formed in the network (e.g., A -> B -> C -> A). In financial data, this is the definitive signature of **Wash Trading** or recursive funding schemes. If the radius exceeds `1.0`, the system is in exponential divergence.
 
 ## 2. System Sensitivity Matrix (004_2_1)
+*Implementation: `src/filters/_004_2_1_filter_sensitivity.py`*
 
 If LQR is a surgical scalpel for a specific goal, the **System Sensitivity Matrix** is a sweeping radar scan of the entire battlefield. It performs an exhaustive, brute-force sensitivity analysis across every single node to find the ultimate management trade-offs.
 

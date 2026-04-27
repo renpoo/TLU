@@ -9,6 +9,7 @@ By treating the network as a complex robotic structure with interconnected "join
 ---
 
 ## 1. Forward Kinematics: Ripple Effect Simulation (003_1_1)
+*Implementation: `src/filters/_003_1_1_filter_fk_simulation.py`*
 
 In business, a local action never has a strictly local consequence. An injection of budget into Marketing will eventually bleed into Sales, then Customer Support, and finally Legal. **Forward Kinematics (FK)** simulates this exact causal wave.
 
@@ -26,6 +27,7 @@ $M_{echo} = I + \gamma P + (\gamma P)^2 + \dots + (\gamma P)^k$
 <img width="1704" height="1323" alt="003_1_1__3d_kinematics_fk" src="https://github.com/user-attachments/assets/7a195560-47dc-42f5-8181-118545b844b0" />
 
 ## 2. Inverse Kinematics: Goal-Seeking Optimization (003_1_2)
+*Implementation: `src/filters/_003_1_2_filter_ik_optimization.py`*
 
 While FK asks, "If I push here, what happens?", **Inverse Kinematics (IK)** asks the far more valuable question: *"If I want this specific outcome, where and how hard must I push?"*
 

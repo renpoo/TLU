@@ -1,10 +1,21 @@
 # Tensor-Link Utility (TLU)
 
-> **"Projecting Domain Complexity into Mathematical Clarity."**
+> **"Projecting Domain Complexity into Mathematical Clarity for Autonomous AI Auditing."**
 
-TLU is a high-fidelity mathematical analysis pipeline designed to project directed transaction data (such as financial ledgers, communication logs, or supply chain flows) into a pure $N \times N$ tensor space to uncover hidden structural dynamics.
+TLU is an **Autonomous Auditing Engine powered by the Cognitive Triad (Physics + Financials + LLM)**. It is a high-fidelity mathematical analysis pipeline designed to project directed transaction data (such as financial ledgers or supply chain flows) into a pure tensor space to uncover hidden structural dynamics that traditional accounting models miss.
 
-By sequentially applying paradigms from **Classical Mechanics, Thermodynamics & Statistical Mechanics, Information Geometry, Applied Kinematics, Control Theory, and Signal Processing**, TLU visualizes "organizational stiffness," "energy dissipation," and "structural distortion" that traditional statistical methods often miss, deriving optimal intervention strategies.
+### The Limitations of Traditional Accounting
+Traditional double-entry bookkeeping requires all journal entries to be perfectly consistent before any calculation can begin. Because of this absolute axiom, it is mathematically difficult to extract the underlying reality when records are missing or intentionally manipulated (e.g., Wash Trading).
+
+TLU solves this by removing the requirement for a balanced state from the initial analysis phase. By redefining accounting data as a flow of energy—analogous to fluids in a pipe—TLU applies physical laws like Kirchhoff's Current Law and non-equilibrium thermodynamics to calculate true financial dynamics even from incomplete or "broken" datasets. 
+
+## 🤖 The Cognitive Triad (AI Autonomous Auditing)
+
+TLU is not merely a visual dashboarding tool; its ultimate value is serving as a physics engine for Large Language Models (LLMs).
+
+By reading the [**LLM Meta-Diagnosis System Prompt & Operating Procedure**](docs/LLM_Diagnostic_Manual.md), any LLM (ChatGPT, Claude, Gemini) can be instantly transformed into a "Meta-Diagnostic Radiologist." The manual provides a strict, tier-based logical framework (Decision Matrix) that allows the AI to ingest the high-dimensional physical metrics (like Spectral Radius and Free Energy) and cross-reference them with traditional Financial Statements (B/S, P/L) to output a CPA-grade, human-readable Medical Chart without hallucinating.
+
+Check out the `samples/` directories to see actual English audit reports generated autonomously by the LLM using this manual!
 
 ## Theoretical Foundation: The Ledger as a Coupled Oscillator Network
 
@@ -40,17 +51,7 @@ TLU avoids giant monoliths and is built upon the **Unix Philosophy**, connecting
 * **Phase 3: Presentation:** High-density dashboard rendering driven by the Fail-Fast theme engine.
 * **Phase 4: Orchestration:** Pipeline control and audit trail preservation within the containerized environment.
 
----
 
-## 🤖 Next-Gen Feature: AI Autonomous Auditing
-
-TLU is not just a mathematical tool; it is designed to be fully integrated with Large Language Models (LLMs) to create an **Autonomous Auditing Agent**. 
-
-By reading the [**LLM Meta-Diagnosis System Prompt & Operating Procedure**](docs/LLM_Diagnostic_Manual.md), any LLM (such as ChatGPT, Claude, or Gemini) can be instantly transformed into a "Meta-Diagnostic Radiologist." The manual provides a strict, tier-based logical framework (Decision Matrix) that allows the AI to ingest the high-dimensional physical metrics (like Spectral Radius and Free Energy) and cross-reference them with traditional Financial Statements (B/S, P/L) to output a CPA-grade, human-readable Medical Chart without hallucinating.
-
-Check out the `samples/` directories to see actual English audit reports generated autonomously by the LLM using this manual!
-
----
 
 ## Visual Showcase (Empirical Evidence)
 
@@ -138,7 +139,6 @@ You can find them in the `samples/` directory. Each sample includes a dedicated 
 
 For detailed mathematical logic, operational protocols, and API references, please consult the "Spoke" manuals linked below:
 
-* [OVERVIEW.md](OVERVIEW.md)
 * [01_System_Philosophy_and_Operations.md](docs/architecture/01_System_Philosophy_and_Operations.md)
 * [02_Data_Topology_and_Projection.md](docs/architecture/02_Data_Topology_and_Projection.md)
 * [03_Visualizer_and_Theme_Engine.md](docs/architecture/03_Visualizer_and_Theme_Engine.md)
@@ -153,8 +153,7 @@ For detailed mathematical logic, operational protocols, and API references, plea
 * [003_Applied_Kinematics.md](docs/physics/003_Applied_Kinematics.md)
 * [004_Control_Theory_and_Systems_Engineering.md](docs/physics/004_Control_Theory_and_Systems_Engineering.md)
 
-* [DISCUSSION.md](DISCUSSION.md)
-* [CAUTION.md](CAUTION.md)
+* [07_Theoretical_Limits_and_Edge_Effects.md](docs/architecture/07_Theoretical_Limits_and_Edge_Effects.md)
 
 ---
 

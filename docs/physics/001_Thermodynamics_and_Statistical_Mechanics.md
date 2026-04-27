@@ -9,6 +9,7 @@ It calculates the conservation, transformation, and inevitable dissipation of en
 ---
 
 ## 1. Macro Thermodynamics (001_1_1)
+*Implementation: `src/filters/_001_1_1_filter_macro_thermodynamics.py`*
 
 To understand the systemic health of the organization, TLU calculates four global state variables that define its thermodynamic profile.
 
@@ -22,6 +23,7 @@ To understand the systemic health of the organization, TLU calculates four globa
 <img width="1509" height="976" alt="001_1_3__thermodynamics_ts_diagram" src="https://github.com/user-attachments/assets/8794da75-0075-4b49-8a61-846249824648" />
 
 ## 2. Local Thermodynamics (001_1_2)
+*Implementation: `src/filters/_001_1_2_filter_local_thermodynamics.py`*
 
 The macro state variables can be projected down to individual nodes to identify local hotspots.
 
@@ -35,6 +37,7 @@ The macro state variables can be projected down to individual nodes to identify 
 <img width="1894" height="1135" alt="001_1_2_4__local_thermo_complexity" src="https://github.com/user-attachments/assets/efe0361d-e04c-49ba-870e-51b008f6dac7" />
 
 ## 3. Statistical Fluctuations and Time Lag (001_2_1 & 001_2_2)
+*Implementation: `src/filters/_001_2_1_filter_lag_matrix.py`*
 
 In complex systems, cause and effect are rarely instantaneous. A marketing investment today might not manifest as revenue for several months. TLU uses statistical mechanics to measure the "impedance" (delay) of these waves.
 
