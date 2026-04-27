@@ -145,15 +145,16 @@ For detailed mathematical logic, operational protocols, and API references, plea
 * [04_Simulation_and_TDD.md](docs/architecture/04_Simulation_and_TDD.md)
 * [05_Meta_Analytical_Methodology_and_AI_Collaboration.md](docs/architecture/05_Meta_Analytical_Methodology_and_AI_Collaboration.md)
 * [06_Dummy_Data_Generators.md](docs/architecture/06_Dummy_Data_Generators.md)
-* [07_Graph_Interpretation_Guide.md](docs/interpretations/07_Graph_Interpretation_Guide.md)
-* [LLM_Diagnostic_Manual.md](docs/LLM_Diagnostic_Manual.md)
+* [07_Theoretical_Limits_and_Edge_Effects.md](docs/architecture/07_Theoretical_Limits_and_Edge_Effects.md)
+
 * [000_Classical_Mechanics.md](docs/physics/000_Classical_Mechanics.md)
 * [001_Thermodynamics_and_Fluctuations.md](docs/physics/001_Thermodynamics_and_Fluctuations.md)
 * [002_Information_Geometry_and_Forensics.md](docs/physics/002_Information_Geometry_and_Forensics.md)
 * [003_Applied_Kinematics.md](docs/physics/003_Applied_Kinematics.md)
 * [004_Control_Theory_and_Systems_Engineering.md](docs/physics/004_Control_Theory_and_Systems_Engineering.md)
 
-* [07_Theoretical_Limits_and_Edge_Effects.md](docs/architecture/07_Theoretical_Limits_and_Edge_Effects.md)
+* [Graph_Interpretation_Guide.md](docs/interpretations/Graph_Interpretation_Guide.md)
+* [LLM_Diagnostic_Manual.md](docs/LLM_Diagnostic_Manual.md)
 
 ---
 
