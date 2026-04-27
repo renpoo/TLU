@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_2_Embezzlement_Leak`
-**Date Analyzed:** 2026-04-27 05:18:23
+**Date Analyzed:** 2026-04-28 00:01:04
 
 ## 1. Final Diagnosis
 
@@ -33,7 +33,7 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-27T05:18:23.878254",
+  "timestamp": "2026-04-28T00:01:04.644082",
   "environment": "samples/Sample_2_Embezzlement_Leak",
   "physics_metrics": {
     "max_abs_residual": 0.0,

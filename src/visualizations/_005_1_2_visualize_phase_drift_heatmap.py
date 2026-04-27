@@ -14,6 +14,8 @@ from src.visualizations.visualizer_utils import *
 def setup_argparser():
     parser = get_base_parser("Traversing Phase Shift Heatmap")
     parser.add_argument('--master_node', type=int, default=6, help="The reference node to calculate phase shift against (Master)")
+    parser.add_argument('--auto_master', action='store_true', default=True, help="If true, dynamically selects the master node based on PC1")
+    parser.add_argument('--pca_data_path', type=str, default="workspace/output_data/result.000_2_2_filter_principal_axes.analysis.csv", help="Path to PCA output to find PC1 dominant node")
     parser.add_argument('--is_pca', action='store_true', help="Set to true if visualizing PCA components instead of normal nodes")
     parser.set_defaults(filename="005_1_2_phase_drift_heatmap.png")
     return parser
@@ -22,6 +24,20 @@ def main():
     parser = setup_argparser()
     args = parser.parse_args()
     
+    import os
+    if args.auto_master and not args.is_pca and os.path.exists(args.pca_data_path):
+        try:
+            pca_df = pd.read_csv(args.pca_data_path)
+            if not pca_df.empty and 'component_idx' in pca_df.columns:
+                pc1_df = pca_df[pca_df['component_idx'] == 0].copy()
+                if not pc1_df.empty:
+                    pc1_df['magnitude'] = pc1_df['vector_value'].astype(float).abs()
+                    avg_mag = pc1_df.groupby('node_idx')['magnitude'].mean()
+                    args.master_node = int(avg_mag.idxmax())
+                    sys.stderr.write(f"[INFO] Auto-Master selected Node {args.master_node} based on PC1 dominance.\n")
+        except Exception as e:
+            sys.stderr.write(f"[WARN] Auto-Master failed: {e}. Falling back to Node {args.master_node}.\n")
+
     theme_cfg = apply_theme(args.theme)
     ui_canvas = theme_cfg['ui_canvas']
     text_col = ui_canvas['text_primary']
@@ -53,7 +69,11 @@ def main():
     else:
         idx_to_label = load_node_labels(args.node_map, N)
         ylabel = "Node (Target)"
-        title_prefix = f"Node Phase Drift Heatmap (Master: Node {args.master_node})"
+        title_prefix = f"Node Phase Drift Heatmap (Master: Node {args.master_node}"
+        if args.auto_master:
+            title_prefix += ", PC1 Dominant)"
+        else:
+            title_prefix += ")"
 
     y_labels = [f"{i:02d}: {idx_to_label.get(i, f'N_{i}')}" for i in pivot_df.index]
     

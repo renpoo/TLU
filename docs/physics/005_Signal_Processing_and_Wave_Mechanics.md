@@ -18,21 +18,32 @@ Every healthy organization has a natural "heartbeat" or operational rhythm—for
 
 ![005_1_1__resonant_frequency](../readme_plots/005_1_1_resonant_frequency.png)
 
-### Pathological Resonance
-If a massive, unexpected spectral peak appears at an unnatural frequency (e.g., a massive spike at exactly "3 days" that has never existed before in the company's history), it strongly suggests an artificial process has been introduced. In financial data, this is the fingerprint of a programmed bot or an automated embezzlement script siphoning micro-amounts of money at exact, mechanical intervals.
+### Detecting Business Model Collapse & Artificial Intervention
+This acts as an early warning system for structural collapse. If a company claims their business model is stable, but their resonant frequency suddenly shifts from a "30-day cycle" (normal billing) to a chaotic "14-day cycle," it mathematically proves a cash flow crisis forcing early collections. Furthermore, if a massive, unexpected spectral peak appears at an unnatural frequency, it is the fingerprint of a programmed bot or an automated embezzlement script siphoning micro-amounts of money at exact, mechanical intervals.
 
 ## 2. Phase Shift & Coherence (005_1_2)
 *Implementation: `src/filters/_005_1_2_filter_phase_shift_coherence.py`*
 
-While Category 001 uses simple time-lag correlation, Category 005 evaluates the **Phase Shift** and **Coherence** between two nodes at specific target frequencies using cross-spectral density.
+While Category 001 uses simple time-lag correlation, Category 005 evaluates the **Phase Shift** and **Coherence** between nodes at specific target frequencies using cross-spectral density.
 
 * **Coherence:** A measure of how well the wave patterns of two nodes match each other at a specific frequency (a value from 0 to 1). High coherence means the two departments are moving perfectly in sync.
-* **Phase Shift ($\Delta \phi$):** The angular difference (time lag) between the two coherent waves. 
+* **Phase Shift ($\Delta \phi$):** The angular difference (time lag) between the two coherent waves, measured in radians from $-\pi$ to $+\pi$.
+
+### PC1 Auto-Master Tracking
+To provide a dataset-agnostic "center of gravity," TLU mathematically extracts the 1st Principal Component (PC1) to identify the true "Main Engine" of the system (e.g., Cash, or the busiest traffic intersection). It then calculates the Phase Drift of *all other nodes* against this beating heart.
 
 ![005_1_2__phase_drift_heatmap](../readme_plots/005_1_2__phase_drift_heatmap.png)
 
-### Detecting Process Bottlenecks
-By plotting the Phase Shift over time in a rolling window, TLU creates a **Phase Drift Heatmap**. If the phase shift between "Sales" and "Cash Collection" suddenly begins to stretch (drift positively), it means the collection cycle is slowing down. The total assets on the Balance Sheet might look perfectly healthy, but the *velocity* of cash conversion is grinding to a halt—a critical early warning for an impending liquidity crisis.
+### Reading the Phase Drift Heatmap: The Viscosity Rentgen
+The heatmap visualizes Phase Shift over time (X-axis). It utilizes a diverging colormap (e.g., Red-White-Blue).
+* **White (0 radians):** Perfect synchronization with the Main Engine. No delay.
+* **Blue/Red ($+\pi$ / $-\pi$):** Lagging behind or leading ahead of the Main Engine. The darker the color, the closer the delay is to a half-cycle phase inversion.
+
+An anomaly ("going out of order") is detected not by a specific color, but by a **horizontal color band suddenly shifting its hue or intensity at a specific time index ($t\_idx$)**:
+
+* **Pattern A (Process Collapse):** A node that was historically synced with Cash (a clean, continuous **White** band) suddenly turns **Dark Blue**. The process has decoupled. For example, Sales are made, but Collections have suddenly stalled, exposing massive organizational friction (viscosity).
+* **Pattern B (Lag Deepening):** A node that historically ran with a fixed 1-week delay (a pale **Light Blue** band) suddenly darkens to **Deep Blue**. A known process has critically deteriorated.
+* **Pattern C (Bot/Algorithmic Hijacking):** A historically noisy, unrelated node (a flickering mix of colors) suddenly turns perfectly **White**, locking in perfect synchronization with the Main Engine. This implies an artificial mechanism (like wash trading) has forcibly hijacked the account to pump volume synchronously.
 
 ## 3. Fractal Dimensionality & 1/f Noise (005_2_1)
 *Implementation: `src/filters/_005_2_1_filter_fractal_noise.py`*
@@ -47,15 +58,17 @@ TLU calculates the Power Spectral Density (PSD) decay and extracts the **Spectra
 
 ![005_2_1__fractal_noise_spectrum](../readme_plots/005_2_1_fractal_noise_spectrum.png)
 
-### Detecting Data Fabrication
-Humans are notoriously terrible at generating true random variance. If an accountant manually fabricates thousands of fake ledger entries to hide a loss, or if a crude random number generator is used to pad a dataset, the resulting data will mathematically collapse into "White Noise." 
+### The Ultimate Fabrication Detector
+Humans are notoriously terrible at generating true random variance. If an accountant manually fabricates thousands of fake ledger entries to hide a loss, or if a crude random number generator is used to pad a dataset, the resulting data will mathematically collapse into "White Noise." Or, if an automated script pumps identical amounts daily, it forms unnatural, rigid spikes.
 
-By mapping the fractal dimensionality of the network, TLU catches data fabrication not by looking at the total amounts, but by proving that the *texture* of the numbers is physically impossible for a group of humans to have generated naturally.
+By mapping the fractal dimensionality of the network, TLU catches data fabrication not by looking at the total *amounts* (which can be easily forged to balance the books), but by proving that the *texture* of the numbers' fluctuation is physically impossible for a group of humans to have generated naturally. 
+
+---
 
 ## 4. Business Implications
 
-By utilizing Signal Processing and Wave Mechanics, analysts can answer:
+By utilizing Signal Processing and Wave Mechanics, analysts can definitively answer:
 
 1. **Are automated bots tampering with our system?** (Spikes in unnatural Resonant Frequencies).
-2. **Is our cash conversion cycle secretly slowing down?** (Stretching Phase Shifts between operational nodes).
-3. **Has this ledger been artificially fabricated?** (The collapse of natural Pink Noise into artificial White Noise).
+2. **Is our cash conversion cycle secretly slowing down?** (Stretching/shifting color bands in the Phase Drift Heatmap indicating severe process friction).
+3. **Has this ledger been artificially fabricated?** (The collapse of organic Pink Noise into artificial White Noise).

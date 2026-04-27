@@ -15,9 +15,10 @@ if [ ! -f "$DATA_PATH" ]; then
     exit 0
 fi
 
-# The heatmap script takes a single master node (e.g. Node 6) to compute pairwise phase shifts.
+# The heatmap script dynamically selects the master node using PC1 output.
 cat "$DATA_PATH" | ${TLU_PY} -m src.visualizations._005_1_2_visualize_phase_drift_heatmap \
-    --master_node 6 \
+    --auto_master \
+    --pca_data_path "${TLU_OUT_DIR}/result.000_2_2_filter_principal_axes.analysis.csv" \
     --out_dir "${TLU_PLOT_DIR}" \
     --filename "005_1_2__phase_drift_heatmap.png" \
     --theme "${TLU_THEME}" \

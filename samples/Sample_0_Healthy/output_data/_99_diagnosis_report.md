@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_0_Healthy`
-**Date Analyzed:** 2026-04-27 05:10:20
+**Date Analyzed:** 2026-04-28 00:00:23
 
 ## 1. Final Diagnosis
 
@@ -25,7 +25,7 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-27T05:10:20.937959",
+  "timestamp": "2026-04-28T00:00:23.520844",
   "environment": "samples/Sample_0_Healthy",
   "physics_metrics": {
     "max_abs_residual": 0.0,

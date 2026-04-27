@@ -87,3 +87,5 @@ sensitivity_delta,10.0
 # ---------------------------------------------------------
 auto_tune_enabled,True
 auto_tune_burn_in_period,12
+phase_window_size,24
+phase_step_size,4
