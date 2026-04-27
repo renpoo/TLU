@@ -60,62 +60,62 @@ TLU offloads cognitive load through its advanced "Dark" visualization suite ("Li
 
 Observe the "pulse" and "stiffness" of your organization. TLU calculates **Velocity ($v$)** and **Acceleration ($a$)** from pure flux, estimates **Inertia (Virtual Mass)** and **Viscosity** from historical activity scales, and plots them in a phase space.
 
-<img width="1666" height="1324" alt="1_3_1__3d_dynamics_velocity" src="https://github.com/user-attachments/assets/4a2f33e2-4a1a-460c-b88b-33186868f7f6" />
-<img width="1666" height="1324" alt="1_3_2__3d_dynamics_acceleration" src="https://github.com/user-attachments/assets/006abbf9-c505-4888-9809-c0908f04226a" />
-<img width="1666" height="1324" alt="1_3_3__3d_dynamics_inertia" src="https://github.com/user-attachments/assets/7b84f2a0-86c5-4a79-a918-ce37c413d136" />
-<img width="1666" height="1324" alt="1_3_4__3d_dynamics_viscosity" src="https://github.com/user-attachments/assets/fda0249f-bf17-4288-a1c0-e9934dda2ee8" />
-<img width="1666" height="1324" alt="1_3_8__phase_portrait_3d" src="https://github.com/user-attachments/assets/e6e380a3-2cd8-4402-b727-14842359f2ab" />
+![1_3_1__3d_dynamics_velocity](docs/readme_plots/000_1_1__3d_dynamics_velocity.png)
+![1_3_2__3d_dynamics_acceleration](docs/readme_plots/000_1_2__3d_dynamics_acceleration.png)
+![1_3_3__3d_dynamics_inertia](docs/readme_plots/000_1_3__3d_dynamics_inertia.png)
+![1_3_4__3d_dynamics_viscosity](docs/readme_plots/000_1_4__3d_dynamics_viscosity.png)
+![1_3_8__phase_portrait_3d](docs/readme_plots/000_1_8__phase_portrait_3d.png)
 
 ### Principal Axes (PCA)
 
 TLU also extracts the **Principal Axes** of the network by calculating the eigenvalues and eigenvectors of the covariance matrix. This reveals the dominant "dimensions" of variance—the primary directions in which the organization's resources naturally flow and fluctuate.
 
-<img width="1674" height="1018" alt="000_2_2__principal_axes_ratio" src="https://github.com/user-attachments/assets/e24452b1-757b-4d61-acc9-490da73ea7a8" />
+![000_2_2__principal_axes_ratio](docs/readme_plots/000_2_2__principal_axes_ratio.png)
 
 ### 001_ Thermodynamics & Statistical Mechanics
 
 Is your organization efficient? We measure global **Free Energy ($F$)** and **Entropy ($S$)**. High entropy with low work output indicates "Heat" (dissipative costs/waste) building up in the system. Local complexity and volatility are also captured as 3D manifolds.
 
-<img width="1666" height="1324" alt="1_3_5__3d_dynamics_entropy" src="https://github.com/user-attachments/assets/21bc777f-7f61-4846-ba24-0a7df2a77e6e" />
-<img width="1666" height="1324" alt="1_3_6__3d_dynamics_complexity" src="https://github.com/user-attachments/assets/98054228-61d1-4db2-9f2d-f2a154e84243" />
-<img width="1784" height="1780" alt="1_5_1__thermodynamics_dashboard" src="https://github.com/user-attachments/assets/0c905567-6bb5-45a9-8273-3da58f973dd1" />
-<img width="1781" height="1030" alt="1_5_2__thermodynamics_energy_stack" src="https://github.com/user-attachments/assets/ae8cdbcd-d984-45a9-bb97-42f1212c2e25" />
-<img width="1614" height="976" alt="1_5_3__thermodynamics_ts_diagram" src="https://github.com/user-attachments/assets/2a43d059-5bef-4f0a-afb5-94024d78252b" />
+![1_3_5__3d_dynamics_entropy](docs/readme_plots/001_1_2_1__3d_local_entropy.png)
+![1_3_6__3d_dynamics_complexity](docs/readme_plots/001_1_2_5__local_thermo_complexity.png)
+![1_5_1__thermodynamics_dashboard](docs/readme_plots/001_1_1__thermodynamics_dashboard.png)
+![1_5_2__thermodynamics_energy_stack](docs/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![1_5_3__thermodynamics_ts_diagram](docs/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 ### 002_ Information Geometry & Forensics
 
 Unmask anomalies hiding in the data's "blood vessels." TLU calculates **Topological Edge Stress** based on Z-scores, revealing excessive load (rupture risk) on specific pathways and visualizing structural distortions as network graphs.
 
-<img width="2187" height="1335" alt="1_12__network_topology t 00000" src="https://github.com/user-attachments/assets/0e00ce03-5507-4f6b-841b-c4b6f9991eb3" />
-<img width="2187" height="1335" alt="1_12__network_topology t 00001" src="https://github.com/user-attachments/assets/de605f2e-45c0-475b-b16a-97c7a9e155d3" />
-<img width="2187" height="1335" alt="1_12__network_topology t 00002" src="https://github.com/user-attachments/assets/5e7b7ba6-acea-4a65-9d80-c9c5a7cdf9e5" />
-<img width="2187" height="1335" alt="1_12__network_topology t 00003" src="https://github.com/user-attachments/assets/f418bac3-b032-4983-9121-7cd62080c38c" />
+![1_12__network_topology t 00000](docs/readme_plots/002_1_2__network_topology.t.00000.png)
+![1_12__network_topology t 00001](docs/readme_plots/002_1_2__network_topology.t.00001.png)
+![1_12__network_topology t 00002](docs/readme_plots/002_1_2__network_topology.t.00002.png)
+![1_12__network_topology t 00003](docs/readme_plots/002_1_2__network_topology.t.00003.png)
 
 ### Manifold Dimensionality (SVD)
 
 By performing Singular Value Decomposition (SVD) on the transition matrix, TLU calculates the **Effective Rank** of the network. If the network becomes over-centralized or collapses into a few hubs, the effective dimensionality drops, acting as an early warning for structural fragility.
 
-<img width="1688" height="1018" alt="002_1_3__manifold_dimensionality" src="https://github.com/user-attachments/assets/3ed10e21-82c7-4d1c-b1bf-58cbdfabe4d5" />
+![002_1_3__manifold_dimensionality](docs/readme_plots/002_1_3__manifold_dimensionality.png)
 
 ### 003_ Applied Kinematics & Robotics
 
 *(Supports Forward Kinematics for simulating the ripple effects of virtual investments, and Inverse Kinematics for calculating the required target intervention while considering stiffness penalties.)*
 
-<img width="1717" height="1324" alt="1_1__3d_kinematics_fk" src="https://github.com/user-attachments/assets/47fe78fa-5d1e-4935-95c1-3324ff9e6dd9" />
-<img width="1717" height="1324" alt="1_2__3d_kinematics_ik" src="https://github.com/user-attachments/assets/8f2022ea-50e0-4cd4-8ef5-b102cf7cc359" />
+![1_1__3d_kinematics_fk](docs/readme_plots/003_1_1__3d_kinematics_fk.png)
+![1_2__3d_kinematics_ik](docs/readme_plots/003_1_2__3d_kinematics_ik.png)
 
 ### 004_ Control Theory & Systems Engineering
 
 Stop guessing. Use **Linear-Quadratic Regulator (LQR)** theory to calculate the mathematically optimal resource allocation trajectory to reach a target state while minimizing organizational friction (strain energy).
 
-<img width="1781" height="1026" alt="1_7_2__control_error_convergence" src="https://github.com/user-attachments/assets/93fd6e45-940e-435d-9777-ce99502e1eaa" />
-<img width="1997" height="1124" alt="1_7_3__control_lqr_performance_space" src="https://github.com/user-attachments/assets/98f2dc6b-3034-4520-90d2-bb887449b4eb" />
+![1_7_2__control_error_convergence](docs/readme_plots/004_1_2__control_error_convergence.png)
+![1_7_3__control_lqr_performance_space](docs/readme_plots/004_1_3__control_lqr_performance_space.png)
 
 ### System Stability (Spectral Radius)
 
 Is the system spinning out of control? By calculating the maximum eigenvalue (**Spectral Radius**) of the transition matrix, TLU detects topological cycles (e.g., Wash Trading or recursive loops). If the radius approaches or exceeds 1.0, the system is mathematically unstable and prone to exponential divergence.
 
-<img width="1680" height="1018" alt="004_1_2__system_stability" src="https://github.com/user-attachments/assets/b4944e8d-8253-409a-b6a4-79c234efed57" />
+![004_1_2__system_stability](docs/readme_plots/004_1_2__system_stability.png)
 
 ---
 
