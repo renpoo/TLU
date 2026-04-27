@@ -1,4 +1,4 @@
-# 04. Applied Kinematics (Phase 1.1 & 1.2)
+# 003_Kinematics
 
 Kinematics allows us to simulate the ripple effects of business decisions. By treating the accounting ledger as a robotic arm (where accounts are joints and money flow is the linkage), we can predict how injecting cash into one account will structurally move the rest of the organization.
 

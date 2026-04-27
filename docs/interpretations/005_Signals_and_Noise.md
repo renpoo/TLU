@@ -1,4 +1,4 @@
-# 06. Signals & Noise
+# 005. Signals and Noise
 
 This phase treats the ledger like a radio signal or a vibrating machine. By analyzing the frequencies, lags, and noise spectrums of the money flow, TLU can detect deep, systemic process changes that are completely invisible in standard aggregate totals.
 

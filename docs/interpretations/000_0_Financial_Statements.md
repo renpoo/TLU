@@ -1,4 +1,4 @@
-# 00. Financial Statements
+# 000_0. Financial Statements
 
 Before projecting the raw journal data into the multi-dimensional physics space, TLU automatically generates standard Investor Relations (IR) style charts. These serve as your grounding baseline.
 
