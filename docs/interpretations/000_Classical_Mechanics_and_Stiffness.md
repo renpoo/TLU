@@ -6,6 +6,8 @@ Once the data is pre-processed, TLU projects the financial ledgers into a physic
 
 ### 1. 3D Dynamics: Velocity (`000_1_1__3d_dynamics_velocity.png`)
 
+![000_1_1__3d_dynamics_velocity](../readme_plots/000_1_1__3d_dynamics_velocity.png)
+
 * **📊 Visual Structure**: A 3D phase space graph. The axes represent the network's principal dimensions. The trajectory (the winding line) traces the *rate of change* (Velocity) of the money flow over time.
 * **📐 Physics Theory**: The first derivative of the ledger flux. How fast is the volume of money moving through the accounts compared to the previous time step?
 * **🚨 Anomaly Detection**: 
@@ -16,6 +18,8 @@ Once the data is pre-processed, TLU projects the financial ledgers into a physic
 ---
 
 ### 2. 3D Dynamics: Acceleration (`000_1_2__3d_dynamics_acceleration.png`)
+
+![000_1_2__3d_dynamics_acceleration](../readme_plots/000_1_2__3d_dynamics_acceleration.png)
 
 * **📊 Visual Structure**: Similar to Velocity, but tracking the 3D trajectory of *Acceleration*.
 * **📐 Physics Theory**: The second derivative of the ledger flux. Is the speed of money flow increasing or decreasing? This represents the net external force ($F_{ext}$) applied to the system.
@@ -41,6 +45,8 @@ Once the data is pre-processed, TLU projects the financial ledgers into a physic
 ---
 
 ### 4. Principal Axes Ratio (`000_2_2__principal_axes_ratio.png`)
+
+![000_2_2__principal_axes_ratio](../readme_plots/000_2_2__principal_axes_ratio.png)
 
 * **📊 Visual Structure**: A simple bar or line chart showing the ratio of variance captured by the top 3 principal components (PC1, PC2, PC3).
 * **📐 Physics Theory**: Principal Component Analysis (PCA). It calculates how many dimensions the organization needs to operate.

@@ -6,6 +6,8 @@ This phase applies statistical mechanics to the financial ledger. It treats mone
 
 ### 1. Thermodynamics Dashboard (`001_1_1__thermodynamics_dashboard.png`)
 
+![001_1_1__thermodynamics_dashboard](../readme_plots/001_1_1__thermodynamics_dashboard.png)
+
 * **📊 Visual Structure**: A multi-panel dashboard. Key panels include the T-S (Temperature vs. Entropy) diagram and the Global Free Energy trend line.
 * **📐 Physics Theory**: Calculates Helmholtz Free Energy ($F = U - TS$). It measures the "useful" monetary energy available to do actual business work, minus the energy lost to systemic chaos ($T \times S$).
 * **🚨 Anomaly Detection**: 
@@ -15,6 +17,8 @@ This phase applies statistical mechanics to the financial ledger. It treats mone
 
 ### 2. T-S Diagram (`001_1_1__thermodynamics_ts_diagram.png`)
 
+![001_1_3__thermodynamics_ts_diagram](../readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+
 * **📊 Visual Structure**: A scatter plot where the X-axis is Entropy ($S$) and the Y-axis is Temperature ($T$). 
 * **📐 Physics Theory**: Visualizes the thermodynamic state of the system over time. Temperature represents the "volatility" or magnitude of transaction fluctuations.
 * **🚨 Anomaly Detection**: 
@@ -23,6 +27,8 @@ This phase applies statistical mechanics to the financial ledger. It treats mone
 
 ### 3. Local Thermodynamics (`001_2_1__local_thermodynamics_dashboard.png`)
 
+![001_1_2_1__3d_local_entropy](../readme_plots/001_1_2_1__3d_local_entropy.png)
+
 * **📊 Visual Structure**: A bar chart or heatmap breaking down the Free Energy and Entropy *per specific account* (local nodes).
 * **📐 Physics Theory**: Maps the global thermodynamic waste down to the specific nodes generating the heat.
 * **🚨 Anomaly Detection**: 
@@ -30,6 +36,8 @@ This phase applies statistical mechanics to the financial ledger. It treats mone
 * **💼 Business Translation**: **Pinpointing the Leak**. While the Global dashboard tells you the company is bleeding efficiency, this local dashboard tells you *exactly which department or account* is causing the chaos. It highlights where internal controls have completely failed.
 
 ### 4. Lag Matrix Heatmap (`001_2_2__lag_matrix_heatmap.png`)
+
+![001_2_1_1__lag_matrix_correlation](../readme_plots/001_2_1_1__lag_matrix_correlation.png)
 
 * **📊 Visual Structure**: A matrix showing the correlation/time-lag relationship between accounts.
 * **📐 Physics Theory**: Calculates the delayed response (temporal memory) of the network.

@@ -6,6 +6,8 @@ This phase treats the ledger like a radio signal or a vibrating machine. By anal
 
 ### 1. Phase Drift Heatmap (`005_1_2__phase_drift_heatmap.png`)
 
+![005_1_2__phase_drift_heatmap](../readme_plots/005_1_2__phase_drift_heatmap.png)
+
 * **📊 Visual Structure**: A matrix heatmap where the X-axis is time (e.g., weeks) and the Y-axis lists specific account pairs (e.g., `Accounts_Receivable vs Cash`).
 * **📐 Physics Theory**: Cross-Correlation Signal Processing. It measures the "time lag" (phase shift) between two correlated signals. If Sales usually turn into Cash 3 weeks later, the baseline lag is 3.
 * **🚨 Anomaly Detection**: 
@@ -16,6 +18,8 @@ This phase treats the ledger like a radio signal or a vibrating machine. By anal
 
 ### 2. Resonant Frequency (`005_1_1__resonant_frequency.png`)
 
+![005_1_1_resonant_frequency](../readme_plots/005_1_1_resonant_frequency.png)
+
 * **📊 Visual Structure**: A spectral density graph (like an audio equalizer) showing peaks at specific frequencies.
 * **📐 Physics Theory**: Fourier Transform. Identifies the natural "vibrational frequencies" of the organization (e.g., bi-weekly payroll cycles, quarterly tax payments).
 * **🚨 Anomaly Detection**: 
@@ -23,6 +27,8 @@ This phase treats the ledger like a radio signal or a vibrating machine. By anal
 * **💼 Business Translation**: **Automated Fraud or Process Hijacking**. If a new, highly regular high-frequency transaction cycle appears, it strongly suggests a programmed bot or an automated embezzlement script is siphoning micro-amounts of money at exact intervals.
 
 ### 3. Fractal Noise Spectrum (`005_2_1__fractal_noise_spectrum.png`)
+
+![005_2_1_fractal_noise_spectrum](../readme_plots/005_2_1_fractal_noise_spectrum.png)
 
 * **📊 Visual Structure**: A scatter plot on a logarithmic scale showing the Power Spectral Density (PSD) decay.
 * **📐 Physics Theory**: Power Law / 1/f Noise Analysis. Healthy natural systems (including human organizations) exhibit $1/f$ (pink noise) scaling. Pure randomness is $1/f^0$ (white noise).

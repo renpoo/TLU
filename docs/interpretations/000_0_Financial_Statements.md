@@ -6,6 +6,8 @@ Before projecting the raw journal data into the multi-dimensional physics space,
 
 ### 1. Balance Sheet Block Chart (`000_0_1__BS_Block_Total.png`)
 
+![000_0_1__BS_Block_Total](../readme_plots/000_0_1__BS_Block_Total.png)
+
 * **📊 Visual Structure**: A traditional side-by-side stacked bar chart. 
   * **Left Column**: Assets (Cash, Accounts Receivable, Inventory).
   * **Right Column**: Liabilities (Accounts Payable) + Equity (Retained Earnings).
@@ -18,6 +20,8 @@ Before projecting the raw journal data into the multi-dimensional physics space,
 ---
 
 ### 2. Profit & Loss Waterfall (`000_0_1__PL_Waterfall_Total.png`)
+
+![000_0_1__PL_Waterfall_Total](../readme_plots/000_0_1__PL_Waterfall_Total.png)
 
 * **📊 Visual Structure**: A cascading step chart.
   * **Start (Green Bar)**: Total Sales Revenue pointing upward.
@@ -32,6 +36,8 @@ Before projecting the raw journal data into the multi-dimensional physics space,
 ---
 
 ### 3. Profit & Loss Trend (`000_0_1__PL_Trend.png`)
+
+![000_0_1__PL_Trend](../readme_plots/000_0_1__PL_Trend.png)
 
 * **📊 Visual Structure**: A time-series bar and line chart.
   * **X-Axis**: Time (Weeks, Months, or Quarters, depending on your pre-aggregation settings).

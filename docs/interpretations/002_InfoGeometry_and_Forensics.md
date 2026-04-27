@@ -6,6 +6,8 @@ This is the most critical phase for **fraud detection and auditing**. By analyzi
 
 ### 1. Macro Forensics Z-Score (`002_2_1__macro_forensics_dashboard.png`)
 
+![002_2_1__macro_forensics_dashboard](../readme_plots/002_2_1__macro_forensics_dashboard.png)
+
 * **📊 Visual Structure**: A line graph plotting the overall network "Z-Score" over time.
 * **📐 Physics Theory**: Kirchhoff’s Current Law (Conservation of Energy). Money cannot be created or destroyed. The Z-Score mathematically measures the severity of any violation of this law across the entire ledger.
 * **🚨 Anomaly Detection**: 
@@ -14,6 +16,10 @@ This is the most critical phase for **fraud detection and auditing**. By analyzi
 
 ### 2. Micro Z-Score / KL Drift Heatmaps (`002_2_2_1__micro_KL_drift_heatmap.png`, `002_2_2_2__micro_Z_Score_heatmap.png`)
 
+![002_2_2_1__micro_KL_drift_heatmap](../readme_plots/002_2_2_1__micro_KL_drift_heatmap.png)
+
+![002_2_2_2__micro_Z_Score_heatmap](../readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+
 * **📊 Visual Structure**: Matrix heatmaps. The X-axis is time, the Y-axis is specific accounts. Dark red/bright colors indicate high stress.
 * **📐 Physics Theory**: Information Geometry (Kullback-Leibler Divergence). Measures how much the probability distribution of a specific account has unexpectedly mutated compared to its historical behavior.
 * **🚨 Anomaly Detection**: 
@@ -21,6 +27,8 @@ This is the most critical phase for **fraud detection and auditing**. By analyzi
 * **💼 Business Translation**: **Pinpointing the Fraudster**. While the Macro dashboard tells you a crime occurred, the Micro heatmap tells you exactly *which account* was manipulated. If Payroll lights up red, look for ghost employees or unauthorized bonus payouts.
 
 ### 3. Network Topology / Node-Link Diagrams (`002_1_2__network_topology.t.*.png`)
+
+![002_1_2__network_topology.t.00000](../readme_plots/002_1_2__network_topology.t.00000.png)
 
 *Note: TLU generates a sequence of these images over time. You may need to flip through them like a flipbook.*
 
@@ -31,6 +39,8 @@ This is the most critical phase for **fraud detection and auditing**. By analyzi
 * **💼 Business Translation**: **Visualizing the Crime Scene**. You can physically see the flow of money being diverted. If a thick line suddenly connects "Inventory" directly to an unknown "Suspense Account," you are looking at a visual representation of inventory theft.
 
 ### 4. Manifold Dimensionality / Effective Rank (`002_1_3__manifold_dimensionality.png`)
+
+![002_1_3__manifold_dimensionality](../readme_plots/002_1_3__manifold_dimensionality.png)
 
 * **📊 Visual Structure**: A line graph showing a single metric (Effective Rank) over time.
 * **📐 Physics Theory**: Singular Value Decomposition (SVD). Calculates the true mathematical dimensionality of the network. A healthy organization requires multiple dimensions (Sales, Payroll, Inventory, etc.) to function.
