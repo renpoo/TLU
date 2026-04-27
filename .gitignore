@@ -26,3 +26,4 @@ samples/**/output_plots
 
 scratch
 TLU-SDLs
+error.log
