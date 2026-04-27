@@ -11,13 +11,13 @@ The accounting ledger for `Sample_2_Embezzlement_Leak` is mathematically balance
 * **Severity:** HIGH
 * **Physical Evidence:** 
   * **Relative Mass Leak Ratio:** `0.0` (Mass is perfectly conserved; the double-entry system was not broken).
-    <img width="2224" height="1658" alt="002_2_1__macro_forensics_dashboard" src="https://github.com/user-attachments/assets/fa0191c2-059e-4aef-ae29-50e8eb3b0e06" />
+    ![002_2_1__macro_forensics_dashboard](readme_plots/002_2_1__macro_forensics_dashboard.png)
 
   * **Relative Free Energy Ratio:** **-0.1556** (Falls far below the -0.1 threshold. Despite preserved mass, the system is bleeding its capacity to perform useful work).
-    <img width="1900" height="1045" alt="001_1_2__thermodynamics_energy_stack" src="https://github.com/user-attachments/assets/dfe992d1-e01f-4201-bdc7-d29a4f7e97b1" />
+    ![001_1_2__thermodynamics_energy_stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
   * **Max Local Z-Score:** **89.12** (Massive stress isolated to specific nodes).
-    <img width="1978" height="953" alt="002_2_2_2__micro_Z_Score_heatmap" src="https://github.com/user-attachments/assets/1c9fd031-0ded-4e6d-adc9-a21d17e711ba" />
+    ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
 
 * **Financial Evidence:** 
   The B/S is balanced (`is_balanced: true`), and the company posted a Net Income of $58,488. However, the physical metrics prove that legitimate assets are being funneled out of the network disguised as "legitimate expenses" (e.g., fraudulent vendor payments or bloated travel expenses), masking the theft behind normal business operations.
@@ -27,4 +27,4 @@ The perpetrator possesses accounting knowledge and successfully bypassed traditi
 
 **【Action Plan】**
 Macro-level balance checks are useless here. You must immediately consult the Micro Forensics Heatmap (`002_2_2__micro_Z_Score_heatmap.png`) to identify the exact expense node generating the 89.12 Z-Score. Once identified, initiate a receipt-level forensic audit of all outbound cash flows from that specific account to uncover the shell companies or unauthorized personal reimbursements.
-    <img width="1978" height="953" alt="002_2_2_2__micro_Z_Score_heatmap" src="https://github.com/user-attachments/assets/1c9fd031-0ded-4e6d-adc9-a21d17e711ba" />
+    ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
