@@ -34,6 +34,7 @@ VIZ_ORCH_DIR="./bin/visualizers"
 
 # Array of visualization launchers to execute (in sequential order)
 SCRIPTS=(
+    "vis_000_0_1_visualize_financial_statements.sh"
     "vis_000_1_1_visualize_dynamics_state.sh"
     "vis_000_2_1_visualize_structural_stiffness.sh"
     "vis_000_2_2_visualize_principal_axes.sh"

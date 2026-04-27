@@ -56,7 +56,10 @@ def main():
         title_prefix = f"Node Phase Drift Heatmap (Master: Node {args.master_node})"
 
     y_labels = [f"{i:02d}: {idx_to_label.get(i, f'N_{i}')}" for i in pivot_df.index]
-    x_labels = [str(int(t)) for t in pivot_df.columns]
+    
+    T = int(df['t_idx'].max()) + 1
+    t_idx_to_label = load_time_labels(args.time_map, T)
+    x_labels = [t_idx_to_label.get(int(t), str(int(t))) for t in pivot_df.columns]
 
     fig, ax = plt.subplots(figsize=(14, 8))
     

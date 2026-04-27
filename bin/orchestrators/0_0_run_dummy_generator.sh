@@ -34,10 +34,10 @@ SEED="${DUMMY_RANDOM_SEED:-42}"
 ${TLU_PY} -m src.filters._0_0_generate_dummy_journal \
     --months "${MONTHS}" \
     --seed "${SEED}" \
-    --sales-leak-prob "${TLU_SALES_LEAK_PROB:-0.0}" \
-    --purchase-leak-prob "${TLU_PURCHASE_LEAK_PROB:-0.0}" \
-    --wash-trade-prob "${TLU_WASH_TRADE_PROB:-0.0}" \
-    --unbalanced-mistake-prob "${TLU_UNBALANCED_PROB:-0.0}" \
+    --sales-leak-prob "${DUMMY_SALES_LEAK_PROB:-0.0}" \
+    --purchase-leak-prob "${DUMMY_PURCHASE_LEAK_PROB:-0.0}" \
+    --wash-trade-prob "${DUMMY_WASH_TRADE_PROB:-0.0}" \
+    --unbalanced-mistake-prob "${DUMMY_UNBALANCED_PROB:-0.0}" \
     > "${OUTPUT_FILE}"
     # > "${OUTPUT_FILE}"
 

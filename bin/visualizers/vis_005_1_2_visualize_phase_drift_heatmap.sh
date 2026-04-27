@@ -23,5 +23,3 @@ cat "$DATA_PATH" | ${TLU_PY} -m src.visualizations._005_1_2_visualize_phase_drif
     --theme "${TLU_THEME}" \
     --node_map "${TLU_NODE_MAP}" \
     --time_map "${TLU_TIME_MAP}"
-
-echo "✅ Saved: ${TLU_PLOT_DIR}/005_1_2__phase_drift_heatmap.png"
