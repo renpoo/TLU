@@ -10,9 +10,10 @@ import argparse
 import pandas as pd
 import numpy as np
 from src.core.core_signal_processing import compute_spectral_exponent_beta
+from src.filters.cli_parser import get_base_parser
 
 def main():
-    parser = argparse.ArgumentParser(description="005_2_1: Fractal Dimensionality & 1/f Noise Filter")
+    parser = get_base_parser("005_2_1: Fractal Dimensionality & 1/f Noise Filter")
     args = parser.parse_args()
 
     try:
@@ -60,9 +61,9 @@ def main():
         beta = compute_spectral_exponent_beta(x)
         
         # Classification based on beta
-        if beta < 0.5:
+        if beta < args.thresh_fractal_lower:
             classification = "White Noise"
-        elif beta <= 1.5:
+        elif beta <= args.thresh_fractal_upper:
             classification = "Pink Noise"
         else:
             classification = "Brown Noise"

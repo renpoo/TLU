@@ -66,6 +66,16 @@ def get_base_parser(description: str) -> argparse.ArgumentParser:
     parser.add_argument("--time_map", type=str, default=f"{env_dir}/ephemeral/_time_map.csv")
     parser.add_argument("--node_map", type=str, default=f"{env_dir}/ephemeral/_node_map.csv")
     parser.add_argument("--sys_params", type=str, default=f"{env_dir}/config/_sys_params.csv")
+    
+    # Load thresholds from sys_params and inject them as parser arguments
+    sys_params = load_sys_params(f"{env_dir}/config/_sys_params.csv")
+    parser.add_argument("--thresh_z_score", type=float, default=sys_params.get("thresh_z_score", 3.0))
+    parser.add_argument("--thresh_spectral_radius", type=float, default=sys_params.get("thresh_spectral_radius", 0.95))
+    parser.add_argument("--thresh_fractal_lower", type=float, default=sys_params.get("thresh_fractal_lower", 0.5))
+    parser.add_argument("--thresh_fractal_upper", type=float, default=sys_params.get("thresh_fractal_upper", 1.5))
+    parser.add_argument("--thresh_manifold_svd", type=float, default=sys_params.get("thresh_manifold_svd", 1e-10))
+    parser.add_argument("--target_phase_frequency", type=float, default=sys_params.get("target_phase_frequency", 0.25))
+
     return parser
 
 def parse_projector_args(args_list: list[str]) -> dict:

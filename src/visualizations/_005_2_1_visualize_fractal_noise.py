@@ -53,14 +53,15 @@ def main():
     bars = ax.barh(df['node_label'], df['spectral_exponent_beta'], color=colors, edgecolor='none')
     
     # Draw classification boundaries
-    ax.axvline(x=0.5, color='#aaaaaa', linestyle='--', alpha=0.7, zorder=0)
-    ax.axvline(x=1.5, color='#aaaaaa', linestyle='--', alpha=0.7, zorder=0)
+    ax.axvline(x=args.thresh_fractal_lower, color='#aaaaaa', linestyle='--', alpha=0.7, zorder=0)
+    ax.axvline(x=args.thresh_fractal_upper, color='#aaaaaa', linestyle='--', alpha=0.7, zorder=0)
     
     # Annotate zones
     ymin, ymax = ax.get_ylim()
-    ax.text(0.25, ymax, 'White Noise\n(< 0.5)', color='#00bfff', ha='center', va='bottom', fontsize=10, weight='bold')
-    ax.text(1.0, ymax, 'Pink Noise\n(0.5 - 1.5)', color='#ff1493', ha='center', va='bottom', fontsize=10, weight='bold')
-    ax.text(1.75, ymax, 'Brown Noise\n(> 1.5)', color='#8b4513', ha='center', va='bottom', fontsize=10, weight='bold')
+    ax.text(args.thresh_fractal_lower / 2, ymax, f'White Noise\n(< {args.thresh_fractal_lower})', color='#00bfff', ha='center', va='bottom', fontsize=10, weight='bold')
+    midpoint = (args.thresh_fractal_lower + args.thresh_fractal_upper) / 2
+    ax.text(midpoint, ymax, f'Pink Noise\n({args.thresh_fractal_lower} - {args.thresh_fractal_upper})', color='#ff1493', ha='center', va='bottom', fontsize=10, weight='bold')
+    ax.text(args.thresh_fractal_upper + 0.25, ymax, f'Brown Noise\n(> {args.thresh_fractal_upper})', color='#8b4513', ha='center', va='bottom', fontsize=10, weight='bold')
 
     ax.set_title("System Memory & Complexity (1/f Noise Spectrum)", fontsize=16, color=text_col, pad=20)
     ax.set_xlabel(r"Spectral Exponent $\beta$", fontsize=12, color=text_col)

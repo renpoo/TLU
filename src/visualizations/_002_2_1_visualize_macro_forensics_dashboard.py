@@ -63,7 +63,8 @@ def main():
     axes[2].set_title("3. Statistical Anomaly (Mahalanobis Z-Score)", fontsize=15, color=text_col, loc='left', fontweight='bold')
     axes[2].set_ylabel("Z-Score (sigma)", color=text_col, fontsize=12)
     axes[2].set_xlabel("Timeline", color=text_col, fontsize=12)
-    axes[2].axhline(3.0, color=grid_col, linestyle='--', alpha=0.8)
+    axes[2].axhline(args.thresh_z_score, color=grid_col, linestyle='--', alpha=0.8, label=f'Threshold ({args.thresh_z_score})')
+    axes[2].legend(loc='upper right', facecolor=ui_canvas['legend_bg'], edgecolor=ui_canvas['legend_edge'], labelcolor=text_col)
 
     axes[2].set_xticks(x_values)
     axes[2].set_xticklabels(x_tick_labels, rotation=45, color=text_col, ha='right', fontsize=11)

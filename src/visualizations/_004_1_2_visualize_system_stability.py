@@ -48,8 +48,8 @@ def main():
         ax.set_xticks(x_values)
         ax.set_xticklabels(x_tick_labels, rotation=45, color=text_col, ha='right', fontsize=11)
 
-    # Stability Threshold line at 1.0
-    ax.axhline(1.0, color='#e67e22', linestyle='--', linewidth=2, label='Stability Threshold (1.0)')
+    # Stability Threshold line
+    ax.axhline(args.thresh_spectral_radius, color='#e67e22', linestyle='--', linewidth=2, label=f'Stability Threshold ({args.thresh_spectral_radius})')
 
     ax.set_title("Control Theory: System Stability (Poles / Spectral Radius)", fontsize=15, color=text_col)
     ax.set_xlabel("Timeline", fontsize=12, color=text_col)

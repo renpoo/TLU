@@ -23,6 +23,22 @@ def get_base_parser(description: str) -> argparse.ArgumentParser:
     parser.add_argument("--time_map", type=str, default="_time_map.csv")
     parser.add_argument("--max_legend", type=int, default=25)
     parser.add_argument("--interactive", action="store_true", help="Keep the plot window open for interactive inspection")
+    
+    # Load thresholds from sys_params and inject them as parser arguments
+    try:
+        from src.filters.cli_parser import load_sys_params
+        env_dir = os.environ.get("TARGET_ENV", "workspace")
+        sys_params = load_sys_params(f"{env_dir}/config/_sys_params.csv")
+        parser.add_argument("--thresh_z_score", type=float, default=sys_params.get("thresh_z_score", 3.0))
+        parser.add_argument("--thresh_spectral_radius", type=float, default=sys_params.get("thresh_spectral_radius", 0.95))
+        parser.add_argument("--thresh_fractal_lower", type=float, default=sys_params.get("thresh_fractal_lower", 0.5))
+        parser.add_argument("--thresh_fractal_upper", type=float, default=sys_params.get("thresh_fractal_upper", 1.5))
+    except ImportError:
+        parser.add_argument("--thresh_z_score", type=float, default=3.0)
+        parser.add_argument("--thresh_spectral_radius", type=float, default=0.95)
+        parser.add_argument("--thresh_fractal_lower", type=float, default=0.5)
+        parser.add_argument("--thresh_fractal_upper", type=float, default=1.5)
+
     return parser
 
 def apply_theme(theme_name="dark"):

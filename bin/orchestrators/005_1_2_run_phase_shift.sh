@@ -5,9 +5,8 @@
 # ==========================================
 source "$(dirname "$0")/_tlu_env.sh"
 
-# We will set a fixed target frequency for Phase 005_1_2 for now.
-# Frequency = 0.25 (Period = 4 weeks / 1 month)
-TARGET_FREQ="0.25"
+# Read dynamic frequency from sys_params (defaults to 0.25)
+TARGET_FREQ="${TLU_TARGET_PHASE_FREQUENCY:-0.25}"
 WINDOW_SIZE="24"
 STEP_SIZE="4"
 MASTER_NODE="6"

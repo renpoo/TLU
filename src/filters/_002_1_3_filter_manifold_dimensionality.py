@@ -36,7 +36,7 @@ def run_manifold_dimensionality_analysis(
     
     # S contains singular values in descending order
     # Calculate effective rank (number of singular values > threshold)
-    threshold = 1e-10
+    threshold = args.thresh_manifold_svd
     effective_rank = np.sum(S > threshold)
     
     total_s = np.sum(S)

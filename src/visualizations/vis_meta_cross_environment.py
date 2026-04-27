@@ -14,6 +14,8 @@ def parse_args():
     parser.add_argument("--envs", nargs='+', required=True, help="List of environment directories to compare")
     parser.add_argument("--out", type=str, default="workspace/meta_analysis", help="Output directory")
     parser.add_argument("--theme", type=str, default="dark", help="Visualization theme")
+    
+    # Load sys_params from the first environment as the baseline for thresholds
     return parser.parse_args()
 
 def safe_max(df, column, abs_val=False, default=0.0):
@@ -104,10 +106,18 @@ def main():
             f.write(f"| {row['Environment']} | {row['Max_Conservation_Residual']:.2f} | {row['Max_Spectral_Radius']:.4f} | {row['Min_Free_Energy']:.2f} | {row['Max_Local_Z_Score']:.2f} |\n")
     print(f"✅ Saved Markdown: {md_path}")
     
+    # Load sys_params from the first environment to get global thresholds
+    try:
+        from src.filters.cli_parser import load_sys_params
+        first_env = args.envs[0].rstrip('/')
+        sys_params = load_sys_params(f"{first_env}/config/_sys_params.csv")
+    except Exception as e:
+        sys_params = {}
+
     # Generate Comparison Plot (Grouped Bar Chart)
-    generate_plot(df_results, args.out, args.theme)
+    generate_plot(df_results, args.out, args.theme, sys_params)
     
-def generate_plot(df, out_dir, theme):
+def generate_plot(df, out_dir, theme, sys_params):
     if theme == "dark":
         plt.style.use('dark_background')
         bg_color = '#121212'
@@ -144,8 +154,9 @@ def generate_plot(df, out_dir, theme):
     
     # Top Right: Spectral Radius
     setup_ax(axes[0, 1], 'System Instability (Wash Trade Loop)', 'Max Spectral Radius', df['Max_Spectral_Radius'], '#ffb142')
-    # Add critical threshold line at 1.0
-    axes[0, 1].axhline(y=1.0, color='#ff0000', linestyle='--', linewidth=2, label='Critical Limit (1.0)')
+    # Add critical threshold line
+    t_spectral = sys_params.get("thresh_spectral_radius", 0.95)
+    axes[0, 1].axhline(y=t_spectral, color='#ff0000', linestyle='--', linewidth=2, label=f'Critical Limit ({t_spectral})')
     axes[0, 1].legend(loc='upper right', facecolor=bg_color, edgecolor=grid_color, labelcolor=text_color)
     
     # Bottom Left: Free Energy
@@ -155,8 +166,9 @@ def generate_plot(df, out_dir, theme):
     
     # Bottom Right: Micro Forensics Z-Score
     setup_ax(axes[1, 1], 'Local Pathological Stress (Micro Forensics)', 'Max Z-Score', df['Max_Local_Z_Score'], '#706fd3')
-    # Add normal threshold line around 3.0
-    axes[1, 1].axhline(y=3.0, color='#ff0000', linestyle='--', linewidth=1, label='Statistical Outlier (3.0)')
+    # Add normal threshold line
+    t_zscore = sys_params.get("thresh_z_score", 3.0)
+    axes[1, 1].axhline(y=t_zscore, color='#ff0000', linestyle='--', linewidth=1, label=f'Statistical Outlier ({t_zscore})')
     axes[1, 1].legend(loc='upper right', facecolor=bg_color, edgecolor=grid_color, labelcolor=text_color)
     
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
