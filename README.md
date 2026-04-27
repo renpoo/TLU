@@ -42,6 +42,16 @@ TLU avoids giant monoliths and is built upon the **Unix Philosophy**, connecting
 
 ---
 
+## 🤖 Next-Gen Feature: AI Autonomous Auditing
+
+TLU is not just a mathematical tool; it is designed to be fully integrated with Large Language Models (LLMs) to create an **Autonomous Auditing Agent**. 
+
+By reading the [**LLM Meta-Diagnosis System Prompt & Operating Procedure**](docs/LLM_Diagnostic_Manual.md), any LLM (such as ChatGPT, Claude, or Gemini) can be instantly transformed into a "Meta-Diagnostic Radiologist." The manual provides a strict, tier-based logical framework (Decision Matrix) that allows the AI to ingest the high-dimensional physical metrics (like Spectral Radius and Free Energy) and cross-reference them with traditional Financial Statements (B/S, P/L) to output a CPA-grade, human-readable Medical Chart without hallucinating.
+
+Check out the `samples/` directories to see actual English audit reports generated autonomously by the LLM using this manual!
+
+---
+
 ## Visual Showcase (Empirical Evidence)
 
 TLU offloads cognitive load through its advanced "Dark" visualization suite ("Light" and "Colorblind-safe" themes are also available). Below are analytical trajectories based on the new taxonomy representing the lineage of natural sciences.
