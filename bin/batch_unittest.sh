@@ -15,6 +15,8 @@ source "$(dirname "$0")/orchestrators/_tlu_env.sh"
 # 2. Define test modules
 TEST_MODULES=(
     # --- Unit Tests ---
+    "tests.unit.test_0_0_generate_dummy_journal"
+    "tests.unit.test_0_0_generate_dummy_market"
     "tests.unit.test_cli_parser"
     "tests.unit.test_stream_processor"
     "tests.unit.test_index_registry"

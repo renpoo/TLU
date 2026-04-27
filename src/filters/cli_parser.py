@@ -82,7 +82,8 @@ def get_base_parser(description: str) -> argparse.ArgumentParser:
     parser.add_argument("--sys_params", type=str, default=f"{env_dir}/config/_sys_params.csv")
     
     # Load thresholds from sys_params and inject them as parser arguments
-    sys_params = load_sys_params(f"{env_dir}/config/_sys_params.csv")
+    sys_params_path = os.environ.get("TLU_SYS_PARAMS", f"{env_dir}/config/_sys_params.csv")
+    sys_params = load_sys_params(sys_params_path)
     parser.add_argument("--thresh_z_score", type=float, default=sys_params.get("thresh_z_score", 3.0))
     parser.add_argument("--thresh_spectral_radius", type=float, default=sys_params.get("thresh_spectral_radius", 0.95))
     parser.add_argument("--thresh_fractal_lower", type=float, default=sys_params.get("thresh_fractal_lower", 0.5))
@@ -111,6 +112,8 @@ def parse_projector_args(args_list: list[str]) -> dict:
     parser.add_argument("--col_src", type=str, default="")
     parser.add_argument("--col_tgt", type=str, default="")
     parser.add_argument("--col_val", type=str, default="")
+    parser.add_argument("--col_multiplier", type=str, default="", help="Optional column to multiply col_val by (e.g. Price for Volume)")
+    parser.add_argument("--interval", type=str, default="day", choices=["day", "week", "month", "quarter", "year", "none"])
     parser.add_argument("--time_format", type=str, default="%Y/%m/%d")
 
     parsed, _ = parser.parse_known_args(args_list)
@@ -119,7 +122,8 @@ def parse_projector_args(args_list: list[str]) -> dict:
     import os
     env_dir = os.environ.get("TARGET_ENV", "workspace")
     # Gracefully merge loaded system parameter baselines resolving omitted stream aliases
-    sys_params = load_sys_params(f"{env_dir}/config/_sys_params.csv")
+    sys_params_path = os.environ.get("TLU_SYS_PARAMS", f"{env_dir}/config/_sys_params.csv")
+    sys_params = load_sys_params(sys_params_path)
     
     col_mapping = ["col_time", "col_src", "col_tgt", "col_val"]
     
