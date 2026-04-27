@@ -70,6 +70,7 @@ This normalization projects the stiffness into a strict `[-1.0, 1.0]` space:
 *Implementation: `src/filters/_000_2_2_filter_principal_axes.py`*
 
 ![000_2_2__principal_axes_ratio](../readme_plots/000_2_2__principal_axes_ratio.png)
+![000_2_3__eigenvector_evolution](../readme_plots/000_2_3__eigenvector_evolution.png)
 
 While the Precision Matrix measures the direct stiffness between individual node pairs, **Principal Axes (PCA)** extracts the macro-level "dimensions" of the entire organization's movement.
 
@@ -80,6 +81,13 @@ By calculating the covariance matrix of the flux history and performing an eigen
 * **Eigenvectors (The Axes):** The primary directions in which resources flow together as a cohesive block.
 * **Eigenvalues (The Variance):** How much of the organization's total energy (variance) is captured by each axis.
 * **Explained Variance Ratio:** Shows whether the organization is heavily centralized (e.g., the first principal component explains 80% of all movement) or decentralized (variance is evenly spread across many dimensions).
+
+#### The Physics of the First Principal Component (PC1)
+
+It is crucial to note that TLU's PCA does *not* measure the static balances or simple cumulative totals of the accounts. Instead, it calculates the **covariance of the flux differential ($dq$)**.
+
+Because it strictly analyzes the rate of change ($dq = q_{t} - q_{t-1}$), the First Principal Component mathematically isolates the **"Main Engine"** of the organization. It identifies which accounts experience the most massive, synchronized fluctuations (e.g., Cash dropping exactly when Payroll spikes or Accounts Payable is cleared). 
+By visualizing the evolution of the PC1 Eigenvector as a heatmap, TLU mathematically reverse-engineers the underlying business model—without relying on account labels—and instantly reveals structural "Regime Changes" if the dominant flow axis is hijacked.
 
 This allows leadership to understand the underlying "factors" driving the organization, stripping away the noise of individual node fluctuations.
 

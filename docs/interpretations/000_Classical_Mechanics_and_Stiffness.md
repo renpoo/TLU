@@ -63,3 +63,15 @@ Once the data is pre-processed, TLU projects the financial ledgers into a physic
 * **🚨 Anomaly Detection**:
   * A sudden drop in the variance of PC2 or PC3, with PC1 shooting up to nearly 1.0 (100%).
 * **💼 Business Translation**: The organization has lost its operational diversity. All money is being forced through a single bottleneck or pathway. This often happens during "Wash Trading" schemes, where all funds are cyclically pumped through a single, massive artificial transaction loop, drowning out normal, diverse business operations.
+
+---
+
+### 5. Eigenvector Evolution Heatmap (PC1) (`000_2_3__eigenvector_evolution.png`)
+
+![000_2_3__eigenvector_evolution](../readme_plots/000_2_3__eigenvector_evolution.png)
+
+* **📊 Visual Structure**: A 2D Heatmap. The X-axis is time, the Y-axis lists the specific accounts (nodes), and the color intensity represents the absolute magnitude of the 1st Principal Component (PC1) for that account.
+* **📐 Physics Theory**: Covariance of the Flux Differential ($dq$). TLU measures which accounts experience massive, simultaneous fluctuations (e.g., Cash dropping exactly when Payroll spikes). PC1 extracts the dominant "Main Engine" or primary synchronized flow of the entire organization.
+* **🚨 Anomaly Detection**: 
+  * A sudden horizontal shift where the historically bright accounts (e.g., Cash and Payroll) go dark, and entirely new, previously uncorrelated accounts suddenly light up.
+* **💼 Business Translation**: **Regime Change / Systemic Hijacking**. Because TLU analyzes the *derivative* (the rate of change) rather than static balances, this heatmap mathematically reverse-engineers the core business model. If the dominant flow axis suddenly shifts from "Sales/Cash" to "Suspense/Debt", the organization's core mechanism has been structurally altered, often a prime indicator of sophisticated, systemic fraud.

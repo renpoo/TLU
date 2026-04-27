@@ -38,6 +38,7 @@ SCRIPTS=(
     "vis_000_1_1_visualize_dynamics_state.sh"
     "vis_000_2_1_visualize_structural_stiffness.sh"
     "vis_000_2_2_visualize_principal_axes.sh"
+    "vis_000_2_3_visualize_eigenvector_evolution.sh"
     "vis_001_1_1_visualize_macro_thermodynamics.sh"
     "vis_001_2_1_visualize_local_thermodynamics.sh"
     "vis_001_2_2_visualize_lag_matrix.sh"
