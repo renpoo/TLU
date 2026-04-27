@@ -15,17 +15,23 @@ def draw_bs_block_chart(report, out_path):
     bottom_left = 0
     for acc, cat, bal in assets:
         val = max(0, bal) # Clip negative for stacked bar
-        ax.bar('Assets', val, bottom=bottom_left, label=acc.replace('ACC_', ''))
-        bottom_left += val
+        if val > 0:
+            ax.bar('Assets', val, bottom=bottom_left, label=acc.replace('ACC_', ''))
+            ax.text(0, bottom_left + val/2, f"{val:,.0f}", ha='center', va='center', color='white', fontweight='bold', fontsize=9)
+            bottom_left += val
         
     bottom_right = 0
     for acc, cat, bal in liabs:
         val = max(0, bal)
-        ax.bar('Liabilities & Equity', val, bottom=bottom_right, label=acc.replace('ACC_', ''))
-        bottom_right += val
+        if val > 0:
+            ax.bar('Liabilities & Equity', val, bottom=bottom_right, label=acc.replace('ACC_', ''))
+            ax.text(1, bottom_right + val/2, f"{val:,.0f}", ha='center', va='center', color='white', fontweight='bold', fontsize=9)
+            bottom_right += val
         
     eq_val = max(0, report['equity'] + report['net_income'])
-    ax.bar('Liabilities & Equity', eq_val, bottom=bottom_right, label='Equity (Retained Earnings)')
+    if eq_val > 0:
+        ax.bar('Liabilities & Equity', eq_val, bottom=bottom_right, label='Equity (Retained Earnings)')
+        ax.text(1, bottom_right + eq_val/2, f"{eq_val:,.0f}", ha='center', va='center', color='white', fontweight='bold', fontsize=9)
     
     ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
     ax.set_title(f"Balance Sheet (Block Chart): {report['week']}")
@@ -94,6 +100,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--json", required=True)
     parser.add_argument("--out_dir", required=True)
+    parser.add_argument("--seq_dir", required=True)
     args = parser.parse_args()
 
     os.makedirs(args.out_dir, exist_ok=True)
@@ -111,9 +118,7 @@ def main():
     draw_pl_trend(reports, os.path.join(args.out_dir, "000_0_1__PL_Trend.png"))
     
     # 2. Individual Sequence Images (for every time step)
-    # Create a subfolder to avoid cluttering the main plots folder
-    seq_dir = os.path.join(args.out_dir, "financial_statements_sequence")
-    os.makedirs(seq_dir, exist_ok=True)
+    seq_dir = args.seq_dir
     
     for i, r in enumerate(reports):
         # Format index to have leading zeros for sorting

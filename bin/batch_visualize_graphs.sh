@@ -7,7 +7,9 @@ set -euo pipefail
 
 # Parse command line arguments first so they are available when sourcing the environment
 export TLU_THEME="dark"
-export TARGET_ENV="${TARGET_ENV:-}"
+if [ -z "${TARGET_ENV:-}" ]; then
+    unset TARGET_ENV
+fi
 
 while [[ $# -gt 0 ]]; do
   case $1 in
@@ -32,25 +34,29 @@ source "$(dirname "$0")/orchestrators/_tlu_env.sh"
 
 VIZ_ORCH_DIR="./bin/visualizers"
 
-# Array of visualization launchers to execute (in sequential order)
-SCRIPTS=(
+# Primary Dashboards / Macro Indicators (Check Engine Lights)
+PRIMARY_SCRIPTS=(
     "vis_000_0_1_visualize_financial_statements.sh"
+    "vis_000_2_2_visualize_principal_axes.sh"
+    "vis_001_1_1_visualize_macro_thermodynamics.sh"
+    "vis_002_2_1_visualize_macro_forensics.sh"
+    "vis_004_1_2_visualize_system_stability.sh"
+)
+
+# Support / Ancillary Diagnostics (Deep Dives)
+SUPPORT_SCRIPTS=(
     "vis_000_1_1_visualize_dynamics_state.sh"
     "vis_000_2_1_visualize_structural_stiffness.sh"
-    "vis_000_2_2_visualize_principal_axes.sh"
     "vis_000_2_3_visualize_eigenvector_evolution.sh"
-    "vis_001_1_1_visualize_macro_thermodynamics.sh"
     "vis_001_2_1_visualize_local_thermodynamics.sh"
     "vis_001_2_2_visualize_lag_matrix.sh"
     "vis_002_1_1_visualize_info_geometry.sh"
     "vis_002_1_2_visualize_network_topology.sh"
     "vis_002_1_3_visualize_manifold_dimensionality.sh"
-    "vis_002_2_1_visualize_macro_forensics.sh"
     "vis_002_2_2_visualize_micro_forensics.sh"
     "vis_003_1_1_visualize_fk_simulation.sh"
     "vis_003_1_2_visualize_ik_optimization.sh"
     "vis_004_1_1_visualize_control_theory.sh"
-    "vis_004_1_2_visualize_system_stability.sh"
     "vis_004_2_1_visualize_sensitivity_matrix.sh"
     "vis_004_2_2_visualize_sensitivity_analysis_heatmaps.sh"
     "vis_005_1_1_visualize_resonant_frequency.sh"
@@ -59,7 +65,7 @@ SCRIPTS=(
 )
 
 echo "🚀 Starting TLU Visualization Pipeline (Theme: ${TLU_THEME})..."
-if [ -n "${TARGET_ENV}" ]; then
+if [ -n "${TARGET_ENV:-}" ]; then
     echo "📂 Target Environment: ${TARGET_ENV}"
 fi
 echo "--------------------------------------------------"
@@ -69,14 +75,35 @@ echo "🧹 Cleaning previous outputs in: ${TLU_PLOT_DIR}"
 # rm -rf "${TLU_PLOT_DIR}"/*
 rm -rf "${TLU_PLOT_DIR}"
 
-for script in "${SCRIPTS[@]}"; do
-    # Execute only if the script exists
+# We need to preserve the original PLOT_DIR base
+BASE_PLOT_DIR="${TLU_PLOT_DIR}"
+
+echo ">>> Generating Primary Macro-Dashboards..."
+mkdir -p "${BASE_PLOT_DIR}"
+export TLU_PLOT_DIR="${BASE_PLOT_DIR}"
+
+for script in "${PRIMARY_SCRIPTS[@]}"; do
     if [ -f "${VIZ_ORCH_DIR}/${script}" ]; then
         bash "${VIZ_ORCH_DIR}/${script}"
     else
         echo "[WARN] Script not found: ${script}"
     fi
 done
+
+echo ">>> Generating Support Diagnostics..."
+mkdir -p "${BASE_PLOT_DIR}/support"
+export TLU_PLOT_DIR="${BASE_PLOT_DIR}/support"
+
+for script in "${SUPPORT_SCRIPTS[@]}"; do
+    if [ -f "${VIZ_ORCH_DIR}/${script}" ]; then
+        bash "${VIZ_ORCH_DIR}/${script}"
+    else
+        echo "[WARN] Script not found: ${script}"
+    fi
+done
+
+# Restore the original plot dir just in case
+export TLU_PLOT_DIR="${BASE_PLOT_DIR}"
 
 echo "--------------------------------------------------"
 echo "✅ All visualizations completed successfully."

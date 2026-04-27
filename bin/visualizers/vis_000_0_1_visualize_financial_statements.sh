@@ -14,8 +14,12 @@ if [ ! -f "$INPUT_JSON" ]; then
     exit 0
 fi
 
+SEQ_DIR="${TLU_PLOT_DIR}/financial_statements_sequence"
+mkdir -p "${SEQ_DIR}"
+
 ${TLU_PY} -m src.visualizations._000_0_1_visualize_financial_statements \
     --json "$INPUT_JSON" \
-    --out_dir "${TLU_PLOT_DIR}"
+    --out_dir "${TLU_PLOT_DIR}" \
+    --seq_dir "${SEQ_DIR}"
 
 echo "✅ Saved Financial Statement plots to ${TLU_PLOT_DIR}/"
