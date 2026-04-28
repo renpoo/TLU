@@ -2,8 +2,8 @@
 
 **Comparison Targets:**
 
-1. `Sample_6` (Bipartite Graph / Audit of Markets & Stocks)
-2. `Sample_7` (User-to-User Graph / Audit of Actors)
+1. [`Sample_6` (Bipartite Graph / Audit of Markets & Stocks)](Sample_6_Market_Bipartite_Weekly/Sample_6_Market_Analysis_Report.md)
+2. [`Sample_7` (User-to-User Graph / Audit of Actors)](Sample_7_Market_Users_Weekly/Sample_7_User_Analysis_Report.md)
 
 This meta-report integrates TLU's "Physics Diagnostic Manual (LLM_Diagnostic_Manual.md)" with the "Multidimensional Stock Market Analysis Metrics" to examine how a simple **"shift in perspective"** on the exact same event leads to a fundamental paradigm shift in auditing and response actions.
 
