@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_8_fMRI_Stroke/workspace`
-**Date Analyzed:** 2026-04-28 13:10:14
+**Date Analyzed:** 2026-04-28 13:53:57
 
 ## 1. Final Diagnosis
 
@@ -15,12 +15,12 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
 - **Severity:** HIGH
-- **Evidence:** Relative Free Energy Ratio sank to -0.9874 (Threshold: -0.1). Raw F: -2019.31
+- **Evidence:** Relative Free Energy Ratio sank to -2.1742 (Threshold: -0.1). Raw F: -11642.17
 - **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
 
 ### 🟡 Local Pathological Stress (Micro Singularity)
 - **Severity:** MEDIUM
-- **Evidence:** Maximum local Z-Score reached 25.00 (Threshold: 3.0).
+- **Evidence:** Maximum local Z-Score reached 195.21 (Threshold: 3.0).
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
@@ -30,24 +30,24 @@ The system is suffering from multiple overlapping structural failures.
 |-----------------|------------------|-------|-----------|
 | Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 1.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| -0.9874 | < -0.1 |
-| Micro Forensics | Max Local Z-Score        | 25.00 | > 3.0 |
+| Thermodynamics  | Relative Free Energy Ratio| -2.1742 | < -0.1 |
+| Micro Forensics | Max Local Z-Score        | 195.21 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
 
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-28T13:10:14.101306",
+  "timestamp": "2026-04-28T13:53:57.253772",
   "environment": "samples/Sample_8_fMRI_Stroke/workspace",
   "physics_metrics": {
     "max_abs_residual": 0.0,
-    "mean_gross_activity": 1883.0382666666667,
+    "mean_gross_activity": 9415.191333333334,
     "relative_leak_ratio": 0.0,
     "max_spectral": 1.0,
-    "min_free_energy": -2019.3051,
-    "min_relative_free_energy": -0.9873628340219543,
-    "max_z_score": 25.0022
+    "min_free_energy": -11642.1723,
+    "min_relative_free_energy": -2.1742429540265777,
+    "max_z_score": 195.2069
   },
   "detected_pathologies": [
     {
@@ -59,89 +59,89 @@ The system is suffering from multiple overlapping structural failures.
     {
       "pathology": "Thermodynamic Energy Depletion (Embezzlement/Leak)",
       "severity": "HIGH",
-      "evidence": "Relative Free Energy Ratio sank to -0.9874 (Threshold: -0.1). Raw F: -2019.31",
+      "evidence": "Relative Free Energy Ratio sank to -2.1742 (Threshold: -0.1). Raw F: -11642.17",
       "interpretation": "Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale."
     },
     {
       "pathology": "Local Pathological Stress (Micro Singularity)",
       "severity": "MEDIUM",
-      "evidence": "Maximum local Z-Score reached 25.00 (Threshold: 3.0).",
+      "evidence": "Maximum local Z-Score reached 195.21 (Threshold: 3.0).",
       "interpretation": "Specific nodes (departments) are experiencing statistical strain far beyond their historical norm."
     }
   ],
   "financial_baseline": {
-    "week": "2024-10-26",
+    "week": "2024-01-01T10:09:50",
     "assets": 0.0,
     "liabilities": 0.0,
     "equity": 0.0,
-    "net_income": 1.2369127944111824e-10,
-    "total_liab_eq": 1.2369127944111824e-10,
+    "net_income": -8.003553375601768e-11,
+    "total_liab_eq": -8.003553375601768e-11,
     "revenue": 0.0,
-    "expense": -1.2369127944111824e-10,
+    "expense": 8.003553375601768e-11,
     "is_balanced": true,
     "bs_items": [],
     "pl_items": [
       [
-        "Motor",
+        "Motor_Cortex",
         "Expense",
-        -60191.55999999989
+        -60191.55999999996
       ],
       [
-        "PFC",
+        "Parietal_Lobe",
         "Expense",
-        14864.58000000006
+        14927.869999999879
       ],
       [
-        "Parietal",
+        "Prefrontal_Cortex",
         "Expense",
-        14927.869999999937
+        14864.58000000003
       ],
       [
-        "Temporal",
+        "Temporal_Lobe",
         "Expense",
-        15500.48999999983
+        15500.490000000034
       ],
       [
-        "Visual",
+        "Visual_Cortex",
         "Expense",
-        14898.619999999937
+        14898.620000000097
       ]
     ],
     "tb_items": [
       [
-        "Motor",
+        "Motor_Cortex",
         "Expense",
-        64884.30999999995,
-        125075.86999999984,
-        -60191.55999999989
+        64884.310000000005,
+        125075.86999999997,
+        -60191.55999999996
       ],
       [
-        "PFC",
+        "Parietal_Lobe",
         "Expense",
-        124807.13000000014,
-        109942.55000000008,
-        14864.58000000006
+        125076.3099999999,
+        110148.44000000002,
+        14927.869999999879
       ],
       [
-        "Parietal",
+        "Prefrontal_Cortex",
         "Expense",
-        125076.31000000008,
-        110148.44000000015,
-        14927.869999999937
+        124807.13000000003,
+        109942.55,
+        14864.58000000003
       ],
       [
-        "Temporal",
+        "Temporal_Lobe",
         "Expense",
-        125251.35999999988,
-        109750.87000000005,
-        15500.48999999983
+        125251.35999999999,
+        109750.86999999995,
+        15500.490000000034
       ],
       [
-        "Visual",
+        "Visual_Cortex",
         "Expense",
         124892.37000000002,
-        109993.75000000009,
-        14898.619999999937
+        109993.74999999993,
+        14898.620000000097
       ]
     ]
   }

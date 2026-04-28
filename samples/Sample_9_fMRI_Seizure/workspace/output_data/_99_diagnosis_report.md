@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_9_fMRI_Seizure/workspace`
-**Date Analyzed:** 2026-04-28 13:10:38
+**Date Analyzed:** 2026-04-28 13:54:19
 
 ## 1. Final Diagnosis
 
@@ -15,7 +15,7 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🟡 Local Pathological Stress (Micro Singularity)
 - **Severity:** MEDIUM
-- **Evidence:** Maximum local Z-Score reached 4.76 (Threshold: 3.0).
+- **Evidence:** Maximum local Z-Score reached 195.21 (Threshold: 3.0).
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
@@ -25,24 +25,24 @@ The system is suffering from multiple overlapping structural failures.
 |-----------------|------------------|-------|-----------|
 | Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 1.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| 0.0842 | < -0.1 |
-| Micro Forensics | Max Local Z-Score        | 4.76 | > 3.0 |
+| Thermodynamics  | Relative Free Energy Ratio| 0.6651 | < -0.1 |
+| Micro Forensics | Max Local Z-Score        | 195.21 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
 
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-28T13:10:38.859397",
+  "timestamp": "2026-04-28T13:54:19.096947",
   "environment": "samples/Sample_9_fMRI_Seizure/workspace",
   "physics_metrics": {
     "max_abs_residual": 0.0,
-    "mean_gross_activity": 3664.246066666666,
+    "mean_gross_activity": 18321.230333333337,
     "relative_leak_ratio": 0.0,
     "max_spectral": 1.0,
-    "min_free_energy": 81.4587,
-    "min_relative_free_energy": 0.08415763536619383,
-    "max_z_score": 4.7642
+    "min_free_energy": 3388.7088,
+    "min_relative_free_energy": 0.6651295730360895,
+    "max_z_score": 195.2069
   },
   "detected_pathologies": [
     {
@@ -54,83 +54,83 @@ The system is suffering from multiple overlapping structural failures.
     {
       "pathology": "Local Pathological Stress (Micro Singularity)",
       "severity": "MEDIUM",
-      "evidence": "Maximum local Z-Score reached 4.76 (Threshold: 3.0).",
+      "evidence": "Maximum local Z-Score reached 195.21 (Threshold: 3.0).",
       "interpretation": "Specific nodes (departments) are experiencing statistical strain far beyond their historical norm."
     }
   ],
   "financial_baseline": {
-    "week": "2024-10-26",
+    "week": "2024-01-01T10:09:50",
     "assets": 0.0,
     "liabilities": 0.0,
     "equity": 0.0,
-    "net_income": 0.0,
-    "total_liab_eq": 0.0,
+    "net_income": -1.1641532182693481e-10,
+    "total_liab_eq": -1.1641532182693481e-10,
     "revenue": 0.0,
-    "expense": 0.0,
+    "expense": 1.1641532182693481e-10,
     "is_balanced": true,
     "bs_items": [],
     "pl_items": [
       [
-        "Motor",
+        "Motor_Cortex",
         "Expense",
-        -61.709999999642605
+        -61.70999999996275
       ],
       [
-        "PFC",
+        "Parietal_Lobe",
         "Expense",
-        -184.75000000020373
+        20.46999999997206
       ],
       [
-        "Parietal",
+        "Prefrontal_Cortex",
         "Expense",
-        20.47000000011758
+        -184.7499999999418
       ],
       [
-        "Temporal",
+        "Temporal_Lobe",
         "Expense",
-        452.1699999999837
+        452.1700000000419
       ],
       [
-        "Visual",
+        "Visual_Cortex",
         "Expense",
-        -226.18000000025495
+        -226.17999999999302
       ]
     ],
     "tb_items": [
       [
-        "Motor",
+        "Motor_Cortex",
         "Expense",
-        184194.14,
-        184255.84999999966,
-        -61.709999999642605
+        184194.14000000007,
+        184255.85000000003,
+        -61.70999999996275
       ],
       [
-        "PFC",
+        "Parietal_Lobe",
+        "Expense",
+        184441.46,
+        184420.99000000002,
+        20.46999999997206
+      ],
+      [
+        "Prefrontal_Cortex",
         "Expense",
         184115.93000000002,
-        184300.68000000023,
-        -184.75000000020373
+        184300.67999999996,
+        -184.7499999999418
       ],
       [
-        "Parietal",
+        "Temporal_Lobe",
         "Expense",
-        184441.4600000001,
-        184420.99,
-        20.47000000011758
+        362403.6800000002,
+        361951.5100000002,
+        452.1700000000419
       ],
       [
-        "Temporal",
+        "Visual_Cortex",
         "Expense",
-        362403.6800000001,
-        361951.5100000001,
-        452.1699999999837
-      ],
-      [
-        "Visual",
-        "Expense",
-        184118.61000000002,
-        184344.79000000027,
-        -226.18000000025495
+        184118.61,
+        184344.78999999998,
+        -226.17999999999302
       ]
     ]
   }

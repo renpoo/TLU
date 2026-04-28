@@ -8,7 +8,7 @@ source "$(dirname "$0")/_tlu_env.sh"
 
 # 2. Parameter retrieval and Fail-Fast verification
 # If a setting is missing in the CSV (envvars), output a clear error and halt immediately.
-BASELINE_WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?Environment variable TLU_OBSERVATION_WINDOW_MONTHS is not set. Please check _sys_params.csv.}"
+BASELINE_WINDOW="${TLU_OBSERVATION_WINDOW_STEPS:?Environment variable TLU_OBSERVATION_WINDOW_STEPS is not set. Please check _sys_params.csv.}"
 Z_SCORE_THRESH="${TLU_ANOMALY_Z_SCORE_THRESHOLD:?Environment variable TLU_ANOMALY_Z_SCORE_THRESHOLD is not set.}"
 
 # Note: LEAK_TOLERANCE and KL_DRIFT_THRESH were not in the initial _sys_params.csv.

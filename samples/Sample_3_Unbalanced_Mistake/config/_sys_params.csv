@@ -18,7 +18,7 @@ col_amount,Amount
 # Base observation scale to coarse-grain (macroscopize) the entire system
 # (Unifies all window sizes for Thermodynamics, Geometry, Forensics, Connectivity, etc.)
 # Note: Now treating this as 'steps' (weeks) instead of months. 24 weeks = ~6 months.
-observation_window_months,12
+observation_window_steps,12
 
 # Damping factor (gamma) for propagation depth (used in FK/IK & Sensitivity)
 damping_factor,0.85

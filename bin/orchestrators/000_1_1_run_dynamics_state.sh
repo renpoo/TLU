@@ -5,7 +5,7 @@
 source "$(dirname "$0")/_tlu_env.sh"
 
 # 1. Parameter retrieval and Fail-Fast verification
-HISTORY_WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?Environment variable TLU_OBSERVATION_WINDOW_MONTHS is not set.}"
+HISTORY_WINDOW="${TLU_OBSERVATION_WINDOW_STEPS:?Environment variable TLU_OBSERVATION_WINDOW_STEPS is not set.}"
 
 # 2. Execute pipeline
 run_tlu_pipeline "Dynamics State Filter" \

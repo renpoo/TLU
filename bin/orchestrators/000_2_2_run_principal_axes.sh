@@ -5,7 +5,7 @@
 # ==========================================
 source "$(dirname "$0")/_tlu_env.sh"
 
-HISTORY_WINDOW="${TLU_OBSERVATION_WINDOW_MONTHS:?Environment variable TLU_OBSERVATION_WINDOW_MONTHS is not set.}"
+HISTORY_WINDOW="${TLU_OBSERVATION_WINDOW_STEPS:?Environment variable TLU_OBSERVATION_WINDOW_STEPS is not set.}"
 
 run_tlu_pipeline "Principal Axes Filter" \
     "${TLU_COL_SRC:?}" "${TLU_COL_TGT:?}" \

@@ -6,7 +6,7 @@
 source "$(dirname "$0")/_tlu_env.sh"
 
 # 2. Parameter retrieval and Fail-Fast verification
-MAX_LAG="${TLU_OBSERVATION_WINDOW_MONTHS:?Environment variable TLU_OBSERVATION_WINDOW_MONTHS is not set.}"
+MAX_LAG="${TLU_OBSERVATION_WINDOW_STEPS:?Environment variable TLU_OBSERVATION_WINDOW_STEPS is not set.}"
 
 # 3. Execute pipeline
 run_tlu_pipeline "Time-Lag Matrix Filter" \

@@ -1,8 +1,15 @@
-#!/usr/bin/env python3
 # ==========================================
 # _0_0_generate_dummy_fmri.py
 # TLU System: Utility & Simulation Layer
 # Category: Dummy Data Generation (Biological Network Model)
+#
+# THEORY & DOMAIN MAPPING:
+# This script simulates an fMRI scan for a single patient (Patient Zero).
+# - Measurement: The BOLD (Blood Oxygenation Level Dependent) signal.
+# - Nodes: Standard macroscopic cortical regions (e.g., Prefrontal Cortex, Motor Cortex).
+# - Flux (Src -> Tgt): Represents "Effective Connectivity" (因果的有効接続性). 
+#   It models the directed causal influence, measuring how much the neural activity 
+#   in one region drives the blood flow / metabolic activity in another region.
 # ==========================================
 
 import sys
@@ -19,17 +26,17 @@ def setup_argparser():
     return parser
 
 def generate_stream(args):
-    start_date = datetime.date(2024, 1, 1)
-    total_trs = 300 # 300 TRs (approx 10 minutes at TR=2.0s). Mapped to days for TLU parsing.
+    start_date = datetime.datetime(2024, 1, 1, 10, 0, 0)
+    total_trs = 300 # 300 TRs (approx 10 minutes at TR=2.0s).
     
     writer = csv.writer(sys.stdout)
     writer.writerow(["Trans_Date", "Src", "Tgt", "Amount"])
     
-    nodes = ["PFC", "Motor", "Visual", "Parietal", "Temporal"]
+    nodes = ["Prefrontal_Cortex", "Motor_Cortex", "Visual_Cortex", "Parietal_Lobe", "Temporal_Lobe"]
     
     for tr in range(total_trs):
-        current_date = start_date + datetime.timedelta(days=tr)
-        date_str = current_date.strftime("%Y-%m-%d")
+        current_date = start_date + datetime.timedelta(seconds=tr * 2)
+        date_str = current_date.isoformat()
         
         t = tr * 0.1
         
@@ -45,14 +52,14 @@ def generate_stream(args):
                 # Apply pathology
                 if args.pathology == "stroke" and tr >= 150:
                     # Arterial blockage to Motor cortex
-                    if tgt == "Motor":
+                    if tgt == "Motor_Cortex":
                         base_flux = base_flux * 0.05 # 95% blockage
                 
                 elif args.pathology == "seizure" and tr >= 150:
                     # Epileptic Hypersynchrony: Temporal lobe broadcasts massive deterministic wave
                     # To create a perfect Topological Feedback Loop (Spectral Radius = 1.0),
                     # we make the Temporal node both send and receive perfectly symmetric synchronized flux.
-                    if src == "Temporal" or tgt == "Temporal":
+                    if src == "Temporal_Lobe" or tgt == "Temporal_Lobe":
                         base_flux = 500 + 200 * math.sin(tr * 1.5)
                 
                 # Ensure positive flow

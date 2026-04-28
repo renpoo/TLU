@@ -9,12 +9,13 @@ col_src,Src
 col_tgt,Tgt
 col_amount,Amount
 
-observation_window_months,12
+observation_window_steps,60
+time_bin_seconds,10
 damping_factor,0.85
 tikhonov_lambda,0.0001
 
-thermo_work_labels,PFC,Motor,Visual,Parietal
-thermo_heat_labels,Temporal
+thermo_work_labels,Prefrontal_Cortex,Motor_Cortex,Visual_Cortex,Parietal_Lobe
+thermo_heat_labels,Temporal_Lobe
 
 anomaly_z_score_threshold,3.0
 leak_tolerance,1.0
@@ -27,15 +28,15 @@ thresh_fractal_upper,1.5
 thresh_manifold_svd,1e-10
 target_phase_frequency,0.25
 
-lqr_controllable_labels,Temporal
-lqr_target_state,PFC:1000
+lqr_controllable_labels,Temporal_Lobe
+lqr_target_state,Prefrontal_Cortex:1000
 lqr_q_weight,1.0
 lqr_r_weight,0.1
 
 kinematics_max_k,5
 fk_input_mode,actual
-fk_static_dq_labels,Temporal:1000
-ik_target_labels,Temporal:1000.0
+fk_static_dq_labels,Temporal_Lobe:1000
+ik_target_labels,Temporal_Lobe:1000.0
 sensitivity_delta,10.0
 
 auto_tune_enabled,True
