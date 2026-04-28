@@ -13,9 +13,11 @@ This meta-report integrates TLU's "Physics Diagnostic Manual (LLM_Diagnostic_Man
 
 **Important Note on Invariance:** If you look at the `Phase Drift` or `System Stability` charts (not shown here), they appear visually identical between the two samples. This is not a bug; it is proof of **Physical Invariance**. The timing of the transactions and the mathematical resonance (Spectral Radius = 1.0) are identical regardless of the perspective. However, the **Network Topology** (the actual shape of the space) reveals a drastic visual difference.
 
-| Sample 6 (Market/Bipartite Perspective) | Sample 7 (User/Network Perspective) |
-| :---: | :---: |
-| ![Sample 6 Network Topology](../docs/readme_plots/sample_6/network_topology.png) | ![Sample 7 Network Topology](../docs/readme_plots/sample_7/network_topology.png) |
+#### Sample 6 (Market/Bipartite Perspective)
+![Sample 6 Network Topology](../docs/readme_plots/sample_6/network_topology.png)
+
+#### Sample 7 (User/Network Perspective)
+![Sample 7 Network Topology](../docs/readme_plots/sample_7/network_topology.png)
 
 * **Sample_6 (Market) Insight:**
     The network shows users connected through a central hub (the Stock). The "creation of artificial volume" directed at specific stocks is automated. This represents the platform's perspective: "The market is being hacked by a program (the system is under external attack)."
@@ -26,9 +28,11 @@ This meta-report integrates TLU's "Physics Diagnostic Manual (LLM_Diagnostic_Man
 
 TLU's greatest strength is that the auditor can freely redefine the "Boundary Conditions" (i.e., what is considered Heat). **Look closely at the dashboard below:** while the overall structure looks similar, the fundamental values and ratios are completely different.
 
-| Sample 6 (Market/Bipartite Perspective) | Sample 7 (User/Network Perspective) |
-| :---: | :---: |
-| ![Sample 6 Thermodynamics](../docs/readme_plots/sample_6/thermodynamics.png) | ![Sample 7 Thermodynamics](../docs/readme_plots/sample_7/thermodynamics.png) |
+#### Sample 6 (Market/Bipartite Perspective)
+![Sample 6 Thermodynamics](../docs/readme_plots/sample_6/thermodynamics.png)
+
+#### Sample 7 (User/Network Perspective)
+![Sample 7 Thermodynamics](../docs/readme_plots/sample_7/thermodynamics.png)
 
 * **Sample_6 Free Energy (-9.14):**
     When all stocks are defined as Heat, the ratio of Heat to Work is high, and this negative value manifests as "overall market inefficiency." While severe, it leaves room to be dismissed as merely a "system error" in the market.
@@ -39,9 +43,11 @@ TLU's greatest strength is that the auditor can freely redefine the "Boundary Co
 
 The **Sensitivity Matrix** explicitly visualizes the "Keystone" (the most vulnerable node in the network). The bright vertical/horizontal bands indicate which node holds the power to collapse the loop. Notice how the keystone completely flips depending on the perspective.
 
-| Sample 6 (Market/Bipartite Perspective) | Sample 7 (User/Network Perspective) |
-| :---: | :---: |
-| ![Sample 6 Sensitivity](../docs/readme_plots/sample_6/sensitivity.png) | ![Sample 7 Sensitivity](../docs/readme_plots/sample_7/sensitivity.png) |
+#### Sample 6 (Market/Bipartite Perspective)
+![Sample 6 Sensitivity](../docs/readme_plots/sample_6/sensitivity.png)
+
+#### Sample 7 (User/Network Perspective)
+![Sample 7 Sensitivity](../docs/readme_plots/sample_7/sensitivity.png)
 
 * **Sample_6 Countermeasure (Halt the Stock):**
     The Sensitivity Matrix reveals the keystone is the "Stock (STK)" node. The solution is to completely halt trading of the affected stock (Delisting / Circuit Breaker). This is akin to "administering general anesthesia"—it prevents fraud but inflicts immense liquidity risk (collateral damage) on innocent general investors holding that stock.
