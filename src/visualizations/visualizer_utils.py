@@ -28,7 +28,8 @@ def get_base_parser(description: str) -> argparse.ArgumentParser:
     try:
         from src.filters.cli_parser import load_sys_params
         env_dir = os.environ.get("TARGET_ENV", "workspace")
-        sys_params = load_sys_params(f"{env_dir}/config/_sys_params.csv")
+        sys_params_path = os.environ.get("TLU_SYS_PARAMS", f"{env_dir}/config/_sys_params.csv")
+        sys_params = load_sys_params(sys_params_path)
         parser.add_argument("--thresh_z_score", type=float, default=sys_params.get("thresh_z_score", 3.0))
         parser.add_argument("--thresh_spectral_radius", type=float, default=sys_params.get("thresh_spectral_radius", 0.95))
         parser.add_argument("--thresh_fractal_lower", type=float, default=sys_params.get("thresh_fractal_lower", 0.5))
