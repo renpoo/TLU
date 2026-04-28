@@ -9,44 +9,44 @@ This meta-report integrates TLU's "Physics Diagnostic Manual (LLM_Diagnostic_Man
 
 ---
 
-## 1. 【Kinematics & Wave Mechanics】: "What" is being automated?
+## 1. 【Topology & Kinematics】: "What" is being automated?
 
-In both samples, transactions exhibited low Viscosity and a Phase Drift of 0.0 (Fabricated Synchronization).
+**Important Note on Invariance:** If you look at the `Phase Drift` or `System Stability` charts (not shown here), they appear visually identical between the two samples. This is not a bug; it is proof of **Physical Invariance**. The timing of the transactions and the mathematical resonance (Spectral Radius = 1.0) are identical regardless of the perspective. However, the **Network Topology** (the actual shape of the space) reveals a drastic visual difference.
 
 | Sample 6 (Market/Bipartite Perspective) | Sample 7 (User/Network Perspective) |
 | :---: | :---: |
-| ![Sample 6 Phase Drift](../docs/readme_plots/sample_6/phase_drift.png) | ![Sample 7 Phase Drift](../docs/readme_plots/sample_7/phase_drift.png) |
+| ![Sample 6 Network Topology](../docs/readme_plots/sample_6/network_topology.png) | ![Sample 7 Network Topology](../docs/readme_plots/sample_7/network_topology.png) |
 
 * **Sample_6 (Market) Insight:**
-    The "creation of artificial volume" directed at specific stocks is automated. This represents the platform's perspective: "The market is being hacked by a program (the system is under external attack)."
+    The network shows users connected through a central hub (the Stock). The "creation of artificial volume" directed at specific stocks is automated. This represents the platform's perspective: "The market is being hacked by a program (the system is under external attack)."
 * **Sample_7 (User) Insight:**
-    The "collusive ping-ponging of funds" between users is automated. This represents the forensic investigator's perspective: "Actors are forming a syndicate behind the scenes, simultaneously operating multiple accounts using a centralized Swarm Bot (internal human collusion)."
+    By removing the stock layer, the network reveals users directly connected to each other in a closed loop. The "collusive ping-ponging of funds" between users is automated. This represents the forensic investigator's perspective: "Actors are forming a syndicate behind the scenes, simultaneously operating multiple accounts using a centralized Swarm Bot (internal human collusion)."
 
 ## 2. 【Thermodynamics】: Visualizing the Gravity of the Crime via the Definition of "Heat (Waste)"
 
-TLU's greatest strength is that the auditor can freely redefine the "Boundary Conditions" (i.e., what is considered Heat).
+TLU's greatest strength is that the auditor can freely redefine the "Boundary Conditions" (i.e., what is considered Heat). **Look closely at the dashboard below:** while the overall structure looks similar, the fundamental values and ratios are completely different.
 
 | Sample 6 (Market/Bipartite Perspective) | Sample 7 (User/Network Perspective) |
 | :---: | :---: |
 | ![Sample 6 Thermodynamics](../docs/readme_plots/sample_6/thermodynamics.png) | ![Sample 7 Thermodynamics](../docs/readme_plots/sample_7/thermodynamics.png) |
 
 * **Sample_6 Free Energy (-9.14):**
-    When stocks are defined as Heat, this negative value manifests as "overall market inefficiency (wasted liquidity and fees)." While severe, it leaves room to be dismissed as merely a "system error" in the market.
+    When all stocks are defined as Heat, the ratio of Heat to Work is high, and this negative value manifests as "overall market inefficiency." While severe, it leaves room to be dismissed as merely a "system error" in the market.
 * **Sample_7 Free Energy (-13.70):**
-    The moment two specific users are pinpointed as the source of Heat, the negative value worsens drastically. This mathematically proves the sheer severity of the malice: **"These two individuals alone are cannibalizing this massive amount of the entire market's energy."** The abstract "market pathology" is pinpointed into a concrete "specific individual's crime (embezzlement/market manipulation)."
+    The moment only **two specific users** are pinpointed as the source of Heat, the negative value worsens drastically (-13.70 vs -9.14). This mathematically proves the sheer severity of the malice: **"These two individuals alone are cannibalizing a massive amount of the entire market's energy."** The abstract "market pathology" is pinpointed into a concrete "specific individual's crime."
 
 ## 3. 【Control Theory & Sensitivity】: The Approach to the Solution (Surgical Intervention)
 
-The Sensitivity Matrix reveals the "Keystone" of the system, which flips 180 degrees depending on the perspective.
+The **Sensitivity Matrix** explicitly visualizes the "Keystone" (the most vulnerable node in the network). The bright vertical/horizontal bands indicate which node holds the power to collapse the loop. Notice how the keystone completely flips depending on the perspective.
 
 | Sample 6 (Market/Bipartite Perspective) | Sample 7 (User/Network Perspective) |
 | :---: | :---: |
-| ![Sample 6 System Stability](../docs/readme_plots/sample_6/system_stability.png) | ![Sample 7 System Stability](../docs/readme_plots/sample_7/system_stability.png) |
+| ![Sample 6 Sensitivity](../docs/readme_plots/sample_6/sensitivity.png) | ![Sample 7 Sensitivity](../docs/readme_plots/sample_7/sensitivity.png) |
 
 * **Sample_6 Countermeasure (Halt the Stock):**
-    The keystone is the "Stock (STK)." The solution is to completely halt trading of the affected stock (Delisting / Circuit Breaker). This is akin to "administering general anesthesia"—it prevents fraud but inflicts immense liquidity risk (collateral damage) on innocent general investors holding that stock.
+    The Sensitivity Matrix reveals the keystone is the "Stock (STK)" node. The solution is to completely halt trading of the affected stock (Delisting / Circuit Breaker). This is akin to "administering general anesthesia"—it prevents fraud but inflicts immense liquidity risk (collateral damage) on innocent general investors holding that stock.
 * **Sample_7 Countermeasure (Freeze the Account):**
-    The keystone is the "Specific User Account (USR)." The solution is to freeze only those specific accounts (forced intervention via LQR control). This is equivalent to "pinpoint laser tumor excision (surgical removal)"—it allows for the complete severance of the fraudulent circulatory loop without causing any disruption to the general market's trading activities.
+    The Sensitivity Matrix reveals the keystone is the "Specific User Account (USR)." The solution is to freeze only those specific accounts (forced intervention via LQR control). This is equivalent to "pinpoint laser tumor excision (surgical removal)"—it allows for the complete severance of the fraudulent circulatory loop without causing any disruption to the general market's trading activities.
 
 ---
 
