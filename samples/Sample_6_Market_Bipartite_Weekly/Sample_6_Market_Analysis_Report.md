@@ -37,4 +37,4 @@ Artificial inflation of trading volume is occurring. Funds are simply bouncing b
 * **Systemic Vulnerability:**
   The Sensitivity Matrix indicates that the Keystone of this malicious loop is the **"Stock (STK)"** itself. If this stock is delisted or halted, the wash trading loop will collapse instantly. However, this also carries the risk of triggering cascading liquidity shocks for other (innocent) users who were dependent on that stock.
 
-![Network Topology](../../docs/readme_plots/sample_6/network_topology.png)
+![Network Topology](../../docs/readme_plots/sample_6/002_1_2__network_topology.t.00006.png)
