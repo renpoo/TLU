@@ -1,0 +1,11 @@
+Account_Name,Category
+ACC_Cash,Asset
+ACC_Accounts_Receivable,Asset
+ACC_Inventory,Asset
+ACC_Accounts_Payable,Liability
+ACC_Sales_Revenue,Revenue
+ACC_COGS,Expense
+ACC_Travel_Exp,Expense
+ACC_Rent_Exp,Expense
+ACC_Payroll_Exp,Expense
+UNKNOWN_LEAK,Expense

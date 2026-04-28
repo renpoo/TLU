@@ -1,5 +1,10 @@
 # 🩺 Meta-Comparison Deep-Dive Report (Duality Analysis)
 
+> [!NOTE]
+> **Disclaimer on Premise (Proof of Concept)**
+> The data analyzed in this report is not from real-world entities. It is derived from a **dummy data generation script specifically designed to intentionally reproduce specific pathological states or anomalies** for verification purposes. The objective of this analysis is to demonstrate how accurately the TLU engine can reverse-engineer and detect artificially constructed anomalous structures.
+
+
 **Comparison Targets:**
 
 1. [`Sample_6` (Bipartite Graph / Audit of Markets & Stocks)](Sample_6_Market_Bipartite_Weekly/Sample_6_Market_Analysis_Report.md)

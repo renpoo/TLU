@@ -1,5 +1,10 @@
 # 🩺 Stock Market Deep-Dive Analysis Report (Market/Bipartite Perspective)
 
+> [!NOTE]
+> **Disclaimer on Premise (Proof of Concept)**
+> The data analyzed in this report is not from real-world entities. It is derived from a **dummy data generation script specifically designed to intentionally reproduce specific pathological states or anomalies** for verification purposes. The objective of this analysis is to demonstrate how accurately the TLU engine can reverse-engineer and detect artificially constructed anomalous structures.
+
+
 **Target Data:** `Sample_6_Market_Bipartite_Weekly`
 **Analytical Framework:** TLU Meta-Diagnostic Manual + Market Perspective (Stocks as Nodes)
 
