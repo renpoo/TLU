@@ -10,7 +10,15 @@ def main():
     parser = argparse.ArgumentParser(description="Generate Financial Statements from TLU Graph Edges")
     parser.add_argument("--mapping", required=True, help="Path to _account_mapping.csv")
     parser.add_argument("--output", required=True, help="Path to output markdown file")
-    args = parser.parse_args()
+    args, unknown = parser.parse_known_args()
+
+    from src.filters.cli_parser import parse_projector_args
+    # Pass unknown args to cli_parser to get column mappings (or it will default to sys_params)
+    mapping_config = parse_projector_args(unknown)
+    col_time = mapping_config.get("col_time", "Trans_Date")
+    col_src = mapping_config.get("col_src", "Src")
+    col_tgt = mapping_config.get("col_tgt", "Tgt")
+    col_val = mapping_config.get("col_val", "Amount")
 
     # Read mapping
     try:
@@ -34,7 +42,7 @@ def main():
     # Src = Credit, Tgt = Debit
     
     # Process transactions by week
-    weeks = sorted(df['Trans_Date'].unique())
+    weeks = sorted(df[col_time].unique())
     
     # Track cumulative debits and credits
     cum_debits = collections.defaultdict(float)
@@ -50,13 +58,13 @@ def main():
             return cr - dr
 
     for w in weeks:
-        week_df = df[df['Trans_Date'] == w]
+        week_df = df[df[col_time] == w]
         
         # Accumulate period
         for _, row in week_df.iterrows():
-            src = row['Src']
-            tgt = row['Tgt']
-            amt = row['Amount']
+            src = row[col_src]
+            tgt = row[col_tgt]
+            amt = row[col_val]
             
             cum_credits[src] += amt
             cum_debits[tgt] += amt
@@ -70,6 +78,7 @@ def main():
         
         bs_items = []
         pl_items = []
+        tb_items = [] # Trial Balance for Gross Flow
         
         all_accounts = set(cum_debits.keys()) | set(cum_credits.keys())
         for acc in sorted(all_accounts):
@@ -78,12 +87,25 @@ def main():
             bal = get_balance(acc, dr, cr)
             cat = account_map.get(acc, 'Expense')
             
+            # Record Gross Flow for Trial Balance
+            tb_items.append((acc, cat, dr, cr, bal))
+            
             if cat == 'Asset':
-                assets += bal
-                bs_items.append((acc, cat, bal))
+                if bal < 0:
+                    # Reclassify negative Asset to Liability (Overdraft/Short Position)
+                    liabilities += -bal
+                    bs_items.append((acc, 'Liability (Short/Overdraft)', -bal))
+                else:
+                    assets += bal
+                    bs_items.append((acc, cat, bal))
             elif cat == 'Liability':
-                liabilities += bal
-                bs_items.append((acc, cat, bal))
+                if bal < 0:
+                    # Reclassify negative Liability to Asset (Receivable)
+                    assets += -bal
+                    bs_items.append((acc, 'Asset (Receivable)', -bal))
+                else:
+                    liabilities += bal
+                    bs_items.append((acc, cat, bal))
             elif cat == 'Equity':
                 equity += bal
                 bs_items.append((acc, cat, bal))
@@ -111,7 +133,8 @@ def main():
             'expense': expense,
             'is_balanced': is_balanced,
             'bs_items': bs_items,
-            'pl_items': pl_items
+            'pl_items': pl_items,
+            'tb_items': tb_items
         }
         weekly_reports.append(report)
 
@@ -147,12 +170,20 @@ def main():
         f.write(f"| **Net Income** | | **{final['net_income']:,.2f}** |\n\n")
         
         f.write("---\n")
-        f.write("## 2. Weekly Trend Summary\n\n")
+        f.write("## 2. Gross Flow / Trial Balance (T/B)\n\n")
+        f.write("> *Reveals the total trading volume and liquidity passing through the nodes (Debit = Outflow/Acquisition, Credit = Inflow/Disposition).*\n\n")
+        f.write("| Account | Category | Gross Debit (Dr) | Gross Credit (Cr) | Net Balance |\n")
+        f.write("|---|---|---|---|---|\n")
+        for acc, cat, dr, cr, bal in final['tb_items']:
+            f.write(f"| {acc} | {cat} | {dr:,.2f} | {cr:,.2f} | {bal:,.2f} |\n")
+        f.write("\n---\n")
+
+        f.write("## 3. Weekly Trend Summary\n\n")
         f.write("| Week | Total Assets | Total Liab. | Retained Earnings | Net Income | Balanced? |\n")
         f.write("|---|---|---|---|---|---|\n")
         for r in weekly_reports:
             status = '✅' if r['is_balanced'] else '❌'
-            f.write(f"| {r['week']} | {r['assets']:,.2f} | {r['liabilities']:,.2f} | {r['net_income']:,.2f} | {r['net_income']:,.2f} | {status} |\n")
+            f.write(f"| {r['week']} | {r['assets']:,.2f} | {r['liabilities']:,.2f} | {r['equity']:,.2f} | {r['net_income']:,.2f} | {status} |\n")
 
     # Generate JSON Output for Visualizer
     json_path = args.output.replace('.md', '.json')

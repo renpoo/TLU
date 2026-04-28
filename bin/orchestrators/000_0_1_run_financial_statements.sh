@@ -7,12 +7,12 @@ source "$(dirname "$0")/_tlu_env.sh"
 
 echo "Running Financial Statement Generator..."
 
-INPUT_CSV="${TARGET_ENV:-workspace}/input_stream/Dummy_Journal_Stream_Amount.Aggregated.csv"
-MAPPING_CSV="${TARGET_ENV:-workspace}/config/_account_mapping.csv"
+INPUT_CSV="${TLU_INPUT_CSV}"
+MAPPING_CSV="${TLU_ACCOUNT_MAPPING:-workspace/config/_account_mapping.csv}"
 
 # Fallback to global workspace mapping if the specific sample doesn't have one
 if [ ! -f "$MAPPING_CSV" ]; then
-    MAPPING_CSV="workspace/config/_account_mapping.csv"
+    MAPPING_CSV="${TARGET_ENV:-workspace}/config/_account_mapping.csv"
 fi
 
 OUTPUT_MD="${TLU_OUT_DIR}/_00_financial_statements.md"
