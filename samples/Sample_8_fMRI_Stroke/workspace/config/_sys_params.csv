@@ -1,0 +1,45 @@
+# ==============================================================================
+# TLU System Configuration Parameters (_sys_params.csv)
+# Sample 8: fMRI Stroke (Arteriosclerosis / Blockage)
+# ==============================================================================
+
+input_csv,input_stream/Dummy_fMRI_Blood_Flow.csv
+col_trans_date,Trans_Date
+col_src,Src
+col_tgt,Tgt
+col_amount,Amount
+
+observation_window_steps,60
+time_bin_seconds,10
+damping_factor,0.85
+tikhonov_lambda,0.0001
+
+thermo_work_labels,Motor_Cortex,Visual_Cortex,Parietal_Lobe
+thermo_heat_labels,Prefrontal_Cortex,Temporal_Lobe
+
+anomaly_z_score_threshold,3.0
+leak_tolerance,1.0
+kl_drift_thresh,2.0
+
+thresh_z_score,3.0
+thresh_spectral_radius,0.95
+thresh_fractal_lower,0.5
+thresh_fractal_upper,1.5
+thresh_manifold_svd,1e-10
+target_phase_frequency,0.25
+
+lqr_controllable_labels,Motor_Cortex
+lqr_target_state,Prefrontal_Cortex:1000
+lqr_q_weight,1.0
+lqr_r_weight,0.1
+
+kinematics_max_k,5
+fk_input_mode,actual
+fk_static_dq_labels,Motor_Cortex:1000
+ik_target_labels,Motor_Cortex:1000.0
+sensitivity_delta,10.0
+
+auto_tune_enabled,True
+auto_tune_burn_in_period,12
+phase_window_size,24
+phase_step_size,1

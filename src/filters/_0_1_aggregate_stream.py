@@ -47,6 +47,8 @@ def main():
         df['_Agg_Time'] = dt_col.dt.year.astype(str) + "-Q" + dt_col.dt.quarter.astype(str)
     elif interval == "year":
         df['_Agg_Time'] = dt_col.dt.year.astype(str)
+    elif interval.endswith("s") or interval.endswith("min") or interval.endswith("h"):
+        df['_Agg_Time'] = dt_col.dt.floor(interval).dt.strftime('%Y-%m-%dT%H:%M:%S')
     else: # "none"
         df['_Agg_Time'] = df[col_time]
 

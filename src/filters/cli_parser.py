@@ -113,7 +113,7 @@ def parse_projector_args(args_list: list[str]) -> dict:
     parser.add_argument("--col_tgt", type=str, default="")
     parser.add_argument("--col_val", type=str, default="")
     parser.add_argument("--col_multiplier", type=str, default="", help="Optional column to multiply col_val by (e.g. Price for Volume)")
-    parser.add_argument("--interval", type=str, default="day", choices=["day", "week", "month", "quarter", "year", "none"])
+    parser.add_argument("--interval", type=str, default="day")
     parser.add_argument("--time_format", type=str, default="%Y/%m/%d")
 
     parsed, _ = parser.parse_known_args(args_list)
