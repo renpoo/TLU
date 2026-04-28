@@ -17,6 +17,10 @@ while [[ $# -gt 0 ]]; do
       export TARGET_ENV="$2"
       shift 2
       ;;
+    --sys_params)
+      export TLU_SYS_PARAMS="$2"
+      shift 2
+      ;;
     --interactive)
       export TLU_INTERACTIVE="true"
       shift

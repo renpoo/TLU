@@ -23,32 +23,32 @@ cd "${TLU_PROJECT_ROOT}"
 export PYTHONPATH="${TLU_PROJECT_ROOT}:${PYTHONPATH:-}"
 
 # --- 1. Docker Commands ---
-# export TLU_PY="python3"
-export TLU_PY="docker compose exec -T -e TARGET_ENV=${TARGET_ENV:-workspace} tlu-engine python3"
+export TLU_PY="python3"
+# export TLU_PY="docker compose exec -T -e TARGET_ENV=${TARGET_ENV:-workspace} tlu-engine python3"
 
-# export TLU_AWK="awk"
-export TLU_AWK="docker compose exec -T -e TARGET_ENV=${TARGET_ENV:-workspace} tlu-engine awk"
+export TLU_AWK="awk"
+# export TLU_AWK="docker compose exec -T -e TARGET_ENV=${TARGET_ENV:-workspace} tlu-engine awk"
 
 # --- 2. Common Paths (Dynamic Validation) ---
 export TLU_VIZ_DIR="src/visualizations"
 
 if [ -n "${TARGET_ENV:-}" ]; then
-    export TLU_OUT_DIR="${TARGET_ENV}/output_data"
-    export TLU_TIME_MAP="${TARGET_ENV}/ephemeral/_time_map.csv"
-    export TLU_NODE_MAP="${TARGET_ENV}/ephemeral/_node_map.csv"
-    export TLU_SYS_PARAMS="${TARGET_ENV}/config/_sys_params.csv"
-    export TLU_TMP_COO="${TARGET_ENV}/ephemeral/_coo_stream.csv"
+    export TLU_OUT_DIR="${TLU_OUT_DIR:-${TARGET_ENV}/output_data}"
+    export TLU_TIME_MAP="${TLU_TIME_MAP:-${TARGET_ENV}/ephemeral/_time_map.csv}"
+    export TLU_NODE_MAP="${TLU_NODE_MAP:-${TARGET_ENV}/ephemeral/_node_map.csv}"
+    export TLU_SYS_PARAMS="${TLU_SYS_PARAMS:-${TARGET_ENV}/config/_sys_params.csv}"
+    export TLU_TMP_COO="${TLU_TMP_COO:-${TARGET_ENV}/ephemeral/_coo_stream.csv}"
     
     # In Target Mode, plots explicitly render inside the archive folder
-    export TLU_PLOT_DIR="${TARGET_ENV}/output_plots"
+    export TLU_PLOT_DIR="${TLU_PLOT_DIR:-${TARGET_ENV}/output_plots}"
 else
     # Default Paths
-    export TLU_OUT_DIR="workspace/output_data"
-    export TLU_TIME_MAP="workspace/ephemeral/_time_map.csv"
-    export TLU_NODE_MAP="workspace/ephemeral/_node_map.csv"
-    export TLU_SYS_PARAMS="workspace/config/_sys_params.csv"
-    export TLU_TMP_COO="workspace/ephemeral/_coo_stream.csv"
-    export TLU_PLOT_DIR="workspace/output_plots"
+    export TLU_OUT_DIR="${TLU_OUT_DIR:-workspace/output_data}"
+    export TLU_TIME_MAP="${TLU_TIME_MAP:-workspace/ephemeral/_time_map.csv}"
+    export TLU_NODE_MAP="${TLU_NODE_MAP:-workspace/ephemeral/_node_map.csv}"
+    export TLU_SYS_PARAMS="${TLU_SYS_PARAMS:-workspace/config/_sys_params.csv}"
+    export TLU_TMP_COO="${TLU_TMP_COO:-workspace/ephemeral/_coo_stream.csv}"
+    export TLU_PLOT_DIR="${TLU_PLOT_DIR:-workspace/output_plots}"
 fi
 
 # Ensure tracking plot environments exist safely without crashing executions

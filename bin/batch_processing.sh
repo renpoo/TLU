@@ -5,6 +5,31 @@
 # ==========================================
 set -euo pipefail
 
+# Parse command line arguments first so they are available when sourcing the environment
+if [ -z "${TARGET_ENV:-}" ]; then
+    unset TARGET_ENV
+fi
+
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    --target_env)
+      export TARGET_ENV="$2"
+      shift 2
+      ;;
+    --sys_params)
+      export TLU_SYS_PARAMS="$2"
+      shift 2
+      ;;
+    --account_mapping)
+      export TLU_ACCOUNT_MAPPING="$2"
+      shift 2
+      ;;
+    *)
+      shift
+      ;;
+  esac
+done
+
 # 1. Load common environment (Initialize paths and hyperparameters)
 # Assumes batch_processing.sh is executed from the project root
 source "./bin/orchestrators/_tlu_env.sh"

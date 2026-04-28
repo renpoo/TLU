@@ -1,0 +1,11 @@
+node_idx,spectral_exponent_beta,noise_classification
+0,0.4347,White Noise
+1,0.2448,White Noise
+2,0.0978,White Noise
+3,0.5486,Pink Noise
+4,0.3612,White Noise
+5,0.1038,White Noise
+6,-0.1987,White Noise
+7,-0.3764,White Noise
+8,0.9892,Pink Noise
+9,0.4002,White Noise
