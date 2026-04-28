@@ -1,11 +1,12 @@
 !sample_data_and_plots
 
-workspace/config/*.csv
+# workspace/config/*.csv
 workspace/ephemeral/*.csv
 workspace/output_data/*.csv
 workspace/output_data/*.json
 workspace/output_data/*.md
 workspace/output_plots/**
+
 archives
 
 __pycache__/
