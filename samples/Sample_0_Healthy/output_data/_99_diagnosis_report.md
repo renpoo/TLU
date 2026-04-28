@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_0_Healthy`
-**Date Analyzed:** 2026-04-28 00:00:23
+**Date Analyzed:** 2026-04-28 14:28:35
 
 ## 1. Final Diagnosis
 
@@ -25,7 +25,7 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-28T00:00:23.520844",
+  "timestamp": "2026-04-28T14:28:35.443233",
   "environment": "samples/Sample_0_Healthy",
   "physics_metrics": {
     "max_abs_residual": 0.0,
@@ -46,11 +46,11 @@
   ],
   "financial_baseline": {
     "week": "2020-W52",
-    "assets": 120500.45999999915,
-    "liabilities": 74067.95000000007,
+    "assets": 229111.34999999916,
+    "liabilities": 182678.84000000008,
     "equity": 0.0,
     "net_income": 46432.50999999978,
-    "total_liab_eq": 120500.45999999985,
+    "total_liab_eq": 229111.34999999986,
     "revenue": 955157.5599999998,
     "expense": 908725.05,
     "is_balanced": true,
@@ -72,8 +72,8 @@
       ],
       [
         "ACC_Inventory",
-        "Asset",
-        -108610.89000000001
+        "Liability (Short/Overdraft)",
+        108610.89000000001
       ]
     ],
     "pl_items": [
@@ -100,6 +100,71 @@
       [
         "ACC_Travel_Exp",
         "Expense",
+        99299.73999999999
+      ]
+    ],
+    "tb_items": [
+      [
+        "ACC_Accounts_Payable",
+        "Liability",
+        343765.39,
+        417833.3400000001,
+        74067.95000000007
+      ],
+      [
+        "ACC_Accounts_Receivable",
+        "Asset",
+        955157.5599999998,
+        839848.29,
+        115309.26999999979
+      ],
+      [
+        "ACC_COGS",
+        "Expense",
+        526444.2300000001,
+        0.0,
+        526444.2300000001
+      ],
+      [
+        "ACC_Cash",
+        "Asset",
+        839848.29,
+        726046.2100000007,
+        113802.07999999938
+      ],
+      [
+        "ACC_Inventory",
+        "Asset",
+        417833.3400000001,
+        526444.2300000001,
+        -108610.89000000001
+      ],
+      [
+        "ACC_Payroll_Exp",
+        "Expense",
+        220971.34,
+        0.0,
+        220971.34
+      ],
+      [
+        "ACC_Rent_Exp",
+        "Expense",
+        62009.74,
+        0.0,
+        62009.74
+      ],
+      [
+        "ACC_Sales_Revenue",
+        "Revenue",
+        0.0,
+        955157.5599999998,
+        955157.5599999998
+      ],
+      [
+        "ACC_Travel_Exp",
+        "Expense",
+        99299.73999999999,
+        0.0,
         99299.73999999999
       ]
     ]

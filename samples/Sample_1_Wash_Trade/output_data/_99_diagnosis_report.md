@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_1_Wash_Trade`
-**Date Analyzed:** 2026-04-28 00:00:44
+**Date Analyzed:** 2026-04-28 14:28:56
 
 ## 1. Final Diagnosis
 
@@ -38,7 +38,7 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-28T00:00:44.131930",
+  "timestamp": "2026-04-28T14:28:56.301812",
   "environment": "samples/Sample_1_Wash_Trade",
   "physics_metrics": {
     "max_abs_residual": 0.0,
@@ -71,11 +71,11 @@ The system is suffering from multiple overlapping structural failures.
   ],
   "financial_baseline": {
     "week": "2020-W52",
-    "assets": 180459.07999999984,
-    "liabilities": 79600.13,
+    "assets": 290560.9299999996,
+    "liabilities": 189701.97999999975,
     "equity": 0.0,
     "net_income": 100858.95000000007,
-    "total_liab_eq": 180459.08000000007,
+    "total_liab_eq": 290560.9299999998,
     "revenue": 993681.5499999998,
     "expense": 892822.5999999997,
     "is_balanced": true,
@@ -97,8 +97,8 @@ The system is suffering from multiple overlapping structural failures.
       ],
       [
         "ACC_Inventory",
-        "Asset",
-        -110101.84999999974
+        "Liability (Short/Overdraft)",
+        110101.84999999974
       ]
     ],
     "pl_items": [
@@ -125,6 +125,71 @@ The system is suffering from multiple overlapping structural failures.
       [
         "ACC_Travel_Exp",
         "Expense",
+        84353.65999999996
+      ]
+    ],
+    "tb_items": [
+      [
+        "ACC_Accounts_Payable",
+        "Liability",
+        338233.2100000001,
+        417833.3400000001,
+        79600.13
+      ],
+      [
+        "ACC_Accounts_Receivable",
+        "Asset",
+        1031875.0599999998,
+        877304.1599999996,
+        154570.90000000026
+      ],
+      [
+        "ACC_COGS",
+        "Expense",
+        527935.1899999998,
+        0.0,
+        527935.1899999998
+      ],
+      [
+        "ACC_Cash",
+        "Asset",
+        877304.1599999996,
+        741314.1300000002,
+        135990.02999999933
+      ],
+      [
+        "ACC_Inventory",
+        "Asset",
+        417833.3400000001,
+        527935.1899999998,
+        -110101.84999999974
+      ],
+      [
+        "ACC_Payroll_Exp",
+        "Expense",
+        218556.38999999998,
+        0.0,
+        218556.38999999998
+      ],
+      [
+        "ACC_Rent_Exp",
+        "Expense",
+        61977.35999999999,
+        0.0,
+        61977.35999999999
+      ],
+      [
+        "ACC_Sales_Revenue",
+        "Revenue",
+        0.0,
+        993681.5499999998,
+        993681.5499999998
+      ],
+      [
+        "ACC_Travel_Exp",
+        "Expense",
+        84353.65999999996,
+        0.0,
         84353.65999999996
       ]
     ]

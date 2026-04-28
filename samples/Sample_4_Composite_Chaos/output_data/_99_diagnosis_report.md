@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_4_Composite_Chaos`
-**Date Analyzed:** 2026-04-28 00:01:45
+**Date Analyzed:** 2026-04-28 14:29:58
 
 ## 1. Final Diagnosis
 
@@ -43,7 +43,7 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-28T00:01:45.885735",
+  "timestamp": "2026-04-28T14:29:58.624781",
   "environment": "samples/Sample_4_Composite_Chaos",
   "physics_metrics": {
     "max_abs_residual": 1105.39,
@@ -82,11 +82,11 @@ The system is suffering from multiple overlapping structural failures.
   ],
   "financial_baseline": {
     "week": "2020-W52",
-    "assets": 187002.73999999993,
-    "liabilities": 58260.87000000011,
+    "assets": 287841.2599999998,
+    "liabilities": 159099.38999999996,
     "equity": 0.0,
     "net_income": 128741.86999999976,
-    "total_liab_eq": 187002.73999999987,
+    "total_liab_eq": 287841.2599999997,
     "revenue": 997403.0599999997,
     "expense": 868661.19,
     "is_balanced": true,
@@ -108,8 +108,8 @@ The system is suffering from multiple overlapping structural failures.
       ],
       [
         "ACC_Inventory",
-        "Asset",
-        -100838.51999999984
+        "Liability (Short/Overdraft)",
+        100838.51999999984
       ]
     ],
     "pl_items": [
@@ -141,6 +141,78 @@ The system is suffering from multiple overlapping structural failures.
       [
         "UNKNOWN_LEAK",
         "Expense",
+        2321.2700000000004
+      ]
+    ],
+    "tb_items": [
+      [
+        "ACC_Accounts_Payable",
+        "Liability",
+        354687.22,
+        412948.0900000001,
+        58260.87000000011
+      ],
+      [
+        "ACC_Accounts_Receivable",
+        "Asset",
+        1060146.1199999996,
+        881293.2600000001,
+        178852.85999999952
+      ],
+      [
+        "ACC_COGS",
+        "Expense",
+        513786.6099999999,
+        0.0,
+        513786.6099999999
+      ],
+      [
+        "ACC_Cash",
+        "Asset",
+        878971.9900000001,
+        769983.5899999999,
+        108988.40000000026
+      ],
+      [
+        "ACC_Inventory",
+        "Asset",
+        412948.0900000001,
+        513786.6099999999,
+        -100838.51999999984
+      ],
+      [
+        "ACC_Payroll_Exp",
+        "Expense",
+        214451.72,
+        0.0,
+        214451.72
+      ],
+      [
+        "ACC_Rent_Exp",
+        "Expense",
+        61603.8,
+        0.0,
+        61603.8
+      ],
+      [
+        "ACC_Sales_Revenue",
+        "Revenue",
+        0.0,
+        997403.0599999997,
+        997403.0599999997
+      ],
+      [
+        "ACC_Travel_Exp",
+        "Expense",
+        76497.78999999998,
+        0.0,
+        76497.78999999998
+      ],
+      [
+        "UNKNOWN_LEAK",
+        "Expense",
+        2321.2700000000004,
+        0.0,
         2321.2700000000004
       ]
     ]
