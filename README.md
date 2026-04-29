@@ -14,7 +14,7 @@ TLU solves this by removing the requirement for a balanced state from the initia
 
 TLU is not merely a visual dashboarding tool; its ultimate value is serving as a physics engine for Large Language Models (LLMs).
 
-By reading the [**LLM Meta-Diagnosis System Prompt & Operating Procedure**](docs/LLM_Diagnostic_Manual.md), any LLM (ChatGPT, Claude, Gemini) can be instantly transformed into a "Meta-Diagnostic Radiologist." The manual provides a strict, tier-based logical framework (Decision Matrix) that allows the AI to ingest the high-dimensional physical metrics (like Spectral Radius and Free Energy) and cross-reference them with traditional Financial Statements (B/S, P/L) to output a CPA-grade, human-readable Medical Chart without hallucinating.
+By reading the [**LLM Meta-Diagnosis System Prompt & Operating Procedure**](docs/LLM_Diagnostic_Manual.md), any LLM (ChatGPT, Claude, Gemini) can be instantly transformed into a "Meta-Diagnostic Laboratory Technician." The manual provides a strict, tier-based logical framework (Decision Matrix) that allows the AI to ingest the high-dimensional physical metrics (like Spectral Radius and Free Energy) and cross-reference them with traditional Financial Statements (B/S, P/L) to output a CPA-grade, human-readable Pathology Report without hallucinating.
 
 Check out the `samples/` directories to see actual English audit reports generated autonomously by the LLM using this manual!
 

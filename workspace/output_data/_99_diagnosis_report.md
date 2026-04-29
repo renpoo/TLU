@@ -1,4 +1,4 @@
-# TLU Meta-Diagnosis Report (Attending Physician's Summary)
+# TLU Meta-Analysis Report (Laboratory Findings)
 
 **Target Environment:** `workspace`
 **Date Analyzed:** 2026-04-28 15:04:39

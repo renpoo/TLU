@@ -1,4 +1,4 @@
-# TLU Meta-Diagnosis Report (Attending Physician's Summary)
+# TLU Meta-Analysis Report (Laboratory Findings)
 
 **Target Environment:** `samples/Sample_8_fMRI_Stroke/workspace`
 **Date Analyzed:** 2026-04-28 14:31:26
