@@ -25,6 +25,8 @@ error.*.log
 
 samples/**/output_plots
 
+rulesets
+
 scratch
 TLU-SDLs
 error.log
