@@ -28,6 +28,7 @@ The physical structure of the entire market is in critical danger. A perfect clo
 * **Financial Evidence:** This aligns perfectly with the fact that specific stocks (e.g., STK_005) show near-zero net fund movement (Net Income/Balance) while generating an anomalous $1.2 billion in Gross Debit/Credit.
 
 ![System Stability & Spectral Radius](../../docs/readme_plots/sample_6/system_stability.png)
+* **💡 How to Read the Graph (Visual Cues):** Look for the blue trajectory line piercing the critical 1.0 threshold line. This physically proves an infinite cycle of Wash Trading without generating new value.
 
 ![Thermodynamic Energy Depletion](../../docs/readme_plots/sample_6/thermodynamics.png)
 
@@ -46,6 +47,7 @@ Artificial inflation of trading volume is occurring. Funds are simply bouncing b
   Frequency analysis of the trades reveals "White Noise" with a Phase Drift of `0.0`, rather than organic 1/f (Pink) noise. This is conclusive evidence of **Fabricated Synchronization**, where buy and sell orders are intentionally and perfectly synchronized by a programmatic entity.
 
 ![Phase Drift Heatmap](../../docs/readme_plots/sample_6/phase_drift.png)
+* **💡 How to Read the Graph (Visual Cues):** On the `RdBu_r` heatmap, look for unnaturally flat, synchronized bands (perfect `0.0` drift). Organic human trading looks like natural "Pink Noise," but this perfect synchronization proves programmatic control (Bots).
 
 * **Systemic Vulnerability:**
   The Sensitivity Matrix indicates that the Keystone of this malicious loop is the **"Stock (STK)"** itself. If this stock is delisted or halted, the wash trading loop will collapse instantly. However, this also carries the risk of triggering cascading liquidity shocks for other (innocent) users who were dependent on that stock.

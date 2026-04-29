@@ -8,13 +8,15 @@ This phase treats the ledger like a radio signal or a vibrating machine. By anal
 
 ![005_1_2__phase_drift_heatmap](../readme_plots/005_1_2__phase_drift_heatmap.png)
 
-* **📊 Visual Structure**: A matrix heatmap where the X-axis is time (e.g., weeks) and the Y-axis lists specific account pairs (e.g., `Accounts_Receivable vs Cash`).
+* **📊 Visual Structure**: A matrix heatmap using the `RdBu_r` colormap, where the X-axis is time (e.g., weeks) and the Y-axis lists specific account pairs (e.g., `Accounts_Receivable vs Cash`).
 * **📐 Physics Theory**: Cross-Correlation Signal Processing. It measures the "time lag" (phase shift) between two correlated signals. If Sales usually turn into Cash 3 weeks later, the baseline lag is 3.
 * **🚨 Anomaly Detection**:
   * Look for deep **Red** or deep **Blue** cells appearing in the timeline.
   * **Red** = Lag is stretching (it's taking longer than normal).
   * **Blue** = Lag is compressing (it's happening faster than normal).
 * **💼 Business Translation**: **Severe Cash Flow Bottlenecks**. If the AR vs Cash line suddenly turns bright Red, it means "Collections are slowing down." Even if the total B/S assets look healthy, the actual velocity of cash conversion is grinding to a halt, serving as a powerful early warning for an impending liquidity crisis.
+* **💡 Concrete Example (from Samples)**:
+  * **Sample_6 & Sample_9 (Fabricated Synchronization/Hypersynchrony)**: Healthy economic or biological activities always contain natural "delays (viscosity) and variance." However, if a human manually tampers with multiple accounts simultaneously at month-end to make the books look clean, or if a market is subjected to organized price manipulation, the natural phase drift of these accounts unnaturally snaps to "0.0 (perfect synchronization)." This Hypersynchrony is the signature of an "invisible hand" (human manipulation) artificially aligning the data.
 
 ### 2. Resonant Frequency (`005_1_1__resonant_frequency.png`)
 
@@ -35,3 +37,5 @@ This phase treats the ledger like a radio signal or a vibrating machine. By anal
 * **🚨 Anomaly Detection**:
   * The slope of the decay line suddenly flattens out, changing from Pink Noise (structured human behavior) to White Noise (pure randomness).
 * **💼 Business Translation**: **Data Fabrication or complete loss of control**. Humans are very bad at faking natural variance. If an accountant manually fabricates thousands of fake ledger entries to hide a loss, the resulting data will mathematically look like "White Noise." This graph catches data fabrication by looking at the "texture" of the numbers.
+* **💡 Concrete Example (from Samples)**:
+  * **Sample_6 (Manual Fabrication)**: Humans are notoriously bad at faking "natural variance (Pink Noise)." If an auditor is being deceived by thousands of fake transactions manually scattered by an accountant to hide a loss, the frequency spectrum of the resulting data will be mathematically pure "White Noise" (a perfectly flat slope). By analyzing the "texture of the noise" rather than the raw amounts, TLU definitively catches manual data fabrication.

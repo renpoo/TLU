@@ -33,6 +33,8 @@ This phase answers the question: "How do we steer this organization back to heal
 * **🚨 Anomaly Detection**:
   * The blue line pierces the 1.0 threshold and stays there.
 * **💼 Business Translation**: **The Death Spiral**. The organization has entered an explosive, self-reinforcing feedback loop. This happens during severe **Wash Trading**, Ponzi schemes, or uncontrollable debt spirals. The system is feeding on itself and will mathematically self-destruct if external intervention is not applied immediately.
+* **💡 Concrete Example (from Samples)**:
+  * **Sample_1 (Wash Trade)**: Mathematically, a Spectral Radius reaching 1.0 means an infinite, un-damped "feedback loop" has formed. If a malicious actor creates fake sales and loops the funds continuously between dummy companies (A $\to$ B $\to$ C $\to$ A), the largest eigenvalue of the transition matrix will asymptotically approach exactly 1.0. This is the most definitive proof of a Wash Trade, indicating the system has reached the critical point of self-destruction (a death spiral).
 
 ### 4. Trade-off Heatmap / Sensitivity Matrix (`004_2_1__sensitivity_matrix.png`, `004_2_2_1__tradeoff_heatmap.png`)
 

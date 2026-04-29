@@ -25,12 +25,14 @@ In this network (blood flow model), complete mathematical resonance (a feedback 
 * **Analysis:** The maximum eigenvalue (spectral radius) calculated from the network's adjacency matrix has reached the physical limit of `1.0`. In financial markets, this signifies a "self-serving cyclical fund loop (Wash Trade)," but in a neural network, it signifies **"uncontrollable, excessive synchronous firing of neurons (Hypersynchrony)."** It is the mathematical evidence that the entire brain is convulsing to the same rhythm.
 
 ![System Stability](plots/004_1_2__system_stability.png)
+* **💡 How to Read the Graph (Visual Cues):** The Spectral Radius reaches the 1.0 threshold. In finance, this is a Wash Trade loop; in neuroscience, this visually proves that the entire brain network has entered an uncontrollable, self-reinforcing synchronous loop (Epileptic Seizure).
 
 ### ⚡ 2. Maximization of Local Stress (Micro Singularity)
 * **Z-Score:** `195.21` (Threshold: 3.0)
 * **Analysis:** Extreme localized stress has been detected, exceeding the anomaly detection threshold by approximately 65 times. This indicates that an inconceivable magnitude of energy (blood flow) compared to normal times is running rampant at the epicenter (focus) of the seizure.
 
 ![Phase Portrait 3D](plots/000_1_8__phase_portrait_3d.png)
+* **💡 How to Read the Graph (Visual Cues):** Look for the violent geometric distortion and chaotic orbit in the phase space. This visually captures the extreme localized stress at the epicenter (Focus) of the seizure.
 
 ### 🛡️ 3. Thermodynamically "No Leakage"
 * **Relative Free Energy Ratio:** `0.6651` (Threshold: -0.1)

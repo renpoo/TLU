@@ -25,12 +25,14 @@ In this network (blood flow model), localized energy disruption and subsequent g
 * **Analysis:** An extremely abnormal local stress has occurred, exceeding the anomaly detection threshold by approximately 65 times. This implies a **"complete deviation"** from the historical, statistical normal state in a specific region (node). It is definitive evidence of a physical vascular occlusion (blockage).
 
 ![Z-Score Heatmap](plots/002_2_2_2__micro_Z_Score_heatmap.png)
+* **💡 How to Read the Graph (Visual Cues):** On the `RdBu_r` heatmap, look for the isolated cell glowing extremely bright red. This pinpoints the exact spatial coordinate of the mathematical singularity (the physical blood clot/occlusion).
 
 ### 🔋 2. Depletion of Thermodynamic Energy (Embezzlement/Leak)
 * **Relative Free Energy Ratio:** `-2.1742` (Threshold: -0.1)
 * **Analysis:** Relative to the transaction (blood flow) volume of the entire network, the energy available for the system to perform "useful work" (Free Energy) has plummeted deeply into the negative. This is the exact same physical symptom as "embezzlement/fund leakage" in a financial network. In this biological model, it suggests that **"necessary oxygen/nutrients are being lost from the system (risk of necrosis)."**
 
 ![Energy Stack Diagram](plots/001_1_2__thermodynamics_energy_stack.png)
+* **💡 How to Read the Graph (Visual Cues):** The white Free Energy line plummets into the negative. This visually proves that the system is bleeding its capacity to perform work (oxygen deprivation/necrosis), mathematically identical to a financial embezzlement leak.
 
 ### 🔄 3. Abnormal Topological Resonance (Topological Feedback Loop)
 * **Spectral Radius:** `1.0000` (Threshold: 0.9)

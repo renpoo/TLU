@@ -8,12 +8,15 @@ This phase applies statistical mechanics to the financial ledger. It treats mone
 
 ![001_1_1__thermodynamics_dashboard](../readme_plots/001_1_1__thermodynamics_dashboard.png)
 
-* **📊 Visual Structure**: A multi-panel dashboard. Key panels include the T-S (Temperature vs. Entropy) diagram and the Global Free Energy trend line.
+* **📊 Visual Structure**: A multi-panel dashboard. Key panels include the T-S (Temperature vs. Entropy) diagram and the Global Free Energy trend line (Line colors: White represents Free Energy, Orange represents Heat/Friction, Green represents Entropy).
 * **📐 Physics Theory**: Calculates Helmholtz Free Energy ($F = U - TS$). It measures the "useful" monetary energy available to do actual business work, minus the energy lost to systemic chaos ($T \times S$).
 * **🚨 Anomaly Detection**:
   * Look at the Free Energy ($F$) line. A sudden, sharp drop.
   * Look at the Entropy ($S$) line. A sustained, inexplicable rise.
 * **💼 Business Translation**: **Severe Operational Inefficiency**. The organization is burning cash, but that cash is not generating structured returns. Instead, the money is scattering randomly across the network (e.g., panicked uncoordinated spending, rampant unstructured expenses, or embezzlement).
+* **💡 Concrete Example (from Samples)**:
+  * **Sample_2 (Embezzlement Leak)**: A continuous drain of funds with no corresponding value creation causes the entire system's "Free Energy" (its capacity to absorb shocks) to plummet steadily. This detects the onset of "Thermodynamic Death" even if the bottom line appears momentarily profitable.
+  * **Sample_4 (Composite Chaos)**: Rampant, uncoordinated spending maximizes "Heat" and "Entropy." This indicates the organization is engaging in massive transactional *activity*, but producing zero useful *work*.
 
 ### 2. T-S Diagram (`001_1_1__thermodynamics_ts_diagram.png`)
 
@@ -29,7 +32,7 @@ This phase applies statistical mechanics to the financial ledger. It treats mone
 
 ![001_1_2_1__3d_local_entropy](../readme_plots/001_1_2_1__3d_local_entropy.png)
 
-* **📊 Visual Structure**: A bar chart or heatmap breaking down the Free Energy and Entropy *per specific account* (local nodes).
+* **📊 Visual Structure**: A bar chart or heatmap breaking down the Free Energy and Entropy *per specific account* (local nodes) (using the `magma` colormap: black-to-purple is healthy, while glowing yellow areas are abnormal "heat sources" where chaos and friction are maximized).
 * **📐 Physics Theory**: Maps the global thermodynamic waste down to the specific nodes generating the heat.
 * **🚨 Anomaly Detection**:
   * A specific account (e.g., `ACC_Travel_Exp` or `ACC_Accounts_Payable`) showing a massive, disproportionate red bar (High Local Entropy).

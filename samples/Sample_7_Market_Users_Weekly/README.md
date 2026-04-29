@@ -26,6 +26,7 @@ While the overall market system remains operational, a completely closed "collus
 * **Financial Evidence:** The Trial Balance of the user-to-user (Seller → Buyer) network reveals direct gross fund flows in the hundreds of millions of dollars between these specific users, while their final net asset fluctuation is practically zero.
 
 ![System Stability & Spectral Radius](../../docs/readme_plots/sample_7/system_stability.png)
+* **💡 How to Read the Graph (Visual Cues):** The Spectral Radius hits 1.0. This proves the syndicate is colluding to pass funds in a perfect circle among themselves.
 
 ![Thermodynamic Energy Depletion](../../docs/readme_plots/sample_7/thermodynamics.png)
 

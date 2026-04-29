@@ -14,6 +14,8 @@ Once the data is pre-processed, TLU projects the financial ledgers into a physic
   * **Healthy**: A stable, tight orbital cluster or a smooth, predictable spiral.
   * **Anomalous**: A sudden, violent jagged spike shooting far away from the central cluster.
 * **💼 Business Translation**: A massive cash flow hemorrhage, an unexpected mass payment, or a sudden halt in sales. The organization's monetary flow velocity experienced a severe shock.
+* **💡 Concrete Example (from Samples)**:
+  * **Sample_2 (Embezzlement)**: When a dummy account (which has zero "Mass/Inertia" due to no historical volume) receives illicit funds, it visualizes as a single red dot being ejected through a frictionless space at an impossible velocity. This is a classic signature of embezzlement.
 
 ---
 
@@ -43,7 +45,7 @@ Once the data is pre-processed, TLU projects the financial ledgers into a physic
 
 *Note: TLU generates a sequence of these images over time. You may need to flip through them like a flipbook.*
 
-* **📊 Visual Structure**: A matrix (grid) heatmap. Rows and Columns represent different accounts. The color intensity of each cell represents the "Stiffness" between those two accounts.
+* **📊 Visual Structure**: A matrix (grid) heatmap. The color intensity of each cell represents the "Stiffness" between those two accounts (using the `RdBu_r` colormap: deep blue means independence or trade-off, while bright red indicates extremely strong coupling or "spring" linkage).
 * **📐 Physics Theory**: Hooke's Law ($K$). The "spring constant" or structural coupling between two nodes. It measures how deterministically one account reacts to another.
 * **🚨 Anomaly Detection**:
   * **Collapse**: A cell that is historically dark (stiff) suddenly turns light or blank.
@@ -51,6 +53,8 @@ Once the data is pre-processed, TLU projects the financial ledgers into a physic
 * **💼 Business Translation**:
   * **Collapse**: A broken business process. If the Sales $\to$ Accounts Receivable stiffness collapses, it means sales are being made, but receivables are no longer being generated in tandem (e.g., off-book sales, invoicing system failure).
   * **Rupture**: Unauthorized pathways. If Travel Expenses and Accounts Payable suddenly develop a massive stiffness, it indicates expenses are bypassing standard procedures and being dumped directly into liabilities (a classic kickback or embezzlement signature).
+* **💡 Concrete Example (from Samples)**:
+  * **Sample_3 (Unbalanced Mistake)**: Normally, an extremely strong "Stiffness" exists between Sales and Accounts Receivable. If one entry is omitted (accidentally or intentionally), the "spring" that binds them is unilaterally stretched. This accumulates massive Strain Energy in the system, visualizing as a sudden "Collapse" of stiffness on the heatmap.
 
 ---
 
@@ -70,7 +74,7 @@ Once the data is pre-processed, TLU projects the financial ledgers into a physic
 
 ![000_2_3__eigenvector_evolution](../readme_plots/000_2_3__eigenvector_evolution.png)
 
-* **📊 Visual Structure**: A 2D Heatmap. The X-axis is time, the Y-axis lists the specific accounts (nodes), and the color intensity represents the absolute magnitude of the 1st Principal Component (PC1) for that account.
+* **📊 Visual Structure**: A 2D Heatmap. The X-axis is time, the Y-axis lists the specific accounts (nodes), and the color intensity represents the absolute magnitude of the 1st Principal Component (PC1) for that account (using the `magma` colormap: dark black indicates irrelevance, while glowing orange/yellow/white cells indicate the account is currently "dominating" the entire organization).
 * **📐 Physics Theory**: Covariance of the Flux Differential ($dq$). TLU measures which accounts experience massive, simultaneous fluctuations (e.g., Cash dropping exactly when Payroll spikes). PC1 extracts the dominant "Main Engine" or primary synchronized flow of the entire organization.
 * **🚨 Anomaly Detection**: 
   * A sudden horizontal shift where the historically bright accounts (e.g., Cash and Payroll) go dark, and entirely new, previously uncorrelated accounts suddenly light up.
