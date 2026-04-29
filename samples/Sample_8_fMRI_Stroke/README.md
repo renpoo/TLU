@@ -6,6 +6,14 @@
 > **Disclaimer on Premise**
 > The input data analyzed in this report is not from actual patient medical records. It is derived from a **dummy data generation script (`_0_0_generate_dummy_fmri.py`) specifically designed to intentionally reproduce the pathological state of a stroke (blood flow disruption to a specific region)** for verification purposes. The objective of this analysis is to demonstrate how accurately the TLU engine can reverse-engineer and detect artificially constructed disease structures using financial auditing algorithms.
 
+> [!TIP]
+> **How to Generate the Graphs for this Sample**
+> The thousands of 3D plots and analysis CSVs for this sample are not bundled to save space. You can reproduce them locally by running the following commands from the repository root:
+> ```bash
+> bash bin/batch_processing.sh --target_env "samples/Sample_8_fMRI_Stroke"
+> bash bin/batch_visualize_graphs.sh --target_env "samples/Sample_8_fMRI_Stroke"
+> ```
+
 ## 1. Comprehensive Diagnosis
 **⚠️ COMPOSITE PATHOLOGY DETECTED**
 In this network (blood flow model), localized energy disruption and subsequent global thermodynamic/structural collapse have been confirmed. The patient is mathematically diagnosed as suffering from a severe cerebrovascular accident (Stroke).

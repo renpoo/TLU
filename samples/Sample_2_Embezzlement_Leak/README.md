@@ -4,6 +4,14 @@
 > **Disclaimer on Premise (Proof of Concept)**
 > The data analyzed in this report is not from real-world entities. It is derived from a **dummy data generation script specifically designed to intentionally reproduce specific pathological states or anomalies** for verification purposes. The objective of this analysis is to demonstrate how accurately the TLU engine can reverse-engineer and detect artificially constructed anomalous structures.
 
+> [!TIP]
+> **How to Generate the Graphs for this Sample**
+> The thousands of 3D plots and analysis CSVs for this sample are not bundled to save space. You can reproduce them locally by running the following commands from the repository root:
+> ```bash
+> bash bin/batch_processing.sh --target_env "samples/Sample_2_Embezzlement_Leak"
+> bash bin/batch_visualize_graphs.sh --target_env "samples/Sample_2_Embezzlement_Leak"
+> ```
+
 
 ## 🩺 Meta-Diagnosis Synthesis Report
 
