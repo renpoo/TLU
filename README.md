@@ -163,6 +163,22 @@ For detailed mathematical logic, operational protocols, and API references, plea
 
 ---
 
+## User Prerequisites
+
+TLU's directory structure follows standard GNU system conventions (`src/`, `bin/`, `docs/`, etc.). To run TLU with your own data, you only need to interact with the `workspace/` directory. The absolute minimum requirements to prepare are:
+
+1. **Raw Ledger Data (Input Data)**
+   * **Location:** `workspace/input_stream/` (e.g., `Dummy_Journal_Stream.csv`)
+   * **Content:** A time-series journal ledger in CSV format exported from your accounting software. It must contain at least "Trans_Date", "Account_Name", "Debit", and "Credit" columns.
+
+2. **Account Mapping Configuration**
+   * **Location:** `workspace/config/_account_mapping.csv`
+   * **Content:** A mapping dictionary that translates your specific account names (e.g., "Mizuho Bank Account") into TLU's standard internal categories (e.g., `Asset`, `Liability`, `Revenue`, `Expense`).
+
+*Note: Detailed simulation settings (like time-step granularity and base physical coefficients) can be adjusted in `workspace/config/_sys_params.csv`, but default values are sufficient for initial runs.*
+
+---
+
 ## Quick Start
 
 TLU is fully containerized. You can go from zero to a full 3D analysis dashboard in minutes.
