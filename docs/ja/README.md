@@ -181,6 +181,14 @@ cat workspace/output_data/_99_diagnosis_report.md
 
 # 5. 完全な再現性のために実験をスナップショット保存する
 bash bin/archive_experimental_run.sh
+
+# 6. 同梱されている特定サンプルの実行（グラフの生成）
+# パッケージには様々な異常状態を示すサンプルが含まれていますが、ファイルサイズ削減のためグラフ画像は同梱されていません。
+# サンプルのグラフを見るには、ルートディレクトリから `--target_env` を指定して以下のコマンドを実行します。
+# 例: 循環取引（Wash Trade）のサンプルを生成・可視化する
+bash bin/batch_processing.sh --target_env "samples/Sample_1_Wash_Trade"
+bash bin/batch_visualize_graphs.sh --target_env "samples/Sample_1_Wash_Trade"
+# 実行後、`samples/Sample_1_Wash_Trade/output_plots/` にグラフが生成されます。
 ```
 
 # ライセンス: AGPL-3.0

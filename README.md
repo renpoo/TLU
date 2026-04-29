@@ -205,7 +205,16 @@ cat workspace/output_data/_99_diagnosis_report.md
 # 5. Snapshot the experiment for perfect reproducibility
 bash bin/archive_experimental_run.sh
 
-# 6. (Optional) Cross-Environment Comparison
+# 6. Run Specific Bundled Samples (Generate Graphs)
+# The repository includes various forensic samples. To keep the package lightweight, 
+# the resulting 3D plots are not bundled. To view the graphs for a specific 
+# sample, run the following commands from the root directory using the `--target_env` flag.
+# Example: Running the Wash Trade sample
+bash bin/batch_processing.sh --target_env "samples/Sample_1_Wash_Trade"
+bash bin/batch_visualize_graphs.sh --target_env "samples/Sample_1_Wash_Trade"
+# After execution, check the generated plots in `samples/Sample_1_Wash_Trade/output_plots/`.
+
+# 7. (Optional) Cross-Environment Comparison
 # Compare multiple experiments or samples side-by-side
 bash bin/batch_meta_analysis.sh --envs "samples/Sample_*" --out "samples"
 ```
