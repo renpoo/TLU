@@ -20,6 +20,7 @@ __pycache__/
 .vscode/
 .gemini/
 
+error.log
 error.*.log
 */error.*.log
 
@@ -28,5 +29,6 @@ samples/**/output_plots
 rulesets
 
 scratch
+
 TLU-SDLs
-error.log
+essay_on_note.com

@@ -31,7 +31,7 @@ By acknowledging the distinct strengths and weaknesses of each entity, TLU estab
 
 ### A. TLU (The Objective Sensor & Calculator)
 
-* **Role:** The MRI Machine.
+* **Role:** The fMRI Machine.
 * **Function:** Executes flawlessly deterministic, heavy mathematical operations (e.g., Forward Kinematics, Matrix Pseudo-inverses, Thermodynamics calculations) that LLMs cannot reliably perform. It operates statelessly, receiving tensors and outputting pure mathematical vectors via CSV. It holds no opinions and makes no assumptions.
 
 ### B. LLM (The Laboratory Technician & Synthesizer)
