@@ -62,8 +62,8 @@ Forensics relies on mathematical invariants. If a fundamental law of the system 
 * **Local Z-Score Spikes:** TLU calculates a Mahalanobis-like standardized score for every individual node. This catches traditional anomalies: a department suddenly spending $3\sigma$ above its norm.
 * **Local KL Drift:** This is the ultimate tool for detecting "silent diversion." If a node still receives and spends $10,000 a month (so its Z-score is normal), but it suddenly changes *who* it sends that money to (e.g., stopping payments to Vendor A and routing everything to new Vendor B), the Local KL Drift will spike violently, catching anomalies that pure volume metrics completely miss.
 
-![002_2_2_2__micro_Z_Score_heatmap](../readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
-![002_2_2_1__micro_KL_drift_heatmap](../readme_plots/002_2_2_1__micro_KL_drift_heatmap.png)
+![002_2_2_2__micro_Z_Score_heatmap](../readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
+![002_2_2_1__micro_KL_drift_heatmap](../readme_plots/002_2_2_1__micro_KL_drift_3d_surface.png)
 
 ## 3. Business Implications
 

@@ -1,13 +1,13 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `workspace`
-**Date Analyzed:** 2026-04-30 17:13:58
+**Date Analyzed:** 2026-04-30 18:23:21
 
 ## 1. Final Diagnosis
 
 ### 🟠 Local Pathological Stress (Micro Singularity)
 - **Severity:** HIGH
-- **Evidence:** Maximum local Z-Score reached 121.13 (Threshold: 3.0).
+- **Evidence:** Maximum local Z-Score reached 121.13 (Threshold: 3.0). Peak Location: Node: ACC_Cash at Time: 2020-W04.
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
@@ -25,7 +25,7 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-30T17:13:58.396887",
+  "timestamp": "2026-04-30T18:23:21.389169",
   "environment": "workspace",
   "physics_metrics": {
     "max_abs_residual": 0.0,
@@ -34,13 +34,15 @@
     "max_spectral": 0.0,
     "min_free_energy": -3569.5269,
     "min_relative_free_energy": -0.057094178533006565,
-    "max_z_score": 121.1314
+    "max_z_score": 121.1314,
+    "max_leak_location": "Time: 2020-W01",
+    "max_z_score_location": "Node: ACC_Cash at Time: 2020-W04"
   },
   "detected_pathologies": [
     {
       "pathology": "Local Pathological Stress (Micro Singularity)",
       "severity": "HIGH",
-      "evidence": "Maximum local Z-Score reached 121.13 (Threshold: 3.0).",
+      "evidence": "Maximum local Z-Score reached 121.13 (Threshold: 3.0). Peak Location: Node: ACC_Cash at Time: 2020-W04.",
       "interpretation": "Specific nodes (departments) are experiencing statistical strain far beyond their historical norm."
     }
   ],

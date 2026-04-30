@@ -16,11 +16,11 @@ This is the most critical phase for **fraud detection and auditing**. By analyzi
 * **💡 Concrete Example (from Samples)**:
   * **Sample_3 (Unbalanced Mistake)**: In double-entry bookkeeping, all debits and credits must offset to zero (Conservation of Energy). When an entry is omitted, an unexplained fluctuation in mass occurs. TLU detects this "Conservation Leak," causing the global Z-Score to spike astronomically. This is the clearest signature of a fundamentally broken ledger.
 
-### 2. Micro Z-Score / KL Drift Heatmaps (`002_2_2_1__micro_KL_drift_heatmap.png`, `002_2_2_2__micro_Z_Score_heatmap.png`)
+### 2. Micro Z-Score / KL Drift Heatmaps (`002_2_2_1__micro_KL_drift_3d_surface.png`, `002_2_2_2__micro_Z_Score_3d_surface.png`)
 
-![002_2_2_1__micro_KL_drift_heatmap](../readme_plots/002_2_2_1__micro_KL_drift_heatmap.png)
+![002_2_2_1__micro_KL_drift_heatmap](../readme_plots/002_2_2_1__micro_KL_drift_3d_surface.png)
 
-![002_2_2_2__micro_Z_Score_heatmap](../readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+![002_2_2_2__micro_Z_Score_heatmap](../readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
 
 * **📊 Visual Structure**: Matrix heatmaps. Z-Score uses `RdBu_r` (blue to red), and KL Drift uses `inferno` (black to yellow). For both, dark/blue colors mean normal operation, while "cells glowing bright yellow or vivid red" indicate extreme mathematical stress and rule-breaking (fraud/tampering).
 * **📐 Physics Theory**: Information Geometry (Kullback-Leibler Divergence). Measures how much the probability distribution of a specific account has unexpectedly mutated compared to its historical behavior.

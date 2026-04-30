@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_1_Wash_Trade`
-**Date Analyzed:** 2026-04-30 17:14:49
+**Date Analyzed:** 2026-04-30 18:24:05
 
 ## 1. Final Diagnosis
 
@@ -20,7 +20,7 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🟡 Local Pathological Stress (Micro Singularity)
 - **Severity:** MEDIUM
-- **Evidence:** Maximum local Z-Score reached 36.55 (Threshold: 3.0).
+- **Evidence:** Maximum local Z-Score reached 36.55 (Threshold: 3.0). Peak Location: Node: ACC_Cash at Time: 2020-W04.
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
@@ -38,7 +38,7 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-30T17:14:49.865603",
+  "timestamp": "2026-04-30T18:24:05.984220",
   "environment": "samples/Sample_1_Wash_Trade",
   "physics_metrics": {
     "max_abs_residual": 0.0,
@@ -47,7 +47,9 @@ The system is suffering from multiple overlapping structural failures.
     "max_spectral": 0.973975,
     "min_free_energy": -19858.1179,
     "min_relative_free_energy": -0.2509926004514251,
-    "max_z_score": 36.5451
+    "max_z_score": 36.5451,
+    "max_leak_location": "Time: 2020-W01",
+    "max_z_score_location": "Node: ACC_Cash at Time: 2020-W04"
   },
   "detected_pathologies": [
     {
@@ -65,7 +67,7 @@ The system is suffering from multiple overlapping structural failures.
     {
       "pathology": "Local Pathological Stress (Micro Singularity)",
       "severity": "MEDIUM",
-      "evidence": "Maximum local Z-Score reached 36.55 (Threshold: 3.0).",
+      "evidence": "Maximum local Z-Score reached 36.55 (Threshold: 3.0). Peak Location: Node: ACC_Cash at Time: 2020-W04.",
       "interpretation": "Specific nodes (departments) are experiencing statistical strain far beyond their historical norm."
     }
   ],

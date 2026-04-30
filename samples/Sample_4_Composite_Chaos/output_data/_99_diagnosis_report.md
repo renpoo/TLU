@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_4_Composite_Chaos`
-**Date Analyzed:** 2026-04-30 17:16:06
+**Date Analyzed:** 2026-04-30 18:25:11
 
 ## 1. Final Diagnosis
 
@@ -10,7 +10,7 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🔴 Unbalanced Journal Mistake (Conservation Violation)
 - **Severity:** CRITICAL
-- **Evidence:** Relative Leak Ratio reached 0.0161 (Threshold: 0.001). Raw residual: 1105.39
+- **Evidence:** Relative Leak Ratio reached 0.0161 (Threshold: 0.001). Raw residual: 1105.39. Peak Location: Time: 2020-W29.
 - **Interpretation:** The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere.
 
 ### 🟠 Topological Feedback Loop (Wash Trade)
@@ -25,7 +25,7 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🟡 Local Pathological Stress (Micro Singularity)
 - **Severity:** MEDIUM
-- **Evidence:** Maximum local Z-Score reached 32.74 (Threshold: 3.0).
+- **Evidence:** Maximum local Z-Score reached 32.74 (Threshold: 3.0). Peak Location: Node: ACC_Cash at Time: 2020-W04.
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
@@ -43,7 +43,7 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-30T17:16:06.561151",
+  "timestamp": "2026-04-30T18:25:11.701443",
   "environment": "samples/Sample_4_Composite_Chaos",
   "physics_metrics": {
     "max_abs_residual": 1105.39,
@@ -52,13 +52,15 @@ The system is suffering from multiple overlapping structural failures.
     "max_spectral": 0.958042,
     "min_free_energy": -14974.263,
     "min_relative_free_energy": -0.15522577884415736,
-    "max_z_score": 32.7406
+    "max_z_score": 32.7406,
+    "max_leak_location": "Time: 2020-W29",
+    "max_z_score_location": "Node: ACC_Cash at Time: 2020-W04"
   },
   "detected_pathologies": [
     {
       "pathology": "Unbalanced Journal Mistake (Conservation Violation)",
       "severity": "CRITICAL",
-      "evidence": "Relative Leak Ratio reached 0.0161 (Threshold: 0.001). Raw residual: 1105.39",
+      "evidence": "Relative Leak Ratio reached 0.0161 (Threshold: 0.001). Raw residual: 1105.39. Peak Location: Time: 2020-W29.",
       "interpretation": "The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere."
     },
     {
@@ -76,7 +78,7 @@ The system is suffering from multiple overlapping structural failures.
     {
       "pathology": "Local Pathological Stress (Micro Singularity)",
       "severity": "MEDIUM",
-      "evidence": "Maximum local Z-Score reached 32.74 (Threshold: 3.0).",
+      "evidence": "Maximum local Z-Score reached 32.74 (Threshold: 3.0). Peak Location: Node: ACC_Cash at Time: 2020-W04.",
       "interpretation": "Specific nodes (departments) are experiencing statistical strain far beyond their historical norm."
     }
   ],

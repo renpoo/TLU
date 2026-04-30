@@ -16,11 +16,11 @@
 * **💡 具体例（サンプル・データより）**:
   * **Sample_3（片端入力エラー/記帳漏れ）**: 複式簿記の原則において、すべての入力（借方）と出力（貸方）は相殺されてゼロ（エネルギー保存則）にならなければなりません。記帳漏れが発生すると、システム内に原因不明の「質量（金額）の増減」が生じます。TLUはこれを「保存則の破れ（Conservation Leak）」として検知し、システム全体のZ-Scoreが天文学的な数値へと跳ね上がります。これは最も明確な「帳簿全体の崩壊」のシグネチャです。
 
-### 2. ミクロ Z-Score / KLドリフト ヒートマップ (`002_2_2_1__micro_KL_drift_heatmap.png`, `002_2_2_2__micro_Z_Score_heatmap.png`)
+### 2. ミクロ Z-Score / KLドリフト ヒートマップ (`002_2_2_1__micro_KL_drift_3d_surface.png`, `002_2_2_2__micro_Z_Score_3d_surface.png`)
 
-![002_2_2_1__micro_KL_drift_heatmap](../../readme_plots/002_2_2_1__micro_KL_drift_heatmap.png)
+![002_2_2_1__micro_KL_drift_heatmap](../../readme_plots/002_2_2_1__micro_KL_drift_3d_surface.png)
 
-![002_2_2_2__micro_Z_Score_heatmap](../../readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+![002_2_2_2__micro_Z_Score_heatmap](../../readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
 
 * **📊 視覚的構造**: マトリックス・ヒートマップ。Z-Scoreは『RdBu_r』（青から赤）、KLドリフトは『inferno』（黒から黄色）のカラーマップを使用しています。どちらも「暗い色・青い色」が正常範囲であり、「明るい黄色や鮮やかな赤色に発光しているセル」は、組織のルールを逸脱した極度の数学的ストレス（改竄・不正）を示します。
 * **📐 物理理論**: 情報幾何学（KL ダイバージェンス）。

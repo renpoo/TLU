@@ -32,7 +32,7 @@ The accounting ledger for `Sample_2_Embezzlement_Leak` is mathematically balance
     * **💡 How to Read the Graph (Visual Cues):** Look at the white Free Energy line. While the ledger balances (above), this line plummets steadily downward. It visually proves that while money is recorded, its usefulness is being destroyed (dissipated as chaotic heat).
 
   * **Max Local Z-Score:** **89.12** (Massive stress isolated to specific nodes).
-    ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+    ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
     * **💡 How to Read the Graph (Visual Cues):** Look for the single cell glowing bright red against a normal background on the `RdBu_r` heatmap. This pinpoints the exact account where the embezzled funds are being dumped.
 
 * **Financial Evidence:** 
@@ -43,4 +43,4 @@ The perpetrator possesses accounting knowledge and successfully bypassed traditi
 
 **【Action Plan】**
 Macro-level balance checks are useless here. You must immediately consult the Micro Forensics Heatmap (`002_2_2__micro_Z_Score_heatmap.png`) to identify the exact expense node generating the 89.12 Z-Score. Once identified, initiate a receipt-level forensic audit of all outbound cash flows from that specific account to uncover the shell companies or unauthorized personal reimbursements.
-    ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+    ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
