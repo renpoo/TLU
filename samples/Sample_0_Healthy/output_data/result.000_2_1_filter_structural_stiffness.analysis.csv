@@ -1,4 +1,3 @@
-0,2,1,0.000000000000,0.0000
 t_idx,time_label,src_idx,src_label,tgt_idx,tgt_label,stiffness_k,partial_corr
 0,2020-W01,0,ACC_Accounts_Payable,0,ACC_Accounts_Payable,0.0,0.0
 0,2020-W01,0,ACC_Accounts_Payable,1,ACC_Inventory,0.0,0.0
