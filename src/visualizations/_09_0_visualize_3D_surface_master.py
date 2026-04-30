@@ -80,12 +80,16 @@ def main():
     T_mesh, N_mesh = np.meshgrid(np.arange(max_t), np.arange(max_n))
     norm = plt.Normalize(c_matrix.min(), c_matrix.max())
     
+    # Use smooth colormap interpolation across vertices instead of flat face colors
     surf = ax.plot_surface(
         T_mesh, N_mesh, z_matrix, 
-        facecolors=cmap(norm(c_matrix)),
-        shade=False, antialiased=True, alpha=0.9,
+        cmap=cmap, norm=norm,
+        shade=True, antialiased=True, alpha=0.9,
         linewidth=0.2, edgecolor=grid_col
     )
+    
+    # Adjust viewing angle for better visibility of peaks
+    ax.view_init(elev=35, azim=-55)
 
     z_axis_label = args.z_label if args.z_label else args.target_col
     c_axis_label = args.c_label if args.c_label else color_target
