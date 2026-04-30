@@ -25,7 +25,9 @@
 * **財務的証拠:** ユーザー間（売り手 → 買い手）ネットワークの残高試算表（Trial Balance）は、これらの特定ユーザー間で数億ドル規模の直接的な総資金移動を明らかにしていますが、最終的な純資産の変動は実質的にゼロです。
 
 ![System Stability & Spectral Radius](../../../../samples/Sample_7_Market_Users_Weekly/docs/readme_plots/sample_7/system_stability.png)
-* **💡 可視化グラフの読解の仕方（Visual Cues）:** スペクトル半径が1.0に達しています。これは、シンジケートが共謀して自分たちの間で資金を完璧な円を描いて回していることを証明しています。
+* **💡 可視化グラフの読解の仕方（Visual Cues）:** 
+  * **🟢 正常系（Sample 0）では:** 青色の線（スペクトル半径）は低い位置（0.0付近）で完全に安定しています。
+  * **🔴 本サンプルの異常:** スペクトル半径が1.0の限界値に達しています。これは、シンジケートが共謀して自分たちの間で資金を完璧な円を描いて回していることを証明しています。
 
 ![Thermodynamic Energy Depletion](../../../../samples/Sample_7_Market_Users_Weekly/docs/readme_plots/sample_7/thermodynamics.png)
 

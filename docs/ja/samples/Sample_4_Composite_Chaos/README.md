@@ -25,8 +25,13 @@
 * **深刻度:** CRITICAL (致命的)
 * **物理的証拠:** 
   * **相対質量漏れ率:** **0.0161**（閾値を16倍超過）。システム・ボリュームの巨大な塊が単に行方不明になっています。
-    ![002_2_1__macro_forensics_dashboard](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_1__macro_forensics_dashboard.png)
-    * **💡 可視化グラフの読解の仕方（Visual Cues）:** Z-Scoreの線が閾値を超えて激しくスパイクしており、複式簿記システムから生の質量（資金）が失われていることを視覚的に証明しています。
+    **【🟢 正常系（Sample 0）のベースライン】**
+    ![Sample 0 Macro Forensics Dashboard](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
+    **【🔴 本サンプルの異常状態】**
+    ![Sample 4 Macro Forensics Dashboard](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_1__macro_forensics_dashboard.png)
+    * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
+      * **🟢 正常系（Sample 0）では:** Z-Score線は `0.0` のまま平坦です。
+      * **🔴 本サンプルの異常:** Z-Scoreの線が閾値を超えて激しくスパイクしており、複式簿記システムから生の質量（資金）が失われていることを視覚的に証明しています。
 
 * **財務的証拠:** 
   純利益は $128,741 と偽って高く表示されていますが、P/L（損益計算書）には帳簿を人工的に均衡させるための **`UNKNOWN_LEAK` ($2,321.27)** が明確に含まれています。
@@ -37,18 +42,31 @@ LLM 診断マニュアル（**【Tier 2 Ultimate Veto】**）では、非保存�
 
 * **トポロジー的フィードバック・ループ (最大スペクトル半径: 0.9580):**
   Sample 3とは異なり、ここのスペクトル半径は1.0に近づく危機的なレベルまで急上昇しています。これは、ネットワーク内に資金の人工的なループが形成されていることを証明しています。システムは循環的な不正（循環取引/Wash Trading）に関与しており、ボリュームを膨らませるために口座間で急速に資金をバウンドさせています。
-  ![004_1_2__system_stability](../../../../samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
-  * **💡 可視化グラフの読解の仕方（Visual Cues）:** 青色の軌跡線が急上昇し、1.0の赤い閾値線の危険なほど近くをホバリングしており、壊れたデータの中で無限の循環ループ（循環取引）が形成されていることを証明しています。
+  **【🟢 正常系（Sample 0）のベースライン】**
+  ![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+  **【🔴 本サンプルの異常状態】**
+  ![Sample 4 System Stability](../../../../samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
+  * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
+    * **🟢 正常系（Sample 0）では:** スペクトル半径の線は平坦で安全な位置にあります。
+    * **🔴 本サンプルの異常:** 青色の軌跡線が急上昇し、1.0の赤い閾値線の危険なほど近くをホバリングしており、壊れたデータの中で無限の循環ループ（循環取引）が形成されていることを証明しています。
 
 * **熱力学的エネルギー枯渇 (自由エネルギー: -0.1552):**
   システムの運用能力が崩壊しています。$2,321.27 の質量の漏れと、人工的な循環取引ループによって生成された巨大なエントロピーの組み合わせにより、組織の自由エネルギーが燃え尽きようとしています。
-  ![001_1_2__thermodynamics_energy_stack](../../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-  * **💡 可視化グラフの読解の仕方（Visual Cues）:** 白色の自由エネルギーの線が着実に崩壊しており、ビジネスの運用エネルギーが燃え尽きていることを示しています。
+  **【🟢 正常系（Sample 0）のベースライン】**
+  ![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+  **【🔴 本サンプルの異常状態】**
+  ![Sample 4 Thermodynamics Energy Stack](../../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+  * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
+    * **🟢 正常系（Sample 0）では:** 自由エネルギーは安定しています。
+    * **🔴 本サンプルの異常:** 白色の自由エネルギーの線が着実に崩壊しており、ビジネスの運用エネルギーが燃え尽きていることを示しています。
 
 * **ミクロ・シンギュラリティ (最大局所 Z-Score: 32.74):**
   数学的空間が引き裂かれています。Sample 3の孤立した特異点ほど極端ではありませんが、32.74のZ-Scoreは、矛盾するデータ現実に処理を試みている複数の部門にわたる深刻で局所的なストレスを示しています。
-  ![002_2_2_2__micro_Z_Score_heatmap](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
-  * **💡 可視化グラフの読解の仕方（Visual Cues）:** 『RdBu_r』ヒートマップには、単一の障害点ではなく、さまざまな部門全体にわたる広範でカオスなストレスを示す複数の鮮やかな赤い斑点が表示されます。
+  **【🔴 本サンプルの異常状態】**
+  ![Sample 4 Micro Z-Score Heatmap](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+  * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
+    * **🟢 正常系（Sample 0）では:** 全体が穏やかな青色です。
+    * **🔴 本サンプルの異常:** 『RdBu_r』ヒートマップには、単一の障害点ではなく、さまざまな部門全体にわたる広範でカオスなストレスを示す複数の鮮やかな赤い斑点が表示されます。
 
 * **財務的歪み:**
   循環取引のループに沿って、売掛金（Accounts Receivable）が $178,852 にまで膨れ上がっています。これは、膨張した売上ボリュームが完全に未回収であり、おそらく架空のものであることを示しています。
