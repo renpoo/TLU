@@ -27,7 +27,7 @@
 * **【🟢 正常系（Sample 0）のベースライン】**
 ![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
 * **【🔴 本サンプルの異常状態】**
-![System Stability & Spectral Radius](../../../../samples/Sample_7_Market_Users_Weekly/docs/readme_plots/sample_7/system_stability.png)
+![System Stability & Spectral Radius](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/004_1_2__system_stability.png)
 * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
   * **🟢 正常系（Sample 0）では:** 青色の線（スペクトル半径）は低い位置（0.0付近）で完全に安定しています。
   * **🔴 本サンプルの異常:** スペクトル半径が1.0の限界値に達しています。これは、シンジケートが共謀して自分たちの間で資金を完璧な円を描いて回していることを証明しています。
@@ -35,7 +35,7 @@
 * **【🟢 正常系（Sample 0）のベースライン】**
 ![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 * **【🔴 本サンプルの異常状態】**
-![Thermodynamic Energy Depletion](../../../../samples/Sample_7_Market_Users_Weekly/docs/readme_plots/sample_7/thermodynamics.png)
+![Thermodynamic Energy Depletion](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 ## 3. ビジネスへの翻訳とアクション・プラン
 特定のユーザーによる「共謀取引（シンジケート）」の数学的証明が確立されました。彼らは株式を煙幕として使用していましたが、直接的なユーザー間の資金フローを追跡することで、単に自分たちの間で資金をリサイクルしているだけの詐欺的グループであることが特定されました。
@@ -50,7 +50,7 @@
 * **【🟢 正常系（Sample 0）のベースライン】**
 ![Sample 0 Network Topology](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00006.png)
 * **【🔴 本サンプルの異常状態】**
-![Isolated Network Topology](../../../../samples/Sample_7_Market_Users_Weekly/docs/readme_plots/sample_7/network_topology.png)
+![Isolated Network Topology](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00006.png)
 * **位相と同期性:** 
   理論的には独立した口座であるにもかかわらず、彼らの注文の位相ドリフト（Phase Drift）は完全に `0.0` に同期しています。これは、これらの口座が全く同じ実体によって操作されているか、すべての口座が同一のスウォームBotアルゴリズムによって中央制御されていることの物理的証明（Fabricated Synchronization）です。
 * **システムの脆弱性:** 
