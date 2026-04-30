@@ -31,8 +31,8 @@
 * **【🔴 本サンプルの異常状態】**
 ![System Stability & Spectral Radius](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/004_1_2__system_stability.png)
 * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
-  * **🟢 正常系（Sample 0）では:** 青色の線（スペクトル半径）は低い位置（0.0付近）で完全に安定しています。
-  * **🔴 本サンプルの異常:** 青色の軌跡線が1.0の臨界閾値線を突き抜けている点に注目してください。これは、新たな価値を生み出すことなく、循環取引の無限サイクルに陥っていることを物理的に証明しています。
+  * **🟢 正常系（Sample 0）では:** 赤色の線（スペクトル半径）は低い位置（0.0付近）で完全に安定しています。
+  * **🔴 本サンプルの異常:** 赤色の軌跡線がオレンジ色の臨界閾値線を突き抜けている点に注目してください。これは、新たな価値を生み出すことなく、循環取引の無限サイクルに陥っていることを物理的に証明しています。
 
 * **【🟢 正常系（Sample 0）のベースライン】**
 ![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
