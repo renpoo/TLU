@@ -25,9 +25,9 @@
 * **深刻度:** CRITICAL (致命的)
 * **物理的証拠:** 
   * **相対質量漏れ率:** **0.0116**（閾値0.001を10倍以上超過）。システム全体のトランザクション・ボリュームの1%以上が、どこからともなく出現または消失しています。
-    **【🟢 正常系（Sample 0）のベースライン】**
+    * **【🟢 正常系（Sample 0）のベースライン】**
     ![Sample 0 Macro Forensics Dashboard](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
-    **【🔴 本サンプルの異常状態】**
+    * **【🔴 本サンプルの異常状態】**
     ![Sample 3 Macro Forensics Dashboard](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_1__macro_forensics_dashboard.png)
   * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
     * **🟢 正常系（Sample 0）では:** Z-Scoreの線（質量漏れ）は `0.0` のまま平坦です。
@@ -42,9 +42,9 @@ LLM 診断マニュアル（**【Tier 2 Ultimate Veto】**）によれば、基�
 
 * **熱力学的エネルギー枯渇 (自由エネルギー: -0.1263):** 
   $1,412.88 が認識可能な口座に戻ることなくシステムから文字通り消失しているため、システムはこれを巨大かつ継続的な「熱の漏れ」として扱います。通常の運用により内部エネルギー（$U$）は高いですが、質量が虚空へと出血しているため、自由エネルギー（$F$）は崩壊します。これは数学的に、深刻な「横領」を模倣しています。
-  **【🟢 正常系（Sample 0）のベースライン】**
+  * **【🟢 正常系（Sample 0）のベースライン】**
   ![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-  **【🔴 本サンプルの異常状態】**
+  * **【🔴 本サンプルの異常状態】**
   ![Sample 3 Thermodynamics Energy Stack](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2__thermodynamics_energy_stack.png)
   * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
     * **🟢 正常系（Sample 0）では:** 白色の線（自由エネルギー）は安定を保ちます。
@@ -52,7 +52,7 @@ LLM 診断マニュアル（**【Tier 2 Ultimate Veto】**）によれば、基�
 
 * **ミクロ・シンギュラリティ (最大局所 Z-Score: 121.13):** 
   通常のZ-Scoreの異常は3.0〜5.0程度です。**121.13** というZ-Scoreは、健全な分布においては数学的に不可能です。これは「ミクロ・シンギュラリティ（微小特異点）」として振る舞い、宇宙の質量保存則が打ち砕かれた正確な空間座標（特定の口座と時間ステップ）をピンポイントで特定します。ネットワークは実質的に、このノードで自らを引き裂いています。
-  **【🔴 本サンプルの異常状態】**
+  * **【🔴 本サンプルの異常状態】**
   ![Sample 3 Micro Z-Score Heatmap](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
   * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
     * **🟢 正常系（Sample 0）では:** ヒートマップは均一な青色です。
@@ -60,9 +60,9 @@ LLM 診断マニュアル（**【Tier 2 Ultimate Veto】**）によれば、基�
   
 * **トポロジー的安定性 (最大スペクトル半径: 0.000):**
   興味深いことに、スペクトル半径は完全にゼロのままです。これは、巨大な漏れとストレスがあるにもかかわらず、循環的な「循環取引（Wash Trading）」は一切発生していないことを証明しています。お金はループして戻ってくるのではなく、一直線に流れ出して消失しているのです。
-  **【🟢 正常系（Sample 0）のベースライン】**
+  * **【🟢 正常系（Sample 0）のベースライン】**
   ![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
-  **【🔴 本サンプルの異常状態】**
+  * **【🔴 本サンプルの異常状態】**
   ![Sample 3 System Stability](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_1_2__system_stability.png)
   * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
     * **🟢 正常系（Sample 0）では:** 青色の線（スペクトル半径）は低い位置（0.0付近）で安定しています。

@@ -23,27 +23,27 @@
 * **深刻度:** HIGH (高)
 * **物理的証拠:** 
   * **相対質量漏れ率:** `0.0`（質量は完全に保存されており、複式簿記システムは破壊されていません）。
-    **【🟢 正常系（Sample 0）のベースライン】**
+    * **【🟢 正常系（Sample 0）のベースライン】**
     ![Sample 0 Macro Forensics Dashboard](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
-    **【🔴 本サンプルの異常状態】**
+    * **【🔴 本サンプルの異常状態】**
     ![Sample 2 Macro Forensics Dashboard](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
     * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
       * **🟢 正常系（Sample 0）では:** マクロフォレンジックダッシュボードのZ-Score線（質量漏れ）は完全に `0.0` で平坦なままです。
       * **🔴 本サンプルの異常:** Z-Scoreの線は平坦で低いままです。これは「質量の保存則」が破られていないこと、つまり元帳が完璧にバランスしていることを視覚的に確認するものです。
 
   * **相対的自由エネルギー比率:** **-0.1556**（閾値-0.1を大きく下回る。質量は保存されているにもかかわらず、システムは有用な仕事を行う能力を出血しています）。
-    **【🟢 正常系（Sample 0）のベースライン】**
+    * **【🟢 正常系（Sample 0）のベースライン】**
     ![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-    **【🔴 本サンプルの異常状態】**
+    * **【🔴 本サンプルの異常状態】**
     ![Sample 2 Thermodynamics Energy Stack](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2__thermodynamics_energy_stack.png)
     * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
       * **🟢 正常系（Sample 0）では:** 白色の線（自由エネルギー）は安定した水準を維持します。
       * **🔴 本サンプルの異常:** 白色の線（自由エネルギー）に注目してください。元帳のバランスが取れている（上記の通り）にもかかわらず、この線は着実に急降下しています。これは、お金は記録されているものの、その有用性が破壊され（カオスな熱として散逸し）ていることを視覚的に証明しています。
 
   * **最大局所 Z-Score:** **89.12**（特定のノードに隔離された極めて巨大なストレス）。
-    **【🟢 正常系（Sample 0）のベースライン】**
+    * **【🟢 正常系（Sample 0）のベースライン】**
     *(※Sample 0 自体が局所エラーを持つため、ここでは完全な無風状態のヒートマップを想定して比較してください。通常は全体が均一な青色になります。)*
-    **【🔴 本サンプルの異常状態】**
+    * **【🔴 本サンプルの異常状態】**
     ![Sample 2 Micro Z-Score Heatmap](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
     * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
       * **🟢 正常系（Sample 0）では:** ヒートマップ全体が穏やかな暗い青色に保たれます（ストレスゼロ）。

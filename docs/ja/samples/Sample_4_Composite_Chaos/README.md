@@ -25,9 +25,9 @@
 * **深刻度:** CRITICAL (致命的)
 * **物理的証拠:** 
   * **相対質量漏れ率:** **0.0161**（閾値を16倍超過）。システム・ボリュームの巨大な塊が単に行方不明になっています。
-    **【🟢 正常系（Sample 0）のベースライン】**
+    * **【🟢 正常系（Sample 0）のベースライン】**
     ![Sample 0 Macro Forensics Dashboard](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
-    **【🔴 本サンプルの異常状態】**
+    * **【🔴 本サンプルの異常状態】**
     ![Sample 4 Macro Forensics Dashboard](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_1__macro_forensics_dashboard.png)
     * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
       * **🟢 正常系（Sample 0）では:** Z-Score線は `0.0` のまま平坦です。
@@ -42,9 +42,9 @@ LLM 診断マニュアル（**【Tier 2 Ultimate Veto】**）では、非保存�
 
 * **トポロジー的フィードバック・ループ (最大スペクトル半径: 0.9580):**
   Sample 3とは異なり、ここのスペクトル半径は1.0に近づく危機的なレベルまで急上昇しています。これは、ネットワーク内に資金の人工的なループが形成されていることを証明しています。システムは循環的な不正（循環取引/Wash Trading）に関与しており、ボリュームを膨らませるために口座間で急速に資金をバウンドさせています。
-  **【🟢 正常系（Sample 0）のベースライン】**
+  * **【🟢 正常系（Sample 0）のベースライン】**
   ![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
-  **【🔴 本サンプルの異常状態】**
+  * **【🔴 本サンプルの異常状態】**
   ![Sample 4 System Stability](../../../../samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
   * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
     * **🟢 正常系（Sample 0）では:** スペクトル半径の線は平坦で安全な位置にあります。
@@ -52,9 +52,9 @@ LLM 診断マニュアル（**【Tier 2 Ultimate Veto】**）では、非保存�
 
 * **熱力学的エネルギー枯渇 (自由エネルギー: -0.1552):**
   システムの運用能力が崩壊しています。$2,321.27 の質量の漏れと、人工的な循環取引ループによって生成された巨大なエントロピーの組み合わせにより、組織の自由エネルギーが燃え尽きようとしています。
-  **【🟢 正常系（Sample 0）のベースライン】**
+  * **【🟢 正常系（Sample 0）のベースライン】**
   ![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-  **【🔴 本サンプルの異常状態】**
+  * **【🔴 本サンプルの異常状態】**
   ![Sample 4 Thermodynamics Energy Stack](../../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2__thermodynamics_energy_stack.png)
   * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
     * **🟢 正常系（Sample 0）では:** 自由エネルギーは安定しています。
@@ -62,7 +62,7 @@ LLM 診断マニュアル（**【Tier 2 Ultimate Veto】**）では、非保存�
 
 * **ミクロ・シンギュラリティ (最大局所 Z-Score: 32.74):**
   数学的空間が引き裂かれています。Sample 3の孤立した特異点ほど極端ではありませんが、32.74のZ-Scoreは、矛盾するデータ現実に処理を試みている複数の部門にわたる深刻で局所的なストレスを示しています。
-  **【🔴 本サンプルの異常状態】**
+  * **【🔴 本サンプルの異常状態】**
   ![Sample 4 Micro Z-Score Heatmap](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
   * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
     * **🟢 正常系（Sample 0）では:** 全体が穏やかな青色です。
