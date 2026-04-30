@@ -42,9 +42,9 @@
 
   * **最大局所 Z-Score:** **89.12**（特定のノードに隔離された極めて巨大なストレス）。
     * **【🟢 正常系（Sample 0）のベースライン】**
-    ![Sample 0 Micro Z-Score Heatmap](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+    ![Sample 0 Micro Z-Score 3D Surface](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
     * **【🔴 本サンプルの異常状態】**
-    ![Sample 2 Micro Z-Score Heatmap](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+    ![Sample 2 Micro Z-Score 3D Surface](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
     * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
       * **🟢 正常系（Sample 0）では:** 背景は暗い紫色（Dark Purple）に保たれ、第4週の現金ノードにのみ「初期稼働ショック（給与支払い）」を示す黄色（Yellow）のスポットが1つだけ存在します。
       * **🔴 本サンプルの異常:** 『viridis』ヒートマップ上で、正常系の「初期稼働ショック」とは全く別のノード（勘定科目）に、明るい黄色（Yellow）の強烈な異常発光が存在します。これが、横領された資金が投棄されている正確な口座（アカウント）を物理的に特定しています。

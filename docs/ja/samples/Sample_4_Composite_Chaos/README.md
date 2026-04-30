@@ -63,9 +63,9 @@ LLM 診断マニュアル（**【Tier 2 Ultimate Veto】**）では、非保存�
 * **ミクロ・シンギュラリティ (最大局所 Z-Score: 32.74):**
   数学的空間が引き裂かれています。Sample 3の孤立した特異点ほど極端ではありませんが、32.74のZ-Scoreは、矛盾するデータ現実に処理を試みている複数の部門にわたる深刻で局所的なストレスを示しています。
   * **【🟢 正常系（Sample 0）のベースライン】**
-  ![Sample 0 Micro Z-Score Heatmap](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+  ![Sample 0 Micro Z-Score 3D Surface](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
   * **【🔴 本サンプルの異常状態】**
-  ![Sample 4 Micro Z-Score Heatmap](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+  ![Sample 4 Micro Z-Score 3D Surface](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
   * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
     * **🟢 正常系（Sample 0）では:** 背景は暗い紫色（Dark Purple）に保たれ、第4週の現金ノードにのみ「初期稼働ショック（給与支払い）」を示す黄色（Yellow）のスポットが1つだけ存在します。
     * **🔴 本サンプルの異常:** 『viridis』ヒートマップ全体にわたって、明るい黄色（Yellow）の斑点が複数散らばっている点に注目してください。単一の黄色い点ではなく、マトリックス全体が連鎖的にストレスを受けているカオス状態を視覚的に証明しています。

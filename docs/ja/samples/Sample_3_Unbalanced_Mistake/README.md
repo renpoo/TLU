@@ -53,9 +53,9 @@ LLM 診断マニュアル（**【Tier 2 Ultimate Veto】**）によれば、基�
 * **ミクロ・シンギュラリティ (最大局所 Z-Score: 121.13):** 
   通常のZ-Scoreの異常は3.0〜5.0程度です。**121.13** というZ-Scoreは、健全な分布においては数学的に不可能です。これは「ミクロ・シンギュラリティ（微小特異点）」として振る舞い、宇宙の質量保存則が打ち砕かれた正確な空間座標（特定の口座と時間ステップ）をピンポイントで特定します。ネットワークは実質的に、このノードで自らを引き裂いています。
   * **【🟢 正常系（Sample 0）のベースライン】**
-  ![Sample 0 Micro Z-Score Heatmap](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+  ![Sample 0 Micro Z-Score 3D Surface](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
   * **【🔴 本サンプルの異常状態】**
-  ![Sample 3 Micro Z-Score Heatmap](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+  ![Sample 3 Micro Z-Score 3D Surface](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
   * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
     * **🟢 正常系（Sample 0）では:** 背景は暗い紫色（Dark Purple）に保たれ、第4週の現金ノードにのみ「初期稼働ショック（給与支払い）」を示す黄色（Yellow）のスポットが存在します。
     * **🔴 本サンプルの異常:** 『viridis』ヒートマップ上で、正常系の「初期稼働ショック」とは全く別のノード（勘定科目）に、明るい黄色（Yellow）の強烈な異常発光が存在します。これが、仕訳のアンバランス（貸借不一致）が残されている特定のノードを物理的に特定しています。

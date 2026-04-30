@@ -25,9 +25,9 @@
 * **分析:** 異常検知の閾値を約65倍上回る、極度に異常な局所的ストレスが発生しています。これは、特定の領域（ノード）における過去の統計的な正常状態からの「完全な逸脱」を意味します。物理的な血管閉塞の決定的な証拠です。
 
 * **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 Micro Z-Score Heatmap](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+![Sample 0 Micro Z-Score 3D Surface](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
 * **【🔴 本サンプルの異常状態】**
-![Z-Score Heatmap](../../../../samples/Sample_8_fMRI_Stroke/plots/002_2_2_2__micro_Z_Score_heatmap.png)
+![Z-Score 3D Surface](../../../../samples/Sample_8_fMRI_Stroke/plots/002_2_2_2__micro_Z_Score_3d_surface.png)
 * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
   * **🟢 正常系（Sample 0）では:** 背景は暗い紫色（Dark Purple）に保たれ、第4週の現金ノードにのみ「初期稼働ショック（給与支払い）」を示す黄色（Yellow）のスポットが1つだけ存在します。
   * **🔴 本サンプルの異常:** 『viridis』ヒートマップ上で、極端に明るい黄色（Yellow）で発光している孤立したセルを探してください。これが、数学的特異点（物理的な血栓/閉塞）の正確な空間座標をピンポイントで示しています。
