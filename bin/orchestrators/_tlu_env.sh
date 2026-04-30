@@ -41,6 +41,7 @@ if [ -n "${TARGET_ENV:-}" ]; then
     
     # In Target Mode, plots explicitly render inside the archive folder
     export TLU_PLOT_DIR="${TLU_PLOT_DIR:-${TARGET_ENV}/output_plots}"
+    export TLU_REPORT_DIR="${TLU_REPORT_DIR:-${TARGET_ENV}/semantic_reports}"
 else
     # Default Paths
     export TLU_OUT_DIR="${TLU_OUT_DIR:-workspace/output_data}"
@@ -49,10 +50,12 @@ else
     export TLU_SYS_PARAMS="${TLU_SYS_PARAMS:-workspace/config/_sys_params.csv}"
     export TLU_TMP_COO="${TLU_TMP_COO:-workspace/ephemeral/_coo_stream.csv}"
     export TLU_PLOT_DIR="${TLU_PLOT_DIR:-workspace/output_plots}"
+    export TLU_REPORT_DIR="${TLU_REPORT_DIR:-workspace/semantic_reports}"
 fi
 
 # Ensure tracking plot environments exist safely without crashing executions
 mkdir -p "${TLU_PLOT_DIR}"
+mkdir -p "${TLU_REPORT_DIR}"
 
 # ==========================================
 # 2.5 Dynamic Hyperparameter Injection
@@ -125,6 +128,15 @@ run_tlu_pipeline() {
         cat "${TLU_TMP_COO}" \
         | $TLU_PY -m "${filter_module}" \
         > "${TLU_OUT_DIR}/${out_filename}"
+    fi
+
+    # Step 3: Semantic Hydration (Human/LLM Readable Output)
+    if [ -f "${TLU_NODE_MAP}" ] && [ -f "${TLU_TIME_MAP}" ]; then
+        cat "${TLU_OUT_DIR}/${out_filename}" \
+        | $TLU_PY -m src.utils._99_semantic_hydrator \
+            --node_map "${TLU_NODE_MAP}" \
+            --time_map "${TLU_TIME_MAP}" \
+        > "${TLU_REPORT_DIR}/${out_filename}"
     fi
 
     echo "${filter_desc} completed."
