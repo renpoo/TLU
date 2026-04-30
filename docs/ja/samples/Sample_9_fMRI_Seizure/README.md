@@ -24,6 +24,9 @@
 * **スペクトル半径:** `1.0000` (閾値: 0.9)
 * **分析:** ネットワークの隣接行列から計算された最大固有値（スペクトル半径）が、物理的限界である `1.0` に達しました。金融市場においてこれは「利己的な循環資金ループ（Wash Trade）」を意味しますが、ニューラルネットワークにおいては**「ニューロンの制御不能で過剰な同期発火（Hypersynchrony）」**を意味します。脳全体が同じリズムで痙攣していることの数学的証拠です。
 
+* **【🟢 正常系（Sample 0）のベースライン】**
+![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+* **【🔴 本サンプルの異常状態】**
 ![System Stability](../../../../samples/Sample_9_fMRI_Seizure/plots/004_1_2__system_stability.png)
 * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
   * **🟢 正常系（Sample 0）では:** 青色の線（スペクトル半径）は低い位置（0.0付近）で完全に安定しています。
@@ -33,6 +36,9 @@
 * **Z-Score:** `195.21` (閾値: 3.0)
 * **分析:** 異常検知の閾値を約65倍上回る、極端な局所的ストレスが検出されました。これは、発作の震源地（焦点）において、平常時と比較して想像を絶する規模のエネルギー（血流）が暴走していることを示しています。
 
+* **【🟢 正常系（Sample 0）のベースライン】**
+![Sample 0 Phase Portrait 3D](../../../../samples/Sample_0_Healthy/readme_plots/000_1_8__phase_portrait_3d.png)
+* **【🔴 本サンプルの異常状態】**
 ![Phase Portrait 3D](../../../../samples/Sample_9_fMRI_Seizure/plots/000_1_8__phase_portrait_3d.png)
 * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
   * **🟢 正常系（Sample 0）では:** 位相空間の軌跡は中心付近に小さくまとまり、安定した規則的な形状を描きます。

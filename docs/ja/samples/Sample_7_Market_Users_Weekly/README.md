@@ -24,11 +24,17 @@
 * **物理的証拠:** 最大スペクトル半径が `1.000` に達しています。特定のユーザー（USR_002, USR_003）を熱源として指定すると、相対的自由エネルギー比率は `-13.70` へとさらに劇的に悪化します。
 * **財務的証拠:** ユーザー間（売り手 → 買い手）ネットワークの残高試算表（Trial Balance）は、これらの特定ユーザー間で数億ドル規模の直接的な総資金移動を明らかにしていますが、最終的な純資産の変動は実質的にゼロです。
 
+* **【🟢 正常系（Sample 0）のベースライン】**
+![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+* **【🔴 本サンプルの異常状態】**
 ![System Stability & Spectral Radius](../../../../samples/Sample_7_Market_Users_Weekly/docs/readme_plots/sample_7/system_stability.png)
 * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
   * **🟢 正常系（Sample 0）では:** 青色の線（スペクトル半径）は低い位置（0.0付近）で完全に安定しています。
   * **🔴 本サンプルの異常:** スペクトル半径が1.0の限界値に達しています。これは、シンジケートが共謀して自分たちの間で資金を完璧な円を描いて回していることを証明しています。
 
+* **【🟢 正常系（Sample 0）のベースライン】**
+![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+* **【🔴 本サンプルの異常状態】**
 ![Thermodynamic Energy Depletion](../../../../samples/Sample_7_Market_Users_Weekly/docs/readme_plots/sample_7/thermodynamics.png)
 
 ## 3. ビジネスへの翻訳とアクション・プラン
@@ -41,6 +47,9 @@
 * **構造的剛性:** 
   特定のユーザーグループ（サブグラフ）が、他の部分から完全に孤立した硬直したブロック構造を形成しています。これは、他の一般投資家（ノイズ）からの介入を拒絶し、自分たちのシンジケート内だけで閉じた取引を循環させる「人工的な資本統制」の証拠です。
 
+* **【🟢 正常系（Sample 0）のベースライン】**
+![Sample 0 Network Topology](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00006.png)
+* **【🔴 本サンプルの異常状態】**
 ![Isolated Network Topology](../../../../samples/Sample_7_Market_Users_Weekly/docs/readme_plots/sample_7/network_topology.png)
 * **位相と同期性:** 
   理論的には独立した口座であるにもかかわらず、彼らの注文の位相ドリフト（Phase Drift）は完全に `0.0` に同期しています。これは、これらの口座が全く同じ実体によって操作されているか、すべての口座が同一のスウォームBotアルゴリズムによって中央制御されていることの物理的証明（Fabricated Synchronization）です。

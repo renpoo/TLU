@@ -26,11 +26,17 @@
 * **物理的証拠:** 最大スペクトル半径が絶対的な限界値である `1.000` に達しています。相対的自由エネルギー比率は `-9.14` という極度の枯渇を記録しました。
 * **財務的証拠:** これは、特定の株式（例: STK_005）が正味の資金移動（純利益/残高）をほぼゼロに保ちながら、12億ドルという異常な総借方/貸方を発生させている事実と完全に一致しています。
 
+* **【🟢 正常系（Sample 0）のベースライン】**
+![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+* **【🔴 本サンプルの異常状態】**
 ![System Stability & Spectral Radius](../../../../samples/Sample_6_Market_Bipartite_Weekly/docs/readme_plots/sample_6/system_stability.png)
 * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
   * **🟢 正常系（Sample 0）では:** 青色の線（スペクトル半径）は低い位置（0.0付近）で完全に安定しています。
   * **🔴 本サンプルの異常:** 青色の軌跡線が1.0の臨界閾値線を突き抜けている点に注目してください。これは、新たな価値を生み出すことなく、循環取引の無限サイクルに陥っていることを物理的に証明しています。
 
+* **【🟢 正常系（Sample 0）のベースライン】**
+![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+* **【🔴 本サンプルの異常状態】**
 ![Thermodynamic Energy Depletion](../../../../samples/Sample_6_Market_Bipartite_Weekly/docs/readme_plots/sample_6/thermodynamics.png)
 
 ## 3. ビジネスへの翻訳とアクション・プラン
@@ -47,6 +53,9 @@
 * **位相と同期性:**
   取引の周波数分析により、有機的な1/f（ピンク）ノイズではなく、位相ドリフトが `0.0` の「ホワイトノイズ」が明らかになりました。これは、買い注文と売り注文がプログラムされた実体によって意図的かつ完璧に同期されている**「人工的な同期（Fabricated Synchronization）」**の決定的な証拠です。
 
+* **【🟢 正常系（Sample 0）のベースライン】**
+![Sample 0 Phase Drift](../../../../samples/Sample_0_Healthy/readme_plots/005_1_2__phase_drift_heatmap.png)
+* **【🔴 本サンプルの異常状態】**
 ![Phase Drift Heatmap](../../../../samples/Sample_6_Market_Bipartite_Weekly/docs/readme_plots/sample_6/phase_drift.png)
 * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
   * **🟢 正常系（Sample 0）では:** 有機的な人間の取引は、様々な帯域が混ざり合う自然な「ピンクノイズ（Pink Noise）」のグラデーションを示します。
@@ -55,4 +64,7 @@
 * **システムの脆弱性:**
   感度行列は、この悪意あるループのキーストーン（要石）が**「株式（STK）そのもの」**であることを示しています。この株式が上場廃止または取引停止になれば、循環取引のループは即座に崩壊します。ただし、これはその株式に依存していた他の（無実の）ユーザーに連鎖的な流動性ショックを引き起こすリスクも伴います。
 
+* **【🟢 正常系（Sample 0）のベースライン】**
+![Sample 0 Network Topology](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00006.png)
+* **【🔴 本サンプルの異常状態】**
 ![Network Topology](../../../../samples/Sample_6_Market_Bipartite_Weekly/docs/readme_plots/sample_6/002_1_2__network_topology.t.00006.png)

@@ -25,18 +25,27 @@
 * **深刻度:** HIGH (高)
 * **物理的証拠:**
   * **最大スペクトル半径:** **1.0000**（数学的発散の正確な境界。推移確率行列の固有値が1であり、流れが無限に循環していることを意味します）。
+    * **【🟢 正常系（Sample 0）のベースライン】**
+    ![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+    * **【🔴 本サンプルの異常状態】**
     ![004_1_2__system_stability](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_2__system_stability.png)
     * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
       * **🟢 正常系（Sample 0）では:** 青色の線（スペクトル半径）は低い位置で安定しています。
       * **🔴 本サンプルの異常:** 青色の線が正確に1.0の閾値に達し、そこに留まっています。これは逃げ場のない閉じた循環ループ（車が円を描いて走り続けている状態）を証明しています。
 
   * **相対質量漏れ率:** `0.0`（車の総量は完全に保存されています）。
+    * **【🟢 正常系（Sample 0）のベースライン】**
+    ![Sample 0 Macro Forensics Dashboard](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
+    * **【🔴 本サンプルの異常状態】**
     ![002_2_1__macro_forensics_dashboard](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_1__macro_forensics_dashboard.png)
     * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
       * **🟢 正常系（Sample 0）では:** マクロフォレンジックダッシュボードのZ-Score線（質量漏れ）は完全に `0.0` で平坦なままです。
       * **🔴 本サンプルの異常:** 本サンプルでもZ-Scoreの線は平坦なままです。これはグリッドから不可解に車が消滅していないこと（質量保存）を意味します。
 
   * **相対的自由エネルギー比率:** **+0.2805**（エネルギーを熱として浪費する詐欺的な金融ネットワークとは異なり、このシステムは「正の」自由エネルギーを持っています。これはランダムなカオスではなく、高度に硬直した人工的な物理構造であることを示しています）。
+    * **【🟢 正常系（Sample 0）のベースライン】**
+    ![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+    * **【🔴 本サンプルの異常状態】**
     ![001_1_2__thermodynamics_energy_stack](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2__thermodynamics_energy_stack.png)
     * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
       * **🟢 正常系（Sample 0）では:** 自由エネルギーは安定しています。
@@ -51,6 +60,9 @@ LLMマニュアルの【Tier 3】の論理を都市計画に適用します：�
 
 **【アクション・プラン】**
 マクロの交通量は安定しているように見えますが、局所的なZ-Score（32.29）は、特定の交差点での危機的な渋滞（ミクロ・シンギュラリティ）を示しています。
+* **【🟢 正常系（Sample 0）のベースライン】**
+![Sample 0 Micro Z-Score Heatmap](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+* **【🔴 本サンプルの異常状態】**
 ![Micro Z-Score Heatmap](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
 * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
   * **🟢 正常系（Sample 0）では:** 全体が穏やかな青色です。
