@@ -84,7 +84,7 @@ def main():
     surf = ax.plot_surface(
         T_mesh, N_mesh, z_matrix, 
         cmap=cmap, norm=norm,
-        shade=True, antialiased=True, alpha=0.9,
+        shade=False, antialiased=True, alpha=0.9,
         linewidth=0.2, edgecolor=grid_col
     )
     
