@@ -1,7 +1,7 @@
-# TLU Meta-Analysis Report (Laboratory Findings)
+# TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `workspace`
-**Date Analyzed:** 2026-04-28 15:04:39
+**Date Analyzed:** 2026-04-30 17:13:58
 
 ## 1. Final Diagnosis
 
@@ -25,7 +25,7 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-28T15:04:39.732329",
+  "timestamp": "2026-04-30T17:13:58.396887",
   "environment": "workspace",
   "physics_metrics": {
     "max_abs_residual": 0.0,

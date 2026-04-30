@@ -1,7 +1,7 @@
-# TLU Meta-Analysis Report (Laboratory Findings)
+# TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
-**Target Environment:** `samples/Sample_6_Market_Bipartite_Weekly/workspace`
-**Date Analyzed:** 2026-04-28 14:30:43
+**Target Environment:** `samples/Sample_6_Market_Bipartite_Weekly`
+**Date Analyzed:** 2026-04-30 17:17:00
 
 ## 1. Final Diagnosis
 
@@ -38,8 +38,8 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-28T14:30:43.166863",
-  "environment": "samples/Sample_6_Market_Bipartite_Weekly/workspace",
+  "timestamp": "2026-04-30T17:17:00.783633",
+  "environment": "samples/Sample_6_Market_Bipartite_Weekly",
   "physics_metrics": {
     "max_abs_residual": 0.0,
     "mean_gross_activity": 130940216.1619231,

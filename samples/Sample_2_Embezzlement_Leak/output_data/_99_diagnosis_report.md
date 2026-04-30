@@ -1,7 +1,7 @@
-# TLU Meta-Analysis Report (Laboratory Findings)
+# TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_2_Embezzlement_Leak`
-**Date Analyzed:** 2026-04-28 14:29:17
+**Date Analyzed:** 2026-04-30 17:35:44
 
 ## 1. Final Diagnosis
 
@@ -15,7 +15,7 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🟡 Local Pathological Stress (Micro Singularity)
 - **Severity:** MEDIUM
-- **Evidence:** Maximum local Z-Score reached 89.12 (Threshold: 3.0).
+- **Evidence:** Maximum local Z-Score reached 89.12 (Threshold: 3.0). Peak Location: Node: ACC_Cash at Time: 2020-W04.
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
@@ -33,7 +33,7 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-28T14:29:17.050579",
+  "timestamp": "2026-04-30T17:35:44.230132",
   "environment": "samples/Sample_2_Embezzlement_Leak",
   "physics_metrics": {
     "max_abs_residual": 0.0,
@@ -42,7 +42,9 @@ The system is suffering from multiple overlapping structural failures.
     "max_spectral": 0.0,
     "min_free_energy": -12094.9443,
     "min_relative_free_energy": -0.15557873304174352,
-    "max_z_score": 89.1201
+    "max_z_score": 89.1201,
+    "max_leak_location": "Time: 2020-W01",
+    "max_z_score_location": "Node: ACC_Cash at Time: 2020-W04"
   },
   "detected_pathologies": [
     {
@@ -54,7 +56,7 @@ The system is suffering from multiple overlapping structural failures.
     {
       "pathology": "Local Pathological Stress (Micro Singularity)",
       "severity": "MEDIUM",
-      "evidence": "Maximum local Z-Score reached 89.12 (Threshold: 3.0).",
+      "evidence": "Maximum local Z-Score reached 89.12 (Threshold: 3.0). Peak Location: Node: ACC_Cash at Time: 2020-W04.",
       "interpretation": "Specific nodes (departments) are experiencing statistical strain far beyond their historical norm."
     }
   ],

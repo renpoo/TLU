@@ -1,7 +1,7 @@
-# TLU Meta-Analysis Report (Laboratory Findings)
+# TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_4_Composite_Chaos`
-**Date Analyzed:** 2026-04-28 14:29:58
+**Date Analyzed:** 2026-04-30 17:16:06
 
 ## 1. Final Diagnosis
 
@@ -43,7 +43,7 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-28T14:29:58.624781",
+  "timestamp": "2026-04-30T17:16:06.561151",
   "environment": "samples/Sample_4_Composite_Chaos",
   "physics_metrics": {
     "max_abs_residual": 1105.39,

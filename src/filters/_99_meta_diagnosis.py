@@ -58,15 +58,22 @@ def main():
             metrics["min_relative_free_energy"] = (df_thermo['free_energy_F'] / df_thermo['gross_activity_U']).min()
 
     if df_macro_for is not None and 'conservation_residual' in df_macro_for.columns:
-        metrics["max_abs_residual"] = df_macro_for['conservation_residual'].abs().max()
+        metrics["max_abs_residual"] = float(df_macro_for['conservation_residual'].abs().max())
         # Calculate Relative Mass Leakage
         metrics["relative_leak_ratio"] = metrics["max_abs_residual"] / metrics["mean_gross_activity"]
+        if "time_label" in df_macro_for.columns:
+            max_idx = df_macro_for['conservation_residual'].abs().idxmax()
+            metrics["max_leak_location"] = f"Time: {df_macro_for.iloc[max_idx]['time_label']}"
         
     if df_stability is not None and 'spectral_radius' in df_stability.columns:
         metrics["max_spectral"] = df_stability['spectral_radius'].max()
         
     if df_micro_for is not None and 'node_univariate_z_score' in df_micro_for.columns:
-        metrics["max_z_score"] = df_micro_for['node_univariate_z_score'].max()
+        metrics["max_z_score"] = float(df_micro_for['node_univariate_z_score'].max())
+        if "node_label" in df_micro_for.columns and "time_label" in df_micro_for.columns:
+            max_idx = df_micro_for['node_univariate_z_score'].idxmax()
+            row = df_micro_for.iloc[max_idx]
+            metrics["max_z_score_location"] = f"Node: {row['node_label']} at Time: {row['time_label']}"
 
     # 3. Decision Tree Logic (Using SCALE-INVARIANT Thresholds)
     # Dimensionless Ratios
@@ -79,10 +86,13 @@ def main():
     
     # Rule 1: Mass Conservation (Syntax Error / Direct Leak)
     if metrics["relative_leak_ratio"] > T_REL_LEAK:
+        evidence_text = f"Relative Leak Ratio reached {metrics['relative_leak_ratio']:.4f} (Threshold: {T_REL_LEAK}). Raw residual: {metrics['max_abs_residual']:.2f}."
+        if "max_leak_location" in metrics:
+            evidence_text += f" Peak Location: {metrics['max_leak_location']}."
         diagnoses.append({
             "pathology": "Unbalanced Journal Mistake (Conservation Violation)",
             "severity": "CRITICAL",
-            "evidence": f"Relative Leak Ratio reached {metrics['relative_leak_ratio']:.4f} (Threshold: {T_REL_LEAK}). Raw residual: {metrics['max_abs_residual']:.2f}",
+            "evidence": evidence_text,
             "interpretation": "The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere."
         })
         
@@ -108,10 +118,13 @@ def main():
     if metrics["max_z_score"] > T_Z_SCORE:
         # Only report this as primary if no systemic anomalies were found, otherwise it's just supporting.
         severity = "MEDIUM" if len(diagnoses) > 0 else "HIGH"
+        evidence_text = f"Maximum local Z-Score reached {metrics['max_z_score']:.2f} (Threshold: {T_Z_SCORE})."
+        if "max_z_score_location" in metrics:
+            evidence_text += f" Peak Location: {metrics['max_z_score_location']}."
         diagnoses.append({
             "pathology": "Local Pathological Stress (Micro Singularity)",
             "severity": severity,
-            "evidence": f"Maximum local Z-Score reached {metrics['max_z_score']:.2f} (Threshold: {T_Z_SCORE}).",
+            "evidence": evidence_text,
             "interpretation": "Specific nodes (departments) are experiencing statistical strain far beyond their historical norm."
         })
 
