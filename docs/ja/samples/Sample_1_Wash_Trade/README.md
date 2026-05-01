@@ -26,18 +26,18 @@
 * **物理的証拠:**
   * **[マクロ分析] 最大スペクトル半径:** **0.9740**（閾値0.9を超過。システムは自浄作用を失い、制御不能な発散状態に突入しています）。
     * **【🟢 正常系（Sample 0）のベースライン】**
-    ![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+    ![Sample 0 System Stability](../../../readme_plots/004_1_2__system_stability.png)
     * **【🔴 本サンプルの異常状態】**
-    ![Sample 1 System Stability](../../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_2__system_stability.png)
+    ![Sample 1 System Stability](../../../readme_plots/Sample_1_Wash_Trade/004_1_2__system_stability.png)
     * **💡 グラフの読み方（マクロ）:** 
       * **🟢 正常系（Sample 0）:** 健全なベースラインにおいて、スペクトル半径を示す線は `0.0` 付近の低く平坦な位置に留まります。
       * **🔴 本サンプルの異常:** スペクトル半径の線が、異常判定の閾値（`1.0`）付近まで突き抜けて上昇し高止まりしています。これは、取引の減衰しない「無限のループ（循環取引）」が形成されたことをマクロな視点で視覚的に証明しています。
 
   * **[マクロ分析] 相対的自由エネルギー比率:** **-0.2510**（閾値-0.1を大きく下回る。真の価値を生み出すことなく、大量の運用リソースが浪費されています）。
     * **【🟢 正常系（Sample 0）のベースライン】**
-    ![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+    ![Sample 0 Thermodynamics Energy Stack](../../../readme_plots/001_1_2__thermodynamics_energy_stack.png)
     * **【🔴 本サンプルの異常状態】**
-    ![Sample 1 Thermodynamic Energy Stack](../../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+    ![Sample 1 Thermodynamic Energy Stack](../../../readme_plots/Sample_1_Wash_Trade/001_1_2__thermodynamics_energy_stack.png)
     * **💡 グラフの読み方（マクロ）:** 
       * **🟢 正常系（Sample 0）:** 白色の線（自由エネルギー）はプラス圏内で安定しています。
       * **🔴 本サンプルの異常:** 白色の線が着実に急降下し、マイナス圏に深く沈んでいます。組織が有益な業務を行う体力を継続的に削られ、無駄な取引に浪費されていることを示します。

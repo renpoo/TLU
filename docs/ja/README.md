@@ -39,24 +39,24 @@ TLUは、複雑な数理解析の結果を直感的なダッシュボードと�
 
 * **Residual（質量漏れ）：** システムから資金が不自然に消滅・発生していないか（横領や架空計上）を検知します。
 * **Z-Score：** 取引ネットワーク全体の統計的な異常度（ショック）を示します。
-![002_2_1__macro_forensics_dashboard](docs/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![002_2_1__macro_forensics_dashboard](../readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 ### 2. 3D マイクロ・フォレンジック（局所的な異常箇所の特定）
 
 マクロな波のうねりと、ミクロな異常（鋭いスパイク）を同時に視覚的に把握するための3Dサーフェスグラフです。
 
 * **Z-Score 3D Surface:** 平坦なネットワーク上に、突如として「明るい黄緑色（Yellow-Green）」の鋭いピークが出現した場合、その特定の口座・日付において強烈な異常（不正操作など）が発生していることをピンポイントで特定します。
-![002_2_2_2__micro_Z_Score_3d_surface](docs/readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
+![002_2_2_2__micro_Z_Score_3d_surface](../readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
 
 ### 3. システム安定性（スペクトル半径と循環取引の検知）
 
 * **Spectral Radius（スペクトル半径）:** 取引ネットワーク内に「閉じたループ（循環取引）」が形成されていないかを監視します。赤色の軌跡線が1.0のオレンジ色の閾値線に近づく、あるいは突き抜けた場合、システムが人為的な取引ループによって異常膨張していることを数学的に証明します。
-![004_1_2__system_stability](docs/readme_plots/004_1_2__system_stability.png)
+![004_1_2__system_stability](../readme_plots/004_1_2__system_stability.png)
 
 ### 4. 熱力学エネルギー・スタック（組織の疲弊と資金の枯渇）
 
 * **自由エネルギー（Free Energy）:** 組織が健全に活動するための「余力」を示します。白色の線（自由エネルギー）が急降下している場合、不正や無駄な摩擦によってシステムが機能不全に陥っていることを視覚的に証明します。
-![001_1_2__thermodynamics_energy_stack](docs/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![001_1_2__thermodynamics_energy_stack](../readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 ---
 

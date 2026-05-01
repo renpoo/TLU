@@ -26,25 +26,25 @@
 * **物理的証拠:**
   * **[マクロ分析] 最大スペクトル半径:** **1.0000**（数学的な限界点。流れが無限に同じ場所を循環していることを意味します）。
     * **【🟢 正常系（Sample 0）のベースライン】**
-    ![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+    ![Sample 0 System Stability](../../../readme_plots/004_1_2__system_stability.png)
     * **【🔴 本サンプルの異常状態】**
-    ![004_1_2__system_stability](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_2__system_stability.png)
+    ![004_1_2__system_stability](../../../readme_plots/Sample_5_Kyoto_Traffic/004_1_2__system_stability.png)
     * **💡 グラフの読み方（マクロ）:** 
       * **🟢 正常系（Sample 0）:** 赤色の線（スペクトル半径）は低い位置で安定しています。
       * **🔴 本サンプルの異常:** 赤色の線が正確に `1.0` の閾値に張り付いています。これは逃げ場のない閉じたループ（車が特定の交差点を円を描くように走り続けている状態）を証明しています。
 
   * **[マクロ分析] 相対質量漏れ率:** `0.0`（車の総量は完全に保存されています）。
     * **【🟢 正常系（Sample 0）のベースライン】**
-    ![Sample 0 Macro Forensics Dashboard](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
+    ![Sample 0 Macro Forensics Dashboard](../../../readme_plots/002_2_1__macro_forensics_dashboard.png)
     * **【🔴 本サンプルの異常状態】**
-    ![002_2_1__macro_forensics_dashboard](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_1__macro_forensics_dashboard.png)
+    ![002_2_1__macro_forensics_dashboard](../../../readme_plots/Sample_5_Kyoto_Traffic/002_2_1__macro_forensics_dashboard.png)
     * **💡 グラフの読み方（マクロ）:** 本サンプルでもダッシュボードの一番上の線（質量漏れ）は平坦なままです。これはグリッドから不可解に車が消滅していないこと（質量保存）を意味します。
 
   * **[マクロ分析] 相対的自由エネルギー比率:** **+0.2805**（エネルギーを熱として浪費する詐欺ネットワークとは異なり、このシステムは「プラス」の自由エネルギーを持っています）。
     * **【🟢 正常系（Sample 0）のベースライン】**
-    ![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+    ![Sample 0 Thermodynamics Energy Stack](../../../readme_plots/001_1_2__thermodynamics_energy_stack.png)
     * **【🔴 本サンプルの異常状態】**
-    ![001_1_2__thermodynamics_energy_stack](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+    ![001_1_2__thermodynamics_energy_stack](../../../readme_plots/Sample_5_Kyoto_Traffic/001_1_2__thermodynamics_energy_stack.png)
     * **💡 グラフの読み方（マクロ）:** 白色の線（自由エネルギー）が上昇またはプラスに留まっています。これはランダムなカオス（無駄遣いや横領）ではなく、高度に硬直した「人工的で意図的な構造」であることを視覚的に示しています。
 
 * **財務的証拠:**
@@ -57,9 +57,9 @@
 **【アクション・プラン】**
 マクロの交通量は安定しているように見えますが、局所的なZ-Score（32.29）は、特定の交差点での危機的な渋滞（ミクロな異常）を示しています。
 * **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 Micro Z-Score 3D Surface](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
+![Sample 0 Micro Z-Score 3D Surface](../../../readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
 * **【🔴 本サンプルの異常状態】**
-![Micro Z-Score 3D Surface](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
+![Micro Z-Score 3D Surface](../../../readme_plots/Sample_5_Kyoto_Traffic/002_2_2_2__micro_Z_Score_3d_surface.png)
 * **💡 グラフの読み方（ミクロ）:** 3D Surface 上で、**突出した鋭いスパイク（針）** が立っている箇所が、現在危機的なグリッドロックを経験している正確な物理的交差点（ボトルネック）をピンポイントで示しています。
 
 この無限ループを打破するために、都市計画担当者は介入を行う必要があります。四角く閉じたブロックから外へ向かう「逃げ道（一方通行）」を強制的に作成し、人工的にスペクトル半径を0.9未満に下げて渋滞の圧力を緩和してください。

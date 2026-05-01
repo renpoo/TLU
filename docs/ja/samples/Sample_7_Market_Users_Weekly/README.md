@@ -25,17 +25,17 @@
 * **財務的証拠:** ユーザー間（売り手 → 買い手）ネットワークの残高推移は、これらの特定ユーザー間でのみ数億ドル規模の巨大な取引ボリュームを明らかにしていますが、最終的な「純資産の変動」は実質的にゼロに保たれています。
 
 * **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+![Sample 0 System Stability](../../../readme_plots/004_1_2__system_stability.png)
 * **【🔴 本サンプルの異常状態】**
-![System Stability & Spectral Radius](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/004_1_2__system_stability.png)
+![System Stability & Spectral Radius](../../../readme_plots/Sample_7_Market_Users_Weekly/004_1_2__system_stability.png)
 * **💡 グラフの読み方（マクロ）:** 
   * **🟢 正常系（Sample 0）:** 赤色の線（スペクトル半径）は低い位置（`0.0`付近）で完全に安定しています。
   * **🔴 本サンプルの異常:** スペクトル半径が `1.0` の異常閾値に完全に張り付いています。これは、シンジケートが共謀して自分たちの間だけで資金を完璧に回し続けている（無限ループ）ことを視覚的に証明しています。
 
 * **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 0 Thermodynamics Energy Stack](../../../readme_plots/001_1_2__thermodynamics_energy_stack.png)
 * **【🔴 本サンプルの異常状態】**
-![Thermodynamic Energy Depletion](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Thermodynamic Energy Depletion](../../../readme_plots/Sample_7_Market_Users_Weekly/001_1_2__thermodynamics_energy_stack.png)
 
 ## 3. ビジネスへの翻訳とアクション・プラン
 特定のユーザーグループによる「共謀取引（シンジケート）」の数学的証明が確立されました。彼らは特定の株式を隠れ蓑として使用していましたが、取引対象ではなく「直接的なユーザー間の資金フロー」を追跡することで、単に自分たちの間で資金をリサイクルしているだけの詐欺的グループであることが特定されました。
@@ -51,9 +51,9 @@
   特定のユーザーグループが、他の部分から完全に孤立した「硬直したブロック構造」を形成しています。これは、他の一般投資家からの介入を拒絶し、自分たちのシンジケート内だけで閉じた取引を循環させる「人工的な資本統制」の証拠です。
 
 * **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 Network Topology](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00006.png)
+![Sample 0 Network Topology](../../../readme_plots/002_1_2__network_topology.t.00006.png)
 * **【🔴 本サンプルの異常状態】**
-![Isolated Network Topology](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00006.png)
+![Isolated Network Topology](../../../readme_plots/Sample_7_Market_Users_Weekly/002_1_2__network_topology.t.00006.png)
 
 * **人工的な同期（位相ドリフト）:** 
   理論的には独立した別々の口座であるにもかかわらず、彼らの取引タイミング（位相ドリフト）は完全に `0.0` （ズレなし）に同期しています。これは、これらの口座が背後で全く同じ実体によって操作されているか、すべての口座が同一の自動取引アルゴリズムによって中央制御されていることの物理的証明です。

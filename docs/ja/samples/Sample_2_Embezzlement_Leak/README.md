@@ -24,23 +24,23 @@
 * **物理的証拠:** 
   * **[マクロ分析] 相対質量漏れ率:** `0.0`（システム内の資金総量は保存されており、複式簿記の原則は守られています）。
     * **【🟢 正常系（Sample 0）のベースライン】**
-    ![Sample 0 Macro Forensics Dashboard](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
+    ![Sample 0 Macro Forensics Dashboard](../../../readme_plots/002_2_1__macro_forensics_dashboard.png)
     * **【🔴 本サンプルの異常状態】**
-    ![Sample 2 Macro Forensics Dashboard](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
+    ![Sample 2 Macro Forensics Dashboard](../../../readme_plots/Sample_2_Embezzlement_Leak/002_2_1__macro_forensics_dashboard.png)
     * **💡 グラフの読み方（マクロ）:** Z-Score線（質量漏れ）は `0.0` のまま平坦です。これは「元帳の貸借バランスは完璧に取れている」ことを視覚的に確認するものです。
 
   * **[マクロ分析] 相対的自由エネルギー比率:** **-0.1556**（閾値-0.1を大きく下回る。元帳のバランスは取れているのに、組織の体力が継続的に失われています）。
     * **【🟢 正常系（Sample 0）のベースライン】**
-    ![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+    ![Sample 0 Thermodynamics Energy Stack](../../../readme_plots/001_1_2__thermodynamics_energy_stack.png)
     * **【🔴 本サンプルの異常状態】**
-    ![Sample 2 Thermodynamics Energy Stack](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+    ![Sample 2 Thermodynamics Energy Stack](../../../readme_plots/Sample_2_Embezzlement_Leak/001_1_2__thermodynamics_energy_stack.png)
     * **💡 グラフの読み方（マクロ）:** 白色の線（自由エネルギー）が着実に右肩下がりで急降下しています。お金が「経費」として正しく記録されているにもかかわらず、組織にとって全く有益な働きをしていない（無駄に流出している）ことを証明しています。
 
   * **[ミクロ分析] 最大局所 Z-Score:** **89.12**（特定の部署・勘定科目にのみ発生している極端な異常値）。
     * **【🟢 正常系（Sample 0）のベースライン】**
-    ![Sample 0 Micro Z-Score 3D Surface](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
+    ![Sample 0 Micro Z-Score 3D Surface](../../../readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
     * **【🔴 本サンプルの異常状態】**
-    ![Sample 2 Micro Z-Score 3D Surface](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
+    ![Sample 2 Micro Z-Score 3D Surface](../../../readme_plots/Sample_2_Embezzlement_Leak/002_2_2_2__micro_Z_Score_3d_surface.png)
     * **💡 グラフの読み方（ミクロ）:** 3D Surface 上で、正常系（Sample 0）の初期給与支払いとは全く異なる口座座標に、**周囲から突出した鋭いスパイク（針）** が隆起しています。これが、横領された資金が投棄されている正確な口座（ダミーの経費科目など）をピンポイントで特定しています。
 
 * **財務的証拠:** 

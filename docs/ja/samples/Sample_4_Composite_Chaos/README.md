@@ -26,9 +26,9 @@
 * **物理的証拠:** 
   * **[マクロ分析] 相対質量漏れ率:** **0.0161**（異常閾値を16倍超過）。システム内の資金の巨大な塊が単に行方不明になっています。
     * **【🟢 正常系（Sample 0）のベースライン】**
-    ![Sample 0 Macro Forensics Dashboard](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
+    ![Sample 0 Macro Forensics Dashboard](../../../readme_plots/002_2_1__macro_forensics_dashboard.png)
     * **【🔴 本サンプルの異常状態】**
-    ![Sample 4 Macro Forensics Dashboard](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_1__macro_forensics_dashboard.png)
+    ![Sample 4 Macro Forensics Dashboard](../../../readme_plots/Sample_4_Composite_Chaos/002_2_1__macro_forensics_dashboard.png)
     * **💡 グラフの読み方（マクロ）:** 
       * **🟢 正常系（Sample 0）:** マクロダッシュボードの「質量漏れ」と「Z-Score」の線は `0.0` のまま平坦です。
       * **🔴 本サンプルの異常:** 各指標線が同時に激しく跳ね上がっています（スパイク）。上の線は元帳から資金が消失したことを証明し、下の線はシステム全体が統計的なカオスに陥っていることを示しています。

@@ -28,17 +28,17 @@
 * **財務的証拠:** これは、特定の株式（例: `STK_005`）が正味の残高（純利益）をほぼゼロに保ちながら、12億ドルという異常な総取引量（借方/貸方）を発生させている事実と完全に一致しています。
 
 * **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+![Sample 0 System Stability](../../../readme_plots/004_1_2__system_stability.png)
 * **【🔴 本サンプルの異常状態】**
-![System Stability & Spectral Radius](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/004_1_2__system_stability.png)
+![System Stability & Spectral Radius](../../../readme_plots/Sample_6_Market_Bipartite_Weekly/004_1_2__system_stability.png)
 * **💡 グラフの読み方（マクロ）:** 
   * **🟢 正常系（Sample 0）:** 赤色の線（スペクトル半径）は `0.0` 付近で平坦で安定しています。
   * **🔴 本サンプルの異常:** 赤色の線がオレンジ色の異常閾値（`1.0`）を完全に突き抜けて高止まりしています。これは、新たな価値を生み出すことなく、資金が同じ場所を回り続ける無限サイクル（循環取引）に陥っていることを視覚的に証明しています。
 
 * **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 0 Thermodynamics Energy Stack](../../../readme_plots/001_1_2__thermodynamics_energy_stack.png)
 * **【🔴 本サンプルの異常状態】**
-![Thermodynamic Energy Depletion](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Thermodynamic Energy Depletion](../../../readme_plots/Sample_6_Market_Bipartite_Weekly/001_1_2__thermodynamics_energy_stack.png)
 
 ## 3. ビジネスへの翻訳とアクション・プラン
 
@@ -59,9 +59,9 @@
   取引の周波数分析により、自然な経済活動（ピンクノイズ）ではなく、タイミングが完全に一致した「人工的なホワイトノイズ」が検出されました。これは、買い注文と売り注文が自動プログラムによって意図的かつ完璧に同期されている**「人工的な同期（Fabricated Synchronization）」**の決定的な証拠です。
 
 * **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 Phase Drift](../../../../samples/Sample_0_Healthy/readme_plots/005_1_2__phase_drift_heatmap.png)
+![Sample 0 Phase Drift](../../../readme_plots/005_1_2__phase_drift_heatmap.png)
 * **【🔴 本サンプルの異常状態】**
-![Phase Drift Heatmap](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/005_1_2__phase_drift_heatmap.png)
+![Phase Drift Heatmap](../../../readme_plots/Sample_6_Market_Bipartite_Weekly/005_1_2__phase_drift_heatmap.png)
 * **💡 グラフの読み方（マクロ・ミクロ）:** 
   * **🟢 正常系（Sample 0）:** 人間の有機的な取引は、様々なタイミングのズレが混ざり合う自然なグラデーションを示します。
   * **🔴 本サンプルの異常:** ヒートマップ上で、**不自然に平坦に同期した色の帯（ズレが全くない状態）**を探してください。この完璧な同期は、人間の手作業ではなくプログラムによる制御（相場操縦）を証明しています。

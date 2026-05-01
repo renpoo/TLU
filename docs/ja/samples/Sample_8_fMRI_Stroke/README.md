@@ -25,9 +25,9 @@
 * **分析:** 異常検知の閾値を約65倍上回る、極度に異常な局所的ストレスが発生しています。これは、特定の領域（ノード）における過去の統計的な正常状態からの「完全な逸脱」を意味します。物理的な血管閉塞の決定的な証拠です。
 
 * **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 Micro Z-Score 3D Surface](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
+![Sample 0 Micro Z-Score 3D Surface](../../../readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
 * **【🔴 本サンプルの異常状態】**
-![Z-Score 3D Surface](../../../../samples/Sample_8_fMRI_Stroke/plots/002_2_2_2__micro_Z_Score_3d_surface.png)
+![Z-Score 3D Surface](../../../readme_plots/Sample_8_fMRI_Stroke/002_2_2_2__micro_Z_Score_3d_surface.png)
 * **💡 グラフの読み方（ミクロ）:** 
   * **🟢 正常系（Sample 0）:** 背景は暗い紫色（Dark Purple）で安定しており、「初期稼働ショック」を示す青紫色のピークが1つだけ存在します。
   * **🔴 本サンプルの異常:** 3D Surface 上で、**突出した鋭いスパイク（針）**が孤立して立っている箇所を探してください。これが、数学的特異点（物理的な血栓/閉塞）の正確な空間座標をピンポイントで示しています。
@@ -37,9 +37,9 @@
 * **分析:** ネットワーク全体の血流ボリュームに対して、システムが機能するための「活動余力（自由エネルギー）」がマイナスへと深く急降下しています。これは、企業監査における「横領/資金流出」と全く同じ物理的症状です。この生物学的モデルにおいては、**「必要な酸素・栄養素がシステムから失われている（壊死のリスク）」**ことを示唆しています。
 
 * **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 0 Thermodynamics Energy Stack](../../../readme_plots/001_1_2__thermodynamics_energy_stack.png)
 * **【🔴 本サンプルの異常状態】**
-![Energy Stack Diagram](../../../../samples/Sample_8_fMRI_Stroke/plots/001_1_2__thermodynamics_energy_stack.png)
+![Energy Stack Diagram](../../../readme_plots/Sample_8_fMRI_Stroke/001_1_2__thermodynamics_energy_stack.png)
 * **💡 グラフの読み方（マクロ）:** 
   * **🟢 正常系（Sample 0）:** 白色の線（自由エネルギー）はプラス圏内で安定した水準を維持します。
   * **🔴 本サンプルの異常:** 白色の線がマイナスへと急降下しています。これはシステムが機能する能力を出血（酸素欠乏/壊死）していることを視覚的に証明しており、数学的には企業の横領・資金漏洩と全く同じグラフを描きます。
@@ -49,9 +49,9 @@
 * **分析:** システムのスペクトル半径が1.0（限界値）に達しています。血流の途絶により、残りのネットワークが異常なフィードバックループを形成しているか、特定の信号が無限に反響しています。
 
 * **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 Phase Portrait 3D](../../../../samples/Sample_0_Healthy/readme_plots/000_1_8__phase_portrait_3d.png)
+![Sample 0 Phase Portrait 3D](../../../readme_plots/000_1_8__phase_portrait_3d.png)
 * **【🔴 本サンプルの異常状態】**
-![Phase Portrait 3D](../../../../samples/Sample_8_fMRI_Stroke/plots/000_1_8__phase_portrait_3d.png)
+![Phase Portrait 3D](../../../readme_plots/Sample_8_fMRI_Stroke/000_1_8__phase_portrait_3d.png)
 
 ## 3. 代謝予算（B/S & P/L）に基づく領域別分析
 

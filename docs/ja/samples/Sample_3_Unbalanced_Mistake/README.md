@@ -26,9 +26,9 @@
 * **物理的証拠:** 
   * **[マクロ分析] 相対質量漏れ率:** **0.0116**（異常閾値を10倍以上超過）。システム全体の取引ボリュームの1%以上が、どこからともなく出現または消失しています。
     * **【🟢 正常系（Sample 0）のベースライン】**
-    ![Sample 0 Macro Forensics Dashboard](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
+    ![Sample 0 Macro Forensics Dashboard](../../../readme_plots/002_2_1__macro_forensics_dashboard.png)
     * **【🔴 本サンプルの異常状態】**
-    ![Sample 3 Macro Forensics Dashboard](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_1__macro_forensics_dashboard.png)
+    ![Sample 3 Macro Forensics Dashboard](../../../readme_plots/Sample_3_Unbalanced_Mistake/002_2_1__macro_forensics_dashboard.png)
   * **💡 グラフの読み方（マクロ）:** 
     * **🟢 正常系（Sample 0）:** ダッシュボードの「質量漏れ」と「全体Z-Score」の線は `0.0` のまま完全に平坦です。
     * **🔴 本サンプルの異常:** 「質量漏れ」を示す線が大きく跳ね上がり、同時に一番下の「Z-Score線」も極端なスパイクを描いています。これは、基本的な会計方程式（借方＝貸方）が破綻し、システム外へ資金が漏れ出していることをマクロな視点で証明しています。

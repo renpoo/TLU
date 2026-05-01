@@ -25,9 +25,9 @@
 * **分析:** ネットワークの最大固有値（スペクトル半径）が、物理的限界である `1.0` に達しました。金融市場においてこれは「架空の売上を回し続ける循環取引」を意味しますが、神経モデルにおいては**「ニューロンの制御不能な過剰同期発火」**を意味します。脳全体が同じリズムで痙攣していることの数学的証拠です。
 
 * **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+![Sample 0 System Stability](../../../readme_plots/004_1_2__system_stability.png)
 * **【🔴 本サンプルの異常状態】**
-![System Stability](../../../../samples/Sample_9_fMRI_Seizure/plots/004_1_2__system_stability.png)
+![System Stability](../../../readme_plots/Sample_9_fMRI_Seizure/004_1_2__system_stability.png)
 * **💡 グラフの読み方（マクロ）:** 
   * **🟢 正常系（Sample 0）:** 赤色の線（スペクトル半径）は低い位置（`0.0`付近）で完全に安定しています。
   * **🔴 本サンプルの異常:** スペクトル半径が `1.0` の閾値に完全に張り付いています。金融では循環取引ですが、神経モデルでは、ネットワーク全体が制御不能で自己強化的な同期ループ（てんかん発作）に入ったことを視覚的に証明しています。
@@ -37,9 +37,9 @@
 * **分析:** 異常検知の閾値を約65倍上回る、極端な局所的ストレスが検出されました。これは、発作の震源地（焦点）において、平常時と比較して想像を絶する規模のエネルギー（血流）が暴走していることを示しています。
 
 * **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 Phase Portrait 3D](../../../../samples/Sample_0_Healthy/readme_plots/000_1_8__phase_portrait_3d.png)
+![Sample 0 Phase Portrait 3D](../../../readme_plots/000_1_8__phase_portrait_3d.png)
 * **【🔴 本サンプルの異常状態】**
-![Phase Portrait 3D](../../../../samples/Sample_9_fMRI_Seizure/plots/000_1_8__phase_portrait_3d.png)
+![Phase Portrait 3D](../../../readme_plots/Sample_9_fMRI_Seizure/000_1_8__phase_portrait_3d.png)
 * **💡 グラフの読み方（マクロ）:** 
   * **🟢 正常系（Sample 0）:** 位相空間の軌跡は中心付近に小さくまとまり、安定した規則的な形状を描きます。
   * **🔴 本サンプルの異常:** 位相空間の軌跡における激しい幾何学的歪みとカオスな動きを探してください。これは、発作の震源地（焦点）における極端なストレスを視覚的に捉えています。
