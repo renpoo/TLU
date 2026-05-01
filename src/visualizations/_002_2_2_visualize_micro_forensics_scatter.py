@@ -36,34 +36,35 @@ def main():
     if df.empty: sys.exit(0)
 
     # [Fix] Synchronize with micro (node-level) column names
+    df['max_z_score'] = df[['z_score_X', 'z_score_v']].max(axis=1)
     max_anomalies = df.groupby('node_idx').agg({
-        'node_univariate_z_score': 'max',
-        'node_kl_drift': 'max'
+        'max_z_score': 'max',
+        'local_kl_drift': 'max'
     }).reset_index()
 
     N = int(max_anomalies['node_idx'].max()) + 1
     idx_to_label = load_node_labels(args.node_map, N)
 
     top_k_indices = max_anomalies[
-        (max_anomalies['node_univariate_z_score'] >= args.z_thresh) | 
-        (max_anomalies['node_kl_drift'] >= args.kl_thresh)
+        (max_anomalies['max_z_score'] >= args.z_thresh) | 
+        (max_anomalies['local_kl_drift'] >= args.kl_thresh)
     ]['node_idx'].astype(int).tolist()
 
     fig, ax = plt.subplots(figsize=(12, 8))
     
-    colors = [c_normal if (row['node_univariate_z_score'] < args.z_thresh and row['node_kl_drift'] < args.kl_thresh) else c_alert 
+    colors = [c_normal if (row['max_z_score'] < args.z_thresh and row['local_kl_drift'] < args.kl_thresh) else c_alert 
               for _, row in max_anomalies.iterrows()]
               
-    ax.scatter(max_anomalies['node_univariate_z_score'], max_anomalies['node_kl_drift'], 
+    ax.scatter(max_anomalies['max_z_score'], max_anomalies['local_kl_drift'], 
                color=colors, s=120, alpha=0.7, edgecolors=text_col)
 
     ax.axvline(args.z_thresh, color=grid_col, linestyle='--', alpha=0.7, label=f'Z-Score Thresh ({args.z_thresh})')
     ax.axhline(args.kl_thresh, color=grid_col, linestyle='-.', alpha=0.7, label=f'KL Drift Thresh ({args.kl_thresh})')
 
     for _, row in max_anomalies.iterrows():
-        if row['node_univariate_z_score'] >= args.z_thresh or row['node_kl_drift'] >= args.kl_thresh:
+        if row['max_z_score'] >= args.z_thresh or row['local_kl_drift'] >= args.kl_thresh:
             idx = int(row['node_idx'])
-            ax.text(row['node_univariate_z_score'], row['node_kl_drift'], f" {idx:02d}", 
+            ax.text(row['max_z_score'], row['local_kl_drift'], f" {idx:02d}", 
                     color=c_alert, fontsize=11, fontweight='bold', va='bottom', ha='left')
 
     ax.set_title("Micro Forensics Space: Max Z-Score vs Max KL Drift (Bottleneck Identification)", fontsize=15, color=text_col)

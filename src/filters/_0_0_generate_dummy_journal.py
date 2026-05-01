@@ -22,6 +22,7 @@ def setup_argparser() -> argparse.ArgumentParser:
     parser.add_argument("--purchase-leak-prob", type=float, default=0.0, help="Accounts payable not paid (with probability args.purchase_leak_prob)")
     parser.add_argument("--wash-trade-prob", type=float, default=0.0, help="Probability of triggering a Wash Trading (Round-tripping) cycle per day")
     parser.add_argument("--unbalanced-mistake-prob", type=float, default=0.0, help="Probability of a journaling mistake where Debit != Credit")
+    parser.add_argument("--out-initial-state", type=str, default="", help="Path to write the initial state (Day 0) CSV")
     return parser
 
 def create_entry(entry_id: str, date_str: str, amount: float, debit_acc: str, debit_dept: str, credit_acc: str, credit_dept: str, memo: str, unbalanced_debit: float = None) -> list:
@@ -44,6 +45,20 @@ def generate_stream(args):
     
     writer = csv.writer(sys.stdout)
     writer.writerow(["Entry_ID", "Trans_Date", "Account_Name", "Dept_Name", "Debit", "Credit", "Memo"])
+
+    # Define some basic initial state (balances) for Day 0 if requested
+    if args.out_initial_state:
+        with open(args.out_initial_state, "w", encoding="utf-8") as f:
+            state_writer = csv.writer(f, lineterminator='\n')
+            state_writer.writerow(["node_label", "initial_X"])
+            # Assuming DPT_Admin, DPT_Sales, DPT_Ops are part of node names in the stream.
+            # In TLU, typically nodes are formulated as "Account_Name_Dept_Name" or similar via the mapping.
+            # We'll just write some dummy global values for the accounts themselves.
+            # Usually the mapping creates nodes like "Account_Name". We will just use the Account_Name.
+            accounts = ["Cash", "Accounts_Receivable", "Accounts_Payable", "Inventory", "Sales_Revenue", "COGS", "Travel_Exp", "Payroll_Exp", "Rent_Exp"]
+            for acc in accounts:
+                initial_val = random.uniform(10000, 50000) if acc in ["Cash", "Inventory"] else 0.0
+                state_writer.writerow([f"ACC_{acc}", f"{initial_val:.2f}"])
 
     # Seasonal fluctuation wave (sales wave)
     seasonal_wave = (np.sin(np.linspace(0, 4 * np.pi, total_days)) + 1) / 2

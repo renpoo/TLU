@@ -55,12 +55,12 @@ def compute_optimal_time_lag(signal_A: np.ndarray, signal_B: np.ndarray, max_lag
     return best_lag, float(max_corr)
 
 
-def estimate_virtual_mass_and_viscosity(q_history: np.ndarray, v_history: np.ndarray, base_epsilon: float, velocity_scale_ratio: float) -> tuple[np.ndarray, np.ndarray]:
+def estimate_virtual_mass_and_viscosity(X_history: np.ndarray, v_history: np.ndarray, base_epsilon: float, velocity_scale_ratio: float) -> tuple[np.ndarray, np.ndarray]:
     """!
     @brief Estimate the virtual mass (M) and viscosity (C) of each node.
     @details Derives structural inertia (mass) and friction (viscosity) based on the volatility and scale of the historical flux and velocity. Eliminates scale-dependent magic numbers.
 
-    @param q_history State vector history (Time_steps x Nodes).
+    @param X_history Absolute balance (State) vector history (Time_steps x Nodes).
     @param v_history Velocity vector history (Time_steps x Nodes).
     @param base_epsilon Absolute minute value to prevent zero division.
     @param velocity_scale_ratio Dynamic minute value ratio based on velocity scale.
@@ -68,7 +68,7 @@ def estimate_virtual_mass_and_viscosity(q_history: np.ndarray, v_history: np.nda
     @return A tuple of (M, C) arrays.
 
     @pre
-        - `q_history` and `v_history` must be 2D array-like structs.
+        - `X_history` and `v_history` must be 2D array-like structs.
         - `base_epsilon` and `velocity_scale_ratio` must be positive floats.
     @post
         - Both `M` and `C` arrays are strictly non-negative.
@@ -78,7 +78,7 @@ def estimate_virtual_mass_and_viscosity(q_history: np.ndarray, v_history: np.nda
         - C is inversely proportional to the variance of velocity.
     """
     # Mass M (Inertia): Assumed to be proportional to the accumulation of past activity (scale)
-    M = np.mean(np.abs(q_history), axis=0)
+    M = np.mean(np.abs(X_history), axis=0)
     
     # Viscosity C (Friction): Assumed to be higher when velocity fluctuation is smaller (movement is fixed)
     if v_history.shape[0] <= 1:

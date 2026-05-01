@@ -115,6 +115,8 @@ def parse_projector_args(args_list: list[str]) -> dict:
     parser.add_argument("--col_multiplier", type=str, default="", help="Optional column to multiply col_val by (e.g. Price for Volume)")
     parser.add_argument("--interval", type=str, default="day")
     parser.add_argument("--time_format", type=str, default="%Y/%m/%d")
+    parser.add_argument("--in_initial_state", type=str, default="", help="Path to input initial state labels CSV")
+    parser.add_argument("--out_initial_state", type=str, default="", help="Path to output projected initial state CSV")
 
     parsed, _ = parser.parse_known_args(args_list)
     result = vars(parsed)

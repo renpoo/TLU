@@ -116,41 +116,36 @@ def solve_ik_with_safe_stiffness(J: np.ndarray, K_safe: np.ndarray, target_dr: f
     
     return dq_opt.flatten()
 
-def compute_derivatives(q_history):
+def compute_derivatives(v_history):
     """!
     @brief Calculate the latest physical velocity (v) and acceleration (a).
-    @details Derives kinematics differentials from chronologically ordered state vector memory.
+    @details Derives kinematics differentials from chronologically ordered velocity vector memory.
 
-    @param q_history State vector history (Time_steps x Nodes). Oldest first.
+    @param v_history Velocity (Flux) vector history (Time_steps x Nodes). Oldest first.
 
     @return Tuple of velocity (Nodes,) and acceleration (Nodes,).
 
     @pre
-        - `q_history` must be a valid 2D array ordered chronologically.
+        - `v_history` must be a valid 2D array ordered chronologically.
     @post
-        - Safely returns zero-filled vectors if bounds assert insufficiently (T < 2).
+        - Safely returns zero-filled vectors if bounds assert insufficiently.
     @invariant
-        - First order differentiation v(t) = q(t) - q(t-1)
-        - Second order differentiation a(t) = v(t) - v(t-1)
+        - v(t) is directly the latest flux.
+        - First order differentiation a(t) = v(t) - v(t-1)
     """
-    T = q_history.shape[0]
+    T = v_history.shape[0]
     
-    # Return zero vectors if history is insufficient (only 1 step)
-    if T < 2:
-        N = q_history.shape[1]
+    # Return zero vectors if history is insufficient
+    if T < 1:
+        N = v_history.shape[1] if v_history.ndim == 2 else 0
         return np.zeros(N, dtype=float), np.zeros(N, dtype=float)
+        
+    v_latest = v_history[-1]
     
-    # Get the latest 2 steps
-    q_latest = q_history[-1]   # t
-    q_prev = q_history[-2]     # t-1
+    if T < 2:
+        return v_latest, np.zeros_like(v_latest)
     
-    # Velocity v(t) = q(t) - q(t-1)
-    v = q_latest - q_prev
+    v_prev = v_history[-2]
+    a = v_latest - v_prev
     
-    # Acceleration a(t) = v(t) - v(t-1)
-    # Calculate v(t-1)
-    v_prev = q_prev - q_history[-3] if T >= 3 else v
-    
-    a = v - v_prev
-    
-    return v, a
+    return v_latest, a

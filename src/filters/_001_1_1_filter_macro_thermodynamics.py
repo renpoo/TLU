@@ -26,10 +26,12 @@ from src.core.core_tensor_ops import compute_net_flux, compute_transition_matrix
 def run_thermodynamics_analysis(
         t_idx: int, 
         T_slice: np.ndarray, 
-        q_history_window: List[np.ndarray], 
+        v_history_window: List[np.ndarray], 
+        X_history_window: List[np.ndarray],
+        X_initial: np.ndarray,
         work_indices: List[int], 
         heat_indices: List[int]
-) -> Tuple[List[list], np.ndarray]:
+) -> Tuple[List[list], np.ndarray, np.ndarray]:
     """!
     @brief [Pure Orchestration Function] Execute macro thermodynamic bounds.
     @details Tracks global system energy balances defining core structural stability.
@@ -49,26 +51,32 @@ def run_thermodynamics_analysis(
     @invariant
         - Tracks strictly conservation metrics aligned geometrically to classical statistical formulations.
     """
-    # 1. Internal energy U (Total activity)
-    U = compute_internal_energy(T_slice)
+    # 2. Pure flux (velocity v)
+    v_current = compute_net_flux(T_slice)
     
-    # 2. Pure flux
-    q_current = compute_net_flux(T_slice)
+    # Calculate Absolute Balance X
+    if len(X_history_window) == 0:
+        X_current = X_initial + v_current
+    else:
+        X_current = X_history_window[-1] + v_current
+
+    # 1. Internal energy U (Total activity from absolute balance)
+    U = compute_internal_energy(X_current)
     
     # Temporarily combine the current state for temperature calculation (assumes it will be popped by the caller)
-    temp_q_hist = np.array(q_history_window + [q_current])
+    temp_v_hist = np.array(v_history_window + [v_current])
 
     # 3. Effective work (W) and Dissipated heat (Q)
-    W = compute_work(q_current, work_indices)
-    Q_heat = compute_heat(q_current, heat_indices)
+    W = compute_work(v_current, work_indices)
+    Q_heat = compute_heat(v_current, heat_indices)
 
     # 4. Macro entropy S
     P = compute_transition_matrix(T_slice)
     S = compute_macro_entropy(P)
 
     # 5. Macro temperature T (Volatility)
-    if len(temp_q_hist) > 1:
-        T = compute_macro_temperature(temp_q_hist)
+    if len(temp_v_hist) > 1:
+        T = compute_macro_temperature(temp_v_hist)
     else:
         T = 0.0
 
@@ -83,7 +91,7 @@ def run_thermodynamics_analysis(
         f"{W:.4f}", f"{Q_heat:.4f}", f"{gradT:.4f}", f"{F:.4f}"
     ]
     
-    return [record], q_current
+    return [record], v_current, X_current
 
 def main():
     parser = get_base_parser("TLU Macro Thermodynamics Filter")
@@ -116,17 +124,25 @@ def main():
         except Exception as e:
             print(f"[WARN] Failed to parse labels: {e}", file=sys.stderr)
 
-    q_history_window = []
+    from src.filters.stream_processor import load_initial_state
+    import os
+    env_dir = os.environ.get("TARGET_ENV", "workspace")
+    X_initial = load_initial_state(env_dir, N)
+
+    v_history_window = []
+    X_history_window = []
 
     for t_idx, T_slice in yield_time_slices(reader, N):
-        records, q_current = run_thermodynamics_analysis(
-            t_idx, T_slice, q_history_window, work_indices, heat_indices
+        records, v_current, X_current = run_thermodynamics_analysis(
+            t_idx, T_slice, v_history_window, X_history_window, X_initial, work_indices, heat_indices
         )
         
         # Safe update of history (Sliding window)
-        q_history_window.append(q_current)
-        if len(q_history_window) > args.temp_window:
-            q_history_window.pop(0)
+        v_history_window.append(v_current)
+        X_history_window.append(X_current)
+        if len(v_history_window) > args.temp_window:
+            v_history_window.pop(0)
+            X_history_window.pop(0)
             
         for rec in records:
             writer.writerow(rec)

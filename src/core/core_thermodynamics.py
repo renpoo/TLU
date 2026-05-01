@@ -8,23 +8,23 @@ from src.core.core_information_geometry import compute_shannon_entropy
 # Macro Thermodynamics (System-wide Indicators)
 # ==========================================
 
-def compute_internal_energy(T_slice: np.ndarray) -> float:
+def compute_internal_energy(X_current: np.ndarray) -> float:
     """!
     @brief Calculate the macro internal energy (U) for the network.
-    @details U is defined as the total sum of absolute values of the total transition slice.
+    @details U is defined as the total sum of absolute values of the absolute balances.
 
-    @param T_slice Current transition or flux matrix (Nodes x Nodes).
+    @param X_current Absolute balance (State) vector.
 
     @return Macro internal energy U.
 
     @pre
-        - `T_slice` must be a valid numeric 2D numpy array.
+        - `X_current` must be a valid numeric 1D numpy array.
     @post
         - Returns a unconditionally non-negative float.
     @invariant
         - U acts as a macroscopic scalar representation of system-wide activity.
     """
-    return float(np.sum(np.abs(T_slice)))
+    return float(np.sum(np.abs(X_current)))
 
 def compute_work(q_vector: np.ndarray, work_indices: List[int]) -> float:
     """!
@@ -133,25 +133,23 @@ def compute_macro_temperature(q_history_window: np.ndarray) -> float:
 # Local Thermodynamics (Node-specific Local Indicators)
 # ==========================================
 
-def compute_local_internal_energy(T_slice: np.ndarray) -> np.ndarray:
+def compute_local_internal_energy(X_current: np.ndarray) -> np.ndarray:
     """!
     @brief Calculate the node-specific local internal energy (u_i).
-    @details Assesses absolute sums of inflows and outflows dimensionally constrained per node.
+    @details Assesses absolute sums of absolute balances dimensionally constrained per node.
 
-    @param T_slice Transition or flux matrix.
+    @param X_current Absolute balance (State) vector.
 
     @return A 1D numpy array of local internal energies.
 
     @pre
-        - `T_slice` must be a 2D numpy array.
+        - `X_current` must be a 1D numpy array.
     @post
         - Result is unconditionally positive or zero.
     @invariant
         - Represents isolated local node activity, disregarding cross-network aggregation.
     """
-    inflow = np.sum(np.abs(T_slice), axis=0)
-    outflow = np.sum(np.abs(T_slice), axis=1)
-    return inflow + outflow
+    return np.abs(X_current)
 
 def compute_local_temperature(q_history_window: np.ndarray) -> np.ndarray:
     """!

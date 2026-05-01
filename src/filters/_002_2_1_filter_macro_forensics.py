@@ -24,10 +24,12 @@ from src.core.core_forensics import (
 def run_forensics_analysis(
         t_idx: int, 
         T_slice: np.ndarray, 
-        q_history_window: List[np.ndarray],
+        v_history_window: List[np.ndarray],
+        X_history_window: List[np.ndarray],
         P_history_window: List[np.ndarray],
+        X_initial: np.ndarray,
         thresholds: Dict[str, float]
-) -> Tuple[List[list], np.ndarray, np.ndarray]:
+) -> Tuple[List[list], np.ndarray, np.ndarray, np.ndarray]:
     """!
     @brief [Pure Orchestration Function] Run macroscopic forensics evaluation bounds.
     @details Identifies graph-wide global anomaly conditions using multi-metric covariance tracking.
@@ -47,12 +49,18 @@ def run_forensics_analysis(
     @invariant
         - Generates strict 1:1 scalar diagnostic mappings tracking network scale states.
     """
-    q_current = compute_net_flux(T_slice)
+    v_current = compute_net_flux(T_slice)
     P_current = compute_transition_matrix(T_slice)
+
+    # Calculate Absolute Balance X
+    if len(X_history_window) == 0:
+        X_current = X_initial + v_current
+    else:
+        X_current = X_history_window[-1] + v_current
 
     # 1. Check conservation of mass (System-wide residual)
     abs_residual, _ = check_conservation_law(
-        q_current, 
+        v_current, 
         thresholds.get('leak_tolerance', 1e-5),
         thresholds.get('leak_idx', -1)
     )
@@ -61,29 +69,36 @@ def run_forensics_analysis(
     kl_drift = compute_structural_drift(P_current, P_history_window)
 
     # 3. Multivariate anomaly detection (Mahalanobis Z-score)
-    if len(q_history_window) > 1:
-        # Calculate expected value (mean) and precision matrix (inverse of covariance) from history
-        q_mean = np.mean(q_history_window, axis=0)
-        cov_matrix = compute_covariance_matrix(np.array(q_history_window))
-        K_precision = compute_safe_pinv(cov_matrix, rcond=1e-15, lambda_reg=1e-4)
+    if len(v_history_window) > 1:
+        # For velocity v
+        v_mean = np.mean(v_history_window, axis=0)
+        v_cov_matrix = compute_covariance_matrix(np.array(v_history_window))
+        v_K_precision = compute_safe_pinv(v_cov_matrix, rcond=1e-15, lambda_reg=1e-4)
+        z_score_v = compute_multivariate_anomaly(v_current, v_mean, v_K_precision)
         
-        z_score = compute_multivariate_anomaly(q_current, q_mean, K_precision)
+        # For absolute balance X
+        X_mean = np.mean(X_history_window, axis=0)
+        X_cov_matrix = compute_covariance_matrix(np.array(X_history_window))
+        X_K_precision = compute_safe_pinv(X_cov_matrix, rcond=1e-15, lambda_reg=1e-4)
+        z_score_X = compute_multivariate_anomaly(X_current, X_mean, X_K_precision)
     else:
-        z_score = 0.0
+        z_score_v = 0.0
+        z_score_X = 0.0
 
     # 4. Comprehensive anomaly flag
-    flag = evaluate_anomaly_flags(abs_residual, kl_drift, z_score, thresholds)
+    flag = evaluate_anomaly_flags(abs_residual, kl_drift, z_score_X, z_score_v, thresholds)
 
     # Because it's a macro indicator for the entire system, output only 1 row per time slice (node_idx is deprecated)
     record = [
         t_idx, 
         f"{abs_residual:.4f}", 
         f"{kl_drift:.4f}", 
-        f"{z_score:.4f}", 
+        f"{z_score_X:.4f}", 
+        f"{z_score_v:.4f}", 
         flag
     ]
 
-    return [record], q_current, P_current
+    return [record], v_current, X_current, P_current
 
 def main():
     parser = get_base_parser("TLU Forensics & Anomaly Detection Filter")
@@ -95,7 +110,7 @@ def main():
     # Fix: Removed node_idx, updated header as an overall indicator
     output_header = [
         "t_idx", "conservation_residual", 
-        "kl_divergence_drift", "mahalanobis_z_score", "anomaly_flag"
+        "kl_divergence_drift", "z_score_X", "z_score_v", "anomaly_flag"
     ]
     args, N, reader, writer = setup_pipeline(parser, output_header)
 
@@ -116,18 +131,26 @@ def main():
         'leak_idx': leak_idx
     }
 
-    q_history_window = []
+    from src.filters.stream_processor import load_initial_state
+    import os
+    env_dir = os.environ.get("TARGET_ENV", "workspace")
+    X_initial = load_initial_state(env_dir, N)
+
+    v_history_window = []
+    X_history_window = []
     P_history_window = []
 
     for t_idx, T_slice in yield_time_slices(reader, N):
-        records, q_current, P_current = run_forensics_analysis(
-            t_idx, T_slice, q_history_window, P_history_window, thresholds
+        records, v_current, X_current, P_current = run_forensics_analysis(
+            t_idx, T_slice, v_history_window, X_history_window, P_history_window, X_initial, thresholds
         )
         
-        q_history_window.append(q_current)
+        v_history_window.append(v_current)
+        X_history_window.append(X_current)
         P_history_window.append(P_current)
-        if len(q_history_window) > args.baseline_window:
-            q_history_window.pop(0)
+        if len(v_history_window) > args.baseline_window:
+            v_history_window.pop(0)
+            X_history_window.pop(0)
             P_history_window.pop(0)
             
         for rec in records:

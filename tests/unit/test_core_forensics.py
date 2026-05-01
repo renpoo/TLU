@@ -60,15 +60,15 @@ class TestCoreForensics(unittest.TestCase):
         }
         
         # 1. All normal
-        flag_normal = evaluate_anomaly_flags(residual=0.1, kl_div=0.5, z_score=1.5, thresholds=thresholds)
+        flag_normal = evaluate_anomaly_flags(residual=0.1, kl_div=0.5, z_score_X=1.5, z_score_v=1.5, thresholds=thresholds)
         self.assertEqual(flag_normal, 0)
         
         # 2. Anomaly only in leakage (conservation law violation)
-        flag_leak = evaluate_anomaly_flags(residual=5.0, kl_div=0.5, z_score=1.5, thresholds=thresholds)
+        flag_leak = evaluate_anomaly_flags(residual=5.0, kl_div=0.5, z_score_X=1.5, z_score_v=1.5, thresholds=thresholds)
         self.assertEqual(flag_leak, 1)
         
-        # 3. Anomaly only in Z-score
-        flag_z = evaluate_anomaly_flags(residual=0.0, kl_div=0.5, z_score=4.0, thresholds=thresholds)
+        # 3. Anomaly only in Z-score (X)
+        flag_z = evaluate_anomaly_flags(residual=0.0, kl_div=0.5, z_score_X=4.0, z_score_v=1.5, thresholds=thresholds)
         self.assertEqual(flag_z, 1)
 
 if __name__ == '__main__':

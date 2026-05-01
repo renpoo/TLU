@@ -42,11 +42,12 @@ def main():
     idx_to_label = load_node_labels(args.node_map, N)
     time_labels = load_time_labels(args.time_map, T_max)
 
-    pivot_z = df.pivot(index='node_idx', columns='t_idx', values='node_univariate_z_score').fillna(0)
+    df['max_z_score'] = df[['z_score_X', 'z_score_v']].max(axis=1)
+    pivot_z = df.pivot(index='node_idx', columns='t_idx', values='max_z_score').fillna(0)
 
     x_tick_labels = [time_labels.get(c, f"T_{int(c):02d}") for c in pivot_z.columns]
     y_tick_labels = [f"{i:02d}: {idx_to_label.get(i, f'N_{i}')}" for i in range(N)]
-    top_k_idx = df.groupby('node_idx')['node_univariate_z_score'].max().nlargest(args.top_k).index.tolist()
+    top_k_idx = df.groupby('node_idx')['max_z_score'].max().nlargest(args.top_k).index.tolist()
 
     base_filename = args.filename.replace('.png', '').replace('_forensics', '')
 

@@ -27,5 +27,23 @@ def main():
     with open(path + "_time_map.csv", "w", encoding="utf-8") as f_time:
         export_registry(time_registry, f_time, "t_idx", "time_label")
 
+    # 5. Process Initial State (Day 0) if provided
+    in_initial = mapping_config.get("in_initial_state")
+    out_initial = mapping_config.get("out_initial_state")
+    if in_initial and out_initial and os.path.exists(in_initial):
+        import csv
+        with open(in_initial, "r", encoding="utf-8") as f_in, open(out_initial, "w", encoding="utf-8") as f_out:
+            reader = csv.DictReader(f_in)
+            writer = csv.writer(f_out, lineterminator='\n')
+            writer.writerow(["node_idx", "initial_X"])
+            for row in reader:
+                # Force assigning ID in case it never appeared in stream
+                idx = node_registry.assign_new_id(row["node_label"])
+                writer.writerow([idx, row["initial_X"]])
+        
+        # We need to rewrite the node_map since new nodes might have been added
+        with open(path + "_node_map.csv", "w", encoding="utf-8") as f_node:
+            export_registry(node_registry, f_node, "node_idx", "node_label")
+
 if __name__ == "__main__":
     main()

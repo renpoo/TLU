@@ -41,11 +41,11 @@ def main():
     idx_to_label = load_node_labels(args.node_map, N)
     time_labels = load_time_labels(args.time_map, T_max)
 
-    pivot_kl = df.pivot(index='node_idx', columns='t_idx', values='node_kl_drift').fillna(0)
+    pivot_kl = df.pivot(index='node_idx', columns='t_idx', values='local_kl_drift').fillna(0)
 
     x_tick_labels = [time_labels.get(c, f"T_{int(c):02d}") for c in pivot_kl.columns]
     y_tick_labels = [f"{i:02d}: {idx_to_label.get(i, f'N_{i}')}" for i in range(N)]
-    top_k_idx = df.groupby('node_idx')['node_kl_drift'].mean().nlargest(args.top_k).index.tolist()
+    top_k_idx = df.groupby('node_idx')['local_kl_drift'].mean().nlargest(args.top_k).index.tolist()
 
     base_filename = args.filename.replace('.png', '').replace('_forensics', '')
 

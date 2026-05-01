@@ -14,6 +14,7 @@ class TestGenerateDummyJournal(unittest.TestCase):
         self.parser.add_argument("--purchase-leak-prob", type=float, default=0.0)
         self.parser.add_argument("--wash-trade-prob", type=float, default=0.0)
         self.parser.add_argument("--unbalanced-mistake-prob", type=float, default=0.0)
+        self.parser.add_argument("--out-initial-state", type=str, default="")
 
     def test_balanced_entries(self):
         """Test that with 0.0 unbalanced probability, all entries strictly balance."""

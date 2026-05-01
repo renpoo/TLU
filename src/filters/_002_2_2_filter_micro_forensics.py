@@ -59,7 +59,8 @@ def compute_node_univariate_z_score_vector(
 
 def evaluate_micro_anomaly_flags(
         kl_vector: np.ndarray, 
-        z_vector: np.ndarray, 
+        z_vector_X: np.ndarray,
+        z_vector_v: np.ndarray, 
         thresholds: Dict[str, float]
 ) -> List[int]:
     """!
@@ -70,19 +71,22 @@ def evaluate_micro_anomaly_flags(
     flags = []
     for i in range(N):
         is_kl_anomaly = kl_vector[i] > thresholds.get('kl_drift_thresh', 3.0)
-        is_z_anomaly = z_vector[i] > thresholds.get('z_score_thresh', 3.0)
+        is_z_X_anomaly = z_vector_X[i] > thresholds.get('z_score_thresh', 3.0)
+        is_z_v_anomaly = z_vector_v[i] > thresholds.get('z_score_thresh', 3.0)
         
-        flags.append(1 if (is_kl_anomaly or is_z_anomaly) else 0)
+        flags.append(1 if (is_kl_anomaly or is_z_X_anomaly or is_z_v_anomaly) else 0)
     return flags
 
 # Orchestration function (Pure function)
 def run_micro_forensics_analysis(
         t_idx: int, 
         T_slice: np.ndarray, 
-        q_history_window: List[np.ndarray],
+        v_history_window: List[np.ndarray],
+        X_history_window: List[np.ndarray],
         P_history_window: List[np.ndarray],
+        X_initial: np.ndarray,
         thresholds: Dict[str, float]
-) -> Tuple[List[list], np.ndarray, np.ndarray]:
+) -> Tuple[List[list], np.ndarray, np.ndarray, np.ndarray]:
     """!
     @brief [Pure Orchestration Function] Run micro anomaly heuristics on individual active structures.
     @details Exerts tight thresholds tracing univariate activity shocks over decoupled boundaries autonomously.
@@ -103,29 +107,37 @@ def run_micro_forensics_analysis(
         - Preserves strict node-by-node parameter evaluation devoid of arbitrary macro interference patterns.
     """
     N = T_slice.shape[0]
-    q_current = compute_net_flux(T_slice)
+    v_current = compute_net_flux(T_slice)
     P_current = compute_transition_matrix(T_slice)
+
+    # Calculate Absolute Balance X
+    if len(X_history_window) == 0:
+        X_current = X_initial + v_current
+    else:
+        X_current = X_history_window[-1] + v_current
 
     # 1. Micro KL divergence (Structural change per node)
     node_kl = compute_node_kl_divergence_vector(P_current, P_history_window)
 
     # 2. Micro Z-score (Univariate activity shock per node)
-    node_z = compute_node_univariate_z_score_vector(q_current, q_history_window)
+    node_z_v = compute_node_univariate_z_score_vector(v_current, v_history_window)
+    node_z_X = compute_node_univariate_z_score_vector(X_current, X_history_window)
 
     # 3. Evaluation of anomaly flags
-    anomaly_flags = evaluate_micro_anomaly_flags(node_kl, node_z, thresholds)
+    anomaly_flags = evaluate_micro_anomaly_flags(node_kl, node_z_X, node_z_v, thresholds)
 
     # 4. Record format (generate N rows of records)
     records = []
     for i in range(N):
         records.append([
             t_idx, i, 
+            f"{node_z_X[i]:.4f}", 
+            f"{node_z_v[i]:.4f}", 
             f"{node_kl[i]:.4f}", 
-            f"{node_z[i]:.4f}", 
             anomaly_flags[i]
         ])
 
-    return records, q_current, P_current
+    return records, v_current, X_current, P_current
 
 def main():
     parser = get_base_parser("TLU Micro Forensics (Node Anomaly)")
@@ -135,7 +147,7 @@ def main():
     
     # Fix: Restored node_idx for node-specific indicator header
     output_header = [
-        "t_idx", "node_idx", "node_kl_drift", "node_univariate_z_score", "micro_anomaly_flag"
+        "t_idx", "node_idx", "z_score_X", "z_score_v", "local_kl_drift", "micro_anomaly_flag"
     ]
     args, N, reader, writer = setup_pipeline(parser, output_header)
 
@@ -144,19 +156,27 @@ def main():
         'z_score_thresh': args.z_score_thresh
     }
 
-    q_history_window = []
+    from src.filters.stream_processor import load_initial_state
+    import os
+    env_dir = os.environ.get("TARGET_ENV", "workspace")
+    X_initial = load_initial_state(env_dir, N)
+
+    v_history_window = []
+    X_history_window = []
     P_history_window = []
 
     for t_idx, T_slice in yield_time_slices(reader, N):
-        records, q_current, P_current = run_micro_forensics_analysis(
-            t_idx, T_slice, q_history_window, P_history_window, thresholds
+        records, v_current, X_current, P_current = run_micro_forensics_analysis(
+            t_idx, T_slice, v_history_window, X_history_window, P_history_window, X_initial, thresholds
         )
         
         # Safe update of history
-        q_history_window.append(q_current)
+        v_history_window.append(v_current)
+        X_history_window.append(X_current)
         P_history_window.append(P_current)
-        if len(q_history_window) > args.baseline_window:
-            q_history_window.pop(0)
+        if len(v_history_window) > args.baseline_window:
+            v_history_window.pop(0)
+            X_history_window.pop(0)
             P_history_window.pop(0)
             
         for rec in records:

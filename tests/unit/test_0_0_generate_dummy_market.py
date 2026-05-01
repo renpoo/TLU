@@ -14,6 +14,7 @@ class TestGenerateDummyMarket(unittest.TestCase):
         self.parser.add_argument("--num-stocks", type=int, default=5)
         self.parser.add_argument("--wash-trade-prob", type=float, default=0.0)
         self.parser.add_argument("--pump-dump-prob", type=float, default=0.0)
+        self.parser.add_argument("--out-initial-state", type=str, default="")
 
     def test_basic_invariants(self):
         """Test that basic market rules are upheld (no self-trading, positive values)."""
