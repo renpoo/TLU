@@ -85,7 +85,7 @@ def main():
     # Mitigates Matplotlib's internal Face-Averaging artifact
     # by generating a 5x dense mesh using Bilinear Interpolation.
     # ---------------------------------------------------------
-    k = 5
+    k = 10
     t_new = np.linspace(0, max_t - 1, (max_t - 1) * k + 1)
     n_new = np.linspace(0, max_n - 1, (max_n - 1) * k + 1)
     T_dense, N_dense = np.meshgrid(t_new, n_new)
