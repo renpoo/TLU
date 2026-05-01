@@ -1,7 +1,11 @@
 # TLU Meta-Analysis Report (Laboratory Findings)
 
 **Target Environment:** `samples/Sample_0_Healthy`
+<<<<<<< Updated upstream
 **Date Analyzed:** 2026-04-28 14:28:35
+=======
+**Date Analyzed:** 2026-05-01 23:47:56
+>>>>>>> Stashed changes
 
 ## 1. Final Diagnosis
 
@@ -25,7 +29,11 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
+<<<<<<< Updated upstream
   "timestamp": "2026-04-28T14:28:35.443233",
+=======
+  "timestamp": "2026-05-01T23:47:56.314630",
+>>>>>>> Stashed changes
   "environment": "samples/Sample_0_Healthy",
   "physics_metrics": {
     "max_abs_residual": 0.0,

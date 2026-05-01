@@ -1,7 +1,11 @@
 # TLU Meta-Analysis Report (Laboratory Findings)
 
 **Target Environment:** `samples/Sample_5_Kyoto_Traffic`
+<<<<<<< Updated upstream
 **Date Analyzed:** 2026-04-28 14:30:19
+=======
+**Date Analyzed:** 2026-05-01 23:49:51
+>>>>>>> Stashed changes
 
 ## 1. Final Diagnosis
 
@@ -33,7 +37,11 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
+<<<<<<< Updated upstream
   "timestamp": "2026-04-28T14:30:19.711012",
+=======
+  "timestamp": "2026-05-01T23:49:51.085404",
+>>>>>>> Stashed changes
   "environment": "samples/Sample_5_Kyoto_Traffic",
   "physics_metrics": {
     "max_abs_residual": 0.0,

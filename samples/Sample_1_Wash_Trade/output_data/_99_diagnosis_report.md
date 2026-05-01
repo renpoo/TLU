@@ -1,7 +1,11 @@
 # TLU Meta-Analysis Report (Laboratory Findings)
 
 **Target Environment:** `samples/Sample_1_Wash_Trade`
+<<<<<<< Updated upstream
 **Date Analyzed:** 2026-04-28 14:28:56
+=======
+**Date Analyzed:** 2026-05-01 23:48:19
+>>>>>>> Stashed changes
 
 ## 1. Final Diagnosis
 
@@ -38,7 +42,11 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
+<<<<<<< Updated upstream
   "timestamp": "2026-04-28T14:28:56.301812",
+=======
+  "timestamp": "2026-05-01T23:48:19.077256",
+>>>>>>> Stashed changes
   "environment": "samples/Sample_1_Wash_Trade",
   "physics_metrics": {
     "max_abs_residual": 0.0,

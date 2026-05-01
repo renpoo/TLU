@@ -1,7 +1,12 @@
 # TLU Meta-Analysis Report (Laboratory Findings)
 
+<<<<<<< Updated upstream
 **Target Environment:** `samples/Sample_8_fMRI_Stroke/workspace`
 **Date Analyzed:** 2026-04-28 14:31:26
+=======
+**Target Environment:** `samples/Sample_8_fMRI_Stroke`
+**Date Analyzed:** 2026-05-01 23:51:04
+>>>>>>> Stashed changes
 
 ## 1. Final Diagnosis
 
@@ -38,8 +43,13 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
+<<<<<<< Updated upstream
   "timestamp": "2026-04-28T14:31:26.948736",
   "environment": "samples/Sample_8_fMRI_Stroke/workspace",
+=======
+  "timestamp": "2026-05-01T23:51:04.722335",
+  "environment": "samples/Sample_8_fMRI_Stroke",
+>>>>>>> Stashed changes
   "physics_metrics": {
     "max_abs_residual": 0.0,
     "mean_gross_activity": 9415.191333333334,
