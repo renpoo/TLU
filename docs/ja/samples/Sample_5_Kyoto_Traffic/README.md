@@ -59,8 +59,10 @@
 * **【🟢 正常系（Sample 0）のベースライン】**
 ![Sample 0 Micro Z-Score 3D Surface](../../../readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
 * **【🔴 本サンプルの異常状態】**
-![Micro Z-Score 3D Surface](../../../readme_plots/Sample_5_Kyoto_Traffic/002_2_2_2__micro_Z_Score_3d_surface.png)
-* **💡 グラフの読み方（ミクロ）:** 3D Surface 上で、**突出した鋭いスパイク（針）** が立っている箇所が、現在危機的なグリッドロックを経験している正確な物理的交差点（ボトルネック）をピンポイントで示しています。
+![Micro Z-Score 3D Surface](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
+* **💡 可視化グラフの読解の仕方（Visual Cues）:** 
+  * **🟢 正常系（Sample 0）では:** 背景は暗い紫色（Dark Purple）に保たれ、第4週の現金ノードにのみ「初期稼働ショック（給与支払い）」を示す黄色（Yellow）のスポットが1つだけ存在します。
+  * **🔴 本サンプルの異常:** 3D Surface 上で、明るい黄色（Yellow）に発光しているセルが、危機的なグリッドロックを経験している正確な物理的交差点をピンポイントで示しています。
 
 この無限ループを打破するために、都市計画担当者は介入を行う必要があります。四角く閉じたブロックから外へ向かう「逃げ道（一方通行）」を強制的に作成し、人工的にスペクトル半径を0.9未満に下げて渋滞の圧力を緩和してください。
 

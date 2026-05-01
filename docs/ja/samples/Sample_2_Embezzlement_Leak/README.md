@@ -40,8 +40,10 @@
     * **【🟢 正常系（Sample 0）のベースライン】**
     ![Sample 0 Micro Z-Score 3D Surface](../../../readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
     * **【🔴 本サンプルの異常状態】**
-    ![Sample 2 Micro Z-Score 3D Surface](../../../readme_plots/Sample_2_Embezzlement_Leak/002_2_2_2__micro_Z_Score_3d_surface.png)
-    * **💡 グラフの読み方（ミクロ）:** 3D Surface 上で、正常系（Sample 0）の初期給与支払いとは全く異なる口座座標に、**周囲から突出した鋭いスパイク（針）** が隆起しています。これが、横領された資金が投棄されている正確な口座（ダミーの経費科目など）をピンポイントで特定しています。
+    ![Sample 2 Micro Z-Score 3D Surface](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
+    * **💡 可視化グラフの読解の仕方（Visual Cues）:** 
+      * **🟢 正常系（Sample 0）では:** 背景は暗い紫色（Dark Purple）に保たれ、第4週の現金ノードにのみ「初期稼働ショック（給与支払い）」を示す黄色（Yellow）のスポットが1つだけ存在します。
+      * **🔴 本サンプルの異常:** 3D Surface 上で、正常系の「初期稼働ショック」とは全く別のノード（勘定科目）に、明るい黄色（Yellow）の強烈な異常発光が存在します。これが、横領された資金が投棄されている正確な口座（アカウント）を物理的に特定しています。
 
 * **財務的証拠:** 
   貸借対照表（B/S）は均衡しており（`is_balanced: true`）、会社は $58,488 の純利益を計上しています。しかし、合法的な資産が「合法的な経費」（例：架空のベンダーへの支払いや水増しされた出張費）を装ってネットワーク外へ流出しており、窃盗が通常のビジネス活動の背後に巧妙に隠蔽されていることが証明されました。
