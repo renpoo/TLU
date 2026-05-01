@@ -86,6 +86,16 @@ def main():
         shade=False, antialiased=True, alpha=0.9,
         linewidth=0.2, edgecolor=grid_col
     )
+    
+    # 2. Overlay Low-Res Original Grid (wireframe only)
+    T_orig, N_orig = np.meshgrid(np.arange(max_t), np.arange(max_n))
+    ax.plot_wireframe(
+        T_orig, N_orig, z_matrix, 
+        color=grid_col, linewidth=0.2, alpha=0.7
+    )
+    
+    # Adjust viewing angle for better visibility of peaks
+    ax.view_init(elev=35, azim=-55)
 
     z_axis_label = args.z_label if args.z_label else args.target_col
     c_axis_label = args.c_label if args.c_label else color_target
