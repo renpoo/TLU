@@ -1,18 +1,14 @@
-# TLU Meta-Analysis Report (Laboratory Findings)
+# TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_0_Healthy`
-<<<<<<< Updated upstream
-**Date Analyzed:** 2026-04-28 14:28:35
-=======
-**Date Analyzed:** 2026-05-01 23:47:56
->>>>>>> Stashed changes
+**Date Analyzed:** 2026-05-02 19:30:56
 
 ## 1. Final Diagnosis
 
-### 🟠 Local Pathological Stress (Micro Singularity)
-- **Severity:** HIGH
-- **Evidence:** Maximum local Z-Score reached 121.13 (Threshold: 3.0).
-- **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
+### 🟢 Healthy System (No Structural Pathologies Detected)
+- **Severity:** NORMAL
+- **Evidence:** All physical parameters remained within stable thresholds.
+- **Interpretation:** The system is functioning efficiently without any detectable structural anomalies, leaks, or loops.
 
 ---
 ## 2. Scale-Invariant Diagnostic Metrics
@@ -21,74 +17,70 @@
 |-----------------|------------------|-------|-----------|
 | Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 0.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| -0.0571 | < -0.1 |
-| Micro Forensics | Max Local Z-Score        | 121.13 | > 3.0 |
+| Thermodynamics  | Relative Free Energy Ratio| 0.8436 | < -0.1 |
+| Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
 
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-<<<<<<< Updated upstream
-  "timestamp": "2026-04-28T14:28:35.443233",
-=======
-  "timestamp": "2026-05-01T23:47:56.314630",
->>>>>>> Stashed changes
+  "timestamp": "2026-05-02T19:30:56.041736",
   "environment": "samples/Sample_0_Healthy",
   "physics_metrics": {
     "max_abs_residual": 0.0,
-    "mean_gross_activity": 66640.95442307692,
+    "mean_gross_activity": 1302063.825769231,
     "relative_leak_ratio": 0.0,
     "max_spectral": 0.0,
-    "min_free_energy": -3569.5269,
-    "min_relative_free_energy": -0.057094178533006565,
-    "max_z_score": 121.1314
+    "min_free_energy": 93251.36,
+    "min_relative_free_energy": 0.8435693397638316,
+    "max_z_score": 0.0
   },
   "detected_pathologies": [
     {
-      "pathology": "Local Pathological Stress (Micro Singularity)",
-      "severity": "HIGH",
-      "evidence": "Maximum local Z-Score reached 121.13 (Threshold: 3.0).",
-      "interpretation": "Specific nodes (departments) are experiencing statistical strain far beyond their historical norm."
+      "pathology": "Healthy System (No Structural Pathologies Detected)",
+      "severity": "NORMAL",
+      "evidence": "All physical parameters remained within stable thresholds.",
+      "interpretation": "The system is functioning efficiently without any detectable structural anomalies, leaks, or loops."
     }
   ],
   "financial_baseline": {
     "week": "2020-W52",
-    "assets": 229111.34999999916,
-    "liabilities": 182678.84000000008,
+    "assets": 216622.47999999998,
+    "liabilities": 169191.21000000084,
     "equity": 0.0,
-    "net_income": 46432.50999999978,
-    "total_liab_eq": 229111.34999999986,
+    "net_income": 47431.269999999786,
+    "total_liab_eq": 216622.48000000062,
     "revenue": 955157.5599999998,
-    "expense": 908725.05,
+    "expense": 907726.29,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        74067.95000000007
+        111101.96000000014
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        115309.26999999979
+        115309.2699999999
       ],
       [
         "ACC_Cash",
-        "Asset",
-        113802.07999999938
+        "Liability (Short/Overdraft)",
+        58089.2500000007
       ],
       [
         "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        108610.89000000001
+        "Asset",
+        101313.21000000008
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        526444.2300000001
+        525436.7600000001
       ],
       [
         "ACC_Payroll_Exp",
@@ -108,44 +100,44 @@
       [
         "ACC_Travel_Exp",
         "Expense",
-        99299.73999999999
+        99308.44999999998
       ]
     ],
     "tb_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        343765.39,
-        417833.3400000001,
-        74067.95000000007
+        515648.01000000007,
+        626749.9700000002,
+        111101.96000000014
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
         955157.5599999998,
-        839848.29,
-        115309.26999999979
+        839848.2899999999,
+        115309.2699999999
       ],
       [
         "ACC_COGS",
         "Expense",
-        526444.2300000001,
+        525436.7600000001,
         0.0,
-        526444.2300000001
+        525436.7600000001
       ],
       [
         "ACC_Cash",
         "Asset",
-        839848.29,
-        726046.2100000007,
-        113802.07999999938
+        839848.2899999999,
+        897937.5400000006,
+        -58089.2500000007
       ],
       [
         "ACC_Inventory",
         "Asset",
-        417833.3400000001,
-        526444.2300000001,
-        -108610.89000000001
+        626749.9700000002,
+        525436.7600000001,
+        101313.21000000008
       ],
       [
         "ACC_Payroll_Exp",
@@ -171,9 +163,9 @@
       [
         "ACC_Travel_Exp",
         "Expense",
-        99299.73999999999,
+        99308.44999999998,
         0.0,
-        99299.73999999999
+        99308.44999999998
       ]
     ]
   }
