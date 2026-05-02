@@ -16,9 +16,9 @@ This is the most critical phase for **fraud detection and auditing**. By analyzi
 * **💡 Concrete Example (from Samples)**:
   * **Sample_3 (Unbalanced Mistake)**: In double-entry bookkeeping, all debits and credits must offset to zero (Conservation of Energy). When an entry is omitted, an unexplained fluctuation in mass occurs. TLU detects this "Conservation Leak," causing the global Z-Score to spike astronomically. This is the clearest signature of a fundamentally broken ledger.
 
-### 2. Micro Z-Score / KL Drift Heatmaps (`002_2_2_1__micro_KL_drift_3d_surface.png`, `002_2_2_2__3d_micro_z_score_X.png`)
+### 2. Micro Z-Score / KL Drift Heatmaps (`002_2_2_1__3d_micro_kl_drift.png`, `002_2_2_2__3d_micro_z_score_X.png`)
 
-![002_2_2_1__micro_KL_drift_heatmap](../readme_plots/002_2_2_1__micro_KL_drift_3d_surface.png)
+![002_2_2_1__micro_KL_drift_heatmap](../readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 ![002_2_2_2__micro_Z_Score_heatmap](../readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
