@@ -41,43 +41,43 @@ def generate_stream(args):
                 state_writer.writerow([node, f"{random.uniform(100, 500):.2f}"])
 
     for day in range(total_days):
-    current_date = start_date + datetime.timedelta(days=day)
-    date_str = current_date.strftime("%Y-%m-%d")
-    daily_entries = []
+        current_date = start_date + datetime.timedelta(days=day)
+        date_str = current_date.strftime("%Y-%m-%d")
+        daily_entries = []
 
-    for r_idx in range(len(rows)):
-        for c_idx in range(len(cols)):
-            current_node = f"{rows[r_idx]}{cols[c_idx]}"
-            
-            # Identify adjacent intersections (checking only right and down covers all edges)
-            neighbors = []
-            if r_idx + 1 < len(rows): # Downward
-                neighbors.append(f"{rows[r_idx+1]}{cols[c_idx]}")
-            if c_idx + 1 < len(cols): # Rightward
-                neighbors.append(f"{rows[r_idx]}{cols[c_idx+1]}")
+        for r_idx in range(len(rows)):
+            for c_idx in range(len(cols)):
+                current_node = f"{rows[r_idx]}{cols[c_idx]}"
                 
-            for neighbor in neighbors:
-                # Generate round-trip traffic (journal entry format)
-                # Traffic is weighted to be heavier towards the center (near Shijo Karasuma)
-                dist_from_center = abs(r_idx - 3) + abs(c_idx - 3)
-                base_volume = max(10, 100 - dist_from_center * 5)
-                
-                # A -> B
-                transactions.append({
-                    "Trans_Date": date_str,
-                    "Src": current_node, # Credit (Sender)
-                    "Tgt": neighbor,     # Debit (Receiver)
-                    "Amount": base_volume + random.randint(0, 30)
-                })
-                # B -> A
-                transactions.append({
-                    "Trans_Date": date_str,
-                    "Src": neighbor,
-                    "Tgt": current_node,
-                    "Amount": base_volume + random.randint(0, 30)
-                })
+                # Identify adjacent intersections (checking only right and down covers all edges)
+                neighbors = []
+                if r_idx + 1 < len(rows): # Downward
+                    neighbors.append(f"{rows[r_idx+1]}{cols[c_idx]}")
+                if c_idx + 1 < len(cols): # Rightward
+                    neighbors.append(f"{rows[r_idx]}{cols[c_idx+1]}")
+                    
+                for neighbor in neighbors:
+                    # Generate round-trip traffic (journal entry format)
+                    # Traffic is weighted to be heavier towards the center (near Shijo Karasuma)
+                    dist_from_center = abs(r_idx - 3) + abs(c_idx - 3)
+                    base_volume = max(10, 100 - dist_from_center * 5)
+                    
+                    # A -> B
+                    transactions.append({
+                        "Trans_Date": date_str,
+                        "Src": current_node, # Credit (Sender)
+                        "Tgt": neighbor,     # Debit (Receiver)
+                        "Amount": base_volume + random.randint(0, 30)
+                    })
+                    # B -> A
+                    transactions.append({
+                        "Trans_Date": date_str,
+                        "Src": neighbor,
+                        "Tgt": current_node,
+                        "Amount": base_volume + random.randint(0, 30)
+                    })
 
-# 3. Save as CSV
+    # 3. Save as CSV
     import os
     env_dir = os.environ.get("TARGET_ENV", "workspace")
     df = pd.DataFrame(transactions)
