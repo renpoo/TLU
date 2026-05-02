@@ -128,7 +128,7 @@ def generate_stream(args):
         # --------------------------------------------------
         # Ops replenishes inventory, but accounts payable (AP) are held by Admin
         if day % 7 == 0:
-            purch_amount = np.random.normal(8000, 1000)
+            purch_amount = np.random.normal(12000, 1500)
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, purch_amount, 
                 "Inventory", "DPT_Ops", "Accounts_Payable", "DPT_Admin", "Inventory_Purchase"
