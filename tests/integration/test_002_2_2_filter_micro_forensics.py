@@ -22,6 +22,7 @@ class TestFilterMicroForensics(unittest.TestCase):
         X_history = [np.array([100.0, 100.0]), np.array([92.0, 108.0])]
         P_history = [np.array([[0.0, 1.0], [0.0, 0.0]]), np.array([[0.0, 1.0], [0.0, 0.0]])]
         X_initial = np.array([105.0, 95.0])
+        g_history = [np.array([-0.05, 0.05]), np.array([-0.08, 0.08])]
         
         thresholds = {
             'kl_drift_thresh': 3.0,
@@ -29,8 +30,8 @@ class TestFilterMicroForensics(unittest.TestCase):
         }
 
         # Act
-        records, v_current, X_current, P_current = run_micro_forensics_analysis(
-            t_idx, T_slice, v_history, X_history, P_history, X_initial, thresholds
+        records, v_current, X_current, g_current, P_current = run_micro_forensics_analysis(
+            t_idx, T_slice, v_history, X_history, g_history, P_history, X_initial, thresholds
         )
 
         # Assert: N rows of records
@@ -66,14 +67,16 @@ class TestFilterMicroForensics(unittest.TestCase):
         P_history = [np.array([[0.0, 1.0], [0.0, 0.0]]), np.array([[0.0, 1.0], [0.0, 0.0]])]
         X_initial = np.array([95.0, 105.0])
         
+        g_history = [np.array([-0.05, 0.05]), np.array([-0.08, 0.08])]
+        
         # Test with practically unreachable thresholds
         thresholds = {
             'kl_drift_thresh': 1e9,
             'z_score_thresh': 1e9
         }
         
-        records, _, _, _ = run_micro_forensics_analysis(
-            t_idx, T_slice, v_history, X_history, P_history, X_initial, thresholds
+        records, _, _, _, _ = run_micro_forensics_analysis(
+            t_idx, T_slice, v_history, X_history, g_history, P_history, X_initial, thresholds
         )
         
         # Anomaly flag should be strictly 0 despite massive inputs

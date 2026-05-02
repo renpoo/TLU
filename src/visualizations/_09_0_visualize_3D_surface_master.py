@@ -7,6 +7,7 @@
 import sys
 import pandas as pd
 import numpy as np
+import scipy.interpolate as interp
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
@@ -31,12 +32,14 @@ def resolve_colormap(target_col: str, theme_cfg: dict) -> str:
             if target_col in key or key in target_col:
                 return cmap
                 
-    if 'velocity' in target_col or 'temperature' in target_col or 'flux' in target_col:
+    if 'velocity' in target_col or 'temperature' in target_col or 'flux' in target_col or target_col == 'z_score_v':
         cmap_name = 'magma'
     elif 'delta' in target_col or 'residual' in target_col:
         cmap_name = 'coolwarm'
     elif 'kl_drift' in target_col or 'curvature' in target_col:
         cmap_name = 'inferno'
+    elif target_col == 'z_score_X':
+        cmap_name = 'viridis'
     elif 'z_score' in target_col or 'stress' in target_col:
         cmap_name = 'plasma'
 
@@ -77,21 +80,37 @@ def main():
     fig = plt.figure(figsize=(18, 14))
     ax = fig.add_axes([0.15, 0.10, 0.80, 0.80], projection='3d')
 
-    T_mesh, N_mesh = np.meshgrid(np.arange(max_t), np.arange(max_n))
     norm = plt.Normalize(c_matrix.min(), c_matrix.max())
     
+    # ---------------------------------------------------------
+    # TLU High-Fidelity Upsampling Layer (Proof of Concept)
+    # Mitigates Matplotlib's internal Face-Averaging artifact
+    # by generating a 5x dense mesh using Bilinear Interpolation.
+    # ---------------------------------------------------------
+    k = 10
+    t_new = np.linspace(0, max_t - 1, (max_t - 1) * k + 1)
+    n_new = np.linspace(0, max_n - 1, (max_n - 1) * k + 1)
+    T_dense, N_dense = np.meshgrid(t_new, n_new)
+
+    spline_z = interp.RectBivariateSpline(range(max_n), range(max_t), z_matrix, kx=1, ky=1)
+    z_dense = spline_z(n_new, t_new)
+
+    spline_c = interp.RectBivariateSpline(range(max_n), range(max_t), c_matrix, kx=1, ky=1)
+    c_dense = spline_c(n_new, t_new)
+
+    # 1. Draw High-Res Surface without edges (pure smooth color gradient)
     surf = ax.plot_surface(
-        T_mesh, N_mesh, z_matrix, 
-        facecolors=cmap(norm(c_matrix)),
+        T_dense, N_dense, z_dense, 
+        cmap=cmap, norm=norm,
         shade=False, antialiased=True, alpha=0.9,
-        linewidth=0.2, edgecolor=grid_col
+        edgecolor='none'
     )
     
     # 2. Overlay Low-Res Original Grid (wireframe only)
     T_orig, N_orig = np.meshgrid(np.arange(max_t), np.arange(max_n))
     ax.plot_wireframe(
         T_orig, N_orig, z_matrix, 
-        color=grid_col, linewidth=0.2, alpha=0.7
+        color=grid_col, linewidth=0.2, alpha=0.5
     )
     
     # Adjust viewing angle for better visibility of peaks

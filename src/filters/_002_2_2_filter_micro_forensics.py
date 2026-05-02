@@ -59,7 +59,7 @@ def compute_node_univariate_z_score_vector(
 
 def evaluate_micro_anomaly_flags(
         kl_vector: np.ndarray, 
-        z_vector_X: np.ndarray,
+        z_vector_g: np.ndarray,
         z_vector_v: np.ndarray, 
         thresholds: Dict[str, float]
 ) -> List[int]:
@@ -71,7 +71,7 @@ def evaluate_micro_anomaly_flags(
     flags = []
     for i in range(N):
         is_kl_anomaly = kl_vector[i] > thresholds.get('kl_drift_thresh', 3.0)
-        is_z_X_anomaly = z_vector_X[i] > thresholds.get('z_score_thresh', 3.0)
+        is_z_X_anomaly = z_vector_g[i] > thresholds.get('z_score_thresh', 3.0)
         is_z_v_anomaly = z_vector_v[i] > thresholds.get('z_score_thresh', 3.0)
         
         flags.append(1 if (is_kl_anomaly or is_z_X_anomaly or is_z_v_anomaly) else 0)
@@ -83,10 +83,11 @@ def run_micro_forensics_analysis(
         T_slice: np.ndarray, 
         v_history_window: List[np.ndarray],
         X_history_window: List[np.ndarray],
+        g_history_window: List[np.ndarray],
         P_history_window: List[np.ndarray],
         X_initial: np.ndarray,
         thresholds: Dict[str, float]
-) -> Tuple[List[list], np.ndarray, np.ndarray, np.ndarray]:
+) -> Tuple[List[list], np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
     """!
     @brief [Pure Orchestration Function] Run micro anomaly heuristics on individual active structures.
     @details Exerts tight thresholds tracing univariate activity shocks over decoupled boundaries autonomously.
@@ -113,31 +114,36 @@ def run_micro_forensics_analysis(
     # Calculate Absolute Balance X
     if len(X_history_window) == 0:
         X_current = X_initial + v_current
+        X_prev = X_initial
     else:
         X_current = X_history_window[-1] + v_current
+        X_prev = X_history_window[-1]
+
+    # Calculate Relative Growth Rate g (Detrended Manifold)
+    g_current = v_current / (np.abs(X_prev) + 1.0)
 
     # 1. Micro KL divergence (Structural change per node)
     node_kl = compute_node_kl_divergence_vector(P_current, P_history_window)
 
     # 2. Micro Z-score (Univariate activity shock per node)
     node_z_v = compute_node_univariate_z_score_vector(v_current, v_history_window)
-    node_z_X = compute_node_univariate_z_score_vector(X_current, X_history_window)
+    node_z_g = compute_node_univariate_z_score_vector(g_current, g_history_window)
 
     # 3. Evaluation of anomaly flags
-    anomaly_flags = evaluate_micro_anomaly_flags(node_kl, node_z_X, node_z_v, thresholds)
+    anomaly_flags = evaluate_micro_anomaly_flags(node_kl, node_z_g, node_z_v, thresholds)
 
     # 4. Record format (generate N rows of records)
     records = []
     for i in range(N):
         records.append([
             t_idx, i, 
-            f"{node_z_X[i]:.4f}", 
+            f"{node_z_g[i]:.4f}", 
             f"{node_z_v[i]:.4f}", 
             f"{node_kl[i]:.4f}", 
             anomaly_flags[i]
         ])
 
-    return records, v_current, X_current, P_current
+    return records, v_current, X_current, g_current, P_current
 
 def main():
     parser = get_base_parser("TLU Micro Forensics (Node Anomaly)")
@@ -163,20 +169,23 @@ def main():
 
     v_history_window = []
     X_history_window = []
+    g_history_window = []
     P_history_window = []
 
     for t_idx, T_slice in yield_time_slices(reader, N):
-        records, v_current, X_current, P_current = run_micro_forensics_analysis(
-            t_idx, T_slice, v_history_window, X_history_window, P_history_window, X_initial, thresholds
+        records, v_current, X_current, g_current, P_current = run_micro_forensics_analysis(
+            t_idx, T_slice, v_history_window, X_history_window, g_history_window, P_history_window, X_initial, thresholds
         )
         
         # Safe update of history
         v_history_window.append(v_current)
         X_history_window.append(X_current)
+        g_history_window.append(g_current)
         P_history_window.append(P_current)
         if len(v_history_window) > args.baseline_window:
             v_history_window.pop(0)
             X_history_window.pop(0)
+            g_history_window.pop(0)
             P_history_window.pop(0)
             
         for rec in records:

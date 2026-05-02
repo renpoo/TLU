@@ -21,14 +21,16 @@ class TestFilterForensics(unittest.TestCase):
         P_history = [np.array([[0.0, 1.0], [0.0, 0.0]]), np.array([[0.0, 1.0], [0.0, 0.0]])]
         X_initial = np.array([105.0, 95.0])
         
+        g_history = [np.array([-0.05, 0.05]), np.array([-0.08, 0.08])]
+        
         thresholds = {
             'leak_tolerance': 1e-5,
             'kl_drift_thresh': 3.0,
             'z_score_thresh': 3.0
         }
 
-        records, v_current, X_current, P_current = run_forensics_analysis(
-            t_idx, T_slice, v_history, X_history, P_history, X_initial, thresholds
+        records, v_current, X_current, g_current, P_current = run_forensics_analysis(
+            t_idx, T_slice, v_history, X_history, g_history, P_history, X_initial, thresholds
         )
 
         # Returns 1 row of record in total

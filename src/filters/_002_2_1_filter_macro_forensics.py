@@ -26,6 +26,7 @@ def run_forensics_analysis(
         T_slice: np.ndarray, 
         v_history_window: List[np.ndarray],
         X_history_window: List[np.ndarray],
+        g_history_window: List[np.ndarray],
         P_history_window: List[np.ndarray],
         X_initial: np.ndarray,
         thresholds: Dict[str, float]
@@ -55,8 +56,14 @@ def run_forensics_analysis(
     # Calculate Absolute Balance X
     if len(X_history_window) == 0:
         X_current = X_initial + v_current
+        X_prev = X_initial
     else:
         X_current = X_history_window[-1] + v_current
+        X_prev = X_history_window[-1]
+        
+    # Calculate Relative Growth Rate g (Detrended Manifold)
+    # epsilon=1.0 prevents division by zero and stabilizes tiny balances
+    g_current = v_current / (np.abs(X_prev) + 1.0)
 
     # 1. Check conservation of mass (System-wide residual)
     abs_residual, _ = check_conservation_law(
@@ -76,11 +83,11 @@ def run_forensics_analysis(
         v_K_precision = compute_safe_pinv(v_cov_matrix, rcond=1e-15, lambda_reg=1e-4)
         z_score_v = compute_multivariate_anomaly(v_current, v_mean, v_K_precision)
         
-        # For absolute balance X
-        X_mean = np.mean(X_history_window, axis=0)
-        X_cov_matrix = compute_covariance_matrix(np.array(X_history_window))
-        X_K_precision = compute_safe_pinv(X_cov_matrix, rcond=1e-15, lambda_reg=1e-4)
-        z_score_X = compute_multivariate_anomaly(X_current, X_mean, X_K_precision)
+        # For relative growth rate g (State Detrended Manifold)
+        g_mean = np.mean(g_history_window, axis=0)
+        g_cov_matrix = compute_covariance_matrix(np.array(g_history_window))
+        g_K_precision = compute_safe_pinv(g_cov_matrix, rcond=1e-15, lambda_reg=1e-4)
+        z_score_X = compute_multivariate_anomaly(g_current, g_mean, g_K_precision)
     else:
         z_score_v = 0.0
         z_score_X = 0.0
@@ -98,7 +105,7 @@ def run_forensics_analysis(
         flag
     ]
 
-    return [record], v_current, X_current, P_current
+    return [record], v_current, X_current, g_current, P_current
 
 def main():
     parser = get_base_parser("TLU Forensics & Anomaly Detection Filter")
@@ -138,19 +145,22 @@ def main():
 
     v_history_window = []
     X_history_window = []
+    g_history_window = []
     P_history_window = []
 
     for t_idx, T_slice in yield_time_slices(reader, N):
-        records, v_current, X_current, P_current = run_forensics_analysis(
-            t_idx, T_slice, v_history_window, X_history_window, P_history_window, X_initial, thresholds
+        records, v_current, X_current, g_current, P_current = run_forensics_analysis(
+            t_idx, T_slice, v_history_window, X_history_window, g_history_window, P_history_window, X_initial, thresholds
         )
         
         v_history_window.append(v_current)
         X_history_window.append(X_current)
+        g_history_window.append(g_current)
         P_history_window.append(P_current)
         if len(v_history_window) > args.baseline_window:
             v_history_window.pop(0)
             X_history_window.pop(0)
+            g_history_window.pop(0)
             P_history_window.pop(0)
             
         for rec in records:

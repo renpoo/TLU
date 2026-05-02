@@ -65,13 +65,13 @@ def run_dynamics_state_analysis(
     dq = np.zeros(N, dtype=float)
     F_ext = compute_external_force_residual(M, C, K, a_current, v_current, dq)
 
-    # 5. Record format (added net_flux_q)
+    # 5. Record format
     records = []
     for i in range(N):
         records.append([
             t_idx, i, 
             f"{X_current[i]:.4f}",  # Absolute coordinates (position) in phase space
-            f"{v_current[i]:.4f}", 
+            f"{v_current[i]:.4f}",  # This is the net flux q
             f"{a_current[i]:.4f}", 
             f"{M[i]:.4f}", 
             f"{C[i]:.4f}", 
