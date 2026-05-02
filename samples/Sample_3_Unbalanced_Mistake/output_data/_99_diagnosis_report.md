@@ -1,23 +1,23 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_3_Unbalanced_Mistake`
-**Date Analyzed:** 2026-05-02 10:07:04
+**Date Analyzed:** 2026-05-02 20:25:26
 
 ## 1. Final Diagnosis
 
-### 🟢 Healthy System (No Structural Pathologies Detected)
-- **Severity:** NORMAL
-- **Evidence:** All physical parameters remained within stable thresholds.
-- **Interpretation:** The system is functioning efficiently without any detectable structural anomalies, leaks, or loops.
+### 🔴 Unbalanced Journal Mistake (Conservation Violation)
+- **Severity:** CRITICAL
+- **Evidence:** Relative Leak Ratio reached 0.0013 (Threshold: 0.001). Raw residual: 1687.36. Peak Location: Time: 2020-W39.
+- **Interpretation:** The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere.
 
 ---
 ## 2. Scale-Invariant Diagnostic Metrics
 
 | Physical Domain | Extracted Metric | Value | Threshold |
 |-----------------|------------------|-------|-----------|
-| Macro Forensics | Relative Mass Leak Ratio | 0.0008 | > 0.001 |
+| Macro Forensics | Relative Mass Leak Ratio | 0.0013 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 0.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| 0.8288 | < -0.1 |
+| Thermodynamics  | Relative Free Energy Ratio| 0.8436 | < -0.1 |
 | Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
@@ -25,63 +25,63 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-02T10:07:04.927802",
+  "timestamp": "2026-05-02T20:25:26.961399",
   "environment": "samples/Sample_3_Unbalanced_Mistake",
   "physics_metrics": {
-    "max_abs_residual": 1038.49,
-    "mean_gross_activity": 1345252.9503846155,
-    "relative_leak_ratio": 0.0007719663426146657,
+    "max_abs_residual": 1687.36,
+    "mean_gross_activity": 1301647.9730769233,
+    "relative_leak_ratio": 0.0012963259152252236,
     "max_spectral": 0.0,
-    "min_free_energy": 85485.52,
-    "min_relative_free_energy": 0.8288111469064383,
+    "min_free_energy": 93251.36,
+    "min_relative_free_energy": 0.8435693397638316,
     "max_z_score": 0.0,
-    "max_leak_location": "Time: 2020-W42"
+    "max_leak_location": "Time: 2020-W39"
   },
   "detected_pathologies": [
     {
-      "pathology": "Healthy System (No Structural Pathologies Detected)",
-      "severity": "NORMAL",
-      "evidence": "All physical parameters remained within stable thresholds.",
-      "interpretation": "The system is functioning efficiently without any detectable structural anomalies, leaks, or loops."
+      "pathology": "Unbalanced Journal Mistake (Conservation Violation)",
+      "severity": "CRITICAL",
+      "evidence": "Relative Leak Ratio reached 0.0013 (Threshold: 0.001). Raw residual: 1687.36. Peak Location: Time: 2020-W39.",
+      "interpretation": "The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere."
     }
   ],
   "financial_baseline": {
     "week": "2020-W52",
-    "assets": 238261.0899999995,
-    "liabilities": 177600.22999999986,
+    "assets": 200317.0800000003,
+    "liabilities": 164574.10000000056,
     "equity": 0.0,
-    "net_income": 60660.859999999986,
-    "total_liab_eq": 238261.08999999985,
+    "net_income": 35742.97999999998,
+    "total_liab_eq": 200317.08000000054,
     "revenue": 955157.5599999998,
-    "expense": 894496.6999999998,
+    "expense": 919414.5799999998,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        66102.17000000004
+        99400.8400000002
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        109739.16999999969
+        100243.89000000001
       ],
       [
         "ACC_Cash",
-        "Asset",
-        128521.91999999981
+        "Liability (Short/Overdraft)",
+        65173.26000000036
       ],
       [
         "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        111498.05999999982
+        "Asset",
+        100073.1900000003
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        529331.3999999999
+        526676.7799999999
       ],
       [
         "ACC_Payroll_Exp",
@@ -101,49 +101,49 @@
       [
         "ACC_Travel_Exp",
         "Expense",
-        77743.77000000003
+        91647.68999999996
       ],
       [
         "UNKNOWN_LEAK",
         "Expense",
-        4440.45
+        18109.03
       ]
     ],
     "tb_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        351731.17000000004,
-        417833.3400000001,
-        66102.17000000004
+        527349.13,
+        626749.9700000002,
+        99400.8400000002
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
         955157.5599999998,
-        845418.3900000001,
-        109739.16999999969
+        854913.6699999998,
+        100243.89000000001
       ],
       [
         "ACC_COGS",
         "Expense",
-        529331.3999999999,
+        526676.7799999999,
         0.0,
-        529331.3999999999
+        526676.7799999999
       ],
       [
         "ACC_Cash",
         "Asset",
-        840977.94,
-        712456.0200000001,
-        128521.91999999981
+        836804.6399999998,
+        901977.9000000001,
+        -65173.26000000036
       ],
       [
         "ACC_Inventory",
         "Asset",
-        417833.3400000001,
-        529331.3999999999,
-        -111498.05999999982
+        626749.9700000002,
+        526676.7799999999,
+        100073.1900000003
       ],
       [
         "ACC_Payroll_Exp",
@@ -169,16 +169,16 @@
       [
         "ACC_Travel_Exp",
         "Expense",
-        77743.77000000003,
+        91647.68999999996,
         0.0,
-        77743.77000000003
+        91647.68999999996
       ],
       [
         "UNKNOWN_LEAK",
         "Expense",
-        4440.45,
+        18109.03,
         0.0,
-        4440.45
+        18109.03
       ]
     ]
   }

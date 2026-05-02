@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_7_Market_Users_Weekly`
-**Date Analyzed:** 2026-05-02 10:08:48
+**Date Analyzed:** 2026-05-02 20:37:54
 
 ## 1. Final Diagnosis
 
@@ -15,7 +15,7 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
 - **Severity:** HIGH
-- **Evidence:** Relative Free Energy Ratio sank to -15.8784 (Threshold: -0.1). Raw F: -772616022.77
+- **Evidence:** Relative Free Energy Ratio sank to -14.0092 (Threshold: -0.1). Raw F: -689623013.35
 - **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
 
 ---
@@ -25,7 +25,7 @@ The system is suffering from multiple overlapping structural failures.
 |-----------------|------------------|-------|-----------|
 | Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 1.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| -15.8784 | < -0.1 |
+| Thermodynamics  | Relative Free Energy Ratio| -14.0092 | < -0.1 |
 | Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
@@ -33,15 +33,15 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-02T10:08:48.108418",
+  "timestamp": "2026-05-02T20:37:54.715454",
   "environment": "samples/Sample_7_Market_Users_Weekly",
   "physics_metrics": {
     "max_abs_residual": 0.0,
-    "mean_gross_activity": 59137427.816923074,
+    "mean_gross_activity": 61912970.910769224,
     "relative_leak_ratio": 0.0,
     "max_spectral": 1.0,
-    "min_free_energy": -772616022.7673,
-    "min_relative_free_energy": -15.87839343297263,
+    "min_free_energy": -689623013.3541,
+    "min_relative_free_energy": -14.009151351778845,
     "max_z_score": 0.0,
     "max_leak_location": "Time: 2020-W01"
   },
@@ -55,7 +55,7 @@ The system is suffering from multiple overlapping structural failures.
     {
       "pathology": "Thermodynamic Energy Depletion (Embezzlement/Leak)",
       "severity": "HIGH",
-      "evidence": "Relative Free Energy Ratio sank to -15.8784 (Threshold: -0.1). Raw F: -772616022.77",
+      "evidence": "Relative Free Energy Ratio sank to -14.0092 (Threshold: -0.1). Raw F: -689623013.35",
       "interpretation": "Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale."
     }
   ],
@@ -64,134 +64,134 @@ The system is suffering from multiple overlapping structural failures.
     "assets": 0.0,
     "liabilities": 0.0,
     "equity": 0.0,
-    "net_income": -4.172325134277344e-07,
-    "total_liab_eq": -4.172325134277344e-07,
+    "net_income": 3.2782554626464844e-07,
+    "total_liab_eq": 3.2782554626464844e-07,
     "revenue": 0.0,
-    "expense": 4.172325134277344e-07,
+    "expense": -3.2782554626464844e-07,
     "is_balanced": true,
     "bs_items": [],
     "pl_items": [
       [
         "USR_001",
         "Expense",
-        4225702.160000622
+        -106335.94999998808
       ],
       [
         "USR_002",
         "Expense",
-        8706571.249999821
+        8600508.330000162
       ],
       [
         "USR_003",
         "Expense",
-        1579963.5500000715
+        -940548.060000062
       ],
       [
         "USR_004",
         "Expense",
-        -12385805.170000017
+        4796050.529999673
       ],
       [
         "USR_005",
         "Expense",
-        -6925827.629998922
+        623164.8000001311
       ],
       [
         "USR_006",
         "Expense",
-        -845815.3400002122
+        -1360240.1100003123
       ],
       [
         "USR_007",
         "Expense",
-        4742875.819999576
+        2764296.240000069
       ],
       [
         "USR_008",
         "Expense",
-        -984485.05000031
+        924927.4999999106
       ],
       [
         "USR_009",
         "Expense",
-        -4961491.400000215
+        -1008716.4200000763
       ],
       [
         "USR_010",
         "Expense",
-        6848311.810000002
+        -14293106.859999835
       ]
     ],
     "tb_items": [
       [
         "USR_001",
         "Expense",
-        522567386.0200006,
-        518341683.85999995,
-        4225702.160000622
+        386621113.2799999,
+        386727449.2299999,
+        -106335.94999998808
       ],
       [
         "USR_002",
         "Expense",
-        436110043.06999975,
-        427403471.81999993,
-        8706571.249999821
+        329936340.0400002,
+        321335831.71000004,
+        8600508.330000162
       ],
       [
         "USR_003",
         "Expense",
-        461054057.08,
-        459474093.5299999,
-        1579963.5500000715
+        356092499.17,
+        357033047.2300001,
+        -940548.060000062
       ],
       [
         "USR_004",
         "Expense",
-        459767272.46999997,
-        472153077.64,
-        -12385805.170000017
+        342105350.84999967,
+        337309300.32,
+        4796050.529999673
       ],
       [
         "USR_005",
         "Expense",
-        470129392.34000045,
-        477055219.9699994,
-        -6925827.629998922
+        316024481.8099998,
+        315401317.0099997,
+        623164.8000001311
       ],
       [
         "USR_006",
         "Expense",
-        461900251.79,
-        462746067.13000023,
-        -845815.3400002122
+        405205928.93999964,
+        406566169.04999995,
+        -1360240.1100003123
       ],
       [
         "USR_007",
         "Expense",
-        477931718.9199996,
-        473188843.1,
-        4742875.819999576
+        345928581.62999976,
+        343164285.3899997,
+        2764296.240000069
       ],
       [
         "USR_008",
         "Expense",
-        281438145.6899996,
-        282422630.7399999,
-        -984485.05000031
+        236358269.8699998,
+        235433342.3699999,
+        924927.4999999106
       ],
       [
         "USR_009",
         "Expense",
-        456591848.11999995,
-        461553339.52000016,
-        -4961491.400000215
+        361770865.7099997,
+        362779582.12999976,
+        -1008716.4200000763
       ],
       [
         "USR_010",
         "Expense",
-        470000612.63999987,
-        463152300.82999986,
-        6848311.810000002
+        324402188.91,
+        338695295.76999986,
+        -14293106.859999835
       ]
     ]
   }

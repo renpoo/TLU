@@ -1,11 +1,11 @@
 node_idx,node_label,spectral_exponent_beta,noise_classification
-0,USR_001,0.4937,White Noise
-1,USR_003,1.0456,Pink Noise
-2,USR_004,-0.562,White Noise
-3,USR_005,0.5822,Pink Noise
-4,USR_007,0.1904,White Noise
-5,USR_008,-0.3454,White Noise
-6,USR_009,0.3755,White Noise
-7,USR_002,-0.5395,White Noise
-8,USR_010,0.5231,Pink Noise
-9,USR_006,0.0273,White Noise
+0,USR_001,0.4347,White Noise
+1,USR_003,0.2448,White Noise
+2,USR_004,0.0978,White Noise
+3,USR_005,0.5486,Pink Noise
+4,USR_007,0.3612,White Noise
+5,USR_008,0.1038,White Noise
+6,USR_009,-0.1987,White Noise
+7,USR_002,-0.3764,White Noise
+8,USR_010,0.9892,Pink Noise
+9,USR_006,0.4002,White Noise

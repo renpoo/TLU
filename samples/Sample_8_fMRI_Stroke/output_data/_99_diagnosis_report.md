@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_8_fMRI_Stroke`
-**Date Analyzed:** 2026-05-02 10:09:12
+**Date Analyzed:** 2026-05-02 20:41:14
 
 ## 1. Final Diagnosis
 
@@ -33,7 +33,7 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-02T10:09:12.260948",
+  "timestamp": "2026-05-02T20:41:14.601009",
   "environment": "samples/Sample_8_fMRI_Stroke",
   "physics_metrics": {
     "max_abs_residual": 0.0,
