@@ -1,205 +1,132 @@
 # Tensor-Link Utility (TLU)
 
-> **"自律型AI監査のための、ドメインの複雑性を数学的透明性へと射影する"**
+TLUは、企業の財務データや取引ネットワークに潜む「構造的な不正」や「異常」を、**物理数学（Physical Mathematics）**のアプローチを用いて検知・可視化する高度な監査システムです。
+出力される高次元な解析データは、LLM（ChatGPTやClaudeなど）と連携させることで、専門的な「AI自動監査レポート」を生成するための基盤として機能します。
 
-TLUは、**認知的トライアド（物理数学 + 財務 + LLM）を動力とする「物理数学による数理解析システム」**です。財務元帳やサプライチェーンなどの方向性を持った取引データを純粋なテンソル空間に**射影**し、従来の会計モデルが見逃してしまう隠された構造的ダイナミクスや異常発火（アノマリー）を明らかにするよう設計された、高精度の数学的・フォレンジック的解析パイプラインです。
+## 従来の会計システムが抱える限界
 
-### 従来の会計の限界
+従来の複式簿記システムは、「借方と貸方が常に一致する」ことを前提としています。そのため、意図的な循環取引（ウォッシュトレード）や、帳尻だけを合わせた巧妙な不正操作が行われた場合、表面上のデータから実態を見抜くことは数学的に困難です。
 
-従来の複式簿記では、いかなる計算を開始する前にも、すべての仕訳が完全に整合している必要があります。この絶対的な公理のゆえに、記録が欠落していたり、意図的に改竄・隠蔽されていたり（例：**循環取引**による帳簿の水増し）する場合、現実世界の現象と**突合・比較衡量**して背後にある真実を数学的に抽出することが困難になります。
+TLUは、データを「流体」や「エネルギーの波」として捉え直すことで、この問題を解決します。表面的な帳尻合わせに惑わされず、資金の流れの「不自然な滞留」や「異常な循環」を物理数学の法則（連続体力学など）を用いて計算し、隠されたリスクを浮き彫りにします。
 
-TLUは、初期の解析フェーズから「バランス（貸借一致）している状態」という要件を取り除くことで、この問題を解決します。会計データを配管内の流体のような「エネルギーのフロー」として再定義し、キルヒホッフの電流則や非平衡熱力学といった物理法則を適用することで、不完全または「壊れた」データセットからでも、企業という有機体の真の財務ダイナミクスを計算します。
+## 🤖 AIによるメタ診断（AI Autonomous Auditing）
 
-## 🤖 認知的トライアド（AIによる自律監査）
+TLUの最大の価値は、単なる可視化ツールではなく、**LLM（大規模言語モデル）のための「物理演算エンジン」**として機能する点にあります。
 
-TLUは単なる視覚的なダッシュボード・ツールではありません。その究極の価値は、大規模言語モデル（LLM）のための「物理的処理系」として機能することにあります。
+付属の [LLMメタ診断マニュアル](docs/LLM_Diagnostic_Manual.md) を読み込ませて数理解析結果データを分析させることで、あらゆるLLMが「プロの監査役」として機能します。AIは、TLUが出力した物理数学に基づいた指標（スペクトル半径や自由エネルギーなど）と、従来の財務諸表（B/S、P/L）を照らし合わせ、ハルシネーション（AIの幻覚）を起こすことなく、監査法人レベルのより客観的なレポートを自動生成します。
 
-[**LLM メタ診断マニュアル**](./LLM_Diagnostic_Manual.md)を読み込ませることで、あらゆるLLM（ChatGPT, Claude, Geminiなど）を即座に「メタ診断専門の病理検査技師」へと変貌させることができます。このマニュアルには、AIがハルシネーションを起こすことなく、高次元の物理的指標（スペクトル半径や自由エネルギーなど）を取り込み、従来の財務諸表（B/S, P/L）と突合して、公認会計士レベルの人間が読める「検査レポート（Laboratory Findings）」を出力するための、厳格な階層型論理フレームワークが提供されています。
+## 理論的背景：なぜ「物理数学」を用いるのか
 
-実際の英文監査レポートについては、`samples/` ディレクトリを参照してください！
+会計データに対して物理数学モデルを適用することについて、「企業は物理的な質量や摩擦を持っていない」という批判があるかもしれません。しかし、TLUが利用しているのは物理学そのものではなく、**物理現象を記述するために発展した「物理数学」という強力な数学的抽象化**です。
 
-## 理論的基盤：連成振動ネットワークとしての元帳
+TLUは、企業の取引ネットワークを「個別の質量（資金規模）」と「バネ（取引関係）」と「ダンパー（時間的遅延）」が連結されたネットワークとみなして計算します。
 
-会計に物理方程式を適用することに対する一般的な批判として、「元帳は文字通りの物理的質量や摩擦を持たない」というカテゴリーエラーのリスクが挙げられます。しかし、TLUの理論的基盤は文字通りの物理学にあるのではなく、**連続体力学と連成振動（Coupled Oscillators）**という普遍的に適用される数学的抽象化にあります。
+* **質量（Inertia）：** 特定の口座や部門が持つ、資金の滞留規模や変化への強さ。
+* **剛性（Stiffness / バネ）：** 「売上」から「売掛金」が発生するような、取引経路の構造的な強さや確実性。
+* **粘性（Viscosity / 摩擦）：** 資金回収の遅延や、手続きによる時間的な摩擦。
 
-TLUは、組織に対して全く同じ数学的に厳密な抽象化を適用します：
-
-* **質量（$M$）/ 慣性**: ポテンシャルエネルギーを蓄積し、突然の状態変化に抵抗する口座の容量（過去の取引ボリュームやボラティリティに基づく）。
-* **剛性（$K$）**: 取引チャネルの構造的強度と決定論的な因果関係（例：売上 $\to$ 売上債権）。
-* **粘性・摩擦（$C$）**: 取引フローに内在する時間的摩擦、散逸、および決済の遅延。
-
-組織を**離散的な弾性体のネットワーク**として扱うことで、TLUは運動方程式（$M\ddot{x} + C\dot{x} + Kx = F$）を正当に適用し、外部からの財務的ショック（アノマリー、改竄、市場の変化）がビジネス構造を通じてどのように伝播、共鳴、そして減衰するかを計算します。TLUは「企業がニュートンの法則に従う」と主張しているわけではなく、従来の会計というレントゲンでは見逃してしまう巧妙な隠蔽工作を浮き上がらせるための、極めて感度の高い「処理系（Physics-Informed Feature Extractor）」として機能します。
-![Mass-Spring-Damper-Modle](../readme_plots/Mass-Spring-Damper-Modle.jpg)
+このネットワークに対して運動方程式を適用することで、「外部からのショック（不正や市場の変化）」が組織内にどう波及し、どこで目詰まりを起こすかを正確に計算・検知します。企業がニュートン力学に従うわけではなく、物理数学のモデルを超高感度な「異常検知センサー」として活用しているのです。
 
 ---
 
-## コア哲学とアーキテクチャ (Ver 8.0.0)
+## 主要な可視化ダッシュボードの解説
 
-TLUは巨大なモノリスを避け、単一責任のフィルター群を標準ストリームで接続しています。
+TLUは、複雑な数理解析の結果を直感的なダッシュボードとして出力します（ダーク、ライト、カラーブラインド対応テーマを完備しています）。
 
-* **ローカル依存性ゼロ:** すべての解析エンジンはコンテナ内に完全に隔離されています。
-* **フェイルファスト UX:** データの不整合が検出された場合、暗黙のフォールバックを行わず、システムは直ちに停止します。
-* **宣言的実験制御（SSOT）:** すべての実験条件は単一の `workspace/config/_sys_params.csv` で集中的に定義され、絶対的な透明性を保証します。
-* **イミュータブル・アーカイブ:** 完了時、実行環境全体をアーカイブし、いつでも全く同じ数学的条件を再現できます。
+### 1. マクロ・フォレンジック・ダッシュボード（システム全体の異常検知）
 
-### パイプラインの各フェーズ
+システム全体の「質量保存の法則」の違反や、統計的なカオス状態を検知します。
 
-* **Phase 0: 前処理:** ソースデータをクレンジングし、方向性のあるフラックス（流量）フォーマットへと**事前集約**します。
-* **Phase 1: 伝統的会計（IR）:** 人間のアナリストとの**比較衡量**のベースラインとして、標準的な B/S と P/L を自動生成します。
-* **Phase 3: 射影（Projection）:** ドメインの語彙を取り除き、データを純粋なテンソル空間（COOストリーム）に**射影**します。
-* **Phase 4: コア解析:** 物理パラダイムに基づく純粋な数学的フィルター群の処理系です。
-* **Phase 5: プレゼンテーション:** ダッシュボードのレンダリング。
-* **Phase 6: オーケストレーション:** パイプライン制御と監査証跡の保存。
+* **Residual（質量漏れ）：** システムから資金が不自然に消滅・発生していないか（横領や架空計上）を検知します。
+* **Z-Score：** 取引ネットワーク全体の統計的な異常度（ショック）を示します。
+![002_2_1__macro_forensics_dashboard](../readme_plots/002_2_1__macro_forensics_dashboard.png)
 
-## 視覚的ショーケース（実証的証拠）
+### 2. 3D マイクロ・フォレンジック（局所的な異常箇所の特定）
 
-### 000_ 古典力学および固体力学
-組織の「脈動」と「結合の強さ」を観察します。TLUは純粋なフラックスから速度と加速度を計算し、過去の活動規模から慣性と**粘性（摩擦）**を推定して、それらを3D曲面（Surface）や位相空間にプロットします。
+マクロな波のうねりと、ミクロな異常（鋭いスパイク）を同時に視覚的に把握するための3Dサーフェスグラフです。
 
-**💡 3D曲面（Surface）の意味論（Semantics）:**
-なぜTLUはこれらの物理指標を3D曲面（X軸: 時間、Y軸: 勘定科目/ノード、Z軸: 物理指標の高さと色）としてマッピングするのでしょうか？ それは、人間の監査役が一目で**「マクロな全体の推移（大きなうねり）」と「ミクロな局所的変動（鋭いスパイク）」を同時に直感的に把握できるようにするため**です。
-元々の会計帳簿のデータは、物理的なレンズを通すことで以下のような全く新しい特徴を浮かび上がらせます：
-* **質量（Mass / Inertia）:** 過去の取引ボリュームや容量の「蓄積」を表します。「重い」ノード（巨大なキャッシュプールや主要な売上基盤など）は慣性が大きく、ちょっとやそっとのショックでは動じません。質量の突然の減少は、構造的な損失を意味します。
-* **剛性（Stiffness）:** 口座間の「決定論的な結合の強さ」を表します。売上が上がれば必ず売掛金が上がるような、ガッチリと固定されたプロセスは「剛性が高い」と表現されます。この硬い曲面が突然崩落した場合、ビジネスプロセスが根本から破損したこと（異常）を意味します。
-* **粘性・摩擦（Viscosity）:** 資金フローにおける「時間的な遅延や摩擦」を表します。売掛金の回収が遅れている（滞留している）箇所や、承認プロセスで資金が淀んでいる箇所は摩擦が高まり、3D曲面上に「ドロドロとした抵抗の隆起」として視覚的に噴出します。
+* **Z-Score 3D Surface:** 平坦なネットワーク上に、突如として「明るい黄緑色（Yellow-Green）」の鋭いピークが出現した場合、その特定の口座・日付において強烈な異常（不正操作など）が発生していることをピンポイントで特定します。
+![002_2_2_2__micro_Z_Score_3d_surface](../readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
 
-![1_3_1__3d_dynamics_velocity](../readme_plots/000_1_1__3d_dynamics_velocity.png)
-![1_3_2__3d_dynamics_acceleration](../readme_plots/000_1_2__3d_dynamics_acceleration.png)
-![1_3_3__3d_dynamics_inertia](../readme_plots/000_1_3__3d_dynamics_inertia.png)
-![1_3_4__3d_dynamics_viscosity](../readme_plots/000_1_4__3d_dynamics_viscosity.png)
-![1_3_8__phase_portrait_3d](../readme_plots/000_1_8__phase_portrait_3d.png)
+### 3. システム安定性（スペクトル半径と循環取引の検知）
 
-### 主軸（PCA）
-共分散行列の固有値解析により、ネットワークの主軸を抽出します。これは組織のリソースが変動する主要な方向（次元）を明らかにします。
-![000_2_2__principal_axes_ratio](../readme_plots/000_2_2__principal_axes_ratio.png)
-
-### 001_ 熱力学および統計力学
-全体的な自由エネルギーとエントロピーを測定します。エントロピーが高く、仕事の出力が低い場合は、システム内に「熱（散逸コスト/無駄）」が蓄積していることを示します。
-
-![1_3_5__3d_dynamics_entropy](../readme_plots/001_1_2_1__3d_local_entropy.png)
-![1_3_6__3d_dynamics_complexity](../readme_plots/001_1_2_5__local_thermo_complexity.png)
-![1_5_1__thermodynamics_dashboard](../readme_plots/001_1_1__thermodynamics_dashboard.png)
-![1_5_2__thermodynamics_energy_stack](../readme_plots/001_1_2__thermodynamics_energy_stack.png)
-![1_5_3__thermodynamics_ts_diagram](../readme_plots/001_1_3__thermodynamics_ts_diagram.png)
-
-### 002_ 情報幾何学およびフォレンジック
-データの「血管」に潜むアノマリーの仮面を剥ぎ取ります。TLUはZ-Scoreに基づいてエッジのストレスを計算し、構造的な歪みをネットワーク・グラフとして可視化します。また、SVDを用いてネットワークの有効ランクを計算し、マクロな**相転移（レジームチェンジ）**の早期警戒シグナルとして機能します。
-
-![1_12__network_topology t 00000](../readme_plots/002_1_2__network_topology.t.00000.png)
-![1_12__network_topology t 00001](../readme_plots/002_1_2__network_topology.t.00001.png)
-![1_12__network_topology t 00002](../readme_plots/002_1_2__network_topology.t.00002.png)
-![1_12__network_topology t 00003](../readme_plots/002_1_2__network_topology.t.00003.png)
-![002_1_3__manifold_dimensionality](../readme_plots/002_1_3__manifold_dimensionality.png)
-
-### 003_ 応用運動学およびロボット工学
-順運動学による順運動学のシミュレーション、および逆運動学を用いたターゲット介入計算をサポートします。
-
-![1_1__3d_kinematics_fk](../readme_plots/003_1_1__3d_kinematics_fk.png)
-![1_2__3d_kinematics_ik](../readme_plots/003_1_2__3d_kinematics_ik.png)
-
-### 004_ 制御工学およびシステム工学
-最適レギュレータ（LQR）理論を使用して、組織の摩擦を最小限に抑えながら目標状態に到達するための最適なリソース配分軌道を計算します。
-また、遷移行列の最大固有値（**スペクトル半径/スペクトル半径**）を計算することで、位相幾何学的なサイクル（**循環取引**による帳簿改竄のループなど）を検出します。
-
-![1_7_2__control_error_convergence](../readme_plots/004_1_2__control_error_convergence.png)
-![1_7_3__control_lqr_performance_space](../readme_plots/004_1_3__control_lqr_performance_space.png)
+* **Spectral Radius（スペクトル半径）:** 取引ネットワーク内に「閉じたループ（循環取引）」が形成されていないかを監視します。赤色の軌跡線が1.0のオレンジ色の閾値線に近づく、あるいは突き抜けた場合、システムが人為的な取引ループによって異常膨張していることを数学的に証明します。
 ![004_1_2__system_stability](../readme_plots/004_1_2__system_stability.png)
 
----
+### 4. 熱力学エネルギー・スタック（組織の疲弊と資金の枯渇）
 
-## サンプル・データセットとハンズオン・チュートリアル
-
-混在するシグナルによる認知負荷なしに、TLUが実際どのように機能するかを理解していただくために、**6つの独立したサンプル・データセット**のスイートを提供しています。これらは、循環取引、資金着服（横領）、仕訳エラーなどの病理状態をシミュレートしています。
-
-* [`samples/Sample_0_Healthy/`](../../samples/Sample_0_Healthy/): 完全にバランスの取れたベースライン。
-* [`samples/Sample_1_Wash_Trade/`](../../samples/Sample_1_Wash_Trade/): 発散リスク（固有値）と循環取引について解説。
-* [`samples/Sample_2_Embezzlement_Leak/`](../../samples/Sample_2_Embezzlement_Leak/): 資金着服と熱力学（自由エネルギー）について解説。
-* [`samples/Sample_3_Unbalanced_Mistake/`](../../samples/Sample_3_Unbalanced_Mistake/): マクロ・フォレンジック（保存則）とアノマリーについて解説。
-* [`samples/Sample_4_Composite_Chaos/`](../../samples/Sample_4_Composite_Chaos/): すべての異常が混在した現実世界のカオス。
-* [`samples/Sample_5_Kyoto_Traffic/`](../../samples/Sample_5_Kyoto_Traffic/): 純粋な空間ネットワークの対照実験。
-* [`samples/Sample_6_Market_Bipartite_Weekly/`](../../samples/Sample_6_Market_Bipartite_Weekly/): 循環取引を検出する株式市場監査（二部グラフ）。
-* [`samples/Sample_7_Market_Users_Weekly/`](../../samples/Sample_7_Market_Users_Weekly/): 結託シンジケートを暴くトレーダー・ネットワーク監査。
-* 🔍 **メタ比較 (金融):** [株式市場向けメタ比較レポート](../../samples/Meta_Comparison_Report_for_Stock_Market.md) を参照。
-* [`samples/Sample_8_fMRI_Stroke/`](../../samples/Sample_8_fMRI_Stroke/): 生体ネットワーク監査（fMRI: 脳梗塞）。
-* [`samples/Sample_9_fMRI_Seizure/`](../../samples/Sample_9_fMRI_Seizure/): 生体ネットワーク監査（fMRI: てんかん性発作）。
-* 🔍 **メタ比較 (生物学):** [生体ネットワーク向けメタ比較レポート](../../samples/Meta_Comparison_Report_for_Biological_Networks.md) を参照。
+* **自由エネルギー（Free Energy）:** 組織が健全に活動するための「余力」を示します。白色の線（自由エネルギー）が急降下している場合、不正や無駄な摩擦によってシステムが機能不全に陥っていることを視覚的に証明します。
+![001_1_2__thermodynamics_energy_stack](../readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 ---
 
-## ドキュメント（ハブ＆スポーク）
+## 実行環境と利用手順（Quick Start）
 
-詳細な数学的論理、運用プロトコル、および API リファレンスについては、以下の「スポーク」マニュアル（和訳版）を参照してください：
+TLUはDockerコンテナとして完全に隔離された環境で動作します（ホストOSを汚染しません）。データの不整合を検知した場合は直ちに処理を停止する「Fail-Fast」思想に基づいて設計されており、誤ったデータに基づく経営判断を物理的に防ぎます。
 
-* [01_System_Philosophy_and_Operations.md](./architecture/01_System_Philosophy_and_Operations.md)
-* [02_Data_Topology_and_Projection.md](./architecture/02_Data_Topology_and_Projection.md)
-* [03_Visualizer_and_Theme_Engine.md](./architecture/03_Visualizer_and_Theme_Engine.md)
-* [04_Simulation_and_TDD.md](./architecture/04_Simulation_and_TDD.md)
-* [05_Meta_Analytical_Methodology_and_AI_Collaboration.md](./architecture/05_Meta_Analytical_Methodology_and_AI_Collaboration.md)
-* [06_Dummy_Data_Generators.md](./architecture/06_Dummy_Data_Generators.md)
-* [07_Theoretical_Limits_and_Edge_Effects.md](./architecture/07_Theoretical_Limits_and_Edge_Effects.md)
+### 事前準備
 
-* [000_Classical_Mechanics.md](./physics/000_Classical_Mechanics.md)
-* [001_Thermodynamics_and_Fluctuations.md](./physics/001_Thermodynamics_and_Fluctuations.md)
-* [002_Information_Geometry_and_Forensics.md](./physics/002_Information_Geometry_and_Forensics.md)
-* [003_Applied_Kinematics.md](./physics/003_Applied_Kinematics.md)
-* [004_Control_Theory_and_Systems_Engineering.md](./physics/004_Control_Theory_and_Systems_Engineering.md)
-* [005_Signal_Processing_and_Wave_Mechanics.md](./physics/005_Signal_Processing_and_Wave_Mechanics.md)
+対象となるデータは `workspace/` ディレクトリ内に配置します。
 
-* [Graph_Interpretation_Guide.md](./interpretations/TLU_Graph_Interpretation_Guide.md)
-* [LLM_Diagnostic_Manual.md](./LLM_Diagnostic_Manual.md)
+1. **入力データ (`workspace/input_stream/`):** 会計ソフト等から出力された、時系列の仕訳データ（CSV形式）。
+2. **勘定科目マッピング (`workspace/config/_account_mapping.csv`):** 固有の勘定科目名を、TLUの内部カテゴリ（Asset, Liability等）に紐付ける辞書データ。
 
----
-
-## ユーザーが用意すべきもの (User Prerequisites)
-
-TLUのディレクトリ構成は一般的なGNUシステム（`src/`、`bin/`、`docs/`等）に準拠しています。一般ユーザーが自分自身のデータでTLUを動作させるために用意・編集すべきファイルは、すべて `workspace/` ディレクトリ内に集約されています。
-
-1. **生の仕訳データ (Input Data)**
-   * **場所:** `workspace/input_stream/` (例: `Dummy_Journal_Stream.csv`)
-   * **内容:** 会計ソフト等からエクスポートした時系列の仕訳データ（CSV形式）。最低限「日付 (Trans_Date)」「勘定科目名 (Account_Name)」「借方金額 (Debit)」「貸方金額 (Credit)」の列が含まれている必要があります。
-
-2. **勘定科目のマッピング設定ファイル**
-   * **場所:** `workspace/config/_account_mapping.csv`
-   * **内容:** ユーザー独自の勘定科目名（例：「みずほ銀行口座」）を、TLUが理解できる標準カテゴリ（`Asset`, `Liability`, `Revenue`, `Expense` 等）に紐付けるための設定ファイルです。
-
-※ 詳細なシミュレーション設定（時間粒度や物理係数）は `workspace/config/_sys_params.csv` で行いますが、最初はデフォルトのままで動作します。
-
----
-
-## クイックスタート
-
-TLUは完全にコンテナ化されています。数分でゼロから完全な3D分析ダッシュボードを構築できます。
+### 実行コマンド
 
 ```bash
-# 1. リポジトリをクローン
+# 1. リポジトリのクローン
 git clone https://github.com/renpoo/TLU.git
 cd TLU
 
-# 2. 環境を立ち上げる（ローカルへの依存ゼロ）
+# 2. Docker環境の起動
 docker compose up -d
 
-# 3. 生成されたサンプルデータでフルパイプラインを実行
+# 3. パイプラインの全自動実行（サンプルデータの生成からグラフ描画まで）
 bash bin/batch_generate_dummy_journal_data.sh
 bash bin/batch_processing.sh
 bash bin/batch_visualize_graphs.sh
 
-# 4. 診断結果を確認する
+# 4. AIメタ診断レポートの確認
 cat workspace/output_data/_99_diagnosis_report.md
-
-# 5. 完全な再現性のために実験をスナップショット保存する
-bash bin/archive_experimental_run.sh
-
-# 6. 同梱されている特定サンプルの実行（グラフの生成）
-# パッケージには様々な異常状態を示すサンプルが含まれていますが、ファイルサイズ削減のためグラフ画像は同梱されていません。
-# サンプルのグラフを見るには、ルートディレクトリから `--target_env` を指定して以下のコマンドを実行します。
-# 例: 循環取引（Wash Trade）のサンプルを生成・可視化する
-bash bin/batch_processing.sh --target_env "samples/Sample_1_Wash_Trade"
-bash bin/batch_visualize_graphs.sh --target_env "samples/Sample_1_Wash_Trade"
-# 実行後、`samples/Sample_1_Wash_Trade/output_plots/` にグラフが生成されます。
 ```
 
-# ライセンス: AGPL-3.0
-このプロジェクトは数学的透明性の遺産です。AGPL-3.0 ライセンスの下、コアロジックがオープンであり、コミュニティによって検証可能であることを保証します。
+## サンプルデータについて
 
-# 開発: Renpoo & Google Gemini
-TLUは、XPおよび TDD プロトコルを厳格に遵守して開発されています。
+TLUには、実務における異常パターンをシミュレートした「独立したサンプルデータ」が同梱されています（`samples/` ディレクトリ）。各サンプルには、どのような異常（循環取引、横領など）が含まれているかを解説した詳細な診断レポート（`README.md`）が用意されています。
+
+* `Sample_0_Healthy` : 完全に健全なベースライン
+* `Sample_1_Wash_Trade` : 循環取引（システム安定性の低下）
+* `Sample_2_Embezzlement_Leak` : 資金の横領（自由エネルギーの枯渇）
+* `Sample_3_Unbalanced_Mistake` : 仕訳ミス・帳簿操作（質量保存の破綻）
+* `Sample_4_Composite_Chaos` : 全異常が混在したカオス状態
+* `Sample_5_Kyoto_Traffic` : （対照実験用）空間的な交通ネットワーク
+* `Sample_6_Market_Bipartite_Weekly` : 株式市場の監査（循環取引の検知）
+* `Sample_7_Market_Users_Weekly` : トレーダー・ネットワークの監査（共謀関係の暴露）
+* `Sample_8_fMRI_Stroke` : 生体ネットワークの監査（脳卒中の検知）
+* `Sample_9_fMRI_Seizure` : 生体ネットワークの監査（てんかん発作の検知）
+
+特定のサンプルのグラフを生成する場合は、以下のように `--target_env` を指定して実行します。
+
+```bash
+bash bin/batch_processing.sh --target_env "samples/Sample_1_Wash_Trade"
+bash bin/batch_visualize_graphs.sh --target_env "samples/Sample_1_Wash_Trade"
+```
+
+## ドキュメント（Hub & Spoke）
+
+より詳細な数学的ロジックや操作手順については、以下のドキュメント群（Spoke）をご参照ください。
+
+* [01_System_Philosophy_and_Operations.md](docs/architecture/01_System_Philosophy_and_Operations.md)
+* [02_Data_Topology_and_Projection.md](docs/architecture/02_Data_Topology_and_Projection.md)
+* [03_Visualizer_and_Theme_Engine.md](docs/architecture/03_Visualizer_and_Theme_Engine.md)
+* [LLM_Diagnostic_Manual.md](docs/LLM_Diagnostic_Manual.md)
+
+---
+
+# License: AGPL-3.0
+
+このプロジェクトは数学的透明性を保証するための遺産です。コアロジックをオープンにし、コミュニティによる検証可能性を担保するために AGPL-3.0 ライセンスを採用しています。
+
+# Built by Renpoo & Google Gemini
+
+TLUは、XP（エクストリーム・プログラミング）およびTDD（テスト駆動開発）プロトコルに厳格に従って開発されており、すべてのコア数学関数は理論的なエッジケースに対して検証されています。

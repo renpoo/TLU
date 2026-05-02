@@ -1,34 +1,34 @@
-# TLU Meta-Analysis Report (Laboratory Findings)
+# TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
-<<<<<<< Updated upstream
 **Target Environment:** `samples/Sample_8_fMRI_Stroke/workspace`
 **Date Analyzed:** 2026-04-28 14:31:26
-=======
-**Target Environment:** `samples/Sample_8_fMRI_Stroke`
-**Date Analyzed:** 2026-05-01 23:51:04
->>>>>>> Stashed changes
 
 ## 1. Final Diagnosis
 
 ### ⚠️ COMPOSITE PATHOLOGY DETECTED
+
 The system is suffering from multiple overlapping structural failures.
 
 ### 🟠 Topological Feedback Loop (Wash Trade)
+
 - **Severity:** HIGH
 - **Evidence:** Spectral Radius reached 1.0000 (Threshold: 0.9).
 - **Interpretation:** An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading).
 
 ### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
+
 - **Severity:** HIGH
 - **Evidence:** Relative Free Energy Ratio sank to -2.1742 (Threshold: -0.1). Raw F: -11642.17
 - **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
 
 ### 🟡 Local Pathological Stress (Micro Singularity)
+
 - **Severity:** MEDIUM
-- **Evidence:** Maximum local Z-Score reached 195.21 (Threshold: 3.0).
+- **Evidence:** Maximum local Z-Score reached 195.21 (Threshold: 3.0). Peak Location: Node: Motor_Cortex at Time: 2024-01-01T10:00:20.
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
+
 ## 2. Scale-Invariant Diagnostic Metrics
 
 | Physical Domain | Extracted Metric | Value | Threshold |
@@ -43,13 +43,8 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-<<<<<<< Updated upstream
   "timestamp": "2026-04-28T14:31:26.948736",
   "environment": "samples/Sample_8_fMRI_Stroke/workspace",
-=======
-  "timestamp": "2026-05-01T23:51:04.722335",
-  "environment": "samples/Sample_8_fMRI_Stroke",
->>>>>>> Stashed changes
   "physics_metrics": {
     "max_abs_residual": 0.0,
     "mean_gross_activity": 9415.191333333334,
@@ -57,7 +52,9 @@ The system is suffering from multiple overlapping structural failures.
     "max_spectral": 1.0,
     "min_free_energy": -11642.1723,
     "min_relative_free_energy": -2.1742429540265777,
-    "max_z_score": 195.2069
+    "max_z_score": 195.2069,
+    "max_leak_location": "Time: 2024-01-01T10:00:00",
+    "max_z_score_location": "Node: Motor_Cortex at Time: 2024-01-01T10:00:20"
   },
   "detected_pathologies": [
     {
@@ -75,7 +72,7 @@ The system is suffering from multiple overlapping structural failures.
     {
       "pathology": "Local Pathological Stress (Micro Singularity)",
       "severity": "MEDIUM",
-      "evidence": "Maximum local Z-Score reached 195.21 (Threshold: 3.0).",
+      "evidence": "Maximum local Z-Score reached 195.21 (Threshold: 3.0). Peak Location: Node: Motor_Cortex at Time: 2024-01-01T10:00:20.",
       "interpretation": "Specific nodes (departments) are experiencing statistical strain far beyond their historical norm."
     }
   ],

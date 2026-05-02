@@ -1,20 +1,18 @@
-# TLU Meta-Analysis Report (Laboratory Findings)
+# TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_0_Healthy`
-<<<<<<< Updated upstream
 **Date Analyzed:** 2026-04-28 14:28:35
-=======
-**Date Analyzed:** 2026-05-01 23:47:56
->>>>>>> Stashed changes
 
 ## 1. Final Diagnosis
 
 ### 🟠 Local Pathological Stress (Micro Singularity)
+
 - **Severity:** HIGH
-- **Evidence:** Maximum local Z-Score reached 121.13 (Threshold: 3.0).
+- **Evidence:** Maximum local Z-Score reached 121.13 (Threshold: 3.0). Peak Location: Node: ACC_Cash at Time: 2020-W04.
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
+
 ## 2. Scale-Invariant Diagnostic Metrics
 
 | Physical Domain | Extracted Metric | Value | Threshold |
@@ -29,11 +27,7 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-<<<<<<< Updated upstream
   "timestamp": "2026-04-28T14:28:35.443233",
-=======
-  "timestamp": "2026-05-01T23:47:56.314630",
->>>>>>> Stashed changes
   "environment": "samples/Sample_0_Healthy",
   "physics_metrics": {
     "max_abs_residual": 0.0,
@@ -42,13 +36,15 @@
     "max_spectral": 0.0,
     "min_free_energy": -3569.5269,
     "min_relative_free_energy": -0.057094178533006565,
-    "max_z_score": 121.1314
+    "max_z_score": 121.1314,
+    "max_leak_location": "Time: 2020-W01",
+    "max_z_score_location": "Node: ACC_Cash at Time: 2020-W04"
   },
   "detected_pathologies": [
     {
       "pathology": "Local Pathological Stress (Micro Singularity)",
       "severity": "HIGH",
-      "evidence": "Maximum local Z-Score reached 121.13 (Threshold: 3.0).",
+      "evidence": "Maximum local Z-Score reached 121.13 (Threshold: 3.0). Peak Location: Node: ACC_Cash at Time: 2020-W04.",
       "interpretation": "Specific nodes (departments) are experiencing statistical strain far beyond their historical norm."
     }
   ],

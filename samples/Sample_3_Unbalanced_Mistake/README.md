@@ -43,7 +43,7 @@ According to the LLM Diagnostic Manual (**【Tier 2 Ultimate Veto】**), advance
 
 * **Micro Singularity (Max Local Z-Score: 121.13):** 
   A normal Z-score anomaly is around 3.0 to 5.0. A Z-score of **121.13** is a mathematical impossibility in a healthy distribution. It acts as a "Micro Singularity"—an infinite stress point pinpointing the exact spatial coordinate (the specific account and time step) where the physical law of conservation was shattered. The network is essentially tearing itself apart at this node.
-  ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+  ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
   * **💡 How to Read the Graph (Visual Cues):** On the `RdBu_r` heatmap, look for the single, impossibly bright red cell. This pinpoints the exact account (`UNKNOWN_LEAK`) and time step where the universe's mass conservation law was shattered.
   
 * **Topological Stability (Max Spectral Radius: 0.000):**

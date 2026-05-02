@@ -47,7 +47,7 @@ def main():
     if df.empty: sys.exit(0)
 
     # Take the time average
-    df_mean = df.groupby('node_idx').mean().reset_index()
+    df_mean = df.groupby('node_idx').mean(numeric_only=True).reset_index()
 
     # Convert viscosity (C) to logarithmic scale
     df_mean['log_C'] = np.log10(np.where(df_mean['viscosity_C'] <= 0, 1e-6, df_mean['viscosity_C']))

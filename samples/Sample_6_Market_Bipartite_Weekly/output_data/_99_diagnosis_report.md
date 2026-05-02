@@ -1,34 +1,34 @@
-# TLU Meta-Analysis Report (Laboratory Findings)
+# TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
-<<<<<<< Updated upstream
 **Target Environment:** `samples/Sample_6_Market_Bipartite_Weekly/workspace`
 **Date Analyzed:** 2026-04-28 14:30:43
-=======
-**Target Environment:** `samples/Sample_6_Market_Bipartite_Weekly`
-**Date Analyzed:** 2026-05-01 23:50:16
->>>>>>> Stashed changes
 
 ## 1. Final Diagnosis
 
 ### ⚠️ COMPOSITE PATHOLOGY DETECTED
+
 The system is suffering from multiple overlapping structural failures.
 
 ### 🟠 Topological Feedback Loop (Wash Trade)
+
 - **Severity:** HIGH
 - **Evidence:** Spectral Radius reached 1.0000 (Threshold: 0.9).
 - **Interpretation:** An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading).
 
 ### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
+
 - **Severity:** HIGH
 - **Evidence:** Relative Free Energy Ratio sank to -9.1393 (Threshold: -0.1). Raw F: -799559039.95
 - **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
 
 ### 🟡 Local Pathological Stress (Micro Singularity)
+
 - **Severity:** MEDIUM
-- **Evidence:** Maximum local Z-Score reached 44.07 (Threshold: 3.0).
+- **Evidence:** Maximum local Z-Score reached 44.07 (Threshold: 3.0). Peak Location: Node: USR_005 at Time: 2020-W03.
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
+
 ## 2. Scale-Invariant Diagnostic Metrics
 
 | Physical Domain | Extracted Metric | Value | Threshold |
@@ -43,13 +43,8 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-<<<<<<< Updated upstream
   "timestamp": "2026-04-28T14:30:43.166863",
   "environment": "samples/Sample_6_Market_Bipartite_Weekly/workspace",
-=======
-  "timestamp": "2026-05-01T23:50:16.902268",
-  "environment": "samples/Sample_6_Market_Bipartite_Weekly",
->>>>>>> Stashed changes
   "physics_metrics": {
     "max_abs_residual": 0.0,
     "mean_gross_activity": 130940216.1619231,
@@ -57,7 +52,9 @@ The system is suffering from multiple overlapping structural failures.
     "max_spectral": 1.0,
     "min_free_energy": -799559039.9461,
     "min_relative_free_energy": -9.139310461511887,
-    "max_z_score": 44.0676
+    "max_z_score": 44.0676,
+    "max_leak_location": "Time: 2020-W01",
+    "max_z_score_location": "Node: USR_005 at Time: 2020-W03"
   },
   "detected_pathologies": [
     {
@@ -75,7 +72,7 @@ The system is suffering from multiple overlapping structural failures.
     {
       "pathology": "Local Pathological Stress (Micro Singularity)",
       "severity": "MEDIUM",
-      "evidence": "Maximum local Z-Score reached 44.07 (Threshold: 3.0).",
+      "evidence": "Maximum local Z-Score reached 44.07 (Threshold: 3.0). Peak Location: Node: USR_005 at Time: 2020-W03.",
       "interpretation": "Specific nodes (departments) are experiencing statistical strain far beyond their historical norm."
     }
   ],

@@ -60,8 +60,9 @@ TLU offloads cognitive load through its advanced "Dark" visualization suite ("Li
 Observe the "pulse" and "stiffness" of your organization. TLU calculates **Velocity ($v$)** and **Acceleration ($a$)** from pure flux, estimates **Inertia (Virtual Mass)** and **Viscosity** from historical activity scales, and plots them as 3D surfaces and phase spaces.
 
 **💡 The Semantics of 3D Surfaces:**
-Why does TLU map these physical metrics onto 3D surfaces (with Time on the X-axis, Accounts/Nodes on the Y-axis, and the Metric on the Z-axis)? Because it allows human auditors to instantly perceive **both macro-systemic trends (broad waves/swells) and micro-localized anomalies (sharp spikes)** simultaneously. 
+Why does TLU map these physical metrics onto 3D surfaces (with Time on the X-axis, Accounts/Nodes on the Y-axis, and the Metric on the Z-axis)? Because it allows human auditors to instantly perceive **both macro-systemic trends (broad waves/swells) and micro-localized anomalies (sharp spikes)** simultaneously.
 By applying a physical lens to the original accounting ledger, the data reveals entirely new characteristics:
+
 * **Mass (Inertia):** Represents the historical "accumulation" and capacity of an account. A "heavy" node (like a massive cash pool or core sales base) has high inertia; it requires immense force to change its state. Sudden drops in mass indicate structural loss.
 * **Stiffness:** Represents the deterministic "coupling strength" between accounts. If Sales consistently and reliably generates Accounts Receivable, that channel is highly "stiff." If this rigid surface suddenly collapses, the business process is fundamentally broken.
 * **Viscosity (Friction):** Represents temporal delays and friction in the money flow. If AR collections are severely delayed or funds are bogged down in an approval process, the friction increases, visually erupting as a localized peak of "thick, resistant mud" on the 3D surface.

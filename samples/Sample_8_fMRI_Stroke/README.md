@@ -24,7 +24,7 @@ In this network (blood flow model), localized energy disruption and subsequent g
 * **Z-Score:** `195.21` (Threshold: 3.0)
 * **Analysis:** An extremely abnormal local stress has occurred, exceeding the anomaly detection threshold by approximately 65 times. This implies a **"complete deviation"** from the historical, statistical normal state in a specific region (node). It is definitive evidence of a physical vascular occlusion (blockage).
 
-![Z-Score Heatmap](plots/002_2_2_2__micro_Z_Score_heatmap.png)
+![Z-Score Heatmap](plots/002_2_2_2__micro_Z_Score_3d_surface.png)
 * **💡 How to Read the Graph (Visual Cues):** On the `RdBu_r` heatmap, look for the isolated cell glowing extremely bright red. This pinpoints the exact spatial coordinate of the mathematical singularity (the physical blood clot/occlusion).
 
 ### 🔋 2. Depletion of Thermodynamic Energy (Embezzlement/Leak)

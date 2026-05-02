@@ -48,7 +48,7 @@ Although the LLM Diagnostic Manual (**【Tier 2 Ultimate Veto】**) states that 
 
 * **Micro Singularity (Max Local Z-Score: 32.74):**
   The mathematical space is tearing. While not as extreme as Sample 3's isolated singularity, a Z-Score of 32.74 indicates severe, localized stress across multiple departments struggling to process the conflicting data realities.
-  ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+  ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
   * **💡 How to Read the Graph (Visual Cues):** The `RdBu_r` heatmap will show multiple bright red patches, indicating widespread, chaotic stress across various departments, not just a single point of failure.
 
 * **Financial Distortion:**

@@ -1,6 +1,6 @@
-node_idx,dominant_frequency,spectral_power
-0,0.0167,22039628.8101
-1,0.0333,18437386.1348
-2,0.0333,18231503.4349
-4,0.0333,18201272.6928
-3,0.0333,17870329.8882
+node_idx,node_label,dominant_frequency,spectral_power
+0,Motor_Cortex,0.0167,22039628.8101
+1,Parietal_Lobe,0.0333,18437386.1348
+2,Prefrontal_Cortex,0.0333,18231503.4349
+4,Visual_Cortex,0.0333,18201272.6928
+3,Temporal_Lobe,0.0333,17870329.8882

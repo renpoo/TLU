@@ -66,8 +66,8 @@
         },
         "colormaps": {
             "z_score_heatmap": "RdBu_r",
-            "kl_drift_map": "inferno",
-            "z_score_shock_map": "viridis"
+            "node_kl_drift": "inferno",
+            "node_univariate_z_score": "viridis"
         }
     },
     "forensics_cold": {
