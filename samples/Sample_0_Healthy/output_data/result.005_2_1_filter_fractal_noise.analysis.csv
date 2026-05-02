@@ -1,7 +1,7 @@
 node_idx,node_label,spectral_exponent_beta,noise_classification
 0,ACC_Accounts_Payable,0.0022,White Noise
-1,ACC_Inventory,1.7522,Brown Noise
-2,ACC_Cash,0.0556,White Noise
+1,ACC_Inventory,1.4236,Pink Noise
+2,ACC_Cash,0.0371,White Noise
 3,ACC_Travel_Exp,-0.3478,White Noise
 4,ACC_COGS,1.7319,Brown Noise
 5,ACC_Sales_Revenue,1.8257,Brown Noise

@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_0_Healthy`
-**Date Analyzed:** 2026-05-02 10:05:50
+**Date Analyzed:** 2026-05-02 20:04:21
 
 ## 1. Final Diagnosis
 
@@ -17,7 +17,7 @@
 |-----------------|------------------|-------|-----------|
 | Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 0.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| 0.8288 | < -0.1 |
+| Thermodynamics  | Relative Free Energy Ratio| 0.8436 | < -0.1 |
 | Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
@@ -25,15 +25,15 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-02T10:05:50.387554",
+  "timestamp": "2026-05-02T20:04:21.928360",
   "environment": "samples/Sample_0_Healthy",
   "physics_metrics": {
     "max_abs_residual": 0.0,
-    "mean_gross_activity": 1337387.234230769,
+    "mean_gross_activity": 1302063.825769231,
     "relative_leak_ratio": 0.0,
     "max_spectral": 0.0,
-    "min_free_energy": 85485.52,
-    "min_relative_free_energy": 0.8288111469064383,
+    "min_free_energy": 93251.36,
+    "min_relative_free_energy": 0.8435693397638316,
     "max_z_score": 0.0,
     "max_leak_location": "Time: 2020-W01"
   },
@@ -47,11 +47,11 @@
   ],
   "financial_baseline": {
     "week": "2020-W52",
-    "assets": 229102.63999999908,
-    "liabilities": 181671.3700000001,
+    "assets": 216622.47999999998,
+    "liabilities": 169191.21000000084,
     "equity": 0.0,
     "net_income": 47431.269999999786,
-    "total_liab_eq": 229102.6399999999,
+    "total_liab_eq": 216622.48000000062,
     "revenue": 955157.5599999998,
     "expense": 907726.29,
     "is_balanced": true,
@@ -59,7 +59,7 @@
       [
         "ACC_Accounts_Payable",
         "Liability",
-        74067.95000000007
+        111101.96000000014
       ],
       [
         "ACC_Accounts_Receivable",
@@ -68,13 +68,13 @@
       ],
       [
         "ACC_Cash",
-        "Asset",
-        113793.36999999918
+        "Liability (Short/Overdraft)",
+        58089.2500000007
       ],
       [
         "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        107603.42000000004
+        "Asset",
+        101313.21000000008
       ]
     ],
     "pl_items": [
@@ -108,9 +108,9 @@
       [
         "ACC_Accounts_Payable",
         "Liability",
-        343765.39,
-        417833.3400000001,
-        74067.95000000007
+        515648.01000000007,
+        626749.9700000002,
+        111101.96000000014
       ],
       [
         "ACC_Accounts_Receivable",
@@ -130,15 +130,15 @@
         "ACC_Cash",
         "Asset",
         839848.2899999999,
-        726054.9200000007,
-        113793.36999999918
+        897937.5400000006,
+        -58089.2500000007
       ],
       [
         "ACC_Inventory",
         "Asset",
-        417833.3400000001,
+        626749.9700000002,
         525436.7600000001,
-        -107603.42000000004
+        101313.21000000008
       ],
       [
         "ACC_Payroll_Exp",
