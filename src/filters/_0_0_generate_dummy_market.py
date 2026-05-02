@@ -21,6 +21,7 @@ def setup_argparser() -> argparse.ArgumentParser:
     parser.add_argument("--num-stocks", type=int, default=5, help="Number of stocks (M)")
     parser.add_argument("--wash-trade-prob", type=float, default=0.0, help="Probability of a Wash Trade event per day")
     parser.add_argument("--pump-dump-prob", type=float, default=0.0, help="Probability of a Pump & Dump event per day")
+    parser.add_argument("--out-initial-state", type=str, default="", help="Path to write the initial state (Day 0) CSV")
     return parser
 
 def generate_stream(args):
@@ -48,6 +49,17 @@ def generate_stream(args):
         for s in stocks:
             if random.random() > 0.5:
                 user_portfolio[u][s] = random.randint(100, 5000)
+
+    # Export Initial State if requested (Day 0)
+    if args.out_initial_state:
+        with open(args.out_initial_state, "w", encoding="utf-8") as f:
+            state_writer = csv.writer(f, lineterminator='\n')
+            state_writer.writerow(["node_label", "initial_X"])
+            for u in users:
+                state_writer.writerow([u, f"{user_cash[u]:.2f}"])
+            for s in stocks:
+                total_stock = sum(user_portfolio[u][s] for u in users)
+                state_writer.writerow([s, f"{total_stock:.2f}"])
 
     # Simple Random Walk params
     volatility = 0.02

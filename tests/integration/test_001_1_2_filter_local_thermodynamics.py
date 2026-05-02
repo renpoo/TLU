@@ -16,17 +16,19 @@ class TestFilterLocalThermo(unittest.TestCase):
             [0.0, 10.0],
             [0.0,  0.0]
         ])
-        q_history = []
+        v_history = []
+        X_history = []
+        X_initial = np.array([0.0, 0.0])
         t_idx = 0
 
         # Act
-        records, q_current = run_local_thermo_analysis(
-            t_idx, T_slice, q_history
+        records, v_current, X_current = run_local_thermo_analysis(
+            t_idx, T_slice, v_history, X_history, X_initial
         )
 
         # Assert
         self.assertEqual(len(records), N)
-        self.assertEqual(q_current.shape, (2,))
+        self.assertEqual(v_current.shape, (2,))
         
         # Record structure: [t_idx, node_idx, u_i, s_i, t_i, grad_t_i]
         node0_rec = records[0]
@@ -36,7 +38,7 @@ class TestFilterLocalThermo(unittest.TestCase):
         self.assertTrue(isinstance(node0_rec[2], str))
 
         # Proof that the passed list did not mutate
-        self.assertEqual(len(q_history), 0)
+        self.assertEqual(len(v_history), 0)
 
     def test_local_thermo_isolated_node(self):
         """[Red->Green] Test metrics evaluation safely returning limits mapping totally isolated topologies without NaN exceptions"""
@@ -48,7 +50,8 @@ class TestFilterLocalThermo(unittest.TestCase):
             [0.0,  0.0, 0.0]
         ])
         t_idx = 0
-        records, q_current = run_local_thermo_analysis(t_idx, T_slice, [])
+        X_initial = np.array([0.0, 0.0, 0.0])
+        records, v_current, X_current = run_local_thermo_analysis(t_idx, T_slice, [], [], X_initial)
         self.assertEqual(len(records), N)
         node2_rec = records[2]
         self.assertEqual(node2_rec[1], 2)

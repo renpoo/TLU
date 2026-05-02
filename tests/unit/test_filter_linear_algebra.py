@@ -133,7 +133,8 @@ class TestManifoldDimensionalityFilter(unittest.TestCase):
         records = run_manifold_dimensionality_analysis(
             t_idx=5, 
             T_slice=T_slice,
-            top_k=2
+            top_k=2,
+            threshold=1e-6
         )
         
         self.assertEqual(len(records), 2)
@@ -153,7 +154,8 @@ class TestManifoldDimensionalityFilter(unittest.TestCase):
         records = run_manifold_dimensionality_analysis(
             t_idx=6, 
             T_slice=T_slice,
-            top_k=1
+            top_k=1,
+            threshold=1e-6
         )
         
         self.assertEqual(len(records), 1)

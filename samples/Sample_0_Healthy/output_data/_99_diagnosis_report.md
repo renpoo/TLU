@@ -1,16 +1,18 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_0_Healthy`
-**Date Analyzed:** 2026-04-30 20:36:27
+**Date Analyzed:** 2026-04-28 14:28:35
 
 ## 1. Final Diagnosis
 
 ### 🟠 Local Pathological Stress (Micro Singularity)
+
 - **Severity:** HIGH
 - **Evidence:** Maximum local Z-Score reached 121.13 (Threshold: 3.0). Peak Location: Node: ACC_Cash at Time: 2020-W04.
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
+
 ## 2. Scale-Invariant Diagnostic Metrics
 
 | Physical Domain | Extracted Metric | Value | Threshold |
@@ -25,7 +27,7 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-30T20:36:27.256425",
+  "timestamp": "2026-04-28T14:28:35.443233",
   "environment": "samples/Sample_0_Healthy",
   "physics_metrics": {
     "max_abs_residual": 0.0,

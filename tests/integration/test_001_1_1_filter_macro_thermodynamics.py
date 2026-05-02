@@ -16,20 +16,22 @@ class TestFilterThermodynamicsMacro(unittest.TestCase):
             [0.0, 10.0],
             [0.0,  0.0]
         ])
-        q_history = []
+        v_history = []
+        X_history = []
+        X_initial = np.array([0.0, 0.0])
         work_indices = [1] # Consider inflow to Node 1 as "work"
         heat_indices = [0] # Consider inflow to Node 0 as "dissipated heat"
         t_idx = 0
 
         # Act
-        records, q_current = run_thermodynamics_analysis(
-            t_idx, T_slice, q_history, work_indices, heat_indices
+        records, v_current, X_current = run_thermodynamics_analysis(
+            t_idx, T_slice, v_history, X_history, X_initial, work_indices, heat_indices
         )
 
         # Assert
         # Since it's a macro thermodynamic indicator, the output record is only 1 row for the entire system
         self.assertEqual(len(records), 1)
-        self.assertEqual(q_current.shape, (2,))
+        self.assertEqual(v_current.shape, (2,))
         
         # Record structure: [t_idx, U, S, T, W, Q, gradT, F]
         rec = records[0]
@@ -37,8 +39,8 @@ class TestFilterThermodynamicsMacro(unittest.TestCase):
         self.assertEqual(rec[0], 0)
         self.assertTrue(isinstance(rec[1], str)) # Check if U etc. are formatted as string
 
-        # Simple check of specific values (total activity U of T_slice should be 10.0)
-        self.assertEqual(float(rec[1]), 10.0)
+        # Simple check of specific values (total activity U from X_current should be 20.0)
+        self.assertEqual(float(rec[1]), 20.0)
 
 if __name__ == '__main__':
     unittest.main()

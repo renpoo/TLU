@@ -77,6 +77,10 @@ for script in "${SCRIPTS[@]}"; do
     bash "${ORCH_DIR}/${script}"
 done
 
+find . -name "* 2.md" -delete
+find . -name "* 2.csv" -delete
+find . -name "* 2.json" -delete
+
 echo -e "\n[EXECUTING] Meta-Diagnosis Engine"
 bash "bin/run_meta_diagnosis.sh"
 

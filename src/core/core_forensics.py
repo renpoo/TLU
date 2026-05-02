@@ -88,14 +88,15 @@ def compute_multivariate_anomaly(q_current: np.ndarray, q_mean: np.ndarray, K_pr
     
     return float(z_score)
 
-def evaluate_anomaly_flags(residual: float, kl_div: float, z_score: float, thresholds: dict) -> int:
+def evaluate_anomaly_flags(residual: float, kl_div: float, z_score_X: float, z_score_v: float, thresholds: dict) -> int:
     """!
     @brief Determine if the anomaly scores exceed given thresholds.
     @details Evaluates anomaly scores against explicit thresholds. Strict Fail-Fast on missing keys.
 
     @param residual Calculated leak residual.
     @param kl_div Calculated KL divergence drift.
-    @param z_score Calculated Mahalanobis Z-score.
+    @param z_score_X Calculated Mahalanobis Z-score in state (balance) space.
+    @param z_score_v Calculated Mahalanobis Z-score in velocity (flux) space.
     @param thresholds Dictionary containing detection limits.
 
     @return 1 if an anomaly is detected, 0 otherwise (normal).
@@ -112,7 +113,9 @@ def evaluate_anomaly_flags(residual: float, kl_div: float, z_score: float, thres
         return 1
     if kl_div > thresholds['kl_drift_thresh']:
         return 1
-    if z_score > thresholds['z_score_thresh']:
+    if z_score_X > thresholds['z_score_thresh']:
+        return 1
+    if z_score_v > thresholds['z_score_thresh']:
         return 1
     
     return 0

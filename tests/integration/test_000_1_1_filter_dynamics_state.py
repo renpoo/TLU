@@ -12,16 +12,17 @@ class TestFilterDynamicsState(unittest.TestCase):
             [0.0, 10.0],
             [0.0,  0.0]
         ])
-        q_history = []
+        X_history = []
         v_history = []
         t_idx = 0
+        X_initial = np.array([0.0, 0.0])
 
-        records, q_current, v_current = run_dynamics_state_analysis(
-            t_idx, T_slice, q_history, v_history
+        records, X_current, v_current = run_dynamics_state_analysis(
+            t_idx, T_slice, X_history, v_history, X_initial
         )
 
         self.assertEqual(len(records), N)
-        self.assertEqual(q_current.shape, (2,))
+        self.assertEqual(X_current.shape, (2,))
         self.assertEqual(v_current.shape, (2,))
 
         # Record structure: [t_idx, node_idx, net_flux_q, v, a, M, C, F_ext]
@@ -42,11 +43,12 @@ class TestFilterDynamicsState(unittest.TestCase):
             [0.0, 0.0]
         ])
         t_idx = 0
-        records, q_current, v_current = run_dynamics_state_analysis(
-            t_idx, T_slice, [], []
+        X_initial = np.array([0.0, 0.0])
+        records, X_current, v_current = run_dynamics_state_analysis(
+            t_idx, T_slice, [], [], X_initial
         )
         self.assertEqual(len(records), N)
-        self.assertEqual(q_current.shape, (2,)) 
+        self.assertEqual(X_current.shape, (2,)) 
         self.assertEqual(v_current.shape, (2,))
         node1_record = records[1]
         self.assertEqual(len(node1_record), 8)

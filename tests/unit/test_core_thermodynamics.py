@@ -17,13 +17,9 @@ from src.core.core_thermodynamics import (
 class TestCoreThermodynamics(unittest.TestCase):
     # --- Macro Thermodynamics Tests ---
     def test_compute_internal_energy(self):
-        T_slice = np.array([
-            [0.0, 100.0, 50.0],
-            [0.0,   0.0,  0.0],
-            [0.0,   0.0,  0.0]
-        ])
-        U = compute_internal_energy(T_slice)
-        self.assertEqual(U, 150.0)
+        X_current = np.array([10.0, -20.0, 30.0])
+        U = compute_internal_energy(X_current)
+        self.assertEqual(U, 60.0)
 
     def test_compute_work(self):
         q_vector = np.array([-150.0, 100.0, 50.0])
@@ -63,13 +59,9 @@ class TestCoreThermodynamics(unittest.TestCase):
 
     # --- Local Thermodynamics Tests (Newly added) ---
     def test_compute_local_internal_energy(self):
-        T_slice = np.array([
-            [0.0, 20.0, 10.0],
-            [0.0,  0.0,  5.0],
-            [0.0,  0.0,  0.0]
-        ])
+        X_current = np.array([30.0, -25.0, 15.0])
         expected_u_local = np.array([30.0, 25.0, 15.0])
-        u_local = compute_local_internal_energy(T_slice)
+        u_local = compute_local_internal_energy(X_current)
         self.assertEqual(u_local.shape, (3,))
         np.testing.assert_array_equal(u_local, expected_u_local)
 

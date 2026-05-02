@@ -1,24 +1,28 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_2_Embezzlement_Leak`
-**Date Analyzed:** 2026-04-30 20:37:12
+**Date Analyzed:** 2026-04-28 14:29:17
 
 ## 1. Final Diagnosis
 
 ### ⚠️ COMPOSITE PATHOLOGY DETECTED
+
 The system is suffering from multiple overlapping structural failures.
 
 ### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
+
 - **Severity:** HIGH
 - **Evidence:** Relative Free Energy Ratio sank to -0.1556 (Threshold: -0.1). Raw F: -12094.94
 - **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
 
 ### 🟡 Local Pathological Stress (Micro Singularity)
+
 - **Severity:** MEDIUM
 - **Evidence:** Maximum local Z-Score reached 89.12 (Threshold: 3.0). Peak Location: Node: ACC_Cash at Time: 2020-W04.
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
+
 ## 2. Scale-Invariant Diagnostic Metrics
 
 | Physical Domain | Extracted Metric | Value | Threshold |
@@ -33,7 +37,7 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-30T20:37:12.772659",
+  "timestamp": "2026-04-28T14:29:17.050579",
   "environment": "samples/Sample_2_Embezzlement_Leak",
   "physics_metrics": {
     "max_abs_residual": 0.0,

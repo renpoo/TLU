@@ -32,12 +32,14 @@ def resolve_colormap(target_col: str, theme_cfg: dict) -> str:
             if target_col in key or key in target_col:
                 return cmap
                 
-    if 'velocity' in target_col or 'temperature' in target_col or 'flux' in target_col:
+    if 'velocity' in target_col or 'temperature' in target_col or 'flux' in target_col or target_col == 'z_score_v':
         cmap_name = 'magma'
     elif 'delta' in target_col or 'residual' in target_col:
         cmap_name = 'coolwarm'
     elif 'kl_drift' in target_col or 'curvature' in target_col:
         cmap_name = 'inferno'
+    elif target_col == 'z_score_X':
+        cmap_name = 'viridis'
     elif 'z_score' in target_col or 'stress' in target_col:
         cmap_name = 'plasma'
 

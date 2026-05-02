@@ -110,9 +110,20 @@ run_tlu_pipeline() {
 
     # Step 1: Projection (Anonymization of events and dictionary generation)
     # Ensure _node_map.csv is fully written before proceeding
+    local in_init_state="${TARGET_ENV:-workspace}/ephemeral/_initial_state_labels.csv"
+    local out_init_state="${TARGET_ENV:-workspace}/ephemeral/_initial_state.csv"
+    local projector_args=(
+        "--col_time=${TLU_COL_TRANS_DATE:?}"
+        "--col_src=${proj_src}"
+        "--col_tgt=${proj_tgt}"
+        "--col_val=${TLU_COL_AMOUNT:?}"
+    )
+    if [ -f "${in_init_state}" ]; then
+        projector_args+=("--in_initial_state=${in_init_state}" "--out_initial_state=${out_init_state}")
+    fi
+
     cat "${TLU_INPUT_CSV}" \
-    | $TLU_PY -m src.filters._0_2_projector_to_coo \
-        --col_time="${TLU_COL_TRANS_DATE:?}" --col_src="${proj_src}" --col_tgt="${proj_tgt}" --col_val="${TLU_COL_AMOUNT:?}" \
+    | $TLU_PY -m src.filters._0_2_projector_to_coo "${projector_args[@]}" \
     > "${TLU_TMP_COO}"
 
     # Step 2: Filtering & Semantic Hydration (Combined)

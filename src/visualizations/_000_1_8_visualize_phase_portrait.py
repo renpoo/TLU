@@ -40,7 +40,7 @@ def main():
     if df.empty: sys.exit(0)
 
     # Synchronize column names
-    col_q = 'net_flux_q'
+    col_q = 'state_X'
     col_v = 'velocity_v'
     col_a = 'acceleration_a'
 
@@ -93,10 +93,10 @@ def main():
     if N > args.max_legend:
         legend_elements.append(plt.Line2D([0], [0], color='none', label=f"... and {N - args.max_legend} more"))
 
-    ax.set_xlabel('Net Flux (q)', labelpad=15, color=text_col)
+    ax.set_xlabel('State (X)', labelpad=15, color=text_col)
     ax.set_ylabel('Velocity (v)', labelpad=25, color=text_col)
     ax.set_zlabel('Acceleration (a)', labelpad=20, color=text_col)
-    ax.set_title('Dynamics Phase Portrait (q -> v -> a Trajectories)', fontsize=16, pad=20, color=text_col, fontweight='bold')
+    ax.set_title('Dynamics Phase Portrait (X -> v -> a Trajectories)', fontsize=16, pad=20, color=text_col, fontweight='bold')
     
     ax.tick_params(axis='x', pad=8, colors=text_col)
     ax.tick_params(axis='y', pad=8, colors=text_col)

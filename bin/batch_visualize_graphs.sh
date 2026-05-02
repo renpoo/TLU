@@ -106,6 +106,8 @@ for script in "${SUPPORT_SCRIPTS[@]}"; do
     fi
 done
 
+find . -name "* 2.png" -delete
+
 # Restore the original plot dir just in case
 export TLU_PLOT_DIR="${BASE_PLOT_DIR}"
 

@@ -11,6 +11,7 @@ source "$(dirname "$0")/_tlu_env.sh"
 # 2. Define output destination
 # Output to the directory that becomes the input for subsequent pipelines using TLU_PROJECT_ROOT.
 ENV_DIR="${TARGET_ENV:-workspace}"
+mkdir -p "${TLU_PROJECT_ROOT}/${ENV_DIR}/ephemeral"
 OUTPUT_FILE="${TLU_PROJECT_ROOT}/${ENV_DIR}/input_stream/Dummy_Journal_Stream.csv"
 
 echo "=================================================="
@@ -38,6 +39,7 @@ ${TLU_PY} -m src.filters._0_0_generate_dummy_journal \
     --purchase-leak-prob "${DUMMY_PURCHASE_LEAK_PROB:-0.0}" \
     --wash-trade-prob "${DUMMY_WASH_TRADE_PROB:-0.0}" \
     --unbalanced-mistake-prob "${DUMMY_UNBALANCED_PROB:-0.0}" \
+    --out-initial-state "${TLU_PROJECT_ROOT}/${ENV_DIR}/ephemeral/_initial_state_labels.csv" \
     > "${OUTPUT_FILE}"
     # > "${OUTPUT_FILE}"
 

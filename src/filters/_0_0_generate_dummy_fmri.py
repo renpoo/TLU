@@ -23,6 +23,7 @@ def setup_argparser():
     parser = argparse.ArgumentParser(description="TLU fMRI Connectivity Generator")
     parser.add_argument("--pathology", type=str, default="healthy", choices=["healthy", "stroke", "seizure"], help="Type of pathology to inject")
     parser.add_argument("--seed", type=int, default=42, help="Random seed")
+    parser.add_argument("--out-initial-state", type=str, default="", help="Path to write the initial state (Day 0) CSV")
     return parser
 
 def generate_stream(args):
@@ -33,6 +34,14 @@ def generate_stream(args):
     writer.writerow(["Trans_Date", "Src", "Tgt", "Amount"])
     
     nodes = ["Prefrontal_Cortex", "Motor_Cortex", "Visual_Cortex", "Parietal_Lobe", "Temporal_Lobe"]
+
+    if args.out_initial_state:
+        with open(args.out_initial_state, "w", encoding="utf-8") as f:
+            state_writer = csv.writer(f, lineterminator='\n')
+            state_writer.writerow(["node_label", "initial_X"])
+            for node in nodes:
+                # baseline initial values
+                state_writer.writerow([node, "100.00"])
     
     for tr in range(total_trs):
         current_date = start_date + datetime.timedelta(seconds=tr * 2)

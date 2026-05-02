@@ -1,24 +1,28 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_5_Kyoto_Traffic`
-**Date Analyzed:** 2026-04-30 20:38:21
+**Date Analyzed:** 2026-04-28 14:30:19
 
 ## 1. Final Diagnosis
 
 ### ⚠️ COMPOSITE PATHOLOGY DETECTED
+
 The system is suffering from multiple overlapping structural failures.
 
 ### 🟠 Topological Feedback Loop (Wash Trade)
+
 - **Severity:** HIGH
 - **Evidence:** Spectral Radius reached 1.0000 (Threshold: 0.9).
 - **Interpretation:** An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading).
 
 ### 🟡 Local Pathological Stress (Micro Singularity)
+
 - **Severity:** MEDIUM
 - **Evidence:** Maximum local Z-Score reached 32.29 (Threshold: 3.0). Peak Location: Node: 二条新町 at Time: 2020-03.
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
+
 ## 2. Scale-Invariant Diagnostic Metrics
 
 | Physical Domain | Extracted Metric | Value | Threshold |
@@ -33,7 +37,7 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-30T20:38:21.659592",
+  "timestamp": "2026-04-28T14:30:19.711012",
   "environment": "samples/Sample_5_Kyoto_Traffic",
   "physics_metrics": {
     "max_abs_residual": 0.0,

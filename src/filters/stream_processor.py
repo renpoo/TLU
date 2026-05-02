@@ -164,3 +164,31 @@ def setup_pipeline(parser: argparse.ArgumentParser, output_header: list[str]):
     writer.writerow(output_header)
     reader = csv.reader(sys.stdin)
     return args, N, reader, writer
+
+def load_initial_state(env_dir: str, N: int) -> np.ndarray:
+    """!
+    @brief Load the Day 0 absolute balance initialized state tensor.
+    @details Loads _initial_state.csv into an N-dimensional vector natively.
+
+    @param env_dir Project target environment base path mapping string.
+    @param N Total network topological node count parameter.
+
+    @return 1D Numpy array initializing baseline absolute mass.
+    """
+    import os
+    import pandas as pd
+    
+    state_path = os.path.join(env_dir, "ephemeral", "_initial_state.csv")
+    X_initial = np.zeros(N, dtype=float)
+    
+    if os.path.exists(state_path):
+        try:
+            df = pd.read_csv(state_path)
+            for _, row in df.iterrows():
+                idx = int(row.get('node_idx', -1))
+                if 0 <= idx < N:
+                    X_initial[idx] = float(row.get('initial_X', 0.0))
+        except Exception as e:
+            print(f"[WARN] Failed to load initial state from {state_path}: {e}", file=sys.stderr)
+            
+    return X_initial

@@ -16,8 +16,12 @@ class TestFilterForensics(unittest.TestCase):
         ])
         t_idx = 0
         
-        q_history = [np.array([-5.0, 5.0]), np.array([-8.0, 8.0])]
+        v_history = [np.array([-5.0, 5.0]), np.array([-8.0, 8.0])]
+        X_history = [np.array([100.0, 100.0]), np.array([92.0, 108.0])]
         P_history = [np.array([[0.0, 1.0], [0.0, 0.0]]), np.array([[0.0, 1.0], [0.0, 0.0]])]
+        X_initial = np.array([105.0, 95.0])
+        
+        g_history = [np.array([-0.05, 0.05]), np.array([-0.08, 0.08])]
         
         thresholds = {
             'leak_tolerance': 1e-5,
@@ -25,21 +29,22 @@ class TestFilterForensics(unittest.TestCase):
             'z_score_thresh': 3.0
         }
 
-        records, q_current, P_current = run_forensics_analysis(
-            t_idx, T_slice, q_history, P_history, thresholds
+        records, v_current, X_current, g_current, P_current = run_forensics_analysis(
+            t_idx, T_slice, v_history, X_history, g_history, P_history, X_initial, thresholds
         )
 
         # Returns 1 row of record in total
         self.assertEqual(len(records), 1)
         
-        # Record structure: [t_idx, conservation_residual, kl_divergence_drift, mahalanobis_z_score, anomaly_flag]
+        # Record structure: [t_idx, conservation_residual, kl_divergence_drift, z_score_X, z_score_v, anomaly_flag]
         sys_rec = records[0]
-        self.assertEqual(len(sys_rec), 5) 
+        self.assertEqual(len(sys_rec), 6) 
         self.assertEqual(sys_rec[0], 0)
         self.assertTrue(isinstance(sys_rec[1], str))
         self.assertTrue(isinstance(sys_rec[2], str))
         self.assertTrue(isinstance(sys_rec[3], str))
-        self.assertIn(sys_rec[4], [0, 1])
+        self.assertTrue(isinstance(sys_rec[4], str))
+        self.assertIn(sys_rec[5], [0, 1])
 
 if __name__ == '__main__':
     unittest.main()

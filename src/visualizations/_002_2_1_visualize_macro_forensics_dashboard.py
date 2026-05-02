@@ -59,7 +59,8 @@ def main():
     axes[1].set_ylabel("KL Divergence", color=text_col, fontsize=12)
     
     # --- 3. System Multivariate Shock ---
-    axes[2].plot(x_values, df['mahalanobis_z_score'], marker='o', color=c_zscore, linewidth=2)
+    axes[2].plot(x_values, df['z_score_X'], marker='o', color=c_zscore, linewidth=2, label='State Z-Score ($Z_X$)')
+    axes[2].plot(x_values, df['z_score_v'], marker='s', color=c_residual, linewidth=2, label='Velocity Z-Score ($Z_v$)')
     axes[2].set_title("3. Statistical Anomaly (Mahalanobis Z-Score)", fontsize=15, color=text_col, loc='left', fontweight='bold')
     axes[2].set_ylabel("Z-Score (sigma)", color=text_col, fontsize=12)
     axes[2].set_xlabel("Timeline", color=text_col, fontsize=12)

@@ -1,29 +1,34 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
-**Target Environment:** `samples/Sample_7_Market_Users_Weekly`
-**Date Analyzed:** 2026-04-30 20:39:11
+**Target Environment:** `samples/Sample_7_Market_Users_Weekly/workspace`
+**Date Analyzed:** 2026-04-28 14:31:05
 
 ## 1. Final Diagnosis
 
 ### ⚠️ COMPOSITE PATHOLOGY DETECTED
+
 The system is suffering from multiple overlapping structural failures.
 
 ### 🟠 Topological Feedback Loop (Wash Trade)
+
 - **Severity:** HIGH
 - **Evidence:** Spectral Radius reached 1.0000 (Threshold: 0.9).
 - **Interpretation:** An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading).
 
 ### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
+
 - **Severity:** HIGH
 - **Evidence:** Relative Free Energy Ratio sank to -13.6970 (Threshold: -0.1). Raw F: -646552667.94
 - **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
 
 ### 🟡 Local Pathological Stress (Micro Singularity)
+
 - **Severity:** MEDIUM
 - **Evidence:** Maximum local Z-Score reached 44.07 (Threshold: 3.0). Peak Location: Node: USR_005 at Time: 2020-W03.
 - **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
+
 ## 2. Scale-Invariant Diagnostic Metrics
 
 | Physical Domain | Extracted Metric | Value | Threshold |
@@ -38,8 +43,8 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-30T20:39:11.651016",
-  "environment": "samples/Sample_7_Market_Users_Weekly",
+  "timestamp": "2026-04-28T14:31:05.790663",
+  "environment": "samples/Sample_7_Market_Users_Weekly/workspace",
   "physics_metrics": {
     "max_abs_residual": 0.0,
     "mean_gross_activity": 65470108.08096155,

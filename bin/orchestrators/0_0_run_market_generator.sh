@@ -11,6 +11,7 @@ source "$(dirname "$0")/_tlu_env.sh"
 ENV_DIR="${TARGET_ENV:-workspace}"
 # Create directory if it doesn't exist
 mkdir -p "${TLU_PROJECT_ROOT}/${ENV_DIR}/input_stream"
+mkdir -p "${TLU_PROJECT_ROOT}/${ENV_DIR}/ephemeral"
 
 OUTPUT_FILE="${TLU_PROJECT_ROOT}/${ENV_DIR}/input_stream/Dummy_Market_Stream.csv"
 
@@ -36,6 +37,7 @@ ${TLU_PY} -m src.filters._0_0_generate_dummy_market \
     --num-stocks "${NUM_STOCKS}" \
     --wash-trade-prob "${DUMMY_WASH_TRADE_PROB:-0.05}" \
     --pump-dump-prob "${DUMMY_PUMP_DUMP_PROB:-0.02}" \
+    --out-initial-state "${TLU_PROJECT_ROOT}/${ENV_DIR}/ephemeral/_initial_state_labels.csv" \
     > "${OUTPUT_FILE}"
 
 echo "Completed. Dummy market stream has been successfully generated."
