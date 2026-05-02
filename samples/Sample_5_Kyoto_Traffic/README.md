@@ -8,11 +8,11 @@
 > [!TIP]
 > **How to Generate the Graphs for this Sample**
 > The thousands of 3D plots and analysis CSVs for this sample are not bundled to save space. You can reproduce them locally by running the following commands from the repository root:
+>
 > ```bash
 > bash bin/batch_processing.sh --target_env "samples/Sample_5_Kyoto_Traffic"
 > bash bin/batch_visualize_graphs.sh --target_env "samples/Sample_5_Kyoto_Traffic"
 > ```
-
 
 ## 🩺 Meta-Diagnosis Synthesis Report
 
@@ -46,8 +46,9 @@ This dataset (`Sample_5_Kyoto_Traffic`) does not contain accounting ledgers, but
 Applying the 【Tier 3】 logic of the LLM Manual to urban planning: The physical metrics (Spectral Radius = 1.0 combined with Positive Free Energy) mathematically prove that traffic is caught in a perfect, rigid ring road. Cars are driving continuously in a square (e.g., Shijo-Karasuma $\to$ Shijo-Muromachi $\to$ Sanjo-Muromachi $\to$ Sanjo-Karasuma $\to$ Shijo-Karasuma) without ever exiting the system, creating total structural gridlock.
 
 **【Action Plan】**
-While the macro traffic volume appears stable, the localized Z-Score (32.29) indicates critical congestion at specific intersections (Micro Singularity). 
-![Micro Z-Score Heatmap](readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
+While the macro traffic volume appears stable, the localized Z-Score (32.29) indicates critical congestion at specific intersections (Micro Singularity).
+![Micro Z-Score Heatmap](readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+
 * **💡 How to Read the Graph (Visual Cues):** The bright red glowing cells pinpoint the exact physical intersections experiencing critical gridlock.
 
 To break this infinite loop, urban planners must apply Control Theory interventions: create a forced "escape route" (one-way street) leading out of the closed block (bounded by Sanjo, Shijo, Karasuma, and Muromachi) to artificially lower the Spectral Radius below 0.9 and relieve the topological pressure.

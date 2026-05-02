@@ -7,28 +7,31 @@
 > [!TIP]
 > **How to Generate the Graphs for this Sample**
 > The thousands of 3D plots and analysis CSVs for this sample are not bundled to save space. You can reproduce them locally by running the following commands from the repository root:
+>
 > ```bash
 > bash bin/batch_processing.sh --target_env "samples/Sample_0_Healthy"
 > bash bin/batch_visualize_graphs.sh --target_env "samples/Sample_0_Healthy"
 > ```
 
-
 ## 🩺 Meta-Diagnosis Synthesis Report
 
 ### 1. Executive Summary
+
 The target system (`Sample_0_Healthy`) is structurally sound and mathematically balanced. There is absolutely no evidence of systemic fraud, embezzlement, or topological infinite loops (Wash Trading) that would threaten the integrity of the organization. The business is generating a healthy operational profit. However, a single, highly localized statistical anomaly (Micro Singularity) was detected, pointing to a specific accounting process error rather than malicious intent.
 
 ### 2. Core Pathology (Primary Finding)
+
 * **Diagnosis:** Localized Process Shock (Micro Singularity)
 * **Severity:** HIGH
-* **Physical Evidence:** 
+* **Physical Evidence:**
   The maximum local Z-Score reached **121.13** (Threshold: 3.0), indicating extreme strain on a specific node. However, all macro-systemic indicators (Leak Ratio: 0.0, Spectral Radius: 0.0) are perfectly normal, confirming this is not a systemic collapse.
-  ![Micro Z-Score Heatmap](readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
+  ![Micro Z-Score Heatmap](readme_plots/002_2_2_2__3d_micro_z_score_X.png)
   * **💡 How to Read the Graph (Visual Cues):** Look at the Micro Z-Score Heatmap. You will see a single cell glowing bright red against a mostly dark/blue background. This `RdBu_r` colormap highlights isolated anomalies where a specific node experiences extreme mathematical stress (Z-Score > 3.0) without destabilizing the whole matrix.
-* **Financial Evidence:** 
+* **Financial Evidence:**
   The Balance Sheet is perfectly balanced (Total Assets: $120,500), and Net Income is positive ($46,432). However, a detailed inspection reveals that the `ACC_Inventory` account holds a severe negative balance of **-$108,610**. In physical accounting, a negative inventory balance is impossible and directly correlates with the explosive Z-Score.
 
 ### 3. Business Translation & Action Plan
+
 The overall financial plumbing and revenue structures are healthy. There is no need to initiate a systemic fraud investigation. The extreme Z-Score and negative inventory balance mathematically prove a localized process defect—most likely, the organization is continuously recording Cost of Goods Sold (COGS: $526,444) without ever properly recording the initial procurement (purchases) of the inventory into the ledger.
 
 **【Action Plan】**

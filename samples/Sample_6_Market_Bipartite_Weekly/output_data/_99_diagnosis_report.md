@@ -1,60 +1,49 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
-**Target Environment:** `samples/Sample_6_Market_Bipartite_Weekly/workspace`
-**Date Analyzed:** 2026-04-28 14:30:43
+**Target Environment:** `samples/Sample_6_Market_Bipartite_Weekly`
+**Date Analyzed:** 2026-05-02 10:08:22
 
 ## 1. Final Diagnosis
 
 ### ⚠️ COMPOSITE PATHOLOGY DETECTED
-
 The system is suffering from multiple overlapping structural failures.
 
 ### 🟠 Topological Feedback Loop (Wash Trade)
-
 - **Severity:** HIGH
 - **Evidence:** Spectral Radius reached 1.0000 (Threshold: 0.9).
 - **Interpretation:** An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading).
 
 ### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
-
 - **Severity:** HIGH
-- **Evidence:** Relative Free Energy Ratio sank to -9.1393 (Threshold: -0.1). Raw F: -799559039.95
+- **Evidence:** Relative Free Energy Ratio sank to -20.7154 (Threshold: -0.1). Raw F: -1029327872.33
 - **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
 
-### 🟡 Local Pathological Stress (Micro Singularity)
-
-- **Severity:** MEDIUM
-- **Evidence:** Maximum local Z-Score reached 44.07 (Threshold: 3.0). Peak Location: Node: USR_005 at Time: 2020-W03.
-- **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
-
 ---
-
 ## 2. Scale-Invariant Diagnostic Metrics
 
 | Physical Domain | Extracted Metric | Value | Threshold |
 |-----------------|------------------|-------|-----------|
 | Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 1.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| -9.1393 | < -0.1 |
-| Micro Forensics | Max Local Z-Score        | 44.07 | > 3.0 |
+| Thermodynamics  | Relative Free Energy Ratio| -20.7154 | < -0.1 |
+| Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
 
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-28T14:30:43.166863",
-  "environment": "samples/Sample_6_Market_Bipartite_Weekly/workspace",
+  "timestamp": "2026-05-02T10:08:22.171660",
+  "environment": "samples/Sample_6_Market_Bipartite_Weekly",
   "physics_metrics": {
     "max_abs_residual": 0.0,
-    "mean_gross_activity": 130940216.1619231,
+    "mean_gross_activity": 59137427.816923074,
     "relative_leak_ratio": 0.0,
     "max_spectral": 1.0,
-    "min_free_energy": -799559039.9461,
-    "min_relative_free_energy": -9.139310461511887,
-    "max_z_score": 44.0676,
-    "max_leak_location": "Time: 2020-W01",
-    "max_z_score_location": "Node: USR_005 at Time: 2020-W03"
+    "min_free_energy": -1029327872.3293,
+    "min_relative_free_energy": -20.715427480362276,
+    "max_z_score": 0.0,
+    "max_leak_location": "Time: 2020-W01"
   },
   "detected_pathologies": [
     {
@@ -66,14 +55,8 @@ The system is suffering from multiple overlapping structural failures.
     {
       "pathology": "Thermodynamic Energy Depletion (Embezzlement/Leak)",
       "severity": "HIGH",
-      "evidence": "Relative Free Energy Ratio sank to -9.1393 (Threshold: -0.1). Raw F: -799559039.95",
+      "evidence": "Relative Free Energy Ratio sank to -20.7154 (Threshold: -0.1). Raw F: -1029327872.33",
       "interpretation": "Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale."
-    },
-    {
-      "pathology": "Local Pathological Stress (Micro Singularity)",
-      "severity": "MEDIUM",
-      "evidence": "Maximum local Z-Score reached 44.07 (Threshold: 3.0). Peak Location: Node: USR_005 at Time: 2020-W03.",
-      "interpretation": "Specific nodes (departments) are experiencing statistical strain far beyond their historical norm."
     }
   ],
   "financial_baseline": {
@@ -81,17 +64,17 @@ The system is suffering from multiple overlapping structural failures.
     "assets": 0.0,
     "liabilities": 0.0,
     "equity": 0.0,
-    "net_income": 5.513429641723633e-07,
-    "total_liab_eq": 5.513429641723633e-07,
+    "net_income": 1.9371509552001953e-07,
+    "total_liab_eq": 1.9371509552001953e-07,
     "revenue": 0.0,
-    "expense": -5.513429641723633e-07,
+    "expense": -1.9371509552001953e-07,
     "is_balanced": true,
     "bs_items": [],
     "pl_items": [
       [
         "STK_001",
         "Expense",
-        -1.0728836059570312e-06
+        0.0
       ],
       [
         "STK_002",
@@ -101,174 +84,174 @@ The system is suffering from multiple overlapping structural failures.
       [
         "STK_003",
         "Expense",
-        1.1920928955078125e-07
+        2.384185791015625e-07
       ],
       [
         "STK_004",
         "Expense",
-        -4.172325134277344e-07
+        -5.960464477539063e-08
       ],
       [
         "STK_005",
         "Expense",
-        4.76837158203125e-07
+        -4.76837158203125e-07
       ],
       [
         "USR_001",
         "Expense",
-        -106335.9500001669
+        4225702.160000086
       ],
       [
         "USR_002",
         "Expense",
-        8600508.330000281
+        8706571.250000179
       ],
       [
         "USR_003",
         "Expense",
-        -940548.0599992275
+        1579963.5500001907
       ],
       [
         "USR_004",
         "Expense",
-        4796050.529999971
+        -12385805.170000076
       ],
       [
         "USR_005",
         "Expense",
-        623164.7999999523
+        -6925827.630000234
       ],
       [
         "USR_006",
         "Expense",
-        -1360240.110000372
+        -845815.3399999738
       ],
       [
         "USR_007",
         "Expense",
-        2764296.2399998903
+        4742875.819999754
       ],
       [
         "USR_008",
         "Expense",
-        924927.4999998212
+        -984485.0499998927
       ],
       [
         "USR_009",
         "Expense",
-        -1008716.4200001955
+        -4961491.399999857
       ],
       [
         "USR_010",
         "Expense",
-        -14293106.859999657
+        6848311.809999883
       ]
     ],
     "tb_items": [
       [
         "STK_001",
         "Expense",
-        1038440025.7799988,
-        1038440025.7799999,
-        -1.0728836059570312e-06
+        1168489843.9500003,
+        1168489843.9500003,
+        0.0
       ],
       [
         "STK_002",
         "Expense",
-        92409018.19999997,
-        92409018.19999993,
+        80482659.55000006,
+        80482659.55000001,
         4.470348358154297e-08
       ],
       [
         "STK_003",
         "Expense",
-        547315790.7600001,
-        547315790.76,
-        1.1920928955078125e-07
+        661738528.4299998,
+        661738528.4299996,
+        2.384185791015625e-07
       ],
       [
         "STK_004",
         "Expense",
-        433738949.1599998,
-        433738949.1600002,
-        -4.172325134277344e-07
+        492328427.8400002,
+        492328427.8400003,
+        -5.960464477539063e-08
       ],
       [
         "STK_005",
         "Expense",
-        1292541836.309999,
-        1292541836.3099985,
-        4.76837158203125e-07
+        2094451268.3700001,
+        2094451268.3700006,
+        -4.76837158203125e-07
       ],
       [
         "USR_001",
         "Expense",
-        386621113.27999985,
-        386727449.23,
-        -106335.9500001669
+        522567386.02000004,
+        518341683.85999995,
+        4225702.160000086
       ],
       [
         "USR_002",
         "Expense",
-        329936340.04,
-        321335831.70999974,
-        8600508.330000281
+        436110043.06999993,
+        427403471.81999975,
+        8706571.250000179
       ],
       [
         "USR_003",
         "Expense",
-        356092499.1700005,
-        357033047.2299997,
-        -940548.0599992275
+        461054057.0800001,
+        459474093.5299999,
+        1579963.5500001907
       ],
       [
         "USR_004",
         "Expense",
-        342105350.85,
-        337309300.32000005,
-        4796050.529999971
+        459767272.46999985,
+        472153077.6399999,
+        -12385805.170000076
       ],
       [
         "USR_005",
         "Expense",
-        316024481.81000006,
-        315401317.0100001,
-        623164.7999999523
+        470129392.34,
+        477055219.9700002,
+        -6925827.630000234
       ],
       [
         "USR_006",
         "Expense",
-        405205928.93999994,
-        406566169.0500003,
-        -1360240.110000372
+        461900251.78999996,
+        462746067.12999994,
+        -845815.3399999738
       ],
       [
         "USR_007",
         "Expense",
-        345928581.62999994,
-        343164285.39000005,
-        2764296.2399998903
+        477931718.9199998,
+        473188843.1,
+        4742875.819999754
       ],
       [
         "USR_008",
         "Expense",
-        236358269.8699999,
-        235433342.37000006,
-        924927.4999998212
+        281438145.69000006,
+        282422630.73999995,
+        -984485.0499998927
       ],
       [
         "USR_009",
         "Expense",
-        361770865.70999986,
-        362779582.13000005,
-        -1008716.4200001955
+        456591848.12000006,
+        461553339.5199999,
+        -4961491.399999857
       ],
       [
         "USR_010",
         "Expense",
-        324402188.91,
-        338695295.7699997,
-        -14293106.859999657
+        470000612.63999987,
+        463152300.83,
+        6848311.809999883
       ]
     ]
   }

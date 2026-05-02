@@ -7,6 +7,7 @@
 > [!TIP]
 > **このサンプルのグラフの生成方法**
 > スペース節約のため、このサンプルに関する数千の3Dプロットおよび分析CSVは同梱されていません。リポジトリのルートから以下のコマンドを実行することで、ローカルで再現可能です：
+>
 > ```bash
 > bash bin/batch_processing.sh --target_env "samples/Sample_5_Kyoto_Traffic"
 > bash bin/batch_visualize_graphs.sh --target_env "samples/Sample_5_Kyoto_Traffic"
@@ -29,7 +30,7 @@
     ![Sample 0 System Stability](../../../readme_plots/004_1_2__system_stability.png)
     * **【🔴 本サンプルの異常状態】**
     ![004_1_2__system_stability](../../../readme_plots/Sample_5_Kyoto_Traffic/004_1_2__system_stability.png)
-    * **💡 グラフの読み方（マクロ）:** 
+    * **💡 グラフの読み方（マクロ）:**
       * **🟢 正常系（Sample 0）:** 赤色の線（スペクトル半径）は低い位置で安定しています。
       * **🔴 本サンプルの異常:** 赤色の線が正確に `1.0` の閾値に張り付いています。これは逃げ場のない閉じたループ（車が特定の交差点を円を描くように走り続けている状態）を証明しています。
 
@@ -56,11 +57,12 @@
 
 **【アクション・プラン】**
 マクロの交通量は安定しているように見えますが、局所的なZ-Score（32.29）は、特定の交差点での危機的な渋滞（ミクロな異常）を示しています。
+
 * **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 Micro Z-Score 3D Surface](../../../readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
+![Sample 0 Micro Z-Score 3D Surface](../../../readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 * **【🔴 本サンプルの異常状態】**
-![Micro Z-Score 3D Surface](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
-* **💡 可視化グラフの読解の仕方（Visual Cues）:** 
+![Micro Z-Score 3D Surface](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+* **💡 可視化グラフの読解の仕方（Visual Cues）:**
   * **🟢 正常系（Sample 0）では:** 背景は暗い紫色（Dark Purple）に保たれ、第4週の現金ノードにのみ「初期稼働ショック（給与支払い）」を示す黄色（Yellow）のスポットが1つだけ存在します。
   * **🔴 本サンプルの異常:** 3D Surface 上で、明るい黄色（Yellow）に発光しているセルが、危機的なグリッドロックを経験している正確な物理的交差点をピンポイントで示しています。
 

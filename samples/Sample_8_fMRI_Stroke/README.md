@@ -1,4 +1,5 @@
 # 🧠 Diagnostic Report: fMRI Stroke Simulation
+
 **Target Environment:** `Sample_8_fMRI_Stroke`
 **Date Analyzed:** 2026-04-28
 
@@ -9,32 +10,39 @@
 > [!TIP]
 > **How to Generate the Graphs for this Sample**
 > The thousands of 3D plots and analysis CSVs for this sample are not bundled to save space. You can reproduce them locally by running the following commands from the repository root:
+>
 > ```bash
 > bash bin/batch_processing.sh --target_env "samples/Sample_8_fMRI_Stroke"
 > bash bin/batch_visualize_graphs.sh --target_env "samples/Sample_8_fMRI_Stroke"
 > ```
 
 ## 1. Comprehensive Diagnosis
+
 **⚠️ COMPOSITE PATHOLOGY DETECTED**
 In this network (blood flow model), localized energy disruption and subsequent global thermodynamic/structural collapse have been confirmed. The patient is mathematically diagnosed as suffering from a severe cerebrovascular accident (Stroke).
 
 ## 2. Analysis of Physical & Network Metrics
 
 ### 🩸 1. Maximization of Local Stress (Micro Singularity)
+
 * **Z-Score:** `195.21` (Threshold: 3.0)
 * **Analysis:** An extremely abnormal local stress has occurred, exceeding the anomaly detection threshold by approximately 65 times. This implies a **"complete deviation"** from the historical, statistical normal state in a specific region (node). It is definitive evidence of a physical vascular occlusion (blockage).
 
-![Z-Score Heatmap](plots/002_2_2_2__micro_Z_Score_3d_surface.png)
+![Z-Score Heatmap](plots/002_2_2_2__3d_micro_z_score_X.png)
+
 * **💡 How to Read the Graph (Visual Cues):** On the `RdBu_r` heatmap, look for the isolated cell glowing extremely bright red. This pinpoints the exact spatial coordinate of the mathematical singularity (the physical blood clot/occlusion).
 
 ### 🔋 2. Depletion of Thermodynamic Energy (Embezzlement/Leak)
+
 * **Relative Free Energy Ratio:** `-2.1742` (Threshold: -0.1)
 * **Analysis:** Relative to the transaction (blood flow) volume of the entire network, the energy available for the system to perform "useful work" (Free Energy) has plummeted deeply into the negative. This is the exact same physical symptom as "embezzlement/fund leakage" in a financial network. In this biological model, it suggests that **"necessary oxygen/nutrients are being lost from the system (risk of necrosis)."**
 
 ![Energy Stack Diagram](plots/001_1_2__thermodynamics_energy_stack.png)
+
 * **💡 How to Read the Graph (Visual Cues):** The white Free Energy line plummets into the negative. This visually proves that the system is bleeding its capacity to perform work (oxygen deprivation/necrosis), mathematically identical to a financial embezzlement leak.
 
 ### 🔄 3. Abnormal Topological Resonance (Topological Feedback Loop)
+
 * **Spectral Radius:** `1.0000` (Threshold: 0.9)
 * **Analysis:** The spectral radius of the system has reached 1.0 (the mathematical limit). Due to the disruption of blood flow, the remaining network is either compensatorily forming an abnormal feedback loop or certain signals are echoing infinitely.
 
@@ -57,4 +65,5 @@ While all other brain regions maintain a normal blood flow (Expense) of approxim
 The generator's simulation parameter "95% occlusion of the artery leading to the motor cortex" was perfectly exposed by TLU's financial statement algorithm (P/L) as a **"metabolic deficit (undelivered energy)"**.
 
 ## 4. Conclusion
+
 By directly applying the logic used for detecting financial fraud—"Embezzlement (Leak)" and "Wash Trading (Loop)"—TLU's Meta-Diagnosis Engine successfully identified the **"embezzlement of blood flow in the motor cortex (Stroke)"**. It is inferred that the patient is presenting with severe motor paralysis on the right or left side of the body.

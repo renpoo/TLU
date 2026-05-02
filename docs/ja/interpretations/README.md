@@ -24,7 +24,7 @@ TLUが多用する「3D Surface グラフ」は、**「全体（マクロ）」*
 * **分かること:** 「期末に向かって全体的に資金の滞留（波の隆起）が激しくなっている」といった、組織全体の構造的な変化や、景気循環などの正常なトレンドを把握します。
 
 **【🟢 正常な地形の例（Sample 0）】**
-![Macro Terrain](../../readme_plots/Sample_0_Healthy/002_2_2_2__micro_Z_Score_3d_surface.png)
+![Macro Terrain](../../readme_plots/Sample_0_Healthy/002_2_2_2__3d_micro_z_score_X.png)
 
 ### 2. ミクロな視点：針（スパイク）を読む
 
@@ -32,7 +32,7 @@ TLUが多用する「3D Surface グラフ」は、**「全体（マクロ）」*
 * **分かること:** 「この特定の日、特定の口座にだけ、通常のトレンドから外れた巨大な異常値が発生している」といった、横領や架空計上、あるいは極端な入力ミスなどの単発的な異常を特定します。
 
 **【🔴 異常なスパイクの例（Sample 2: 横領）】**
-![Micro Spike](../../readme_plots/Sample_2_Embezzlement_Leak/002_2_2_2__micro_Z_Score_3d_surface.png)
+![Micro Spike](../../readme_plots/Sample_2_Embezzlement_Leak/002_2_2_2__3d_micro_z_score_X.png)
 
 ### 3. 視点の組み合わせによる不正の特定
 

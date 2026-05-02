@@ -1,203 +1,172 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_1_Wash_Trade`
-**Date Analyzed:** 2026-04-28 14:28:56
+**Date Analyzed:** 2026-05-02 10:06:15
 
 ## 1. Final Diagnosis
 
-### ⚠️ COMPOSITE PATHOLOGY DETECTED
-
-The system is suffering from multiple overlapping structural failures.
-
-### 🟠 Topological Feedback Loop (Wash Trade)
-
-- **Severity:** HIGH
-- **Evidence:** Spectral Radius reached 0.9740 (Threshold: 0.9).
-- **Interpretation:** An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading).
-
-### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
-
-- **Severity:** HIGH
-- **Evidence:** Relative Free Energy Ratio sank to -0.2510 (Threshold: -0.1). Raw F: -19858.12
-- **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
-
-### 🟡 Local Pathological Stress (Micro Singularity)
-
-- **Severity:** MEDIUM
-- **Evidence:** Maximum local Z-Score reached 36.55 (Threshold: 3.0). Peak Location: Node: ACC_Cash at Time: 2020-W04.
-- **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
+### 🟢 Healthy System (No Structural Pathologies Detected)
+- **Severity:** NORMAL
+- **Evidence:** All physical parameters remained within stable thresholds.
+- **Interpretation:** The system is functioning efficiently without any detectable structural anomalies, leaks, or loops.
 
 ---
-
 ## 2. Scale-Invariant Diagnostic Metrics
 
 | Physical Domain | Extracted Metric | Value | Threshold |
 |-----------------|------------------|-------|-----------|
 | Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
-| Control Theory  | Max Spectral Radius      | 0.9740 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| -0.2510 | < -0.1 |
-| Micro Forensics | Max Local Z-Score        | 36.55 | > 3.0 |
+| Control Theory  | Max Spectral Radius      | 0.6857 | >= 0.9 |
+| Thermodynamics  | Relative Free Energy Ratio| 0.8473 | < -0.1 |
+| Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
 
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-04-28T14:28:56.301812",
+  "timestamp": "2026-05-02T10:06:15.220940",
   "environment": "samples/Sample_1_Wash_Trade",
   "physics_metrics": {
     "max_abs_residual": 0.0,
-    "mean_gross_activity": 68424.39173076922,
+    "mean_gross_activity": 1356904.6784615382,
     "relative_leak_ratio": 0.0,
-    "max_spectral": 0.973975,
-    "min_free_energy": -19858.1179,
-    "min_relative_free_energy": -0.2509926004514251,
-    "max_z_score": 36.5451,
-    "max_leak_location": "Time: 2020-W01",
-    "max_z_score_location": "Node: ACC_Cash at Time: 2020-W04"
+    "max_spectral": 0.685715,
+    "min_free_energy": 85485.52,
+    "min_relative_free_energy": 0.8472663000534815,
+    "max_z_score": 0.0,
+    "max_leak_location": "Time: 2020-W01"
   },
   "detected_pathologies": [
     {
-      "pathology": "Topological Feedback Loop (Wash Trade)",
-      "severity": "HIGH",
-      "evidence": "Spectral Radius reached 0.9740 (Threshold: 0.9).",
-      "interpretation": "An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading)."
-    },
-    {
-      "pathology": "Thermodynamic Energy Depletion (Embezzlement/Leak)",
-      "severity": "HIGH",
-      "evidence": "Relative Free Energy Ratio sank to -0.2510 (Threshold: -0.1). Raw F: -19858.12",
-      "interpretation": "Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale."
-    },
-    {
-      "pathology": "Local Pathological Stress (Micro Singularity)",
-      "severity": "MEDIUM",
-      "evidence": "Maximum local Z-Score reached 36.55 (Threshold: 3.0). Peak Location: Node: ACC_Cash at Time: 2020-W04.",
-      "interpretation": "Specific nodes (departments) are experiencing statistical strain far beyond their historical norm."
+      "pathology": "Healthy System (No Structural Pathologies Detected)",
+      "severity": "NORMAL",
+      "evidence": "All physical parameters remained within stable thresholds.",
+      "interpretation": "The system is functioning efficiently without any detectable structural anomalies, leaks, or loops."
     }
   ],
   "financial_baseline": {
     "week": "2020-W52",
-    "assets": 290560.9299999996,
-    "liabilities": 189701.97999999975,
+    "assets": 267085.2799999998,
+    "liabilities": 184506.64000000013,
     "equity": 0.0,
-    "net_income": 100858.95000000007,
-    "total_liab_eq": 290560.9299999998,
-    "revenue": 993681.5499999998,
-    "expense": 892822.5999999997,
+    "net_income": 82578.63999999966,
+    "total_liab_eq": 267085.2799999998,
+    "revenue": 993131.2699999998,
+    "expense": 910552.6300000001,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        79600.13
+        67911.02000000008
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        154570.90000000026
+        153211.32999999973
       ],
       [
         "ACC_Cash",
         "Asset",
-        135990.02999999933
+        113873.95000000007
       ],
       [
         "ACC_Inventory",
         "Liability (Short/Overdraft)",
-        110101.84999999974
+        116595.62000000005
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        527935.1899999998
+        530066.5200000001
       ],
       [
         "ACC_Payroll_Exp",
         "Expense",
-        218556.38999999998
+        220971.34
       ],
       [
         "ACC_Rent_Exp",
         "Expense",
-        61977.35999999999
+        62009.74
       ],
       [
         "ACC_Sales_Revenue",
         "Revenue",
-        993681.5499999998
+        993131.2699999998
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        84353.65999999996
+        97505.03000000001
       ]
     ],
     "tb_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        338233.2100000001,
-        417833.3400000001,
-        79600.13
+        345559.88,
+        413470.9000000001,
+        67911.02000000008
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        1031875.0599999998,
-        877304.1599999996,
-        154570.90000000026
+        1029521.7999999998,
+        876310.4700000001,
+        153211.32999999973
       ],
       [
         "ACC_COGS",
         "Expense",
-        527935.1899999998,
+        530066.5200000001,
         0.0,
-        527935.1899999998
+        530066.5200000001
       ],
       [
         "ACC_Cash",
         "Asset",
-        877304.1599999996,
-        741314.1300000002,
-        135990.02999999933
+        876310.4700000001,
+        762436.52,
+        113873.95000000007
       ],
       [
         "ACC_Inventory",
         "Asset",
-        417833.3400000001,
-        527935.1899999998,
-        -110101.84999999974
+        413470.9000000001,
+        530066.5200000001,
+        -116595.62000000005
       ],
       [
         "ACC_Payroll_Exp",
         "Expense",
-        218556.38999999998,
+        220971.34,
         0.0,
-        218556.38999999998
+        220971.34
       ],
       [
         "ACC_Rent_Exp",
         "Expense",
-        61977.35999999999,
+        62009.74,
         0.0,
-        61977.35999999999
+        62009.74
       ],
       [
         "ACC_Sales_Revenue",
         "Revenue",
         0.0,
-        993681.5499999998,
-        993681.5499999998
+        993131.2699999998,
+        993131.2699999998
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        84353.65999999996,
+        97505.03000000001,
         0.0,
-        84353.65999999996
+        97505.03000000001
       ]
     ]
   }

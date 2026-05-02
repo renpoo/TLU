@@ -16,10 +16,10 @@
 
 ---
 
-### 2. 静かな不正の特定（ミクロ Z-Score / KLドリフト 3D Surface） (`002_2_2_1__micro_KL_drift_3d_surface.png`, `002_2_2_2__micro_Z_Score_3d_surface.png`)
+### 2. 静かな不正の特定（ミクロ Z-Score / KLドリフト 3D Surface） (`002_2_2_1__micro_KL_drift_3d_surface.png`, `002_2_2_2__3d_micro_z_score_X.png`)
 
 ![002_2_2_1__micro_KL_drift_heatmap](../../readme_plots/002_2_2_1__micro_KL_drift_3d_surface.png)
-![002_2_2_2__micro_Z_Score_heatmap](../../readme_plots/002_2_2_2__micro_Z_Score_3d_surface.png)
+![002_2_2_2__micro_Z_Score_heatmap](../../readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
 * **📊 視覚的構造**: 口座ごとの異常度を示す3D Surface ヒートマップ。暗い・青い平野（正常）の中に、明るい黄色や赤い山（異常）が隆起します。
 * **🚨 異常の検知（マクロ・ミクロ）**:
