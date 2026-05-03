@@ -49,8 +49,8 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 * **💡 異常系の読解:** 上段の「System Conservation Residual（質量の絶対残差）」のグラフにご注目ください。断続的にスパイクが発生しており、特に第42週において最大値（`1038.49`）を記録しています。これはシステム内に「小さな穴（Leak）」が空いており、エネルギーが漏れ出し続けていることを示す決定的な数学的署名です。
 
 **2. ネットワークトポロジーの異常（System Stability / Spectral Radius）**
-**【位相幾何学構造 (Network Topology)】**
-![Sample_3_Unbalanced_Mistake Network Topology](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00050.png)
+**【位相幾何学構造 (Network Topology / 第42週 異常発生時)】**
+![Sample_3_Unbalanced_Mistake Network Topology](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00041.png)
 
 **【スペクトル半径 (System Stability)】**
 ![Sample 3 System Stability](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_1_2__system_stability.png)

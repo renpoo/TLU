@@ -55,8 +55,8 @@ TLUは、上記の財務諸表をネットワークとして再構築し、質�
 * **💡 異常系の読解:** 上段の「System Conservation Residual」のグラフに、激しいスパイク（最大 `6087.0`）が断続的に発生しています（Leakの証拠）。同時に、最下段のスペクトル半径（Spectral Radius）も危険水域を超え、常に高止まりしています（Loopの証拠）。
 
 **2. ネットワークトポロジーの異常（System Stability / Spectral Radius）**
-**【位相幾何学構造 (Network Topology)】**
-![Sample_4_Composite_Chaos Network Topology](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00050.png)
+**【位相幾何学構造 (Network Topology / 第5週 循環取引発生時)】**
+![Sample_4_Composite_Chaos Network Topology](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00004.png)
 
 **【スペクトル半径 (System Stability)】**
 ![Sample 4 System Stability](../../../../samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)

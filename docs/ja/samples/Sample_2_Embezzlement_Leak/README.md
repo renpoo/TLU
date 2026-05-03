@@ -49,8 +49,8 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 * **💡 異常系の読解:** 上段の「System Conservation Residual（質量の絶対残差）」のグラフにご注目ください。Sample_0（正常系）では完全に `0.0` の地平に張り付いていたこの線が、断続的にスパイク（最大 `407.89`）を記録しています。これは「流入したはずのエネルギー（資金）が、ネットワーク内のどこにも到達せずに消滅した」ことを示す、質量保存則崩壊の決定的な数学的署名です。
 
 **2. ネットワークトポロジーの異常（System Stability / Spectral Radius）**
-**【位相幾何学構造 (Network Topology)】**
-![Sample_2_Embezzlement_Leak Network Topology](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00050.png)
+**【位相幾何学構造 (Network Topology / 第5週 異常発生時)】**
+![Sample_2_Embezzlement_Leak Network Topology](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00004.png)
 
 **【スペクトル半径 (System Stability)】**
 ![Sample 2 System Stability](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/004_1_2__system_stability.png)
