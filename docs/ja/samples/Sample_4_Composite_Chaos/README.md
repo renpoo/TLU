@@ -76,12 +76,14 @@ TLUは、上記の財務諸表をネットワークとして再構築し、質�
 
 **【3D マイクロ・フォレンジック (Z-Score Surface)】**
 ![Sample 4 3D Z-Score](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+
 * **💡 異常系の読解:** Sample 0 の完全に平坦な海と比較してください。循環取引による売上水増しノード群が全体的に波立っているのに加え、特定の時刻に `UNKNOWN_LEAK` ノードが鋭利なスパイクとして突き出しています。これは「粉飾（ループ）」と「横領（欠落）」が同じシステム内で多重に発生している地獄のような光景を物理的に描き出しています。
 
 **【構造的剛性 (Structural Stiffness / Precision Matrix)】**
-*(左/上: 第4週 複合異常の発生前 ／ 右/下: 第5週 複合異常の発生時)*
+*(上: 第4週 複合異常の発生前 ／ 下: 第5週 複合異常の発生時)*
 ![Sample 4 Structural Stiffness for Week 4](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_1__structural_stiffness.t.00003.png)
 ![Sample 4 Structural Stiffness for Week 5](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_1__structural_stiffness.t.00004.png)
+
 * **💡 異常系の読解 (Before/Afterの視覚的差分):** 人間の視覚による「差分検知」を活用してください。第4週までは白色（無色）であった `UNKNOWN_LEAK` の行・列が、第5週において横領が発生した瞬間に発光します。同時に、循環取引によって他の勘定科目間のマス目にも強烈な色（構造変異）が灯ります。この瞬間的な「不連続な変異」こそが、システムが複合カオスに陥った決定的な瞬間です。
 
 AIエージェントによる自律的なミクロ走査（全トランザクションの監査）により、2つのパソロジーを裏付ける決定的なトランザクション群が特定されました。
