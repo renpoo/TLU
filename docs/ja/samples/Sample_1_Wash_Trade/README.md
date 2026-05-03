@@ -73,6 +73,10 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 
 ## 4. ミクロ・フォレンジックによる最終証拠（Micro-Forensic Final Evidence）
 
+![Sample 1 Micro KL Divergence](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+
+* **💡 異常系の読解:**
+
 * **自律調査の実行:** マクロ物理指標において「異常なネットワークループ（Spectral = 0.8353）」が明確に検出されたため、AIエージェントは自律的に基礎となる仕訳ストリーム (`Dummy_Journal_Stream_Amount.csv`) へドリルダウンし、ミクロ・フォレンジック（特定行の抽出）を実行しました。
 * **特定された証拠:**
 `grep` によるトランザクション・レベルの追跡の結果、`Cash` と `Accounts_Receivable` の間で人為的な資金の還流（ループ）と架空売上の計上が以下の通り特定されました。
