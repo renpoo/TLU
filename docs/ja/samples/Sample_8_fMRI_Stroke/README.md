@@ -64,7 +64,10 @@ TLUは、これを単なる「残高の異常」ではなく、「ネットワ�
 
 **1. ネットワークトポロジーとスペクトル半径（System Stability）**
 **【位相幾何学構造 (Network Topology)】**
-![Sample_8_fMRI_Stroke Network Topology](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00058.png)
+![Sample_8_fMRI_Stroke Network Topology for time = 14](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00013.png)
+![Sample_8_fMRI_Stroke Network Topology for time = 15](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00014.png)
+![Sample_8_fMRI_Stroke Network Topology for time = 16](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00015.png)
+![Sample_8_fMRI_Stroke Network Topology for time = 17](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00016.png)
 
 **【スペクトル半径 (System Stability)】**
 ![Sample 8 System Stability](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)

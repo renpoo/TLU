@@ -64,7 +64,10 @@ TLUは、これを「出来高」ではなく「エントロピー（摩擦熱�
 
 **1. ネットワークトポロジーとスペクトル半径（System Stability）**
 **【位相幾何学構造 (Network Topology)】**
-![Sample_9_fMRI_Seizure Network Topology](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00058.png)
+![Sample_9_fMRI_Seizure Network Topology for time = 29](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00028.png)
+![Sample_9_fMRI_Seizure Network Topology for time = 30](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00029.png)
+![Sample_9_fMRI_Seizure Network Topology for time = 31](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00030.png)
+![Sample_9_fMRI_Seizure Network Topology for time = 32](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00031.png)
 
 **【スペクトル半径 (System Stability)】**
 ![Sample 9 System Stability](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/004_1_2__system_stability.png)
