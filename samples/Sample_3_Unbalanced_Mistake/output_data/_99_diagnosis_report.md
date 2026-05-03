@@ -1,23 +1,23 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_3_Unbalanced_Mistake`
-**Date Analyzed:** 2026-05-03 09:03:21
+**Date Analyzed:** 2026-05-03 10:01:25
 
 ## 1. Final Diagnosis
 
-### 🔴 Unbalanced Journal Mistake (Conservation Violation)
-- **Severity:** CRITICAL
-- **Evidence:** Relative Leak Ratio reached 0.0013 (Threshold: 0.001). Raw residual: 1687.36. Peak Location: Time: 2020-W39.
-- **Interpretation:** The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere.
+### 🟢 Healthy System (No Structural Pathologies Detected)
+- **Severity:** NORMAL
+- **Evidence:** All physical parameters remained within stable thresholds.
+- **Interpretation:** The system is functioning efficiently without any detectable structural anomalies, leaks, or loops.
 
 ---
 ## 2. Scale-Invariant Diagnostic Metrics
 
 | Physical Domain | Extracted Metric | Value | Threshold |
 |-----------------|------------------|-------|-----------|
-| Macro Forensics | Relative Mass Leak Ratio | 0.0013 | > 0.001 |
+| Macro Forensics | Relative Mass Leak Ratio | 0.0008 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 0.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| 0.8436 | < -0.1 |
+| Thermodynamics  | Relative Free Energy Ratio| 0.4183 | < -0.1 |
 | Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
@@ -25,63 +25,63 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-03T09:03:21.043777",
+  "timestamp": "2026-05-03T10:01:25.346933",
   "environment": "samples/Sample_3_Unbalanced_Mistake",
   "physics_metrics": {
-    "max_abs_residual": 1687.36,
-    "mean_gross_activity": 1301647.9730769233,
-    "relative_leak_ratio": 0.0012963259152252236,
+    "max_abs_residual": 1038.49,
+    "mean_gross_activity": 1295569.3761538463,
+    "relative_leak_ratio": 0.000801570351317629,
     "max_spectral": 0.0,
     "min_free_energy": 93251.36,
-    "min_relative_free_energy": 0.8435693397638316,
+    "min_relative_free_energy": 0.4183309539237493,
     "max_z_score": 0.0,
-    "max_leak_location": "Time: 2020-W39"
+    "max_leak_location": "Time: 2020-W42"
   },
   "detected_pathologies": [
     {
-      "pathology": "Unbalanced Journal Mistake (Conservation Violation)",
-      "severity": "CRITICAL",
-      "evidence": "Relative Leak Ratio reached 0.0013 (Threshold: 0.001). Raw residual: 1687.36. Peak Location: Time: 2020-W39.",
-      "interpretation": "The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere."
+      "pathology": "Healthy System (No Structural Pathologies Detected)",
+      "severity": "NORMAL",
+      "evidence": "All physical parameters remained within stable thresholds.",
+      "interpretation": "The system is functioning efficiently without any detectable structural anomalies, leaks, or loops."
     }
   ],
   "financial_baseline": {
     "week": "2020-W52",
-    "assets": 200317.0800000003,
-    "liabilities": 164574.10000000056,
+    "assets": 207157.74,
+    "liabilities": 146496.88000000035,
     "equity": 0.0,
-    "net_income": 35742.97999999998,
-    "total_liab_eq": 200317.08000000054,
+    "net_income": 60660.859999999986,
+    "total_liab_eq": 207157.74000000034,
     "revenue": 955157.5599999998,
-    "expense": 919414.5799999998,
+    "expense": 894496.6999999998,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        99400.8400000002
+        99153.30000000016
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        100243.89000000001
+        109739.16999999969
       ],
       [
         "ACC_Cash",
         "Liability (Short/Overdraft)",
-        65173.26000000036
+        47343.58000000019
       ],
       [
         "ACC_Inventory",
         "Asset",
-        100073.1900000003
+        97418.5700000003
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        526676.7799999999
+        529331.3999999999
       ],
       [
         "ACC_Payroll_Exp",
@@ -101,49 +101,49 @@
       [
         "ACC_Travel_Exp",
         "Expense",
-        91647.68999999996
+        77743.77000000003
       ],
       [
         "UNKNOWN_LEAK",
         "Expense",
-        18109.03
+        4440.45
       ]
     ],
     "tb_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        527349.13,
+        527596.67,
         626749.9700000002,
-        99400.8400000002
+        99153.30000000016
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
         955157.5599999998,
-        854913.6699999998,
-        100243.89000000001
+        845418.3900000001,
+        109739.16999999969
       ],
       [
         "ACC_COGS",
         "Expense",
-        526676.7799999999,
+        529331.3999999999,
         0.0,
-        526676.7799999999
+        529331.3999999999
       ],
       [
         "ACC_Cash",
         "Asset",
-        836804.6399999998,
-        901977.9000000001,
-        -65173.26000000036
+        840977.94,
+        888321.5200000001,
+        -47343.58000000019
       ],
       [
         "ACC_Inventory",
         "Asset",
         626749.9700000002,
-        526676.7799999999,
-        100073.1900000003
+        529331.3999999999,
+        97418.5700000003
       ],
       [
         "ACC_Payroll_Exp",
@@ -169,16 +169,16 @@
       [
         "ACC_Travel_Exp",
         "Expense",
-        91647.68999999996,
+        77743.77000000003,
         0.0,
-        91647.68999999996
+        77743.77000000003
       ],
       [
         "UNKNOWN_LEAK",
         "Expense",
-        18109.03,
+        4440.45,
         0.0,
-        18109.03
+        4440.45
       ]
     ]
   }

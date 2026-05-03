@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_9_fMRI_Seizure`
-**Date Analyzed:** 2026-05-03 09:05:38
+**Date Analyzed:** 2026-05-03 10:03:49
 
 ## 1. Final Diagnosis
 
@@ -15,7 +15,7 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
 - **Severity:** HIGH
-- **Evidence:** Relative Free Energy Ratio sank to -2.4736 (Threshold: -0.1). Raw F: -1236.78
+- **Evidence:** Relative Free Energy Ratio sank to -5.5882 (Threshold: -0.1). Raw F: -4295.29
 - **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
 
 ---
@@ -25,7 +25,7 @@ The system is suffering from multiple overlapping structural failures.
 |-----------------|------------------|-------|-----------|
 | Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 1.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| -2.4736 | < -0.1 |
+| Thermodynamics  | Relative Free Energy Ratio| -5.5882 | < -0.1 |
 | Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
@@ -33,15 +33,15 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-03T09:05:38.232339",
+  "timestamp": "2026-05-03T10:03:49.853931",
   "environment": "samples/Sample_9_fMRI_Seizure",
   "physics_metrics": {
     "max_abs_residual": 0.0,
     "mean_gross_activity": 861.2969999999999,
     "relative_leak_ratio": 0.0,
     "max_spectral": 1.0,
-    "min_free_energy": -1236.7838,
-    "min_relative_free_energy": -2.4735676,
+    "min_free_energy": -4295.2928,
+    "min_relative_free_energy": -5.588217973290466,
     "max_z_score": 0.0,
     "max_leak_location": "Time: 2024-01-01T10:00:00"
   },
@@ -55,7 +55,7 @@ The system is suffering from multiple overlapping structural failures.
     {
       "pathology": "Thermodynamic Energy Depletion (Embezzlement/Leak)",
       "severity": "HIGH",
-      "evidence": "Relative Free Energy Ratio sank to -2.4736 (Threshold: -0.1). Raw F: -1236.78",
+      "evidence": "Relative Free Energy Ratio sank to -5.5882 (Threshold: -0.1). Raw F: -4295.29",
       "interpretation": "Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale."
     }
   ],

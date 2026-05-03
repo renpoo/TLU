@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `workspace`
-**Date Analyzed:** 2026-05-03 09:01:51
+**Date Analyzed:** 2026-05-03 09:59:49
 
 ## 1. Final Diagnosis
 
@@ -17,7 +17,7 @@
 |-----------------|------------------|-------|-----------|
 | Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 0.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| 0.8288 | < -0.1 |
+| Thermodynamics  | Relative Free Energy Ratio| 0.3975 | < -0.1 |
 | Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
@@ -25,7 +25,7 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-03T09:01:51.917535",
+  "timestamp": "2026-05-03T09:59:49.663913",
   "environment": "workspace",
   "physics_metrics": {
     "max_abs_residual": 0.0,
@@ -33,7 +33,7 @@
     "relative_leak_ratio": 0.0,
     "max_spectral": 0.0,
     "min_free_energy": 85485.52,
-    "min_relative_free_energy": 0.8288111469064383,
+    "min_relative_free_energy": 0.39753770542549155,
     "max_z_score": 0.0,
     "max_leak_location": "Time: 2020-W01"
   },

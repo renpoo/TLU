@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_2_Embezzlement_Leak`
-**Date Analyzed:** 2026-05-03 09:02:58
+**Date Analyzed:** 2026-05-03 10:01:01
 
 ## 1. Final Diagnosis
 
@@ -17,7 +17,7 @@
 |-----------------|------------------|-------|-----------|
 | Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 0.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| 0.8070 | < -0.1 |
+| Thermodynamics  | Relative Free Energy Ratio| 0.5993 | < -0.1 |
 | Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
@@ -25,15 +25,15 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-03T09:02:58.472101",
+  "timestamp": "2026-05-03T10:01:01.414001",
   "environment": "samples/Sample_2_Embezzlement_Leak",
   "physics_metrics": {
     "max_abs_residual": 0.0,
-    "mean_gross_activity": 1308593.3611538461,
+    "mean_gross_activity": 1302095.4826923076,
     "relative_leak_ratio": 0.0,
     "max_spectral": 0.0,
-    "min_free_energy": 94989.86,
-    "min_relative_free_energy": 0.8070406910740565,
+    "min_free_energy": 93251.36,
+    "min_relative_free_energy": 0.5992711356337151,
     "max_z_score": 0.0,
     "max_leak_location": "Time: 2020-W01"
   },
@@ -47,126 +47,126 @@
   ],
   "financial_baseline": {
     "week": "2020-W52",
-    "assets": 224088.43000000028,
-    "liabilities": 184030.3200000003,
+    "assets": 210740.62000000005,
+    "liabilities": 177105.2599999999,
     "equity": 0.0,
-    "net_income": 40058.11000000022,
-    "total_liab_eq": 224088.43000000052,
-    "revenue": 943771.04,
-    "expense": 903712.9299999998,
+    "net_income": 33635.3600000001,
+    "total_liab_eq": 210740.62,
+    "revenue": 949944.35,
+    "expense": 916308.9899999999,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        105355.05000000005
+        121149.74999999988
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        110565.95000000019
+        112901.66000000003
       ],
       [
         "ACC_Cash",
         "Liability (Short/Overdraft)",
-        78675.27000000025
+        55955.51000000001
       ],
       [
         "ACC_Inventory",
         "Asset",
-        113522.4800000001
+        97838.96000000002
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        519131.9099999999
+        522589.5899999999
       ],
       [
         "ACC_Payroll_Exp",
         "Expense",
-        225034.74
+        216416.59
       ],
       [
         "ACC_Rent_Exp",
         "Expense",
-        57256.45999999999
+        71989.61
       ],
       [
         "ACC_Sales_Revenue",
         "Revenue",
-        943771.04
+        949944.35
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        102289.81999999996
+        105313.2
       ]
     ],
     "tb_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        527299.34,
-        632654.39,
-        105355.05000000005
+        499278.80000000005,
+        620428.5499999999,
+        121149.74999999988
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        943771.04,
-        833205.0899999999,
-        110565.95000000019
+        949944.35,
+        837042.69,
+        112901.66000000003
       ],
       [
         "ACC_COGS",
         "Expense",
-        519131.9099999999,
+        522589.5899999999,
         0.0,
-        519131.9099999999
+        522589.5899999999
       ],
       [
         "ACC_Cash",
         "Asset",
-        833205.0899999999,
-        911880.3600000001,
-        -78675.27000000025
+        837042.69,
+        892998.2,
+        -55955.51000000001
       ],
       [
         "ACC_Inventory",
         "Asset",
-        632654.39,
-        519131.9099999999,
-        113522.4800000001
+        620428.5499999999,
+        522589.5899999999,
+        97838.96000000002
       ],
       [
         "ACC_Payroll_Exp",
         "Expense",
-        225034.74,
+        216416.59,
         0.0,
-        225034.74
+        216416.59
       ],
       [
         "ACC_Rent_Exp",
         "Expense",
-        57256.45999999999,
+        71989.61,
         0.0,
-        57256.45999999999
+        71989.61
       ],
       [
         "ACC_Sales_Revenue",
         "Revenue",
         0.0,
-        943771.04,
-        943771.04
+        949944.35,
+        949944.35
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        102289.81999999996,
+        105313.2,
         0.0,
-        102289.81999999996
+        105313.2
       ]
     ]
   }

@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_5_Kyoto_Traffic`
-**Date Analyzed:** 2026-05-03 09:04:06
+**Date Analyzed:** 2026-05-03 10:02:12
 
 ## 1. Final Diagnosis
 
@@ -15,7 +15,7 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
 - **Severity:** HIGH
-- **Evidence:** Relative Free Energy Ratio sank to -12.8745 (Threshold: -0.1). Raw F: -115733.00
+- **Evidence:** Relative Free Energy Ratio sank to -16.7160 (Threshold: -0.1). Raw F: -188502.66
 - **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
 
 ---
@@ -25,7 +25,7 @@ The system is suffering from multiple overlapping structural failures.
 |-----------------|------------------|-------|-----------|
 | Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 1.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| -12.8745 | < -0.1 |
+| Thermodynamics  | Relative Free Energy Ratio| -16.7160 | < -0.1 |
 | Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
@@ -33,15 +33,15 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-03T09:04:06.205858",
+  "timestamp": "2026-05-03T10:02:12.733861",
   "environment": "samples/Sample_5_Kyoto_Traffic",
   "physics_metrics": {
     "max_abs_residual": 0.0,
-    "mean_gross_activity": 10624.0004,
+    "mean_gross_activity": 12131.250399999997,
     "relative_leak_ratio": 0.0,
     "max_spectral": 1.0,
-    "min_free_energy": -115732.9977,
-    "min_relative_free_energy": -12.874495591128206,
+    "min_free_energy": -188502.6568,
+    "min_relative_free_energy": -16.716000205732485,
     "max_z_score": 0.0,
     "max_leak_location": "Time: 0020-01"
   },
@@ -55,7 +55,7 @@ The system is suffering from multiple overlapping structural failures.
     {
       "pathology": "Thermodynamic Energy Depletion (Embezzlement/Leak)",
       "severity": "HIGH",
-      "evidence": "Relative Free Energy Ratio sank to -12.8745 (Threshold: -0.1). Raw F: -115733.00",
+      "evidence": "Relative Free Energy Ratio sank to -16.7160 (Threshold: -0.1). Raw F: -188502.66",
       "interpretation": "Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale."
     }
   ],
@@ -74,304 +74,304 @@ The system is suffering from multiple overlapping structural failures.
       [
         "\u4e00\u6761\u5800\u5ddd",
         "Expense",
-        -862.0
+        -747.0
       ],
       [
         "\u4e00\u6761\u5ba4\u753a",
         "Expense",
-        -346.0
+        255.0
       ],
       [
         "\u4e00\u6761\u65b0\u753a",
         "Expense",
-        772.0
+        428.0
       ],
       [
         "\u4e00\u6761\u70cf\u4e38",
         "Expense",
-        99.0
+        50.0
       ],
       [
         "\u4e00\u6761\u8eca\u5c4b\u753a",
         "Expense",
-        -718.0
+        660.0
       ],
       [
         "\u4e09\u6761\u5800\u5ddd",
         "Expense",
-        -474.0
+        426.0
       ],
       [
         "\u4e09\u6761\u5ba4\u753a",
         "Expense",
-        499.0
+        -793.0
       ],
       [
         "\u4e09\u6761\u65b0\u753a",
         "Expense",
-        590.0
+        -123.0
       ],
       [
         "\u4e09\u6761\u70cf\u4e38",
         "Expense",
-        815.0
+        868.0
       ],
       [
         "\u4e09\u6761\u8eca\u5c4b\u753a",
         "Expense",
-        -612.0
+        303.0
       ],
       [
         "\u4e8c\u6761\u5800\u5ddd",
         "Expense",
-        91.0
+        -760.0
       ],
       [
         "\u4e8c\u6761\u5ba4\u753a",
         "Expense",
-        -202.0
+        180.0
       ],
       [
         "\u4e8c\u6761\u65b0\u753a",
         "Expense",
-        -131.0
+        893.0
       ],
       [
         "\u4e8c\u6761\u70cf\u4e38",
         "Expense",
-        -259.0
+        -479.0
       ],
       [
         "\u4e8c\u6761\u8eca\u5c4b\u753a",
         "Expense",
-        321.0
+        -1269.0
       ],
       [
         "\u4e94\u6761\u5800\u5ddd",
         "Expense",
-        -79.0
+        396.0
       ],
       [
         "\u4e94\u6761\u5ba4\u753a",
         "Expense",
-        -44.0
+        -284.0
       ],
       [
         "\u4e94\u6761\u65b0\u753a",
         "Expense",
-        234.0
+        -518.0
       ],
       [
         "\u4e94\u6761\u70cf\u4e38",
         "Expense",
-        422.0
+        263.0
       ],
       [
         "\u4e94\u6761\u8eca\u5c4b\u753a",
         "Expense",
-        -32.0
+        -874.0
       ],
       [
         "\u56db\u6761\u5800\u5ddd",
         "Expense",
-        431.0
+        523.0
       ],
       [
         "\u56db\u6761\u5ba4\u753a",
         "Expense",
-        912.0
+        790.0
       ],
       [
         "\u56db\u6761\u65b0\u753a",
         "Expense",
-        -1223.0
+        -163.0
       ],
       [
         "\u56db\u6761\u70cf\u4e38",
         "Expense",
-        -622.0
+        -803.0
       ],
       [
         "\u56db\u6761\u8eca\u5c4b\u753a",
         "Expense",
-        418.0
+        778.0
       ]
     ],
     "tb_items": [
       [
         "\u4e00\u6761\u5800\u5ddd",
         "Expense",
-        121766.0,
-        122628.0,
-        -862.0
+        121889.0,
+        122636.0,
+        -747.0
       ],
       [
         "\u4e00\u6761\u5ba4\u753a",
         "Expense",
-        201560.0,
-        201906.0,
-        -346.0
+        201972.0,
+        201717.0,
+        255.0
       ],
       [
         "\u4e00\u6761\u65b0\u753a",
         "Expense",
-        191009.0,
-        190237.0,
-        772.0
+        191432.0,
+        191004.0,
+        428.0
       ],
       [
         "\u4e00\u6761\u70cf\u4e38",
         "Expense",
-        212768.0,
-        212669.0,
-        99.0
+        212399.0,
+        212349.0,
+        50.0
       ],
       [
         "\u4e00\u6761\u8eca\u5c4b\u753a",
         "Expense",
-        140346.0,
-        141064.0,
-        -718.0
+        140830.0,
+        140170.0,
+        660.0
       ],
       [
         "\u4e09\u6761\u5800\u5ddd",
         "Expense",
-        201316.0,
-        201790.0,
-        -474.0
+        202377.0,
+        201951.0,
+        426.0
       ],
       [
         "\u4e09\u6761\u5ba4\u753a",
         "Expense",
-        294970.0,
-        294471.0,
-        499.0
+        295235.0,
+        296028.0,
+        -793.0
       ],
       [
         "\u4e09\u6761\u65b0\u753a",
         "Expense",
-        280639.0,
-        280049.0,
-        590.0
+        281178.0,
+        281301.0,
+        -123.0
       ],
       [
         "\u4e09\u6761\u70cf\u4e38",
         "Expense",
-        309968.0,
-        309153.0,
-        815.0
+        310644.0,
+        309776.0,
+        868.0
       ],
       [
         "\u4e09\u6761\u8eca\u5c4b\u753a",
         "Expense",
-        226429.0,
-        227041.0,
-        -612.0
+        227316.0,
+        227013.0,
+        303.0
       ],
       [
         "\u4e8c\u6761\u5800\u5ddd",
         "Expense",
-        190469.0,
-        190378.0,
-        91.0
+        190419.0,
+        191179.0,
+        -760.0
       ],
       [
         "\u4e8c\u6761\u5ba4\u753a",
         "Expense",
-        280673.0,
-        280875.0,
-        -202.0
+        281254.0,
+        281074.0,
+        180.0
       ],
       [
         "\u4e8c\u6761\u65b0\u753a",
         "Expense",
-        266022.0,
-        266153.0,
-        -131.0
+        267337.0,
+        266444.0,
+        893.0
       ],
       [
         "\u4e8c\u6761\u70cf\u4e38",
         "Expense",
-        295030.0,
-        295289.0,
-        -259.0
+        295038.0,
+        295517.0,
+        -479.0
       ],
       [
         "\u4e8c\u6761\u8eca\u5c4b\u753a",
         "Expense",
-        216190.0,
-        215869.0,
-        321.0
+        215502.0,
+        216771.0,
+        -1269.0
       ],
       [
         "\u4e94\u6761\u5800\u5ddd",
         "Expense",
-        140860.0,
-        140939.0,
-        -79.0
+        140822.0,
+        140426.0,
+        396.0
       ],
       [
         "\u4e94\u6761\u5ba4\u753a",
         "Expense",
-        226719.0,
-        226763.0,
-        -44.0
+        226756.0,
+        227040.0,
+        -284.0
       ],
       [
         "\u4e94\u6761\u65b0\u753a",
         "Expense",
-        216406.0,
-        216172.0,
-        234.0
+        215685.0,
+        216203.0,
+        -518.0
       ],
       [
         "\u4e94\u6761\u70cf\u4e38",
         "Expense",
-        237853.0,
-        237431.0,
-        422.0
+        237786.0,
+        237523.0,
+        263.0
       ],
       [
         "\u4e94\u6761\u8eca\u5c4b\u753a",
         "Expense",
-        158443.0,
-        158475.0,
-        -32.0
+        157768.0,
+        158642.0,
+        -874.0
       ],
       [
         "\u56db\u6761\u5800\u5ddd",
         "Expense",
-        213054.0,
-        212623.0,
-        431.0
+        213286.0,
+        212763.0,
+        523.0
       ],
       [
         "\u56db\u6761\u5ba4\u753a",
         "Expense",
-        310049.0,
-        309137.0,
-        912.0
+        310920.0,
+        310130.0,
+        790.0
       ],
       [
         "\u56db\u6761\u65b0\u753a",
         "Expense",
-        294817.0,
-        296040.0,
-        -1223.0
+        295798.0,
+        295961.0,
+        -163.0
       ],
       [
         "\u56db\u6761\u70cf\u4e38",
         "Expense",
-        323493.0,
-        324115.0,
-        -622.0
+        323949.0,
+        324752.0,
+        -803.0
       ],
       [
         "\u56db\u6761\u8eca\u5c4b\u753a",
         "Expense",
-        237596.0,
-        237178.0,
-        418.0
+        237792.0,
+        237014.0,
+        778.0
       ]
     ]
   }
