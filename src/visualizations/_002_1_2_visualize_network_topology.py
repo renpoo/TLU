@@ -37,6 +37,7 @@ def main():
     text_col = ui_canvas.get('text_primary', 'white')
     bg_col = ui_canvas.get('legend_bg', 'black')
     edge_col = ui_canvas.get('legend_edge', 'gray')
+    canvas_bg = ui_canvas.get('bg', '#121212')
 
     # Color setting and intuition from the theme (inverted: minus = red, plus = blue)
     cmap_node = theme_cfg.get('thermodynamics', {}).get('colormaps', {}).get('displacement_delta_map', 'coolwarm')
@@ -127,21 +128,29 @@ def main():
         # Network drawing area (adjusted slightly to match scale=1.5)
         ax = fig.add_axes([0.15, 0.1, 0.60, 0.80])
 
-        node_colors = [net_flux[i] for i in range(N)]
-        node_sizes = [3000 * (min(gross_flux[i], global_vmax_gross) / global_vmax_gross) for i in range(N)]
+        # ノードカラーをRGBAにマッピング。質量ゼロの場合は背景色で塗りつぶす（空洞のリングにする）
+        sm_node_temp = ScalarMappable(cmap=cmap_node, norm=Normalize(vmin=-global_vmax_node, vmax=global_vmax_node))
+        node_colors = [canvas_bg if gross_flux[i] == 0 else sm_node_temp.to_rgba(net_flux[i]) for i in range(N)]
+        
+        # サイズは一律でベースサイズ(300)を持たせ、活動量に応じて拡張する
+        node_sizes = [300 if gross_flux[i] == 0 else 300 + 5000 * (min(gross_flux[i], global_vmax_gross) / global_vmax_gross) for i in range(N)]
 
         nodes = nx.draw_networkx_nodes(
             G, pos, ax=ax,
-            node_color=node_colors, cmap=cmap_node,
-            node_size=node_sizes, vmin=-global_vmax_node, vmax=global_vmax_node,
+            node_color=node_colors,
+            node_size=node_sizes,
             edgecolors=text_col, linewidths=1.5
         )
 
         for i in range(N):
-            if gross_flux[i] == 0:
-                continue
             x, y = pos[i]
-            if i in top_k_indices:
+            label_name = idx_to_label.get(i, "")
+            if gross_flux[i] == 0:
+                # 質量ゼロの幽霊ノードは、空間アンカーとして半透明で描画
+                ax.text(x, y + 0.1, f"{i:02d}", fontsize=9, color=text_col, alpha=0.3, ha='center')
+            elif label_name == "UNKNOWN_LEAK":
+                ax.text(x, y + 0.1, f"{i:02d}", fontsize=14, fontweight='bold', color='gold', ha='center')
+            elif i in top_k_indices:
                 ax.text(x, y + 0.1, f"{i:02d}", fontsize=14, fontweight='bold', color=c_outlier_text, ha='center')
             else:
                 ax.text(x, y + 0.1, f"{i:02d}", fontsize=11, color=text_col, alpha=0.9, ha='center')
@@ -198,10 +207,20 @@ def main():
         for text_obj in leg.get_texts():
             text_str = text_obj.get_text()
             if ":" in text_str:
-                idx_str = text_str.split(":")[0].strip()
-                if idx_str.isdigit() and int(idx_str) in top_k_indices:
-                    text_obj.set_color(c_outlier_text)
-                    text_obj.set_fontweight('bold')
+                idx_str, label_str = text_str.split(":", 1)
+                idx_str = idx_str.strip()
+                label_str = label_str.strip()
+                
+                if idx_str.isdigit():
+                    idx = int(idx_str)
+                    if label_str == "UNKNOWN_LEAK" and gross_flux[idx] > 0:
+                        text_obj.set_color('gold')
+                        text_obj.set_fontweight('bold')
+                    elif idx in top_k_indices:
+                        text_obj.set_color(c_outlier_text)
+                        text_obj.set_fontweight('bold')
+                    else:
+                        text_obj.set_color(text_col)
                 else:
                     text_obj.set_color(text_col)
             else:
