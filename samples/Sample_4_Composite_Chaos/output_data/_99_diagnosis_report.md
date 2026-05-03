@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_4_Composite_Chaos`
-**Date Analyzed:** 2026-05-03 10:44:52
+**Date Analyzed:** 2026-05-03 12:14:41
 
 ## 1. Final Diagnosis
 
@@ -10,12 +10,12 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🔴 Unbalanced Journal Mistake (Conservation Violation)
 - **Severity:** CRITICAL
-- **Evidence:** Relative Leak Ratio reached 0.0005 (Threshold: 1e-06). Raw residual: 742.63. Peak Location: Time: 2020-W09.
+- **Evidence:** Relative Leak Ratio reached 0.0041 (Threshold: 1e-06). Raw residual: 6087.00. Peak Location: Time: 2020-W44.
 - **Interpretation:** The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere.
 
 ### 🟠 Topological Feedback Loop (Wash Trade)
 - **Severity:** HIGH
-- **Evidence:** Spectral Radius reached 0.9764 (Threshold: 0.6).
+- **Evidence:** Spectral Radius reached 0.9864 (Threshold: 0.6).
 - **Interpretation:** An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading).
 
 ---
@@ -23,9 +23,9 @@ The system is suffering from multiple overlapping structural failures.
 
 | Physical Domain | Extracted Metric | Value | Threshold |
 |-----------------|------------------|-------|-----------|
-| Macro Forensics | Relative Mass Leak Ratio | 0.0005 | > 1e-06 |
-| Control Theory  | Max Spectral Radius      | 0.9764 | >= 0.6 |
-| Thermodynamics  | Relative Free Energy Ratio| 0.4205 | < -0.1 |
+| Macro Forensics | Relative Mass Leak Ratio | 0.0041 | > 1e-06 |
+| Control Theory  | Max Spectral Radius      | 0.9864 | >= 0.6 |
+| Thermodynamics  | Relative Free Energy Ratio| 0.6146 | < -0.1 |
 | Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
@@ -33,166 +33,166 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-03T10:44:52.991963",
+  "timestamp": "2026-05-03T12:14:41.731082",
   "environment": "samples/Sample_4_Composite_Chaos",
   "physics_metrics": {
-    "max_abs_residual": 742.63,
-    "mean_gross_activity": 1354460.1726923077,
-    "relative_leak_ratio": 0.0005482848554519314,
-    "max_spectral": 0.976386,
+    "max_abs_residual": 6087.0,
+    "mean_gross_activity": 1495736.375,
+    "relative_leak_ratio": 0.004069567406221567,
+    "max_spectral": 0.986398,
     "min_free_energy": 93251.36,
-    "min_relative_free_energy": 0.42048487028043857,
+    "min_relative_free_energy": 0.6145614045468858,
     "max_z_score": 0.0,
-    "max_leak_location": "Time: 2020-W09"
+    "max_leak_location": "Time: 2020-W44"
   },
   "detected_pathologies": [
     {
       "pathology": "Unbalanced Journal Mistake (Conservation Violation)",
       "severity": "CRITICAL",
-      "evidence": "Relative Leak Ratio reached 0.0005 (Threshold: 1e-06). Raw residual: 742.63. Peak Location: Time: 2020-W09.",
+      "evidence": "Relative Leak Ratio reached 0.0041 (Threshold: 1e-06). Raw residual: 6087.00. Peak Location: Time: 2020-W44.",
       "interpretation": "The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere."
     },
     {
       "pathology": "Topological Feedback Loop (Wash Trade)",
       "severity": "HIGH",
-      "evidence": "Spectral Radius reached 0.9764 (Threshold: 0.6).",
+      "evidence": "Spectral Radius reached 0.9864 (Threshold: 0.6).",
       "interpretation": "An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading)."
     }
   ],
   "financial_baseline": {
     "week": "2020-W52",
-    "assets": 245155.59000000008,
-    "liabilities": 129785.98000000004,
+    "assets": 366267.5900000001,
+    "liabilities": 156715.03000000038,
     "equity": 0.0,
-    "net_income": 115369.60999999987,
-    "total_liab_eq": 245155.5899999999,
-    "revenue": 999875.5599999999,
-    "expense": 884505.9500000001,
+    "net_income": 209552.56000000006,
+    "total_liab_eq": 366267.59000000043,
+    "revenue": 1113528.13,
+    "expense": 903975.5699999998,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        102342.82
+        127878.5
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        151450.61
+        274943.9899999999
       ],
       [
         "ACC_Cash",
         "Liability (Short/Overdraft)",
-        27443.160000000033
+        28836.530000000377
       ],
       [
         "ACC_Inventory",
         "Asset",
-        93704.9800000001
+        91323.60000000021
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        526166.71
+        527802.4899999999
       ],
       [
         "ACC_Payroll_Exp",
         "Expense",
-        218189.95000000004
+        220971.34
       ],
       [
         "ACC_Rent_Exp",
         "Expense",
-        60031.79000000001
+        62009.74
       ],
       [
         "ACC_Sales_Revenue",
         "Revenue",
-        999875.5599999999
+        1113528.13
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        77565.7
+        84167.60999999999
       ],
       [
         "UNKNOWN_LEAK",
         "Expense",
-        2551.7999999999997
+        9024.39
       ]
     ],
     "tb_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        517528.87000000005,
-        619871.6900000001,
-        102342.82
+        491247.5900000001,
+        619126.0900000001,
+        127878.5
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        1048353.73,
-        896903.12,
-        151450.61
+        1268601.5599999996,
+        993657.5699999997,
+        274943.9899999999
       ],
       [
         "ACC_COGS",
         "Expense",
-        526166.71,
+        527802.4899999999,
         0.0,
-        526166.71
+        527802.4899999999
       ],
       [
         "ACC_Cash",
         "Asset",
-        894351.32,
-        921794.48,
-        -27443.160000000033
+        990720.1799999997,
+        1019556.7100000001,
+        -28836.530000000377
       ],
       [
         "ACC_Inventory",
         "Asset",
-        619871.6900000001,
-        526166.71,
-        93704.9800000001
+        619126.0900000001,
+        527802.4899999999,
+        91323.60000000021
       ],
       [
         "ACC_Payroll_Exp",
         "Expense",
-        218189.95000000004,
+        220971.34,
         0.0,
-        218189.95000000004
+        220971.34
       ],
       [
         "ACC_Rent_Exp",
         "Expense",
-        60031.79000000001,
+        62009.74,
         0.0,
-        60031.79000000001
+        62009.74
       ],
       [
         "ACC_Sales_Revenue",
         "Revenue",
         0.0,
-        999875.5599999999,
-        999875.5599999999
+        1113528.13,
+        1113528.13
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        77565.7,
+        84167.60999999999,
         0.0,
-        77565.7
+        84167.60999999999
       ],
       [
         "UNKNOWN_LEAK",
         "Expense",
-        2551.7999999999997,
+        9024.39,
         0.0,
-        2551.7999999999997
+        9024.39
       ]
     ]
   }
