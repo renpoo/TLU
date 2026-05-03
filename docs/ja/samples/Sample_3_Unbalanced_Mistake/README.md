@@ -66,11 +66,12 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 * **特定された証拠:**
 
 **【構造的剛性 (Structural Stiffness / Precision Matrix)】**
-*(左/上: 第41週 異常発生前 ／ 右/下: 第42週 異常発生時)*
-![Sample 3 Structural Stiffness for Week 41](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00040.png)
+*(左: 第19週 異常発生前 ／ 中: 第20週 初期の異常発生 ／ 右: 第42週 最大異常への波及)*
+![Sample 3 Structural Stiffness for Week 19](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00018.png)
+![Sample 3 Structural Stiffness for Week 20](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00019.png)
 ![Sample 3 Structural Stiffness for Week 42](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00041.png)
 
-* **💡 異常系の読解 (Before/Afterの視覚的差分):** 第41週（異常発生前）の時点では完全に無色（白色）であった `UNKNOWN_LEAK` の行・列に、第42週で端数ズレが発生した瞬間に強烈なエネルギー（色）が灯ります。人間の視覚（差分検知）を活用することで、どの瞬間にシステム構造が変異したのかを直感的に特定できます。
+* **💡 異常系の読解 (0から1への変異と波及の視覚的差分):** 人間の視覚で「UNKNOWN_LEAK（質量の消失）」がシステムに誕生した瞬間を捉えてください。第19週の時点では、`UNKNOWN_LEAK` の行・列は完全に無色（存在しない）でした。しかし第20週において、システムで最初の「小さな端数ズレ」が発生した瞬間、このマス目に初めて色が灯ります（存在の証明）。そして第42週（絶対残差が最大となったピーク時）には、この漏れがシステム全体の構造を歪め、他の勘定科目間の関係性（マス目の色）にまで強烈な波及効果（Ripple Effect）をもたらしていることが直感的に理解できます。
 
 自律スクリプトによるトランザクション全件走査の結果、借方と貸方の金額が一致していない（端数ズレを起こしている）以下の仕訳群が正確に特定されました。
 
