@@ -80,16 +80,24 @@ def main():
     global_max_stress = max(global_max_stress, 1e-5)
 
     all_net_fluxes = []
+    all_gross_fluxes = []
     for t_val in df['t_idx'].unique():
         df_t_temp = df[df['t_idx'] == t_val]
         nf = np.zeros(N)
+        gf = np.zeros(N)
         for _, r in df_t_temp.iterrows():
             nf[int(r['tgt_idx'])] += r['weight']
             nf[int(r['src_idx'])] -= r['weight']
+            gf[int(r['tgt_idx'])] += r['weight']
+            gf[int(r['src_idx'])] += r['weight']
         all_net_fluxes.extend(np.abs(nf))
+        all_gross_fluxes.extend(gf)
     
     global_vmax_node = np.percentile(all_net_fluxes, 95) if all_net_fluxes else 1.0
     global_vmax_node = max(global_vmax_node, 1e-5)
+    
+    global_vmax_gross = np.percentile(all_gross_fluxes, 95) if all_gross_fluxes else 1.0
+    global_vmax_gross = max(global_vmax_gross, 1e-5)
 
     t_targets = [args.t_target] if args.t_target is not None else sorted(df['t_idx'].unique())
 
@@ -104,11 +112,14 @@ def main():
         G.add_nodes_from(range(N))
 
         net_flux = np.zeros(N)
+        gross_flux = np.zeros(N)
         for _, row in df_t.iterrows():
             src, tgt, w, s = int(row['src_idx']), int(row['tgt_idx']), row['weight'], row['stress']
             G.add_edge(src, tgt, weight=w, stress=s)
             net_flux[tgt] += w
             net_flux[src] -= w
+            gross_flux[tgt] += w
+            gross_flux[src] += w
 
         top_k_indices = np.argsort(np.abs(net_flux))[-args.top_k:].tolist()
 
@@ -117,7 +128,7 @@ def main():
         ax = fig.add_axes([0.15, 0.1, 0.60, 0.80])
 
         node_colors = [net_flux[i] for i in range(N)]
-        node_sizes = [500 + 1500 * (min(abs(net_flux[i]), global_vmax_node) / global_vmax_node) for i in range(N)]
+        node_sizes = [3000 * (min(gross_flux[i], global_vmax_gross) / global_vmax_gross) for i in range(N)]
 
         nodes = nx.draw_networkx_nodes(
             G, pos, ax=ax,
@@ -127,6 +138,8 @@ def main():
         )
 
         for i in range(N):
+            if gross_flux[i] == 0:
+                continue
             x, y = pos[i]
             if i in top_k_indices:
                 ax.text(x, y + 0.1, f"{i:02d}", fontsize=14, fontweight='bold', color=c_outlier_text, ha='center')
