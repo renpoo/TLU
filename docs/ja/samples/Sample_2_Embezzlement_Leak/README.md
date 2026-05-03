@@ -68,19 +68,12 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 
 本サンプルのタイムラインは「第5〜13週の初期犯行」「第14〜31週の一時休止（システムの一時的治癒）」「第32〜40週の怒涛の連続再犯」という3つのフェーズに分かれています。この「犯行の休止と再犯の激化」がシステム全体の機械的バランスに何をもたらしたかを、剛性行列と外力（3D）の対比から証明します。
 
-**【フェーズ1: 初期の変異 (Week 4 発生前 vs Week 5 発生時)】**
-*(上: Week 4 発生前 ／ 下: Week 5 発生時)*
+![Sample 2 External Force 3D](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_6__3d_dynamics_external_force.png)
 ![Sample 2 Structural Stiffness for Week 4](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00003.png)
 ![Sample 2 Structural Stiffness for Week 5](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00004.png)
-
-* **💡 異常系の読解 (最初の不連続な遷移):** 人間の視覚は「変化（差分）」に対して極めて敏感です。Week 4 の時点では `UNKNOWN_LEAK` の行・列は完全に無色（白色: 0.0）ですが、Week 5 で最初の横領が発生した瞬間に、その交点に強烈な色（構造的剛性の変異）が灯ります。
-
-**【フェーズ2: 3D外力の連続的推移と、剛性断面図による因果の立証】**
-
-*(上: 3D 仮想外力マップ(全期間) / 中: 剛性行列 Week 31(休止期断面) / 下: 剛性行列 Week 36(再犯期断面))*
-![Sample 2 External Force 3D](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_6__3d_dynamics_external_force.png)
-![Sample 2 Stiffness Week 31](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00030.png)
-![Sample 2 Stiffness Week 36](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00035.png)
+![Sample 2 Structural Stiffness for Week 14](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00013.png)
+![Sample 2 Structural Stiffness for Week 31](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00030.png)
+![Sample 2 Structural Stiffness for Week 36](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00035.png)
 
 上図の「3D 仮想外力マップ」は全期間（W01〜W52）の連続的な症状の推移を表しています。タイムラインを見ると、W14〜W31付近の「湖面のような平穏な時期」を経て、W32以降に「破滅的なスケールの異常振動（大波）」が発生していることが視認できます。この「なぜ急に大波が起きたのか？」という内部的な原因を、特定時点の内部構造（レントゲン断面図）として切り取ったのが中図・下図の剛性行列です。
 
