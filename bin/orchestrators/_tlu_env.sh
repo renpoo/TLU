@@ -126,15 +126,17 @@ run_tlu_pipeline() {
     | $TLU_PY -m src.filters._0_2_projector_to_coo "${projector_args[@]}" \
     > "${TLU_TMP_COO}"
 
-    # Step 2: Filtering (Mathematical Analysis)
-    # Safely execute by reading the completed latest _node_map.csv
+    # Step 2: Filtering & Semantic Hydration (Combined)
+    # Execute the filter, then immediately hydrate the output before saving
     if [ ${#extra_args[@]} -gt 0 ]; then
         cat "${TLU_TMP_COO}" \
         | $TLU_PY -m "${filter_module}" "${extra_args[@]}" \
+        | $TLU_PY -m src.utils._99_semantic_hydrator --node_map "${TLU_NODE_MAP}" --time_map "${TLU_TIME_MAP}" \
         > "${TLU_OUT_DIR}/${out_filename}"
     else
         cat "${TLU_TMP_COO}" \
         | $TLU_PY -m "${filter_module}" \
+        | $TLU_PY -m src.utils._99_semantic_hydrator --node_map "${TLU_NODE_MAP}" --time_map "${TLU_TIME_MAP}" \
         > "${TLU_OUT_DIR}/${out_filename}"
     fi
 

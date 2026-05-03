@@ -1,12 +1,7 @@
-# TLU Meta-Analysis Report (Laboratory Findings)
+# TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
-<<<<<<< Updated upstream
-**Target Environment:** `samples/Sample_6_Market_Bipartite_Weekly/workspace`
-**Date Analyzed:** 2026-04-28 14:30:43
-=======
 **Target Environment:** `samples/Sample_6_Market_Bipartite_Weekly`
-**Date Analyzed:** 2026-05-01 23:50:16
->>>>>>> Stashed changes
+**Date Analyzed:** 2026-05-03 09:04:30
 
 ## 1. Final Diagnosis
 
@@ -20,13 +15,8 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
 - **Severity:** HIGH
-- **Evidence:** Relative Free Energy Ratio sank to -9.1393 (Threshold: -0.1). Raw F: -799559039.95
+- **Evidence:** Relative Free Energy Ratio sank to -17.7852 (Threshold: -0.1). Raw F: -880525845.94
 - **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
-
-### 🟡 Local Pathological Stress (Micro Singularity)
-- **Severity:** MEDIUM
-- **Evidence:** Maximum local Z-Score reached 44.07 (Threshold: 3.0).
-- **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
 ## 2. Scale-Invariant Diagnostic Metrics
@@ -35,29 +25,25 @@ The system is suffering from multiple overlapping structural failures.
 |-----------------|------------------|-------|-----------|
 | Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 1.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| -9.1393 | < -0.1 |
-| Micro Forensics | Max Local Z-Score        | 44.07 | > 3.0 |
+| Thermodynamics  | Relative Free Energy Ratio| -17.7852 | < -0.1 |
+| Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
 
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-<<<<<<< Updated upstream
-  "timestamp": "2026-04-28T14:30:43.166863",
-  "environment": "samples/Sample_6_Market_Bipartite_Weekly/workspace",
-=======
-  "timestamp": "2026-05-01T23:50:16.902268",
+  "timestamp": "2026-05-03T09:04:30.463021",
   "environment": "samples/Sample_6_Market_Bipartite_Weekly",
->>>>>>> Stashed changes
   "physics_metrics": {
     "max_abs_residual": 0.0,
-    "mean_gross_activity": 130940216.1619231,
+    "mean_gross_activity": 61912970.910769224,
     "relative_leak_ratio": 0.0,
     "max_spectral": 1.0,
-    "min_free_energy": -799559039.9461,
-    "min_relative_free_energy": -9.139310461511887,
-    "max_z_score": 44.0676
+    "min_free_energy": -880525845.9439,
+    "min_relative_free_energy": -17.78524935588997,
+    "max_z_score": 0.0,
+    "max_leak_location": "Time: 2020-W01"
   },
   "detected_pathologies": [
     {
@@ -69,14 +55,8 @@ The system is suffering from multiple overlapping structural failures.
     {
       "pathology": "Thermodynamic Energy Depletion (Embezzlement/Leak)",
       "severity": "HIGH",
-      "evidence": "Relative Free Energy Ratio sank to -9.1393 (Threshold: -0.1). Raw F: -799559039.95",
+      "evidence": "Relative Free Energy Ratio sank to -17.7852 (Threshold: -0.1). Raw F: -880525845.94",
       "interpretation": "Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale."
-    },
-    {
-      "pathology": "Local Pathological Stress (Micro Singularity)",
-      "severity": "MEDIUM",
-      "evidence": "Maximum local Z-Score reached 44.07 (Threshold: 3.0).",
-      "interpretation": "Specific nodes (departments) are experiencing statistical strain far beyond their historical norm."
     }
   ],
   "financial_baseline": {

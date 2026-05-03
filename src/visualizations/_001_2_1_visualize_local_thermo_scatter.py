@@ -46,7 +46,7 @@ def main():
         
     if df.empty: sys.exit(0)
 
-    df_mean = df.groupby('node_idx').mean().reset_index()
+    df_mean = df.groupby('node_idx').mean(numeric_only=True).reset_index()
     N = int(df_mean['node_idx'].max()) + 1
     idx_to_label = load_node_labels(args.node_map, N)
 

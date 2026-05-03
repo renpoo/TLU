@@ -7,22 +7,24 @@
 > [!TIP]
 > **How to Generate the Graphs for this Sample**
 > The thousands of 3D plots and analysis CSVs for this sample are not bundled to save space. You can reproduce them locally by running the following commands from the repository root:
+>
 > ```bash
 > bash bin/batch_processing.sh --target_env "samples/Sample_2_Embezzlement_Leak"
 > bash bin/batch_visualize_graphs.sh --target_env "samples/Sample_2_Embezzlement_Leak"
 > ```
 
-
 ## 🩺 Meta-Diagnosis Synthesis Report
 
 ### 1. Executive Summary
+
 **HIGH: The system exhibits severe Thermodynamic Depletion.**
 The accounting ledger for `Sample_2_Embezzlement_Leak` is mathematically balanced, meaning no funds were stolen via brute-force deletion. However, the physics engine has detected a critical collapse in the "useful energy" (Free Energy) of the network. This indicates that while the books balance, the company's funds are dissipating outward as useless chaotic heat—the definitive signature of a sophisticated embezzlement scheme concealed through fake expenses.
 
 ### 2. Core Pathology (Primary Finding)
+
 * **Diagnosis:** Thermodynamic Energy Depletion (Embezzlement / Concealed Leak)
 * **Severity:** HIGH
-* **Physical Evidence:** 
+* **Physical Evidence:**
   * **Relative Mass Leak Ratio:** `0.0` (Mass is perfectly conserved; the double-entry system was not broken).
     ![002_2_1__macro_forensics_dashboard](readme_plots/002_2_1__macro_forensics_dashboard.png)
     * **💡 How to Read the Graph (Visual Cues):** The Z-Score line remains flat and low. This visually confirms that no raw "Conservation of Mass" laws were broken. The ledger balances perfectly.
@@ -32,15 +34,16 @@ The accounting ledger for `Sample_2_Embezzlement_Leak` is mathematically balance
     * **💡 How to Read the Graph (Visual Cues):** Look at the white Free Energy line. While the ledger balances (above), this line plummets steadily downward. It visually proves that while money is recorded, its usefulness is being destroyed (dissipated as chaotic heat).
 
   * **Max Local Z-Score:** **89.12** (Massive stress isolated to specific nodes).
-    ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+    ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__3d_micro_z_score_X.png)
     * **💡 How to Read the Graph (Visual Cues):** Look for the single cell glowing bright red against a normal background on the `RdBu_r` heatmap. This pinpoints the exact account where the embezzled funds are being dumped.
 
-* **Financial Evidence:** 
+* **Financial Evidence:**
   The B/S is balanced (`is_balanced: true`), and the company posted a Net Income of $58,488. However, the physical metrics prove that legitimate assets are being funneled out of the network disguised as "legitimate expenses" (e.g., fraudulent vendor payments or bloated travel expenses), masking the theft behind normal business operations.
 
 ### 3. Business Translation & Action Plan
+
 The perpetrator possesses accounting knowledge and successfully bypassed traditional variance audits by recording fake expenses whenever funds were siphoned. However, TLU's thermodynamic engine measures the *entropy* (chaos/utility) of money usage, and easily detected this unnatural dissipation of funds.
 
 **【Action Plan】**
 Macro-level balance checks are useless here. You must immediately consult the Micro Forensics Heatmap (`002_2_2__micro_Z_Score_heatmap.png`) to identify the exact expense node generating the 89.12 Z-Score. Once identified, initiate a receipt-level forensic audit of all outbound cash flows from that specific account to uncover the shell companies or unauthorized personal reimbursements.
-    ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+    ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__3d_micro_z_score_X.png)

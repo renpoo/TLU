@@ -7,11 +7,11 @@
 > [!TIP]
 > **How to Generate the Graphs for this Sample**
 > The thousands of 3D plots and analysis CSVs for this sample are not bundled to save space. You can reproduce them locally by running the following commands from the repository root:
+>
 > ```bash
 > bash bin/batch_processing.sh --target_env "samples/Sample_6_Market_Bipartite_Weekly"
 > bash bin/batch_visualize_graphs.sh --target_env "samples/Sample_6_Market_Bipartite_Weekly"
 > ```
-
 
 **Target Data:** `Sample_6_Market_Bipartite_Weekly`
 **Analytical Framework:** TLU Meta-Diagnostic Manual + Market Perspective (Stocks as Nodes)
@@ -27,10 +27,11 @@ The physical structure of the entire market is in critical danger. A perfect clo
 * **Physical Evidence:** Max Spectral Radius has reached the absolute limit of `1.000`. The Relative Free Energy Ratio recorded extreme depletion at `-9.14`.
 * **Financial Evidence:** This aligns perfectly with the fact that specific stocks (e.g., STK_005) show near-zero net fund movement (Net Income/Balance) while generating an anomalous $1.2 billion in Gross Debit/Credit.
 
-![System Stability & Spectral Radius](../../docs/readme_plots/sample_6/system_stability.png)
+![System Stability & Spectral Radius](../../docs/readme_plots/sample_6/004_1_2__system_stability.png)
+
 * **💡 How to Read the Graph (Visual Cues):** Look for the blue trajectory line piercing the critical 1.0 threshold line. This physically proves an infinite cycle of Wash Trading without generating new value.
 
-![Thermodynamic Energy Depletion](../../docs/readme_plots/sample_6/thermodynamics.png)
+![Thermodynamic Energy Depletion](../../docs/readme_plots/sample_6/001_1_2__thermodynamics_energy_stack.png)
 
 ## 3. Business Translation & Action Plan
 
@@ -46,7 +47,8 @@ Artificial inflation of trading volume is occurring. Funds are simply bouncing b
 * **Phase & Synchronization:**
   Frequency analysis of the trades reveals "White Noise" with a Phase Drift of `0.0`, rather than organic 1/f (Pink) noise. This is conclusive evidence of **Fabricated Synchronization**, where buy and sell orders are intentionally and perfectly synchronized by a programmatic entity.
 
-![Phase Drift Heatmap](../../docs/readme_plots/sample_6/phase_drift.png)
+![Phase Drift Heatmap](../../docs/readme_plots/sample_6/005_1_2__phase_drift_heatmap.png)
+
 * **💡 How to Read the Graph (Visual Cues):** On the `RdBu_r` heatmap, look for unnaturally flat, synchronized bands (perfect `0.0` drift). Organic human trading looks like natural "Pink Noise," but this perfect synchronization proves programmatic control (Bots).
 
 * **Systemic Vulnerability:**

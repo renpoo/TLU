@@ -7,11 +7,11 @@
 > [!TIP]
 > **How to Generate the Graphs for this Sample**
 > The thousands of 3D plots and analysis CSVs for this sample are not bundled to save space. You can reproduce them locally by running the following commands from the repository root:
+>
 > ```bash
 > bash bin/batch_processing.sh --target_env "samples/Sample_4_Composite_Chaos"
 > bash bin/batch_visualize_graphs.sh --target_env "samples/Sample_4_Composite_Chaos"
 > ```
-
 
 ## 🩺 Meta-Diagnosis Synthesis Report
 
@@ -24,13 +24,13 @@ The target environment (`Sample_4_Composite_Chaos`) is triggering every single c
 
 * **Diagnosis:** Unbalanced Journal Mistake (Conservation Violation)
 * **Severity:** CRITICAL
-* **Physical Evidence:** 
+* **Physical Evidence:**
   * **Relative Mass Leak Ratio:** **0.0161** (Exceeds threshold by 16x). A massive chunk of the systemic volume is simply unaccounted for.
     ![002_2_1__macro_forensics_dashboard](readme_plots/002_2_1__macro_forensics_dashboard.png)
     * **💡 How to Read the Graph (Visual Cues):** The Z-Score line spikes violently above the threshold, visually proving that raw mass is missing from the double-entry system.
 
-* **Financial Evidence:** 
-  While Net Income appears falsely high at $128,741, the P/L explicitly contains an **`UNKNOWN_LEAK` ($2,321.27)** to artificially balance the books. 
+* **Financial Evidence:**
+  While Net Income appears falsely high at $128,741, the P/L explicitly contains an **`UNKNOWN_LEAK` ($2,321.27)** to artificially balance the books.
 
 ### 3. Secondary Pathology (The Anatomy of Chaos)
 
@@ -48,7 +48,7 @@ Although the LLM Diagnostic Manual (**【Tier 2 Ultimate Veto】**) states that 
 
 * **Micro Singularity (Max Local Z-Score: 32.74):**
   The mathematical space is tearing. While not as extreme as Sample 3's isolated singularity, a Z-Score of 32.74 indicates severe, localized stress across multiple departments struggling to process the conflicting data realities.
-  ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__micro_Z_Score_heatmap.png)
+  ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__3d_micro_z_score_X.png)
   * **💡 How to Read the Graph (Visual Cues):** The `RdBu_r` heatmap will show multiple bright red patches, indicating widespread, chaotic stress across various departments, not just a single point of failure.
 
 * **Financial Distortion:**
@@ -60,5 +60,6 @@ This organization's network is suffering from a chaotic blend of intentional man
 
 **【Action Plan】**
 Halt all strategic business analysis immediately.
+
 1. **Data Engineering Audit:** You must first resolve the $2,321.27 `UNKNOWN_LEAK` to restore Mass Conservation (Leak Ratio = 0.0) to the ledger.
 2. **Fraud Investigation:** Once the data integrity is tentatively restored, immediately investigate the topological loops driving the Spectral Radius to 0.9580. Trace the Accounts Receivable and Sales Revenue pipelines for circular invoicing. Escalate to external auditors or legal authorities, as you are dealing with a massive, overt Wash Trading scheme wrapped in a broken database.

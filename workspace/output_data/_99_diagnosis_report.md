@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `workspace`
-**Date Analyzed:** 2026-05-02 08:43:40
+**Date Analyzed:** 2026-05-03 09:01:51
 
 ## 1. Final Diagnosis
 
@@ -25,7 +25,7 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-02T08:43:40.608678",
+  "timestamp": "2026-05-03T09:01:51.917535",
   "environment": "workspace",
   "physics_metrics": {
     "max_abs_residual": 0.0,
@@ -34,7 +34,8 @@
     "max_spectral": 0.0,
     "min_free_energy": 85485.52,
     "min_relative_free_energy": 0.8288111469064383,
-    "max_z_score": 0.0
+    "max_z_score": 0.0,
+    "max_leak_location": "Time: 2020-W01"
   },
   "detected_pathologies": [
     {

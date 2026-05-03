@@ -1,119 +1,87 @@
-# TLU Meta-Analysis Report (Laboratory Findings)
+# TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_3_Unbalanced_Mistake`
-<<<<<<< Updated upstream
-**Date Analyzed:** 2026-04-28 14:29:37
-=======
-**Date Analyzed:** 2026-05-01 23:49:04
->>>>>>> Stashed changes
+**Date Analyzed:** 2026-05-03 09:03:21
 
 ## 1. Final Diagnosis
 
-### ⚠️ COMPOSITE PATHOLOGY DETECTED
-The system is suffering from multiple overlapping structural failures.
-
 ### 🔴 Unbalanced Journal Mistake (Conservation Violation)
 - **Severity:** CRITICAL
-- **Evidence:** Relative Leak Ratio reached 0.0116 (Threshold: 0.001). Raw residual: 778.56
+- **Evidence:** Relative Leak Ratio reached 0.0013 (Threshold: 0.001). Raw residual: 1687.36. Peak Location: Time: 2020-W39.
 - **Interpretation:** The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere.
-
-### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
-- **Severity:** HIGH
-- **Evidence:** Relative Free Energy Ratio sank to -0.1263 (Threshold: -0.1). Raw F: -10145.07
-- **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
-
-### 🟡 Local Pathological Stress (Micro Singularity)
-- **Severity:** MEDIUM
-- **Evidence:** Maximum local Z-Score reached 121.13 (Threshold: 3.0).
-- **Interpretation:** Specific nodes (departments) are experiencing statistical strain far beyond their historical norm.
 
 ---
 ## 2. Scale-Invariant Diagnostic Metrics
 
 | Physical Domain | Extracted Metric | Value | Threshold |
 |-----------------|------------------|-------|-----------|
-| Macro Forensics | Relative Mass Leak Ratio | 0.0116 | > 0.001 |
+| Macro Forensics | Relative Mass Leak Ratio | 0.0013 | > 0.001 |
 | Control Theory  | Max Spectral Radius      | 0.0000 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| -0.1263 | < -0.1 |
-| Micro Forensics | Max Local Z-Score        | 121.13 | > 3.0 |
+| Thermodynamics  | Relative Free Energy Ratio| 0.8436 | < -0.1 |
+| Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
 
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-<<<<<<< Updated upstream
-  "timestamp": "2026-04-28T14:29:37.890500",
-=======
-  "timestamp": "2026-05-01T23:49:04.943480",
->>>>>>> Stashed changes
+  "timestamp": "2026-05-03T09:03:21.043777",
   "environment": "samples/Sample_3_Unbalanced_Mistake",
   "physics_metrics": {
-    "max_abs_residual": 778.56,
-    "mean_gross_activity": 66945.32038461538,
-    "relative_leak_ratio": 0.011629789737759175,
+    "max_abs_residual": 1687.36,
+    "mean_gross_activity": 1301647.9730769233,
+    "relative_leak_ratio": 0.0012963259152252236,
     "max_spectral": 0.0,
-    "min_free_energy": -10145.0746,
-    "min_relative_free_energy": -0.12625464522207772,
-    "max_z_score": 121.1314
+    "min_free_energy": 93251.36,
+    "min_relative_free_energy": 0.8435693397638316,
+    "max_z_score": 0.0,
+    "max_leak_location": "Time: 2020-W39"
   },
   "detected_pathologies": [
     {
       "pathology": "Unbalanced Journal Mistake (Conservation Violation)",
       "severity": "CRITICAL",
-      "evidence": "Relative Leak Ratio reached 0.0116 (Threshold: 0.001). Raw residual: 778.56",
+      "evidence": "Relative Leak Ratio reached 0.0013 (Threshold: 0.001). Raw residual: 1687.36. Peak Location: Time: 2020-W39.",
       "interpretation": "The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere."
-    },
-    {
-      "pathology": "Thermodynamic Energy Depletion (Embezzlement/Leak)",
-      "severity": "HIGH",
-      "evidence": "Relative Free Energy Ratio sank to -0.1263 (Threshold: -0.1). Raw F: -10145.07",
-      "interpretation": "Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale."
-    },
-    {
-      "pathology": "Local Pathological Stress (Micro Singularity)",
-      "severity": "MEDIUM",
-      "evidence": "Maximum local Z-Score reached 121.13 (Threshold: 3.0).",
-      "interpretation": "Specific nodes (departments) are experiencing statistical strain far beyond their historical norm."
     }
   ],
   "financial_baseline": {
     "week": "2020-W52",
-    "assets": 218672.90999999968,
-    "liabilities": 177303.88000000012,
+    "assets": 200317.0800000003,
+    "liabilities": 164574.10000000056,
     "equity": 0.0,
-    "net_income": 41369.02999999968,
-    "total_liab_eq": 218672.9099999998,
+    "net_income": 35742.97999999998,
+    "total_liab_eq": 200317.08000000054,
     "revenue": 955157.5599999998,
-    "expense": 913788.5300000001,
+    "expense": 919414.5799999998,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        65185.369999999995
+        99400.8400000002
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        112015.41999999993
+        100243.89000000001
       ],
       [
         "ACC_Cash",
-        "Asset",
-        106657.48999999976
+        "Liability (Short/Overdraft)",
+        65173.26000000036
       ],
       [
         "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        112118.51000000013
+        "Asset",
+        100073.1900000003
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        529951.8500000002
+        526676.7799999999
       ],
       [
         "ACC_Payroll_Exp",
@@ -133,49 +101,49 @@ The system is suffering from multiple overlapping structural failures.
       [
         "ACC_Travel_Exp",
         "Expense",
-        99442.72
+        91647.68999999996
       ],
       [
         "UNKNOWN_LEAK",
         "Expense",
-        1412.8799999999999
+        18109.03
       ]
     ],
     "tb_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        352647.9700000001,
-        417833.3400000001,
-        65185.369999999995
+        527349.13,
+        626749.9700000002,
+        99400.8400000002
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
         955157.5599999998,
-        843142.1399999999,
-        112015.41999999993
+        854913.6699999998,
+        100243.89000000001
       ],
       [
         "ACC_COGS",
         "Expense",
-        529951.8500000002,
+        526676.7799999999,
         0.0,
-        529951.8500000002
+        526676.7799999999
       ],
       [
         "ACC_Cash",
         "Asset",
-        841729.2599999999,
-        735071.7700000001,
-        106657.48999999976
+        836804.6399999998,
+        901977.9000000001,
+        -65173.26000000036
       ],
       [
         "ACC_Inventory",
         "Asset",
-        417833.3400000001,
-        529951.8500000002,
-        -112118.51000000013
+        626749.9700000002,
+        526676.7799999999,
+        100073.1900000003
       ],
       [
         "ACC_Payroll_Exp",
@@ -201,16 +169,16 @@ The system is suffering from multiple overlapping structural failures.
       [
         "ACC_Travel_Exp",
         "Expense",
-        99442.72,
+        91647.68999999996,
         0.0,
-        99442.72
+        91647.68999999996
       ],
       [
         "UNKNOWN_LEAK",
         "Expense",
-        1412.8799999999999,
+        18109.03,
         0.0,
-        1412.8799999999999
+        18109.03
       ]
     ]
   }

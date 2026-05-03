@@ -1,16 +1,16 @@
-node_idx,spectral_exponent_beta,noise_classification
-0,0.1479,White Noise
-1,0.4347,White Noise
-2,-0.3764,White Noise
-3,0.2448,White Noise
-4,0.0978,White Noise
-5,0.4002,White Noise
-6,0.3612,White Noise
-7,0.1038,White Noise
-8,-0.1987,White Noise
-9,0.9892,Pink Noise
-10,0.6683,Pink Noise
-11,0.5486,Pink Noise
-12,0.5532,Pink Noise
-13,0.2574,White Noise
-14,-0.0685,White Noise
+node_idx,node_label,spectral_exponent_beta,noise_classification
+0,STK_001,0.1479,White Noise
+1,USR_001,0.4347,White Noise
+2,USR_002,-0.3764,White Noise
+3,USR_003,0.2448,White Noise
+4,USR_004,0.0978,White Noise
+5,USR_006,0.4002,White Noise
+6,USR_007,0.3612,White Noise
+7,USR_008,0.1038,White Noise
+8,USR_009,-0.1987,White Noise
+9,USR_010,0.9892,Pink Noise
+10,STK_002,0.6683,Pink Noise
+11,USR_005,0.5486,Pink Noise
+12,STK_003,0.5532,Pink Noise
+13,STK_004,0.2574,White Noise
+14,STK_005,-0.0685,White Noise
