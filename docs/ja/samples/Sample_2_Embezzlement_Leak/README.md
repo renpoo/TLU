@@ -74,6 +74,7 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 ![Sample 2 Structural Stiffness for Week 14](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00013.png)
 ![Sample 2 Structural Stiffness for Week 31](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00030.png)
 ![Sample 2 Structural Stiffness for Week 36](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00035.png)
+![Sample 2 Structural Stiffness for Week 52](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00051.png)
 
 上図の「3D 仮想外力マップ」は全期間（W01〜W52）の連続的な症状の推移を表しています。タイムラインを見ると、W14〜W31付近の「湖面のような平穏な時期」を経て、W32以降に「破滅的なスケールの異常振動（大波）」が発生していることが視認できます。この「なぜ急に大波が起きたのか？」という内部的な原因を、特定時点の内部構造（レントゲン断面図）として切り取ったのが中図・下図の剛性行列です。
 
