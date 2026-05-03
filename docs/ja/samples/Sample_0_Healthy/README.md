@@ -29,7 +29,7 @@
 
 **1. 質量保存の基準（Macro Forensics）**
 ![Sample 0 Macro Forensics](../../../readme_plots/002_2_1__macro_forensics_dashboard.png)
-* **💡 正常系の読解:** 下段の「Relative Leak Ratio（漏れ率）」が完全に `0.0` の地平に張り付いています。これは「借方と貸方が1円の狂いもなく一致し、システム外へ消失した（漏れた）質量が一切ない」という複式簿記の絶対原則（質量保存則）が完璧に機能していることを証明しています。異常系（Sample 3, 4など）ではここに鋭いスパイクが発生します。
+* **💡 正常系の読解:** 上段の「System Conservation Residual（質量の絶対残差）」が完全に `0.0` の地平に張り付いています。これは「借方と貸方が1円の狂いもなく一致し、システム外へ消失した（漏れた）質量が一切ない」という複式簿記の絶対原則（質量保存則）が完璧に機能していることを証明しています。異常系（Sample 3, 4など）ではここに鋭いスパイクが発生します。また、下段の「Statistical Anomaly (Z-Score)」も低いレベルで安定しており、統計的な外れ値が存在しないことを示しています。
 
 **2. ネットワークトポロジーの基準（System Stability / Spectral Radius）**
 ![Sample 0 System Stability](../../../readme_plots/004_1_2__system_stability.png)
