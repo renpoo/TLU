@@ -52,6 +52,10 @@ TLUは、これを「ユーザー間でパスされるエネルギーの動学�
 ### 📊 異常系可視化プロファイル（病的構造の証明）
 
 **1. ネットワークトポロジーとスペクトル半径（System Stability）**
+**【位相幾何学構造 (Network Topology)】**
+![Sample_7_Market_Users_Weekly Network Topology](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00050.png)
+
+**【スペクトル半径 (System Stability)】**
 ![Sample 7 System Stability](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/004_1_2__system_stability.png)
 * **💡 異常系の読解:** 赤色の線（Max Spectral Radius）が常に `1.0` の天井に張り付いています。これは「AとBが相互に無限にパスを回し続けている」極限状態を指します。
 

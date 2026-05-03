@@ -53,6 +53,10 @@ TLUは、これを単なる「残高の異常」ではなく、「ネットワ�
 ### 📊 異常系可視化プロファイル（病的構造の証明）
 
 **1. ネットワークトポロジーとスペクトル半径（System Stability）**
+**【位相幾何学構造 (Network Topology)】**
+![Sample_8_fMRI_Stroke Network Topology](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00058.png)
+
+**【スペクトル半径 (System Stability)】**
 ![Sample 8 System Stability](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)
 * **💡 異常系の読解:** システムは常に双方向の激しい相互作用（スペクトル半径 1.0）を行っています。
 

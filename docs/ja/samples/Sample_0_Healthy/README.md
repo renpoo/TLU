@@ -40,15 +40,15 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 <div style="display: flex; gap: 10px;">
   <div style="flex: 1; text-align: center;">
     <p><b>第1週（システム起動時）</b></p>
-    <img src="../../../readme_plots/002_1_2__network_topology.t.00000.png" width="100%">
+    <img src="../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00000.png" width="100%">
   </div>
   <div style="flex: 1; text-align: center;">
     <p><b>第26週（中間期）</b></p>
-    <img src="../../../readme_plots/002_1_2__network_topology.t.00025.png" width="100%">
+    <img src="../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00025.png" width="100%">
   </div>
   <div style="flex: 1; text-align: center;">
     <p><b>第52週（期末）</b></p>
-    <img src="../../../readme_plots/002_1_2__network_topology.t.00051.png" width="100%">
+    <img src="../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00051.png" width="100%">
   </div>
 </div>
 

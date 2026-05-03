@@ -40,7 +40,7 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 <div style="display: flex; justify-content: center;">
   <div style="width: 70%; text-align: center;">
     <p><b>第41週（異常発生時）</b></p>
-    <img src="../../../readme_plots/002_1_2__network_topology.t.00041.png" width="100%">
+    <img src="../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00041.png" width="100%">
   </div>
 </div>
 

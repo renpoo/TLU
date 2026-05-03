@@ -45,6 +45,10 @@ TLUは、これを「ネットワーク上のエネルギー保存とエント�
 ### 📊 異常系可視化プロファイル（病的構造の証明）
 
 **1. ネットワークトポロジーとスペクトル半径（System Stability）**
+**【位相幾何学構造 (Network Topology)】**
+![Sample_6_Market_Bipartite_Weekly Network Topology](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00050.png)
+
+**【スペクトル半径 (System Stability)】**
 ![Sample 6 System Stability](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/004_1_2__system_stability.png)
 * **💡 異常系の読解:** 赤色の線（Max Spectral Radius）が常に `1.0` の天井に張り付いており、相場操縦による人為的なループが常態化している異常な市場空間であることが視覚的に確認できます。
 

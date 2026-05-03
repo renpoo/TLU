@@ -52,6 +52,10 @@ TLUは、これを「お金」ではなく「質量を持った粒子の移動�
 ### 📊 異常系可視化プロファイル（病的構造の証明）
 
 **1. ネットワークトポロジーとスペクトル半径（System Stability）**
+**【位相幾何学構造 (Network Topology)】**
+![Sample_5_Kyoto_Traffic Network Topology](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00023.png)
+
+**【スペクトル半径 (System Stability)】**
 ![Sample 5 System Stability](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_2__system_stability.png)
 * **💡 異常系の読解:** 赤色の線（Max Spectral Radius）が完全に `1.0` の天井に張り付いたまま推移しています。これは、システムがもはや「流れる川」ではなく、「密閉された箱の中で激しく反射し合う音波」のような定在波状態（デッドロック）になっていることを示します。
 

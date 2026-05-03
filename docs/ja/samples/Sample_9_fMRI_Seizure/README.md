@@ -53,6 +53,10 @@ TLUは、これを「出来高」ではなく「エントロピー（摩擦熱�
 ### 📊 異常系可視化プロファイル（病的構造の証明）
 
 **1. ネットワークトポロジーとスペクトル半径（System Stability）**
+**【位相幾何学構造 (Network Topology)】**
+![Sample_9_fMRI_Seizure Network Topology](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00058.png)
+
+**【スペクトル半径 (System Stability)】**
 ![Sample 9 System Stability](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/004_1_2__system_stability.png)
 * **💡 異常系の読解:** システム全体が極限の共鳴状態（スペクトル半径 1.0）に支配されています。
 
