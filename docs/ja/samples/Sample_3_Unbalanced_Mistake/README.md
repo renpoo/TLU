@@ -57,8 +57,21 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 * **💡 異常系の読解:** 赤色の線「Max Spectral Radius」は `0.0` のままです。これは、Sample_1（循環取引）のような「資金の自己強化的なループ」は起きておらず、純粋にシステムの外へ資金が「漏れ出ている」だけであることを意味します。
 
 ## 4. ミクロ・フォレンジックによる最終証拠（Micro-Forensic Final Evidence）
+
+**【3D マイクロ・フォレンジック (Z-Score Surface)】**
+![Sample 3 3D Z-Score](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+* **💡 異常系の読解:** Sample 0 の完全に平坦な海と比較してください。特定の時刻（第42週など）において、`UNKNOWN_LEAK` という特設ノードに、周囲から完全に切り離された鋭いスパイクが突き出ています。これが「端数ズレ」によって生じた質量の欠落（無）が物理空間に蓄積した痕跡です。
+
 * **自律調査の実行:** マクロ物理指標において「質量保存則違反（Leak Ratio > 0）」が明確に検出されたため、AIエージェントは自律的に基礎となる仕訳ストリームへドリルダウンし、絶対残差が最大となった **第42週（2020-W42）** に焦点を当ててミクロ調査を実施しました。
 * **特定された証拠:**
+
+**【構造的剛性 (Structural Stiffness / Precision Matrix)】**
+*(左/上: 第41週 異常発生前 ／ 右/下: 第42週 異常発生時)*
+![Sample 3 Structural Stiffness for Week 41](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00040.png)
+![Sample 3 Structural Stiffness for Week 42](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00041.png)
+
+* **💡 異常系の読解 (Before/Afterの視覚的差分):** 第41週（異常発生前）の時点では完全に無色（白色）であった `UNKNOWN_LEAK` の行・列に、第42週で端数ズレが発生した瞬間に強烈なエネルギー（色）が灯ります。人間の視覚（差分検知）を活用することで、どの瞬間にシステム構造が変異したのかを直感的に特定できます。
+
 自律スクリプトによるトランザクション全件走査の結果、借方と貸方の金額が一致していない（端数ズレを起こしている）以下の仕訳群が正確に特定されました。
 
   * **Event 1 (2020-10-12):**

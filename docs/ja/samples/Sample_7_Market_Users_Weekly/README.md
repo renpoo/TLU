@@ -65,8 +65,10 @@ TLUは、これを「ユーザー間でパスされるエネルギーの動学�
 * **💡 異常系の読解:** 赤色の線（Max Spectral Radius）が常に `1.0` の天井に張り付いています。これは「AとBが相互に無限にパスを回し続けている」極限状態を指します。
 
 **2. 熱力学ダッシュボード（Thermodynamics Energy Stack）**
+*(左/上: Sample 0 正常な経済成長 ／ 右/下: Sample 7 熱力学的な死)*
+![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 ![Sample 7 Thermodynamics](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-* **💡 異常系の読解:** Sample 6 と同様、膨大な取引量（エントロピー損失）がエネルギー総枠を食い破り、システムが熱力学的な死を迎えています。
+* **💡 異常系の読解 (Sample 0 との視覚的差分):** 正常系（Sample 0）の「白色の線（Free Energy）が豊かに右肩上がりで成長している姿」と視覚的に比較してください。Sample 6 と同様、膨大な取引量（エントロピー損失）がエネルギー総枠を食い破り、自由エネルギーがマイナス圏へ深く沈み込むことで、システムが熱力学的な死を迎えていることが一目で確認できます。
 
 ## 4. ミクロ・フォレンジックと「プロジェクション（射影）」の真価
 AIエージェントによる自律監査により、Sample 6 と同じく `2020-02-03 11:41:21` に発生した `USR_001` と `USR_006` による超高速ループが特定されました。

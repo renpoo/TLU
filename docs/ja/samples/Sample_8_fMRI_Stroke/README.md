@@ -66,8 +66,10 @@ TLUは、これを単なる「残高の異常」ではなく、「ネットワ�
 * **💡 異常系の読解:** システムは常に双方向の激しい相互作用（スペクトル半径 1.0）を行っています。
 
 **2. 熱力学ダッシュボード（Thermodynamics Energy Stack）**
+*(左/上: Sample 0 正常な経済成長 ／ 右/下: Sample 8 脳の熱力学的な死)*
+![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 ![Sample 8 Thermodynamics](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-* **💡 異常系の読解:** 時間経過（TR=150以降）とともに自由エネルギーの領域が押し潰され、マイナス領域へと深く沈み込んでいることが観測されます。これが「脳卒中発症の瞬間」の熱力学的シグネチャです。
+* **💡 異常系の読解 (Sample 0 との視覚的差分):** 正常系（Sample 0）の「白色の線（Free Energy）が豊かに右肩上がりで成長している姿」と比較してください。Sample 8 では、時間経過の中盤（TR=150付近）から突如としてエントロピー損失（$T \Delta S$：赤色の層）が激増し、自由エネルギーがマイナス領域へと深く沈み込んでいることが観測されます。これが脳機能が破壊された「脳卒中発症の瞬間」の熱力学的シグネチャ（死への転落）です。
 
 ## 4. ミクロ・フォレンジックによる背後要因（生成ロジックの解剖）
 AIエージェントによるジェネレーターコード（`_0_0_generate_dummy_fmri.py`）の解析により、以下の事実が確認されました。
