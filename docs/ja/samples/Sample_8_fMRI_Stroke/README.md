@@ -48,13 +48,13 @@ TLUは、これを単なる「残高の異常」ではなく、「ネットワ�
 
 本システムからは、以下の物理的病状の跡が検出されています。
 
-### 🟠 Pathology 1: Thermodynamic Energy Depletion (熱力学的崩壊)
+### 🟠 病状の跡 1: Thermodynamic Energy Depletion (熱力学的崩壊)
 
 * **重要度:** HIGH
 * **物理的証拠:** Relative Free Energy Ratio: `-5.2798` (正常閾値 `< -0.1` を大きく下回る)
 * **解釈:** 脳ネットワークの特定の動脈（Motor Cortexへの流入経路）が 95% 遮断されたことにより、システム内に強烈な「不均衡（局所的なエントロピー増大）」が発生しました。これにより、システム全体として有意義な情報処理を行うためのポテンシャル（自由エネルギー）が致命的に損なわれ、熱的死（脳機能の停止）に向かっていることが数学的に証明されています。
 
-### 🟠 Pathology 2: Topological Feedback Loop (極限振動)
+### 🟠 病状の跡 2: Topological Feedback Loop (極限振動)
 
 * **重要度:** HIGH
 * **物理的証拠:** Max Spectral Radius: `1.0000` (限界値)

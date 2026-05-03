@@ -47,13 +47,13 @@ TLUは、これを「お金」ではなく「質量を持った粒子の移動�
 
 本システムからは、以下の2つの特異な物理的病状の跡が検出されています。
 
-### 🟠 Pathology 1: Topological Feedback Loop (極限振動)
+### 🟠 病状の跡 1: Topological Feedback Loop (極限振動)
 
 * **重要度:** HIGH
 * **物理的証拠:** Max Spectral Radius: `1.0000` (理論上の最大値)
 * **解釈:** 会計データにおける Wash Trade（循環取引）と同じ病状の跡です。交通網においてスペクトル半径が `1.0` に張り付くということは、交差点Aから交差点Bへ移動した車が、そのまま交差点Aへ戻ってくるという「完全な双方向の往復運動（振り子のような極限振動）」がネットワーク全体を支配していることを意味します。前進する流動性が失われ、単なる「激しい波の反射」だけが起きている状態です。
 
-### 🟠 Pathology 2: Thermodynamic Energy Depletion (熱力学的崩壊)
+### 🟠 病状の跡 2: Thermodynamic Energy Depletion (熱力学的崩壊)
 
 * **重要度:** HIGH
 * **物理的証拠:** Relative Free Energy Ratio: `-16.7160` (正常閾値 `< -0.1` を途方もなく突破)

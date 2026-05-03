@@ -48,13 +48,13 @@ TLUは、これを「出来高」ではなく「エントロピー（摩擦熱�
 
 本システムからは、以下の特異な物理的病状の跡が検出されています。
 
-### 🟠 Pathology 1: Topological Feedback Loop (極限振動＝てんかん波)
+### 🟠 病状の跡 1: Topological Feedback Loop (極限振動＝てんかん波)
 
 * **重要度:** HIGH
 * **物理的証拠:** Max Spectral Radius: `1.0000` (限界値)
 * **解釈:** 側頭葉と他の部位が、全く同じ巨大な波を完璧に同期させて相互に送受信しています。これは、金融市場における「Wash Trade（仮装売買による資金の還流ループ）」と数学的に全く同じ構造です。生体システムにおいて、この過剰なネットワーク共鳴（ループ）は「てんかん発作（Seizure）」そのものを意味します。
 
-### 🟠 Pathology 2: Thermodynamic Energy Depletion (エントロピーの爆発)
+### 🟠 病状の跡 2: Thermodynamic Energy Depletion (エントロピーの爆発)
 
 * **重要度:** HIGH
 * **物理的証拠:** Relative Free Energy Ratio: `-5.5882`

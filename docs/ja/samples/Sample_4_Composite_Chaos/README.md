@@ -10,7 +10,7 @@
 
 ## 1. エグゼクティブ・サマリー
 
-本システム（金融ドメイン）は、**複合的な構造崩壊（COMPOSITE PATHOLOGY DETECTED）** を起こしており、極めて危険な状態（CRITICAL）にあります。
+本システム（金融ドメイン）は、**複合的な構造崩壊（COMPOSITE 病状の跡 DETECTED）** を起こしており、極めて危険な状態（CRITICAL）にあります。
 1つ目は、**質量保存則違反（Conservation Violation）**。システム内から資金が虚空へ消失する「横領（Embezzlement）」や「転記ミス（Fat Finger）」が多発し、最大 `$6,087.0` に達する深刻なエネルギーの流出（Leak）が確認されました。
 2つ目は、**位相幾何学的な異常ループ（Topological Feedback Loop）**。循環取引（Wash Trading）による大規模な自己強化ループが形成され、システムの安定性指標であるスペクトル半径が `0.9864`（崩壊寸前）にまで達しています。
 粉飾決算と組織的な資金横領が同時に進行している可能性が極めて高い状態です。
@@ -46,12 +46,12 @@ TLUは、上記の財務諸表をネットワークとして再構築し、質�
 
 本システムからは、以下の2つの致命的な病状の跡が **同時に** 検出されています。
 
-### 🔴 Pathology 1: Unbalanced Journal Mistake (Conservation Violation)
+### 🔴 病状の跡 1: Unbalanced Journal Mistake (Conservation Violation)
 
 * **重要度:** CRITICAL
 * **物理的証拠:** 相対質量漏れ率 (Relative Leak Ratio): `0.0041` (正常閾値 `< 1e-6` を突破) / 最大絶対残差 (Max Absolute Residual): `6087.00` (ピーク位置: 第44週)
 
-### 🟠 Pathology 2: Topological Feedback Loop (Wash Trade)
+### 🟠 病状の跡 2: Topological Feedback Loop (Wash Trade)
 
 * **重要度:** HIGH
 * **物理的証拠:** Max Spectral Radius: `0.9864` (閾値 `>= 0.6` を突破、発散寸前)

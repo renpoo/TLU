@@ -47,13 +47,13 @@ TLUは、これを「ユーザー間でパスされるエネルギーの動学�
 
 本システムからは、以下の2つの特異な物理的病状の跡が検出されています。
 
-### 🟠 Pathology 1: Topological Feedback Loop (共謀ネットワークの形成)
+### 🟠 病状の跡 1: Topological Feedback Loop (共謀ネットワークの形成)
 
 * **重要度:** HIGH
 * **物理的証拠:** Max Spectral Radius: `1.0000` (理論上の限界値)
 * **解釈:** `User A -> User B -> User A` という直接的な資金のキャッチボール（還流ループ）が形成されています。株式市場において、特定のユーザー間で閉じた資金ループが形成され、それがシステム全体の共鳴（スペクトル半径 1.0）を引き起こしているということは、**「完全に結託した相場操縦グループ（シンジケート）」**の存在を数学的に証明するものです。
 
-### 🟠 Pathology 2: Thermodynamic Energy Depletion (エントロピーの爆発)
+### 🟠 病状の跡 2: Thermodynamic Energy Depletion (エントロピーの爆発)
 
 * **重要度:** HIGH
 * **物理的証拠:** Relative Free Energy Ratio: `-15.8749` (正常閾値 `< -0.1` を途方もなく突破)
