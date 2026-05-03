@@ -46,11 +46,11 @@ TLUは、これを単なる「残高の異常」ではなく、「ネットワ�
 ### 📊 異常系可視化プロファイル（病的構造の証明）
 
 **1. ネットワークトポロジーとスペクトル半径（System Stability）**
-![Sample 8 System Stability](../../../readme_plots/004_1_2__system_stability.png)
+![Sample 8 System Stability](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)
 * **💡 異常系の読解:** システムは常に双方向の激しい相互作用（スペクトル半径 1.0）を行っています。
 
 **2. 熱力学ダッシュボード（Thermodynamics Energy Stack）**
-![Sample 8 Thermodynamics](../../../readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 8 Thermodynamics](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 * **💡 異常系の読解:** 時間経過（TR=150以降）とともに自由エネルギーの領域が押し潰され、マイナス領域へと深く沈み込んでいることが観測されます。これが「脳卒中発症の瞬間」の熱力学的シグネチャです。
 
 ## 4. ミクロ・フォレンジックによる背後要因（生成ロジックの解剖）

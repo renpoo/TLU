@@ -38,11 +38,11 @@ TLUは、これを「ネットワーク上のエネルギー保存とエント�
 ### 📊 異常系可視化プロファイル（病的構造の証明）
 
 **1. ネットワークトポロジーとスペクトル半径（System Stability）**
-![Sample 6 System Stability](../../../readme_plots/004_1_2__system_stability.png)
+![Sample 6 System Stability](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/004_1_2__system_stability.png)
 * **💡 異常系の読解:** 赤色の線（Max Spectral Radius）が常に `1.0` の天井に張り付いており、相場操縦による人為的なループが常態化している異常な市場空間であることが視覚的に確認できます。
 
 **2. 熱力学ダッシュボード（Thermodynamics Energy Stack）**
-![Sample 6 Thermodynamics](../../../readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 6 Thermodynamics](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 * **💡 異常系の読解:** グラフ上のエントロピー損失（$T \Delta S$）がエネルギーの総枠を完全に食い破り、自由エネルギーが途方もないスケールでマイナスに沈んでいます。これは健全な市場流動性ではなく、不正な摩擦熱だけが暴走している証拠です。
 
 ## 4. ミクロ・フォレンジックによる相場操縦の最終証拠

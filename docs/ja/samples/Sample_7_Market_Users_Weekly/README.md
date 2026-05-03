@@ -45,11 +45,11 @@ TLUは、これを「ユーザー間でパスされるエネルギーの動学�
 ### 📊 異常系可視化プロファイル（病的構造の証明）
 
 **1. ネットワークトポロジーとスペクトル半径（System Stability）**
-![Sample 7 System Stability](../../../readme_plots/004_1_2__system_stability.png)
+![Sample 7 System Stability](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/004_1_2__system_stability.png)
 * **💡 異常系の読解:** 赤色の線（Max Spectral Radius）が常に `1.0` の天井に張り付いています。これは「AとBが相互に無限にパスを回し続けている」極限状態を指します。
 
 **2. 熱力学ダッシュボード（Thermodynamics Energy Stack）**
-![Sample 7 Thermodynamics](../../../readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 7 Thermodynamics](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 * **💡 異常系の読解:** Sample 6 と同様、膨大な取引量（エントロピー損失）がエネルギー総枠を食い破り、システムが熱力学的な死を迎えています。
 
 ## 4. ミクロ・フォレンジックと「プロジェクション（射影）」の真価

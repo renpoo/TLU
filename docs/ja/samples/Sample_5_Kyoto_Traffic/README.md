@@ -45,11 +45,11 @@ TLUは、これを「お金」ではなく「質量を持った粒子の移動�
 ### 📊 異常系可視化プロファイル（病的構造の証明）
 
 **1. ネットワークトポロジーとスペクトル半径（System Stability）**
-![Sample 5 System Stability](../../../readme_plots/004_1_2__system_stability.png)
+![Sample 5 System Stability](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_2__system_stability.png)
 * **💡 異常系の読解:** 赤色の線（Max Spectral Radius）が完全に `1.0` の天井に張り付いたまま推移しています。これは、システムがもはや「流れる川」ではなく、「密閉された箱の中で激しく反射し合う音波」のような定在波状態（デッドロック）になっていることを示します。
 
 **2. 熱力学ダッシュボード（Thermodynamics Energy Stack）**
-![Sample 5 Thermodynamics](../../../readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 5 Thermodynamics](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 * **💡 異常系の読解:** 自由エネルギー（Free Energy）の領域が完全に押し潰され、エントロピー損失（$T \Delta S$）がエネルギーの総枠を食い破ってマイナス領域へと激しく沈み込んでいます。熱力学的な死（Heat Death）を迎えている状態です。
 
 ## 4. ミクロ・フォレンジックによる背後要因（生成ロジックの限界）

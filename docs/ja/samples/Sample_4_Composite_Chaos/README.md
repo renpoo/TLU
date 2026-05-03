@@ -20,13 +20,13 @@
 
 ### 従来の財務諸表が捉える世界（静的なスナップショット）
 **【第52週 損益計算書 (P/L) サマリー】**
-![Sample 4 PL Waterfall](../../../readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 4 PL Waterfall](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_0_1__PL_Waterfall_Total.png)
 * **売上収益:** $1,113,528.13 （※他サンプルと比べ異常に高い）
 * **総費用:** $903,975.57
 * **当期純利益:** **+$209,552.56**
 
 **【第52週 貸借対照表 (B/S) サマリー】**
-![Sample 4 BS Block](../../../readme_plots/000_0_1__BS_Block_Total.png)
+![Sample 4 BS Block](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_0_1__BS_Block_Total.png)
 * **総資産:** $366,267.59
 * **負債・純資産合計:** $366,267.59
 * **バランスチェック:** 一致
@@ -51,11 +51,11 @@ TLUは、上記の財務諸表をネットワークとして再構築し、質�
 ### 📊 異常系可視化プロファイル（複合的な病的構造の証明）
 
 **1. 質量保存の基準（Macro Forensics）**
-![Sample 4 Macro Forensics](../../../readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample 4 Macro Forensics](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_1__macro_forensics_dashboard.png)
 * **💡 異常系の読解:** 上段の「System Conservation Residual」のグラフに、激しいスパイク（最大 `6087.0`）が断続的に発生しています（Leakの証拠）。同時に、最下段のスペクトル半径（Spectral Radius）も危険水域を超え、常に高止まりしています（Loopの証拠）。
 
 **2. ネットワークトポロジーの異常（System Stability / Spectral Radius）**
-![Sample 4 System Stability](../../../readme_plots/004_1_2__system_stability.png)
+![Sample 4 System Stability](../../../../samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
 * **💡 異常系の読解:** 赤色の線「Max Spectral Radius」が `0.6` の危険閾値を大きく超え、システム全体が異常な共鳴状態（無限ループ）に陥っていることが視覚的に証明されています。
 
 ## 4. ミクロ・フォレンジックによる最終証拠（Micro-Forensic Final Evidence）

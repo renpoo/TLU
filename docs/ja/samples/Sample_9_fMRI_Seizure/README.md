@@ -46,11 +46,11 @@ TLUは、これを「出来高」ではなく「エントロピー（摩擦熱�
 ### 📊 異常系可視化プロファイル（病的構造の証明）
 
 **1. ネットワークトポロジーとスペクトル半径（System Stability）**
-![Sample 9 System Stability](../../../readme_plots/004_1_2__system_stability.png)
+![Sample 9 System Stability](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/004_1_2__system_stability.png)
 * **💡 異常系の読解:** システム全体が極限の共鳴状態（スペクトル半径 1.0）に支配されています。
 
 **2. 熱力学ダッシュボード（Thermodynamics Energy Stack）**
-![Sample 9 Thermodynamics](../../../readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 9 Thermodynamics](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 * **💡 異常系の読解:** 時間経過（TR=150）以降、側頭葉を起点とした発作が始まり、エントロピー損失（$T \Delta S$）が爆発して自由エネルギーの領域を完全に破壊しています。
 
 ## 4. ミクロ・フォレンジックによる背後要因（生成ロジックの解剖）

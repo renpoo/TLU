@@ -17,13 +17,13 @@
 
 ### 従来の財務諸表が捉える世界（静的なスナップショット）
 **【第52週 損益計算書 (P/L) サマリー】**
-![Sample 0 PL Waterfall](../../../readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 0 PL Waterfall](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Waterfall_Total.png)
 * **売上収益:** $955,157.56
 * **総費用:** $907,726.29（COGS, 給与, 家賃等）
 * **当期純利益:** **+$47,431.27**
 
 **【第52週 貸借対照表 (B/S) サマリー】**
-![Sample 0 BS Block](../../../readme_plots/000_0_1__BS_Block_Total.png)
+![Sample 0 BS Block](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__BS_Block_Total.png)
 * **総資産:** $216,622.48（売掛金, 在庫, 現金マイナス分）
 * **負債・純資産合計:** $216,622.48（買掛金 + 当期純利益）
 * **バランスチェック:** **一致（差額 $0.00）**
@@ -71,15 +71,15 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 他のすべてのサンプル（Sample 1〜9）は、以下の3つの基準グラフ（Sample 0）と比較して「どのような構造的崩壊を起こしているか」で診断されます。以下のグラフは「物理的・数学的に完全に健康なシステム」の模範解答を示しています。
 
 **1. 質量保存の基準（Macro Forensics）**
-![Sample 0 Macro Forensics](../../../readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample 0 Macro Forensics](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
 * **💡 正常系の読解:** 上段の「System Conservation Residual（質量の絶対残差）」が完全に `0.0` の地平に張り付いています。これは「借方と貸方が1円の狂いもなく一致し、システム外へ消失した（漏れた）質量が一切ない」という複式簿記の絶対原則（質量保存則）が完璧に機能していることを証明しています。異常系（Sample 3, 4など）ではここに鋭いスパイクが発生します。また、下段の「Statistical Anomaly (Z-Score)」も低いレベルで安定しており、統計的な外れ値が存在しないことを示しています。
 
 **2. ネットワークトポロジーの基準（System Stability / Spectral Radius）**
-![Sample 0 System Stability](../../../readme_plots/004_1_2__system_stability.png)
+![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
 * **💡 正常系の読解:** 赤色の線「Max Spectral Radius（最大スペクトル半径）」が `0.0` の底に張り付いて安定しています。これはネットワーク内に「自己強化的な無限ループ（資金のキャッチボールなど）」が存在せず、システムに入ってきた資金（血流）が正常に流出（決済）しているというトポロジーの健全性を証明しています。循環取引（Sample 1）や交通渋滞（Sample 5）ではこの線が天井（1.0）に向けて発散します。
 
 **3. 熱力学的エネルギーの基準（Thermodynamics Energy Stack）**
-![Sample 0 Thermodynamics Energy Stack](../../../readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 * **💡 正常系の読解:** 白色の線「Free Energy（自由エネルギー：F = U - TS）」が、総活動量（U）の拡大に伴い、右肩上がりに力強く成長しています。システムが活発に取引（運動）を行いながらも、摩擦（-TS）にエネルギーを奪われることなく、ビジネスを継続・拡大するための十分な活動余力を維持し続けていることを証明しています。異常系（横領や交通渋滞など）では、摩擦損失が異常膨張し、この白色の線がゼロラインを割ってマイナス圏へ深く沈み込みます。
 
 ## 4. ミクロ・フォレンジックによる最終証拠（Micro-Forensic Final Evidence）

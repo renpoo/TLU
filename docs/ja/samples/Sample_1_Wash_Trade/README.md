@@ -17,13 +17,13 @@
 
 ### 従来の財務諸表が捉える世界（静的なスナップショット）
 **【第52週 損益計算書 (P/L) サマリー】**
-![Sample 1 PL Waterfall](../../../readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 1 PL Waterfall](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Waterfall_Total.png)
 * **売上収益:** $1,067,391.62
 * **総費用:** $910,552.63
 * **当期純利益:** **+$156,838.99**
 
 **【第52週 貸借対照表 (B/S) サマリー】**
-![Sample 1 BS Block](../../../readme_plots/000_0_1__BS_Block_Total.png)
+![Sample 1 BS Block](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__BS_Block_Total.png)
 * **総資産:** $317,611.47
 * **負債・純資産合計:** $317,611.47
 * **バランスチェック:** **一致（差額 $0.00）**
@@ -56,11 +56,11 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 ### 📊 異常系可視化プロファイル（病的構造の証明）
 
 **1. ネットワークトポロジーの異常（System Stability / Spectral Radius）**
-![Sample 1 System Stability](../../../readme_plots/004_1_2__system_stability.png)
+![Sample 1 System Stability](../../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_2__system_stability.png)
 * **💡 異常系の読解:** 赤色の線「Max Spectral Radius（最大スペクトル半径）」が、第40週付近から急激に跳ね上がり、`0.8353` という危険水域に達しています。Sample_0（正常系）ではこの線が完全に `0.0` であったことと比較すると、システム内に「自己強化的な無限ループ（資金のキャッチボール）」が形成されたことを示す、構造的詐欺の決定的な数学的署名です。
 
 **2. 質量保存の基準（Macro Forensics）**
-![Sample 1 Macro Forensics](../../../readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample 1 Macro Forensics](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_1__macro_forensics_dashboard.png)
 * **💡 異常系の読解:** 上段の「System Conservation Residual（質量の絶対残差）」は完全に `0.0` の地平に張り付いています。これは、循環取引を行う主体が「複式簿記のルール（左と右を一致させること）自体は厳格に守っている（＝資金は外部に漏れず、完全に内部で還流している）」ためです。これにより、単なるエラーチェック（Sample_3のような貸借不一致）の網はすり抜けてしまいます。
 
 ## 4. ミクロ・フォレンジックによる最終証拠（Micro-Forensic Final Evidence）

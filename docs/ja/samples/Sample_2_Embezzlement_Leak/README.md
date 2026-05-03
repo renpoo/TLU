@@ -17,13 +17,13 @@
 
 ### 従来の財務諸表が捉える世界（静的なスナップショット）
 **【第52週 損益計算書 (P/L) サマリー】**
-![Sample 2 PL Waterfall](../../../readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 2 PL Waterfall](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__PL_Waterfall_Total.png)
 * **売上収益:** $955,157.56
 * **総費用:** $892,294.03（※ `UNKNOWN_LEAK` を含む）
 * **当期純利益:** **+$62,863.53**
 
 **【第52週 貸借対照表 (B/S) サマリー】**
-![Sample 2 BS Block](../../../readme_plots/000_0_1__BS_Block_Total.png)
+![Sample 2 BS Block](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__BS_Block_Total.png)
 * **総資産:** $211,258.12
 * **負債・純資産合計:** $211,258.12
 * **バランスチェック:** 一致
@@ -45,11 +45,11 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 ### 📊 異常系可視化プロファイル（病的構造の証明）
 
 **1. 質量保存の基準（Macro Forensics）**
-![Sample 2 Macro Forensics](../../../readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample 2 Macro Forensics](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
 * **💡 異常系の読解:** 上段の「System Conservation Residual（質量の絶対残差）」のグラフにご注目ください。Sample_0（正常系）では完全に `0.0` の地平に張り付いていたこの線が、断続的にスパイク（最大 `407.89`）を記録しています。これは「流入したはずのエネルギー（資金）が、ネットワーク内のどこにも到達せずに消滅した」ことを示す、質量保存則崩壊の決定的な数学的署名です。
 
 **2. ネットワークトポロジーの異常（System Stability / Spectral Radius）**
-![Sample 2 System Stability](../../../readme_plots/004_1_2__system_stability.png)
+![Sample 2 System Stability](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/004_1_2__system_stability.png)
 * **💡 異常系の読解:** 赤色の線「Max Spectral Radius」は `0.0` のままです。これは、Sample_1（循環取引）のような「資金の自己強化的なループ」は起きておらず、純粋にシステムの外へ資金が「一直線に漏れ出ている（ブラックホール化している）」だけであることを意味します。
 
 ## 4. ミクロ・フォレンジックによる最終証拠（Micro-Forensic Final Evidence）
