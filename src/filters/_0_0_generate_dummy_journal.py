@@ -195,13 +195,15 @@ def generate_stream(args):
             ))
             global_entry_count += 1
         # --------------------------------------------------
-        # 6. Anomaly Injection: Wash Trading (Round-tripping)
+        # 6. Anomaly Injection: Wash Trading (Round-tripping / Kiting)
         # --------------------------------------------------
         if args.wash_trade_prob > 0.0 and random.random() < args.wash_trade_prob:
-            wash_amount = np.random.normal(15000, 3000)
-            wash_amount = max(5000.0, wash_amount)
+            # Massive volume to strongly trigger the topological spectral radius
+            wash_amount = np.random.normal(50000, 5000)
+            wash_amount = max(20000.0, wash_amount)
             
-            # Step 1: Fund the shell company (CR Cash -> DR Accounts_Receivable)
+            # Step 1: Fund the shell company secretly (CR Cash -> DR Accounts_Receivable)
+            # Flow: Cash -> AR
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, wash_amount,
                 "Accounts_Receivable", "DPT_Admin", "Cash", "DPT_Admin", "Wash_Funding"
@@ -209,13 +211,15 @@ def generate_stream(args):
             global_entry_count += 1
             
             # Step 2: Fake Sale to the shell company (CR Sales_Revenue -> DR Accounts_Receivable)
+            # Flow: Sales -> AR
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, wash_amount,
                 "Accounts_Receivable", "DPT_Admin", "Sales_Revenue", "DPT_Sales", "Wash_Sale"
             ))
             global_entry_count += 1
             
-            # Step 3: Shell company pays using the funded cash (CR Accounts_Receivable -> DR Cash)
+            # Step 3: Shell company pays using the exact funded cash (CR Accounts_Receivable -> DR Cash)
+            # Flow: AR -> Cash (This closes the Cash <-> AR infinite loop)
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, wash_amount,
                 "Cash", "DPT_Admin", "Accounts_Receivable", "DPT_Admin", "Wash_Collection"
