@@ -6,7 +6,7 @@
 
 ### 1. 循環取引とシステムの破綻（スペクトル半径） (`004_1_2__system_stability.png`)
 
-![004_1_2__system_stability](../../readme_plots/004_1_2__system_stability.png)
+![004_1_2__system_stability](../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
 
 * **📊 視覚的構造**: 組織の異常膨張率（スペクトル半径）を追跡する折れ線グラフ。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -18,7 +18,7 @@
 
 ### 2. 組織の制御不能状態（制御エラー収束） (`004_1_2__control_error_convergence.png`)
 
-![004_1_2__control_error_convergence](../../readme_plots/004_1_2__control_error_convergence.png)
+![004_1_2__control_error_convergence](../../../samples/Sample_0_Healthy/readme_plots/004_1_2__control_error_convergence.png)
 
 * **📊 視覚的構造**: 最適な資金投入計画（オートパイロット）を計算する過程における、エラー（誤差）の減少を示す折れ線グラフ。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -29,7 +29,7 @@
 
 ### 3. リスクの地形（LQR 制御パフォーマンス空間） (`004_1_3__control_lqr_performance_space.png`)
 
-![004_1_3__control_lqr_performance_space](../../readme_plots/004_1_3__control_lqr_performance_space.png)
+![004_1_3__control_lqr_performance_space](../../../samples/Sample_0_Healthy/readme_plots/004_1_3__control_lqr_performance_space.png)
 
 * **📊 視覚的構造**: 様々な介入戦略のコスト（リスク）を示す 3D Surface（地形）グラフ。「どれだけ早く問題を修正するか」vs「その修正が組織にどれだけの負担（摩擦）をかけるか」のトレードオフを描画します。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -40,7 +40,7 @@
 
 ### 4. 組織の脆弱性（トレードオフ・ヒートマップ / 感度行列） (`004_2_1__sensitivity_matrix.png`)
 
-![004_2_1__sensitivity_matrix](../../readme_plots/004_2_1__sensitivity_matrix.png)
+![004_2_1__sensitivity_matrix](../../../samples/Sample_0_Healthy/readme_plots/004_2_1__sensitivity_matrix.png)
 
 * **📊 視覚的構造**: ある部署に変更を加えたとき、別の部署がどれくらい敏感に反応するかを示すヒートマップ。
 * **🚨 異常の検知（マクロ・ミクロ）**:

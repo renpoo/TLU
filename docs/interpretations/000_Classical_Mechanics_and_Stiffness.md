@@ -6,7 +6,7 @@ Once the data is pre-processed, TLU projects the financial ledgers into a physic
 
 ### 1. 3D Dynamics: Velocity (`000_1_1__3d_dynamics_velocity.png`)
 
-![000_1_1__3d_dynamics_velocity](../readme_plots/000_1_1__3d_dynamics_velocity.png)
+![000_1_1__3d_dynamics_velocity](../../samples/Sample_0_Healthy/readme_plots/000_1_1__3d_dynamics_velocity.png)
 
 * **📊 Visual Structure**: A 3D phase space graph. The axes represent the network's principal dimensions. The trajectory (the winding line) traces the *rate of change* (Velocity) of the money flow over time.
 * **📐 Physics Theory**: The first derivative of the ledger flux. How fast is the volume of money moving through the accounts compared to the previous time step?
@@ -21,7 +21,7 @@ Once the data is pre-processed, TLU projects the financial ledgers into a physic
 
 ### 2. 3D Dynamics: Acceleration (`000_1_2__3d_dynamics_acceleration.png`)
 
-![000_1_2__3d_dynamics_acceleration](../readme_plots/000_1_2__3d_dynamics_acceleration.png)
+![000_1_2__3d_dynamics_acceleration](../../samples/Sample_0_Healthy/readme_plots/000_1_2__3d_dynamics_acceleration.png)
 
 * **📊 Visual Structure**: Similar to Velocity, but tracking the 3D trajectory of *Acceleration*.
 * **📐 Physics Theory**: The second derivative of the ledger flux. Is the speed of money flow increasing or decreasing? This represents the net external force ($F_{ext}$) applied to the system.
@@ -33,15 +33,15 @@ Once the data is pre-processed, TLU projects the financial ledgers into a physic
 
 ### 3. Structural Stiffness Heatmap (`000_2_1__structural_stiffness.t.*.png`)
 
-![000_2_1__structural_stiffness.t.00000](../readme_plots/000_2_1__structural_stiffness.t.00000.png)
+![000_2_1__structural_stiffness.t.00000](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00000.png)
 
-![000_2_1__structural_stiffness.t.00004](../readme_plots/000_2_1__structural_stiffness.t.00004.png)
+![000_2_1__structural_stiffness.t.00004](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00004.png)
 
-![000_2_1__structural_stiffness.t.00008](../readme_plots/000_2_1__structural_stiffness.t.00012.png)
+![000_2_1__structural_stiffness.t.00008](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00012.png)
 
-![000_2_1__structural_stiffness.t.00012](../readme_plots/000_2_1__structural_stiffness.t.00024.png)
+![000_2_1__structural_stiffness.t.00012](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00024.png)
 
-![000_2_1__structural_stiffness.t.00016](../readme_plots/000_2_1__structural_stiffness.t.00042.png)
+![000_2_1__structural_stiffness.t.00016](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00042.png)
 
 *Note: TLU generates a sequence of these images over time. You may need to flip through them like a flipbook.*
 
@@ -60,7 +60,7 @@ Once the data is pre-processed, TLU projects the financial ledgers into a physic
 
 ### 4. Principal Axes Ratio (`000_2_2__principal_axes_ratio.png`)
 
-![000_2_2__principal_axes_ratio](../readme_plots/000_2_2__principal_axes_ratio.png)
+![000_2_2__principal_axes_ratio](../../samples/Sample_0_Healthy/readme_plots/000_2_2__principal_axes_ratio.png)
 
 * **📊 Visual Structure**: A simple bar or line chart showing the ratio of variance captured by the top 3 principal components (PC1, PC2, PC3).
 * **📐 Physics Theory**: Principal Component Analysis (PCA). It calculates how many dimensions the organization needs to operate.
@@ -72,7 +72,7 @@ Once the data is pre-processed, TLU projects the financial ledgers into a physic
 
 ### 5. Eigenvector Evolution Heatmap (PC1) (`000_2_3__eigenvector_evolution.png`)
 
-![000_2_3__eigenvector_evolution](../readme_plots/000_2_3__eigenvector_evolution.png)
+![000_2_3__eigenvector_evolution](../../samples/Sample_0_Healthy/readme_plots/000_2_3__eigenvector_evolution.png)
 
 * **📊 Visual Structure**: A 2D Heatmap. The X-axis is time, the Y-axis lists the specific accounts (nodes), and the color intensity represents the absolute magnitude of the 1st Principal Component (PC1) for that account (using the `magma` colormap: dark black indicates irrelevance, while glowing orange/yellow/white cells indicate the account is currently "dominating" the entire organization).
 * **📐 Physics Theory**: Covariance of the Flux Differential ($dq$). TLU measures which accounts experience massive, simultaneous fluctuations (e.g., Cash dropping exactly when Payroll spikes). PC1 extracts the dominant "Main Engine" or primary synchronized flow of the entire organization.

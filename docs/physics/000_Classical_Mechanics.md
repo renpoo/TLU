@@ -20,9 +20,9 @@ In classical mechanics, the state of a system is fully described by its position
 * **Velocity (v):** The rate of change of the net flux over time (the first derivative).
 * **Acceleration (a):** The rate of change of the velocity (the second derivative).
 
-![000_1_6__3d_dynamics_net_flux](../readme_plots/000_1_6__3d_dynamics_net_flux.png)
-![000_1_1__3d_dynamics_velocity](../readme_plots/000_1_1__3d_dynamics_velocity.png)
-![000_1_2__3d_dynamics_acceleration](../readme_plots/000_1_2__3d_dynamics_acceleration.png)
+![000_1_6__3d_dynamics_net_flux](../../samples/Sample_0_Healthy/readme_plots/000_1_6__3d_dynamics_net_flux.png)
+![000_1_1__3d_dynamics_velocity](../../samples/Sample_0_Healthy/readme_plots/000_1_1__3d_dynamics_velocity.png)
+![000_1_2__3d_dynamics_acceleration](../../samples/Sample_0_Healthy/readme_plots/000_1_2__3d_dynamics_acceleration.png)
 
 ### Defining Inertia and Friction
 
@@ -32,9 +32,9 @@ Not all nodes react to change equally. A massive, historically stable core depar
 * **Virtual Viscosity / Friction (C):** Calculated as the inverse of velocity volatility: `C = 1 / std(v(t))`. Nodes that exhibit highly stable, unchanging velocities are modeled as having high "Friction" dragging them down.
 * **External Force Residual (F_ext):** Using Newton's Second Law combined with damping (`F = M * a + C * v`), TLU calculates the unknown, external force that must be acting upon the node to produce its currently observed motion.
 
-![000_1_3__3d_dynamics_inertia](../readme_plots/000_1_3__3d_dynamics_inertia.png)
-![000_1_4__3d_dynamics_viscosity](../readme_plots/000_1_4__3d_dynamics_viscosity.png)
-![000_1_5__3d_dynamics_external_force](../readme_plots/000_1_5__3d_dynamics_external_force.png)
+![000_1_3__3d_dynamics_inertia](../../samples/Sample_0_Healthy/readme_plots/000_1_3__3d_dynamics_inertia.png)
+![000_1_4__3d_dynamics_viscosity](../../samples/Sample_0_Healthy/readme_plots/000_1_4__3d_dynamics_viscosity.png)
+![000_1_5__3d_dynamics_external_force](../../samples/Sample_0_Healthy/readme_plots/000_1_5__3d_dynamics_external_force.png)
 
 ## 2. Structural Stiffness & Partial Correlation (000_2_1)
 
@@ -48,9 +48,9 @@ TLU calculates the covariance matrix of velocity changes across the entire netwo
 
 * A higher value in the Precision Matrix indicates a mathematically "stiff" relationship between two nodes. They move together rigidly, meaning a shock to one will violently transfer to the other.
 
-![000_2_1__structural_stiffness t 00002](../readme_plots/000_2_1__structural_stiffness.t.00002.png)
-![000_2_1__structural_stiffness t 00004](../readme_plots/000_2_1__structural_stiffness.t.00004.png)
-![000_2_1__structural_stiffness t 00006](../readme_plots/000_2_1__structural_stiffness.t.00006.png)
+![000_2_1__structural_stiffness t 00002](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00002.png)
+![000_2_1__structural_stiffness t 00004](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00004.png)
+![000_2_1__structural_stiffness t 00006](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00006.png)
 
 ### The Partial Correlation Pivot (Ver 8.0.0)
 
@@ -69,7 +69,7 @@ This normalization projects the stiffness into a strict `[-1.0, 1.0]` space:
 
 *Implementation: `src/filters/_000_2_2_filter_principal_axes.py`*
 
-![000_2_2__principal_axes_ratio](../readme_plots/000_2_2__principal_axes_ratio.png)
+![000_2_2__principal_axes_ratio](../../samples/Sample_0_Healthy/readme_plots/000_2_2__principal_axes_ratio.png)
 
 While the Precision Matrix measures the direct stiffness between individual node pairs, **Principal Axes (PCA)** extracts the macro-level "dimensions" of the entire organization's movement.
 
@@ -83,7 +83,7 @@ By calculating the covariance matrix of the flux history and performing an eigen
 
 #### The Physics of the First Principal Component (PC1)
 
-![000_2_3__eigenvector_evolution](../readme_plots/000_2_3__eigenvector_evolution.png)
+![000_2_3__eigenvector_evolution](../../samples/Sample_0_Healthy/readme_plots/000_2_3__eigenvector_evolution.png)
 
 It is crucial to note that TLU's PCA does *not* measure the static balances or simple cumulative totals of the accounts. Instead, it calculates the **covariance of the flux differential ($dq$)**.
 

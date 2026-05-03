@@ -7,7 +7,7 @@
 
 ### 1. 回収遅延と人工的な同期（位相ドリフト・ヒートマップ） (`005_1_2__phase_drift_heatmap.png`)
 
-![005_1_2__phase_drift_heatmap](../../readme_plots/005_1_2__phase_drift_heatmap.png)
+![005_1_2__phase_drift_heatmap](../../../samples/Sample_0_Healthy/readme_plots/005_1_2__phase_drift_heatmap.png)
 
 * **📊 視覚的構造**: 口座間の取引タイミングの「ズレ（位相シフト）」を示すマトリックス・ヒートマップ。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -19,7 +19,7 @@
 
 ### 2. 自動ボットによる横領（共振周波数） (`005_1_1__resonant_frequency.png`)
 
-![005_1_1_resonant_frequency](../../readme_plots/005_1_1_resonant_frequency.png)
+![005_1_1_resonant_frequency](../../../samples/Sample_0_Healthy/readme_plots/005_1_1_resonant_frequency.png)
 
 * **📊 視覚的構造**: 特定の周波数（サイクル）でのピークを示すスペクトル密度グラフ。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -31,7 +31,7 @@
 
 ### 3. 帳簿捏造の究極のセンサー（フラクタル・ノイズ・スペクトル） (`005_2_1__fractal_noise_spectrum.png`)
 
-![005_2_1_fractal_noise_spectrum](../../readme_plots/005_2_1_fractal_noise_spectrum.png)
+![005_2_1_fractal_noise_spectrum](../../../samples/Sample_0_Healthy/readme_plots/005_2_1_fractal_noise_spectrum.png)
 
 * **📊 視覚的構造**: ノイズの減衰を示す対数スケールの散布図。右肩下がりの線（ピンクノイズ）が正常。
 * **🚨 異常の検知（マクロ・ミクロ）**:

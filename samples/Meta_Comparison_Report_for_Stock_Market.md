@@ -19,11 +19,11 @@ This meta-report integrates TLU's "Physics Diagnostic Manual (LLM_Diagnostic_Man
 
 #### Sample 6 (Market/Bipartite Perspective)
 
-![Sample 6 Network Topology](../docs/readme_plots/sample_6/002_1_2__network_topology.t.00006.png)
+![Sample 6 Network Topology](../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00006.png)
 
 #### Sample 7 (User/Network Perspective)
 
-![Sample 7 Network Topology](../docs/readme_plots/sample_7/002_1_2__network_topology.t.00006.png)
+![Sample 7 Network Topology](../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00006.png)
 
 * **Sample_6 (Market) Insight:**
     The network shows users connected through a central hub (the Stock). The "creation of artificial volume" directed at specific stocks is automated. This represents the platform's perspective: "The market is being hacked by a program (the system is under external attack)."
@@ -36,11 +36,11 @@ TLU's greatest strength is that the auditor can freely redefine the "Boundary Co
 
 #### Sample 6 (Market/Bipartite Perspective)
 
-![Sample 6 Thermodynamics](../docs/readme_plots/sample_6/001_1_2__thermodynamics_energy_stack.png)
+![Sample 6 Thermodynamics](../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 #### Sample 7 (User/Network Perspective)
 
-![Sample 7 Thermodynamics](../docs/readme_plots/sample_7/001_1_2__thermodynamics_energy_stack.png)
+![Sample 7 Thermodynamics](../samples/Sample_7_Market_Users_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 * **Sample_6 Free Energy (-9.14):**
     When all stocks are defined as Heat, the ratio of Heat to Work is high, and this negative value manifests as "overall market inefficiency." While severe, it leaves room to be dismissed as merely a "system error" in the market.
@@ -53,11 +53,11 @@ The **Sensitivity Matrix** explicitly visualizes the "Keystone" (the most vulner
 
 #### Sample 6 (Market/Bipartite Perspective)
 
-![Sample 6 Sensitivity](../docs/readme_plots/sample_6/005_1_2__phase_drift_heatmap.png)
+![Sample 6 Sensitivity](../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/005_1_2__phase_drift_heatmap.png)
 
 #### Sample 7 (User/Network Perspective)
 
-![Sample 7 Sensitivity](../docs/readme_plots/sample_7/005_1_2__phase_drift_heatmap.png)
+![Sample 7 Sensitivity](../samples/Sample_7_Market_Users_Weekly/readme_plots/005_1_2__phase_drift_heatmap.png)
 
 * **Sample_6 Countermeasure (Halt the Stock):**
     The Sensitivity Matrix reveals the keystone is the "Stock (STK)" node. The solution is to completely halt trading of the affected stock (Delisting / Circuit Breaker). This is akin to "administering general anesthesia"—it prevents fraud but inflicts immense liquidity risk (collateral damage) on innocent general investors holding that stock.

@@ -6,7 +6,7 @@
 
 ### 1. 組織全体の不正検知（マクロ・フォレンジック Z-Score） (`002_2_1__macro_forensics_dashboard.png`)
 
-![002_2_1__macro_forensics_dashboard](../../readme_plots/002_2_1__macro_forensics_dashboard.png)
+![002_2_1__macro_forensics_dashboard](../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 * **📊 視覚的構造**: 時間経過に伴うネットワーク全体の「異常度（Z-Score）」を示す折れ線グラフ。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -18,8 +18,8 @@
 
 ### 2. 静かな不正の特定（ミクロ Z-Score / KLドリフト 3D Surface） (`002_2_2_1__3d_micro_kl_drift.png`, `002_2_2_2__3d_micro_z_score_X.png`)
 
-![002_2_2_1__micro_KL_drift_heatmap](../../readme_plots/002_2_2_1__3d_micro_kl_drift.png)
-![002_2_2_2__micro_Z_Score_heatmap](../../readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+![002_2_2_1__micro_KL_drift_heatmap](../../../samples/Sample_0_Healthy/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+![002_2_2_2__micro_Z_Score_heatmap](../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
 * **📊 視覚的構造**: 口座ごとの異常度を示す3D Surface ヒートマップ。暗い・青い平野（正常）の中に、明るい黄色や赤い山（異常）が隆起します。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -32,7 +32,7 @@
 
 ### 3. 不正ルートの可視化（ネットワーク・トポロジー） (`002_1_2__network_topology.t.*.png`)
 
-![002_1_2__network_topology.t.00000](../../readme_plots/002_1_2__network_topology.t.00000.png)
+![002_1_2__network_topology.t.00000](../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00000.png)
 
 * **📊 視覚的構造**: 口座（丸）と資金フロー（線）を結んだネットワーク図。異常なストレスがかかっている線は黄色〜赤色に発光します。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -43,7 +43,7 @@
 
 ### 4. 組織構造の崩壊（多様体の次元性） (`002_1_3__manifold_dimensionality.png`)
 
-![002_1_3__manifold_dimensionality](../../readme_plots/002_1_3__manifold_dimensionality.png)
+![002_1_3__manifold_dimensionality](../../../samples/Sample_0_Healthy/readme_plots/002_1_3__manifold_dimensionality.png)
 
 * **📊 視覚的構造**: ネットワークの複雑さ（有効ランク）の推移を示す折れ線グラフ。
 * **🚨 異常の検知（マクロ・ミクロ）**:

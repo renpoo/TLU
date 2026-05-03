@@ -7,7 +7,7 @@
 
 ### 1. 貸借対照表（B/S）ブロックチャート (`000_0_1__BS_Block_Total.png`)
 
-![000_0_1__BS_Block_Total](../../readme_plots/000_0_1__BS_Block_Total.png)
+![000_0_1__BS_Block_Total](../../../samples/Sample_0_Healthy/readme_plots/000_0_1__BS_Block_Total.png)
 
 * **📊 視覚的構造**: 伝統的な左右対比型の積み上げ棒グラフ。
 * **📐 会計理論**: 基本方程式: $\text{資産} = \text{負債} + \text{資本}$。
@@ -20,7 +20,7 @@
 
 ### 2. 損益計算書（P/L）ウォーターフォール (`000_0_1__PL_Waterfall_Total.png`)
 
-![000_0_1__PL_Waterfall_Total](../../readme_plots/000_0_1__PL_Waterfall_Total.png)
+![000_0_1__PL_Waterfall_Total](../../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Waterfall_Total.png)
 
 * **📊 視覚的構造**: 滝（カスケード）状のステップチャート。
 * **📐 会計理論**: 収益性のフロー: $\text{収益} - \sum \text{費用} = \text{純利益}$。
@@ -33,7 +33,7 @@
 
 ### 3. 損益計算書（P/L）トレンド (`000_0_1__PL_Trend.png`)
 
-![000_0_1__PL_Trend](../../readme_plots/000_0_1__PL_Trend.png)
+![000_0_1__PL_Trend](../../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Trend.png)
 
 * **📊 視覚的構造**: 時系列の棒グラフおよび折れ線グラフ。
 * **📐 会計理論**: 複数期間にわたる収益性のモメンタムを追跡します。

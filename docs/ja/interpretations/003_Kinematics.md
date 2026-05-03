@@ -6,7 +6,7 @@
 
 ### 1. 波及効果の予測（3D 順運動学シミュレーション / FK） (`003_1_1__3d_kinematics_fk.png`)
 
-![003_1_1__3d_kinematics_fk](../../readme_plots/003_1_1__3d_kinematics_fk.png)
+![003_1_1__3d_kinematics_fk](../../../samples/Sample_0_Healthy/readme_plots/003_1_1__3d_kinematics_fk.png)
 
 * **📊 視覚的構造**: 口座間の連鎖的な動きを示す3D空間プロット。特定の口座に力（資金）を加えたとき、他の口座がどれくらい移動（反応）するかを描画します。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -18,7 +18,7 @@
 
 ### 2. 目標からの逆算（3D 逆運動学シミュレーション / IK） (`003_1_2__3d_kinematics_ik.png`)
 
-![003_1_2__3d_kinematics_ik](../../readme_plots/003_1_2__3d_kinematics_ik.png)
+![003_1_2__3d_kinematics_ik](../../../samples/Sample_0_Healthy/readme_plots/003_1_2__3d_kinematics_ik.png)
 
 * **📊 視覚的構造**: 到達したい「目標地点」から逆算して、各口座にどのような力を加えるべきかを示す3Dベクトル。
 * **🚨 異常の検知（マクロ・ミクロ）**:

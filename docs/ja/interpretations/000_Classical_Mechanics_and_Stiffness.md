@@ -6,7 +6,7 @@
 
 ### 1. 3D ダイナミクス: 速度 (`000_1_1__3d_dynamics_velocity.png`)
 
-![000_1_1__3d_dynamics_velocity](../../readme_plots/000_1_1__3d_dynamics_velocity.png)
+![000_1_1__3d_dynamics_velocity](../../../samples/Sample_0_Healthy/readme_plots/000_1_1__3d_dynamics_velocity.png)
 
 * **📊 視覚的構造**: 3D位相空間グラフ。時間経過に伴う資金フローの「変化率（Velocity / 速度）」の軌跡を描きます。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -19,7 +19,7 @@
 
 ### 2. 3D ダイナミクス: 加速度 (`000_1_2__3d_dynamics_acceleration.png`)
 
-![000_1_2__3d_dynamics_acceleration](../../readme_plots/000_1_2__3d_dynamics_acceleration.png)
+![000_1_2__3d_dynamics_acceleration](../../../samples/Sample_0_Healthy/readme_plots/000_1_2__3d_dynamics_acceleration.png)
 
 * **📊 視覚的構造**: 「加速度（Acceleration）」の3D軌道。資金移動のペースが「どれくらい急激に変化したか（外からの強い力が加わったか）」を示します。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -31,7 +31,7 @@
 
 ### 3. 取引関係の確実性（剛性ヒートマップ） (`000_2_1__structural_stiffness.t.*.png`)
 
-![000_2_1__structural_stiffness.t.00000](../../readme_plots/000_2_1__structural_stiffness.t.00000.png)
+![000_2_1__structural_stiffness.t.00000](../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00000.png)
 
 * **📊 視覚的構造**: 勘定科目間の関係性を示すマトリックス・ヒートマップ。（深い青色＝関係性が薄い・独立している、鮮やかな赤色＝極めて強い連動性・バネのような結びつき）。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -44,7 +44,7 @@
 
 ### 4. 組織の主要な動き（主軸比率） (`000_2_2__principal_axes_ratio.png`)
 
-![000_2_2__principal_axes_ratio](../../readme_plots/000_2_2__principal_axes_ratio.png)
+![000_2_2__principal_axes_ratio](../../../samples/Sample_0_Healthy/readme_plots/000_2_2__principal_axes_ratio.png)
 
 * **📊 視覚的構造**: 組織全体の資金フローのうち、「主要な大きな流れ（第1主成分: PC1）」がどれくらいの割合を占めているかを示す折れ線グラフ。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -55,7 +55,7 @@
 
 ### 5. 組織の支配権の推移（固有ベクトル進化ヒートマップ） (`000_2_3__eigenvector_evolution.png`)
 
-![000_2_3__eigenvector_evolution](../../readme_plots/000_2_3__eigenvector_evolution.png)
+![000_2_3__eigenvector_evolution](../../../samples/Sample_0_Healthy/readme_plots/000_2_3__eigenvector_evolution.png)
 
 * **📊 視覚的構造**: 横軸が時間、縦軸が口座のヒートマップ（暗黒色＝無関係、明るいオレンジ・白色＝その口座が組織全体の資金フローを「支配」している）。
 * **🚨 異常の検知（マクロ・ミクロ）**:

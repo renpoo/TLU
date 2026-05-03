@@ -27,11 +27,11 @@ While the overall market system remains operational, a completely closed "collus
 * **Physical Evidence:** Max Spectral Radius has reached `1.000`. When specific users (USR_002, USR_003) are designated as the heat source, the Relative Free Energy Ratio drastically deteriorates further to `-13.70`.
 * **Financial Evidence:** The Trial Balance of the user-to-user (Seller → Buyer) network reveals direct gross fund flows in the hundreds of millions of dollars between these specific users, while their final net asset fluctuation is practically zero.
 
-![System Stability & Spectral Radius](../../docs/readme_plots/sample_7/004_1_2__system_stability.png)
+![System Stability & Spectral Radius](../../samples/Sample_7_Market_Users_Weekly/readme_plots/004_1_2__system_stability.png)
 
 * **💡 How to Read the Graph (Visual Cues):** The Spectral Radius hits 1.0. This proves the syndicate is colluding to pass funds in a perfect circle among themselves.
 
-![Thermodynamic Energy Depletion](../../docs/readme_plots/sample_7/001_1_2__thermodynamics_energy_stack.png)
+![Thermodynamic Energy Depletion](../../samples/Sample_7_Market_Users_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 ## 3. Business Translation & Action Plan
 
@@ -45,7 +45,7 @@ Mathematical proof of "collusive trading (syndicate)" by specific users has been
 * **Structural Rigidity:**
   A specific group of users (sub-graph) has formed a rigid block structure, completely isolated from the rest. This is evidence of "Artificial Capital Control," where they deny intervention from other general investors (noise) and circulate closed trades exclusively within their own syndicate.
 
-![Isolated Network Topology](../../docs/readme_plots/sample_7/002_1_2__network_topology.t.00006.png)
+![Isolated Network Topology](../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00006.png)
 
 * **Phase & Synchronization:**
   Despite being theoretically independent accounts, their order Phase Drift is perfectly synchronized at `0.0`. This is physical proof (Fabricated Synchronization) that either the accounts are operated by the exact same entity, or all accounts are centrally controlled by identical Swarm Bot algorithms.

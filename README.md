@@ -29,7 +29,7 @@ When physicists model the stress propagation, heat dissipation, or resonant freq
 * **Viscosity ($C$) / Dampers**: The temporal friction, dissipation, and delays inherent in the transactional flow.
 
 By treating the organization as a **discrete elastic medium (a Mass-Spring-Damper network)**, TLU legitimately applies the equation of motion ($M\ddot{x} + C\dot{x} + Kx = F$) to calculate how external financial shocks (anomalies, fraud, market shifts) propagate, resonate, and decay through the business structure. TLU does not claim that a company obeys Newton's laws; rather, it uses these equations as an extraordinarily sensitive **Physics-Informed Feature Extractor** to surface anomalies that traditional accounting X-rays miss.
-![Mass-Spring-Damper-Modle](docs/readme_plots/Mass-Spring-Damper-Modle.jpg)
+![Mass-Spring-Damper-Modle](samples/Sample_0_Healthy/readme_plots/Mass-Spring-Damper-Modle.jpg)
 
 ---
 
@@ -67,62 +67,62 @@ By applying a physical lens to the original accounting ledger, the data reveals 
 * **Stiffness:** Represents the deterministic "coupling strength" between accounts. If Sales consistently and reliably generates Accounts Receivable, that channel is highly "stiff." If this rigid surface suddenly collapses, the business process is fundamentally broken.
 * **Viscosity (Friction):** Represents temporal delays and friction in the money flow. If AR collections are severely delayed or funds are bogged down in an approval process, the friction increases, visually erupting as a localized peak of "thick, resistant mud" on the 3D surface.
 
-![1_3_1__3d_dynamics_velocity](docs/readme_plots/000_1_1__3d_dynamics_velocity.png)
-![1_3_2__3d_dynamics_acceleration](docs/readme_plots/000_1_2__3d_dynamics_acceleration.png)
-![1_3_3__3d_dynamics_inertia](docs/readme_plots/000_1_3__3d_dynamics_inertia.png)
-![1_3_4__3d_dynamics_viscosity](docs/readme_plots/000_1_4__3d_dynamics_viscosity.png)
-![1_3_8__phase_portrait_3d](docs/readme_plots/000_1_8__phase_portrait_3d.png)
+![1_3_1__3d_dynamics_velocity](samples/Sample_0_Healthy/readme_plots/000_1_1__3d_dynamics_velocity.png)
+![1_3_2__3d_dynamics_acceleration](samples/Sample_0_Healthy/readme_plots/000_1_2__3d_dynamics_acceleration.png)
+![1_3_3__3d_dynamics_inertia](samples/Sample_0_Healthy/readme_plots/000_1_3__3d_dynamics_inertia.png)
+![1_3_4__3d_dynamics_viscosity](samples/Sample_0_Healthy/readme_plots/000_1_4__3d_dynamics_viscosity.png)
+![1_3_8__phase_portrait_3d](samples/Sample_0_Healthy/readme_plots/000_1_8__phase_portrait_3d.png)
 
 ### Principal Axes (PCA)
 
 TLU also extracts the **Principal Axes** of the network by calculating the eigenvalues and eigenvectors of the covariance matrix. This reveals the dominant "dimensions" of variance—the primary directions in which the organization's resources naturally flow and fluctuate.
 
-![000_2_2__principal_axes_ratio](docs/readme_plots/000_2_2__principal_axes_ratio.png)
+![000_2_2__principal_axes_ratio](samples/Sample_0_Healthy/readme_plots/000_2_2__principal_axes_ratio.png)
 
 ### 001_ Thermodynamics & Statistical Mechanics
 
 Is your organization efficient? We measure global **Free Energy ($F$)** and **Entropy ($S$)**. High entropy with low work output indicates "Heat" (dissipative costs/waste) building up in the system. Local complexity and volatility are also captured as 3D manifolds.
 
-![1_3_5__3d_dynamics_entropy](docs/readme_plots/001_1_2_1__3d_local_entropy.png)
-![1_3_6__3d_dynamics_complexity](docs/readme_plots/001_1_2_5__local_thermo_complexity.png)
-![1_5_1__thermodynamics_dashboard](docs/readme_plots/001_1_1__thermodynamics_dashboard.png)
-![1_5_2__thermodynamics_energy_stack](docs/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-![1_5_3__thermodynamics_ts_diagram](docs/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+![1_3_5__3d_dynamics_entropy](samples/Sample_0_Healthy/readme_plots/001_1_2_1__3d_local_entropy.png)
+![1_3_6__3d_dynamics_complexity](samples/Sample_0_Healthy/readme_plots/001_1_2_5__local_thermo_complexity.png)
+![1_5_1__thermodynamics_dashboard](samples/Sample_0_Healthy/readme_plots/001_1_1__thermodynamics_dashboard.png)
+![1_5_2__thermodynamics_energy_stack](samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![1_5_3__thermodynamics_ts_diagram](samples/Sample_0_Healthy/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 ### 002_ Information Geometry & Forensics
 
 Unmask anomalies hiding in the data's "blood vessels." TLU calculates **Topological Edge Stress** based on Z-scores, revealing excessive load (rupture risk) on specific pathways and visualizing structural distortions as network graphs.
 
-![1_12__network_topology t 00000](docs/readme_plots/002_1_2__network_topology.t.00000.png)
-![1_12__network_topology t 00001](docs/readme_plots/002_1_2__network_topology.t.00001.png)
-![1_12__network_topology t 00002](docs/readme_plots/002_1_2__network_topology.t.00002.png)
-![1_12__network_topology t 00003](docs/readme_plots/002_1_2__network_topology.t.00003.png)
+![1_12__network_topology t 00000](samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00000.png)
+![1_12__network_topology t 00001](samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00001.png)
+![1_12__network_topology t 00002](samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00002.png)
+![1_12__network_topology t 00003](samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00003.png)
 
 ### Manifold Dimensionality (SVD)
 
 By performing Singular Value Decomposition (SVD) on the transition matrix, TLU calculates the **Effective Rank** of the network. If the network becomes over-centralized or collapses into a few hubs, the effective dimensionality drops, acting as an early warning for structural fragility.
 
-![002_1_3__manifold_dimensionality](docs/readme_plots/002_1_3__manifold_dimensionality.png)
+![002_1_3__manifold_dimensionality](samples/Sample_0_Healthy/readme_plots/002_1_3__manifold_dimensionality.png)
 
 ### 003_ Applied Kinematics & Robotics
 
 *(Supports Forward Kinematics for simulating the ripple effects of virtual investments, and Inverse Kinematics for calculating the required target intervention while considering stiffness penalties.)*
 
-![1_1__3d_kinematics_fk](docs/readme_plots/003_1_1__3d_kinematics_fk.png)
-![1_2__3d_kinematics_ik](docs/readme_plots/003_1_2__3d_kinematics_ik.png)
+![1_1__3d_kinematics_fk](samples/Sample_0_Healthy/readme_plots/003_1_1__3d_kinematics_fk.png)
+![1_2__3d_kinematics_ik](samples/Sample_0_Healthy/readme_plots/003_1_2__3d_kinematics_ik.png)
 
 ### 004_ Control Theory & Systems Engineering
 
 Stop guessing. Use **Linear-Quadratic Regulator (LQR)** theory to calculate the mathematically optimal resource allocation trajectory to reach a target state while minimizing organizational friction (strain energy).
 
-![1_7_2__control_error_convergence](docs/readme_plots/004_1_2__control_error_convergence.png)
-![1_7_3__control_lqr_performance_space](docs/readme_plots/004_1_3__control_lqr_performance_space.png)
+![1_7_2__control_error_convergence](samples/Sample_0_Healthy/readme_plots/004_1_2__control_error_convergence.png)
+![1_7_3__control_lqr_performance_space](samples/Sample_0_Healthy/readme_plots/004_1_3__control_lqr_performance_space.png)
 
 ### System Stability (Spectral Radius)
 
 Is the system spinning out of control? By calculating the maximum eigenvalue (**Spectral Radius**) of the transition matrix, TLU detects topological cycles (e.g., Wash Trading or recursive loops). If the radius approaches or exceeds 1.0, the system is mathematically unstable and prone to exponential divergence.
 
-![004_1_2__system_stability](docs/readme_plots/004_1_2__system_stability.png)
+![004_1_2__system_stability](samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
 
 ---
 

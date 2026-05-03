@@ -6,7 +6,7 @@
 
 ### 1. 組織全体のエネルギー状態（熱力学ダッシュボード） (`001_1_1__thermodynamics_dashboard.png`)
 
-![001_1_1__thermodynamics_dashboard](../../readme_plots/001_1_1__thermodynamics_dashboard.png)
+![001_1_1__thermodynamics_dashboard](../../../samples/Sample_0_Healthy/readme_plots/001_1_1__thermodynamics_dashboard.png)
 
 * **📊 視覚的構造**: 組織の活動状態を示すトレンドライン（白色：自由エネルギー＝組織の体力・活動余力、オレンジ色：熱＝摩擦や無駄、緑色：エントロピー＝無秩序さ・カオス度）。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -20,7 +20,7 @@
 
 ### 2. 組織のボラティリティ（T-S 線図） (`001_1_1__thermodynamics_ts_diagram.png`)
 
-![001_1_3__thermodynamics_ts_diagram](../../readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+![001_1_3__thermodynamics_ts_diagram](../../../samples/Sample_0_Healthy/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 * **📊 視覚的構造**: 横軸がエントロピー（無秩序さ）、縦軸が温度（取引の激しさ・ボラティリティ）を示す散布図。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -31,7 +31,7 @@
 
 ### 3. 局所的な疲弊（3D 局所熱力学） (`001_2_1__local_thermodynamics_dashboard.png`)
 
-![001_1_2_1__3d_local_entropy](../../readme_plots/001_1_2_1__3d_local_entropy.png)
+![001_1_2_1__3d_local_entropy](../../../samples/Sample_0_Healthy/readme_plots/001_1_2_1__3d_local_entropy.png)
 
 * **📊 視覚的構造**: 勘定科目（ノード）ごとのエントロピー（複雑さ）を可視化した 3D Surface ヒートマップ。（黒・紫＝健全、黄色く高く隆起した部分＝カオス・摩擦が極大化した「異常な発熱源」）。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -43,7 +43,7 @@
 
 ### 4. 実際のタイムラグ（ラグ・マトリックス ヒートマップ） (`001_2_2__lag_matrix_heatmap.png`)
 
-![001_2_1_1__lag_matrix_correlation](../../readme_plots/001_2_1_1__lag_matrix_correlation.png)
+![001_2_1_1__lag_matrix_correlation](../../../samples/Sample_0_Healthy/readme_plots/001_2_1_1__lag_matrix_correlation.png)
 
 * **📊 視覚的構造**: 口座間の取引が「何日遅れで連動しているか（タイムラグ）」を示すマトリックス。
 * **🚨 異常の検知（マクロ・ミクロ）**:
