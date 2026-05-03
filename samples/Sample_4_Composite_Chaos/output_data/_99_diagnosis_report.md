@@ -1,13 +1,21 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_4_Composite_Chaos`
-**Date Analyzed:** 2026-05-03 10:01:49
+**Date Analyzed:** 2026-05-03 10:44:52
 
 ## 1. Final Diagnosis
 
+### ⚠️ COMPOSITE PATHOLOGY DETECTED
+The system is suffering from multiple overlapping structural failures.
+
+### 🔴 Unbalanced Journal Mistake (Conservation Violation)
+- **Severity:** CRITICAL
+- **Evidence:** Relative Leak Ratio reached 0.0005 (Threshold: 1e-06). Raw residual: 742.63. Peak Location: Time: 2020-W09.
+- **Interpretation:** The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere.
+
 ### 🟠 Topological Feedback Loop (Wash Trade)
 - **Severity:** HIGH
-- **Evidence:** Spectral Radius reached 0.9764 (Threshold: 0.9).
+- **Evidence:** Spectral Radius reached 0.9764 (Threshold: 0.6).
 - **Interpretation:** An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading).
 
 ---
@@ -15,8 +23,8 @@
 
 | Physical Domain | Extracted Metric | Value | Threshold |
 |-----------------|------------------|-------|-----------|
-| Macro Forensics | Relative Mass Leak Ratio | 0.0005 | > 0.001 |
-| Control Theory  | Max Spectral Radius      | 0.9764 | >= 0.9 |
+| Macro Forensics | Relative Mass Leak Ratio | 0.0005 | > 1e-06 |
+| Control Theory  | Max Spectral Radius      | 0.9764 | >= 0.6 |
 | Thermodynamics  | Relative Free Energy Ratio| 0.4205 | < -0.1 |
 | Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
@@ -25,7 +33,7 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-03T10:01:49.116081",
+  "timestamp": "2026-05-03T10:44:52.991963",
   "environment": "samples/Sample_4_Composite_Chaos",
   "physics_metrics": {
     "max_abs_residual": 742.63,
@@ -39,9 +47,15 @@
   },
   "detected_pathologies": [
     {
+      "pathology": "Unbalanced Journal Mistake (Conservation Violation)",
+      "severity": "CRITICAL",
+      "evidence": "Relative Leak Ratio reached 0.0005 (Threshold: 1e-06). Raw residual: 742.63. Peak Location: Time: 2020-W09.",
+      "interpretation": "The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere."
+    },
+    {
       "pathology": "Topological Feedback Loop (Wash Trade)",
       "severity": "HIGH",
-      "evidence": "Spectral Radius reached 0.9764 (Threshold: 0.9).",
+      "evidence": "Spectral Radius reached 0.9764 (Threshold: 0.6).",
       "interpretation": "An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading)."
     }
   ],

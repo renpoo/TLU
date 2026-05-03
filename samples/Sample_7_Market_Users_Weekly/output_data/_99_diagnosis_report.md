@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_7_Market_Users_Weekly`
-**Date Analyzed:** 2026-05-03 10:03:02
+**Date Analyzed:** 2026-05-03 10:44:53
 
 ## 1. Final Diagnosis
 
@@ -10,7 +10,7 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🟠 Topological Feedback Loop (Wash Trade)
 - **Severity:** HIGH
-- **Evidence:** Spectral Radius reached 1.0000 (Threshold: 0.9).
+- **Evidence:** Spectral Radius reached 1.0000 (Threshold: 0.6).
 - **Interpretation:** An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading).
 
 ### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
@@ -23,8 +23,8 @@ The system is suffering from multiple overlapping structural failures.
 
 | Physical Domain | Extracted Metric | Value | Threshold |
 |-----------------|------------------|-------|-----------|
-| Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
-| Control Theory  | Max Spectral Radius      | 1.0000 | >= 0.9 |
+| Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 1e-06 |
+| Control Theory  | Max Spectral Radius      | 1.0000 | >= 0.6 |
 | Thermodynamics  | Relative Free Energy Ratio| -15.8749 | < -0.1 |
 | Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
@@ -33,7 +33,7 @@ The system is suffering from multiple overlapping structural failures.
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-03T10:03:02.868507",
+  "timestamp": "2026-05-03T10:44:53.760360",
   "environment": "samples/Sample_7_Market_Users_Weekly",
   "physics_metrics": {
     "max_abs_residual": 0.0,
@@ -49,7 +49,7 @@ The system is suffering from multiple overlapping structural failures.
     {
       "pathology": "Topological Feedback Loop (Wash Trade)",
       "severity": "HIGH",
-      "evidence": "Spectral Radius reached 1.0000 (Threshold: 0.9).",
+      "evidence": "Spectral Radius reached 1.0000 (Threshold: 0.6).",
       "interpretation": "An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading)."
     },
     {

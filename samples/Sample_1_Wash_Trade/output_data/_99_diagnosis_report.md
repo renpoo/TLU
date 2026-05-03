@@ -1,22 +1,22 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_1_Wash_Trade`
-**Date Analyzed:** 2026-05-03 10:00:37
+**Date Analyzed:** 2026-05-03 10:44:52
 
 ## 1. Final Diagnosis
 
-### 🟢 Healthy System (No Structural Pathologies Detected)
-- **Severity:** NORMAL
-- **Evidence:** All physical parameters remained within stable thresholds.
-- **Interpretation:** The system is functioning efficiently without any detectable structural anomalies, leaks, or loops.
+### 🟠 Topological Feedback Loop (Wash Trade)
+- **Severity:** HIGH
+- **Evidence:** Spectral Radius reached 0.6584 (Threshold: 0.6).
+- **Interpretation:** An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading).
 
 ---
 ## 2. Scale-Invariant Diagnostic Metrics
 
 | Physical Domain | Extracted Metric | Value | Threshold |
 |-----------------|------------------|-------|-----------|
-| Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
-| Control Theory  | Max Spectral Radius      | 0.6584 | >= 0.9 |
+| Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 1e-06 |
+| Control Theory  | Max Spectral Radius      | 0.6584 | >= 0.6 |
 | Thermodynamics  | Relative Free Energy Ratio| 0.6278 | < -0.1 |
 | Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
@@ -25,7 +25,7 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-03T10:00:37.265018",
+  "timestamp": "2026-05-03T10:44:52.208054",
   "environment": "samples/Sample_1_Wash_Trade",
   "physics_metrics": {
     "max_abs_residual": 0.0,
@@ -39,10 +39,10 @@
   },
   "detected_pathologies": [
     {
-      "pathology": "Healthy System (No Structural Pathologies Detected)",
-      "severity": "NORMAL",
-      "evidence": "All physical parameters remained within stable thresholds.",
-      "interpretation": "The system is functioning efficiently without any detectable structural anomalies, leaks, or loops."
+      "pathology": "Topological Feedback Loop (Wash Trade)",
+      "severity": "HIGH",
+      "evidence": "Spectral Radius reached 0.6584 (Threshold: 0.6).",
+      "interpretation": "An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading)."
     }
   ],
   "financial_baseline": {

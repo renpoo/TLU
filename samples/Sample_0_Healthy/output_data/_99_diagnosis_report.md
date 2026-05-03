@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_0_Healthy`
-**Date Analyzed:** 2026-05-03 10:00:12
+**Date Analyzed:** 2026-05-03 10:44:51
 
 ## 1. Final Diagnosis
 
@@ -15,8 +15,8 @@
 
 | Physical Domain | Extracted Metric | Value | Threshold |
 |-----------------|------------------|-------|-----------|
-| Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
-| Control Theory  | Max Spectral Radius      | 0.0000 | >= 0.9 |
+| Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 1e-06 |
+| Control Theory  | Max Spectral Radius      | 0.0000 | >= 0.6 |
 | Thermodynamics  | Relative Free Energy Ratio| 0.4061 | < -0.1 |
 | Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
@@ -25,7 +25,7 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-03T10:00:12.876802",
+  "timestamp": "2026-05-03T10:44:51.943812",
   "environment": "samples/Sample_0_Healthy",
   "physics_metrics": {
     "max_abs_residual": 0.0,
