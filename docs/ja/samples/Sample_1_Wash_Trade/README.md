@@ -73,7 +73,7 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 
 ## 4. ミクロ・フォレンジックによる最終証拠（Micro-Forensic Final Evidence）
 
-![Sample 1 Micro KL Divergence](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+![Sample 1 Micro Forensics (KL Divergence Drift)](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 * **💡 異常系の読解:**
 
@@ -86,6 +86,11 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
     * `E_002773`: 流出した資金がそのまま売掛金の回収として還流（Accounts_Receivable -> Cash）
   * **Event 2 (2020-11-28 / Week 48):**
     * `E_003192` 〜 `E_003194`: 全く同じキャッチボール手法で `$55,867.37` の架空売上を水増し。
+
+* **損益計算書の比較:**
+* **第41週と第48週に見られる粉飾決算の痕跡**
+![Sample 1 P/L Trend](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Trend.png)
+
 * **最終結論:** 意図的な循環取引（Wash Trading）による売上高の水増し（粉飾決算）と断定します。静的なB/Sは一致していますが、物理的なネットワーク・トポロジーの崩壊とトランザクション証拠により、システムの完全性は毀損されています。
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
