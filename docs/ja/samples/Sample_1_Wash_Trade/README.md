@@ -42,11 +42,11 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 以下は、Sample 1 の第41週（循環取引の発生時）における異常なネットワーク・トポロジーです。
 
 * **幾何学的構造の異常（Network Topology）**
-  * **第30週（平時のネットワーク状態）**
-  ![Sample 1 Network Topology](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00029.png)
-  * **第40週（異常発生直前）**
+  * **第39週（平時のネットワーク状態）**
+  ![Sample 1 Network Topology](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00038.png)
+  * **第40週（循環取引の発生直前）**
   ![Sample 1 Network Topology](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00039.png)
-  * **第41週（異常発生時）**
+  * **第41週（循環取引の発生時）**
   ![Sample 1 Network Topology](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00040.png)
 
   * **💡 異常系の読解 (Sample 0 との視覚的差分):** 正常系（Sample 0）の「自然な放射状の成長」と視覚的に比較してください。異常系である本作では、`ACC_Cash`（現金）と `ACC_Accounts_Receivable`（売掛金）の間に、不自然に太く、自己強化的に循環する無限ループ（赤い閉路）が形成されています。実体経済を伴わない資金が、特定の口座間を高速で回転していることを幾何学的に捉えています。
