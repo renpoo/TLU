@@ -81,9 +81,8 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 ![Sample 3 Structural Stiffness for Week 19](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00018.png)
 ![Sample 3 Structural Stiffness for Week 20](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00019.png)
 ![Sample 3 Structural Stiffness for Week 21](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00020.png)
-![Sample 3 Structural Stiffness for Week 22](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00021.png)
 
-* (第42週 最大異常への波及)
+*(第42週 最大異常への波及)
 ![Sample 3 Structural Stiffness for Week 42](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00041.png)
 
 自律スクリプトによるトランザクション全件走査の結果、借方と貸方の金額が一致していない（端数ズレを起こしている）以下の仕訳群が正確に特定されました。
