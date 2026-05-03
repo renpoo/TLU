@@ -74,15 +74,16 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 * **自律調査の実行:** マクロ物理指標において「質量保存則違反（Leak Ratio > 0）」が明確に検出されたため、AIエージェントは自律的に基礎となる仕訳ストリームへドリルダウンし、絶対残差が最大となった **第42週（2020-W42）** に焦点を当ててミクロ調査を実施しました。
 * **特定された証拠:**
 
+* **💡 異常系の読解 (0から1への変異と波及の視覚的差分):** 人間の視覚で「UNKNOWN_LEAK（質量の消失）」がシステムに誕生した瞬間を捉えてください。第19週の時点では、`UNKNOWN_LEAK` の行・列は完全に無色（存在しない）でした。しかし第20週において、システムで最初の「小さな端数ズレ」が発生した瞬間、このマス目に初めて色が灯ります（存在の証明）。そして第42週（絶対残差が最大となったピーク時）には、この漏れがシステム全体の構造を歪め、他の勘定科目間の関係性（マス目の色）にまで強烈な波及効果（Ripple Effect）をもたらしていることが直感的に理解できます。
+
 **【構造的剛性 (Structural Stiffness / Precision Matrix)】**
-*(1枚目: 第19週 異常発生前 ／ 2枚目: 第20週 初期の異常発生 ／ 3枚目: 第21週 初期の異常発生 ／ 4枚目: 第22週 最大異常への波及)*
+*(1枚目: 第19週 異常発生前 ／ 2枚目: 第20週 初期の異常発生 ／ 3枚目: 第21週 初期の異常発生)*
 ![Sample 3 Structural Stiffness for Week 19](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00018.png)
 ![Sample 3 Structural Stiffness for Week 20](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00019.png)
 ![Sample 3 Structural Stiffness for Week 21](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00020.png)
 ![Sample 3 Structural Stiffness for Week 22](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00021.png)
 
-* **💡 異常系の読解 (0から1への変異と波及の視覚的差分):** 人間の視覚で「UNKNOWN_LEAK（質量の消失）」がシステムに誕生した瞬間を捉えてください。第19週の時点では、`UNKNOWN_LEAK` の行・列は完全に無色（存在しない）でした。しかし第20週において、システムで最初の「小さな端数ズレ」が発生した瞬間、このマス目に初めて色が灯ります（存在の証明）。そして第42週（絶対残差が最大となったピーク時）には、この漏れがシステム全体の構造を歪め、他の勘定科目間の関係性（マス目の色）にまで強烈な波及効果（Ripple Effect）をもたらしていることが直感的に理解できます。
-
+* (第42週 最大異常への波及)
 ![Sample 3 Structural Stiffness for Week 42](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00041.png)
 
 自律スクリプトによるトランザクション全件走査の結果、借方と貸方の金額が一致していない（端数ズレを起こしている）以下の仕訳群が正確に特定されました。
