@@ -86,7 +86,7 @@ def generate_stream(args):
             amount = max(100.0, amount)
 
             # [Sales generated]
-            # Sales department generates sales, but accounts receivable (AR) are managed by Admin
+            # Sales department generates sales, but accounts receivable (Accounts_Receivable) are managed by Admin
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, amount, 
                 "Accounts_Receivable", "DPT_Admin", "Sales_Revenue", "DPT_Sales", "Sales_Record"
@@ -101,7 +101,7 @@ def generate_stream(args):
             ))
             global_entry_count += 1
 
-            # [Future: AR collection] 30-90 days later (completed within Admin)
+            # [Future: Accounts_Receivable collection] 30-90 days later (completed within Admin)
             collection_day = day + random.randint(30, 90)
             
             # Sales Leakage / Embezzlement
@@ -112,7 +112,7 @@ def generate_stream(args):
                 stolen_from_sales = amount * random.uniform(0.1, 0.5)
                 amount -= stolen_from_sales
                 
-                # Unbalanced entry: Credit AR, but Debit=0.0 (Money disappears into the void)
+                # Unbalanced entry: Credit Accounts_Receivable, but Debit=0.0 (Money disappears into the void)
                 daily_entries.extend(create_entry(
                     f"E_{global_entry_count:06d}", date_str, stolen_from_sales,
                     "Cash", "DPT_Admin", "Accounts_Receivable", "DPT_Admin", "Embezzlement_Leak",
@@ -228,7 +228,7 @@ def generate_stream(args):
             wash_amount = max(20000.0, wash_amount)
             
             # Step 1: Fund the shell company secretly (CR Cash -> DR Accounts_Receivable)
-            # Flow: Cash -> AR
+            # Flow: Cash -> Accounts_Receivable
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, wash_amount,
                 "Accounts_Receivable", "DPT_Admin", "Cash", "DPT_Admin", "Wash_Funding"
@@ -236,7 +236,7 @@ def generate_stream(args):
             global_entry_count += 1
             
             # Step 2: Fake Sale to the shell company (CR Sales_Revenue -> DR Accounts_Receivable)
-            # Flow: Sales -> AR
+            # Flow: Sales -> Accounts_Receivable
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, wash_amount,
                 "Accounts_Receivable", "DPT_Admin", "Sales_Revenue", "DPT_Sales", "Wash_Sale"
@@ -244,7 +244,7 @@ def generate_stream(args):
             global_entry_count += 1
             
             # Step 3: Shell company pays using the exact funded cash (CR Accounts_Receivable -> DR Cash)
-            # Flow: AR -> Cash (This closes the Cash <-> AR infinite loop)
+            # Flow: Accounts_Receivable -> Cash (This closes the Cash <-> Accounts_Receivable infinite loop)
             daily_entries.extend(create_entry(
                 f"E_{global_entry_count:06d}", date_str, wash_amount,
                 "Cash", "DPT_Admin", "Accounts_Receivable", "DPT_Admin", "Wash_Collection"

@@ -46,7 +46,7 @@ class TestGenerateDummyJournal(unittest.TestCase):
 
     def test_unbalanced_entries_injected(self):
         """Test that with 1.0 unbalanced probability, unbalanced entries are generated."""
-        # 1.0 probability means every AR collection will be unbalanced.
+        # 1.0 probability means every Accounts_Receivable collection will be unbalanced.
         args = self.parser.parse_args(["--months", "2", "--unbalanced-mistake-prob", "1.0"])
         
         f = io.StringIO()
@@ -68,7 +68,7 @@ class TestGenerateDummyJournal(unittest.TestCase):
             entries[entry_id]['dr'] += debit
             entries[entry_id]['cr'] += credit
             
-        # We expect AT LEAST ONE entry to be unbalanced (specifically AR collections)
+        # We expect AT LEAST ONE entry to be unbalanced (specifically Accounts_Receivable collections)
         unbalanced_count = sum(1 for totals in entries.values() if abs(totals['dr'] - totals['cr']) > 0.01)
         self.assertGreater(unbalanced_count, 0, "No unbalanced entries were generated despite prob=1.0")
 

@@ -65,7 +65,7 @@ By applying a physical lens to the original accounting ledger, the data reveals 
 
 * **Mass (Inertia):** Represents the historical "accumulation" and capacity of an account. A "heavy" node (like a massive cash pool or core sales base) has high inertia; it requires immense force to change its state. Sudden drops in mass indicate structural loss.
 * **Stiffness:** Represents the deterministic "coupling strength" between accounts. If Sales consistently and reliably generates Accounts Receivable, that channel is highly "stiff." If this rigid surface suddenly collapses, the business process is fundamentally broken.
-* **Viscosity (Friction):** Represents temporal delays and friction in the money flow. If AR collections are severely delayed or funds are bogged down in an approval process, the friction increases, visually erupting as a localized peak of "thick, resistant mud" on the 3D surface.
+* **Viscosity (Friction):** Represents temporal delays and friction in the money flow. If Accounts_Receivable collections are severely delayed or funds are bogged down in an approval process, the friction increases, visually erupting as a localized peak of "thick, resistant mud" on the 3D surface.
 
 ![1_3_1__3d_dynamics_velocity](samples/Sample_0_Healthy/readme_plots/000_1_1__3d_dynamics_velocity.png)
 ![1_3_2__3d_dynamics_acceleration](samples/Sample_0_Healthy/readme_plots/000_1_2__3d_dynamics_acceleration.png)

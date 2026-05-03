@@ -14,7 +14,7 @@ This phase treats the ledger like a radio signal or a vibrating machine. By anal
   * Look for deep **Red** or deep **Blue** cells appearing in the timeline.
   * **Red** = Lag is stretching (it's taking longer than normal).
   * **Blue** = Lag is compressing (it's happening faster than normal).
-* **💼 Business Translation**: **Severe Cash Flow Bottlenecks**. If the AR vs Cash line suddenly turns bright Red, it means "Collections are slowing down." Even if the total B/S assets look healthy, the actual velocity of cash conversion is grinding to a halt, serving as a powerful early warning for an impending liquidity crisis.
+* **💼 Business Translation**: **Severe Cash Flow Bottlenecks**. If the Accounts_Receivable vs Cash line suddenly turns bright Red, it means "Collections are slowing down." Even if the total B/S assets look healthy, the actual velocity of cash conversion is grinding to a halt, serving as a powerful early warning for an impending liquidity crisis.
 * **💡 Concrete Example (from Samples)**:
   * **Sample_6 & Sample_9 (Fabricated Synchronization/Hypersynchrony)**: Healthy economic or biological activities always contain natural "delays (viscosity) and variance." However, if a human manually tampers with multiple accounts simultaneously at month-end to make the books look clean, or if a market is subjected to organized price manipulation, the natural phase drift of these accounts unnaturally snaps to "0.0 (perfect synchronization)." This Hypersynchrony is the signature of an "invisible hand" (human manipulation) artificially aligning the data.
 
