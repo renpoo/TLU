@@ -42,6 +42,8 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 以下は、Sample 1 の第41週（循環取引の発生時）における異常なネットワーク・トポロジーです。
 
 * **幾何学的構造の異常（Network Topology）**
+  * **第30週（平時のネットワーク状態）**
+  ![Sample 1 Network Topology](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00029.png)
   * **第40週（異常発生直前）**
   ![Sample 1 Network Topology](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00039.png)
   * **第41週（異常発生時）**
