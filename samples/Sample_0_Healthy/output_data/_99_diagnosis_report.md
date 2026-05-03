@@ -34,8 +34,7 @@
     "max_spectral": 0.0,
     "min_free_energy": 93251.36,
     "min_relative_free_energy": 0.8435693397638316,
-    "max_z_score": 0.0,
-    "max_leak_location": "Time: 2020-W01"
+    "max_z_score": 0.0
   },
   "detected_pathologies": [
     {
