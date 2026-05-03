@@ -144,7 +144,7 @@ def main():
                 G, pos, ax=ax, edgelist=edges,
                 edge_color=edge_stresses, edge_cmap=plt.get_cmap(cmap_edge),
                 width=widths, edge_vmin=0, edge_vmax=global_max_stress,
-                arrowsize=40, connectionstyle='arc3,rad=0.1'
+                arrowsize=40, connectionstyle='arc3,rad=0.25'
             )
 
         ax.axis('off')
