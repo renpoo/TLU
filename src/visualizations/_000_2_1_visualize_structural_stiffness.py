@@ -108,7 +108,6 @@ def main():
             ax=ax, 
             cmap=cmap_stiffness, 
             norm=symlog_norm,
-            center=0,  # 0.0が確実に白色(RdBu_rの中央)になるように明示
             xticklabels=axis_labels, 
             yticklabels=axis_labels,
             cbar_kws={'label': "Stiffness / Precision (SymLog10 Scale)", 'extend': 'both'}
