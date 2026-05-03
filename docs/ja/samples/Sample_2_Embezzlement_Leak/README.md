@@ -77,8 +77,8 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 
 **【構造的剛性 (Structural Stiffness / Precision Matrix)】**
 *(左/上: t=3 発生前 ／ 右/下: t=4 発生時)*
-![Sample 2 Structural Stiffness t3](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00003.png)
-![Sample 2 Structural Stiffness t4](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00004.png)
+![Sample 2 Structural Stiffness for Week 4](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00003.png)
+![Sample 2 Structural Stiffness for Week 5](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00004.png)
 
 * **💡 異常系の読解 (Before/Afterの視覚的差分):** 人間の視覚は「変化（差分）」に対して極めて敏感です。t=3（第4週）の時点では `UNKNOWN_LEAK` の行・列は完全に無色（0.0）ですが、t=4（第5週）で横領が発生した瞬間に、その交点に強烈な色（構造的剛性の変異）が灯ります。この「静から動への不連続な遷移」を比較観察することで、プロフェッショナルは直感的に異常発生の瞬間を捉えることができます。
 
