@@ -64,13 +64,26 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 
 * **💡 異常系の読解:** 赤色の線「Max Spectral Radius」は `0.0` のままです。これは、Sample_1（循環取引）のような「資金の自己強化的なループ」は起きておらず、純粋にシステムの外へ資金が「一直線に漏れ出ている（ブラックホール化している）」だけであることを意味します。
 
-**3. 構造的剛性 (Structural Stiffness / Precision Matrix)**
-*(上: Week 4 発生前 ／ 中: Week 5 発生時 ／ 下: Week 6 発生後)*
+**3. 構造的剛性 (Structural Stiffness) と 外力 (External Force) の崩壊**
+
+本サンプルのタイムラインは「第5〜13週の初期犯行」「第14〜31週の一時休止（システムの一時的治癒）」「第32〜40週の怒涛の連続再犯」という3つのフェーズに分かれています。この「犯行の休止と再犯の激化」がシステム全体の機械的バランスに何をもたらしたかを、剛性行列と外力（3D）の対比から証明します。
+
+**【フェーズ1: 初期の変異 (Week 4 発生前 vs Week 5 発生時)】**
+*(上: Week 4 発生前 ／ 下: Week 5 発生時)*
 ![Sample 2 Structural Stiffness for Week 4](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00003.png)
 ![Sample 2 Structural Stiffness for Week 5](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00004.png)
-![Sample 2 Structural Stiffness for Week 6](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00005.png)
 
-* **💡 異常系の読解 (Before/Afterの視覚的差分):** 人間の視覚は「変化（差分）」に対して極めて敏感です。Week 4 の時点では `UNKNOWN_LEAK` の行・列は完全に無色（白色: 0.0）ですが、Week 5 で横領が発生した瞬間に、その交点に強烈な色（構造的剛性の変異）が灯ります。この「静から動への不連続な遷移」を比較観察することで、プロフェッショナルは直感的に異常発生の瞬間を捉えることができます。
+* **💡 異常系の読解 (最初の不連続な遷移):** 人間の視覚は「変化（差分）」に対して極めて敏感です。Week 4 の時点では `UNKNOWN_LEAK` の行・列は完全に無色（白色: 0.0）ですが、Week 5 で最初の横領が発生した瞬間に、その交点に強烈な色（構造的剛性の変異）が灯ります。
+
+**【フェーズ2: 外力の異常振動とシステム絶対硬直 (W31 休止期 vs W36 再犯期)】**
+*(上: 3D External Force / 中: 剛性行列 W31(休止期) / 下: 剛性行列 W36(再犯期))*
+![Sample 2 External Force](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_6__3d_dynamics_external_force.png)
+![Sample 2 Stiffness W31](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00030.png)
+![Sample 2 Stiffness W36](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00035.png)
+
+* **剛性行列の一時的治癒（W31）:** 第13週を最後に横領が止まっていたため、スライディングウィンドウ（記憶）から過去の漏洩が消えた第31週時点（中図）では、`UNKNOWN_LEAK` の行・列は真っ白（無色）に戻り、行列全体も赤と青の美しい「弾力性のあるモザイク模様」を取り戻しています。
+* **絶対硬直と異常振動の発生（W36以降）:** しかし第32週から怒涛の連続横領が再開された結果、剛性行列（下図）は一瞬にして「単色のドス黒い赤」へと塗りつぶされ、システム全体が余裕（クッション）を失い **Rigid Lock（絶対硬直）** を起こしました。
+* **External Forceの破滅的共振:** その結果、上図の「External Force（通常の営業活動という推進力）」の波形において、後半に差し掛かるにつれて `1e9` という破滅的なスケールの異常振動（乱高下）が発生しています。これは「横領によって穴が空き、弾力性（サスペンション）を失った硬直状態のシステムに、通常の営業活動の力が加わった結果、吸収しきれなかったエネルギーがシステム全体を激しく揺さぶっている（エンジンのノッキング）」という機械力学的な崩壊を完璧に可視化したものです。
 
 **4. 熱力学ダッシュボード（Thermodynamics Energy Stack）**
 ![Sample 2 Thermodynamics](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2__thermodynamics_energy_stack.png)
@@ -90,18 +103,6 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 * **💡 異常系の読解 (統計的「慣れ」を暴く物理的摩擦):**
 Z-Scoreのグラフでは第5週・第9週の初期の横領のみが強調され、第30週以降のグラフはフラットになっていました。これはシステムが「横領状態」を学習し、異常を異常と感じなくなった（モデル汚染）ためです。
 しかし、過去の確率分布に依存せず、その瞬間の**物理的な流速変化（摩擦）**を絶対評価するこの「Viscosity（粘性）」のグラフでは、Z-Scoreが見逃した第35週〜第40週付近に、全ノード中で最大となる巨大なオレンジ色のスパイクが屹立しています。これは犯人が短期間に横領額を吊り上げ（\$58 -> \$91 -> \$214 -> \$260 ）、連続的に資金を抜き取ったことによる**激しい物理的乱流（摩擦熱の爆発）**を精緻に捕捉したものです。
-
-**【💡 異常系の深層読解：外力（External Force）と構造的剛性の崩壊】**
-本サンプルのタイムラインは「第5〜13週の初期犯行」「第14〜31週の一時休止（システムの一時的治癒）」「第32〜40週の怒涛の連続再犯」という3つのフェーズに分かれています。この「再犯の激化」がシステムに何をもたらしたかを、外力と剛性行列の対比から証明します。
-
-*(上: 3D External Force / 中: 剛性行列 W31(休止期) / 下: 剛性行列 W36(再犯期))*
-![Sample 2 External Force](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_6__3d_dynamics_external_force.png)
-![Sample 2 Stiffness W31](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00030.png)
-![Sample 2 Stiffness W36](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00035.png)
-
-* **剛性行列の一時的治癒（W31）:** 第13週を最後に横領が止まっていたため、スライディングウィンドウ（記憶）から過去の漏洩が消えた第31週時点（中図）では、`UNKNOWN_LEAK` の行・列は真っ白（無色）に戻り、行列全体も赤と青の美しい「弾力性のあるモザイク模様」を取り戻しています。
-* **絶対硬直と異常振動の発生（W36以降）:** しかし第32週から怒涛の連続横領が再開された結果、剛性行列（下図）は一瞬にして「単色のドス黒い赤」へと塗りつぶされ、システム全体が余裕（クッション）を失い **Rigid Lock（絶対硬直）** を起こしました。
-* その結果、上図の「External Force（通常の営業活動という推進力）」の波形において、後半に差し掛かるにつれて `1e9` という破滅的なスケールの異常振動（乱高下）が発生しています。これは「横領によって穴が空き、弾力性（サスペンション）を失った硬直状態のシステムに、通常の営業活動の力が加わった結果、吸収しきれなかったエネルギーがシステム全体を激しく揺さぶっている（エンジンのノッキング）」という機械力学的な崩壊を完璧に可視化したものです。
 
 * **自律調査の実行:** マクロ物理指標において「貸借一致の原則の違反（Leak Ratio > 0）」が明確に検出されたため、AIエージェントは自律的に基礎となる仕訳ストリーム (`Dummy_Journal_Stream_Amount.csv`) へドリルダウンし、質量欠損の原因となったアンバランス（片端）な仕訳を探索しました。
 
