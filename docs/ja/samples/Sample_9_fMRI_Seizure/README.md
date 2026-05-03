@@ -17,6 +17,13 @@
 各部位をノードとし、伝達された血流量（信号）を「取引代金」として集計しています。
 
 ### 静的な集計ダッシュボードが捉える世界
+
+**【全期間の累積フロー (P/L Waterfall)】**
+![Sample 9 PL Waterfall](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_0_1__PL_Waterfall_Total.png)
+
+**【最終的な状態の蓄積 (B/S Block)】**
+![Sample 9 BS Block](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_0_1__BS_Block_Total.png)
+
 **【スキャン完了時点（TR=300）の各部位の「総取引量＝Gross Activity（借方＋貸方）」】**
 * `Prefrontal_Cortex` (前頭前野): $368,416
 * `Motor_Cortex` (運動野): $368,449

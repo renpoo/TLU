@@ -17,6 +17,13 @@
 株式市場の取引ログを、TLUは「ノード（User, Stock）」と「エッジ（資金の移動額 = Price × Volume）」のネットワークとして再構築します。
 
 ### 従来の出来高チャートが捉える世界
+
+**【全期間の累積フロー (P/L Waterfall)】**
+![Sample 6 PL Waterfall](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_0_1__PL_Waterfall_Total.png)
+
+**【最終的な状態の蓄積 (B/S Block)】**
+![Sample 6 BS Block](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_0_1__BS_Block_Total.png)
+
 一般的な証券会社のツールや単純な集計ダッシュボードでは、Wash Trade が行われた銘柄は単に**「出来高が急増している活発で人気のある銘柄」**として表示されます。取引高ランキングでは上位に表示され、無関係な一般投資家（イナゴ）の買いを誘発します。静的な集計ツールは、その膨大な出来高が「有意義な経済活動」なのか「少人数による自作自演の摩擦熱」なのかを区別できません。
 
 ### TLUが捉える世界（動的な幾何学構造と熱力学推移）

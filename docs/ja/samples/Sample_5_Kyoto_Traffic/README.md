@@ -17,6 +17,13 @@
 各交差点（ノード）への流入を「収益（Credit）」、流出を「費用（Debit）」と見立てて、TLUの財務変換レイヤーを通した結果です。
 
 ### 静的な集計スナップショットが捉える世界
+
+**【全期間の累積フロー (P/L Waterfall)】**
+![Sample 5 PL Waterfall](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__PL_Waterfall_Total.png)
+
+**【最終的な状態の蓄積 (B/S Block)】**
+![Sample 5 BS Block](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__BS_Block_Total.png)
+
 **【第52週（2021-12） 各交差点の純増減（P/L）サマリー】**
 * `一条堀川`: **-747台**（流出超過 / 車が虚空へ消えている）
 * `三条烏丸`: **+868台**（流入超過 / 車が交差点内で湧き出ている）

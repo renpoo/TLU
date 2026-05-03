@@ -17,6 +17,13 @@ Sample 6 の「二部グラフ（User <-> Stock）」が「どの銘柄が操縦
 ここでは「ユーザー（投資家）」をノードとし、ユーザー間の資金移動をエッジとして集計しています。
 
 ### 静的な集計ダッシュボードが捉える世界
+
+**【全期間の累積フロー (P/L Waterfall)】**
+![Sample 7 PL Waterfall](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_0_1__PL_Waterfall_Total.png)
+
+**【最終的な状態の蓄積 (B/S Block)】**
+![Sample 7 BS Block](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_0_1__BS_Block_Total.png)
+
 **【第52週時点の各ユーザーの純増減額（P/L）サマリー】**
 * `USR_001`: **+$4,225,702**（資金流入超過）
 * `USR_002`: **+$8,706,571**

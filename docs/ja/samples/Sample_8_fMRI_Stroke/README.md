@@ -17,6 +17,13 @@
 ここでは「脳の各部位（Cortices）」をノードとし、部位間で伝達された血流量（信号）を「取引代金」として集計しています。
 
 ### 静的な集計ダッシュボードが捉える世界
+
+**【全期間の累積フロー (P/L Waterfall)】**
+![Sample 8 PL Waterfall](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_0_1__PL_Waterfall_Total.png)
+
+**【最終的な状態の蓄積 (B/S Block)】**
+![Sample 8 BS Block](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_0_1__BS_Block_Total.png)
+
 **【スキャン完了時点（TR=300）の各部位の純増減額（P/L）サマリー】**
 * `Prefrontal_Cortex` (前頭前野): **+$14,864**（黒字＝流入超過）
 * `Visual_Cortex` (視覚野): **+$14,898**
