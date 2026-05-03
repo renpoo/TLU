@@ -39,7 +39,7 @@
 
 TLUは、上記の財務諸表を「グラフ上のノード（口座）とエッジ（取引）」のネットワークとして再構築し、システム全体の**質量保存則（System Conservation）**を監視します。
 
-## 3. コア・パソロジー（主要な病理所見）
+## 3. 中核と見なせる病跡（主要な病理所見）
 
 * **所見:** Unbalanced Journal Mistake (Conservation Violation)
 * **重要度:** CRITICAL
