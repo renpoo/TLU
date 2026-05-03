@@ -103,12 +103,12 @@ def main():
         
         fig, ax = plt.subplots(figsize=(14, 12))
         
-        # Stop delegating to draw_matrix_heatmap and draw directly applying SymLogNorm
         sns.heatmap(
             pd.DataFrame(K_matrix_list[t_idx]), 
             ax=ax, 
             cmap=cmap_stiffness, 
-            norm=symlog_norm,  # Apply symmetric logarithmic scale
+            norm=symlog_norm,
+            center=0,  # 0.0が確実に白色(RdBu_rの中央)になるように明示
             xticklabels=axis_labels, 
             yticklabels=axis_labels,
             cbar_kws={'label': "Stiffness / Precision (SymLog10 Scale)", 'extend': 'both'}
