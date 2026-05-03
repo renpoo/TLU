@@ -98,19 +98,31 @@ AIエージェントによる自律的なミクロ走査（全トランザクシ
 
 マクロ指標で最大残差（`6087.0`）が観測された第44週付近のログから、以下の完全な横領トランザクションが特定されました。
 
-* **Event (2020-10-28):**
+* **Event (2020-10-28) / 第44週:**
   * `E_002950`: 貸方(現金流出) `$6,087.00` に対して借方(流入) `$0.0`。メモ: `Embezzlement_Leak_DR`
   * *(※この一撃の横領額が、マクロ解析の Max Absolute Residual の値 `6087.0` と完全に一致します)*
 * その他、`E_002825` (貸借の差額 `$970.33`の転記ミス) なども多数特定。
+
+**【ネットワーク・トポロジーによる構造変異の視覚的証明（Before / After）】**
+*(左/上: 第43週 横領発生前 ／ 右/下: 第44週 巨大な横領の発生時)*
+![Sample 4 Network Topology Week 43](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00042.png)
+![Sample 4 Network Topology Week 44](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00043.png)
+* **💡 異常系の読解:** 第43週（発生前）と第44週（発生時）を見比べてください。第44週において、現金（ACC_Cash）などの正規ノードから、異次元の存在である `UNKNOWN_LEAK`（ノード9）に向けて、突如として太く巨大な「流出のエッジ」が形成され、システムから物理的な質量（現金）が失われた事実がグラフ理論の観点からも裏付けられています。
 
 ### Evidence B: 循環取引（架空売上ループ）の証拠
 
 スペクトル半径を暴走させている元凶として、資金が環状にキャッチボールされている以下の巨大な無限ループ・トランザクション群が特定されました。
 
-* **Event (2020-01-31) / 規模: 約 $51,465:**
+* **Event (2020-01-31) / 第5週 / 規模: 約 $51,465:**
   1. `E_000247` (Wash_Funding): 資金を裏口から流出 (Cash -> Accounts_Receivable)
   2. `E_000248` (Wash_Sale): 架空売上の計上 (Sales -> Accounts_Receivable)
   3. `E_000249` (Wash_Collection): 流出させた資金で回収を偽装 (Accounts_Receivable -> Cash)
+
+**【ネットワーク・トポロジーによる構造変異の視覚的証明（Before / After）】**
+*(左/上: 第4週 循環取引発生前 ／ 右/下: 第5週 循環取引発生時)*
+![Sample 4 Network Topology Week 4](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00003.png)
+![Sample 4 Network Topology Week 5](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00004.png)
+* **💡 異常系の読解:** 第4週（発生前）と第5週（発生時）を見比べてください。第5週において、Cash（ノード2）、Sales_Revenue（ノード5）、Accounts_Receivable（ノード6）の3つのノード間で、極端に太いエッジが「自己強化的なループ構造（三角形）」を形成しています。これがシステム安定性（スペクトル半径）を崩壊させ、架空の売上を無限に水増しする物理的メカニズムです。
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
 
