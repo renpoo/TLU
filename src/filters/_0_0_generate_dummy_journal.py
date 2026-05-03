@@ -103,11 +103,28 @@ def generate_stream(args):
 
             # [Future: AR collection] 30-90 days later (completed within Admin)
             collection_day = day + random.randint(30, 90)
+            
+            # Sales Leakage / Embezzlement
+            # Cash is stolen during collection. The accounts receivable is credited (reduced), 
+            # but the cash is never debited (never arrives). This violates mass conservation.
+            stolen_from_sales = 0.0
+            if args.sales_leak_prob > 0.0 and random.random() < args.sales_leak_prob:
+                stolen_from_sales = amount * random.uniform(0.1, 0.5)
+                amount -= stolen_from_sales
+                
+                # Unbalanced entry: Credit AR, but Debit=0.0 (Money disappears into the void)
+                daily_entries.extend(create_entry(
+                    f"E_{global_entry_count:06d}", date_str, stolen_from_sales,
+                    "Cash", "DPT_Admin", "Accounts_Receivable", "DPT_Admin", "Embezzlement_Leak",
+                    unbalanced_debit=0.0
+                ))
+                global_entry_count += 1
+
             def make_collection(amt):
                 def task(d_str, e_count):
                     unbalanced_debit = None
                     if args.unbalanced_mistake_prob > 0.0 and random.random() < args.unbalanced_mistake_prob:
-                        unbalanced_debit = amt * random.uniform(0.0, 0.9) # Debit != Credit
+                        unbalanced_debit = amt * random.uniform(0.0, 0.9) # Mistake leak
 
                     return create_entry(
                         f"E_{e_count:06d}", d_str, amt,
@@ -116,12 +133,8 @@ def generate_stream(args):
                     ), e_count + 1
                 return task
 
-            if (args.sales_leak_prob > 0.00):
-                # Sales Leakage 1: AR not collected (with probability args.sales_leak_prob)
-                if random.random() < args.sales_leak_prob:
-                    amount -= np.random.uniform(0, amount * 0.10)
-            
-            event_queue[collection_day].append(make_collection(amount))
+            if amount > 0:
+                event_queue[collection_day].append(make_collection(amount))
 
         # --------------------------------------------------
         # 3. Purchase and payment cycle (Cross-Dept: Admin -> Ops)
@@ -137,6 +150,22 @@ def generate_stream(args):
             
             # [Future: AP payment] 30-90 days later (completed within Admin)
             pay_day = day + random.randint(30, 90)
+            
+            # Purchase Leakage / Embezzlement
+            # Cash is withdrawn for payment, but the Accounts Payable is not cleared (money stolen).
+            stolen_from_purchases = 0.0
+            if args.purchase_leak_prob > 0.0 and random.random() < args.purchase_leak_prob:
+                stolen_from_purchases = purch_amount * random.uniform(0.1, 0.5)
+                purch_amount -= stolen_from_purchases
+                
+                # Unbalanced entry: Credit Cash (money leaves), but Debit=0.0 (AP is not reduced)
+                daily_entries.extend(create_entry(
+                    f"E_{global_entry_count:06d}", date_str, stolen_from_purchases,
+                    "Accounts_Payable", "DPT_Admin", "Cash", "DPT_Admin", "Embezzlement_Leak",
+                    unbalanced_debit=0.0
+                ))
+                global_entry_count += 1
+
             def make_payment(amt):
                 def task(d_str, e_count):
                     return create_entry(
@@ -145,12 +174,8 @@ def generate_stream(args):
                     ), e_count + 1
                 return task
 
-            if (args.purchase_leak_prob > 0.00):
-                # Purchase Leak 1: AP cannot be paid (with probability args.purchase_leak_prob)
-                if random.random() < args.purchase_leak_prob:
-                    purch_amount -= np.random.uniform(0, purch_amount * 0.05)
-            
-            event_queue[pay_day].append(make_payment(purch_amount))
+            if purch_amount > 0:
+                event_queue[pay_day].append(make_payment(purch_amount))
 
         # --------------------------------------------------
         # 4. Expense reimbursement (Cross-Dept: Admin -> Sales/Ops)
