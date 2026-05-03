@@ -59,8 +59,13 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 * **💡 異常系の読解:** 上段の「System Conservation Residual（質量の絶対残差）」のグラフにご注目ください。Sample_0（正常系）では完全に `0.0` の地平に張り付いていたこの線が、断続的にスパイク（最大 `407.89`）を記録しています。これは「流入したはずのエネルギー（資金）が、ネットワーク内のどこにも到達せずに消滅した」ことを示す、質量保存則崩壊の決定的な数学的署名です。
 
 **2. ネットワークトポロジーの異常（System Stability / Spectral Radius）**
-**【位相幾何学構造 (Network Topology / 第5週 異常発生時)】**
-![Sample_2_Embezzlement_Leak Network Topology](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00004.png)
+**【位相幾何学構造 (Network Topology / 上: 第4週 発生前 ／ 下: 第5週 異常発生時)】**
+![Sample_2_Embezzlement_Leak Network Topology W4](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00003.png)
+![Sample_2_Embezzlement_Leak Network Topology W5](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00004.png)
+
+* **💡 異常系の読解 (極微細な青い矢印と統計的盲点):** 第4週（正常時）と第5週（初感染時）の画像を上下で比較して初めて、`02: ACC_Cash` から `09: UNKNOWN_LEAK` に向かって伸びる**「極めて細く、暗い青色の矢印」**の存在に気づくことができます。`UNKNOWN_LEAK` の円も、背景色からわずかに青みがかった白に変化しています。なぜこの決定的な横領の証拠が、これほどまでに目立たない（異常を示す赤色ではなく、ストレス値 `0.0` に近い状態を示す暗い青色になっている）のでしょうか？
+それは、これが**「統計学（Z-Score）の致命的な盲点」**だからです。従来のエッジストレス計算では、過去の標準偏差で異常度を測ります。しかし `UNKNOWN_LEAK` は「歴史上初のゼロからの発生」であるため標準偏差は `0.0` です。ゼロ除算エラーを回避するため、システムはこの未知の異常を便宜上 `0.0（完全に正常でストレスなし＝暗い青色）` として描画してしまうのです。
+人間の目ですら比較してようやく気づくほどのこの「透明化されたMicro-Leakage（微小漏洩）」を見逃さず、かつこの微細な異常がシステム全体をどう破壊するかを立証するためにこそ、次章の「物理学的な絶対評価（剛性と摩擦）」が不可欠となるのです。
 
 **【スペクトル半径 (System Stability)】**
 ![Sample 2 System Stability](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/004_1_2__system_stability.png)
