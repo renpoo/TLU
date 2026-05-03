@@ -23,11 +23,11 @@ cd "${TLU_PROJECT_ROOT}"
 export PYTHONPATH="${TLU_PROJECT_ROOT}:${PYTHONPATH:-}"
 
 # --- 1. Docker Commands ---
-export TLU_PY="python3"
-# export TLU_PY="docker compose exec -T -e TARGET_ENV=${TARGET_ENV:-workspace} tlu-engine python3"
+# export TLU_PY="python3"
+export TLU_PY="docker compose exec -T -e TARGET_ENV=${TARGET_ENV:-workspace} tlu-engine python3"
 
-export TLU_AWK="awk"
-# export TLU_AWK="docker compose exec -T -e TARGET_ENV=${TARGET_ENV:-workspace} tlu-engine awk"
+# export TLU_AWK="awk"
+export TLU_AWK="docker compose exec -T -e TARGET_ENV=${TARGET_ENV:-workspace} tlu-engine awk"
 
 # --- 2. Common Paths (Dynamic Validation) ---
 export TLU_VIZ_DIR="src/visualizations"
