@@ -64,7 +64,7 @@ def run_thermodynamics_analysis(
     U = compute_internal_energy(X_current)
     
     # Temporarily combine the current state for temperature calculation (assumes it will be popped by the caller)
-    temp_v_hist = np.array(v_history_window + [v_current])
+    temp_X_hist = np.array(X_history_window + [X_current])
 
     # 3. Effective work (W) and Dissipated heat (Q)
     W = compute_work(v_current, work_indices)
@@ -75,8 +75,8 @@ def run_thermodynamics_analysis(
     S = compute_macro_entropy(P)
 
     # 5. Macro temperature T (Volatility)
-    if len(temp_v_hist) > 1:
-        T = compute_macro_temperature(temp_v_hist)
+    if len(temp_X_hist) > 1:
+        T = compute_macro_temperature(temp_X_hist)
     else:
         T = 0.0
 

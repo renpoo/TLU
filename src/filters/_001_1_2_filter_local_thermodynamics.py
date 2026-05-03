@@ -63,10 +63,10 @@ def run_local_thermo_analysis(
     u_local = compute_local_internal_energy(X_current)
 
     # Temporarily combine the current state for temperature calculation (assumes it will be popped by the caller)
-    temp_v_hist = np.array(v_history_window + [v_current])
+    temp_X_hist = np.array(X_history_window + [X_current])
     
-    if len(temp_v_hist) > 1:
-        t_local = compute_local_temperature(temp_v_hist)
+    if len(temp_X_hist) > 1:
+        t_local = compute_local_temperature(temp_X_hist)
     else:
         t_local = np.zeros(N)
 
