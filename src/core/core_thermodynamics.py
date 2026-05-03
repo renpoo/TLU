@@ -108,24 +108,24 @@ def compute_helmholtz_free_energy(U: float, T: float, S: float) -> float:
     """
     return U - T * S
 
-def compute_macro_temperature(q_history_window: np.ndarray) -> float:
+def compute_macro_temperature(X_history_window: np.ndarray) -> float:
     """!
     @brief Calculate the temperature T of the entire network.
-    @details T is the sum of the standard deviation of pure flux across the network.
+    @details T is the sum of the standard deviation of absolute balances across the network.
 
-    @param q_history_window History window of flux vectors.
+    @param X_history_window History window of absolute balance vectors.
 
     @return Macroscopic temperature T.
 
     @pre
-        - `q_history_window` must be an array of at least shape (m>=1, N).
+        - `X_history_window` must be an array of at least shape (m>=1, N).
     @post
         - Returns a strictly non-negative float.
     @invariant
         - Lowered to 1st degree order standard deviation to structurally align physical dimensions with U.
     """
     # Fix: Changed from np.var (variance) to np.std (standard deviation) to lower dimension to 1st degree (circle)
-    node_std = np.std(q_history_window, axis=0, ddof=0)
+    node_std = np.std(X_history_window, axis=0, ddof=0)
     T = float(np.sum(node_std))
     return T
 
@@ -151,28 +151,28 @@ def compute_local_internal_energy(X_current: np.ndarray) -> np.ndarray:
     """
     return np.abs(X_current)
 
-def compute_local_temperature(q_history_window: np.ndarray) -> np.ndarray:
+def compute_local_temperature(X_history_window: np.ndarray) -> np.ndarray:
     """!
     @brief Calculate the local temperature T_i at each node in the network.
-    @details Defines local T as the univariate standard deviation of pure flux for that node.
+    @details Defines local T as the univariate standard deviation of absolute balances for that node.
 
-    @param q_history_window Historical net flux (Time_steps x Nodes).
+    @param X_history_window Historical absolute balances (Time_steps x Nodes).
 
     @return A 1D numpy array of node temperatures.
 
     @pre
-        - `q_history_window` must be a valid 2D array.
+        - `X_history_window` must be a valid 2D array.
     @post
         - Automatically returns zero vectors if historical depth is insufficient (< 2).
     @invariant
         - Satisfies zero sum baseline shifts under stationary limits.
     """
     # Return 0 if history is insufficient (only 1 step)
-    if len(q_history_window) < 2:
-        return np.zeros(q_history_window.shape[1], dtype=float)
+    if len(X_history_window) < 2:
+        return np.zeros(X_history_window.shape[1], dtype=float)
         
     # Fix: Changed from np.var (variance) to np.std (standard deviation)
-    return np.std(q_history_window, axis=0, ddof=0)
+    return np.std(X_history_window, axis=0, ddof=0)
 
 def compute_local_temperature_gradient(t_local: np.ndarray, T_slice: np.ndarray) -> np.ndarray:
     """!
