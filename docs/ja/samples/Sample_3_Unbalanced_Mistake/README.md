@@ -36,8 +36,14 @@ TLUのフォレンジック・プロトコルに従い、マクロ指標（絶�
 
 * **マクロ残差 (Macro Forensics):** 第42週を中心に、相対質量漏れ率 `0.0008` の断続的なスパイクが観測される。
 * **安定性 (Spectral Radius):** Max Spectral Radius は `0.0000` のままであり、自己強化的な循環取引（Sample 1）のようなループは存在しない。
+* **トポロジー:** 第42週のピーク時においても、システム全体のネットワーク崩壊には至っていない。
 
+**【マクロ残差とトポロジー】**
 ![Sample 3 Macro Forensics](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample_3_Unbalanced_Mistake Network Topology](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00041.png)
+
+**【スペクトル半径 (System Stability)】**
+![Sample 3 System Stability](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_1_2__system_stability.png)
 
 ### 3.2. 統計的盲点の看破 (Zero-to-One 変異)
 
@@ -65,7 +71,9 @@ Sample 2（横領）では剛性行列全体が一色に染まる「絶対硬直
 
 従来の会計ソフトは、仕訳データの欠落や片端入力（Debit != Credit）があった場合、一時的な「仮払金」や「使途不明金」として強制的にバランスを合わせてP/Lを算出してまう。
 
+**【第52週 損益計算書 (P/L) & 貸借対照表 (B/S)】**
 ![Sample 3 PL Waterfall](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 3 BS Block](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__BS_Block_Total.png)
 
 結果として、第52週時点の純利益は黒字（+$60,660.86）となり、静的なB/Sのバランスチェックも一致してしまうため、事業は正常に回っているように錯覚される。しかし、TLUの物理エンジンが暴き出した通り、裏側では「取引先からの入金不足（振込手数料の引き去りや、経営悪化による部分的な貸し倒れなど）に対し、適切な損失・費用計上（借方）を行わずに売掛金（貸方）だけを全額消し込んでしまった」という、仕訳の非対称性（データの腐敗）が静かに進行していたのである。
 
