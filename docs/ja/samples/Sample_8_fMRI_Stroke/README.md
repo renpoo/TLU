@@ -56,6 +56,11 @@ Sample 0（正常系）の「白色の線（Free Energy）が右肩上がりに�
 Z-Scoreの3Dサーフェスにおいて、TR=150を境に運動野（Motor Cortex）への流入成分が突如として深淵（マイナスのスパイク）へと沈み込み、局所的な「虚血・壊死」が極めて鋭利な異常として検知されている。
 ![Sample 8 3D Z-Score](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
+### 3.4. 情報幾何学的変位 (3D Micro KL Drift)
+Z-Score が「単なる残高の異常」を示すのに対し、KL Drift（カルバック・ライブラー情報量の変位）は「予測モデル（情報構造）の破壊」を示します。
+TR=150（梗塞発症）以降、運動野（Motor Cortex）への情報流路が完全に絶たれたことで、ネットワークがそれまで持っていた自己回帰的な確率分布が局所的に崩壊し、KL Divergence が巨大なスパイクとなって空間に突き刺さっています。血流（質量）の欠落が、そのまま「情報幾何学的な死」として可視化されています。
+![Sample 8 3D KL Drift](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+
 ## 4. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
 
 各部位をノードとし、伝達された血流量を「取引代金」として集計した結果を従来のダッシュボードで確認する。
