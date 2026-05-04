@@ -95,7 +95,7 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
 
 異常系（Sample 2など）で強力な証拠となった「外力の異常共振」と「剛性行列の絶対硬直（Rigid Lock）」が「単なるモデルの過剰反応（幻覚）」ではないことを証明するためには、この Sample 0（完全な健康体）がどのような波形と内部構造を示すかを確認する必要があります。
 
-![Sample 0 External Force 3D](../../../../samples/Sample_0_Healthy/readme_plots/000_1_5__3d_dynamics_external_force.png)
+![Sample 0 External Force 3D](../../../../samples/Sample_0_Healthy/readme_plots/000_1_6__3d_dynamics_external_force.png)
 ![Sample 0 Structural Stiffness for Week 12](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00012.png)
 ![Sample 0 Structural Stiffness for Week 24](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00024.png)
 ![Sample 0 Structural Stiffness for Week 42](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00042.png)
@@ -106,7 +106,7 @@ TLUは、上記の財務諸表を「グラフ上のノード（口座）とエ�
    Sample 2（横領）では後半に `1e9` スケールの破滅的な大波（ノッキング）が発生しましたが、この Sample 0 の外力マップは1年間を通じて非常に穏やかな起伏しか観測されません。これは「日常的な営業活動の力」であり、システムが外部からの入力エネルギーを適切に吸収・分散できている証拠です。
 2. **剛性行列のタイムラプス（健康なモザイク模様）:**
    剛性行列（システムの内部構造）を時系列で眺めると、一部が赤（強い相関）や青（逆相関）に染まることはあっても、行列全体が単一の色に塗りつぶされる「Rigid Lock（絶対硬直）」は一度も起きていません。全体として多様な色が混ざり合う**「健康なモザイク模様（弾力性）」**を1年間通して完璧に維持しています。
-   
+
 * **物理的結論:** この Sample 0 の結果こそが、「TLUの物理エンジンの評価が行き過ぎた幻覚ではない」ことの最大の証明です。健康なシステムでは、共振も絶対硬直も発生しません。TLUは「本当にシステム構造が破壊された時」にだけ、その恐ろしい異常波形を出力するように数学的に制御されています。
 
 ## 4. ミクロ・フォレンジックによる最終証拠（Micro-Forensic Final Evidence）
