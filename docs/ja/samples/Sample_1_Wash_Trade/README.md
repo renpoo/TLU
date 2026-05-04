@@ -25,7 +25,13 @@
 
 ## 3. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
 
-### 3.1. ネットワークトポロジーの崩壊 (Topological Feedback Loop)
+### 3.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
+
+![Sample 1 Macro Forensics](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_1__macro_forensics_dashboard.png)
+
+上段の「System Conservation Residual（質量の絶対残差）」は完全に `0.0` の地平に張り付いています。これは、循環取引を行う主体が「貸借一致の原則」自体は厳格に守っているためであり、単なるエラーチェックの網はすり抜けてしまいます。
+
+### 3.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
 ![Sample 1 System Stability](../../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_2__system_stability.png)
 
@@ -38,17 +44,15 @@
 
 第41週において、`ACC_Cash`（現金）と `ACC_Accounts_Receivable`（売掛金）の間に、不自然に太く、自己強化的に循環する閉路が形成されています。
 
-### 3.2. 熱力学的な死 (Thermodynamic Energy Depletion)
+### 3.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
 
 ![Sample 1 Thermodynamics](../../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 第41週と第48週のタイミングで、赤色の層（エントロピー損失 $T\Delta S$）が突然、異常な太さの柱となって出現し、白色の線（自由エネルギー $F$）を下方に押し下げています。循環取引は実質的な価値（内部エネルギー）を生み出さず、単なる「摩擦熱」だけを発生させるため、システムを熱的な死へと向かわせる物理的証拠です。
 
-### 3.3. 局所的アノマリーの看破 (3D Micro Z-Score)
+### 3.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
 
-※本サンプルでは、巨視的なトポロジー異常（Spectral Radius）が支配的であり、単なる出来高の増減を示すZ-Scoreよりも、次節の情報幾何学的変位がより決定的な証拠となります。
-
-### 3.4. 情報幾何学的変位 (3D Micro KL Drift)
+※本サンプルでは、巨視的なトポロジー異常（Spectral Radius）が支配的であり、単なる出来高の増減を示すZ-Scoreよりも、以下の情報幾何学的変位がより決定的な証拠となります。
 
 ![Sample 1 Micro Forensics (KL Divergence Drift)](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 

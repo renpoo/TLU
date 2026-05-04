@@ -24,7 +24,7 @@ TLUの前処理エンジンは、この「消滅した質量」を計算上補�
 
 ## 3. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
 
-### 3.1. 質量保存の崩壊と剛性の絶対硬直 (Macro Forensics & Structural Stiffness)
+### 3.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
 
 ![Sample 2 Macro Forensics](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
@@ -38,20 +38,26 @@ TLUの前処理エンジンは、この「消滅した質量」を計算上補�
 
 横領の発生瞬間（第5週）、健康な「モザイク模様」だったシステムの剛性行列（サスペンション）が、ドス黒い赤に染まる **Rigid Lock（絶対硬直）** を起こします。弾力性を失ったシステムは通常の営業活動を吸収できず、3Dマップ後半において `1e9`（10億）スケールの破滅的な異常共振（ノッキング）を引き起こしました。0.19%の微小な横領が、システム全体の力学構造を破滅させる証明です。
 
-### 3.2. ネットワークトポロジーの崩壊 (Topological Anomaly)
+### 3.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
 ![Sample_2_Embezzlement_Leak Network Topology W4](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00003.png)
 ![Sample_2_Embezzlement_Leak Network Topology W5](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00004.png)
 
 第5週の画像において、`02: ACC_Cash` から `09: UNKNOWN_LEAK` に向かって極めて細い青い矢印が伸びています。これは過去に存在しなかった未知のノードへの流出であるため、統計学的な標準偏差を持たず、Z-Scoreベースのエッジストレス計算では「正常（青色）」として透明化されてしまうという統計的盲点を浮き彫りにしています。
 
-### 3.3. 局所的アノマリーの看破 (3D Micro Z-Score)
+### 3.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+
+![Sample 2 Thermodynamics](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+
+質量保存則が破綻し資金が漏れ出しているため、システム本来の内部エネルギー（純残高）が少しずつ削り取られ、自由エネルギーの成長が阻害されている（あるいは意図せぬ歪みが生じている）様子が観察されます。
+
+### 3.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
 
 ![Sample 2 3D Z-Score](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
 「$0.0（あるべき資金がない）」という無の空間を、TLUは `UNKNOWN_LEAK` への質量移動として幾何学的に反転させます。第5週や第9週の初期犯行時、周囲から完全に独立した「異次元の鋭いスパイク（黄緑色）」として消えた資金の痕跡が視認できます。
 
-### 3.4. 情報幾何学的変位 (3D Micro KL Drift)
+
 
 ![Sample 2 3D KL Drift](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 

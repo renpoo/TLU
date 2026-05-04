@@ -21,7 +21,7 @@
 
 他のすべてのサンプル（Sample 1〜9）は、以下の基準グラフ（Sample 0）と比較して「どのような構造的崩壊を起こしているか」で診断されます。
 
-### 3.1. 質量保存の基準（Macro Forensics）と剛性のベースライン
+### 3.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
 
 ![Sample 0 Macro Forensics](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
@@ -37,19 +37,19 @@
 2. **剛性行列のタイムラプス（健康なモザイク模様）:**
    剛性行列（システムの内部構造）を時系列で眺めると、全体として多様な色が混ざり合う**「健康なモザイク模様（弾力性）」**を1年間通して完璧に維持しています。異常系で発生する「Rigid Lock（絶対硬直）」は一度も起きていません。
 
-### 3.2. ネットワークトポロジーの基準 (System Stability)
+### 3.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
 ![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
 
 赤色の線「Max Spectral Radius（最大スペクトル半径）」が `0.0` の底に張り付いて安定しています。これはネットワーク内に「自己強化的な無限ループ（資金のキャッチボールなど）」が存在せず、システムに入ってきた資金が正常に流出しているというトポロジーの健全性を証明しています。循環取引（Sample 1）や交通渋滞（Sample 5）ではこの線が天井（1.0）に向けて発散します。
 
-### 3.3. 熱力学的エネルギーの基準 (Thermodynamics Energy Stack)
+### 3.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
 
 ![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 白色の線「Free Energy（自由エネルギー：F = U - TS）」が、総活動量（U）の拡大に伴い、右肩上がりに力強く成長しています。システムが活発に取引（運動）を行いながらも、摩擦（-TS）にエネルギーを奪われることなく、ビジネスを継続・拡大するための十分な活動余力を維持し続けていることを証明しています。異常系では、摩擦損失が異常膨張し、この白色の線がゼロラインを割って沈み込みます。
 
-### 3.4. 局所的アノマリーの看破 (3D Micro Z-Score & KL Drift)
+### 3.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
 
 ![Sample 0 3D Z-Score](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 ![Sample 0 3D KL Drift](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
