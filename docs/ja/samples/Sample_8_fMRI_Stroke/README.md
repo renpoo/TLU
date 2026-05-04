@@ -45,8 +45,11 @@ Sample 0（正常系）の「白色の線（Free Energy）が右肩上がりに�
 健常な脳の部位同士が、有機的かつ完全な双方向性のフィードバックループを形成しているため、数学的には循環取引（Wash Trade）と同じ「極限振動（スペクトル半径 1.0）」として捉えられている。
 しかしネットワークトポロジーの時系列推移を見ると、TR=150以降、特定のノード（Motor Cortex）に向かう流入エッジが極端に細くなり、ネットワーク全体の有機的な結びつきが失われている様子がグラフ理論的にも裏付けられている。
 
-![Sample_8_fMRI_Stroke Network Topology for time = 14](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00013.png)
-![Sample_8_fMRI_Stroke Network Topology for time = 15](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00014.png)
+![Sample_8_fMRI_Stroke Network Topology for time = 30 (Pre-Stroke)](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00029.png)
+![Sample_8_fMRI_Stroke Network Topology for time = 31 (Stroke Onset)](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00030.png)
+![Sample_8_fMRI_Stroke Network Topology for time = 32 (Post-Stroke)](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00031.png)
+![Sample_8_fMRI_Stroke Network Topology for time = 33 (Post-Stroke)](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00032.png)
+![Sample_8_fMRI_Stroke Network Topology for time = 60 (Final State)](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00059.png)
 ![Sample 8 System Stability](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)
 
 ### 3.3. 局所的アノマリーの看破 (3D Micro Z-Score)
