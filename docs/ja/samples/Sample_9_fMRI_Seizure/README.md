@@ -37,7 +37,11 @@ AIエージェントによる自律監査（ジェネレーターコード `_0_0
 赤色の線（Max Spectral Radius）が完全に `1.0`（理論上の限界値）の天井に張り付いている。
 側頭葉と他の部位が、全く同じ巨大な波を完璧に同期させて相互に送受信（キャッチボール）している。これは、Sample 6 および 7 で証明された**金融市場における「仮装売買・馴合売買（Wash Trade）」と数学的に全く同じ構造**である。生体システムにおいて、この「無意味な摩擦熱を伴う無限の資金還流」と同じネットワーク共鳴（極限振動）は、「てんかん発作（Seizure）」そのものを意味する。
 
-![Sample_9_fMRI_Seizure Network Topology for time = 29](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00028.png)
+![Sample_9_fMRI_Seizure Network Topology for time = 30 (Pre-Seizure)](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00029.png)
+![Sample_9_fMRI_Seizure Network Topology for time = 31 (Seizure Onset)](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00030.png)
+![Sample_9_fMRI_Seizure Network Topology for time = 32 (Post-Seizure)](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00031.png)
+![Sample_9_fMRI_Seizure Network Topology for time = 33 (Post-Seizure)](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00032.png)
+![Sample_9_fMRI_Seizure Network Topology for time = 60 (Final State)](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00059.png)
 ![Sample 9 System Stability](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/004_1_2__system_stability.png)
 
 ### 3.2. 熱力学的な死 (Thermodynamic Energy Depletion)
