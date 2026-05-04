@@ -52,13 +52,20 @@ Z-Scoreの3Dサーフェスにおいて、特定の時刻に `UNKNOWN_LEAK` と�
 ![Sample 3 3D Z-Score](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
 ### 3.3. 構造的剛性の回復証明 (Absence of Rigid Lock)
+Sample 2（横領）では剛性行列全体が一色に染まる「絶対硬直（Rigid Lock）」が発生したが、Sample 3 では剛性が機能している。第20週に最初の端数ズレが発生した瞬間、剛性行列は一時的に赤く染まり波及（Ripple Effect）するが、直後の第21週には元の健康なモザイク模様へと自己回復している。
 
-Sample 2（横領）では剛性行列全体が一色に染まる「絶対硬直（Rigid Lock）」が発生したが、Sample 3 では剛性が機能している。第20週に最初の端数ズレが発生した瞬間、剛性行列は一時的に赤く染まり波及（Ripple Effect）するが、**直後の第21週には元の健康なモザイク模様へと自己回復している**。これはシステムのサスペンションが一時的な衝撃を吸収し、生き延びている完全な物理的証拠である。
+さらに、残差が最大（`1038.49`）となる第42週のピーク時においても、行列は一時的に赤く揺れるのみであり、システムが絶対硬直に至ることはない。これはシステムのサスペンションが一時的な衝撃を吸収し、生き延びている完全な物理的証拠である。
 
-*(1枚目: 第19週 異常発生前 ／ 2枚目: 第20週 初期の異常発生 ／ 3枚目: 第21週 正常への回復)*
+**【初期の異常と自己回復 (第19週〜第21週)】**
 ![Sample 3 Structural Stiffness for Week 19](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00018.png)
 ![Sample 3 Structural Stiffness for Week 20](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00019.png)
 ![Sample 3 Structural Stiffness for Week 21](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00020.png)
+
+**【最大の異常発生時と回復 (第41週〜第43週)】**
+*(1枚目: 第41週 ピーク直前 ／ 2枚目: 第42週 ピーク発生時 ／ 3枚目: 第43週 ピーク後の正常回復)*
+![Sample 3 Structural Stiffness for Week 41](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00040.png)
+![Sample 3 Structural Stiffness for Week 42](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00041.png)
+![Sample 3 Structural Stiffness for Week 43](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00042.png)
 
 ### 3.4. 3D力学プロファイルと桁数の比較 (Viscosity & External Force)
 
