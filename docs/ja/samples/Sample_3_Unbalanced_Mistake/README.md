@@ -52,20 +52,26 @@ Z-Scoreの3Dサーフェスにおいて、特定の時刻に `UNKNOWN_LEAK` と�
 ![Sample 3 3D Z-Score](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
 ### 3.3. 構造的剛性の回復証明 (Absence of Rigid Lock)
-Sample 2（横領）では剛性行列全体が一色に染まる「絶対硬直（Rigid Lock）」が発生したが、Sample 3 では剛性が機能している。第20週に最初の端数ズレが発生した瞬間、剛性行列は一時的に赤く染まり波及（Ripple Effect）するが、直後の第21週には元の健康なモザイク模様へと自己回復している。
 
-さらに、残差が最大（`1038.49`）となる第42週のピーク時においても、行列は一時的に赤く揺れるのみであり、システムが絶対硬直に至ることはない。これはシステムのサスペンションが一時的な衝撃を吸収し、生き延びている完全な物理的証拠である。
+Sample 2（横領）では剛性行列全体が一色に染まる「絶対硬直（Rigid Lock）」が発生したが、Sample 3 では剛性が機能している。第20週に最初の端数ズレが発生した瞬間、剛性行列は一時的に赤く染まり波及（Ripple Effect）するが、直後の第21週には元の健康なモザイク模様へと自己回復している。
 
 **【初期の異常と自己回復 (第19週〜第21週)】**
 ![Sample 3 Structural Stiffness for Week 19](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00018.png)
 ![Sample 3 Structural Stiffness for Week 20](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00019.png)
 ![Sample 3 Structural Stiffness for Week 21](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00020.png)
 
+さらに、残差が最大（`1038.49`）となる第42週のピーク時においても、行列は一時的に赤く揺れるのみであり、システムが絶対硬直に至ることはない。これはシステムのサスペンションが一時的な衝撃を吸収し、生き延びている完全な物理的証拠である。
+
 **【最大の異常発生時と回復 (第41週〜第43週)】**
 *(1枚目: 第41週 ピーク直前 ／ 2枚目: 第42週 ピーク発生時 ／ 3枚目: 第43週 ピーク後の正常回復)*
 ![Sample 3 Structural Stiffness for Week 41](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00040.png)
 ![Sample 3 Structural Stiffness for Week 42](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00041.png)
 ![Sample 3 Structural Stiffness for Week 43](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00042.png)
+
+**💡 物理的読解（時間軸の偏相関によるサスペンションの学習）:**
+なぜ絶対残差が小さい第20週のほうが、残差が最大の第42週よりも剛性行列が激しく波及しているのか。その答えは、剛性行列（精度行列）が**「時間軸方向の過去の履歴の偏相関（共分散）を記憶して算出されている」**点にある。
+* **第20週（構造的ショック）:** 過去の履歴において `UNKNOWN_LEAK` の分散は完全にゼロであった。そこに「0から1の変異」が突然発生したため、時間軸の共分散構造が根本から破壊され、未知の異常として激しい波及（Ripple Effect）を引き起こした。
+* **第42週（ボリューム・ショック）:** この時点の計算ウィンドウには、すでに第20週以降の「時々発生する端数ズレ」の相関パターンが記憶されている。そのため、いくら漏洩金額（ボリューム）が最大化しようとも、システムはそれを「既知の偏相関パターンの延長」として難なく吸収し、モザイク模様を維持できたのである。
 
 ### 3.4. 3D力学プロファイルと桁数の比較 (Viscosity & External Force)
 
