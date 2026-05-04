@@ -15,20 +15,28 @@
 ## 1. エグゼクティブ・サマリー
 本システム（生体脳ドメイン）は、測定の後半において**「極限の位相幾何学的振動（Topological Feedback Loop）」**と**「熱力学的エネルギーの完全崩壊（Thermodynamic Energy Depletion）」**を発症している極めて危険な状態（HIGH Severity）と診断される。側頭葉（Temporal Lobe）を震源とする巨大で無意味な信号の波が、他の部位との間で完璧な双方向の過同期（Hypersynchrony）を引き起こしている。脳全体の代謝エネルギー（取引出来高）は異常に膨れ上がっているものの、有意義な情報処理を行うポテンシャル（自由エネルギー）が致命的に崩壊しており、「代謝だけが激しく行われているが有意義な仕事が全く行われていない」状態である。
 
-## 2. 物理的病跡の特定（Fundamental Pathophysiology）
+## 2. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
+
+**【全期間の累積フロー (P/L Waterfall) & 貸借対照表 (B/S)】**
+![Sample 9 PL Waterfall](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 9 BS Block](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_0_1__BS_Block_Total.png)
+
+側頭葉の活動量（出来高）だけが異常に突出している。しかし、入ってくる信号（Debit）と出ていく信号（Credit）が完璧に同期して同量であるため、ネットの純残高（P/L）はほぼ変動していない。従来の集計的アプローチでは、「側頭葉が活発に活動しているな（巨大なP/L）」という程度の認識にとどまり、これが「高度な情報処理」なのか「無意味なけいれん（発作）」なのかを静的な帳簿からは絶対に区別できない。
+
+## 3. 物理的病跡の特定（Fundamental Pathophysiology）
 本サンプルの根本原因は、ジェネレーターコード `_0_0_generate_dummy_fmri.py` において意図的に仕組まれた「異常同期のスクリプト」にある。
 
 * **特定された証拠:**
   `base_flux = 500 + 200 * math.sin(tr * 1.5)`
   時間ステップ `TR >= 150` 以降、側頭葉（`Temporal_Lobe`）が送受信する信号に対してのみ、自然なノイズを完全に打ち消す「巨大で人工的な正弦波」が強制的に注入されていた。この異常な過同期（Hypersynchrony）の波こそが、ネットワーク全体を共鳴させ、熱力学を崩壊させているてんかんの震源である。
 
-## 3. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
+## 4. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
 
-### 3.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
+### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
 
 発作による異常な同期波は質量（血流）の総量を極端に偏らせるものではないため、マクロ残差としては観測されにくい。しかし、局所的な過同期により剛性行列の局所的な絶対硬直（Rigid Lock）が発生し、健全な信号処理を受け付けない状態となっている。
 
-### 3.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
 ![Sample_9_fMRI_Seizure Network Topology for time = 30 (Pre-Seizure)](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00029.png)
 ![Sample_9_fMRI_Seizure Network Topology for time = 31 (Seizure Onset)](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00030.png)
@@ -37,7 +45,7 @@
 
 赤色の線（Max Spectral Radius）が完全に `1.0` の天井に張り付いている。側頭葉と他の部位が全く同じ巨大な波を同期させて相互にキャッチボールしている。これは、Sample 6 等で証明された**金融市場における「仮装売買（Wash Trade）」と数学的に全く同じ構造**である。無意味な摩擦熱を伴う無限の資金還流と同じネットワーク共鳴が、「てんかん発作（Seizure）」そのものを意味する。
 
-### 3.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
 
 *(上: Sample 0 正常な経済成長 ／ 下: Sample 9 発作による熱力学的な死)*
 ![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
@@ -45,20 +53,12 @@
 
 金融市場の「相場操縦（Wash Trade）」と全く同じ熱力学崩壊が起きている。異常な同期波は「純残高（内部エネルギー）」をほとんど変化させずに「信号の取引量（摩擦熱＝エントロピー）」だけを無限大に発散させる。結果としてシステムの自由エネルギーが致命的なマイナス領域に沈み込み、熱力学的な死を迎えている。
 
-### 3.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
 
 ![Sample 9 3D Z-Score](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 ![Sample 9 3D KL Drift](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 Z-Scoreの3Dサーフェスにおいて、TR=150を境に側頭葉の送受信成分が極端なスパイクとして屹立している。さらに、KL Driftにおいては、側頭葉から放たれる強制的な巨大正弦波により、ネットワークが本来持っていた確率分布が完全に上書きされ、極端なスパイクとして空間に屹立している。過剰な共鳴（波の暴走）がそのまま「情報幾何学的な崩壊」として可視化されている。
-
-## 4. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
-
-**【全期間の累積フロー (P/L Waterfall) & 貸借対照表 (B/S)】**
-![Sample 9 PL Waterfall](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_0_1__PL_Waterfall_Total.png)
-![Sample 9 BS Block](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_0_1__BS_Block_Total.png)
-
-側頭葉の活動量（出来高）だけが異常に突出している。しかし、入ってくる信号（Debit）と出ていく信号（Credit）が完璧に同期して同量であるため、ネットの純残高（P/L）はほぼ変動していない。従来の集計的アプローチでは、「側頭葉が活発に活動しているな（巨大なP/L）」という程度の認識にとどまり、これが「高度な情報処理」なのか「無意味なけいれん（発作）」なのかを静的な帳簿からは絶対に区別できない。
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
 

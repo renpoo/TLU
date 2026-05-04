@@ -11,7 +11,15 @@
 ## 1. エグゼクティブ・サマリー
 本システム（金融ドメイン）は、複数の病理が同時進行する**複合的な構造崩壊（COMPOSITE 病跡 DETECTED）** を起こしており、極めて危険な状態（CRITICAL）と診断される。第1にシステム内から資金が虚空へ消失する「横領（Embezzlement）」が進行し、第2に循環取引（Wash Trading）による大規模な自己強化ループが形成されている。「架空売上で利益を水増し（粉飾）しながら、裏口から現金を抜き取る（横領）」という、組織的かつ極めて悪質な末期症状であることが物理・数理の両面から証明された。
 
-## 2. 物理的病跡の特定（Fundamental Pathophysiology）
+## 2. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
+
+**【第52週 損益計算書 (P/L) & 貸借対照表 (B/S)】**
+![Sample 4 PL Waterfall](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 4 BS Block](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_0_1__BS_Block_Total.png)
+
+従来の会計ソフトによる静的なスナップショットは、この「末期的な複合カオス」を全く検知できない。B/Sは貸借一致の原則を満たして完璧にバランスしており、P/L上は `$209,552.56` という異常に高い黒字を叩き出している（ Wash Trade による水増し ）。その裏で `$9,024.39` もの現金が不正に抜き取られているという事実は、静的で平坦な会計帳簿からはいかに容易に偽装されるかを示している。
+
+## 3. 物理的病跡の特定（Fundamental Pathophysiology）
 本サンプルの根本原因は、ダミーデータ生成ロジックにおいて意図的に仕組まれた以下の2つの悪質なアルゴリズムの同時実行である。
 
 * **Evidence A: 循環取引（架空売上ループ）のスクリプト:**
@@ -19,9 +27,9 @@
 * **Evidence B: 質量欠損（横領）のスクリプト:**
   `2020-10-28` (第44週) において、貸方(現金流出) `$6,087.00` に対して借方(流入) `$0.0` とする「片端入力（横領）」を実行した。
 
-## 3. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
+## 4. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
 
-### 3.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
+### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
 
 ![Sample 4 Macro Forensics](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
@@ -35,7 +43,7 @@
 
 第5週の循環取引開始時は既存ノード間のため巧妙に偽装されているが、第8週の初期横領で `UNKNOWN_LEAK` に色が灯る。そして第44週に巨大横領が発生した瞬間、現金ノードとの間に決定的な亀裂が生じ、剛性行列が完全に破壊された「複合カオス」へと陥っている。
 
-### 3.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
 ![Sample 4 System Stability](../../../../samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
 
@@ -47,24 +55,16 @@ Max Spectral Radius が `0.9864` に達し、危険閾値（0.6）を突破し�
 
 第5週において、Cash、Sales_Revenue、Accounts_Receivableの3点間に極端に太いエッジによる「自己強化的な三角形ループ」が形成され、架空の売上を無限に水増しする物理的メカニズムが視認できる。また第44週には、正規ノードから `UNKNOWN_LEAK` へ向けて極端に太い流出エッジが形成されている。
 
-### 3.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
 
 循環取引と横領の相乗効果により、内部エネルギー（純残高）が削り取られながら摩擦熱（$T \Delta S$）だけが激増しており、自由エネルギーがマイナス圏へ沈み込む熱力学的な死が観測されている。
 
-### 3.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
 
 ![Sample 4 3D Z-Score](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 ![Sample 4 3D KL Drift](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 Sample 0の平坦な海とは異なり、循環取引による売上水増しノード群が全体的に波立っている（過熱）。さらに、特定の時刻に `UNKNOWN_LEAK` ノードが鋭利なスパイク（質量の消失）として突き出ており、KL Driftにおいても確率分布の破壊が明確に示されている。
-
-## 4. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
-
-**【第52週 損益計算書 (P/L) & 貸借対照表 (B/S)】**
-![Sample 4 PL Waterfall](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_0_1__PL_Waterfall_Total.png)
-![Sample 4 BS Block](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_0_1__BS_Block_Total.png)
-
-従来の会計ソフトによる静的なスナップショットは、この「末期的な複合カオス」を全く検知できない。B/Sは貸借一致の原則を満たして完璧にバランスしており、P/L上は `$209,552.56` という異常に高い黒字を叩き出している（ Wash Trade による水増し ）。その裏で `$9,024.39` もの現金が不正に抜き取られているという事実は、静的で平坦な会計帳簿からはいかに容易に偽装されるかを示している。
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
 

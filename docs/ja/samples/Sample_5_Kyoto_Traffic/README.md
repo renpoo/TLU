@@ -11,27 +11,35 @@
 ## 1. エグゼクティブ・サマリー
 本システム（交通・モビリティドメイン）は、システム全体が**「熱力学的エネルギーの完全枯渇（Thermodynamic Energy Depletion）」**および**「極限の位相幾何学的振動（Topological Feedback Loop）」**を発症しており、都市交通網として完全に麻痺（デッドロック）した状態（HIGH Severity）にあると診断される。局所的な交差点において質量の非保存が起きており、有意義な流動性（自由エネルギー）がマイナス領域深くまで沈み込み、システムは熱力学的な死（Heat Death）を迎えている。
 
-## 2. 物理的病跡の特定（Fundamental Pathophysiology）
+## 2. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
+
+**【第52週 損益計算書 (P/L) & 貸借対照表 (B/S)】**
+![Sample 5 PL Waterfall](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 5 BS Block](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__BS_Block_Total.png)
+
+交通網のような「純粋な運動系」では、全期間のネット蓄積量（B/S）はプラスマイナスゼロ（白紙）となる。「B/Sは白紙なのに、P/L（スループット）だけが異常に巨大化している」というこの視覚的コントラストは、システムが価値を蓄積せず猛烈な摩擦熱だけを生み出していることを物語る。従来のダッシュボードでは「どの交差点の流入が多いか」は分かっても、「システム全体があとどれくらいで完全にデッドロック（熱力学的な死）するか」という動的な寿命を予測することは不可能である。
+
+## 3. 物理的病跡の特定（Fundamental Pathophysiology）
 本サンプルの根本原因は、ダミーデータ生成ロジック (`_0_0_generate_dummy_traffic.py`) において意図的に仕組まれた「物理法則を無視した生成ロジック」にある。
 
 * **局所的な質量保存則の欠如（超常現象の発生）:**
   隣接する交差点間のトラフィックが、流入と流出で完全に独立したランダム値として生成されている。
   結果として、「車が交差点内で勝手に湧き出し、別の交差点で勝手に消滅する」という、局所的な質量の非保存が全ノードで同時発生し、それがシステム全体を崩壊させる熱的摩擦を引き起こした。
 
-## 3. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
+## 4. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
 
-### 3.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
+### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
 
 物理法則を無視して車が湧き出し・消滅しているため、マクロな質量保存則は完全に崩壊し、剛性行列（サスペンション）も極限の摩擦ストレスによって完全に絶対硬直（Rigid Lock）していることが物理量から確認される。
 
-### 3.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
 ![Sample_5_Kyoto_Traffic Network Topology](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00023.png)
 ![Sample 5 System Stability](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_2__system_stability.png)
 
 赤色の線（Max Spectral Radius）が完全に `1.0`（理論上の最大値）の天井に張り付いたまま推移している。交差点AからBへ向かった車が、そっくりそのままAへ戻ってくるような「完全な双方向の往復運動（振り子のような極限振動）」が支配的である。システムはもはや「流れる川」ではなく、「密閉された箱の中で激しく反射し合う音波」として完全にデッドロックしている。
 
-### 3.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
 
 *(上: Sample 0 正常な経済成長 ／ 下: Sample 5 熱力学的な死)*
 ![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
@@ -39,20 +47,12 @@
 
 Sample 0の「白色の線（Free Energy）の右肩上がりの成長」と比較し、Sample 5 では、自由エネルギーが完全に押し潰され、エントロピー損失（$T \Delta S$：赤色の層）がマイナス領域の地底深くまで激しく沈み込んでいる。「膨大な台数の車が動いている（総活動量は高い）にもかかわらず、そのほとんどが局所的な滞留や摩擦による無駄なエネルギー消費（エントロピー生成）に消え、ネットワーク全体としての『流れる力』が死滅している」ことの完璧な証明である。
 
-### 3.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
 
 ![Sample 5 3D Z-Score](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 ![Sample 5 3D KL Drift](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 Z-ScoreおよびKL Driftの3Dサーフェスにおいて、特定の交差点群で確率的にあり得ないほどの異常なスパイク（車が突然湧き出す・消滅する現象）がネットワーク全体を波立たせ、確率分布を崩壊させていることが視認できる。
-
-## 4. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
-
-**【第52週 損益計算書 (P/L) & 貸借対照表 (B/S)】**
-![Sample 5 PL Waterfall](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__PL_Waterfall_Total.png)
-![Sample 5 BS Block](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__BS_Block_Total.png)
-
-交通網のような「純粋な運動系」では、全期間のネット蓄積量（B/S）はプラスマイナスゼロ（白紙）となる。「B/Sは白紙なのに、P/L（スループット）だけが異常に巨大化している」というこの視覚的コントラストは、システムが価値を蓄積せず猛烈な摩擦熱だけを生み出していることを物語る。従来のダッシュボードでは「どの交差点の流入が多いか」は分かっても、「システム全体があとどれくらいで完全にデッドロック（熱力学的な死）するか」という動的な寿命を予測することは不可能である。
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
 

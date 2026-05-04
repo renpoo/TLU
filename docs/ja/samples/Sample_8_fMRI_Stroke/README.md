@@ -14,20 +14,28 @@
 ## 1. エグゼクティブ・サマリー
 本システム（生体脳ドメイン）は、時間経過の中盤において**「特定のノード（運動野）に対する致命的なエネルギー供給の遮断（Stroke/梗塞）」**を発症し、結果としてネットワーク全体が**「熱力学的エネルギーの崩壊（Thermodynamic Energy Depletion）」**に陥る極めて重篤な状態（HIGH Severity）にあると診断される。運動野への流入経路だけが閉塞し、「他の部位へノイズは出力するが、入力は一切受け取れない」という孤立と壊死のプロセスが進行している。
 
-## 2. 物理的病跡の特定（Fundamental Pathophysiology）
+## 2. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
+
+**【全期間の累積フロー (P/L Waterfall) & 貸借対照表 (B/S)】**
+![Sample 8 PL Waterfall](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 8 BS Block](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_0_1__BS_Block_Total.png)
+
+P/Lサマリーを見ると、運動野（Motor Cortex）だけが極端なマイナス（-$60,191）になっている。「他の部位へ信号は出しているが、入力は一切受け取れていない」という物理的な動脈閉塞のサインである。しかし従来の静的な集計ツールでは、この単なる「残高の異常」が、ネットワーク全体にどのような熱力学的な負荷（エントロピーの増大）を与え、生命活動全体をどう蝕んでいるかの「動的な死のプロセス」を描き出すことは不可能である。
+
+## 3. 物理的病跡の特定（Fundamental Pathophysiology）
 本サンプルの根本原因は、ジェネレーターコード `_0_0_generate_dummy_fmri.py` において意図的に組み込まれた「動脈閉塞のスクリプト」にある。
 
 * **特定された証拠:**
   `if tgt == "Motor_Cortex": base_flux = base_flux * 0.05`
   時間ステップ `TR >= 150` 以降、運動野（`Motor_Cortex`）へ向かうすべての血流（エッジ）が人為的に 95% カット（虚血状態）されていた。TLUが検知したマクロな崩壊は、この局所的な質量保存の破綻が引き金となっている。
 
-## 3. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
+## 4. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
 
-### 3.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
+### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
 
 局所的な血流の遮断により、システム全体の質量保存に不均衡が生じている。さらに、運動野の「入力ゼロ・出力のみ」という非対称な状態が長引くにつれ、システムの剛性行列（内部構造）は徐々に硬直（Rigid Lock）へと向かい、脳全体の弾力性が失われていく。
 
-### 3.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
 健常な脳の部位同士が、有機的かつ完全な双方向性のフィードバックループを形成しているため、数学的には循環取引と同じ「極限振動（スペクトル半径 1.0）」として捉えられている。しかしネットワークトポロジーを見ると、TR=150以降、特定のノード（Motor Cortex）に向かう流入エッジが極端に細くなり、有機的な結びつきが失われている。
 
@@ -36,7 +44,7 @@
 ![Sample_8_fMRI_Stroke Network Topology for time = 60 (Final State)](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00059.png)
 ![Sample 8 System Stability](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)
 
-### 3.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
 
 *(上: Sample 0 正常な経済成長 ／ 下: Sample 8 脳の熱力学的な死)*
 ![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
@@ -44,20 +52,12 @@
 
 Sample 8 では、病変が発生する中盤（TR=150付近）から突如としてエントロピー損失（$T \Delta S$：赤色の層）が激増し、自由エネルギーがマイナス領域へと深く沈み込んでいる。特定部位への血流遮断がネットワーク内に強烈な不均衡を生み出し、システム全体として有意義な情報処理を行うポテンシャルが致命的に損なわれたことを示す完璧な証明である。
 
-### 3.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
 
 ![Sample 8 3D Z-Score](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 ![Sample 8 3D KL Drift](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 Z-Scoreの3Dサーフェスにおいて、TR=150を境に運動野への流入成分が突如として深淵（マイナスのスパイク）へと沈み込み、局所的な「虚血・壊死」が検知されている。さらに KL Drift において、運動野への情報流路が絶たれたことでネットワークの確率分布が局所的に崩壊し、巨大なスパイクが空間に突き刺さっている。血流（質量）の欠落がそのまま「情報幾何学的な死」として可視化されている。
-
-## 4. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
-
-**【全期間の累積フロー (P/L Waterfall) & 貸借対照表 (B/S)】**
-![Sample 8 PL Waterfall](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_0_1__PL_Waterfall_Total.png)
-![Sample 8 BS Block](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_0_1__BS_Block_Total.png)
-
-P/Lサマリーを見ると、運動野（Motor Cortex）だけが極端なマイナス（-$60,191）になっている。「他の部位へ信号は出しているが、入力は一切受け取れていない」という物理的な動脈閉塞のサインである。しかし従来の静的な集計ツールでは、この単なる「残高の異常」が、ネットワーク全体にどのような熱力学的な負荷（エントロピーの増大）を与え、生命活動全体をどう蝕んでいるかの「動的な死のプロセス」を描き出すことは不可能である。
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
 

@@ -12,7 +12,15 @@
 
 本システム（金融ドメイン）は、**貸借一致の原則の違反（Conservation Violation）** を発症しており、極めて危険な状態（CRITICAL）にあります。システム内から総額 `$1,827.76` の物理的な質量（資金）が未知の領域へと消失しています。これは全体のわずか0.19%という微小な漏洩（Micro-Leakage）ですが、この僅かな「穴」が複式簿記の張力を破壊し、最終的にシステム全体に破滅的な異常共振（ノッキング現象）を引き起こす過程が物理学的に証明されました。
 
-## 2. 物理的病跡の特定（Fundamental Pathophysiology）
+## 2. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
+
+**【第52週 損益計算書 (P/L) ＆ 貸借対照表 (B/S)】**
+![Sample 2 PL Waterfall](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 2 BS Block](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__BS_Block_Total.png)
+
+実務上、原因不明の差異は一時的な「仮払金」や「使途不明金（UNKNOWN_LEAK）」として処理されることが多く、B/S上は「総資産 $211,258.12」で無理やりバランスさせられます。結果として純利益は黒字（+$62,863.53）となり、静的なスナップショットだけでは、システムに穴が空いて血（資金）が流れ出ている力学的危機を直感的に視認することはできません。
+
+## 3. 物理的病跡の特定（Fundamental Pathophysiology）
 
 本サンプルの根本原因は、ダミーデータ生成ロジックにおいて意図的に仕込まれた「片端（かたはな）入力」による質量の欠損です。
 
@@ -22,9 +30,9 @@
 
 TLUの前処理エンジンは、この「消滅した質量」を計算上補い、物理的閉鎖系を維持するために、メモリ上に**特設ノード（`UNKNOWN_LEAK`）を動的生成**し、消失分をそこに流し込みます。これがどのように力学的悲鳴として現れるかを以降の章で証明します。
 
-## 3. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
+## 4. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
 
-### 3.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
+### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
 
 ![Sample 2 Macro Forensics](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
@@ -38,20 +46,20 @@ TLUの前処理エンジンは、この「消滅した質量」を計算上補�
 
 横領の発生瞬間（第5週）、健康な「モザイク模様」だったシステムの剛性行列（サスペンション）が、ドス黒い赤に染まる **Rigid Lock（絶対硬直）** を起こします。弾力性を失ったシステムは通常の営業活動を吸収できず、3Dマップ後半において `1e9`（10億）スケールの破滅的な異常共振（ノッキング）を引き起こしました。0.19%の微小な横領が、システム全体の力学構造を破滅させる証明です。
 
-### 3.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
 ![Sample_2_Embezzlement_Leak Network Topology W4](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00003.png)
 ![Sample_2_Embezzlement_Leak Network Topology W5](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00004.png)
 
 第5週の画像において、`02: ACC_Cash` から `09: UNKNOWN_LEAK` に向かって極めて細い青い矢印が伸びています。これは過去に存在しなかった未知のノードへの流出であるため、統計学的な標準偏差を持たず、Z-Scoreベースのエッジストレス計算では「正常（青色）」として透明化されてしまうという統計的盲点を浮き彫りにしています。
 
-### 3.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
 
 ![Sample 2 Thermodynamics](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 質量保存則が破綻し資金が漏れ出しているため、システム本来の内部エネルギー（純残高）が少しずつ削り取られ、自由エネルギーの成長が阻害されている（あるいは意図せぬ歪みが生じている）様子が観察されます。
 
-### 3.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
 
 ![Sample 2 3D Z-Score](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
@@ -62,14 +70,6 @@ TLUの前処理エンジンは、この「消滅した質量」を計算上補�
 ![Sample 2 3D KL Drift](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 未知のブラックホール（`UNKNOWN_LEAK`）への質量の消失は、システムが前提としていた確率分布を強烈に歪めます。KL Driftにおいても、横領が発生した週において明確な情報の崩壊（スパイク）が観測されています。
-
-## 4. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
-
-**【第52週 損益計算書 (P/L) ＆ 貸借対照表 (B/S)】**
-![Sample 2 PL Waterfall](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__PL_Waterfall_Total.png)
-![Sample 2 BS Block](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__BS_Block_Total.png)
-
-実務上、原因不明の差異は一時的な「仮払金」や「使途不明金（UNKNOWN_LEAK）」として処理されることが多く、B/S上は「総資産 $211,258.12」で無理やりバランスさせられます。結果として純利益は黒字（+$62,863.53）となり、静的なスナップショットだけでは、システムに穴が空いて血（資金）が流れ出ている力学的危機を直感的に視認することはできません。
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
 
