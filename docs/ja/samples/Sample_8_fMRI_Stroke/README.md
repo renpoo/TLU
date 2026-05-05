@@ -35,29 +35,53 @@ P/Lサマリーを見ると、運動野（Motor Cortex）だけが極端なマ�
 
 局所的な血流の遮断により、システム全体の質量保存に不均衡が生じている。さらに、運動野の「入力ゼロ・出力のみ」という非対称な状態が長引くにつれ、システムの剛性行列（内部構造）は徐々に硬直（Rigid Lock）へと向かい、脳全体の弾力性が失われていく。
 
+![Sample 8 Macro Forensics](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample 8 External Force 3D](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_1_6__3d_dynamics_external_force.png)
+
+* **1枚目【始点】**: `t.00000` (正常な剛性)
+* **2枚目【変化の直前】**: `t.00029` (TR=145)
+* **3枚目【変化の当該時点】**: `t.00030` (TR=150: 梗塞発生)
+* **4枚目【変化の直後】**: `t.00031` (TR=155)
+* **5枚目【終点】**: `t.00059` (TR=295: 完全硬直)
+
+![Sample 8 Structural Stiffness 0](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+![Sample 8 Structural Stiffness 29](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00029.png)
+![Sample 8 Structural Stiffness 30](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00030.png)
+![Sample 8 Structural Stiffness 31](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00031.png)
+![Sample 8 Structural Stiffness 59](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00059.png)
+
 ### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
 健常な脳の部位同士が、有機的かつ完全な双方向性のフィードバックループを形成しているため、数学的には循環取引と同じ「極限振動（スペクトル半径 1.0）」として捉えられている。しかしネットワークトポロジーを見ると、TR=150以降、特定のノード（Motor Cortex）に向かう流入エッジが極端に細くなり、有機的な結びつきが失われている。
 
-![Sample_8_fMRI_Stroke Network Topology for time = 30 (Pre-Stroke)](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00029.png)
-![Sample_8_fMRI_Stroke Network Topology for time = 31 (Stroke Onset)](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00030.png)
-![Sample_8_fMRI_Stroke Network Topology for time = 60 (Final State)](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00059.png)
 ![Sample 8 System Stability](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)
 
+* **1枚目【始点】**: `t.00000`
+* **2枚目【変化の直前】**: `t.00029` (TR=145)
+* **3枚目【変化の当該時点】**: `t.00030` (TR=150: 梗塞発生)
+* **4枚目【変化の直後】**: `t.00031` (TR=155)
+* **5枚目【終点】**: `t.00059` (TR=295)
+
+![Sample 8 Network Topology 0](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00000.png)
+![Sample 8 Network Topology 29](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00029.png)
+![Sample 8 Network Topology 30](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00030.png)
+![Sample 8 Network Topology 31](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00031.png)
+![Sample 8 Network Topology 59](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00059.png)
+
 ### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+
+Sample 8 では、病変が発生する中盤（TR=150付近）から突如としてエントロピー損失（$T \Delta S$：赤色の層）が激増し、自由エネルギーがマイナス領域へと深く沈み込んでいる。特定部位への血流遮断がネットワーク内に強烈な不均衡を生み出し、システム全体として有意義な情報処理を行うポテンシャルが致命的に損なわれたことを示す完璧な証明である。
 
 *(上: Sample 0 正常な経済成長 ／ 下: Sample 8 脳の熱力学的な死)*
 ![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 ![Sample 8 Thermodynamics](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
-Sample 8 では、病変が発生する中盤（TR=150付近）から突如としてエントロピー損失（$T \Delta S$：赤色の層）が激増し、自由エネルギーがマイナス領域へと深く沈み込んでいる。特定部位への血流遮断がネットワーク内に強烈な不均衡を生み出し、システム全体として有意義な情報処理を行うポテンシャルが致命的に損なわれたことを示す完璧な証明である。
-
 ### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+
+Z-Scoreの3Dサーフェスにおいて、TR=150を境に運動野への流入成分が突如として深淵（マイナスのスパイク）へと沈み込み、局所的な「虚血・壊死」が検知されている。さらに KL Drift において、運動野への情報流路が絶たれたことでネットワークの確率分布が局所的に崩壊し、巨大なスパイクが空間に突き刺さっている。血流（質量）の欠落がそのまま「情報幾何学的な死」として可視化されている。
 
 ![Sample 8 3D Z-Score](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 ![Sample 8 3D KL Drift](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
-
-Z-Scoreの3Dサーフェスにおいて、TR=150を境に運動野への流入成分が突如として深淵（マイナスのスパイク）へと沈み込み、局所的な「虚血・壊死」が検知されている。さらに KL Drift において、運動野への情報流路が絶たれたことでネットワークの確率分布が局所的に崩壊し、巨大なスパイクが空間に突き刺さっている。血流（質量）の欠落がそのまま「情報幾何学的な死」として可視化されている。
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
 

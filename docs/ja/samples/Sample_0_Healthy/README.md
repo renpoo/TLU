@@ -31,38 +31,60 @@
 
 ### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
 
-![Sample 0 Macro Forensics](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
-
 上段の「System Conservation Residual（質量の絶対残差）」が完全に `0.0` の地平に張り付いています。これは「借方と貸方が1円の狂いもなく一致し、システム外へ消失した（漏れた）質量が一切ない」という貸借一致の原則（質量保存則）が完璧に機能していることを証明しています。異常系（Sample 2など）ではここに鋭いスパイクが発生します。
 
-**【構造的剛性 (Structural Stiffness) と 仮想外力 (External Force)】**
-![Sample 0 External Force 3D](../../../../samples/Sample_0_Healthy/readme_plots/000_1_6__3d_dynamics_external_force.png)
-![Sample 0 Structural Stiffness for Week 12](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00012.png)
-![Sample 0 Structural Stiffness for Week 42](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00042.png)
+![Sample 0 Macro Forensics](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
+**【構造的剛性 (Structural Stiffness) と 仮想外力 (External Force)】**
 1. **3D外力マップ（平穏な波形）:**
    この Sample 0 の外力マップは1年間を通じて非常に穏やかな起伏しか観測されません。これは、システム（健全なサスペンション）が外部からの巨大な入力エネルギーを完璧に吸収・分散できている物理的証拠です。
 2. **剛性行列のタイムラプス（健康なモザイク模様）:**
    剛性行列（システムの内部構造）を時系列で眺めると、全体として多様な色が混ざり合う**「健康なモザイク模様（弾力性）」**を1年間通して完璧に維持しています。異常系で発生する「Rigid Lock（絶対硬直）」は一度も起きていません。
 
-### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+![Sample 0 External Force 3D](../../../../samples/Sample_0_Healthy/readme_plots/000_1_6__3d_dynamics_external_force.png)
 
-![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+* **1枚目【始点】**: `t.00000` (第1週)
+* **2枚目【変化の直前】**: `t.00012` (第13週)
+* **3枚目【変化の当該時点】**: `t.00024` (第25週: 終始異常なし)
+* **4枚目【変化の直後】**: `t.00042` (第43週)
+* **5枚目【終点】**: `t.00051` (第52週)
+
+![Sample 0 Structural Stiffness for Week 1](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+![Sample 0 Structural Stiffness for Week 13](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00012.png)
+![Sample 0 Structural Stiffness for Week 25](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00024.png)
+![Sample 0 Structural Stiffness for Week 43](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00042.png)
+![Sample 0 Structural Stiffness for Week 52](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00051.png)
+
+### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
 赤色の線「Max Spectral Radius（最大スペクトル半径）」が `0.0` の底に張り付いて安定しています。これはネットワーク内に「自己強化的な無限ループ（資金のキャッチボールなど）」が存在せず、システムに入ってきた資金が正常に流出しているというトポロジーの健全性を証明しています。循環取引（Sample 1）や交通渋滞（Sample 5）ではこの線が天井（1.0）に向けて発散します。
 
-### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
 
-![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+* **1枚目【始点】**: `t.00000` (第1週)
+* **2枚目【変化の直前】**: `t.00012` (第13週)
+* **3枚目【変化の当該時点】**: `t.00025` (第26週: 終始異常なし)
+* **4枚目【変化の直後】**: `t.00042` (第43週)
+* **5枚目【終点】**: `t.00051` (第52週)
+
+![Sample 0 Network Topology W1](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00000.png)
+![Sample 0 Network Topology W13](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00012.png)
+![Sample 0 Network Topology W26](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00025.png)
+![Sample 0 Network Topology W43](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00042.png)
+![Sample 0 Network Topology W52](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00051.png)
+
+### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
 
 白色の線「Free Energy（自由エネルギー：F = U - TS）」が、総活動量（U）の拡大に伴い、右肩上がりに力強く成長しています。システムが活発に取引（運動）を行いながらも、摩擦（-TS）にエネルギーを奪われることなく、ビジネスを継続・拡大するための十分な活動余力を維持し続けていることを証明しています。異常系では、摩擦損失が異常膨張し、この白色の線がゼロラインを割って沈み込みます。
 
+![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+
 ### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+
+一年を通じて、全ノードで目立ったスパイクが一切存在せず、「完全に平坦で凪いだ海（Z-Score ≈ 0, KL Drift ≈ 0）」を保っていることが視認できます。この「無風状態」が、他のサンプルで発生する鋭いスパイクを検知するための絶対的なベースライン（原器）となります。
 
 ![Sample 0 3D Z-Score](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 ![Sample 0 3D KL Drift](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
-
-一年を通じて、全ノードで目立ったスパイクが一切存在せず、「完全に平坦で凪いだ海（Z-Score ≈ 0, KL Drift ≈ 0）」を保っていることが視認できます。この「無風状態」が、他のサンプルで発生する鋭いスパイクを検知するための絶対的なベースライン（原器）となります。
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
 

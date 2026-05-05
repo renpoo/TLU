@@ -37,36 +37,54 @@
 
 ### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
 
-![Sample 1 Macro Forensics](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_1__macro_forensics_dashboard.png)
+上段の「System Conservation Residual（質量の絶対残差）」は完全に `0.0` の地平に張り付いています。これは、循環取引を行う主体が「貸借一致の原則」自体は厳格に守っているためであり、単なるエラーチェックの網はすり抜けてしまいます。また、剛性行列（サスペンション）および仮想外力の推移からも、システム内部の異常が隠蔽されていることが確認できます。
 
-上段の「System Conservation Residual（質量の絶対残差）」は完全に `0.0` の地平に張り付いています。これは、循環取引を行う主体が「貸借一致の原則」自体は厳格に守っているためであり、単なるエラーチェックの網はすり抜けてしまいます。
+![Sample 1 Macro Forensics](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample 1 External Force 3D](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_1_6__3d_dynamics_external_force.png)
+
+* **1枚目【始点】**: `t.00000` (正常な剛性)
+* **2枚目【変化の直前】**: `t.00039`
+* **3枚目【変化の当該時点】**: `t.00040` (循環取引ループ形成の瞬間)
+* **4枚目【変化の直後】**: `t.00041`
+* **5枚目【終点】**: `t.00051`
+
+![Sample 1 Structural Stiffness for Week 0](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+![Sample 1 Structural Stiffness for Week 39](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00039.png)
+![Sample 1 Structural Stiffness for Week 40](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00040.png)
+![Sample 1 Structural Stiffness for Week 41](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00041.png)
+![Sample 1 Structural Stiffness for Week 51](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00051.png)
 
 ### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
+赤色の線「Max Spectral Radius（最大スペクトル半径）」が、循環取引が発生した第40週以降、`0.0` の平穏な状態から突如として跳ね上がり、`0.8353` という危険水域に達しています。これはシステム内に「自己強化的な無限ループ」が形成されたことを示す決定的な数学的署名です。
+第40週〜第41週において、`ACC_Cash`（現金）と `ACC_Accounts_Receivable`（売掛金）の間に、不自然に太く、自己強化的に循環する閉路が形成されています。
+
 ![Sample 1 System Stability](../../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_2__system_stability.png)
 
-赤色の線「Max Spectral Radius（最大スペクトル半径）」が、循環取引が発生した第40週以降、`0.0` の平穏な状態から突如として跳ね上がり、`0.8353` という危険水域に達しています。これはシステム内に「自己強化的な無限ループ」が形成されたことを示す決定的な数学的署名です。
+* **1枚目【始点】**: `t.00000` (正常な状態)
+* **2枚目【変化の直前】**: `t.00039`
+* **3枚目【変化の当該時点】**: `t.00040` (異常なループの発生)
+* **4枚目【変化の直後】**: `t.00041`
+* **5枚目【終点】**: `t.00051`
 
-**【幾何学的構造の異常の視覚化】**
-![Sample 1 Network Topology W39](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00038.png)
-![Sample 1 Network Topology W40](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00039.png)
-![Sample 1 Network Topology W41](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00040.png)
-
-第41週において、`ACC_Cash`（現金）と `ACC_Accounts_Receivable`（売掛金）の間に、不自然に太く、自己強化的に循環する閉路が形成されています。
+![Sample 1 Network Topology W0](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00000.png)
+![Sample 1 Network Topology W39](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00039.png)
+![Sample 1 Network Topology W40](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00040.png)
+![Sample 1 Network Topology W41](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00041.png)
+![Sample 1 Network Topology W51](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00051.png)
 
 ### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
 
-![Sample 1 Thermodynamics](../../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-
 第41週と第48週のタイミングで、赤色の層（エントロピー損失 $T\Delta S$）が突然、異常な太さの柱となって出現し、白色の線（自由エネルギー $F$）を下方に押し下げています。循環取引は実質的な価値（内部エネルギー）を生み出さず、単なる「摩擦熱」だけを発生させるため、システムを熱的な死へと向かわせる物理的証拠です。
+
+![Sample 1 Thermodynamics](../../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 ### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
 
-※本サンプルでは、巨視的なトポロジー異常（Spectral Radius）が支配的であり、単なる出来高の増減を示すZ-Scoreよりも、以下の情報幾何学的変位がより決定的な証拠となります。
+※本サンプルでは、巨視的なトポロジー異常（Spectral Radius）が支配的であり、単なる出来高の増減を示すZ-Scoreよりも、以下の情報幾何学的変位がより決定的な証拠となります。KL Driftは「確率分布（情報構造）の破壊」を示します。第41週の初犯時に巨大なスパイク（警報）が空間に突き刺さっています。しかし注目すべきは、第48週の再犯時にはスパイクが小さくなっている点です。これは異常データが「新たなベースライン」としてシステムに学習（汚染）されてしまう統計的AIの弱点（茹でガエル現象）を示しており、履歴に依存しない物理アプローチ（トポロジーと熱力学）の必要性を逆説的に証明しています。
 
+![Sample 1 3D Z-Score](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 ![Sample 1 Micro Forensics (KL Divergence Drift)](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
-
-KL Driftは「確率分布（情報構造）の破壊」を示します。第41週の初犯時に巨大なスパイク（警報）が空間に突き刺さっています。しかし注目すべきは、第48週の再犯時にはスパイクが小さくなっている点です。これは異常データが「新たなベースライン」としてシステムに学習（汚染）されてしまう統計的AIの弱点（茹でガエル現象）を示しており、履歴に依存しない物理アプローチ（トポロジーと熱力学）の必要性を逆説的に証明しています。
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
 

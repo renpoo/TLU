@@ -32,27 +32,53 @@
 
 物理法則を無視して車が湧き出し・消滅しているため、マクロな質量保存則は完全に崩壊し、剛性行列（サスペンション）も極限の摩擦ストレスによって完全に絶対硬直（Rigid Lock）していることが物理量から確認される。
 
-### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+![Sample 5 Macro Forensics](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample 5 External Force 3D](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_1_6__3d_dynamics_external_force.png)
 
-![Sample_5_Kyoto_Traffic Network Topology](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00023.png)
-![Sample 5 System Stability](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_2__system_stability.png)
+* **1枚目【始点】**: `t.00000` (第1週)
+* **2枚目【変化の直前】**: `t.00022` (第23週)
+* **3枚目【変化の当該時点】**: `t.00023` (第24週: 恒常的な摩擦状態)
+* **4枚目【変化の直後】**: `t.00024` (第25週)
+* **5枚目【終点】**: `t.00051` (第52週: デッドロック)
+
+![Sample 5 Structural Stiffness Week 1](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+![Sample 5 Structural Stiffness Week 23](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00022.png)
+![Sample 5 Structural Stiffness Week 24](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00023.png)
+![Sample 5 Structural Stiffness Week 25](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00024.png)
+![Sample 5 Structural Stiffness Week 52](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00051.png)
+
+### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
 赤色の線（Max Spectral Radius）が完全に `1.0`（理論上の最大値）の天井に張り付いたまま推移している。交差点AからBへ向かった車が、そっくりそのままAへ戻ってくるような「完全な双方向の往復運動（振り子のような極限振動）」が支配的である。システムはもはや「流れる川」ではなく、「密閉された箱の中で激しく反射し合う音波」として完全にデッドロックしている。
 
+![Sample 5 System Stability](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_2__system_stability.png)
+
+* **1枚目【始点】**: `t.00000`
+* **2枚目【変化の直前】**: `t.00022`
+* **3枚目【変化の当該時点】**: `t.00023`
+* **4枚目【変化の直後】**: `t.00024`
+* **5枚目【終点】**: `t.00051`
+
+![Sample 5 Network Topology W1](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00000.png)
+![Sample 5 Network Topology W23](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00022.png)
+![Sample 5 Network Topology W24](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00023.png)
+![Sample 5 Network Topology W25](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00024.png)
+![Sample 5 Network Topology W52](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00051.png)
+
 ### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+
+Sample 0の「白色の線（Free Energy）の右肩上がりの成長」と比較し、Sample 5 では、自由エネルギーが完全に押し潰され、エントロピー損失（$T \Delta S$：赤色の層）がマイナス領域の地底深くまで激しく沈み込んでいる。「膨大な台数の車が動いている（総活動量は高い）にもかかわらず、そのほとんどが局所的な滞留や摩擦による無駄なエネルギー消費（エントロピー生成）に消え、ネットワーク全体としての『流れる力』が死滅している」ことの完璧な証明である。
 
 *(上: Sample 0 正常な経済成長 ／ 下: Sample 5 熱力学的な死)*
 ![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 ![Sample 5 Thermodynamics](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
-Sample 0の「白色の線（Free Energy）の右肩上がりの成長」と比較し、Sample 5 では、自由エネルギーが完全に押し潰され、エントロピー損失（$T \Delta S$：赤色の層）がマイナス領域の地底深くまで激しく沈み込んでいる。「膨大な台数の車が動いている（総活動量は高い）にもかかわらず、そのほとんどが局所的な滞留や摩擦による無駄なエネルギー消費（エントロピー生成）に消え、ネットワーク全体としての『流れる力』が死滅している」ことの完璧な証明である。
-
 ### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+
+Z-ScoreおよびKL Driftの3Dサーフェスにおいて、特定の交差点群で確率的にあり得ないほどの異常なスパイク（車が突然湧き出す・消滅する現象）がネットワーク全体を波立たせ、確率分布を崩壊させていることが視認できる。
 
 ![Sample 5 3D Z-Score](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 ![Sample 5 3D KL Drift](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
-
-Z-ScoreおよびKL Driftの3Dサーフェスにおいて、特定の交差点群で確率的にあり得ないほどの異常なスパイク（車が突然湧き出す・消滅する現象）がネットワーク全体を波立たせ、確率分布を崩壊させていることが視認できる。
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
 

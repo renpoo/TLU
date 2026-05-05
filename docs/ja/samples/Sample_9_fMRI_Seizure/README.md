@@ -36,29 +36,53 @@
 
 発作による異常な同期波は質量（血流）の総量を極端に偏らせるものではないため、マクロ残差としては観測されにくい。しかし、局所的な過同期により剛性行列の局所的な絶対硬直（Rigid Lock）が発生し、健全な信号処理を受け付けない状態となっている。
 
-### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+![Sample 9 Macro Forensics](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample 9 External Force 3D](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_1_6__3d_dynamics_external_force.png)
 
-![Sample_9_fMRI_Seizure Network Topology for time = 30 (Pre-Seizure)](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00029.png)
-![Sample_9_fMRI_Seizure Network Topology for time = 31 (Seizure Onset)](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00030.png)
-![Sample_9_fMRI_Seizure Network Topology for time = 60 (Final State)](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00059.png)
-![Sample 9 System Stability](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/004_1_2__system_stability.png)
+* **1枚目【始点】**: `t.00000` (正常な剛性)
+* **2枚目【変化の直前】**: `t.00029` (TR=145)
+* **3枚目【変化の当該時点】**: `t.00030` (TR=150: てんかん発作発生)
+* **4枚目【変化の直後】**: `t.00031` (TR=155)
+* **5枚目【終点】**: `t.00059` (TR=295: 局所硬直)
+
+![Sample 9 Structural Stiffness 0](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+![Sample 9 Structural Stiffness 29](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00029.png)
+![Sample 9 Structural Stiffness 30](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00030.png)
+![Sample 9 Structural Stiffness 31](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00031.png)
+![Sample 9 Structural Stiffness 59](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00059.png)
+
+### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
 赤色の線（Max Spectral Radius）が完全に `1.0` の天井に張り付いている。側頭葉と他の部位が全く同じ巨大な波を同期させて相互にキャッチボールしている。これは、Sample 6 等で証明された**金融市場における「仮装売買（Wash Trade）」と数学的に全く同じ構造**である。無意味な摩擦熱を伴う無限の資金還流と同じネットワーク共鳴が、「てんかん発作（Seizure）」そのものを意味する。
 
+![Sample 9 System Stability](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/004_1_2__system_stability.png)
+
+* **1枚目【始点】**: `t.00000`
+* **2枚目【変化の直前】**: `t.00029` (TR=145)
+* **3枚目【変化の当該時点】**: `t.00030` (TR=150: 発作波形)
+* **4枚目【変化の直後】**: `t.00031` (TR=155)
+* **5枚目【終点】**: `t.00059` (TR=295)
+
+![Sample 9 Network Topology 0](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00000.png)
+![Sample 9 Network Topology 29](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00029.png)
+![Sample 9 Network Topology 30](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00030.png)
+![Sample 9 Network Topology 31](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00031.png)
+![Sample 9 Network Topology 59](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00059.png)
+
 ### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+
+金融市場の「相場操縦（Wash Trade）」と全く同じ熱力学崩壊が起きている。異常な同期波は「純残高（内部エネルギー）」をほとんど変化させずに「信号の取引量（摩擦熱＝エントロピー）」だけを無限大に発散させる。結果としてシステムの自由エネルギーが致命的なマイナス領域に沈み込み、熱力学的な死を迎えている。
 
 *(上: Sample 0 正常な経済成長 ／ 下: Sample 9 発作による熱力学的な死)*
 ![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 ![Sample 9 Thermodynamics](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
-金融市場の「相場操縦（Wash Trade）」と全く同じ熱力学崩壊が起きている。異常な同期波は「純残高（内部エネルギー）」をほとんど変化させずに「信号の取引量（摩擦熱＝エントロピー）」だけを無限大に発散させる。結果としてシステムの自由エネルギーが致命的なマイナス領域に沈み込み、熱力学的な死を迎えている。
-
 ### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+
+Z-Scoreの3Dサーフェスにおいて、TR=150を境に側頭葉の送受信成分が極端なスパイクとして屹立している。さらに、KL Driftにおいては、側頭葉から放たれる強制的な巨大正弦波により、ネットワークが本来持っていた確率分布が完全に上書きされ、極端なスパイクとして空間に屹立している。過剰な共鳴（波の暴走）がそのまま「情報幾何学的な崩壊」として可視化されている。
 
 ![Sample 9 3D Z-Score](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 ![Sample 9 3D KL Drift](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
-
-Z-Scoreの3Dサーフェスにおいて、TR=150を境に側頭葉の送受信成分が極端なスパイクとして屹立している。さらに、KL Driftにおいては、側頭葉から放たれる強制的な巨大正弦波により、ネットワークが本来持っていた確率分布が完全に上書きされ、極端なスパイクとして空間に屹立している。過剰な共鳴（波の暴走）がそのまま「情報幾何学的な崩壊」として可視化されている。
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
 

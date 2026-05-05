@@ -38,38 +38,53 @@ TLUの前処理エンジンは、この「消滅した質量」を計算上補�
 
 上段のグラフ「System Conservation Residual」において、断続的なスパイク（最大 `407.89`）が発生しています。これは「システム外へ質量が消失した」ことを示す決定的な数学的署名です。
 
+横領の発生瞬間（第5週）、健康な「モザイク模様」だったシステムの剛性行列（サスペンション）が、ドス黒い赤に染まる **Rigid Lock（絶対硬直）** を起こします。弾力性を失ったシステムは通常の営業活動を吸収できず、3Dマップ後半において `1e9`（10億）スケールの破滅的な異常共振（ノッキング）を引き起こしました。0.19%の微小な横領が、システム全体の力学構造を破滅させる証明です。
+
 **【異常系の深層読解：剛性行列のタイムラプスと外力の共振】**
 ![Sample 2 External Force 3D](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_6__3d_dynamics_external_force.png)
+
+* **1枚目【始点】**: `t.00000` (正常なモザイク模様)
+* **2枚目【変化の直前】**: `t.00003` (第4週)
+* **3枚目【変化の当該時点】**: `t.00004` (第5週: 横領発生瞬間、絶対硬直)
+* **4枚目【変化の直後】**: `t.00005` (第6週)
+* **5枚目【終点】**: `t.00051` (第52週: 破滅的共振)
+
+![Sample 2 Structural Stiffness for Week 1](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00000.png)
 ![Sample 2 Structural Stiffness for Week 4](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00003.png)
 ![Sample 2 Structural Stiffness for Week 5](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00004.png)
+![Sample 2 Structural Stiffness for Week 6](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00005.png)
 ![Sample 2 Structural Stiffness for Week 52](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00051.png)
-
-横領の発生瞬間（第5週）、健康な「モザイク模様」だったシステムの剛性行列（サスペンション）が、ドス黒い赤に染まる **Rigid Lock（絶対硬直）** を起こします。弾力性を失ったシステムは通常の営業活動を吸収できず、3Dマップ後半において `1e9`（10億）スケールの破滅的な異常共振（ノッキング）を引き起こしました。0.19%の微小な横領が、システム全体の力学構造を破滅させる証明です。
 
 ### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
+第5週の画像において、`02: ACC_Cash` から `09: UNKNOWN_LEAK` に向かって極めて細い青い矢印が伸びています。これは過去に存在しなかった未知のノードへの流出であるため、統計学的な標準偏差を持たず、Z-Scoreベースのエッジストレス計算では「正常（青色）」として透明化されてしまうという統計的盲点を浮き彫りにしています。システム全体のトポロジーの崩壊度合いは最大スペクトル半径の推移でも確認できます。
+
+![Sample 2 System Stability](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/004_1_2__system_stability.png)
+
+* **1枚目【始点】**: `t.00000`
+* **2枚目【変化の直前】**: `t.00003` (第4週)
+* **3枚目【変化の当該時点】**: `t.00004` (第5週: 未知ノードへの流出発生)
+* **4枚目【変化の直後】**: `t.00005` (第6週)
+* **5枚目【終点】**: `t.00051` (第52週)
+
+![Sample_2_Embezzlement_Leak Network Topology W1](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00000.png)
 ![Sample_2_Embezzlement_Leak Network Topology W4](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00003.png)
 ![Sample_2_Embezzlement_Leak Network Topology W5](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00004.png)
-
-第5週の画像において、`02: ACC_Cash` から `09: UNKNOWN_LEAK` に向かって極めて細い青い矢印が伸びています。これは過去に存在しなかった未知のノードへの流出であるため、統計学的な標準偏差を持たず、Z-Scoreベースのエッジストレス計算では「正常（青色）」として透明化されてしまうという統計的盲点を浮き彫りにしています。
+![Sample_2_Embezzlement_Leak Network Topology W6](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00005.png)
+![Sample_2_Embezzlement_Leak Network Topology W52](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00051.png)
 
 ### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
 
-![Sample 2 Thermodynamics](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-
 質量保存則が破綻し資金が漏れ出しているため、システム本来の内部エネルギー（純残高）が少しずつ削り取られ、自由エネルギーの成長が阻害されている（あるいは意図せぬ歪みが生じている）様子が観察されます。
+
+![Sample 2 Thermodynamics](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 ### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
 
+「$0.0（あるべき資金がない）」という無の空間を、TLUは `UNKNOWN_LEAK` への質量移動として幾何学的に反転させます。第5週や第9週の初期犯行時、周囲から完全に独立した「異次元の鋭いスパイク（黄緑色）」として消えた資金の痕跡が視認できます。未知のブラックホール（`UNKNOWN_LEAK`）への質量の消失は、システムが前提としていた確率分布を強烈に歪めます。KL Driftにおいても、横領が発生した週において明確な情報の崩壊（スパイク）が観測されています。
+
 ![Sample 2 3D Z-Score](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
-
-「$0.0（あるべき資金がない）」という無の空間を、TLUは `UNKNOWN_LEAK` への質量移動として幾何学的に反転させます。第5週や第9週の初期犯行時、周囲から完全に独立した「異次元の鋭いスパイク（黄緑色）」として消えた資金の痕跡が視認できます。
-
-
-
 ![Sample 2 3D KL Drift](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
-
-未知のブラックホール（`UNKNOWN_LEAK`）への質量の消失は、システムが前提としていた確率分布を強烈に歪めます。KL Driftにおいても、横領が発生した週において明確な情報の崩壊（スパイク）が観測されています。
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
 

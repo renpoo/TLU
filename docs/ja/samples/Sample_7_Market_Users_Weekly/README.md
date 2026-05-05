@@ -41,27 +41,53 @@
 
 Sample 6と同様に、Wash Trade は市場内で完結するため質量保存則の違反（マクロ残差）は発生しない。しかし、特定のユーザー間での異常な資金還流により、システムの剛性行列は局所的な共振と絶対硬直（Rigid Lock）を起こしている。
 
-### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+![Sample 7 Macro Forensics](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample 7 External Force 3D](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_1_6__3d_dynamics_external_force.png)
 
-![Sample_7_Market_Users_Weekly Network Topology](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00050.png)
-![Sample 7 System Stability](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/004_1_2__system_stability.png)
+* **1枚目【始点】**: `t.00000` (正常な剛性)
+* **2枚目【変化の直前】**: `t.00005` (第6週)
+* **3枚目【変化の当該時点】**: `t.00006` (第7週: 資金還流による硬直発生)
+* **4枚目【変化の直後】**: `t.00007` (第8週)
+* **5枚目【終点】**: `t.00051` (第52週)
+
+![Sample 7 Structural Stiffness Week 1](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+![Sample 7 Structural Stiffness Week 6](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_2_1__structural_stiffness.t.00005.png)
+![Sample 7 Structural Stiffness Week 7](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_2_1__structural_stiffness.t.00006.png)
+![Sample 7 Structural Stiffness Week 8](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_2_1__structural_stiffness.t.00007.png)
+![Sample 7 Structural Stiffness Week 52](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_2_1__structural_stiffness.t.00051.png)
+
+### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
 赤色の線（Max Spectral Radius）が常に `1.0`（理論上の限界値）の天井に張り付いている。これは `User A -> User B -> User A` という直接的な資金のキャッチボール（還流ループ）が形成されていることを示す。特定のユーザー間で閉じた資金ループが形成され、それがシステム全体の共鳴を引き起こしているということは、完全に結託した相場操縦グループの存在を数学的に証明するものである。
 
+![Sample 7 System Stability](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/004_1_2__system_stability.png)
+
+* **1枚目【始点】**: `t.00000`
+* **2枚目【変化の直前】**: `t.00005`
+* **3枚目【変化の当該時点】**: `t.00006`
+* **4枚目【変化の直後】**: `t.00007`
+* **5枚目【終点】**: `t.00051`
+
+![Sample 7 Network Topology W1](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00000.png)
+![Sample 7 Network Topology W6](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00005.png)
+![Sample 7 Network Topology W7](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00006.png)
+![Sample 7 Network Topology W8](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00007.png)
+![Sample 7 Network Topology W52](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00051.png)
+
 ### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+
+Sample 6 と同様の熱力学崩壊である。仮装売買（Wash Trade）は、ユーザーの「純残高（内部エネルギー）」をほとんど変化させずに「取引量（エントロピー/摩擦熱）」だけを無限大に発散させる。結果としてシステムの自由エネルギーが致命的なマイナス領域へ沈み込んでいる。
 
 *(上: Sample 0 正常な経済成長 ／ 下: Sample 7 熱力学的な死)*
 ![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 ![Sample 7 Thermodynamics](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
-Sample 6 と同様の熱力学崩壊である。仮装売買（Wash Trade）は、ユーザーの「純残高（内部エネルギー）」をほとんど変化させずに「取引量（エントロピー/摩擦熱）」だけを無限大に発散させる。結果としてシステムの自由エネルギーが致命的なマイナス領域へ沈み込んでいる。
-
 ### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+
+Z-ScoreおよびKL Driftの3Dサーフェスにおいて、`USR_001` と `USR_006` と思われる特定ユーザー間で極端なスパイクが立ち並び、共謀グループの輪郭が明確に浮き彫りになっている。
 
 ![Sample 7 3D Z-Score](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 ![Sample 7 3D KL Drift](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
-
-Z-ScoreおよびKL Driftの3Dサーフェスにおいて、`USR_001` と `USR_006` と思われる特定ユーザー間で極端なスパイクが立ち並び、共謀グループの輪郭が明確に浮き彫りになっている。
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
 
