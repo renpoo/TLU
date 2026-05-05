@@ -1,4 +1,4 @@
-# TLU 物理・数理エンジン：検証サンプル統合インデックス (Meta-Diagnostic Overview)
+# TLU 物理・数理エンジン：検証サンプル 概略と目次 (Meta-Diagnostic Overview)
 
 TLU (Thermodynamic Ledger Universe) は、複式簿記やネットワークデータを単なる「静的な集計結果」としてではなく、熱力学（Thermodynamics）、トポロジー（Topology）、運動学（Kinematics）の法則に従う**「動的な物理システム」**として解析するための普遍的物理エンジン（Universal Physics Engine）です。
 
@@ -6,7 +6,7 @@ TLU (Thermodynamic Ledger Universe) は、複式簿記やネットワークデ�
 
 ---
 
-## 🔬 結論先行：サンプル横断比較から導かれる「普遍的真理（Universal Insights）」
+## 🔬 結論：サンプル横断比較から導かれる「普遍的真理（Universal Insights）」
 
 この10個のサンプルを横断して比較することで、経済物理学やネットワーク理論における極めて重要な結論が導き出されます。
 TLU最大のブレイクスルーは、**「一見まったく異なるドメインの事象が、物理方程式（ $F = U - T \times S$ ）の上では完全に同一の病跡（シグネチャ）として解明できる」**ことを数学的に証明した点にあります。
