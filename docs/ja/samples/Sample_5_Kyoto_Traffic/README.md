@@ -37,17 +37,17 @@
 ![Sample 5 Macro Forensics](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_1__macro_forensics_dashboard.png)
 ![Sample 5 External Force 3D](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_1_6__3d_dynamics_external_force.png)
 
-* **1枚目【始点】**: `t.00000` (第1週)
-* **2枚目【変化の直前】**: `t.00022` (第23週)
-* **3枚目【変化の当該時点】**: `t.00023` (第24週: 恒常的な摩擦状態)
-* **4枚目【変化の直後】**: `t.00024` (第25週)
-* **5枚目【終点】**: `t.00051` (第52週: デッドロック)
+* **1枚目【始点】**: `t.00000` (初期状態: 0ヶ月経過)
+* **2枚目【進行中】**: `t.00006` (6ヶ月経過: 摩擦熱の蓄積開始)
+* **3枚目【恒常的な摩擦】**: `t.00012` (12ヶ月経過: 部分的な麻痺)
+* **4枚目【進行中】**: `t.00018` (18ヶ月経過)
+* **5枚目【終点】**: `t.00024` (24ヶ月経過: 完全なデッドロック状態)
 
-![Sample 5 Structural Stiffness Week 1](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00000.png)
-![Sample 5 Structural Stiffness Week 23](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00022.png)
-![Sample 5 Structural Stiffness Week 24](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00023.png)
-![Sample 5 Structural Stiffness Week 25](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00024.png)
-![Sample 5 Structural Stiffness Week 52](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00051.png)
+![Sample 5 Structural Stiffness Month 0](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+![Sample 5 Structural Stiffness Month 6](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00006.png)
+![Sample 5 Structural Stiffness Month 12](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00012.png)
+![Sample 5 Structural Stiffness Month 18](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00018.png)
+![Sample 5 Structural Stiffness Month 24](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00024.png)
 
 ### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
@@ -56,16 +56,16 @@
 ![Sample 5 System Stability](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_2__system_stability.png)
 
 * **1枚目【始点】**: `t.00000`
-* **2枚目【変化の直前】**: `t.00022`
-* **3枚目【変化の当該時点】**: `t.00023`
-* **4枚目【変化の直後】**: `t.00024`
-* **5枚目【終点】**: `t.00051`
+* **2枚目【進行中】**: `t.00006`
+* **3枚目【恒常的な摩擦】**: `t.00012`
+* **4枚目【進行中】**: `t.00018`
+* **5枚目【終点】**: `t.00024`
 
-![Sample 5 Network Topology W1](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 5 Network Topology W23](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00022.png)
-![Sample 5 Network Topology W24](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00023.png)
-![Sample 5 Network Topology W25](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00024.png)
-![Sample 5 Network Topology W52](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00051.png)
+![Sample 5 Network Topology Month 0](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00000.png)
+![Sample 5 Network Topology Month 6](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00006.png)
+![Sample 5 Network Topology Month 12](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00012.png)
+![Sample 5 Network Topology Month 18](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00018.png)
+![Sample 5 Network Topology Month 24](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00024.png)
 
 ### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
 
