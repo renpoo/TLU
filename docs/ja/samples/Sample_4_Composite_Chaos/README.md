@@ -31,7 +31,7 @@
 
 ### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
 
-相対質量漏れ率 `0.0041` の激しいスパイク（最大 `6087.0`）が断続的に発生し、横領の証拠（質量の消失）を示している。さらに、剛性行列のタイムラプスはシステムの多重崩壊を物語る。第5週の循環取引開始時は既存ノード間のため巧妙に偽装されているが、第8週の初期横領で `UNKNOWN_LEAK` に色が灯る。そして第44週に巨大横領が発生した瞬間、現金ノードとの間に決定的な亀裂が生じ、剛性行列が完全に破壊された「複合カオス」へと陥っている。
+相対質量漏れ率 `0.0041` の激しいスパイク（最大 `6087.0`）が断続的に発生し、横領の証拠（質量の消失）を示している。さらに、剛性行列のタイムラプスはシステムの多重崩壊を物語る。第5週の循環取引開始時は既存ノード間のため巧妙に偽装されているが、第8週の初期横領で `UNKNOWN_LEAK` に色が灯る。そして第44週に巨大横領が発生した瞬間、現金ノードとの間に決定的な亀裂が生じ、剛性行列が完全に破壊された「複合カオス」（＝機能不全と資金ショートの同時発生）へと陥っている。
 
 ![Sample 4 Macro Forensics](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_1__macro_forensics_dashboard.png)
 ![Sample 4 External Force 3D](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_1_6__3d_dynamics_external_force.png)
@@ -50,7 +50,7 @@
 
 ### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
-Max Spectral Radius が `0.9864` に達し、危険閾値（0.6）を突破して発散寸前の高止まりを見せている（自己強化ループの証拠）。第5週において、Cash、Sales_Revenue、Accounts_Receivableの3点間に極端に太いエッジによる「自己強化的な三角形ループ」が形成され、架空の売上を無限に水増しする物理的メカニズムが視認できる。また第44週には、正規ノードから `UNKNOWN_LEAK` へ向けて極端に太い流出エッジが形成されている。
+Max Spectral Radius が `0.9864` に達し、危険閾値（0.6）を突破して発散寸前の高止まりを見せている（＝異常な資金還流と自己強化ループの証拠）。第5週において、Cash、Sales_Revenue、Accounts_Receivableの3点間に極端に太いエッジによる「自己強化的な三角形ループ」が形成され、架空の売上を無限に水増しする物理的メカニズムが視認できる。また第44週には、正規ノードから `UNKNOWN_LEAK` へ向けて極端に太い流出エッジが形成されている。
 
 ![Sample 4 System Stability](../../../../samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
 
@@ -68,13 +68,13 @@ Max Spectral Radius が `0.9864` に達し、危険閾値（0.6）を突破し�
 
 ### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
 
-循環取引と横領の相乗効果により、内部エネルギー（純残高）が削り取られながら摩擦熱（$T \Delta S$）だけが激増しており、自由エネルギーがマイナス圏へ沈み込む熱力学的な死が観測されている。
+循環取引と横領の相乗効果により、内部エネルギー（純残高）が削り取られながら摩擦熱（$T \Delta S$ ＝ 無駄な取引コストと流出）だけが激増しており、自由エネルギーがマイナス圏へ沈み込む熱力学的な死（Heat Death ＝ 組織体力の完全な枯渇）が観測されている。
 
 ![Sample 4 Thermodynamics](../../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 ### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
 
-Sample 0の平坦な海とは異なり、循環取引による売上水増しノード群が全体的に波立っている（過熱）。さらに、特定の時刻に `UNKNOWN_LEAK` ノードが鋭利なスパイク（質量の消失）として突き出ており、KL Driftにおいても確率分布の破壊が明確に示されている。
+Sample 0の平坦な海とは異なり、循環取引による売上水増しノード群が全体的に波立っている（過熱）。さらに、特定の時刻に `UNKNOWN_LEAK` ノードが鋭利なスパイク（質量の消失）として突き出ており、Z-Score（過去の平均からの突出度合い）およびKL Drift（＝過去の取引パターンからの完全な逸脱）においても確率分布の破壊が明確に示されている。
 
 ![Sample 4 3D Z-Score](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 ![Sample 4 3D KL Drift](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_2_1__3d_micro_kl_drift.png)

@@ -30,7 +30,7 @@
 
 ### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
 
-物理法則を無視して車が湧き出し・消滅しているため、マクロな質量保存則は完全に崩壊し、剛性行列（サスペンション）も極限の摩擦ストレスによって完全に絶対硬直（Rigid Lock）していることが物理量から確認される。
+物理法則を無視して車が湧き出し・消滅しているため、マクロな質量保存則は完全に崩壊し、剛性行列（サスペンション）も極限の摩擦ストレスによって完全に絶対硬直（Rigid Lock ＝ 交通網の完全な麻痺・デッドロック状態）していることが物理量から確認される。
 
 ![Sample 5 Macro Forensics](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_1__macro_forensics_dashboard.png)
 ![Sample 5 External Force 3D](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_1_6__3d_dynamics_external_force.png)
@@ -49,7 +49,7 @@
 
 ### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
-赤色の線（Max Spectral Radius）が完全に `1.0`（理論上の最大値）の天井に張り付いたまま推移している。交差点AからBへ向かった車が、そっくりそのままAへ戻ってくるような「完全な双方向の往復運動（振り子のような極限振動）」が支配的である。システムはもはや「流れる川」ではなく、「密閉された箱の中で激しく反射し合う音波」として完全にデッドロックしている。
+赤色の線（Max Spectral Radius ＝ 無意味な往復運動やループによる渋滞の激しさ）が完全に `1.0`（理論上の最大値）の天井に張り付いたまま推移している。交差点AからBへ向かった車が、そっくりそのままAへ戻ってくるような「完全な双方向の往復運動（振り子のような極限振動）」が支配的である。システムはもはや「流れる川」ではなく、「密閉された箱の中で激しく反射し合う音波」として完全にデッドロックしている。
 
 ![Sample 5 System Stability](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_2__system_stability.png)
 
@@ -67,7 +67,7 @@
 
 ### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
 
-Sample 0の「白色の線（Free Energy）の右肩上がりの成長」と比較し、Sample 5 では、自由エネルギーが完全に押し潰され、エントロピー損失（$T \Delta S$：赤色の層）がマイナス領域の地底深くまで激しく沈み込んでいる。「膨大な台数の車が動いている（総活動量は高い）にもかかわらず、そのほとんどが局所的な滞留や摩擦による無駄なエネルギー消費（エントロピー生成）に消え、ネットワーク全体としての『流れる力』が死滅している」ことの完璧な証明である。
+Sample 0の「白色の線（Free Energy）の右肩上がりの成長」と比較し、Sample 5 では、自由エネルギーが完全に押し潰され、エントロピー損失（$T \Delta S$：赤色の層）がマイナス領域の地底深くまで激しく沈み込んでいる。「膨大な台数の車が動いている（総活動量は高い）にもかかわらず、そのほとんどが局所的な滞留や摩擦による無駄なエネルギー消費（エントロピー生成）に消え、ネットワーク全体としての『流れる力』が死滅している」ことの完璧な証明であり、熱力学的な死（Heat Death ＝ 車は動いているが誰も目的地に着けない完全な麻痺状態）を意味する。
 
 *(上: Sample 0 正常な経済成長 ／ 下: Sample 5 熱力学的な死)*
 ![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
@@ -75,7 +75,7 @@ Sample 0の「白色の線（Free Energy）の右肩上がりの成長」と比�
 
 ### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
 
-Z-ScoreおよびKL Driftの3Dサーフェスにおいて、特定の交差点群で確率的にあり得ないほどの異常なスパイク（車が突然湧き出す・消滅する現象）がネットワーク全体を波立たせ、確率分布を崩壊させていることが視認できる。
+Z-Score（過去の平均からの突出度合い）および情報幾何学的変位（KL Drift ＝ 車が突然消えるといった過去の物理法則の崩壊）の3Dサーフェスにおいて、特定の交差点群で確率的にあり得ないほどの異常なスパイク（車が突然湧き出す・消滅する現象）がネットワーク全体を波立たせ、確率分布を崩壊させていることが視認できる。
 
 ![Sample 5 3D Z-Score](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 ![Sample 5 3D KL Drift](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_1__3d_micro_kl_drift.png)

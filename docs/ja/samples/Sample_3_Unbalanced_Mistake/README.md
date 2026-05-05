@@ -30,7 +30,7 @@
 
 ### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
 
-第42週を中心に、マクロ絶対残差の断続的なスパイク（最大値 `1038.49`）が観測される。しかし、Sample 2（横領）で発生した「絶対硬直（Rigid Lock）」は起きていない。剛性行列は一時的に赤く波及するが、直後には元の健康なモザイク模様へと自己回復している。また、外力の異常共振も発生していない。これは、単発の入力ミスがシステム全体を破壊するほどのエネルギーを持たず、サスペンションが衝撃を吸収できている物理的証拠である。
+第42週を中心に、マクロ絶対残差（＝帳簿上で合わなくなった帳尻・消失した金額）の断続的なスパイク（最大値 `1038.49`）が観測される。しかし、Sample 2（横領）で発生した「絶対硬直（Rigid Lock ＝ 資金ショート）」は起きていない。剛性行列（＝帳簿の整合性と回復力）は一時的に赤く波及するが、直後には元の健康なモザイク模様へと自己回復している。また、外力の異常共振も発生していない。これは、単発の入力ミスがシステム全体を破壊するほどのエネルギーを持たず、サスペンションが衝撃を吸収できている物理的証拠である。
 
 ![Sample 3 Macro Forensics](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_1__macro_forensics_dashboard.png)
 ![Sample 3 External Force](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_1_6__3d_dynamics_external_force.png)
@@ -72,7 +72,7 @@ Max Spectral Radius は `0.0000` のままであり、自己強化的な循環�
 
 ### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
 
-Z-Scoreの3Dサーフェスにおいて、第20週に最初の「端数ズレ」が発生した瞬間、`UNKNOWN_LEAK` ノードへ鋭いスパイクが突き出ている。この「0から1への変異」は過去の標準偏差がゼロであるため従来の統計監視では透明化されやすいが、TLUのトポロジーと情報幾何学（KL Drift）は確率分布の破壊としてこれを逃さず捕捉している。
+Z-Score（過去の平均からの突出度合い）の3Dサーフェスにおいて、第20週に最初の「端数ズレ」が発生した瞬間、`UNKNOWN_LEAK` ノードへ鋭いスパイクが突き出ている。この「0から1への変異」は過去の標準偏差がゼロであるため従来の統計監視では透明化されやすいが、TLUのトポロジーと情報幾何学（KL Drift ＝ 過去の標準偏差では捉えられない新たなノイズの発生）は確率分布の破壊としてこれを逃さず捕捉している。
 
 ![Sample 3 3D Z-Score](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 ![Sample 3 3D KL Drift](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_1__3d_micro_kl_drift.png)

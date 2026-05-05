@@ -31,7 +31,7 @@
 
 ### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
 
-Wash Tradeは市場内で完結する取引であるため、システム外への質量漏洩（マクロ残差）は発生しない。しかし、異常な頻度での資金還流により、剛性行列（サスペンション）は特定のノード間で絶対硬直（Rigid Lock）を起こし、外部からの健全な注文を受け入れられない状態に陥っている。
+Wash Tradeは市場内で完結する取引であるため、システム外への質量漏洩（マクロ残差）は発生しない。しかし、異常な頻度での資金還流により、剛性行列（サスペンション）は特定のノード間で絶対硬直（Rigid Lock ＝ 外部からの健全な注文を受け付けられない市場のフリーズ状態）を起こし、外部からの健全な注文を受け入れられない状態に陥っている。
 
 ![Sample 6 Macro Forensics](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_2_1__macro_forensics_dashboard.png)
 ![Sample 6 External Force 3D](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_1_6__3d_dynamics_external_force.png)
@@ -50,7 +50,7 @@ Wash Tradeは市場内で完結する取引であるため、システム外へ�
 
 ### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
 
-赤色の線（Max Spectral Radius）が常に `1.0`（理論上の限界値）の天井に張り付いている。これは `User A -> Stock X -> User B -> Stock X -> User A` という完全な閉回路（資金の還流ループ）が常態化していることを示し、市場のエネルギーが「外部からの健全な投資」ではなく「内部の自作自演による共鳴（ハウリング）」によって支配されていることを数学的に証明している。
+赤色の線（Max Spectral Radius ＝ 資金の完全な還流ループの強度）が常に `1.0`（理論上の限界値）の天井に張り付いている。これは `User A -> Stock X -> User B -> Stock X -> User A` という完全な閉回路（資金の還流ループ）が常態化していることを示し、市場のエネルギーが「外部からの健全な投資」ではなく「内部の自作自演による共鳴（ハウリング）」によって支配されていることを数学的に証明している。
 
 ![Sample 6 System Stability](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/004_1_2__system_stability.png)
 
@@ -68,7 +68,7 @@ Wash Tradeは市場内で完結する取引であるため、システム外へ�
 
 ### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
 
-Wash Tradeは、「実質的な資金やポジションの純増減（内部エネルギー $U$）」をほぼ `0` に保ちながら、「グロスの取引量＝摩擦熱（エントロピー $S$）」だけを天文学的に増大させる。結果として $F = 0 - T(\infty)$ となり、自由エネルギーがマイナスへ無限に沈み込んでいる。「出来高が多いのに、状態が変化していない」という矛盾を、TLUは熱力学的死（Heat Death）として正確に検知している。
+Wash Tradeは、「実質的な資金やポジションの純増減（内部エネルギー $U$）」をほぼ `0` に保ちながら、「グロスの取引量＝摩擦熱（エントロピー $S$）」だけを天文学的に増大させる。結果として $F = 0 - T(\infty)$ となり、自由エネルギーがマイナスへ無限に沈み込んでいる。「出来高が多いのに、状態が変化していない」という矛盾を、TLUは熱力学的死（Heat Death ＝ 実質的な経済活動を伴わない摩擦熱だけの状態）として正確に検知している。
 
 *(上: Sample 0 正常な経済成長 ／ 下: Sample 6 熱力学的な死)*
 ![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
@@ -76,7 +76,7 @@ Wash Tradeは、「実質的な資金やポジションの純増減（内部エ�
 
 ### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
 
-Z-ScoreおよびKL Driftの3Dサーフェスにおいて、一部の特定銘柄（Stock）と特定ユーザー群（User）の間に極端なスパイクが突き出しており、市場全体に不自然なエントロピーを波及させ、確率分布を汚染していることが視認できる。
+Z-Score（過去の平均からの突出度合い）および情報幾何学的変位（KL Drift ＝ 過去の市場の確率分布からの極端な逸脱）の3Dサーフェスにおいて、一部の特定銘柄（Stock）と特定ユーザー群（User）の間に極端なスパイクが突き出しており、市場全体に不自然なエントロピーを波波させ、確率分布を汚染していることが視認できる。
 
 ![Sample 6 3D Z-Score](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 ![Sample 6 3D KL Drift](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
