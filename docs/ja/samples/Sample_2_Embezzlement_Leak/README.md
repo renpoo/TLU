@@ -1,4 +1,4 @@
-# Sample 2: 資金流出による、貸借一致の原則の崩壊（Embezzlement / Micro-Leakage）
+# Sample 2: くりかえされる資金流出による、貸借一致の原則の崩壊（Embezzlement / Micro-Leakage）
 
 > [!NOTE]
 > **概念実証実験にともなう免責事項**
