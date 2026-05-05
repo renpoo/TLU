@@ -236,3 +236,16 @@ TLUはブラックボックスな予測モデルではなく、入力データ�
 ```
 
 ---
+
+## 7. 参照ルールセットと公式解釈マニュアル (Reference Rulesets & Interpretation Guides)
+
+LLMがメタ診断を実行するにあたり、以下のディレクトリに配置された公式の「解釈ガイド」および「物理法則マニュアル」を必須の参照知識（グラウンド・トゥルース）として活用してください。これらのマニュアルには、各物理変数のドメインへの具体的な翻訳（ロゼッタストーン）と、グラフの正しい読み方が厳格に定義されています。
+
+* **[📂 グラフの視覚的読解マニュアル (`docs/ja/interpretations/`)](./interpretations/README.md)**
+  * AIがグラフ画像（トポロジー、Z-Score、IK/FKなど）を読み解く際の基準となるガイドライン。
+* **[📂 物理・数学エンジンの理論的土台 (`docs/ja/physics/`)](./physics/001_Thermodynamics_and_Statistical_Mechanics.md)**
+  * 熱力学、情報幾何学、制御工学などの物理エンジンが「数学的に何を証明するのか」を定義した理論書。
+* **[📂 株式市場の多次元分析ルール (`docs/ja/Analysis Rules for Stock Market samples/`)](./Analysis%20Rules%20for%20Stock%20Market%20samples/analysis_perspectives_market.md)**
+  * 株式市場や高頻度取引（HFT）の解析に特化した、マーケット視点およびユーザー視点からのフォレンジック評価ルール。
+* **[📂 AIテクニカル・ライティング・プロトコル (`rulesets/tlu_technical_writing_protocol.yaml`)](../../rulesets/tlu_technical_writing_protocol.yaml)**
+  * 本システムが診断レポートを生成する際に遵守すべき「結論先行」「ドメイン翻訳」「反証可能性」などの全6原則を定めた絶対的なルールセット。
