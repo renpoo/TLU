@@ -37,33 +37,37 @@ AIメタ診断エンジンが実査（フォレンジック）の根拠とする
 
 システム全体から「不自然に消滅・発生した資金（Residual）」がないかを監視します。帳簿外への資金流出が発生した場合、質量保存の法則が破綻し、強烈なスパイクとして検知されます。
 
-【上：正常系の一例、下：異常系の一例】
-![Macro Forensics: Normal](https://github.com/renpoo/TLU/blob/Reconstruct-Documents/samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
-![Macro Forensics: Abnormal](https://github.com/renpoo/TLU/blob/Reconstruct-Documents/samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
+【正常系の一例：サンプル 0 より】
+![Macro Forensics: Normal](samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
+【異常系の一例：サンプル 2 より】
+![Macro Forensics: Abnormal](samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 ### 2. 制御工学とシステム安定性（死の螺旋の検知）
 
 **Spectral Radius（スペクトル半径）:** 取引ネットワーク内に「閉じたループ（循環取引）」が形成されていないかを監視します。赤色の軌跡線が1.0のオレンジ色の閾値線に近づく、あるいは突き抜けた場合、システムが人為的なループによって暴走（制御不能）していることを数学的に証明します。
 
-【上：正常系の一例、下：異常系の一例】
-![System Stability: Normal](https://github.com/renpoo/TLU/blob/Reconstruct-Documents/samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
-![System Stability: Abnormal](https://github.com/renpoo/TLU/blob/Reconstruct-Documents/samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
+【正常系の一例：サンプル 0 より】
+![System Stability: Normal](samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+【異常系の一例：サンプル 4 より】
+![System Stability: Abnormal](samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
 
 ### 3. 熱力学エネルギー・スタック（組織の疲弊と熱的死）
 
 **自由エネルギー（Free Energy）:** 組織が健全に活動するための「余力」を示します。白色の線がゼロ以下のマイナス圏へ沈み込んでいる場合、システムが活動すればするほど無駄な摩擦熱（エントロピー）を生み出す「熱力学的な死」に向かっていることを証明します。
 
-【上：正常系の一例、下：異常系の一例】
-![Thermodynamics Energy Stack: Normal](https://github.com/renpoo/TLU/blob/Reconstruct-Documents/samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-![Thermodynamics Energy Stack: Abnormal](https://github.com/renpoo/TLU/blob/Reconstruct-Documents/samples/Sample_6_Market_Bipartite_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+【正常系の一例：サンプル 0 より】
+![Thermodynamics Energy Stack: Normal](samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+【異常系の一例：サンプル 6 より】
+![Thermodynamics Energy Stack: Abnormal](samples/Sample_6_Market_Bipartite_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 ### 4. 3D マイクロ・フォレンジック（発生座標のピンポイント特定）
 
-**Z-Score & KL Drift 3D Surface:** 空間の幾何学的な歪みを計算し、「何月何日の、どの特定の口座（ノード）」で異常な操作が行われたのかを、鋭い黄緑色（Yellow-Green）のスパイクとしてピンポイントで刺し貫きます。
+**Z-Score & KL Drift 3D Surface:** 空間の幾何学的な歪みを計算し、**「何月何日の、どの特定の口座（ノード）」**で異常な操作が行われたのかを、鋭い黄緑色（Yellow-Green）のスパイクとしてピンポイントで刺し貫きます。
 
-【上：正常系の一例、下：異常系の一例】
+【正常系の一例：サンプル 0 より】
 ![Micro Z-Score 3D Surface: Normal](samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
-![Micro Z-Score 3D Surface: Abnormal](https://github.com/renpoo/TLU/blob/Reconstruct-Documents/samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+【異常系の一例：サンプル 5 より】
+![Micro Z-Score 3D Surface: Abnormal](samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
 ---
 
