@@ -36,12 +36,14 @@ AIメタ診断エンジンが実査（フォレンジック）の根拠とする
 ### 1. マクロフォレンジック（質量の保存と崩壊）
 
 システム全体から「不自然に消滅・発生した資金（Residual）」がないかを監視します。帳簿外への資金流出が発生した場合、質量保存の法則が破綻し、強烈なスパイクとして検知されます。
-![Macro Forensics](https://github.com/renpoo/TLU/blob/Reconstruct-Documents/samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Macro Forensics: Normal](https://github.com/renpoo/TLU/blob/Reconstruct-Documents/samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Macro Forensics: Abnormal](https://github.com/renpoo/TLU/blob/Reconstruct-Documents/samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 ### 2. 制御工学とシステム安定性（死の螺旋の検知）
 
 **Spectral Radius（スペクトル半径）:** 取引ネットワーク内に「閉じたループ（循環取引）」が形成されていないかを監視します。赤色の軌跡線が1.0のオレンジ色の閾値線に近づく、あるいは突き抜けた場合、システムが人為的なループによって暴走（制御不能）していることを数学的に証明します。
-![System Stability](https://github.com/renpoo/TLU/blob/Reconstruct-Documents/samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
+![System Stability: Normal](https://github.com/renpoo/TLU/blob/Reconstruct-Documents/samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+![System Stability: Abnormal](https://github.com/renpoo/TLU/blob/Reconstruct-Documents/samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
 
 ### 3. 熱力学エネルギー・スタック（組織の疲弊と熱的死）
 
