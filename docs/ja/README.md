@@ -62,6 +62,7 @@ AIメタ診断エンジンが実査（フォレンジック）の根拠とする
 【正常系の一例：サンプル 0 より】
 > 📝 **読解:** 誤差（Residual）がゼロ付近のノイズレベルに収まっており、システム全体の「質量保存の法則」が完璧に守られています。
 ![Macro Forensics: Normal](samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
+
 【異常系の一例：サンプル 2 より】
 > 🚨 **異常の証明:** グラフ中央の強烈なマイナス方向へのスパイクは、帳簿外へ資金が不自然に消滅した「横領（漏出）」の瞬間を正確に捉えています。
 ![Macro Forensics: Abnormal](samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
@@ -73,6 +74,7 @@ AIメタ診断エンジンが実査（フォレンジック）の根拠とする
 【正常系の一例：サンプル 0 より】
 > 📝 **読解:** 赤色の軌跡線（スペクトル半径）が常に 1.0 未満の安全圏を推移しており、組織の取引が自己収束（健全）していることを示しています。
 ![System Stability: Normal](samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+
 【異常系の一例：サンプル 4 より】
 > 🚨 **異常の証明:** 赤色の軌跡線が 1.0 の警戒線（オレンジ色）を突破して張り付いており、組織内で人工的な「循環取引」による暴走が発生していることを数学的に証明しています。
 ![System Stability: Abnormal](samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
@@ -84,6 +86,7 @@ AIメタ診断エンジンが実査（フォレンジック）の根拠とする
 【正常系の一例：サンプル 0 より】
 > 📝 **読解:** 白色の線（自由エネルギー）が常にプラス圏を保ち、システムが仕事をするための「健全な余力」を残していることがわかります。
 ![Thermodynamics Energy Stack: Normal](samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+
 【異常系の一例：サンプル 6 より】
 > 🚨 **異常の証明:** 自由エネルギー（白色の線）がゼロを割り込んでマイナス圏へ沈下し、過剰な取引（ウォッシュトレード等）による摩擦熱でシステムが「熱的な死」に陥っています。
 ![Thermodynamics Energy Stack: Abnormal](samples/Sample_6_Market_Bipartite_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
@@ -95,6 +98,7 @@ AIメタ診断エンジンが実査（フォレンジック）の根拠とする
 【正常系の一例：サンプル 0 より】
 > 📝 **読解:** グラフ冒頭（一番奥側の縁）に「エッジ・エフェクト」による巨大なスパイク（数学的錯覚）が立っていますが、それ以降の空間全体はなだらかな青い波（通常の取引の揺らぎ）で構成されており、突発的な異常は存在しないことがわかります。
 ![Micro Z-Score 3D Surface: Normal](samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+
 【異常系の一例：サンプル 5 より】
 > 🚨 **異常の証明:** 平坦な空間を突き破る「黄緑色（Yellow-Green）の鋭いスパイク」が出現し、特定の日時・特定のノード（交差点）で発生した大梗塞をピンポイントで刺し貫いています。
 ![Micro Z-Score 3D Surface: Abnormal](samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
