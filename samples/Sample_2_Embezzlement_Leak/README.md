@@ -26,15 +26,15 @@ The accounting ledger for `Sample_2_Embezzlement_Leak` is mathematically balance
 * **Severity:** HIGH
 * **Physical Evidence:**
   * **Relative Mass Leak Ratio:** `0.0` (Mass is perfectly conserved; the double-entry system was not broken).
-    ![002_2_1__macro_forensics_dashboard](readme_plots/002_2_1__macro_forensics_dashboard.png)
+    ![002_2_1__macro_forensics_dashboard](../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
     * **💡 How to Read the Graph (Visual Cues):** The Z-Score line remains flat and low. This visually confirms that no raw "Conservation of Mass" laws were broken. The ledger balances perfectly.
 
   * **Relative Free Energy Ratio:** **-0.1556** (Falls far below the -0.1 threshold. Despite preserved mass, the system is bleeding its capacity to perform useful work).
-    ![001_1_2__thermodynamics_energy_stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
+    ![001_1_2__thermodynamics_energy_stack](../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
     * **💡 How to Read the Graph (Visual Cues):** Look at the white Free Energy line. While the ledger balances (above), this line plummets steadily downward. It visually proves that while money is recorded, its usefulness is being destroyed (dissipated as chaotic heat).
 
   * **Max Local Z-Score:** **89.12** (Massive stress isolated to specific nodes).
-    ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+    ![002_2_2_2__micro_Z_Score_heatmap](../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
     * **💡 How to Read the Graph (Visual Cues):** Look for the single cell glowing bright red against a normal background on the `RdBu_r` heatmap. This pinpoints the exact account where the embezzled funds are being dumped.
 
 * **Financial Evidence:**
@@ -46,4 +46,4 @@ The perpetrator possesses accounting knowledge and successfully bypassed traditi
 
 **【Action Plan】**
 Macro-level balance checks are useless here. You must immediately consult the Micro Forensics Heatmap (`002_2_2__micro_Z_Score_heatmap.png`) to identify the exact expense node generating the 89.12 Z-Score. Once identified, initiate a receipt-level forensic audit of all outbound cash flows from that specific account to uncover the shell companies or unauthorized personal reimbursements.
-    ![002_2_2_2__micro_Z_Score_heatmap](readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+    ![002_2_2_2__micro_Z_Score_heatmap](../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png)

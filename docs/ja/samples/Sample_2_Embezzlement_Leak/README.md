@@ -1,8 +1,8 @@
-# Sample 2: 未回収債権と回収遅延（旧: 隠蔽された資金流出）
+# Sample 2: くりかえされる資金流出による、貸借一致の原則の崩壊（Embezzlement / Micro-Leakage）
 
 > [!NOTE]
 > **概念実証実験にともなう免責事項**
-> 本レポートで分析されるデータは実世界の企業のものではありません。本サンプル（Sample_2_Embezzlement_Leak）は、売掛金の未回収や買掛金の支払い遅延がランダムに発生するシナリオを意図的にシミュレートしたダミーデータです。
+> 本レポートで分析されるデータは実世界の企業のものではありません。検証を目的として、特定の病理学的状態を意図的に再現するために設計されたダミーデータです。本サンプル（Sample_2_Embezzlement_Leak）は、システム内から説明不能な資金が消失する「横領（Embezzlement）」や「片端入力の簿記ミス」が引き起こす物理的な質量欠損（Conservation Law Violation）を証明するためのものです。
 
 ---
 
@@ -10,40 +10,84 @@
 
 ## 1. エグゼクティブ・サマリー
 
-本システム（Sample_2_Embezzlement_Leak: 金融ドメイン）は、構造的および熱力学的に完全に健全な状態（NORMAL）であると診断されました。ベースライン（Sample 0）と比較して純利益が減少し（40,058.11）、現金勘定の当座借越が拡大（-78,675.27）していますが、最新の物理エンジンはこれを物理的な異常（横領や無限ループ）ではなく、「単なる売掛金の未回収・不良債権化」という**正常なビジネス上の非効率（パフォーマンス低下）**としてシステムに吸収・評価しています。
+本システム（金融ドメイン）は、**貸借一致の原則の違反（Conservation Violation）** を発症しており、極めて危険な状態（CRITICAL）にあります。システム内から総額 `$1,827.76` の物理的な質量（資金）が未知の領域へと消失しています。これは全体のわずか0.19%という微小な漏洩（Micro-Leakage）ですが、この僅かな「穴」が複式簿記の張力を破壊し、最終的にシステム全体に破滅的な異常共振（ノッキング現象）を引き起こす過程が物理学的に証明されました。
 
-## 2. コア・パソロジー（主要な病理所見）
+## 2. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
 
-* **所見:** 正常（構造的異常・熱力学的枯渇は未検出）
-* **重要度:** NORMAL
-* **物理的証拠:**
-  * 相対的自由エネルギー比率 (Relative Free Energy): `0.8070` (正常：活動余力は維持されている)
-  * 相対質量漏れ率 (Relative Leak Ratio): `0.0000` (正常：複式簿記上の漏れ・不一致はなし)
-  * 最大スペクトル半径 (Max Spectral Radius): `0.0000` (正常)
-  * 最大局所 Z-Score: `0.00` (正常)
+**【第52週 損益計算書 (P/L) ＆ 貸借対照表 (B/S)】**
+![Sample 2 PL Waterfall](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 2 BS Block](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__BS_Block_Total.png)
 
-* **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 Thermodynamics Energy Stack](../../../readme_plots/001_1_2__thermodynamics_energy_stack.png)
-* **【🔵 本サンプルの状態（パフォーマンス低下）】**
-![Thermodynamic Energy Depletion](../../../readme_plots/Sample_2_Embezzlement_Leak/001_1_2__thermodynamics_energy_stack.png)
-* **💡 グラフの読み方（経理・監査・コンサルタント向け）:** 
-  * **🟢 正常系:** 白色の線（自由エネルギー＝企業の活動余力・資金の潤沢さ）はプラス圏内で安定した水準を維持します。
-  * **🔵 異常系（注意）:** 白色の線は正常系よりやや低下していますが、危険水域（マイナス圏）には達していません。売掛金の回収遅延による一時的な現金ショートの兆候はありますが、システム外への不正な資金流出（横領）を示す致命的な「熱力学的な死」には至っていないことを示しています。
-* **ドメイン的証拠:**
-  * 売掛金（`110,565.95`）と買掛金（`105,355.05`）が滞留し、結果として現金勘定のマイナス（`-78,675.27`）を引き起こしています。
-  * 旧バージョンの TLU はこれを「隠蔽された横領（自由エネルギーの枯渇）」として誤検知していましたが、最新の「速度多様体（Velocity Manifold）」に基づくアップデートにより、「システム外へのエネルギーの不正な流出（横領）」と「システム内での血流の滞り（未回収）」が数学的に分離可能となり、致命的な異常（パソロジー）とは見なされなくなりました。
+実務上、原因不明の差異は一時的な「仮払金」や「使途不明金（UNKNOWN_LEAK）」として処理されることが多く、B/S上は「総資産 $211,258.12」で無理やりバランスさせられます。結果として純利益は黒字（+$62,863.53）となり、静的なスナップショットだけでは、システムに穴が空いて血（資金）が流れ出ている力学的危機を直感的に視認することはできません。
 
-## 3. アクション・プラン（臨床/監査への翻訳）
+## 3. 物理的病跡の特定（Fundamental Pathophysiology）
 
-システムの物理的構造は崩壊しておらず、直ちにフォレンジック監査（不正調査）のフェーズに移行する必要はありません。
-本サンプルの問題は「不正」ではなく「ビジネス・パフォーマンスの低下」です。アクションプランとしては、膨張している現金借越（ショート）を解消するため、滞留している売掛金の回収（督促）プロセスを強化し、運転資金（ワーキングキャピタル）のサイクルを正常化する一般的な財務改善アプローチが推奨されます。
+本サンプルの根本原因は、ダミーデータ生成ロジックにおいて意図的に仕込まれた「片端（かたはな）入力」による質量の欠損です。
 
-## 4. ⚠️ 反証可能性と検証要件（Falsification Analytics）
+* **犯行の手口（第5週〜第13週、第32週〜）:**
+  * 売掛金（ACC_Accounts_Receivable）を「回収した」として減少させる。
+  * しかし、その分の資金を現金（ACC_Cash）に入金せず（借方を $0.0 と記録）、システム外に抜き取る。
 
-* **偽陽性の可能性（正常であるという判断が誤っている可能性）:**
-  システムは「構造的な異常はない（正常）」と判定していますが、もしこの未回収の売掛金や現金のマイナス拡大が、「経営陣による意図的かつ巧妙な資金の私的流用（実体のない会社への架空販売を通じた資金還流や、経費の付け替え）」によって引き起こされている場合、このNORMAL判定は「巧妙な不正を見逃した偽陰性（False Negative）」となります。
+TLUの前処理エンジンは、この「消滅した質量」を計算上補い、物理的閉鎖系を維持するために、メモリ上に**特設ノード（`UNKNOWN_LEAK`）を動的生成**し、消失分をそこに流し込みます。これがどのように力学的悲鳴として現れるかを以降の章で証明します。
+
+## 4. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
+
+### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
+
+![Sample 2 Macro Forensics](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
+
+上段のグラフ「System Conservation Residual」において、断続的なスパイク（最大 `407.89`）が発生しています。これは「システム外へ質量が消失した」ことを示す決定的な数学的署名です。
+
+横領の発生瞬間（第5週）、健康な「モザイク模様」だったシステムの剛性行列（サスペンション）が、ドス黒い赤に染まる **Rigid Lock（絶対硬直 ＝ 資金ショートによるシステムの完全停止状態）** を起こします。弾力性を失ったシステムは通常の営業活動を吸収できず、3Dマップ後半において `1e9`（10億）スケールの破滅的な異常共振（ノッキング ＝ システムの制御不能な暴走）を引き起こしました。0.19%の微小な横領が、システム全体の力学構造を破滅させる証明です。
+
+**【異常系の深層読解：剛性行列のタイムラプスと外力の共振】**
+![Sample 2 External Force 3D](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_6__3d_dynamics_external_force.png)
+
+* **1枚目【始点】**: `t.00000` (正常なモザイク模様)
+* **2枚目【変化の直前】**: `t.00003` (第4週)
+* **3枚目【変化の当該時点】**: `t.00004` (第5週: 横領発生瞬間、絶対硬直)
+* **4枚目【変化の直後】**: `t.00005` (第6週)
+* **5枚目【終点】**: `t.00051` (第52週: 破滅的共振)
+
+![Sample 2 Structural Stiffness for Week 1](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+![Sample 2 Structural Stiffness for Week 4](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00003.png)
+![Sample 2 Structural Stiffness for Week 5](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00004.png)
+![Sample 2 Structural Stiffness for Week 6](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00005.png)
+![Sample 2 Structural Stiffness for Week 52](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00051.png)
+
+### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+
+第5週の画像において、`02: ACC_Cash` から `09: UNKNOWN_LEAK` に向かって極めて細い青い矢印が伸びています。これは過去に存在しなかった未知のノードへの流出であるため、統計学的な標準偏差を持たず、Z-Score（過去の平均からの突出度合い）ベースのエッジストレス計算では「正常（青色）」として透明化されてしまうという統計的盲点を浮き彫りにしています。システム全体のトポロジーの崩壊度合いは最大スペクトル半径の推移でも確認できます。
+
+![Sample 2 System Stability](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/004_1_2__system_stability.png)
+
+* **1枚目【始点】**: `t.00000`
+* **2枚目【変化の直前】**: `t.00003` (第4週)
+* **3枚目【変化の当該時点】**: `t.00004` (第5週: 未知ノードへの流出発生)
+* **4枚目【変化の直後】**: `t.00005` (第6週)
+* **5枚目【終点】**: `t.00051` (第52週)
+
+![Sample_2_Embezzlement_Leak Network Topology W1](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00000.png)
+![Sample_2_Embezzlement_Leak Network Topology W4](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00003.png)
+![Sample_2_Embezzlement_Leak Network Topology W5](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00004.png)
+![Sample_2_Embezzlement_Leak Network Topology W6](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00005.png)
+![Sample_2_Embezzlement_Leak Network Topology W52](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00051.png)
+
+### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+
+質量保存則が破綻し資金が漏れ出しているため、システム本来の内部エネルギー（純残高）が少しずつ削り取られ、自由エネルギー（＝システムが健全に成長するための活動余力）の成長が阻害されている（あるいは意図せぬ歪みが生じている）様子が観察されます。
+
+![Sample 2 Thermodynamics](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+
+### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+
+「$0.0（あるべき資金がない）」という無の空間を、TLUは `UNKNOWN_LEAK` への質量移動として幾何学的に反転させます。第5週や第9週の初期犯行時、周囲から完全に独立した「異次元の鋭いスパイク（黄緑色）」として消えた資金の痕跡が視認できます。未知のブラックホール（`UNKNOWN_LEAK`）への質量の消失は、システムが前提としていた確率分布を強烈に歪めます。情報幾何学的変位（KL Drift ＝ 未知の横領ルートの出現による過去の常識の崩壊）においても、横領が発生した週において明確な情報の崩壊（スパイク）が観測されています。
+
+![Sample 2 3D Z-Score](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+![Sample 2 3D KL Drift](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+
+## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
+
+* **偽陽性の可能性:** TLUの物理エンジンは「仕訳データ上で貸借が一致していない（質量が消えている）」という数学的事実のみを検出しています。これが意図的な「横領（犯罪）」なのか、単なる「経理担当者の入力ミス（片端入力）」や「システム間のAPI連携エラーによるデータ欠落」なのかは、データだけでは断定できません。
 * **追加検証要件:**
-  1. 未回収となっている売掛金（AR）の取引先リストを抽出し、それらがペーパーカンパニーや関連当事者（経営者の親族企業など）ではないことを与信調査で確認する。
-  2. 現金勘定のマイナス（当座借越）を補填している実際の資金源（外部からの借り入れ等）が、適正な決済・承認を得ているか確認する。
-* **追加調査・検証:**
-  この検知結果は、システムのメタ認知能力が向上し、より精緻な偽陽性の排除（Publication Bias Correction）に成功したことを証明しています。しかし、念のため上記検証要件 1. について、対象ノードのネットワークトポロジーを確認し、不自然なハブ（不自然に多額の未回収を抱える単一ノード）が存在しないかをサポート・ダイアグノスティクス（グラフ解析）で目視確認することを推奨します。
+  特定された取引ID（`E_000213` 等）に関する実際の銀行口座の入出金明細（Bank Statements）と、販売管理システム上の消込記録を突き合わせてください。現金出納帳と実際の金庫内の現金残高の実査（Cash Count）を直ちに実施し、物理的な現金が本当に消失しているかを確認してください。

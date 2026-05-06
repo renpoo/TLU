@@ -18,9 +18,9 @@ To understand the systemic health of the organization, TLU calculates four globa
 * **Entropy ($S$):** Calculated using Shannon Entropy on the distribution of flux. It measures the "disorder" or complexity of the allocation rules. A sudden spike in Entropy often precedes a structural regime shift or a breakdown of established processes.
 * **Free Energy ($F$):** Defined as $F = U - T \cdot S$. This is the most critical metric for leadership. It represents the actual potential of the system to do *useful work*, after subtracting the energy lost to chaos ($S$) and volatility ($T$). An organization with high Internal Energy but low Free Energy is highly active but highly inefficient—it is essentially a space heater.
 
-![001_1_1__thermodynamics_dashboard](../readme_plots/001_1_1__thermodynamics_dashboard.png)
-![001_1_2__thermodynamics_energy_stack](../readme_plots/001_1_2__thermodynamics_energy_stack.png)
-![001_1_3__thermodynamics_ts_diagram](../readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+![001_1_1__thermodynamics_dashboard](../../samples/Sample_0_Healthy/readme_plots/001_1_1__thermodynamics_dashboard.png)
+![001_1_2__thermodynamics_energy_stack](../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![001_1_3__thermodynamics_ts_diagram](../../samples/Sample_0_Healthy/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 ## 2. Local Thermodynamics (001_1_2)
 *Implementation: `src/filters/_001_1_2_filter_local_thermodynamics.py`*
@@ -31,10 +31,10 @@ The macro state variables can be projected down to individual nodes to identify 
 * **Local Complexity ($s_i$):** Does this node distribute its outputs to 2 predictable targets, or 50 random ones? High local entropy indicates a node burdened with complex, scattered responsibilities.
 * **Local Volatility ($t_i$):** How erratic is the flow through this specific node? Nodes with high local temperature are often bottlenecks suffering from inconsistent inputs.
 
-![001_1_2_1__3d_local_entropy](../readme_plots/001_1_2_1__3d_local_entropy.png)
-![001_1_2_2__3d_local_temperature](../readme_plots/001_1_2_2__3d_local_temperature.png)
-![001_1_2_3__local_thermo_volatility](../readme_plots/001_1_2_4__local_thermo_volatility.png)
-![001_1_2_4__local_thermo_complexity](../readme_plots/001_1_2_5__local_thermo_complexity.png)
+![001_1_2_1__3d_local_entropy](../../samples/Sample_0_Healthy/readme_plots/001_1_2_1__3d_local_entropy.png)
+![001_1_2_2__3d_local_temperature](../../samples/Sample_0_Healthy/readme_plots/001_1_2_2__3d_local_temperature.png)
+![001_1_2_3__local_thermo_volatility](../../samples/Sample_0_Healthy/readme_plots/001_1_2_4__local_thermo_volatility.png)
+![001_1_2_4__local_thermo_complexity](../../samples/Sample_0_Healthy/readme_plots/001_1_2_5__local_thermo_complexity.png)
 
 ## 3. Statistical Fluctuations and Time Lag (001_2_1 & 001_2_2)
 *Implementation: `src/filters/_001_2_1_filter_lag_matrix.py`*
@@ -44,8 +44,8 @@ In complex systems, cause and effect are rarely instantaneous. A marketing inves
 * **Cross-Correlation Lag:** By calculating the Pearson correlation coefficient between two time-series signals while shifting one along the time axis (lag), TLU identifies the exact "phase shift" where the two waveforms align perfectly.
 * **The Full Lag Matrix:** TLU computes this optimal time lag for every single possible node pair ($N \times N$) in the network. This uncovers the true causal delays across the organization, distinguishing between immediate operational impacts and long-term strategic echoes.
 
-![001_2_1_1__lag_matrix_correlation](../readme_plots/001_2_1_1__lag_matrix_correlation.png)
-![001_2_1_2__lag_matrix_optimal_lag](../readme_plots/001_2_1_2__lag_matrix_optimal_lag.png)
+![001_2_1_1__lag_matrix_correlation](../../samples/Sample_0_Healthy/readme_plots/001_2_1_1__lag_matrix_correlation.png)
+![001_2_1_2__lag_matrix_optimal_lag](../../samples/Sample_0_Healthy/readme_plots/001_2_1_2__lag_matrix_optimal_lag.png)
 
 ## 4. Business Implications
 

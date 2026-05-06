@@ -1,57 +1,101 @@
-# 🩺 株式市場 ディープダイブ分析レポート（ユーザー/ネットワーク視点）
+# Sample 7: 株式市場における相場操縦（直接グラフ: 共謀グループの特定 / 馴合売買の熱力学）
 
 > [!NOTE]
-> **概念実証実験にともなう免責事項**
-> 本レポートで分析されるデータは実世界の企業のものではありません。Sample 6 と同じ株式市場データを使用していますが、中間ノードである「株式（STK）」をバイパスし、「ユーザー（USR）間の直接的な資金のやり取り」としてネットワークを再構成（射影）したダミーデータです。
+> **【重要】Sample 6 と Sample 7 の関係性と対象アノマリー（相場操縦）について**
+> 本サンプル（Sample 7）は、前サンプル（Sample 6）と完全に同一の株式市場のダミーデータから派生した一対の実験セットの後編です。
+> * **Sample 6（前作）:** ログを「ユーザーと銘柄」の二部グラフ（Bipartite Graph）に射影したもの。**「どの銘柄が操縦（水増し）されているか」**という視点（左からの景色）を検証しました。
+> * **Sample 7（本作）:** 同じログを、銘柄を捨象して「ユーザーからユーザーへの直接の資金移動」に射影したもの。**「誰と誰が結託して馴合売買を行っているのか」**という犯行グループの輪郭（右からの景色）を検証します。
 
 ---
 
 # 🔬 メタ解析 統合レポート (Meta-Analysis Synthesis Report / Laboratory Findings)
 
 ## 1. エグゼクティブ・サマリー
+本システムは、Sample 6 と同様に**「極限の位相幾何学的振動（Topological Feedback Loop）」**と**「熱力学的エネルギーの完全崩壊（Thermodynamic Energy Depletion）」**を発症している（HIGH Severity）。Sample 6 が「操縦されている銘柄」を暴き出したのに対し、この「ユーザー間直接グラフ」は、**「誰と誰が裏で結託して資金を還流させているか」**という犯行グループ（共謀シンジケート）の直接的な構造を、スペクトル半径 1.0 の極限振動として白日の下に晒している。
 
-市場システム全体は稼働し続けていますが、特定のアクター（ユーザー）間で完全に閉じた**「共謀ネットワーク（馴れ合い取引のシンジケート）」**が確立されています。彼らは自分たちの間で超高速の自動取引プログラムを用いた資金のピンポンゲームを実行しており、市場の流動性を局所的に独占し、浪費しています。
+## 2. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
 
-## 2. コア・パソロジー（主要な病理所見）
+ここでは「ユーザー（投資家）」をノードとし、ユーザー間の資金移動をエッジとして集計した結果を従来のダッシュボードで確認する。
 
-### 🟠 異常 1: 位相幾何学的フィードバックループ（共謀 / シンジケートの形成）
+**【全期間の累積フロー (P/L Waterfall) & 貸借対照表 (B/S)】**
+![Sample 7 PL Waterfall](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 7 BS Block](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_0_1__BS_Block_Total.png)
 
-* **重要度:** HIGH
-* **物理的証拠:** 最大スペクトル半径 (Max Spectral Radius) `1.0000` (閾値 `>= 0.9` を超過)。
-* **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 System Stability](../../../readme_plots/004_1_2__system_stability.png)
-* **【🔴 本サンプルの異常状態】**
-![System Stability & Spectral Radius](../../../readme_plots/Sample_7_Market_Users_Weekly/004_1_2__system_stability.png)
-* **💡 グラフの読み方（経理・監査・コンサルタント向け）:** 
-  * 正常系（Sample 0）では赤色の線（スペクトル半径）が低く安定していますが、本サンプルでは異常閾値（0.9）を突き破って天井（1.0）に張り付いています。これは不特定多数が交わる健全な市場ではなく、特定のユーザー同士が閉鎖的なコミュニティ（シンジケート）を作り、その中だけでボール（資金や株）を永遠にパスし続けていることの決定的な数学的証明です。
-* **解説:** ユーザー間（売り手 $\to$ 買い手）のネットワークにおいて、資金が外部（他の一般投資家）へ流出することなく、特定のユーザー群の中だけで無限に循環する「閉鎖ループ」が形成されています。これは、彼らが共謀して「お互いの間でだけ株を売買し合い、出来高を水増ししている」ことの数学的証明です。
+**【第52週時点の各ユーザーの純増減額（P/L）サマリー】**
+* `USR_001`: **+$4,225,702**（資金流入超過）
+* `USR_002`: **+$8,706,571**
+* `USR_004`: **-$12,385,805**（資金流出超過）
+* `USR_005`: **-$6,925,827**
 
-### 🟠 異常 2: 熱力学的な死（シンジケートによるエネルギーの浪費）
+単なる口座残高やユーザーの損益（P/L）のランキングだけを見ていても、「USR_001は利益を出している上手な投資家」「USR_004は大損している投資家」という表面的な結果しか分からない。背後で「USR_001とUSR_006が秒間何十回も同じ資金をキャッチボールして出来高を水増ししている」という共謀の事実は、この静的な残高一覧からは完全に抜け落ちてしまう。
 
-* **重要度:** HIGH
-* **物理的証拠:** 相対的自由エネルギー比率 (Relative Free Energy) `-14.0092` (異常閾値 `< -0.1` を致命的に超過)。
-* **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 Thermodynamics Energy Stack](../../../readme_plots/001_1_2__thermodynamics_energy_stack.png)
-* **【🔴 本サンプルの異常状態】**
-![Thermodynamic Energy Depletion](../../../readme_plots/Sample_7_Market_Users_Weekly/001_1_2__thermodynamics_energy_stack.png)
-* **💡 グラフの読み方（経理・監査・コンサルタント向け）:** 
-  * 正常系では白色の線（自由エネルギー＝市場の健全な活動余力）がプラス圏内で推移しますが、本サンプルではマイナス圏へと深く沈み込んでいます。これは「巨大な取引活動が行われているにもかかわらず、その取引は誰の純資産も増やしていない（経済的価値を生んでいない）」ことを示し、システムがアルゴリズム取引の無意味な摩擦熱によってエネルギーを浪費している状態を視覚化しています。
-* **解説:** 【超重要所見】最新の Velocity Manifold（速度多様体）エンジンは、このユーザー間ネットワークの摩擦によるエネルギー枯渇を正確に捉えました。例えば、特定のユーザーは数億ドル規模の巨大な取引ボリュームを発生させていますが、彼ら自身の最終的な「純資産の変動（利益）」は取引量に比して極端に小さく、ゼロサムに調整されています。彼らの活動は市場に価値（ワーク）を生み出しておらず、アルゴリズムによる「摩擦熱（Heat）」としてシステムのエネルギー（流動性）を無駄に浪費し続けています。
+## 3. 物理的病跡の特定（Fundamental Pathophysiology）
+本サンプルの根本原因は、特定のユーザー群による「馴合売買（Collusive Trading / Matched Orders）」の共謀である。
 
-### 🟢 その他（正常判定および Z-Score の敗北）
+* **特定された証拠:**
+  銘柄という仲介ノードを捨象し、資金の流れだけを追跡した結果、`USR_001` と `USR_006` の2名間で、わずか2.5秒の間に約3000ドル×9回の巨大な資金キャッチボールが直接行われている事実が特定された。これがシステム全体の熱力学を崩壊させている共謀グループ（Clique）の核である。
 
-* **ミクロ・フォレンジック:** 最大局所 Z-Score `0.00` (NORMAL)。Sample 6 同様、HFT（高頻度取引）によるノイズがシステム全体を支配しているため、ネットワーク全体の分散が極大化し、単独の外れ値を捉える Z-Score は完全に無効化されています。
+## 4. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
 
-## 3. アクション・プラン（市場監視への翻訳）
+### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
 
-特定の株式ではなく、「直接的なユーザー間の資金フロー」を追跡することで、単に自分たちの間で資金をリサイクルしているだけの詐欺的グループ（シンジケート）が特定されました。
+Sample 6と同様に、Wash Trade は市場内で完結するため質量保存則の違反（マクロ残差）は発生しない。しかし、特定のユーザー間での異常な資金還流により、システムの剛性行列は局所的な共振と絶対硬直（Rigid Lock ＝ 外部資金が一切流入しない閉鎖的な共振・フリーズ状態）を起こしている。
 
-**【アクション・プラン】**
-取引所システム全体を停止したり、特定の株式を上場廃止にしたりする必要はありません。直ちにこの「完全に閉じた取引ループ」を形成している違反ユーザーたちの証券口座をピンポイントで特定して凍結し、コンプライアンス部門によるマネーロンダリングまたは相場操縦の調査を開始してください。
+![Sample 7 Macro Forensics](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample 7 External Force 3D](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_1_6__3d_dynamics_external_force.png)
 
-## 4. ⚠️ 反証可能性と検証要件（Falsification Analytics）
+* **1枚目【始点】**: `t.00000` (正常な剛性)
+* **2枚目【変化の直前】**: `t.00005` (第6週)
+* **3枚目【変化の当該時点】**: `t.00006` (第7週: 資金還流による硬直発生)
+* **4枚目【変化の直後】**: `t.00007` (第8週)
+* **5枚目【終点】**: `t.00051` (第52週)
 
-* **偽陽性の可能性（異常という判断が誤っている可能性）:**
-  もしこれらのユーザーアカウントが「同一の親会社に属する複数のマーケットメイク部門」であり、システム上の仕様として自己勘定間でのヘッジ取引が頻発している場合、このループは意図された正当なアービトラージ（裁定取引）である可能性があります（ビジネス上の偽陽性）。
-* **追加検証要件:**
-  この異常な循環ループを形成しているユーザー群のアカウント属性（KYCデータ）を調査してください。彼らが互いに資本関係のない独立した個人投資家であるにも関わらず、これほど完璧なタイミング（位相）と金額で資金を循環させている場合、それは明確な「共謀による相場操縦」と断定できます。
+![Sample 7 Structural Stiffness Week 1](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+![Sample 7 Structural Stiffness Week 6](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_2_1__structural_stiffness.t.00005.png)
+![Sample 7 Structural Stiffness Week 7](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_2_1__structural_stiffness.t.00006.png)
+![Sample 7 Structural Stiffness Week 8](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_2_1__structural_stiffness.t.00007.png)
+![Sample 7 Structural Stiffness Week 52](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_2_1__structural_stiffness.t.00051.png)
+
+### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+
+赤色の線（Max Spectral Radius ＝ 結託したユーザー間での資金キャッチボールの強度）が常に `1.0`（理論上の限界値）の天井に張り付いている。これは `User A -> User B -> User A` という直接的な資金のキャッチボール（還流ループ）が形成されていることを示す。特定のユーザー間で閉じた資金ループが形成され、それがシステム全体の共鳴を引き起こしているということは、完全に結託した相場操縦グループの存在を数学的に証明するものである。
+
+![Sample 7 System Stability](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/004_1_2__system_stability.png)
+
+* **1枚目【始点】**: `t.00000`
+* **2枚目【変化の直前】**: `t.00005`
+* **3枚目【変化の当該時点】**: `t.00006`
+* **4枚目【変化の直後】**: `t.00007`
+* **5枚目【終点】**: `t.00051`
+
+![Sample 7 Network Topology W1](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00000.png)
+![Sample 7 Network Topology W6](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00005.png)
+![Sample 7 Network Topology W7](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00006.png)
+![Sample 7 Network Topology W8](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00007.png)
+![Sample 7 Network Topology W52](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00051.png)
+
+### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+
+Sample 6 と同様の熱力学崩壊である。仮装売買（Wash Trade）は、ユーザーの「純残高（内部エネルギー）」をほとんど変化させずに「取引量（エントロピー/摩擦熱）」だけを無限大に発散させる。結果としてシステムの自由エネルギーが致命的なマイナス領域へ沈み込んでおり、熱力学的な死（Heat Death ＝ 実質的な価値移動がなく取引量だけが膨れ上がる異常状態）を迎えている。
+
+*(上: Sample 0 正常な経済成長 ／ 下: Sample 7 熱力学的な死)*
+![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 7 Thermodynamics](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+
+### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+
+Z-Score（過去の平均からの突出度合い）および情報幾何学的変位（KL Drift ＝ 共謀グループによる未知の異常な資金移動の発生）の3Dサーフェスにおいて、`USR_001` と `USR_006` と思われる特定ユーザー間で極端なスパイクが立ち並び、共謀グループの輪郭が明確に浮き彫りになっている。
+
+![Sample 7 3D Z-Score](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+![Sample 7 3D KL Drift](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+
+## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
+
+* **偽陽性の可能性:** HFT業者同士の偶発的なマッチングの可能性もゼロではないが、これほど閉じた資金還流ループが長期間維持されることは、意図的なアルゴリズムの結託（Wash Trade）以外には考えにくい。
+
+### 💡 なぜ同じデータで異なるプロジェクション（Sample 6 と Sample 7）を作るのか？
+TLUの強力な汎用性は、**「同じ生のトランザクションデータを、異なる空間（多様体）に射影（プロジェクション）することで、異なる視点の不正を立体的に暴き出せる」**点にある。
+* **Sample 6（二部グラフ: User <-> Stock）:** 規制当局が「操縦されている銘柄」を検知するためのビューである。
+* **Sample 7（直接グラフ: User <-> User）:** 捜査機関が「犯罪グループ（Clique）」の全体像と相関関係を直接的に洗い出すためのビューである。
+
+TLUの汎用物理エンジンは、トポロジーの定義を少し変えるだけで、金融市場における「銘柄の異常」と「共謀グループの異常」という2つの異なる側面を、全く同じ熱力学方程式とトポロジー解析で同時に摘発できることが証明された。

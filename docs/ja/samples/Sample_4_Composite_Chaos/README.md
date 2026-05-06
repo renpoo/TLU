@@ -1,56 +1,87 @@
-# Sample 4: 複合的なカオス (Composite Chaos)
+# Sample 4: 複合カオス（Composite Chaos - 粉飾と横領の多重発症）
 
 > [!NOTE]
 > **概念実証実験にともなう免責事項**
-> 本レポートで分析されるデータは実世界の企業のものではありません。検証を目的として、これまで個別に検証してきた複数の異常（循環取引、未回収・支払い遅延、貸借不一致エラー）を単一のネットワーク内に同時発生させたダミーデータです。
+> 本レポートで分析されるデータは実世界の企業のものではありません。検証を目的として、特定の病理学的状態を意図的に再現するために設計されたダミーデータです。本サンプル（Sample_4_Composite_Chaos）は、循環取引（架空売上のループ）と、横領・転記ミス（資金の物理的消失）という、全く異なる複数の病跡がシステム内で同時多発的に進行している「末期的な複合不全」を証明するためのものです。
 
 ---
 
 # 🔬 メタ解析 統合レポート (Meta-Analysis Synthesis Report / Laboratory Findings)
 
 ## 1. エグゼクティブ・サマリー
+本システム（金融ドメイン）は、複数の病理が同時進行する**複合的な構造崩壊（COMPOSITE 病跡 DETECTED）** を起こしており、極めて危険な状態（CRITICAL）と診断される。第1にシステム内から資金が虚空へ消失する「横領（Embezzlement）」が進行し、第2に循環取引（Wash Trading）による大規模な自己強化ループが形成されている。「架空売上で利益を水増し（粉飾）しながら、裏口から現金を抜き取る（横領）」という、組織的かつ極めて悪質な末期症状であることが物理・数理の両面から証明された。
 
-本システム（Sample_4_Composite_Chaos: 金融ドメイン）は完全にコントロールを失っており、**複数の致命的な構造欠陥が同時多発（オーバーラップ）** していることを検知しました。AIメタ診断は、カオスと化したネットワークの中から「循環取引（Wash Trade）」と「貸借不一致エラー（Unbalanced Mistake）」という全く異なる2つの病理を、独立した物理法則の破壊として同時に分離・特定しました。
+## 2. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
 
-## 2. コア・パソロジー（主要な病理所見）
+**【第52週 損益計算書 (P/L) & 貸借対照表 (B/S)】**
+![Sample 4 PL Waterfall](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 4 BS Block](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_0_1__BS_Block_Total.png)
 
-### 🔴 異常 1: 貸借不一致による質量保存の崩壊 (Conservation Violation)
+従来の会計ソフトによる静的なスナップショットは、この「末期的な複合カオス」を全く検知できない。B/Sは貸借一致の原則を満たして完璧にバランスしており、P/L上は `$209,552.56` という異常に高い黒字を叩き出している（ Wash Trade による水増し ）。その裏で `$9,024.39` もの現金が不正に抜き取られているという事実は、静的で平坦な会計帳簿からはいかに容易に偽装されるかを示している。
 
-* **重要度:** CRITICAL
-* **物理的証拠:** 相対質量漏れ率 (Relative Leak Ratio) `0.0017` (閾値 `> 0.001` 超過)。最大残差 `2623.17` が `2020-W49` に発生。
-* **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 Macro Forensics](../../../readme_plots/002_2_1__macro_forensics_dashboard.png)
-* **【🔴 本サンプルの異常状態】**
-![Macro Forensics Dashboard](../../../readme_plots/Sample_4_Composite_Chaos/002_2_1__macro_forensics_dashboard.png)
-* **💡 グラフの読み方（経理・監査・コンサルタント向け）:** 
-  * 正常系では下の漏れ率（Leak Ratio）のグラフが完全にゼロ（平坦）ですが、異常状態では `2020-W49` に鋭いスパイク（突起）が発生しています。これが、片側だけの仕訳入力ミスなどによって「帳簿の貸借が崩壊した瞬間」です。
-* **解説:** システム内で「借り」と「貸し」のバランスが崩れ、資金が消失しています。財務諸表にも差額を埋めるための `UNKNOWN_LEAK: $17,295.03` が計上されており、会計システムとしての完全性が崩壊しています。
+## 3. 物理的病跡の特定（Fundamental Pathophysiology）
+本サンプルの根本原因は、ダミーデータ生成ロジックにおいて意図的に仕組まれた以下の2つの悪質なアルゴリズムの同時実行である。
 
-### 🟠 異常 2: 位相幾何学的フィードバックループ（循環取引）
+* **Evidence A: 循環取引（架空売上ループ）のスクリプト:**
+  `2020-01-31` (第5週) において、現金から資金を流出し、同額の架空売上を計上し、さらにそれを回収するという約 `$51,465` 規模の完全な循環ループを形成させた。
+* **Evidence B: 質量欠損（横領）のスクリプト:**
+  `2020-10-28` (第44週) において、貸方(現金流出) `$6,087.00` に対して借方(流入) `$0.0` とする「片端入力（横領）」を実行した。
 
-* **重要度:** HIGH
-* **物理的証拠:** 最大スペクトル半径 (Max Spectral Radius) `0.9550` (閾値 `>= 0.9` を大きく超過)。
-* **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 System Stability](../../../readme_plots/004_1_2__system_stability.png)
-* **【🔴 本サンプルの異常状態】**
-![System Stability & Spectral Radius](../../../readme_plots/Sample_4_Composite_Chaos/004_1_2__system_stability.png)
-* **💡 グラフの読み方（経理・監査・コンサルタント向け）:** 
-  * 正常系では赤色の線（スペクトル半径）が低く安定していますが、本サンプルでは異常閾値（`0.9`）を突破して高止まりしています。これは、上の「貸借の不一致（異常1）」とは全く独立して、「特定の取引先間で架空の請求書がグルグルと回り続けている（循環取引）」というもう一つの深刻な不正が同時に進行していることを視覚的に証明しています。
-* **解説:** ネットワーク内に架空の売上がループする閉鎖回路が形成されており、取引の波及効果が無限に増幅されています。ベースラインを逸脱して売上（`1,241,750.90`）と売掛金（`412,645.64`）が異常膨張しています。
+## 4. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
 
-### 🟢 その他（正常判定および Z-Score の敗北）
+### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
 
-* **熱力学（自由エネルギー）:** `0.8173` (NORMAL)。このデータには意図的な売掛金の未回収（Leak）も混入されていますが、TLU v2.0 の Velocity Manifold はこれを「構造的崩壊」ではなく「正常なビジネスの非効率」として正確に分離・除外しています。
-* **ミクロ・フォレンジック:** 最大局所 Z-Score `0.00` (NORMAL)。システム全体がカオス（複数の不正やエラー）に陥ったことでネットワーク全体の「ノイズの分散」が極大化し、致命的なエラーが存在するにも関わらず、単変量の異常値検知（Z-Score）は完全に機能不全に陥っています。
+相対質量漏れ率 `0.0041` の激しいスパイク（最大 `6087.0`）が断続的に発生し、横領の証拠（質量の消失）を示している。さらに、剛性行列のタイムラプスはシステムの多重崩壊を物語る。第5週の循環取引開始時は既存ノード間のため巧妙に偽装されているが、第8週の初期横領で `UNKNOWN_LEAK` に色が灯る。そして第44週に巨大横領が発生した瞬間、現金ノードとの間に決定的な亀裂が生じ、剛性行列が完全に破壊された「複合カオス」（＝機能不全と資金ショートの同時発生）へと陥っている。
 
-## 3. アクション・プラン（臨床/監査への翻訳）
+![Sample 4 Macro Forensics](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample 4 External Force 3D](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_1_6__3d_dynamics_external_force.png)
 
-このサンプルの真価は、**「全く異なる種類の異常が同時に発生していても、それぞれが独立した物理法則（質量、トポロジー）を破壊するため、AIがそれらを分離して特定できる」** という TLU の圧倒的な優位性の証明にあります（Z-Score のような統計モデルがカオスの中で完全に敗北したのとは対照的です）。
-システムは修復不能な状態にあります。B/Sが崩れている箇所（`2020-W49` の仕訳）を修正しつつ、直ちに売掛金ループ（特定の取引先とのキャッチボール）を特定するための強制監査を実施してください。
+* **1枚目【始点】**: `t.00000` (正常な剛性)
+* **2枚目【変化の直前】**: `t.00003` (第4週)
+* **3枚目【変化の当該時点】**: `t.00004` (第5週: 循環取引開始)
+* **4枚目【変化の直後】**: `t.00043` (第44週: 巨大横領と亀裂)
+* **5枚目【終点】**: `t.00051` (第52週: 完全崩壊)
 
-## 4. ⚠️ 反証可能性と検証要件（Falsification Analytics）
+![Sample 4 Structural Stiffness for Week 1](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+![Sample 4 Structural Stiffness for Week 4](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_1__structural_stiffness.t.00003.png)
+![Sample 4 Structural Stiffness for Week 5](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_1__structural_stiffness.t.00004.png)
+![Sample 4 Structural Stiffness for Week 44](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_1__structural_stiffness.t.00043.png)
+![Sample 4 Structural Stiffness for Week 52](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_1__structural_stiffness.t.00051.png)
 
-* **偽陽性の可能性:**
-  異常2（スペクトル半径の発散）については、特定の大口顧客との超高頻度な正当取引である可能性（ビジネス上の偽陽性）がわずかに残されています。しかし、異常1（質量保存の崩壊）は複式簿記においていかなるビジネス上の正当化も不可能な絶対的エラーです。
+### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+
+Max Spectral Radius が `0.9864` に達し、危険閾値（0.6）を突破して発散寸前の高止まりを見せている（＝異常な資金還流と自己強化ループの証拠）。第5週において、Cash、Sales_Revenue、Accounts_Receivableの3点間に極端に太いエッジによる「自己強化的な三角形ループ」が形成され、架空の売上を無限に水増しする物理的メカニズムが視認できる。また第44週には、正規ノードから `UNKNOWN_LEAK` へ向けて極端に太い流出エッジが形成されている。
+
+![Sample 4 System Stability](../../../../samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
+
+* **1枚目【始点】**: `t.00000` (第1週)
+* **2枚目【変化の直前】**: `t.00003` (第4週)
+* **3枚目【変化の当該時点】**: `t.00004` (第5週: 三角形ループ形成)
+* **4枚目【変化の直後】**: `t.00043` (第44週: 巨大流出エッジ)
+* **5枚目【終点】**: `t.00051` (第52週)
+
+![Sample 4 Network Topology Week 1](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00000.png)
+![Sample 4 Network Topology Week 4](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00003.png)
+![Sample 4 Network Topology Week 5](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00004.png)
+![Sample 4 Network Topology Week 44](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00043.png)
+![Sample 4 Network Topology Week 52](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00051.png)
+
+### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+
+循環取引と横領の相乗効果により、内部エネルギー（純残高）が削り取られながら摩擦熱（$T \Delta S$ ＝ 無駄な取引コストと流出）だけが激増しており、自由エネルギーがマイナス圏へ沈み込む熱力学的な死（Heat Death ＝ 組織体力の完全な枯渇）が観測されている。
+
+![Sample 4 Thermodynamics](../../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+
+### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+
+Sample 0の平坦な海とは異なり、循環取引による売上水増しノード群が全体的に波立っている（過熱）。さらに、特定の時刻に `UNKNOWN_LEAK` ノードが鋭利なスパイク（質量の消失）として突き出ており、Z-Score（過去の平均からの突出度合い）およびKL Drift（＝過去の取引パターンからの完全な逸脱）においても確率分布の破壊が明確に示されている。
+
+![Sample 4 3D Z-Score](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+![Sample 4 3D KL Drift](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+
+## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
+
+* **偽陽性の可能性:** ここまで明確に複数の破壊的トランザクション（金額の消失と自己資金の還流）が記録され、かつ構造剛性が完全に破壊されている以上、システムの「単なる過失」である可能性は極めて低い。
 * **追加検証要件:**
-  2つの事象が「偶然同時に起きた」のか、あるいは「循環取引（Wash Trade）を隠蔽する過程で、犯人が手作業で仕訳を改ざんし、その際に貸借不一致（Unbalanced Mistake）のボロを出した」のか、事象間の因果関係（相関）を調査する必要があります。`2020-W49` のエラー・エントリーの作成者と、売掛金を循環させている口座の管理者が同一人物でないかを確認してください。
+  1. `E_002950`（10/28, `$6,087.0` の不明出金）について、決済承認者と実際の振込先口座を即座に特定すること。
+  2. `2020-01-31` 等に発生している約5万ドル規模の売上先企業について、法人登記やオフィスの実態確認（ペーパーカンパニーでないかの確認）を行い、外部のフォレンジックチームへ調査を委ねることを強く推奨する。

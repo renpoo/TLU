@@ -77,8 +77,8 @@ def main():
 
     # 3. Decision Tree Logic (Using SCALE-INVARIANT Thresholds)
     # Dimensionless Ratios
-    T_REL_LEAK = 0.001          # 0.1% systemic mass leak
-    T_SPECTRAL = 0.90           # Nearing 1.0 instability
+    T_REL_LEAK = 1e-6           # Zero Tolerance for systemic mass leak
+    T_SPECTRAL = 0.60           # 60% Loop dominance (Wash Trade/Resonance)
     T_REL_FREE_ENERGY = -0.10   # Free energy drops to -10% of total activity
     T_Z_SCORE = 3.0             # 3 Sigma anomaly
     

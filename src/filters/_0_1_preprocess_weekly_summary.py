@@ -31,13 +31,16 @@ def main():
     debits = df[df['Debit'] > 0].groupby('Entry_ID').agg({'Account_Name': 'first', 'Dept_Name': 'first', 'Debit': 'sum', 'Week': 'first'}).reset_index()
     debits = debits.rename(columns={'Account_Name': 'Tgt_Account', 'Dept_Name': 'Tgt_Dept', 'Debit': 'Debit_Amt'})
 
-    credits = df[df['Credit'] > 0].groupby('Entry_ID').agg({'Account_Name': 'first', 'Dept_Name': 'first', 'Credit': 'sum'}).reset_index()
+    credits = df[df['Credit'] > 0].groupby('Entry_ID').agg({'Account_Name': 'first', 'Dept_Name': 'first', 'Credit': 'sum', 'Week': 'first'}).reset_index()
     credits = credits.rename(columns={'Account_Name': 'Src_Account', 'Dept_Name': 'Src_Dept', 'Credit': 'Credit_Amt'})
 
     # Join on Entry_ID (Outer join to catch unmatched entries)
-    edges = pd.merge(debits, credits, on='Entry_ID', how='outer')
+    edges = pd.merge(debits, credits, on='Entry_ID', how='outer', suffixes=('_dr', '_cr'))
     edges['Debit_Amt'] = edges['Debit_Amt'].fillna(0)
     edges['Credit_Amt'] = edges['Credit_Amt'].fillna(0)
+    
+    # Resolve Week (take from debit, if missing take from credit)
+    edges['Week'] = edges['Week_dr'].combine_first(edges['Week_cr'])
 
     # Resolve Base Amount (Min of Debit and Credit)
     edges['Base_Amount'] = edges[['Debit_Amt', 'Credit_Amt']].min(axis=1)

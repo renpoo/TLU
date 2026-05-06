@@ -25,7 +25,7 @@ The target system (`Sample_0_Healthy`) is structurally sound and mathematically 
 * **Severity:** HIGH
 * **Physical Evidence:**
   The maximum local Z-Score reached **121.13** (Threshold: 3.0), indicating extreme strain on a specific node. However, all macro-systemic indicators (Leak Ratio: 0.0, Spectral Radius: 0.0) are perfectly normal, confirming this is not a systemic collapse.
-  ![Micro Z-Score Heatmap](readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+  ![Micro Z-Score Heatmap](../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
   * **💡 How to Read the Graph (Visual Cues):** Look at the Micro Z-Score Heatmap. You will see a single cell glowing bright red against a mostly dark/blue background. This `RdBu_r` colormap highlights isolated anomalies where a specific node experiences extreme mathematical stress (Z-Score > 3.0) without destabilizing the whole matrix.
 * **Financial Evidence:**
   The Balance Sheet is perfectly balanced (Total Assets: $120,500), and Net Income is positive ($46,432). However, a detailed inspection reveals that the `ACC_Inventory` account holds a severe negative balance of **-$108,610**. In physical accounting, a negative inventory balance is impossible and directly correlates with the explosive Z-Score.

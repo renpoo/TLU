@@ -6,7 +6,7 @@ This phase treats the ledger like a radio signal or a vibrating machine. By anal
 
 ### 1. Phase Drift Heatmap (`005_1_2__phase_drift_heatmap.png`)
 
-![005_1_2__phase_drift_heatmap](../readme_plots/005_1_2__phase_drift_heatmap.png)
+![005_1_2__phase_drift_heatmap](../../samples/Sample_0_Healthy/readme_plots/005_1_2__phase_drift_heatmap.png)
 
 * **📊 Visual Structure**: A matrix heatmap using the `RdBu_r` colormap, where the X-axis is time (e.g., weeks) and the Y-axis lists specific account pairs (e.g., `Accounts_Receivable vs Cash`).
 * **📐 Physics Theory**: Cross-Correlation Signal Processing. It measures the "time lag" (phase shift) between two correlated signals. If Sales usually turn into Cash 3 weeks later, the baseline lag is 3.
@@ -14,13 +14,13 @@ This phase treats the ledger like a radio signal or a vibrating machine. By anal
   * Look for deep **Red** or deep **Blue** cells appearing in the timeline.
   * **Red** = Lag is stretching (it's taking longer than normal).
   * **Blue** = Lag is compressing (it's happening faster than normal).
-* **💼 Business Translation**: **Severe Cash Flow Bottlenecks**. If the AR vs Cash line suddenly turns bright Red, it means "Collections are slowing down." Even if the total B/S assets look healthy, the actual velocity of cash conversion is grinding to a halt, serving as a powerful early warning for an impending liquidity crisis.
+* **💼 Business Translation**: **Severe Cash Flow Bottlenecks**. If the Accounts_Receivable vs Cash line suddenly turns bright Red, it means "Collections are slowing down." Even if the total B/S assets look healthy, the actual velocity of cash conversion is grinding to a halt, serving as a powerful early warning for an impending liquidity crisis.
 * **💡 Concrete Example (from Samples)**:
   * **Sample_6 & Sample_9 (Fabricated Synchronization/Hypersynchrony)**: Healthy economic or biological activities always contain natural "delays (viscosity) and variance." However, if a human manually tampers with multiple accounts simultaneously at month-end to make the books look clean, or if a market is subjected to organized price manipulation, the natural phase drift of these accounts unnaturally snaps to "0.0 (perfect synchronization)." This Hypersynchrony is the signature of an "invisible hand" (human manipulation) artificially aligning the data.
 
 ### 2. Resonant Frequency (`005_1_1__resonant_frequency.png`)
 
-![005_1_1_resonant_frequency](../readme_plots/005_1_1_resonant_frequency.png)
+![005_1_1_resonant_frequency](../../samples/Sample_0_Healthy/readme_plots/005_1_1_resonant_frequency.png)
 
 * **📊 Visual Structure**: A spectral density graph (like an audio equalizer) showing peaks at specific frequencies.
 * **📐 Physics Theory**: Fourier Transform. Identifies the natural "vibrational frequencies" of the organization (e.g., bi-weekly payroll cycles, quarterly tax payments).
@@ -30,7 +30,7 @@ This phase treats the ledger like a radio signal or a vibrating machine. By anal
 
 ### 3. Fractal Noise Spectrum (`005_2_1__fractal_noise_spectrum.png`)
 
-![005_2_1_fractal_noise_spectrum](../readme_plots/005_2_1_fractal_noise_spectrum.png)
+![005_2_1_fractal_noise_spectrum](../../samples/Sample_0_Healthy/readme_plots/005_2_1_fractal_noise_spectrum.png)
 
 * **📊 Visual Structure**: A scatter plot on a logarithmic scale showing the Power Spectral Density (PSD) decay.
 * **📐 Physics Theory**: Power Law / 1/f Noise Analysis. Healthy natural systems (including human organizations) exhibit $1/f$ (pink noise) scaling. Pure randomness is $1/f^0$ (white noise).

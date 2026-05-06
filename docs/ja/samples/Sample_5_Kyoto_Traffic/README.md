@@ -1,8 +1,8 @@
-# Sample 5: 仮想京都交通グリッド (Virtual Kyoto Traffic Grid)
+# Sample 5: 異分野ドメインへの適用（Virtual Kyoto Traffic - 交通網での流動と熱力学崩壊）
 
 > [!NOTE]
 > **概念実証実験にともなう免責事項**
-> 本レポートで分析されるデータは金融元帳（財務データ）ではありません。TLUの「ドメイン非依存性（汎用性）」を証明するため、京都市内の交差点（四条烏丸など）をノードとし、車両の移動をトランザクションと見立てて生成された「都市交通グリッド」のダミーデータです。
+> 本レポートで分析されるデータは実世界の企業のものではありません。また、本サンプル（Sample_5_Kyoto_Traffic）は**「会計データ（お金の流れ）」ですらありません**。京都市中心部のグリッド状の交差点を行き交う「自動車の交通量」をシミュレートした特殊な非金融データです。TLUが会計領域を超え、あらゆるネットワーク流動（物流・交通・通信）に適用可能な「汎用物理エンジン」であることを証明するための極限テストです。
 
 ---
 
@@ -10,51 +10,79 @@
 
 ## 1. エグゼクティブ・サマリー
 
-本システム（Sample_5_Kyoto_Traffic: 交通ドメイン）は、完全にコントロールを失った**「極度の交通マヒ（完全なグリッドロック）」**に陥っています。TLUは金融システムにおける「循環取引（Wash Trade）」と「隠蔽された横領（Embezzlement）」を検知するのと全く同じ数学的アルゴリズムを用いて、都市における「車の無限ループ（スペクトル発散）」と「渋滞によるエネルギーの無駄な浪費（熱力学的枯渇）」を正確に特定しました。
+本システム（交通・モビリティドメイン）は、システム全体が**「熱力学的エネルギーの完全枯渇（Thermodynamic Energy Depletion）」**および**「極限の位相幾何学的振動（Topological Feedback Loop）」**を発症しており、都市交通網として完全に麻痺（デッドロック）した状態（HIGH Severity）にあると診断される。局所的な交差点において質量の非保存が起きており、有意義な流動性（自由エネルギー）がマイナス領域深くまで沈み込み、システムは熱力学的な死（Heat Death）を迎えている。
 
-## 2. コア・パソロジー（主要な病理所見）
+## 2. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
 
-### 🟠 異常 1: 位相幾何学的フィードバックループ（完全なグリッドロック）
+**【第52週 損益計算書 (P/L) & 貸借対照表 (B/S)】**
+![Sample 5 PL Waterfall](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 5 BS Block](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__BS_Block_Total.png)
 
-* **重要度:** HIGH
-* **物理的証拠:** 最大スペクトル半径 (Max Spectral Radius) `1.0000` (閾値 `>= 0.9` を超過し、数学的限界点に到達)。
-* **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 System Stability](../../../readme_plots/004_1_2__system_stability.png)
-* **【🔴 本サンプルの異常状態】**
-![System Stability & Spectral Radius](../../../readme_plots/Sample_5_Kyoto_Traffic/004_1_2__system_stability.png)
-* **💡 グラフの読み方（経理・監査・コンサルタント向け）:** 
-  * 正常系（Sample 0）は金融データですが、赤色の線（スペクトル半径）が低く安定しています。本サンプル（交通データ）ではこの線が異常閾値（`0.9`）を完全に超えて `1.0` に張り付いています。これは「お金が特定のダミー会社間をループする（循環取引）」のと全く同じ数学的構造で、「車が特定の交差点群を無限に周回して抜け出せない（グリッドロック）」状態に陥っていることを証明しています。
-* **解説:** 交差点間で車両が逃げ場を失い、特定のブロックを無限に周回し続ける「閉鎖ループ」が形成されています。これは金融システムにおいて不正な架空売上を回し続ける「循環取引」と全く同じトポロジー（空間構造）の崩壊を意味します。
+交通網のような「純粋な運動系」では、全期間のネット蓄積量（B/S）はプラスマイナスゼロ（白紙）となる。「B/Sは白紙なのに、P/L（スループット）だけが異常に巨大化している」というこの視覚的コントラストは、システムが価値を蓄積せず猛烈な摩擦熱だけを生み出していることを物語る。従来のダッシュボードでは「どの交差点の流入が多いか」は分かっても、「システム全体があとどれくらいで完全にデッドロック（熱力学的な死）するか」という動的な寿命を予測することは不可能である。
 
-### 🟠 異常 2: 熱力学的な死（大渋滞によるエネルギー散逸）
+## 3. 物理的病跡の特定（Fundamental Pathophysiology）
 
-* **重要度:** HIGH
-* **物理的証拠:** 相対的自由エネルギー比率 (Relative Free Energy) `-12.8745` (異常閾値 `< -0.1` を致命的に超過)。
-* **【🟢 正常系（Sample 0）のベースライン】**
-![Sample 0 Thermodynamics Energy Stack](../../../readme_plots/001_1_2__thermodynamics_energy_stack.png)
-* **【🔴 本サンプルの異常状態】**
-![Thermodynamic Energy Depletion](../../../readme_plots/Sample_5_Kyoto_Traffic/001_1_2__thermodynamics_energy_stack.png)
-* **💡 グラフの読み方（経理・監査・コンサルタント向け）:** 
-  * 正常系では白色の線（自由エネルギー＝企業の活動余力）がプラス圏内で安定していますが、本サンプルではマイナス圏へと一直線に急降下しています。金融監査では「売上はあるが資金が社外に流出（横領）している」ことを意味し、本ドメインでは「車は猛烈にエンジンを回しているが、渋滞の摩擦熱としてエネルギーを浪費しているだけで目的地（ワーク）に全く到達していない」というシステムの完全な機能不全（熱力学的な死）を証明しています。
-* **解説:** 【超重要所見】旧バージョンのTLUでは、この異常は検知できませんでした。しかし、最新の **Velocity Manifold（速度多様体）** に基づく物理エンジンのアップデートにより、このシステムが「極めて高いエネルギー散逸（熱としての浪費）」を起こしていることが正確に捉えられました。車両が目的地に到達（有用なワーク）することなく、渋滞の中でアイドリングしながら燃料と時間を無駄に消費し続けているという、都市交通における「熱力学的な死（Thermodynamic Depletion）」を完璧に数値化しています。
+本サンプルの根本原因は、ダミーデータ生成ロジック (`_0_0_generate_dummy_traffic.py`) において意図的に仕組まれた「物理法則を無視した生成ロジック」にある。
 
-### 🟢 その他（正常判定）
+* **局所的な質量保存則の欠如（超常現象の発生）:**
+  隣接する交差点間のトラフィックが、流入と流出で完全に独立したランダム値として生成されている。
+  結果として、「車が交差点内で勝手に湧き出し、別の交差点で勝手に消滅する」という、局所的な質量の非保存が全ノードで同時発生し、それがシステム全体を崩壊させる熱的摩擦を引き起こした。
 
-* **質量保存則:** 相対質量漏れ率 `0.0000` (NORMAL)。車両が突如として異次元へ消失（ワープ）しているわけではなく、物理法則に従って道路上に保存されていることを示しています。
-* **ミクロ・フォレンジック:** 最大局所 Z-Score `0.00` (NORMAL)。この渋滞は突発的な事故（外れ値）によるものではなく、ネットワーク構造の欠陥による定常的な現象であるため、Z-Scoreでは検知不可能です。
+## 4. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
 
-## 3. アクション・プラン（都市計画への翻訳）
+### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
 
-物理指標は、交通が「完璧に硬直した環状道路」に捕らわれ、無駄なエネルギー（燃料・時間）を浪費し続けていることを数学的に証明しています。
-この無限ループを打破するために、都市計画担当者は構造的な介入を行う必要があります。四角く閉じたブロックから外へ向かう「逃げ道（一方通行）」を強制的に作成し、人工的にスペクトル半径を 0.9 未満に下げて交通の血流を再開させてください。
+物理法則を無視して車が湧き出し・消滅しているため、マクロな質量保存則は完全に崩壊し、剛性行列（サスペンション）も極限の摩擦ストレスによって完全に絶対硬直（Rigid Lock ＝ 交通網の完全な麻痺・デッドロック状態）していることが物理量から確認される。
 
-## 4. ⚠️ 反証可能性と検証要件（Falsification Analytics）
+![Sample 5 Macro Forensics](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample 5 External Force 3D](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_1_6__3d_dynamics_external_force.png)
 
-* **偽陽性の可能性（異常という判断が誤っている可能性）:**
-  もしこのデータが「一般車両」ではなく、「特定のルートを周回し続ける巡回バスや路面電車」のみのデータである場合、スペクトル半径 `1.0` は設計通り（意図されたループ）であり、異常ではありません（ビジネス上の偽陽性）。
-* **追加検証要件:**
-  このトラフィックデータが全車両を対象としているのか、特定の公共交通機関を対象としているのかを確認してください。また、自由エネルギーが `-12.87` まで急降下していることから、当該交差点群における平均移動速度（Velocity）が極端に低下しているはずです。現地の監視カメラまたはプローブデータと照合し、これが意図された周回ではなく、意図せぬ渋滞であることを最終確認してください。
+* **1枚目【始点】**: `t.00000` (初期状態: 0ヶ月経過)
+* **2枚目【進行中】**: `t.00006` (6ヶ月経過: 摩擦熱の蓄積開始)
+* **3枚目【恒常的な摩擦】**: `t.00012` (12ヶ月経過: 部分的な麻痺)
+* **4枚目【進行中】**: `t.00018` (18ヶ月経過)
+* **5枚目【終点】**: `t.00024` (24ヶ月経過: 完全なデッドロック状態)
 
----
-**💡 監査実務・汎用AI（AGI）への示唆:**
-このサンプルは、TLUが単なる「会計チェックツール」ではなく、**普遍的な構造解析エンジン（Domain-Agnostic Physics Engine）** であることを実証しています。流れるものが「お金（循環取引）」であろうと「車（交通渋滞）」であろうと、ネットワークが無限ループに陥り、摩擦によってエネルギーを浪費しているという物理的真実は、全く同じ方程式によって診断可能なのです。
+![Sample 5 Structural Stiffness Month 0](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+![Sample 5 Structural Stiffness Month 6](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00006.png)
+![Sample 5 Structural Stiffness Month 12](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00012.png)
+![Sample 5 Structural Stiffness Month 18](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00018.png)
+![Sample 5 Structural Stiffness Month 24](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00024.png)
+
+### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+
+赤色の線（Max Spectral Radius ＝ 無意味な往復運動やループによる渋滞の激しさ）が完全に `1.0`（理論上の最大値）の天井に張り付いたまま推移している。交差点AからBへ向かった車が、そっくりそのままAへ戻ってくるような「完全な双方向の往復運動（振り子のような極限振動）」が支配的である。システムはもはや「流れる川」ではなく、「密閉された箱の中で激しく反射し合う音波」として完全にデッドロックしている。
+
+![Sample 5 System Stability](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_2__system_stability.png)
+
+* **1枚目【始点】**: `t.00000`
+* **2枚目【進行中】**: `t.00006`
+* **3枚目【恒常的な摩擦】**: `t.00012`
+* **4枚目【進行中】**: `t.00018`
+* **5枚目【終点】**: `t.00024`
+
+![Sample 5 Network Topology Month 0](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00000.png)
+![Sample 5 Network Topology Month 6](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00006.png)
+![Sample 5 Network Topology Month 12](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00012.png)
+![Sample 5 Network Topology Month 18](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00018.png)
+![Sample 5 Network Topology Month 24](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00024.png)
+
+### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+
+Sample 0の「白色の線（Free Energy）の右肩上がりの成長」と比較し、Sample 5 では、自由エネルギーが完全に押し潰され、エントロピー損失（$T \Delta S$：赤色の層）がマイナス領域の地底深くまで激しく沈み込んでいる。「膨大な台数の車が動いている（総活動量は高い）にもかかわらず、そのほとんどが局所的な滞留や摩擦による無駄なエネルギー消費（エントロピー生成）に消え、ネットワーク全体としての『流れる力』が死滅している」ことの完璧な証明であり、熱力学的な死（Heat Death ＝ 車は動いているが誰も目的地に着けない完全な麻痺状態）を意味する。
+
+*(上: Sample 0 正常な経済成長 ／ 下: Sample 5 熱力学的な死)*
+![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 5 Thermodynamics](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+
+### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+
+Z-Score（過去の平均からの突出度合い）および情報幾何学的変位（KL Drift ＝ 車が突然消えるといった過去の物理法則の崩壊）の3Dサーフェスにおいて、特定の交差点群で確率的にあり得ないほどの異常なスパイク（車が突然湧き出す・消滅する現象）がネットワーク全体を波立たせ、確率分布を崩壊させていることが視認できる。
+
+![Sample 5 3D Z-Score](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+![Sample 5 3D KL Drift](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+
+## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
+
+* **偽陽性の可能性:** もしこれが実世界の交通データであった場合、交差点内で物理的に車が消失・発生することはあり得ないため、交差点に設置されたトラフィックセンサーのハードウェア故障、あるいはデータ集計サーバーの致命的なバグである可能性が極めて高い。
+* **TLUの汎用性証明:** TLUは「お金」という概念を知らないにもかかわらず、数字の羅列から「物理法則（質量保存）を局所的に無視しており、熱力学的に完全に破綻している」という構造的欠陥を自動診断した。これは、TLUがあらゆる複雑系ネットワークの動的健全性を診断できる**汎用物理エンジン（Universal Physics Engine）**であることを強力に証明するものである。

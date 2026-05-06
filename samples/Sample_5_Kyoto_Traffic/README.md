@@ -27,15 +27,15 @@ This dataset (`Sample_5_Kyoto_Traffic`) does not contain accounting ledgers, but
 * **Severity:** HIGH
 * **Physical Evidence:**
   * **Max Spectral Radius:** **1.0000** (The exact boundary of mathematical divergence. The transition probability matrix has an eigenvalue of 1, meaning flow is circulating endlessly).
-    ![004_1_2__system_stability](readme_plots/004_1_2__system_stability.png)
+    ![004_1_2__system_stability](../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
     * **💡 How to Read the Graph (Visual Cues):** The blue line hits the 1.0 threshold exactly and stays there, proving an inescapable, closed circulation loop (cars driving in a circle).
 
   * **Relative Mass Leak Ratio:** `0.0` (The total volume of cars is perfectly conserved).
-    ![002_2_1__macro_forensics_dashboard](readme_plots/002_2_1__macro_forensics_dashboard.png)
+    ![002_2_1__macro_forensics_dashboard](../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
     * **💡 How to Read the Graph (Visual Cues):** The Z-Score line remains flat, meaning no cars are mysteriously vanishing from the grid (conservation of mass).
 
   * **Relative Free Energy Ratio:** **+0.2805** (Unlike fraudulent financial networks which waste energy as heat, this system has *positive* free energy, indicating a highly rigid, man-made physical structure rather than random chaos).
-    ![001_1_2__thermodynamics_energy_stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
+    ![001_1_2__thermodynamics_energy_stack](../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
     * **💡 How to Read the Graph (Visual Cues):** The white Free Energy line rises or stays positive, visually indicating a highly rigid, man-made structure rather than chaotic financial waste.
 
 * **Financial Evidence:**
@@ -47,7 +47,7 @@ Applying the 【Tier 3】 logic of the LLM Manual to urban planning: The physica
 
 **【Action Plan】**
 While the macro traffic volume appears stable, the localized Z-Score (32.29) indicates critical congestion at specific intersections (Micro Singularity).
-![Micro Z-Score Heatmap](readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+![Micro Z-Score Heatmap](../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
 * **💡 How to Read the Graph (Visual Cues):** The bright red glowing cells pinpoint the exact physical intersections experiencing critical gridlock.
 

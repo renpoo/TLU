@@ -25,6 +25,12 @@ This JSON payload contains:
 2. **`financial_baseline`**: The traditional Phase 0.5 Financial Statements (B/S and P/L).
 3. **`detected_pathologies`**: The Python script's initial hardcoded warnings.
 
+### ⚠️ [CRITICAL WARNING] Temporal Indexing (Zero-Indexed `t_idx`)
+The temporal index (`t_idx`) output by the TLU engine is derived from Python and is **Zero-Indexed**.
+* `t_idx = 0` corresponds to **Week 1 (or Frame 1)**.
+* `t_idx = 40` corresponds to **Week 41 (or Frame 41)**.
+When citing image files (e.g., `t.00040.png`) or referencing specific weeks in your report, you must **ABSOLUTELY remember that there is always a difference of 1 between `t_idx` and the actual Week/Frame.** Failing to recognize this will result in misidentifying the exact timing of anomalies by one week.
+
 ---
 
 ## 3. The Meta-Diagnostic Decision Matrix (Core Logic)

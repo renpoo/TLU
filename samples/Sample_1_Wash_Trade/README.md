@@ -26,10 +26,10 @@ On the surface, the Balance Sheet is perfectly balanced and the organization boa
 * **Severity:** CRITICAL
 * **Physical Evidence:**
   * **Max Spectral Radius:** **0.9740** (Exceeds the 0.9 threshold. The system has entered a "death spiral" of mathematical divergence).
-    ![System Stability](readme_plots/004_1_2__system_stability.png)
+    ![System Stability](../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
     * **💡 How to Read the Graph (Visual Cues):** Look for the blue trajectory line piercing the critical red threshold line at `1.0`. In a healthy organization, this line stays well below 1.0. A value asymptoting to 1.0 indicates an infinite, undamped feedback loop (a death spiral).
   * **Relative Free Energy Ratio:** **-0.2510** (Far below the -0.1 threshold. A massive amount of operational energy is being wasted without generating true value).
-    ![Thermodynamic Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
+    ![Thermodynamic Energy Stack](../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
     * **💡 How to Read the Graph (Visual Cues):** Look at the white line (Free Energy). When it plummets steadily downward over time, it visually proves that the organization is bleeding its capacity to perform useful work.
 * **Financial Evidence:**
   Surface-level Sales Revenue is extremely high ( $993,681 ), and Net Income looks fantastic ( $100,858 ). Crucially, the Mass Leak Ratio is `0.0`, meaning the perpetrators are strictly adhering to double-entry accounting rules to artificially inflate transaction volume between specific accounts without breaking the ledger's balance.

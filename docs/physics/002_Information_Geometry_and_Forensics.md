@@ -21,8 +21,8 @@ Just as mass bends spacetime in general relativity, heavy concentrations of acti
 * When visualized in 3D, high curvature appears as sharp "peaks" or steep "valleys."
 * A sudden spike in curvature indicates an unnatural concentration of flux or a severe stagnation point—resources are pooling somewhere they historically haven't, creating a localized gravity well.
 
-![002_1_1__3d_info_curvature](../readme_plots/002_1_1__3d_info_curvature.png)
-![002_1_2__info_stress_scatter](../readme_plots/002_1_2__info_stress_scatter.png)
+![002_1_1__3d_info_curvature](../../samples/Sample_0_Healthy/readme_plots/002_1_1__3d_info_curvature.png)
+![002_1_2__info_stress_scatter](../../samples/Sample_0_Healthy/readme_plots/002_1_2__info_stress_scatter.png)
 
 ### Topological Edge Stress (002_1_2)
 
@@ -32,11 +32,11 @@ While curvature looks at regions, this filter looks at the specific "blood vesse
 
 * It highlights critical bypasses and hidden bottlenecks that are carrying a historically unprecedented load, warning of an impending "rupture" (processing failure or supply chain breakdown) before the node itself fails.
 
-![002_1_2__network_topology t 00000](../readme_plots/002_1_2__network_topology.t.00000.png)
-![002_1_2__network_topology t 00001](../readme_plots/002_1_2__network_topology.t.00001.png)
-![002_1_2__network_topology t 00002](../readme_plots/002_1_2__network_topology.t.00002.png)
-![002_1_2__network_topology t 00003](../readme_plots/002_1_2__network_topology.t.00003.png)
-![002_1_2__network_topology t 00004](../readme_plots/002_1_2__network_topology.t.00004.png)
+![002_1_2__network_topology t 00000](../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00000.png)
+![002_1_2__network_topology t 00001](../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00001.png)
+![002_1_2__network_topology t 00002](../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00002.png)
+![002_1_2__network_topology t 00003](../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00003.png)
+![002_1_2__network_topology t 00004](../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00004.png)
 
 ### Manifold Dimensionality (SVD) (002_1_3)
 
@@ -58,7 +58,7 @@ Forensics relies on mathematical invariants. If a fundamental law of the system 
 * **Conservation Leak ($L$):** In systems like double-entry accounting or closed supply chains, the sum of all inflows and outflows should theoretically net to zero. TLU continuously monitors the absolute sum of all net fluxes. If the system "leaks" mass beyond a defined tolerance threshold, it instantly flags a violation of the conservation of energy.
 * **Global KL Drift ($D_{KL}$):** Using Kullback-Leibler (KL) Divergence, TLU compares the current network-wide allocation distribution against a historical baseline. A slow, steady rise in Global KL Drift means the organization is undergoing a "Regime Shift"—its fundamental operating model is changing, even if total volumes remain exactly the same.
 
-![002_2_1__macro_forensics_dashboard](../readme_plots/002_2_1__macro_forensics_dashboard.png)
+![002_2_1__macro_forensics_dashboard](../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 ### Micro Forensics: The Local Investigator (002_2_2)
 
@@ -67,8 +67,8 @@ Forensics relies on mathematical invariants. If a fundamental law of the system 
 * **Local Z-Score Spikes:** TLU calculates a Mahalanobis-like standardized score for every individual node. This catches traditional anomalies: a department suddenly spending $3\sigma$ above its norm.
 * **Local KL Drift:** This is the ultimate tool for detecting "silent diversion." If a node still receives and spends $10,000 a month (so its Z-score is normal), but it suddenly changes *who* it sends that money to (e.g., stopping payments to Vendor A and routing everything to new Vendor B), the Local KL Drift will spike violently, catching anomalies that pure volume metrics completely miss.
 
-![002_2_2_2__micro_Z_Score_heatmap](../readme_plots/002_2_2_2__3d_micro_z_score_X.png)
-![002_2_2_1__micro_KL_drift_heatmap](../readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+![002_2_2_2__micro_Z_Score_heatmap](../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+![002_2_2_1__micro_KL_drift_heatmap](../../samples/Sample_0_Healthy/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 ## 3. Business Implications
 

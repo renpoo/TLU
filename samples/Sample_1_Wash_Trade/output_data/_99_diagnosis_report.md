@@ -1,13 +1,13 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `samples/Sample_1_Wash_Trade`
-**Date Analyzed:** 2026-05-03 09:02:36
+**Date Analyzed:** 2026-05-03 11:38:58
 
 ## 1. Final Diagnosis
 
 ### 🟠 Topological Feedback Loop (Wash Trade)
 - **Severity:** HIGH
-- **Evidence:** Spectral Radius reached 0.9832 (Threshold: 0.9).
+- **Evidence:** Spectral Radius reached 0.8353 (Threshold: 0.6).
 - **Interpretation:** An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading).
 
 ---
@@ -15,9 +15,9 @@
 
 | Physical Domain | Extracted Metric | Value | Threshold |
 |-----------------|------------------|-------|-----------|
-| Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 0.001 |
-| Control Theory  | Max Spectral Radius      | 0.9832 | >= 0.9 |
-| Thermodynamics  | Relative Free Energy Ratio| 0.8916 | < -0.1 |
+| Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 1e-06 |
+| Control Theory  | Max Spectral Radius      | 0.8353 | >= 0.6 |
+| Thermodynamics  | Relative Free Energy Ratio| 0.6278 | < -0.1 |
 | Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
@@ -25,15 +25,15 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-03T09:02:36.237064",
+  "timestamp": "2026-05-03T11:38:58.923630",
   "environment": "samples/Sample_1_Wash_Trade",
   "physics_metrics": {
     "max_abs_residual": 0.0,
-    "mean_gross_activity": 1481086.8773076923,
+    "mean_gross_activity": 1334196.8496153844,
     "relative_leak_ratio": 0.0,
-    "max_spectral": 0.983175,
-    "min_free_energy": 125102.42,
-    "min_relative_free_energy": 0.891563810818196,
+    "max_spectral": 0.835316,
+    "min_free_energy": 93251.36,
+    "min_relative_free_energy": 0.6277671021463668,
     "max_z_score": 0.0,
     "max_leak_location": "Time: 2020-W01"
   },
@@ -41,132 +41,132 @@
     {
       "pathology": "Topological Feedback Loop (Wash Trade)",
       "severity": "HIGH",
-      "evidence": "Spectral Radius reached 0.9832 (Threshold: 0.9).",
+      "evidence": "Spectral Radius reached 0.8353 (Threshold: 0.6).",
       "interpretation": "An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading)."
     }
   ],
   "financial_baseline": {
     "week": "2020-W52",
-    "assets": 430780.29000000015,
-    "liabilities": 133321.98999999993,
+    "assets": 317611.46999999974,
+    "liabilities": 160772.4800000001,
     "equity": 0.0,
-    "net_income": 297458.3000000003,
-    "total_liab_eq": 430780.2900000002,
-    "revenue": 1184834.2900000003,
-    "expense": 887375.99,
+    "net_income": 156838.98999999953,
+    "total_liab_eq": 317611.4699999996,
+    "revenue": 1067391.6199999996,
+    "expense": 910552.6300000001,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        110732.74999999994
+        101866.58000000007
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        340354.2000000002
+        227471.6799999997
       ],
       [
         "ACC_Cash",
         "Liability (Short/Overdraft)",
-        22589.23999999999
+        58905.90000000002
       ],
       [
         "ACC_Inventory",
         "Asset",
-        90426.08999999997
+        90139.79000000004
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        530132.73
+        530066.5200000001
       ],
       [
         "ACC_Payroll_Exp",
         "Expense",
-        199296.37
+        220971.34
       ],
       [
         "ACC_Rent_Exp",
         "Expense",
-        61881.220000000016
+        62009.74
       ],
       [
         "ACC_Sales_Revenue",
         "Revenue",
-        1184834.2900000003
+        1067391.6199999996
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        96065.67000000001
+        97505.03000000001
       ]
     ],
     "tb_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        509826.07,
-        620558.82,
-        110732.74999999994
+        518339.7300000001,
+        620206.3100000002,
+        101866.58000000007
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        1409700.6800000002,
-        1069346.48,
-        340354.2000000002
+        1178042.4999999998,
+        950570.8200000001,
+        227471.6799999997
       ],
       [
         "ACC_COGS",
         "Expense",
-        530132.73,
+        530066.5200000001,
         0.0,
-        530132.73
+        530066.5200000001
       ],
       [
         "ACC_Cash",
         "Asset",
-        1069346.48,
-        1091935.72,
-        -22589.23999999999
+        950570.8200000001,
+        1009476.7200000001,
+        -58905.90000000002
       ],
       [
         "ACC_Inventory",
         "Asset",
-        620558.82,
-        530132.73,
-        90426.08999999997
+        620206.3100000002,
+        530066.5200000001,
+        90139.79000000004
       ],
       [
         "ACC_Payroll_Exp",
         "Expense",
-        199296.37,
+        220971.34,
         0.0,
-        199296.37
+        220971.34
       ],
       [
         "ACC_Rent_Exp",
         "Expense",
-        61881.220000000016,
+        62009.74,
         0.0,
-        61881.220000000016
+        62009.74
       ],
       [
         "ACC_Sales_Revenue",
         "Revenue",
         0.0,
-        1184834.2900000003,
-        1184834.2900000003
+        1067391.6199999996,
+        1067391.6199999996
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        96065.67000000001,
+        97505.03000000001,
         0.0,
-        96065.67000000001
+        97505.03000000001
       ]
     ]
   }

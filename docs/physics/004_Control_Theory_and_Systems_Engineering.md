@@ -13,8 +13,8 @@ It transitions the system from isolated, one-off goal-seeking (Inverse Kinematic
 
 Real-world organizations do not reach their goals in a single, instantaneous jump. Interventions must be applied continuously over time, adjusting as the system reacts. TLU formulates the entire network as a discrete-time **State-Space Model** and solves for the optimal intervention trajectory.
 
-![004_1_1__control_input_trajectory](../readme_plots/004_1_1__control_input_trajectory.png)
-![004_1_2__control_error_convergence](../readme_plots/004_1_2__control_error_convergence.png)
+![004_1_1__control_input_trajectory](../../samples/Sample_0_Healthy/readme_plots/004_1_1__control_input_trajectory.png)
+![004_1_2__control_error_convergence](../../samples/Sample_0_Healthy/readme_plots/004_1_2__control_error_convergence.png)
 
 ### The State-Space Formulation
 
@@ -37,7 +37,7 @@ This equation balances two fundamentally opposing business desires:
 
 By solving the Discrete Algebraic Riccati Equation (DARE), TLU computes the optimal feedback gain $K$. It provides leadership with a precise, multi-step trajectory: exactly how much resource to allocate, to which specific nodes, at what specific time step, to reach the goal with mathematical efficiency.
 
-![004_1_3__control_lqr_performance_space](../readme_plots/004_1_3__control_lqr_performance_space.png)
+![004_1_3__control_lqr_performance_space](../../samples/Sample_0_Healthy/readme_plots/004_1_3__control_lqr_performance_space.png)
 
 ### System Stability & Spectral Radius (004_1_2)
 *Implementation: `src/filters/_004_1_2_filter_system_stability.py`*
@@ -59,12 +59,12 @@ TLU automatically injects a uniform virtual investment ($\Delta$) into each node
 1. **Ripple Effect (FK-based ROI):** How much total systemic flux (Internal Energy) does this specific investment generate across the entire network via the Neumann Echo?
 2. **Strain Energy (IK/Stiffness-based Friction):** Based on the Precision Matrix ($K$), how much structural "pain" or resistance does the organization experience when this node is forcefully expanded?
 
-![004_2_1__sensitivity_analysis_series_heatmap k 00000 t 00001](../readme_plots/004_2_1__sensitivity_series_heatmaps.k.00000.t.00001.png)
-![004_2_1__sensitivity_analysis_series_heatmap k 00001 t 00001](../readme_plots/004_2_1__sensitivity_series_heatmaps.k.00001.t.00001.png)
-![004_2_1__sensitivity_analysis_series_heatmap k 00002 t 00001](../readme_plots/004_2_1__sensitivity_series_heatmaps.k.00002.t.00001.png)
-![004_2_1__sensitivity_analysis_series_heatmap k 00003 t 00001](../readme_plots/004_2_1__sensitivity_series_heatmaps.k.00003.t.00001.png)
-![004_2_1__sensitivity_analysis_series_heatmap k 00004 t 00001](../readme_plots/004_2_1__sensitivity_series_heatmaps.k.00004.t.00001.png)
-![004_2_1__sensitivity_analysis_series_heatmap k 00005 t 00001](../readme_plots/004_2_1__sensitivity_series_heatmaps.k.00005.t.00001.png)
+![004_2_1__sensitivity_analysis_series_heatmap k 00000 t 00001](../../samples/Sample_0_Healthy/readme_plots/004_2_1__sensitivity_series_heatmaps.k.00000.t.00001.png)
+![004_2_1__sensitivity_analysis_series_heatmap k 00001 t 00001](../../samples/Sample_0_Healthy/readme_plots/004_2_1__sensitivity_series_heatmaps.k.00001.t.00001.png)
+![004_2_1__sensitivity_analysis_series_heatmap k 00002 t 00001](../../samples/Sample_0_Healthy/readme_plots/004_2_1__sensitivity_series_heatmaps.k.00002.t.00001.png)
+![004_2_1__sensitivity_analysis_series_heatmap k 00003 t 00001](../../samples/Sample_0_Healthy/readme_plots/004_2_1__sensitivity_series_heatmaps.k.00003.t.00001.png)
+![004_2_1__sensitivity_analysis_series_heatmap k 00004 t 00001](../../samples/Sample_0_Healthy/readme_plots/004_2_1__sensitivity_series_heatmaps.k.00004.t.00001.png)
+![004_2_1__sensitivity_analysis_series_heatmap k 00005 t 00001](../../samples/Sample_0_Healthy/readme_plots/004_2_1__sensitivity_series_heatmaps.k.00005.t.00001.png)
 
 ### The Strategic Matrix
 

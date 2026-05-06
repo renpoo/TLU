@@ -16,7 +16,7 @@ Every healthy organization has a natural "heartbeat" or operational rhythm—for
 * **Dominant Frequency:** The specific periodic cycle at which the node vibrates most strongly.
 * **Spectral Power:** The intensity or strength of that specific frequency relative to the rest of the noise.
 
-![005_1_1__resonant_frequency](../readme_plots/005_1_1_resonant_frequency.png)
+![005_1_1__resonant_frequency](../../samples/Sample_0_Healthy/readme_plots/005_1_1_resonant_frequency.png)
 
 ### Detecting Business Model Collapse & Artificial Intervention
 This acts as an early warning system for structural collapse. If a company claims their business model is stable, but their resonant frequency suddenly shifts from a "30-day cycle" (normal billing) to a chaotic "14-day cycle," it mathematically proves a cash flow crisis forcing early collections. Furthermore, if a massive, unexpected spectral peak appears at an unnatural frequency, it is the fingerprint of a programmed bot or an automated embezzlement script siphoning micro-amounts of money at exact, mechanical intervals.
@@ -32,7 +32,7 @@ While Category 001 uses simple time-lag correlation, Category 005 evaluates the 
 ### PC1 Auto-Master Tracking
 To provide a dataset-agnostic "center of gravity," TLU mathematically extracts the 1st Principal Component (PC1) to identify the true "Main Engine" of the system (e.g., Cash, or the busiest traffic intersection). It then calculates the Phase Drift of *all other nodes* against this beating heart.
 
-![005_1_2__phase_drift_heatmap](../readme_plots/005_1_2__phase_drift_heatmap.png)
+![005_1_2__phase_drift_heatmap](../../samples/Sample_0_Healthy/readme_plots/005_1_2__phase_drift_heatmap.png)
 
 ### Reading the Phase Drift Heatmap: The Viscosity Rentgen
 The heatmap visualizes Phase Shift over time (X-axis). It utilizes a diverging colormap (e.g., Red-White-Blue).
@@ -56,7 +56,7 @@ TLU calculates the Power Spectral Density (PSD) decay and extracts the **Spectra
 * **Pink Noise ($\beta \approx 1$):** Fractal, long-memory processes. The hallmark of complex human and organic systems.
 * **Brown Noise ($\beta \approx 2$):** A random walk. Highly correlated short-term movements, but drifting aimlessly over the long term.
 
-![005_2_1__fractal_noise_spectrum](../readme_plots/005_2_1_fractal_noise_spectrum.png)
+![005_2_1__fractal_noise_spectrum](../../samples/Sample_0_Healthy/readme_plots/005_2_1_fractal_noise_spectrum.png)
 
 ### The Ultimate Fabrication Detector
 Humans are notoriously terrible at generating true random variance. If an accountant manually fabricates thousands of fake ledger entries to hide a loss, or if a crude random number generator is used to pad a dataset, the resulting data will mathematically collapse into "White Noise." Or, if an automated script pumps identical amounts daily, it forms unnatural, rigid spikes.
