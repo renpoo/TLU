@@ -247,5 +247,27 @@ When the LLM executes meta-diagnostics, you must utilize the official "Interpret
   * Theoretical manifestos defining "what is mathematically proven" by physics engines like thermodynamics, information geometry, and control theory.
 * **[📂 Multidimensional Analysis Rules for Stock Markets (`docs/Analysis Rules for Stock Market samples/`)](./Analysis%20Rules%20for%20Stock%20Market%20samples/analysis_perspectives_market.md)**
   * Forensic evaluation rules tailored for Stock Markets and High-Frequency Trading (HFT) from both Market and User perspectives.
-* **[📂 AI Technical Writing Protocol (`rulesets/tlu_technical_writing_protocol.yaml`)](../../rulesets/tlu_technical_writing_protocol.yaml)**
-  * The absolute ruleset defining the 6 principles (e.g., "Conclusion First," "Domain Translation," "Falsifiability") that this system must strictly obey when generating diagnostic reports.
+
+---
+
+### Appendix: AI Technical Writing Protocol
+
+Below is the absolute ruleset (originally `tlu_technical_writing_protocol.yaml`) defining the 6 principles that AI agents must strictly obey when generating diagnostic reports:
+
+1. **Minto Pyramid Principle (Conclusion First)**
+   Every report must begin with the "Conclusion/Diagnosis Result (Severity)". To minimize cognitive load for the reader, place the executive summary at the very top, followed by physical and mathematical evidence (Why/How) structured hierarchically. Never start with a sequence of dashboards or chronological explanations. State clearly first: "Is the system thermodynamically dead or alive?"
+
+2. **Rosetta Stone Rule (Domain Metaphor Translation)**
+   Advanced mathematical/physical jargon (Spectral Radius, KL Drift, Rigid Lock, Heat Death, etc.) must always be translated with "practical and concrete meanings/metaphors" in the target domain (finance, traffic, medicine, etc.). Do not leave the reader behind with jargon. Always link it to plain meanings like "Stiffness Matrix (= Cash Flow Resilience)".
+
+3. **Cinematic Evidence Sequence (Chronological Storytelling)**
+   When quoting graphs or data of chronological changes, do not just present equally spaced fixed-point observations. Extract frames so that the "process from a healthy state to collapse (death)" can be visually recognized as a story. Extract and compare meaningful continuous phases: [Start] -> [Just Before Change] -> [Onset] -> [Just After Change] -> [End/Deadlock].
+
+4. **Falsifiability and Model Limits**
+   Strictly distinguish between "what can be asserted as mathematical facts" by physical/mathematical models and "what requires additional verification by human field audits (domain knowledge)." While "mass disappearance (violation of conservation)" can be asserted from data, state that whether it is an "intentional crime" or a "transcription mistake" cannot be determined by data alone, and present specific additional verification requirements (e.g., bank account reconciliation).
+
+5. **Data-Driven Objectivity (Strict Elimination of Hallucination)**
+   Do not guess or fabricate (hallucinate) the shape or labels of visualization graphs solely from JSON or text metadata. Always write after physically confirming the drawing source code or the actual output specifications.
+
+6. **Minimalist Refactoring (Minimal Necessary Intervention)**
+   When modifying or updating existing documents, strictly focus on the target improvement requirements. Do not unnecessarily rewrite already approved and completed logical structures or surrounding text so as not to affect interdependencies. Do not change the overall tone "with good intentions" or add/remove unspecified sections. Aim for localized, surgical edits.
