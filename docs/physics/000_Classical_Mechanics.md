@@ -1,101 +1,42 @@
 # 000. Classical Mechanics & Solid Mechanics
 
-> **"Before we can move the system, we must understand how heavy it is, and how rigidly it is bound together."**
+## 🔬 Conclusion: Are the Network's "Mass" and "Elasticity" Maintained?
 
-Category **000** serves as the absolute foundation for all subsequent analyses in the Tensor-Link Utility (TLU). It refuses to predict the future or optimize for goals; instead, its sole purpose is rigorous *observation*.
+The primary conclusion of the "Classical Mechanics & Solid Mechanics" phase in TLU is **to mathematically prove whether the target network maintains a "spring-like elasticity" capable of withstanding external shocks, or if it has reached an unrecoverable "Rigid Lock (collapse)" due to "mass deficit."**
 
-By treating the network's nodes as physical "point masses" and its edges as "springs" (structural constraints), this paradigm calculates the inherent physical properties—Mass, Friction, and Stiffness—derived inductively from historical flow data.
+By modeling transaction data and signal flows as an infinite series of invisible "point masses (Mass)" and "springs (Stiffness)," TLU instantly identifies "physical breakdowns" that are invisible from superficial numbers.
 
 ---
 
-## 1. Phase Space Mechanics (000_1_1)
+## Kinematic Equations and Domain Translation
 
-*Implementation: `src/filters/_000_1_1_filter_dynamics_state.py`*
+TLU applies the laws of classical mechanics, such as the Equation of Motion ($F = ma$) and Hooke's Law ($F = -kx$), to financial transactions, traffic flows, and neural networks.
 
-In classical mechanics, the state of a system is fully described by its position and momentum in Phase Space. TLU translates organizational flux into these physical equivalents to answer a fundamental question: *How hard is it to change the current state of a given department or account?*
+### [Rosetta Stone: Translation of Physical Variables]
 
-### The Variables of Motion
+* **Mass / Inertia ($M$):** The cumulative transaction volume in the past at an account or intersection. If this mass suddenly disappears, it indicates a "physical deficit" such as embezzlement of funds or blockage of blood flow (fMRI Stroke).
+* **Viscosity / Friction ($C$):** The "delay" in the flow of funds or cars. When delays in collecting accounts receivable or traffic jams become severe, this friction shows abnormally high values.
+* **Stiffness ($K$):** The strength of the relationship (strength of the spring) between nodes. A reliable route where "if sales increase, payment always follows" is evaluated as having "high stiffness (a stiff spring)."
 
-* **Position (q):** The cumulative net flux flowing into or out of a node.
-* **Velocity (v):** The rate of change of the net flux over time (the first derivative).
-* **Acceleration (a):** The rate of change of the velocity (the second derivative).
+### Macro Structural Phase Transition (Rigid Lock)
 
-![000_1_6__3d_dynamics_net_flux](../../samples/Sample_0_Healthy/readme_plots/000_1_6__3d_dynamics_net_flux.png)
-![000_1_1__3d_dynamics_velocity](../../samples/Sample_0_Healthy/readme_plots/000_1_1__3d_dynamics_velocity.png)
-![000_1_2__3d_dynamics_acceleration](../../samples/Sample_0_Healthy/readme_plots/000_1_2__3d_dynamics_acceleration.png)
+In a healthy system (Sample 0), the spring structure (stiffness matrix) maintains elasticity throughout the year. However, when mass physically disappears from the system due to embezzlement (Sample 2), the foundation supporting the springs vanishes, and the stiffness matrix becomes "blank." TLU determines this as **"the system has fallen into Rigid Lock and collapsed."**
 
-### Defining Inertia and Friction
+---
 
-Not all nodes react to change equally. A massive, historically stable core department resists change much more than an agile, peripheral team.
+## Tracking Invisible "External Forces"
 
-* **Virtual Mass / Inertia (M):** Calculated as the historical average of absolute flux: `M = mean(|q(t)|)`. The larger the historical volume of activity, the greater the node's "Inertia" (resistance to being moved).
-* **Virtual Viscosity / Friction (C):** Calculated as the inverse of velocity volatility: `C = 1 / std(v(t))`. Nodes that exhibit highly stable, unchanging velocities are modeled as having high "Friction" dragging them down.
-* **External Force Residual (F_ext):** Using Newton's Second Law combined with damping (`F = M * a + C * v`), TLU calculates the unknown, external force that must be acting upon the node to produce its currently observed motion.
+After detecting the collapse of stiffness (macro), TLU zooms into the micro vector space of "velocity and acceleration" to identify the "invisible force" that caused the collapse.
 
-![000_1_3__3d_dynamics_inertia](../../samples/Sample_0_Healthy/readme_plots/000_1_3__3d_dynamics_inertia.png)
-![000_1_4__3d_dynamics_viscosity](../../samples/Sample_0_Healthy/readme_plots/000_1_4__3d_dynamics_viscosity.png)
-![000_1_5__3d_dynamics_external_force](../../samples/Sample_0_Healthy/readme_plots/000_1_5__3d_dynamics_external_force.png)
+### 3D Dynamics and Abnormal Acceleration
 
-## 2. Structural Stiffness & Partial Correlation (000_2_1)
+* **External Force:** When a system operates within a natural business cycle, its trajectory forms a stable cluster in the center of the phase space. However, when malicious hackers siphon funds or unexpected massive expenses are withdrawn, a sharp, violent "spike (a vector of abnormal acceleration)" is instantly ejected far away from the central cluster into space.
 
-*Implementation: `src/filters/_000_2_1_filter_structural_stiffness.py`*
+---
 
-While Phase Space Mechanics focuses on individual nodes, Solid Mechanics examines the "rigidity" of the connections between them. If you pull on Node A, does Node B follow instantly, or does the connection stretch and absorb the shock?
+## 🔬 Falsifiability and Model Limits
 
-### The Precision Matrix (K)
+The classical mechanics engine asserts the **universal kinematic fact** that "mass is missing in a specific part of the system, and the stiffness (spring) has completely ruptured."
+However, kinematic data alone cannot determine whether the reason for the ruptured stiffness was "malicious embezzlement" or a "legal loss due to the sudden bankruptcy of a business partner resulting in fully uncollectible receivables."
 
-TLU calculates the covariance matrix of velocity changes across the entire network, and then computes its safe pseudo-inverse. The resulting inverse covariance matrix is known as the **Precision Matrix (K)**.
-
-* A higher value in the Precision Matrix indicates a mathematically "stiff" relationship between two nodes. They move together rigidly, meaning a shock to one will violently transfer to the other.
-
-![000_2_1__structural_stiffness t 00002](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00002.png)
-![000_2_1__structural_stiffness t 00004](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00004.png)
-![000_2_1__structural_stiffness t 00006](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00006.png)
-
-### The Partial Correlation Pivot (Ver 8.0.0)
-
-Simple correlation is often deceptive in complex networks (spurious correlation). Just because Node A and Node B both increase doesn't mean they are directly connected; they might both be driven by Node C.
-
-To isolate the *true* structural constraints, TLU normalizes the Precision Matrix into a **Partial Correlation Matrix**:
-`R_ij = -K_ij / sqrt(K_ii * K_jj)`
-
-This normalization projects the stiffness into a strict `[-1.0, 1.0]` space:
-
-* **Positive Stiffness (Coupling):** Direct, unmediated linkage. They rise and fall together.
-* **Negative Stiffness (Trade-off):** A direct zero-sum constraint. Investing energy here mathematically drains energy from there.
-* **Zero Stiffness:** They are structurally independent, even if they appear correlated on the surface.
-
-## 3. Principal Axes & Variance Dimensions (000_2_2)
-
-*Implementation: `src/filters/_000_2_2_filter_principal_axes.py`*
-
-![000_2_2__principal_axes_ratio](../../samples/Sample_0_Healthy/readme_plots/000_2_2__principal_axes_ratio.png)
-
-While the Precision Matrix measures the direct stiffness between individual node pairs, **Principal Axes (PCA)** extracts the macro-level "dimensions" of the entire organization's movement.
-
-### Eigenvalues and Eigenvectors
-
-By calculating the covariance matrix of the flux history and performing an eigendecomposition, TLU identifies the Principal Components of the network:
-
-* **Eigenvectors (The Axes):** The primary directions in which resources flow together as a cohesive block.
-* **Eigenvalues (The Variance):** How much of the organization's total energy (variance) is captured by each axis.
-* **Explained Variance Ratio:** Shows whether the organization is heavily centralized (e.g., the first principal component explains 80% of all movement) or decentralized (variance is evenly spread across many dimensions).
-
-#### The Physics of the First Principal Component (PC1)
-
-![000_2_3__eigenvector_evolution](../../samples/Sample_0_Healthy/readme_plots/000_2_3__eigenvector_evolution.png)
-
-It is crucial to note that TLU's PCA does *not* measure the static balances or simple cumulative totals of the accounts. Instead, it calculates the **covariance of the flux differential ($dq$)**.
-
-Because it strictly analyzes the rate of change ($dq = q_{t} - q_{t-1}$), the First Principal Component mathematically isolates the **"Main Engine"** of the organization. It identifies which accounts experience the most massive, synchronized fluctuations (e.g., Cash dropping exactly when Payroll spikes or Accounts Payable is cleared).
-By visualizing the evolution of the PC1 Eigenvector as a heatmap, TLU mathematically reverse-engineers the underlying business model—without relying on account labels—and instantly reveals structural "Regime Changes" if the dominant flow axis is hijacked.
-
-This allows leadership to understand the underlying "factors" driving the organization, stripping away the noise of individual node fluctuations.
-
-## 4. Business Implications
-
-By visualizing Phase Space and Structural Stiffness, leadership can definitively answer:
-
-1. **Which initiatives will face the most friction?** (High M and C nodes).
-2. **Where are the hidden organizational trade-offs?** (Negative partial correlations).
-3. **If we push the system, will it bend or break?** (Overall network rigidity).
+Experts who receive the physical proof that "in Week 30, a spring ruptured between these specific accounts and massive acceleration occurred" must narrow down the date and time the abnormal vector occurred and conduct a field audit (additional verification) of invoices and contracts.

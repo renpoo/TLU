@@ -1,41 +1,57 @@
-# 005. Signals and Noise
+# 005. Forgery Detection via Wave and Signal Analysis (Signals and Noise)
 
-This phase treats the ledger like a radio signal or a vibrating machine. By analyzing the frequencies, lags, and noise spectrums of the money flow, TLU can detect deep, systemic process changes that are completely invisible in standard aggregate totals.
+## 🔬 Conclusion: Is the Data Natural, or "Artificially Fabricated"?
+
+This document explains the approach of analyzing the flow of funds and signals as "oscillating waves (frequencies)."
+The conclusion here is the diagnosis: **"Does the recorded data originate from natural activity, or has it been artificially fabricated by manual human tampering or automated programs (bots)?"**
+
+By mathematically analyzing the "unnatural coincidence of timing" and the "texture of numbers (type of noise)" rather than looking at the size of monetary amounts, it definitively exposes the lies behind a "perfectly balanced ledger" that the Z-Score (residual) cannot see through.
 
 ---
 
-### 1. Phase Drift Heatmap (`005_1_2__phase_drift_heatmap.png`)
+## Artificial Hypersynchrony (Phase Drift Heatmap)
 
-![005_1_2__phase_drift_heatmap](../../samples/Sample_0_Healthy/readme_plots/005_1_2__phase_drift_heatmap.png)
+In a healthy system, there is always a natural "phase delay (lag)" between the cause (generation of sales) and the effect (collection of cash). If these match perfectly, strong artificial intervention is suspected.
 
-* **📊 Visual Structure**: A matrix heatmap using the `RdBu_r` colormap, where the X-axis is time (e.g., weeks) and the Y-axis lists specific account pairs (e.g., `Accounts_Receivable vs Cash`).
-* **📐 Physics Theory**: Cross-Correlation Signal Processing. It measures the "time lag" (phase shift) between two correlated signals. If Sales usually turn into Cash 3 weeks later, the baseline lag is 3.
-* **🚨 Anomaly Detection**:
-  * Look for deep **Red** or deep **Blue** cells appearing in the timeline.
-  * **Red** = Lag is stretching (it's taking longer than normal).
-  * **Blue** = Lag is compressing (it's happening faster than normal).
-* **💼 Business Translation**: **Severe Cash Flow Bottlenecks**. If the Accounts_Receivable vs Cash line suddenly turns bright Red, it means "Collections are slowing down." Even if the total B/S assets look healthy, the actual velocity of cash conversion is grinding to a halt, serving as a powerful early warning for an impending liquidity crisis.
-* **💡 Concrete Example (from Samples)**:
-  * **Sample_6 & Sample_9 (Fabricated Synchronization/Hypersynchrony)**: Healthy economic or biological activities always contain natural "delays (viscosity) and variance." However, if a human manually tampers with multiple accounts simultaneously at month-end to make the books look clean, or if a market is subjected to organized price manipulation, the natural phase drift of these accounts unnaturally snaps to "0.0 (perfect synchronization)." This Hypersynchrony is the signature of an "invisible hand" (human manipulation) artificially aligning the data.
+### [Comparison 1] Natural Fluctuation and Phase Delay (Baseline)
 
-### 2. Resonant Frequency (`005_1_1__resonant_frequency.png`)
+![Sample 0 Phase Drift](../../samples/Sample_0_Healthy/readme_plots/005_1_2__phase_drift_heatmap.png)
 
-![005_1_1_resonant_frequency](../../samples/Sample_0_Healthy/readme_plots/005_1_1_resonant_frequency.png)
+* **Sample 0 (Healthy)**: A matrix showing the "timing discrepancy (Phase Shift)" of transactions between accounts. It is not pitch black (perfectly synchronized) but has a certain degree of gradient, maintaining the natural delay (lag) associated with normal commercial transactions.
 
-* **📊 Visual Structure**: A spectral density graph (like an audio equalizer) showing peaks at specific frequencies.
-* **📐 Physics Theory**: Fourier Transform. Identifies the natural "vibrational frequencies" of the organization (e.g., bi-weekly payroll cycles, quarterly tax payments).
-* **🚨 Anomaly Detection**:
-  * A massive, unexpected peak appearing at an unnatural frequency (e.g., a massive spike at exactly "3 days" that has never existed before).
-* **💼 Business Translation**: **Automated Fraud or Process Hijacking**. If a new, highly regular high-frequency transaction cycle appears, it strongly suggests a programmed bot or an automated embezzlement script is siphoning micro-amounts of money at exact intervals.
+### [Comparison 2] "Hypersynchrony" in Market Manipulation and Epileptic Seizures
 
-### 3. Fractal Noise Spectrum (`005_2_1__fractal_noise_spectrum.png`)
+![Sample 6 Phase Drift](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/005_1_2__phase_drift_heatmap.png)
+*(※Sample 6: Extreme synchronization in Wash Trade)*
 
-![005_2_1_fractal_noise_spectrum](../../samples/Sample_0_Healthy/readme_plots/005_2_1_fractal_noise_spectrum.png)
+* **Sample 6 (Market Bipartite) / Sample 9 (fMRI Seizure)**: The phase discrepancies between nodes that should originally move independently match completely to an unnatural degree (the matrix is pitch black = zero phase difference). This is **"Hypersynchrony,"** seen when humans manually modify figures en masse to cheat a year-end audit, when a fictitious trading bot is operating, or during an epileptic seizure in the brain. It is the definitive signature that the system is being forcibly controlled by an invisible hand.
 
-* **📊 Visual Structure**: A scatter plot on a logarithmic scale showing the Power Spectral Density (PSD) decay.
-* **📐 Physics Theory**: Power Law / 1/f Noise Analysis. Healthy natural systems (including human organizations) exhibit $1/f$ (pink noise) scaling. Pure randomness is $1/f^0$ (white noise).
-* **🚨 Anomaly Detection**:
-  * The slope of the decay line suddenly flattens out, changing from Pink Noise (structured human behavior) to White Noise (pure randomness).
-* **💼 Business Translation**: **Data Fabrication or complete loss of control**. Humans are very bad at faking natural variance. If an accountant manually fabricates thousands of fake ledger entries to hide a loss, the resulting data will mathematically look like "White Noise." This graph catches data fabrication by looking at the "texture" of the numbers.
-* **💡 Concrete Example (from Samples)**:
-  * **Sample_6 (Manual Fabrication)**: Humans are notoriously bad at faking "natural variance (Pink Noise)." If an auditor is being deceived by thousands of fake transactions manually scattered by an accountant to hide a loss, the frequency spectrum of the resulting data will be mathematically pure "White Noise" (a perfectly flat slope). By analyzing the "texture of the noise" rather than the raw amounts, TLU definitively catches manual data fabrication.
+---
+
+## Number Texture and Fabrication (Fractal Noise / Resonance)
+
+After confirming hypersynchrony, we identify "what method was used to fabricate it" from the texture of the numbers.
+
+### Proof of Ledger Fabrication via Randomization (Fractal Noise Spectrum)
+
+![Sample 0 Noise Spectrum](../../samples/Sample_0_Healthy/readme_plots/005_2_1_fractal_noise_spectrum.png)
+*(Above image: Natural pink noise decay in Sample 0)*
+
+* **📊 Visual Structure**: A scatter plot on a logarithmic scale showing the decay of noise. A downward-sloping line (Pink Noise / $1/f$ fluctuation) is the normal state of the natural world.
+* **🚨 Anomaly Detection**: Humans are absolutely incapable of creating "natural numerical fluctuations (Pink Noise)" by thinking about them. If an accountant or clerk manually enters (fabricates) thousands of fake journal entries scattered at random to hide a loss, the frequency characteristics of the resulting data will mathematically mutate into perfectly flat **"White Noise"** instead of sloping downward. This is definitive proof of tampering based not on the magnitude of numbers, but on the "texture" of the numbers.
+
+### Hijacking by Automated Bots (Resonant Frequency)
+
+![Sample 0 Resonant Frequency](../../samples/Sample_0_Healthy/readme_plots/005_1_1_resonant_frequency.png)
+*(Above image: Normal business cycle in Sample 0)*
+
+* **🚨 Anomaly Detection**: If sharp peaks (spikes) appear in an unnatural frequency band unrelated to normal corporate peaks like the "30-day cycle," it strongly suggests that an "automated program (bot)" evading the auditor's eye is repeatedly embezzling small amounts of funds at precise intervals invisible to humans.
+
+---
+
+## 🔬 Falsifiability and Model Limits (Application to Practice)
+
+The signal analysis approach asserts the **mathematical fact** that "the data has lost its natural fluctuation (Pink Noise) and turned into White Noise" or that "an unnatural perfect alignment of phase (Hypersynchrony) is occurring."
+However, wave data alone cannot determine whether it is "malicious tampering of the ledger by a clerk" or a "specification bug caused by a new automatic input API forcibly appending a single timestamp to the entire system."
+
+When an auditor detects hypersynchrony or white-noising, they must proceed under the premise that "the data entered during this period is not a natural transaction record resulting from human manual work," and transition to field audits (additional verification) such as tracking system logs or verifying input authorization.

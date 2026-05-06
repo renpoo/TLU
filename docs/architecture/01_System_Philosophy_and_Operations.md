@@ -1,53 +1,44 @@
 # 01. System Philosophy and Operations
 
-> **"Complexity is the enemy of execution. Purity of function is its antidote."**
+## 🔬 Conclusion: Why Does TLU Choose the "Unix Philosophy" and "Containers"?
 
-The Tensor-Link Utility (TLU) is intentionally designed to reject the modern trend of building monolithic, stateful, and heavily entangled applications. Instead, it embraces a rigorous, classical approach rooted in the **Unix Philosophy**.
+The absolute design philosophy underlying the TLU architecture is the conclusion that: **"No matter how advanced the physical mathematics used, if the calculation process is a black box and lacks reproducibility, it is entirely worthless as an auditing tool (ensuring falsifiability)."**
 
-This document outlines the core architectural principles and operational protocols that govern the system (Ver 8.0.0).
+By rejecting complex, bloated system designs and adopting the **Unix Philosophy (giving one program one function and linking them)** along with **complete isolation via containers**, TLU mathematically and engineer-wise guarantees that "the exact same conclusion (anomaly detection result)" will be derived regardless of who runs it, when, or in what environment.
 
 ---
 
-## 1. The Unix Pipeline Architecture
+## Pipeline and Stateless Design
 
-TLU processes data as a continuous flow of information, treating organizational dynamics as a literal "stream."
+Rather than swallowing the financial data of a corporation or organization into one massive monolithic system, TLU processes it through a finely divided, "transparent pipeline."
 
-* **Stateless Filters:** Each mathematical filter (e.g., Thermodynamics, Kinematics) is a standalone executable. It reads a standard COO (Coordinate) tensor stream from `Standard Input (stdin)`, applies a single paradigm of physics, appends its findings as new columns, and flushes the result to `Standard Output (stdout)`.
-* **No Hidden State:** Filters do not maintain internal databases or memory between runs. If the input stream is identical, the output is mathematically guaranteed to be identical.
-* **Piping (`|`):** Complex analysis is achieved not by writing convoluted classes, but by chaining simple, pure functions together.
+### "Stream Processing" of Data
 
-## 2. Separation of Concerns: I/O vs. Pure Math
+* **Stateless Filter Design:** Each analytical filter (e.g., thermodynamic analysis, kinematic analysis) remembers absolutely nothing about past execution states. It is mathematically guaranteed that if the input data (CSV) is the same, the system will always perform the same tensor calculations and return the same output.
+* **Complete Separation of Roles (Application of the Rosetta Stone):**
+  * **Wrapper Layer (`filter_*.py`):** Responsible only for reading/writing command-line arguments and CSVs (string and business domain processing). Understanding "accounting terms (like Accounts Receivable)" stops at this layer.
+  * **Core Math Layer (`core_*.py`):** Responsible exclusively for pure matrix and tensor calculations. This layer does not recognize the business domain at all; it functions as a pure physics engine calculating only "mass" and "stiffness."
 
-To achieve maximum testability (via Test-Driven Development) and reduce cognitive load for developers, TLU enforces a strict physical separation between data handling and mathematical computation.
+---
 
-* **The Wrapper Layer (`filter_*.py`):** These scripts are intentionally "dirty." They handle CLI argument parsing, reading CSVs from `sys.stdin`, resolving domain dictionaries, and writing back to `sys.stdout`. **No physics, geometry, or business logic is allowed in this layer.**
-* **The Core Math Layer (`core_*.py`):** These are pure mathematical functions. They know nothing about CSVs, domain vocabularies, or filesystems. They accept pure NumPy arrays (`np.ndarray`) and scalars, and return NumPy arrays. This makes unit testing trivial and ensures mathematical rigor.
+## Ensuring Reproducibility and Enforcing Operational Rules
 
-## 3. Zero Local Dependency
+After securing the transparency of the overall structure (macro), we eliminate human errors and noise caused by "environmental differences" at the daily operational level (micro).
 
-"It works on my machine" is an unacceptable excuse in a high-fidelity analytics environment.
+### Execution Environment with Zero Local Dependencies
 
-* **Host Sterilization:** The user's host operating system requires only `Docker` and `bash`. Python, NumPy, SciPy, NetworkX, and Matplotlib are strictly confined within the `tlu-engine` container.
-* **Transparent Wrapper (`_tlu_env.sh`):** TLU provides a shell wrapper that transparently translates local commands into containerized executions (e.g., `docker compose exec -T tlu-engine python3`). The data flows seamlessly between the host's filesystem and the isolated container via standard streams, making the container feel like a native binary.
+* **Isolation via Containerization:** All libraries required to run TLU, such as Python and NumPy, are completely isolated inside the Docker `tlu-engine` container. The situation where "it worked on my PC, but an error occurred on another auditor's PC" is physically prevented from happening.
 
-## 4. Declarative Experiment Control (SSOT)
+### Centralized Configuration Management and Freezing Execution History (Snapshot)
 
-In complex corporate simulations, the *provenance* of an insight is just as important as the insight itself. To guarantee reproducibility, TLU relies on a Single Source of Truth (SSOT).
+* **Centralized Management via `_sys_params.csv`:** Directly rewriting the source code to change the target data for analysis or the thresholds (parameters) for anomaly detection is strictly prohibited. All conditions are managed in a single CSV file (Single Source of Truth).
+* **Archive Preservation:** By running `bash bin/archive_experimental_run.sh` after the pipeline execution, the input data of the time, the configuration files, and all generated graphs are permanently preserved as a single "Snapshot." If an audit firm specifies this archive and re-runs it 3 years later, a result identical to the exact detail of that time will be reproduced.
 
-* **The `_sys_params.csv` Paradigm:** Users are strictly forbidden from modifying shell scripts or python source code to change experimental conditions (e.g., input data sources, target simulation nodes, anomaly thresholds). Every single boundary condition and constraint is declaratively defined in `workspace/config/_sys_params.csv`.
-* **Parameter as Code:** This configuration file serves as the definitive "blueprint" for the experiment. By isolating parameters from execution logic, the system prevents accidental configuration drift.
+---
 
-## 5. Immutable Archive Reproducibility
+## 🔬 Falsifiability and Model Limits (Application to Practice)
 
-To enforce complete auditability without relying on external Git repositories, TLU employs a local snapshotting architecture.
+TLU's system philosophy asserts with 100% precision the **engineering reproducibility** that "if these configuration parameters are given in this environment, this calculation result will absolutely be output."
+However, the system cannot assert whether that output result equates to a "correct judgment in real-world business."
 
-* **Workspace Snapshots:** Upon executing a significant pipeline run, the entire `workspace/` directory (which includes the input streams, the precise `_sys_params.csv` used, and all output data) can be snapshotted into an `archives/run_YYYYMMDD_HHMMSS/` directory by simply running:
-  ```bash
-  bash bin/archive_experimental_run.sh
-  ```
-  *(Note: Output plots are excluded from the archive to save disk space, as they can be deterministically regenerated).*
-* **Time-Travel Execution:** Because the pipeline dynamically references the configuration relative to its target environment, a user can effortlessly reproduce past calculations or regenerate dashboards. By pointing the orchestration scripts to a past archive, the pipeline behaves exactly as it did at the exact moment of that historical snapshot:
-  ```bash
-  # Regenerate 3D visualization dashboards from a past experiment
-  bash bin/batch_visualize_graphs.sh dark --target_env archives/run_20260425_094806/workspace
-  ```
+If incorrect thresholds or wrong target nodes are entered into the configuration file (`_sys_params.csv`), TLU will generate a "perfectly accurate anomaly detection graph based on those incorrect premises." Therefore, auditors and operators are always required not to doubt "how the system operated," but to conduct a field audit (falsification analytics) on whether "the initial conditions (premises) given to the system align with the reality of the business."

@@ -1,59 +1,62 @@
 # 002. Info Geometry and Forensics
 
-This is the most critical phase for **fraud detection and auditing**. By analyzing the shape (geometry) of the data distribution and strictly enforcing conservation laws, TLU detects hidden manipulation that traditional balancing methods miss.
+## 🔬 Conclusion: "Invisible Mass Deficits and Unknown Distributions" Unmasked by Information Geometry
+
+This document explains the forensic (fraud detection) approach using Information Geometry, which geometrically analyzes the "distortion of the probability distribution" of data.
+The conclusion here is the diagnosis: **"Is the system strictly adhering to physical laws (the Law of Conservation of Mass and past probability distributions), or has it been dragged into an unknown dimension (crime or tampering) by someone's hands?"**
+
+Clever frauds that are missed by traditional number-matching audits clearly reveal themselves as breakdowns in physical laws, such as spatial distortions (KL Drift) and overall mass anomalies (Macro Z-Score).
 
 ---
 
-### 1. Macro Forensics Z-Score (`002_2_1__macro_forensics_dashboard.png`)
+## Macro Absolute Residuals and the Collapse of Mass (Macro Forensics / Z-Score)
 
-![002_2_1__macro_forensics_dashboard](../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
+First, from the most macroscopic perspective, we check whether there is any "unexplained increase or decrease in mass" across the entire system. It is physically impossible for money, cars, or blood flow to "be created from nothing" or "disappear on their own."
 
-* **📊 Visual Structure**: A line graph plotting the overall network "Z-Score" over time.
-* **📐 Physics Theory**: Kirchhoff’s Current Law (Conservation of Energy). Money cannot be created or destroyed. The Z-Score mathematically measures the severity of any violation of this law across the entire ledger.
-* **🚨 Anomaly Detection**:
-  * A spike exceeding a Z-Score of **2.0** or **3.0**.
-* **💼 Business Translation**: **A Broken Ledger**. Someone forced a journal entry where Debits do not equal Credits, or money was siphoned out of the system without a corresponding entry. This is the strongest mathematical proof of either a severe data-entry error or outright embezzlement.
-* **💡 Concrete Example (from Samples)**:
-  * **Sample_3 (Unbalanced Mistake)**: In double-entry bookkeeping, all debits and credits must offset to zero (Conservation of Energy). When an entry is omitted, an unexplained fluctuation in mass occurs. TLU detects this "Conservation Leak," causing the global Z-Score to spike astronomically. This is the clearest signature of a fundamentally broken ledger.
+### [Comparison 1] Perfect Conservation of Mass (Baseline)
 
-### 2. Micro Z-Score / KL Drift Heatmaps (`002_2_2_1__3d_micro_kl_drift.png`, `002_2_2_2__3d_micro_z_score_X.png`)
+![Sample 0 Macro Forensics](../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
-![002_2_2_1__micro_KL_drift_heatmap](../../samples/Sample_0_Healthy/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+* **Sample 0 (Healthy)**: The blue line at the bottom of the graph, "Z-Score (Degree of protrusion from the past average)," is completely pinned near zero. This is a healthy state where the inputs and outputs within the system are perfectly balanced, and there is absolutely no increase or decrease (residual) in mass.
 
-![002_2_2_2__micro_Z_Score_heatmap](../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+### [Comparison 2] Mass Leakage Off-the-Books (Embezzlement)
 
-* **📊 Visual Structure**: Matrix heatmaps. Z-Score uses `RdBu_r` (blue to red), and KL Drift uses `inferno` (black to yellow). For both, dark/blue colors mean normal operation, while "cells glowing bright yellow or vivid red" indicate extreme mathematical stress and rule-breaking (fraud/tampering).
-* **📐 Physics Theory**: Information Geometry (Kullback-Leibler Divergence). Measures how much the probability distribution of a specific account has unexpectedly mutated compared to its historical behavior.
-* **🚨 Anomaly Detection**:
-  * A specific account (e.g., `ACC_Payroll_Exp`) suddenly lighting up bright red at a specific time index $t$.
-* **💼 Business Translation**: **Pinpointing the Fraudster**. While the Macro dashboard tells you a crime occurred, the Micro heatmap tells you exactly *which account* was manipulated. If Payroll lights up red, look for ghost employees or unauthorized bonus payouts.
+![Sample 2 Macro Forensics](../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
-### 3. Network Topology / Node-Link Diagrams (`002_1_2__network_topology.t.*.png`)
+* **Sample 2 (Embezzlement Leak)**: The Z-Score vastly exceeds the threshold (e.g., 2.0) and jumps to an abnormal height of "10.0 or more." This is definitive evidence that funds are flowing out to an "unknown exterior" not recorded on the books, and the mass of the entire system is being lost (Collapse of the Conservation Law).
 
-![002_1_2__network_topology.t.00000](../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00000.png)
+---
 
-![002_1_2__network_topology.t.00002](../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00002.png)
+## Silent Mutations (3D Micro KL Drift)
 
-![002_1_2__network_topology.t.00004](../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00004.png)
+Even if the overall mass (total amount) matches, one cannot be relieved. Clever frauds like "the monetary amounts match, but the remittance destination has been swapped to a dummy company" do not trigger the Z-Score. Therefore, we check the "distortion of the probability distribution (KL Drift)" of the data in 3D space.
 
-![002_1_2__network_topology.t.00012](../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00012.png)
+### Exposing Colluding Groups (Abnormal Spikes)
 
-*Note: TLU generates a sequence of these images over time. You may need to flip through them like a flipbook.*
+![Sample 7 KL Drift](../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+*(※Sample 7: Collusion detection in fund transfers between users)*
 
-* **📊 Visual Structure**: A web of nodes (accounts) connected by lines (money flow). Node colors use `coolwarm` (blue=contracting, red=expanding), and line colors use `plasma` (purple=normal, yellow=extreme stress). The thickness of the lines represents the volume of flow.
-* **📐 Physics Theory**: Graph Theory. Visualizing the actual plumbing of the organization's finances.
-* **🚨 Anomaly Detection**:
-  * A node suddenly changing position wildly, or a thick red line appearing between two nodes that normally don't interact.
-* **💼 Business Translation**: **Visualizing the Crime Scene**. You can physically see the flow of money being diverted. If a thick line suddenly connects "Inventory" directly to an unknown "Suspense Account," you are looking at a visual representation of inventory theft.
+* **📊 Visual Structure**: A 3D Surface heatmap visualizing the degree of deviation (KL Drift / Information-Geometric Mutation) from past behavior patterns for each account as the height on the Z-axis.
+* **🚨 Anomaly Detection**: Even if the transaction amounts are within a normal range, when behavioral mutations occur—such as "repeating extremely high-frequency fund transfers between parties who normally do not trade at all"—sharp yellow and red "spikes (deviations to an unknown distribution)" rise from the dark plains. This perfectly exposes the **"Outline of the Colluding Group"** conducting money laundering or wash trading.
 
-### 4. Manifold Dimensionality / Effective Rank (`002_1_3__manifold_dimensionality.png`)
+---
 
-![002_1_3__manifold_dimensionality](../../samples/Sample_0_Healthy/readme_plots/002_1_3__manifold_dimensionality.png)
+## Anomalies in the Mesh: Visualizing Back Routes (Network Topology)
 
-* **📊 Visual Structure**: A line graph showing a single metric (Effective Rank) over time.
-* **📐 Physics Theory**: Singular Value Decomposition (SVD). Calculates the true mathematical dimensionality of the network. A healthy organization requires multiple dimensions (Sales, Payroll, Inventory, etc.) to function.
-* **🚨 Anomaly Detection**:
-  * The dimensionality line suddenly plunging downwards (e.g., dropping from 8 dimensions down to 2).
-* **💼 Business Translation**: **Artificial Centralization**. The organization's natural diversity has collapsed. All financial activity is being forced through a single bottleneck. This is a classic signature of **Wash Trading**, where fake transactions are looped rapidly through a single set of accounts to artificially inflate volume, starving the rest of the business.
-* **💡 Concrete Example (from Samples)**:
-  * **Sample_1 (Wash Trade)**: In a healthy network, funds disperse across diverse pathways (payroll, expenses, investments), maintaining a high Effective Rank (dimensionality). When fake sales are rapidly cycled through a specific loop of dummy companies, a single artificial loop dominates all flow, causing network diversity to collapse instantly. This sudden plunge in dimensionality is the definitive geometric proof of Wash Trading.
+Increasing the resolution further, we use topology to identify "on which route" the information-geometric anomalies are occurring.
+
+### The Emergence of Abnormal Shortcuts
+
+![Sample 1 Topology](../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00038.png)
+*(※Sample 1: Topological structure of Wash Trade around Week 38)*
+
+* **Sample 1 (Wash Trade)**: Separate from normal transaction routes, an extremely thick, bright red "abnormal shortcut (back route)" is suddenly formed between Companies A, B, and C, which should originally have little direct connection. This is the pipeline (the crime scene) for circulating fictitious sales.
+
+---
+
+## 🔬 Falsifiability and Model Limits (Application to Practice)
+
+The Information Geometry approach asserts the **mathematical fact** that "mass is missing across the entire system (Z-Score anomaly)" or that "a specific group of accounts is taking actions that completely ignore past probability distributions (KL Drift anomaly)."
+However, the computer cannot determine whether that abnormal behavior is due to an "intentional crime (market manipulation or embezzlement)" or a "completely new, legitimate start of transactions with new business partners (rapid business expansion)."
+
+When finding KL Drift spikes and abnormal topology lines (red routes), the field auditor is required to narrow down to the specific group of accounts pointed out by the system and investigate (additionally verify) "exactly what kind of contracts or invoices exist between them."

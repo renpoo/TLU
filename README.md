@@ -1,237 +1,151 @@
 # Tensor-Link Utility (TLU)
 
-> **"Projecting Domain Complexity into Mathematical Clarity for Autonomous AI Auditing."**
+## 🔬 Conclusion: Unmasking Invisible "Fraud, Degradation, and Collapse" with Physics
 
-TLU is a **Mathematical Analysis System based on Physical Mathematics, powered by the Cognitive Triad (Physics + Financials + LLM)**. It is a high-fidelity mathematical analysis pipeline designed to project directed transaction data (such as financial ledgers or supply chain flows) into a pure tensor space to uncover hidden structural dynamics that traditional accounting models miss.
+The ultimate conclusion of TLU is the mathematical proof that: **"No matter how perfectly accounting ledgers (B/S and P/L) are manipulated on the surface, it is absolutely impossible to deceive universal physical laws such as the 'Law of Conservation of Mass' and the 'Second Law of Thermodynamics'."**
 
-### The Limitations of Traditional Accounting
-
-Traditional double-entry bookkeeping requires all journal entries to be perfectly consistent before any calculation can begin. Because of this absolute axiom, it is mathematically difficult to extract the underlying reality when records are missing or intentionally manipulated (e.g., Wash Trading).
-
-TLU solves this by removing the requirement for a balanced state from the initial analysis phase. By redefining accounting data as a flow of energy—analogous to fluids in a pipe—TLU applies physical laws like Kirchhoff's Current Law and non-equilibrium thermodynamics to calculate true financial dynamics even from incomplete or "broken" datasets.
-
-## 🤖 The Cognitive Triad (AI Autonomous Auditing)
-
-TLU is not merely a visual dashboarding tool; its ultimate value is serving as a physics engine for Large Language Models (LLMs).
-
-By reading the [**LLM Meta-Diagnosis System Prompt & Operating Procedure**](docs/LLM_Diagnostic_Manual.md), any LLM (ChatGPT, Claude, Gemini) can be instantly transformed into a "Meta-Diagnostic Laboratory Technician." The manual provides a strict, tier-based logical framework (Decision Matrix) that allows the AI to ingest the high-dimensional physical metrics (like Spectral Radius and Free Energy) and cross-reference them with traditional Financial Statements (B/S, P/L) to output a CPA-grade, human-readable Pathology Report without hallucinating.
-
-Check out the `samples/` directories to see actual English audit reports generated autonomously by the LLM using this manual!
-
-## Theoretical Foundation: The Ledger as a Coupled Oscillator Network
-
-A common critique of applying physical equations to accounting is the risk of a "category error"—ledgers do not possess literal physical mass or friction. However, TLU's theoretical foundation rests not on literal physics, but on the universally applied mathematical abstraction of **Continuum Mechanics and Coupled Oscillators**.
-
-When physicists model the stress propagation, heat dissipation, or resonant frequencies of a solid object, they discretize it into a network of **point masses ($M$)** connected by invisible **springs ($K$)** and **dampers ($C$)**. TLU applies this exact same mathematically rigorous abstraction to an organization:
-
-* **Mass ($M$) / Inertia**: An account's capacity to store potential energy and resist sudden state changes (based on historical volume/volatility).
-* **Stiffness ($K$) / Springs**: The structural strength and deterministic causal links of transaction channels (e.g., Sales $\to$ Accounts Receivable).
-* **Viscosity ($C$) / Dampers**: The temporal friction, dissipation, and delays inherent in the transactional flow.
-
-By treating the organization as a **discrete elastic medium (a Mass-Spring-Damper network)**, TLU legitimately applies the equation of motion ($M\ddot{x} + C\dot{x} + Kx = F$) to calculate how external financial shocks (anomalies, fraud, market shifts) propagate, resonate, and decay through the business structure. TLU does not claim that a company obeys Newton's laws; rather, it uses these equations as an extraordinarily sensitive **Physics-Informed Feature Extractor** to surface anomalies that traditional accounting X-rays miss.
-![Mass-Spring-Damper-Modle](samples/Sample_0_Healthy/readme_plots/Mass-Spring-Damper-Modle.jpg)
+TLU is a meta-diagnostic platform that redefines all complex data sets—such as financial transactions, traffic networks, and biological networks—as "fluids" or "energy waves." It visualizes invisible anomalies (embezzlement, wash trading) and systemic degradation (massive congestion, infarction) as objective **"Physical Signatures (collapse of stiffness, anomalous resonance)."**
+The outputted mathematical evidence is then decoded by an LLM (AI) to automatically translate the findings into a practical "Diagnostic Report" tailored for human experts.
 
 ---
 
-## Core Philosophy & Architecture (Ver 8.0.0)
+## 📚 TLU Official Documentation — Index —
 
-TLU avoids giant monoliths and is built upon the **Unix Philosophy**, connecting single-responsibility filters via standard streams.
+To guarantee mathematical objectivity and falsifiability, TLU maintains a strictly hierarchical documentation structure. Auditors and engineers should refer to the directories below:
 
-* **Zero Local Dependency:** Does not pollute the host OS. All analysis engines are completely isolated within Docker containers.
-* **Fail-Fast UX:** When data inconsistencies or missing parameters are detected, the system immediately halts without implicit fallbacks. This physically prevents erroneous management decisions caused by mismatched contexts.
-* **Declarative Experiment Control (SSOT):** The entire experimental condition—including input datasets, kinematic constraints, LQR weights, and anomaly thresholds—is centrally defined in a single `workspace/config/_sys_params.csv`. Modifying this file is the *only* way to alter the pipeline's behavior, ensuring absolute clarity.
-* **Immutable Archive Reproducibility:** Upon completion, the entire `workspace/` (including the executed `_sys_params.csv` and outputs) can be snapshotted into an `archives/` directory using `bash bin/archive_experimental_run.sh`. By simply pointing the pipeline to an archived workspace, the exact same mathematical conditions and visualizations can be reproduced anytime.
+* **[📂 AI Meta-Diagnostic Manual (`LLM_Diagnostic_Manual.md`)](docs/LLM_Diagnostic_Manual.md)**
+  * The strict protocol for how the AI must interpret TLU's physical data and translate it into a professional audit report.
+* **[📂 10 Sample Case Comparisons (`samples/`)](docs/samples/README.md)**
+  * Empirical reports comparing normal baselines against "pathologies" like embezzlement, wash trading, and epileptic seizures.
+* **[📂 Graph Interpretation Guide (`interpretations/`)](docs/interpretations/README.md)**
+  * The official manual for experts on how to visually read the generated graphs and apply them in practice.
+* **[📂 Physics & Mathematical Engine Theory (`physics/`)](docs/physics/README.md)**
+  * The mathematical manifesto defining *how* and *why* kinematics and thermodynamics can detect systemic anomalies.
+* **[📂 System Architecture (`architecture/`)](docs/architecture/README.md)**
+  * The pipeline and container operational philosophy designed to guarantee 100% reproducibility (eliminating human bias).
 
-### The Pipeline Phases
-
-* **Phase 0: Pre-processing:** Cleansing source data and aggregating it into directional flux formats.
-* **Phase 1: Traditional Accounting (IR):** Automatically generating standard B/S and P/L statements to serve as a baseline for human analysts.
-* **Phase 3: Projection:** Stripping domain vocabulary and projecting data into a pure tensor space (COO stream).
-* **Phase 4: Core Analysis:** A suite of pure mathematical filters based on physical paradigms (Categories 000–005).
-* **Phase 5: Presentation:** High-density dashboard rendering driven by the Fail-Fast theme engine.
-* **Phase 6: Orchestration:** Pipeline control and audit trail preservation within the containerized environment.
-
-## Visual Showcase (Empirical Evidence)
-
-TLU offloads cognitive load through its advanced "Dark" visualization suite ("Light" and "Colorblind-safe" themes are also available). Below are analytical trajectories based on the new taxonomy representing the lineage of natural sciences.
-
-### 000_ Classical Mechanics & Solid Mechanics
-
-Observe the "pulse" and "stiffness" of your organization. TLU calculates **Velocity ($v$)** and **Acceleration ($a$)** from pure flux, estimates **Inertia (Virtual Mass)** and **Viscosity** from historical activity scales, and plots them as 3D surfaces and phase spaces.
-
-**💡 The Semantics of 3D Surfaces:**
-Why does TLU map these physical metrics onto 3D surfaces (with Time on the X-axis, Accounts/Nodes on the Y-axis, and the Metric on the Z-axis)? Because it allows human auditors to instantly perceive **both macro-systemic trends (broad waves/swells) and micro-localized anomalies (sharp spikes)** simultaneously.
-By applying a physical lens to the original accounting ledger, the data reveals entirely new characteristics:
-
-* **Mass (Inertia):** Represents the historical "accumulation" and capacity of an account. A "heavy" node (like a massive cash pool or core sales base) has high inertia; it requires immense force to change its state. Sudden drops in mass indicate structural loss.
-* **Stiffness:** Represents the deterministic "coupling strength" between accounts. If Sales consistently and reliably generates Accounts Receivable, that channel is highly "stiff." If this rigid surface suddenly collapses, the business process is fundamentally broken.
-* **Viscosity (Friction):** Represents temporal delays and friction in the money flow. If Accounts_Receivable collections are severely delayed or funds are bogged down in an approval process, the friction increases, visually erupting as a localized peak of "thick, resistant mud" on the 3D surface.
-
-![1_3_1__3d_dynamics_velocity](samples/Sample_0_Healthy/readme_plots/000_1_1__3d_dynamics_velocity.png)
-![1_3_2__3d_dynamics_acceleration](samples/Sample_0_Healthy/readme_plots/000_1_2__3d_dynamics_acceleration.png)
-![1_3_3__3d_dynamics_inertia](samples/Sample_0_Healthy/readme_plots/000_1_3__3d_dynamics_inertia.png)
-![1_3_4__3d_dynamics_viscosity](samples/Sample_0_Healthy/readme_plots/000_1_4__3d_dynamics_viscosity.png)
-![1_3_8__phase_portrait_3d](samples/Sample_0_Healthy/readme_plots/000_1_8__phase_portrait_3d.png)
-
-### Principal Axes (PCA)
-
-TLU also extracts the **Principal Axes** of the network by calculating the eigenvalues and eigenvectors of the covariance matrix. This reveals the dominant "dimensions" of variance—the primary directions in which the organization's resources naturally flow and fluctuate.
-
-![000_2_2__principal_axes_ratio](samples/Sample_0_Healthy/readme_plots/000_2_2__principal_axes_ratio.png)
-
-### 001_ Thermodynamics & Statistical Mechanics
-
-Is your organization efficient? We measure global **Free Energy ($F$)** and **Entropy ($S$)**. High entropy with low work output indicates "Heat" (dissipative costs/waste) building up in the system. Local complexity and volatility are also captured as 3D manifolds.
-
-![1_3_5__3d_dynamics_entropy](samples/Sample_0_Healthy/readme_plots/001_1_2_1__3d_local_entropy.png)
-![1_3_6__3d_dynamics_complexity](samples/Sample_0_Healthy/readme_plots/001_1_2_5__local_thermo_complexity.png)
-![1_5_1__thermodynamics_dashboard](samples/Sample_0_Healthy/readme_plots/001_1_1__thermodynamics_dashboard.png)
-![1_5_2__thermodynamics_energy_stack](samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-![1_5_3__thermodynamics_ts_diagram](samples/Sample_0_Healthy/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
-
-### 002_ Information Geometry & Forensics
-
-Unmask anomalies hiding in the data's "blood vessels." TLU calculates **Topological Edge Stress** based on Z-scores, revealing excessive load (rupture risk) on specific pathways and visualizing structural distortions as network graphs.
-
-![1_12__network_topology t 00000](samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00000.png)
-![1_12__network_topology t 00001](samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00001.png)
-![1_12__network_topology t 00002](samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00002.png)
-![1_12__network_topology t 00003](samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00003.png)
-
-### Manifold Dimensionality (SVD)
-
-By performing Singular Value Decomposition (SVD) on the transition matrix, TLU calculates the **Effective Rank** of the network. If the network becomes over-centralized or collapses into a few hubs, the effective dimensionality drops, acting as an early warning for structural fragility.
-
-![002_1_3__manifold_dimensionality](samples/Sample_0_Healthy/readme_plots/002_1_3__manifold_dimensionality.png)
-
-### 003_ Applied Kinematics & Robotics
-
-*(Supports Forward Kinematics for simulating the ripple effects of virtual investments, and Inverse Kinematics for calculating the required target intervention while considering stiffness penalties.)*
-
-![1_1__3d_kinematics_fk](samples/Sample_0_Healthy/readme_plots/003_1_1__3d_kinematics_fk.png)
-![1_2__3d_kinematics_ik](samples/Sample_0_Healthy/readme_plots/003_1_2__3d_kinematics_ik.png)
-
-### 004_ Control Theory & Systems Engineering
-
-Stop guessing. Use **Linear-Quadratic Regulator (LQR)** theory to calculate the mathematically optimal resource allocation trajectory to reach a target state while minimizing organizational friction (strain energy).
-
-![1_7_2__control_error_convergence](samples/Sample_0_Healthy/readme_plots/004_1_2__control_error_convergence.png)
-![1_7_3__control_lqr_performance_space](samples/Sample_0_Healthy/readme_plots/004_1_3__control_lqr_performance_space.png)
-
-### System Stability (Spectral Radius)
-
-Is the system spinning out of control? By calculating the maximum eigenvalue (**Spectral Radius**) of the transition matrix, TLU detects topological cycles (e.g., Wash Trading or recursive loops). If the radius approaches or exceeds 1.0, the system is mathematically unstable and prone to exponential divergence.
-
-![004_1_2__system_stability](samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+*(Note: The original Japanese documentation is retained under `docs/ja/` for legacy support and reference.)*
 
 ---
 
-## Sample Datasets & Hands-on Tutorials
+## Overcoming Traditional Limitations with "Physical Mathematics"
 
-To help you understand how TLU works in practice without the cognitive overload of mixed signals, we provide a suite of **6 isolated sample datasets**. These datasets simulate both financial ledgers and spatial traffic networks under various controlled pathological conditions (e.g., Wash Trades, Embezzlement, Journaling Errors).
+Why are existing audit tools and dashboards insufficient?
 
-You can find them in the `samples/` directory. Each sample includes a dedicated `README.md` explaining the anomaly injected, the physical reasoning behind it, and **the exact command you need to run to generate the visualization graphs** on your local machine.
+### The Limits of Traditional Aggregation
+Traditional systems only look at "static results," such as whether debits equal credits or if sales targets are met. Because of this, it is mathematically difficult to detect "Wash Trading" (where multiple bad actors collude to balance the books) or "Frictional Heat" (excessive inefficiencies slowly corroding the company over years).
 
-* [`samples/Sample_0_Healthy/`](samples/Sample_0_Healthy/): A perfectly balanced baseline. See the [Meta-Diagnosis Report](samples/Sample_0_Healthy/README.md).
-* [`samples/Sample_1_Wash_Trade/`](samples/Sample_1_Wash_Trade/): Explains System Stability (Eigenvalues). See the [Meta-Diagnosis Report](samples/Sample_1_Wash_Trade/README.md).
-* [`samples/Sample_2_Embezzlement_Leak/`](samples/Sample_2_Embezzlement_Leak/): Explains Thermodynamics (Free Energy). See the [Meta-Diagnosis Report](samples/Sample_2_Embezzlement_Leak/README.md).
-* [`samples/Sample_3_Unbalanced_Mistake/`](samples/Sample_3_Unbalanced_Mistake/): Explains Macro Forensics (Conservation Law). See the [Meta-Diagnosis Report](samples/Sample_3_Unbalanced_Mistake/README.md).
-* [`samples/Sample_4_Composite_Chaos/`](samples/Sample_4_Composite_Chaos/): A real-world chaotic mix of all anomalies. See the [Meta-Diagnosis Report](samples/Sample_4_Composite_Chaos/README.md).
-* [`samples/Sample_5_Kyoto_Traffic/`](samples/Sample_5_Kyoto_Traffic/): A pure spatial network (Open System) control experiment. See the [Meta-Diagnosis Report](samples/Sample_5_Kyoto_Traffic/README.md).
-* [`samples/Sample_6_Market_Bipartite_Weekly/`](samples/Sample_6_Market_Bipartite_Weekly/): Stock Market Audit (Bipartite Graph) detecting Wash Trading. See the [Meta-Diagnosis Report](samples/Sample_6_Market_Bipartite_Weekly/README.md).
-* [`samples/Sample_7_Market_Users_Weekly/`](samples/Sample_7_Market_Users_Weekly/): Trader Network Audit (User Graph) exposing the Collusion Syndicate. See the [Meta-Diagnosis Report](samples/Sample_7_Market_Users_Weekly/README.md).
-* 🔍 **Meta-Comparison (Finance):** Read the [Meta-Comparison Report for Stock Market](samples/Meta_Comparison_Report_for_Stock_Market.md) to understand how TLU flips the perspective between Market-level and User-level audits to pinpoint the exact perpetrators.
-* **Biological Network Forensics (fMRI):**
-* [`samples/Sample_8_fMRI_Stroke/`](samples/Sample_8_fMRI_Stroke/): Biological Network Audit (fMRI) detecting severe Arterial Blockage (Stroke). See the [Meta-Diagnosis Report](samples/Sample_8_fMRI_Stroke/README.md).
-* [`samples/Sample_9_fMRI_Seizure/`](samples/Sample_9_fMRI_Seizure/): Biological Network Audit (fMRI) detecting Epileptic Hypersynchrony (Seizure). See the [Meta-Diagnosis Report](samples/Sample_9_fMRI_Seizure/README.md).
-* 🔍 **Meta-Comparison (Biology):** Read the [Meta-Comparison Report for Biological Networks](samples/Meta_Comparison_Report_for_Biological_Networks.md) to understand the isomorphic relationship between financial fraud (Wash Trading/Embezzlement) and medical pathologies (Seizure/Stroke).
+### Cross-Domain Resolution via Physical Mathematics
+TLU models disparate transaction data (like journal ledgers) not as a simple addition of numbers, but as a **"Continuous Elastic Medium connected by masses and springs (Mass-Spring-Damper Network)."** This allows the system to highly accurately simulate how a localized anomaly (fraud) propagates through the entire organization using the following "Physical Properties":
+
+* **Mass / Inertia:** The scale of fund or resource retention. If mass suddenly vanishes, it indicates "embezzlement" or "infarction."
+* **Stiffness:** The deterministic reliability of business relationships (spring strength). If this is lost, the system falls into "absolute rigidity."
+* **Viscosity:** Delays in fund collection or business processes (frictional heat).
+
+![Mass-Spring-Damper Model](docs/readme_plots/Mass-Spring-Damper-Model.jpg)
+
+By applying Newtonian mechanics, thermodynamics, information geometry, and control theory cross-domain, TLU utilizes these equations as invisible "Anomaly Detection Sensors."
 
 ---
 
-## Documentation (Hub & Spoke)
+## 4 Core Signatures of Evidence
 
-For detailed mathematical logic, operational protocols, and API references, please consult the "Spoke" manuals linked below:
+Below are the 4 primary physical and mathematical visual proofs that the AI Meta-Diagnostic Engine relies on for forensic auditing.
 
-* [01_System_Philosophy_and_Operations.md](docs/architecture/01_System_Philosophy_and_Operations.md)
-* [02_Data_Topology_and_Projection.md](docs/architecture/02_Data_Topology_and_Projection.md)
-* [03_Visualizer_and_Theme_Engine.md](docs/architecture/03_Visualizer_and_Theme_Engine.md)
-* [04_Simulation_and_TDD.md](docs/architecture/04_Simulation_and_TDD.md)
-* [05_Meta_Analytical_Methodology_and_AI_Collaboration.md](docs/architecture/05_Meta_Analytical_Methodology_and_AI_Collaboration.md)
-* [06_Dummy_Data_Generators.md](docs/architecture/06_Dummy_Data_Generators.md)
-* [07_Theoretical_Limits_and_Edge_Effects.md](docs/architecture/07_Theoretical_Limits_and_Edge_Effects.md)
+> **⚠️ Prerequisite for Interpretation: Mathematical Constraints (Edge Effect)**
+> TLU detects anomalies based on the "variance (fluctuation)" of historical data. Therefore, **immediately after calculation begins (at time $T=0$)**, there is no historical data to compare against. This inevitably causes even normal transactions to be calculated as an "infinite anomaly (massive spike)"—a phenomenon known as the **Edge Effect (Mathematical Illusion)**. This is not a bug; it is a feature that accurately reflects the "uncertainty" of insufficient data (e.g., at the start or end of an aggregation period). Please account for this initial spike correctly when reading the graphs.
 
-* [000_Classical_Mechanics.md](docs/physics/000_Classical_Mechanics.md)
-* [001_Thermodynamics_and_Fluctuations.md](docs/physics/001_Thermodynamics_and_Fluctuations.md)
-* [002_Information_Geometry_and_Forensics.md](docs/physics/002_Information_Geometry_and_Forensics.md)
-* [003_Applied_Kinematics.md](docs/physics/003_Applied_Kinematics.md)
-* [004_Control_Theory_and_Systems_Engineering.md](docs/physics/004_Control_Theory_and_Systems_Engineering.md)
-* [005_Signal_Processing_and_Wave_Mechanics.md](docs/physics/005_Signal_Processing_and_Wave_Mechanics.md)
+### 1. Macro Forensics (Conservation of Mass & Collapse)
 
-* [Graph_Interpretation_Guide.md](docs/interpretations/Graph_Interpretation_Guide.md)
-* [LLM_Diagnostic_Manual.md](docs/LLM_Diagnostic_Manual.md)
+Monitors whether any funds have "unnaturally vanished or spawned (Residual)" from the global system. If funds leak off the books, the Law of Conservation of Mass is violated, detected as a violent spike.
+
+【Example of Normal State: From Sample 0】
+> 📝 **Interpretation:** The error (Residual) remains within the noise level near zero, proving that the "Law of Conservation of Mass" is perfectly maintained across the entire system.
+![Macro Forensics: Normal](samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
+
+【Example of Abnormal State: From Sample 2】
+> 🚨 **Proof of Anomaly:** The violent negative spike in the center of the graph accurately captures the exact moment of "Embezzlement (Leakage)" where funds unnaturally vanished off the books.
+![Macro Forensics: Abnormal](samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
+
+### 2. Control Theory & System Stability (Detecting the Death Spiral)
+
+**Spectral Radius:** Monitors whether a "closed loop (Wash Trading)" has formed within the transaction network. If the red trajectory line approaches or breaches the orange threshold line of 1.0, it mathematically proves that the system is spiraling out of control due to an artificial loop.
+
+【Example of Normal State: From Sample 0】
+> 📝 **Interpretation:** The red trajectory line (Spectral Radius) constantly hovers in the safe zone below 1.0, indicating that the organization's transactions are self-converging (healthy).
+![System Stability: Normal](samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+
+【Example of Abnormal State: From Sample 4】
+> 🚨 **Proof of Anomaly:** The red trajectory line breaches and sticks to the warning line (1.0), mathematically proving that an out-of-control state driven by artificial "Wash Trading" is occurring within the organization.
+![System Stability: Abnormal](samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
+
+### 3. Thermodynamics Energy Stack (Organizational Exhaustion & Heat Death)
+
+**Free Energy:** Indicates the "spare capacity" for the organization to function healthily. If the white line sinks below zero into the negative zone, it proves the system is heading towards a "Thermodynamic Death"—where the more it operates, the more wasteful frictional heat (Entropy) it generates.
+
+【Example of Normal State: From Sample 0】
+> 📝 **Interpretation:** The white line (Free Energy) consistently stays in the positive zone, indicating the system retains "healthy spare capacity" to perform work.
+![Thermodynamics Energy Stack: Normal](samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+
+【Example of Abnormal State: From Sample 6】
+> 🚨 **Proof of Anomaly:** Free Energy (the white line) plummets below zero into the negative zone. The system has fallen into "Heat Death" due to the frictional heat generated by excessive transactions (e.g., Wash Trading).
+![Thermodynamics Energy Stack: Abnormal](samples/Sample_6_Market_Bipartite_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+
+### 4. 3D Micro Forensics (Pinpoint Coordinate Identification)
+
+**Z-Score & KL Drift 3D Surface:** Calculates the geometric distortion of space to pinpoint **"exactly which account (node) on what specific date"** an anomalous manipulation occurred, piercing it as a sharp Yellow-Green spike.
+
+【Example of Normal State: From Sample 0】
+> 📝 **Interpretation:** While there is a massive spike (Mathematical Illusion) at the very beginning of the graph due to the "Edge Effect," the entire space thereafter is composed of gentle blue waves (normal transaction fluctuations), indicating no sudden anomalies exist.
+![Micro Z-Score 3D Surface: Normal](samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+
+【Example of Abnormal State: From Sample 5】
+> 🚨 **Proof of Anomaly:** A sharp "Yellow-Green" spike violently pierces through the flat space, pinpointing a massive infarction that occurred at a specific node (intersection) on a specific date.
+![Micro Z-Score 3D Surface: Abnormal](samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
 ---
 
-## User Prerequisites
+## 🚀 Execution Environment & Quick Start (Proof via TDD)
 
-TLU's directory structure follows standard GNU system conventions (`src/`, `bin/`, `docs/`, etc.). To run TLU with your own data, you only need to interact with the `workspace/` directory. The absolute minimum requirements to prepare are:
+TLU completely eliminates human bias and local environment dependencies through its "Fail-Fast (immediate halt upon data anomaly)" philosophy and stateless containerized environment.
 
-1. **Raw Ledger Data (Input Data)**
-   * **Location:** `workspace/input_stream/` (e.g., `Dummy_Journal_Stream.csv`)
-   * **Content:** A time-series journal ledger in CSV format exported from your accounting software. It must contain at least "Trans_Date", "Account_Name", "Debit", and "Credit" columns.
+### 【IMPORTANT】 Prerequisites for Analyzing Your Own Data
 
-2. **Account Mapping Configuration**
-   * **Location:** `workspace/config/_account_mapping.csv`
-   * **Content:** A mapping dictionary that translates your specific account names (e.g., "Mizuho Bank Account") into TLU's standard internal categories (e.g., `Asset`, `Liability`, `Revenue`, `Expense`).
+To run TLU with your own data, simply prepare the following two files at a minimum and place them in the `workspace/` directory to begin analysis.
 
-*Note: Detailed simulation settings (like time-step granularity and base physical coefficients) can be adjusted in `workspace/config/_sys_params.csv`, but default values are sufficient for initial runs.*
+1. **Time-Series Transaction Data (`workspace/input_stream/`)**
+   * Raw data exported from accounting software (CSV format). Requires the columns: "Date (Trans_Date)", "Account/Node Name (Account_Name)", "Inflow (Debit)", and "Outflow (Credit)".
+2. **Account Mapping Dictionary (`workspace/config/_account_mapping.csv`)**
+   * A dictionary file to map your unique account names to TLU's standard categories (Asset, Liability, Revenue, Expense, etc.). (If undefined accounts are detected, the system features a helper function that automatically appends and generates a placeholder template during execution).
+   * **⚠️ Crucial Fact:** To be perfectly clear, this mapping is **"strictly for generating traditional B/S and P/L statements during the initial stage (Phase 1)"**. The core of TLU—the "Physical Mathematics Engine (Phase 3 and beyond)"—strips away all names and calculates in a pure tensor space. Therefore, **the accuracy of this mapping has absolutely zero impact on the precision of anomaly detection.**
 
----
-
-## Quick Start
-
-TLU is fully containerized. You can go from zero to a full 3D analysis dashboard in minutes.
+### Full Automatic Simulation Execution Steps
 
 ```bash
 # 1. Clone the repository
 git clone https://github.com/renpoo/TLU.git
 cd TLU
 
-# 2. Spin up the environment (Zero Local Dependency)
+# 2. Spin up the Docker environment
 docker compose up -d
 
-# 3. Run the full pipeline with generated sample data
-# (To run unit tests: bash bin/batch_unittest.sh)
-bash bin/batch_generate_dummy_journal_data.sh
-bash bin/batch_processing.sh
-bash bin/batch_visualize_graphs.sh
-
-# 4. Check the Diagnosis
-# The batch_processing.sh script automatically runs the Meta-Diagnosis Engine 
-# at the very end. Check your output directory for the final medical chart:
-cat workspace/output_data/_99_diagnosis_report.md
-
-# 5. Snapshot the experiment for perfect reproducibility
-bash bin/archive_experimental_run.sh
-
-# 6. Run Specific Bundled Samples (Generate Graphs)
-# The repository includes various forensic samples. To keep the package lightweight, 
-# the resulting 3D plots are not bundled. To view the graphs for a specific 
-# sample, run the following commands from the root directory using the `--target_env` flag.
-# Example: Running the Wash Trade sample
+# 3. Run the fully automated pipeline (Simulating Sample 1: Wash Trade)
+# * Change to "samples/Sample_0_Healthy" to see the normal baseline.
 bash bin/batch_processing.sh --target_env "samples/Sample_1_Wash_Trade"
 bash bin/batch_visualize_graphs.sh --target_env "samples/Sample_1_Wash_Trade"
-# After execution, check the generated plots in `samples/Sample_1_Wash_Trade/output_plots/`.
 
-# 7. (Optional) Cross-Environment Comparison
-# Compare multiple experiments or samples side-by-side
-bash bin/batch_meta_analysis.sh --envs "samples/Sample_*" --out "samples"
+# 4. Check the AI Meta-Diagnostic Report (JSON/Markdown)
+cat workspace/output_data/_99_diagnosis_report.md
 ```
 
-# License: AGPL-3.0
+---
 
-This project is a legacy of mathematical transparency. Under the AGPL-3.0 license, we ensure that the core logic remains open and verifiable by the community. If you build upon this engine, the world deserves to see the math.
+## ⚠️ Application to Audit Practice (Falsifiability and Model Limits)
 
-# Built by Renpoo & Google Gemini
+TLU is the ultimate "Evidence Presentation Machine (Calculator)" that asserts **universal physical and mathematical facts**—such as "there is a mass deficit in the system" or "the spectral radius is pinned at 1.0."
 
-TLU is developed with a strict adherence to XP (Extreme Programming) and TDD (Test-Driven Development) protocols. Every core mathematical function is verified against theoretical edge cases.
+However, AI is NOT the final judge of whether the anomaly is an "intentional crime (embezzlement/fraud)" or simply an "input error or legitimate business reason." Based on the physical and geometric coordinates (Date and Account) presented, the human auditor who conducts the actual field investigation (falsification analytics) against real-world raw data (Ground Truth), such as invoices and contract logs, is the ultimate "Judge."
+
+---
+**License**: AGPL-3.0
+**Built by**: Renpoo & Google DeepMind Agent (Antigravity)

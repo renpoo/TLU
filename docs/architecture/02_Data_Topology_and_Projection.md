@@ -1,41 +1,48 @@
-# 02. Data Topology and Epistemological Projection
+# 02. Data Topology and Projection
 
-> **"To calculate the truth of the system, we must first strip away the illusion of names."**
+## 🔬 Conclusion: Why Strip "Words (Business Context)" from Mathematics?
 
-Before TLU can apply laws of physics or geometry to your data, the data must be purged of its domain-specific context. Algorithms do not understand "Accounts Payable," "Marketing Department," or "Server Region US-East." They only understand topology, mass, and directional flux.
+The ultimate conclusion of the "Data Projection" phase in the TLU architecture is: **"If human societal context (words) such as 'Accounts Receivable' or 'Kyoto Branch' are mixed into mathematical calculations, bias will arise, making objective auditing impossible. Therefore, data must be forcibly translated and isolated into a pure 'network of points and lines (tensor space)'."**
 
-This document defines the strict protocols for transforming raw domain data into a pure mathematical space (Ver 8.0.0).
+The system guarantees overwhelming objectivity—un-distortable by human hands—by performing purely physical and geometric calculations without understanding "meaning," and only re-translating (via a Rosetta Stone) back into human words during the final visualization phase.
 
 ---
 
-## 1. The Great Filter (Domain Agnosticism)
+## Elimination of Business Context and Union Topology
 
-The first phase of the TLU pipeline is **Phase 1: Projection**. Its sole purpose is epistemological projection: translating the messy, human-readable world into a sterile, computable tensor space.
+Raw data (journal data in CSV, etc.) is stripped of all human identifiers as it passes through Phase 1 (`_0_2_projector_to_coo.py`).
 
-* **Stripping Vocabulary:** Once data passes through the projector (`_0_2_projector_to_coo.py`), all string-based identifiers and domain logic are eradicated.
-* **The COO Tensor Stream:** The pipeline from this point forward only accepts and outputs data in a standard Coordinate (COO) stream format:
-  `t_idx, src_idx, tgt_idx, value`
-  *(Time Index, Source Node Index, Target Node Index, Flux Volume)*
-* **Mathematical Purity:** Core analysis filters (Phase 2) are intentionally "blind." They do not know if they are analyzing a financial ledger, a biological neural network, or a logistics supply chain. This domain agnosticism guarantees that the mathematical rules are applied without human bias.
+### Domain Independence and Unification to COO Format
 
-## 2. Union Topology (Dimensional Consistency)
+* The conversion filter transforms data like "Sales to Company A" into a pure COO (Coordinate) format tensor array: `[Node 12] -> [Node 45]: Weight 5000`.
+* The core calculation filters (Thermodynamics, Kinematics) do not know at all whether they are "analyzing financial data" or "analyzing brainwave data." This design proves the universality that the exact same physics engine operates across all domains, including finance, traffic, and medicine.
 
-For matrix operations (like calculating an inverse covariance matrix) to be mathematically valid across time, the spatial dimensions must remain perfectly consistent.
+### Consistency of Spatial Coordinates (Union Topology)
 
-* **Consistent Spatial Coordinates:** The integer ID assigned to a node (e.g., `Node 4`) must represent the exact same entity across all time steps (`t_idx = 0` to `t_idx = N`).
-* **The Union of All Elements:** Even if a specific department or account only appears in the final month of your dataset, it is registered in the topological space from the very beginning. TLU builds a "Union Topology"—a spatial matrix sized $N \times N$ where $N$ is the total number of unique nodes that *ever* exist in the entire observed timeline. Missing fluxes are simply treated as zero-energy transfers.
+* In order to correctly perform physical matrix calculations along a timeline, the dimensions of space must not be distorted.
+* Even if an account only existed in "Week 12", TLU secures the dimension (slot) for that account from "Week 1" and treats it as zero. This prevents shifts in the calculation axes across time series (dimensional incompatibility errors).
 
-## 3. Ephemeral Dictionaries (The Link to the Human World)
+---
 
-Since the core pipeline destroys all human labels, TLU must maintain a way to translate the final mathematical conclusions back into business insights.
+## Fail-Fast and the Re-translation Mechanism
 
-* **Disposable Registries:** During the Projection phase, TLU generates two ephemeral artifacts: `_node_map.csv` and `_time_map.csv`.
-* **Dynamic Rebuilding:** These dictionaries are not permanently stored databases. They are disposable and are rebuilt from scratch every single time the projector runs. This guarantees that if your source data categories change, the system adapts instantly without schema migrations.
-* **Re-attachment in Phase 3:** These dictionaries are only referenced again at the very end of the pipeline, by the Visualizer layer (Phase 3), to label the 3D graphs and dashboards with human-readable names.
+After securing the integrity of the macro calculation space, we construct error handling and the micro mechanisms for final report generation.
 
-## 4. Fail-Fast Column Mapping
+### Strict Data Validation (Immediate Halt)
 
-Data ingestion is the most dangerous point of failure in any analytics pipeline. TLU handles ingestion with extreme prejudice.
+* The ingestion of external data is where errors are most likely to occur. When TLU detects a "mismatch between debits and credits" or "missing dates," it completely avoids making supplementary guesses and immediately forces the pipeline to shut down (Fail-Fast).
+* This is a safety mechanism designed to physically block the risk that "corrupted data silently contaminates downstream calculations, causing auditors to blindly believe erroneous anomaly detection results."
 
-* **Strict Requirements:** The projector requires explicit CLI arguments defining which columns in the source CSV represent Time, Source, Target, and Value.
-* **No Guesses, No Fallbacks:** If a specified column is missing or severely malformed, TLU will not attempt to guess the user's intent or apply default values. It will immediately throw a `KeyError` and crash the pipeline. This **Fail-Fast** design ensures that dirty data is caught at the gate, preventing it from silently corrupting complex downstream physical calculations (Context Bleed).
+### Reverse Mapping (Re-translation into Human Words)
+
+* During the projection phase, a "disposable mapping table (`_node_map.csv`)" correlating the stripped string IDs to tensor IDs is generated behind the scenes.
+* After the physics engine outputs a calculation result stating, "Rigid Lock (collapse of stiffness) occurred at Node 45," the final visualization program refers to this mapping table and re-translates it into a business narrative (report) stating, "An uncollectible event has occurred in the Accounts Receivable for Company A."
+
+---
+
+## 🔬 Falsifiability and Model Limits
+
+The data projection architecture asserts the **computer science fact** that "the input dataset was mapped into a pure tensor space with 100% accuracy without any loss."
+However, TLU's projection engine cannot verify the data provenance—that is, "whether the input CSV data itself was intentionally fabricated or deleted outside the system to begin with."
+
+Therefore, before accepting the anomaly detection results calculated by TLU, auditors have the responsibility to secure an IT General Controls (ITGC) field audit (falsification analytics) to answer: "Was the journal CSV input into the system truly extracted directly from an untampered master database?"

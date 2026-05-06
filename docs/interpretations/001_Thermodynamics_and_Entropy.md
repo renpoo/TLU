@@ -1,49 +1,55 @@
 # 001. Thermodynamics and Entropy
 
-This phase applies statistical mechanics to the financial ledger. It treats money as "energy" and measures how efficiently the organization uses that energy (Work) versus how much is lost to chaos, friction, or poor processes (Entropy/Heat).
+## 🔬 Conclusion: "Heat Death" of the System Unmasked by Thermodynamics
+
+This document explains the "Thermodynamics" approach, which is the core of TLU.
+The conclusion thermodynamics presents to us is extremely simple. Whether the target network is a financial ledger, a traffic network, or biological brain functions, we diagnose: **"Is that system living healthily and accumulating spare capacity, or is it heading towards death due to wasteful frictional heat (Thermodynamic Death: Heat Death)?"**
+
+Following the physical equation $F = U - T \times S$, subtracting "wasteful transaction costs and chaos (Entropy Loss $T \times S$)" from the "Total Activity Volume (Internal Energy $U$)" visualizes the "Potential for the organization to grow healthily into the future (Free Energy $F$)."
 
 ---
 
-### 1. Thermodynamics Dashboard (`001_1_1__thermodynamics_dashboard.png`)
+## Macro Thermodynamic Transition (Energy Stack)
 
-![001_1_1__thermodynamics_dashboard](../../samples/Sample_0_Healthy/readme_plots/001_1_1__thermodynamics_dashboard.png)
+First, from the most macroscopic perspective, we compare the transition of energy of the entire system. Here, using a healthy enterprise (Sample 0) as the standard, we compare two different domains where abnormal frictional heat is generated (financial wash trading and a biological cerebral infarction).
 
-* **📊 Visual Structure**: A multi-panel dashboard. Key panels include the T-S (Temperature vs. Entropy) diagram and the Global Free Energy trend line (Line colors: White represents Free Energy, Orange represents Heat/Friction, Green represents Entropy).
-* **📐 Physics Theory**: Calculates Helmholtz Free Energy ($F = U - TS$). It measures the "useful" monetary energy available to do actual business work, minus the energy lost to systemic chaos ($T \times S$).
-* **🚨 Anomaly Detection**:
-  * Look at the Free Energy ($F$) line. A sudden, sharp drop.
-  * Look at the Entropy ($S$) line. A sustained, inexplicable rise.
-* **💼 Business Translation**: **Severe Operational Inefficiency**. The organization is burning cash, but that cash is not generating structured returns. Instead, the money is scattering randomly across the network (e.g., panicked uncoordinated spending, rampant unstructured expenses, or embezzlement).
-* **💡 Concrete Example (from Samples)**:
-  * **Sample_2 (Embezzlement Leak)**: A continuous drain of funds with no corresponding value creation causes the entire system's "Free Energy" (its capacity to absorb shocks) to plummet steadily. This detects the onset of "Thermodynamic Death" even if the bottom line appears momentarily profitable.
-  * **Sample_4 (Composite Chaos)**: Rampant, uncoordinated spending maximizes "Heat" and "Entropy." This indicates the organization is engaging in massive transactional *activity*, but producing zero useful *work*.
+### [Comparison 1] Healthy Natural Growth (Baseline)
 
-### 2. T-S Diagram (`001_1_1__thermodynamics_ts_diagram.png`)
+![Sample 0 Thermodynamics](../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
-![001_1_3__thermodynamics_ts_diagram](../../samples/Sample_0_Healthy/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+* **Sample 0 (Healthy)**: The white line "Free Energy" grows powerfully upward along with the increase in total activity volume. This is the "Absolute Zero Standard" where the system remains highly active but maintains healthy potential without energy being robbed by friction (Entropy Loss: red layer).
 
-* **📊 Visual Structure**: A scatter plot where the X-axis is Entropy ($S$) and the Y-axis is Temperature ($T$).
-* **📐 Physics Theory**: Visualizes the thermodynamic state of the system over time. Temperature represents the "volatility" or magnitude of transaction fluctuations.
-* **🚨 Anomaly Detection**:
-  * The trajectory drifts heavily into the **Upper-Right Quadrant** (High Temperature, High Entropy).
-* **💼 Business Translation**: The business is highly volatile AND highly chaotic. Transactions are large and erratic, with no discernible structured process. This is the signature of a company losing control of its finances.
+### [Comparison 2] Thermodynamic Death in the Financial Domain (Wash Trade)
 
-### 3. Local Thermodynamics (`001_2_1__local_thermodynamics_dashboard.png`)
+![Sample 1 Thermodynamics](../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
-![001_1_2_1__3d_local_entropy](../../samples/Sample_0_Healthy/readme_plots/001_1_2_1__3d_local_entropy.png)
+* **Sample 1 (Wash Trade)**: In Weeks 41 and 48, the red layer (wasteful frictional heat $T \times S$) suddenly appears as abnormally thick pillars, crushing the white line (Free Energy $F$) into the negative region. This is physical evidence that the catch-ball of fictitious sales generating no real value (Internal Energy) is driving the system toward "Heat Death (a state where meaningful activity has ceased)."
 
-* **📊 Visual Structure**: A bar chart or heatmap breaking down the Free Energy and Entropy *per specific account* (local nodes) (using the `magma` colormap: black-to-purple is healthy, while glowing yellow areas are abnormal "heat sources" where chaos and friction are maximized).
-* **📐 Physics Theory**: Maps the global thermodynamic waste down to the specific nodes generating the heat.
-* **🚨 Anomaly Detection**:
-  * A specific account (e.g., `ACC_Travel_Exp` or `ACC_Accounts_Payable`) showing a massive, disproportionate red bar (High Local Entropy).
-* **💼 Business Translation**: **Pinpointing the Leak**. While the Global dashboard tells you the company is bleeding efficiency, this local dashboard tells you *exactly which department or account* is causing the chaos. It highlights where internal controls have completely failed.
+### [Comparison 3] Thermodynamic Death in the Biological Domain (Cerebral Infarction)
 
-### 4. Lag Matrix Heatmap (`001_2_2__lag_matrix_heatmap.png`)
+![Sample 8 Thermodynamics](../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
-![001_2_1_1__lag_matrix_correlation](../../samples/Sample_0_Healthy/readme_plots/001_2_1_1__lag_matrix_correlation.png)
+* **Sample 8 (fMRI Stroke)**: From the middle phase (around TR=150) when the lesion occurs, Entropy Loss (red layer) suddenly skyrockets, and Free Energy sinks deeply. The "loss of meaningful information processing" caused by the blockage of blood flow to a specific area mathematically matches perfectly as the exact same "Heat Death" signature as financial wash trading.
 
-* **📊 Visual Structure**: A matrix showing the correlation/time-lag relationship between accounts.
-* **📐 Physics Theory**: Calculates the delayed response (temporal memory) of the network.
-* **🚨 Anomaly Detection**:
-  * A breakdown or blurring of historically clear correlation patterns.
-* **💼 Business Translation**: **Broken causal chains**. For example, if Cash usually closely follows Accounts Receivable (with a short lag), but the matrix suddenly shows no correlation, it means the collections process has detached from reality. Cash is no longer reliably following sales.
+---
+
+## Localized Exhaustion (3D Local Entropy)
+
+After grasping from the big picture (macro) that "the system is heading towards thermodynamic death," we increase the resolution to pinpoint **"exactly where in the network (which account, which intersection, which brain region) is generating heat."**
+
+### Visualizing Localized Chaos (Sample 0)
+
+![Sample 0 3D Entropy](../../samples/Sample_0_Healthy/readme_plots/001_1_2_1__3d_local_entropy.png)
+*(Above image: The calm state of Sample 0. In anomalous systems, sharp spikes protrude here.)*
+
+* **📊 Visual Structure**: A 3D Surface heatmap visualizing the entropy (complexity/waste) at each node of the network (X-axis) and time (Y-axis) as the height on the Z-axis.
+* **🚨 Anomaly Detection**: "Extreme operational delays occurring only in a specific department" or "hotbeds of fraud where unnaturally complex transactions are concentrated"—which are hidden and invisible in the macro graph (Energy Stack)—protrude into space as sharp yellow spikes (abnormal heat).
+
+---
+
+## 🔬 Falsifiability and Model Limits (Application to Practice)
+
+The thermodynamic approach asserts with extremely high precision the **physical and mathematical fact** that "abnormal friction (entropy) has occurred within the system, scraping away potential (Free Energy)."
+However, thermodynamic data alone cannot determine whether the cause of that friction is "intentional money laundering by a malicious criminal group" or "an accidental infinite loop caused by a system API bug."
+
+After pinpointing the source of abnormal heat (spike), it functions as a powerful compass for experts in the target domain (audit firms or doctors) to conduct follow-up investigations (additional verification) based on actual vouchers or medical records to determine "why heat was generated there."

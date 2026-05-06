@@ -1,81 +1,54 @@
 # 000. Classical Mechanics & Stiffness
 
-Once the data is pre-processed, TLU projects the financial ledgers into a physics engine. This phase calculates the fundamental kinematic properties (Velocity, Acceleration) and the structural properties (Stiffness, Inertia, Viscosity) of the organization.
+## 🔬 Conclusion: Does the System Maintain Elasticity, or is it Collapsing (Rigid)?
+
+This document explains the "Classical Mechanics & Solid Mechanics" approach, which treats the target network as a "physical structure connected by countless springs" and evaluates its motion and structural strength.
+The conclusion here is clear: **We diagnose whether "the system maintains 'Elasticity' to return to its original shape against external shocks, or if it is causing an unrecoverable 'Rigid Lock' or 'Collapse'."**
+
+By capturing the flow of transactions and signals as "mass, velocity, and acceleration," we highlight the "invisible strong forces (malice or physical deficits)" lurking behind ledgers and networks.
 
 ---
 
-### 1. 3D Dynamics: Velocity (`000_1_1__3d_dynamics_velocity.png`)
+## Structural Stiffness and Collapse
 
-![000_1_1__3d_dynamics_velocity](../../samples/Sample_0_Healthy/readme_plots/000_1_1__3d_dynamics_velocity.png)
+This matrixifies the strength of connections between accounts (or intersections, or brain regions) as a "spring coefficient (Stiffness)." A healthy network maintains strong connections (red), but when an anomaly occurs, this structure undergoes a "Phase Transition (collapse)."
 
-* **📊 Visual Structure**: A 3D phase space graph. The axes represent the network's principal dimensions. The trajectory (the winding line) traces the *rate of change* (Velocity) of the money flow over time.
-* **📐 Physics Theory**: The first derivative of the ledger flux. How fast is the volume of money moving through the accounts compared to the previous time step?
-* **🚨 Anomaly Detection**:
-  * **Healthy**: A stable, tight orbital cluster or a smooth, predictable spiral.
-  * **Anomalous**: A sudden, violent jagged spike shooting far away from the central cluster.
-* **💼 Business Translation**: A massive cash flow hemorrhage, an unexpected mass payment, or a sudden halt in sales. The organization's monetary flow velocity experienced a severe shock.
-* **💡 Concrete Example (from Samples)**:
-  * **Sample_2 (Embezzlement)**: When a dummy account (which has zero "Mass/Inertia" due to no historical volume) receives illicit funds, it visualizes as a single red dot being ejected through a frictionless space at an impossible velocity. This is a classic signature of embezzlement.
+### [Comparison 1] Healthy Elasticity (Baseline)
 
----
+![Sample 0 Stiffness](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00000.png)
 
-### 2. 3D Dynamics: Acceleration (`000_1_2__3d_dynamics_acceleration.png`)
+* **Sample 0 (Healthy)**: The organization's main transaction routes (Sales, Accounts Receivable, Cash, etc.) are connected with strong red colors (strong springs). Even with slight fluctuations in transaction volume, this basic structure is maintained throughout the year, which is "Healthy Elasticity."
 
-![000_1_2__3d_dynamics_acceleration](../../samples/Sample_0_Healthy/readme_plots/000_1_2__3d_dynamics_acceleration.png)
+### [Comparison 2] Rigid Lock due to Mass Deficit (Embezzlement)
 
-* **📊 Visual Structure**: Similar to Velocity, but tracking the 3D trajectory of *Acceleration*.
-* **📐 Physics Theory**: The second derivative of the ledger flux. Is the speed of money flow increasing or decreasing? This represents the net external force ($F_{ext}$) applied to the system.
-* **🚨 Anomaly Detection**:
-  * Extreme spikes or chaotic, wildly dispersed scatter plots.
-* **💼 Business Translation**: Management interventions, external market shocks, or massive fraudulent injections. If velocity is speed, acceleration is someone aggressively slamming on the gas or the brakes.
+![Sample 2 Stiffness](../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00030.png)
+
+* **Sample 2 (Embezzlement Leak)**: As a result of continuous fund leakage off-the-books (disappearance of mass), the springs that should normally be red completely snap and become blank (colorless). This is physical evidence that funds are insufficient and the system has triggered a "Rigid Lock" from which it can no longer recover.
+
+### [Comparison 3] Temporary Rupture and Self-Repair (Human Error)
+
+![Sample 3 Stiffness](../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00021.png)
+
+* **Sample 3 (Unbalanced Mistake)**: Due to a single input mistake by an accountant, a spring is momentarily stretched (disturbance in stiffness in Week 21), putting stress on the structure. However, because the mass of the entire system was not lost, it self-repairs back into the original strong structure (red) the following month (Suspension function).
 
 ---
 
-### 3. Structural Stiffness Heatmap (`000_2_1__structural_stiffness.t.*.png`)
+## Detection of Invisible "Forces" (3D Dynamics)
 
-![000_2_1__structural_stiffness.t.00000](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+After confirming the collapse of the structure (macro), we pinpoint **"what kind of abnormal force (acceleration or external shock) was applied to the system"** from a micro kinematic perspective.
 
-![000_2_1__structural_stiffness.t.00004](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00004.png)
+### Vector of Abnormal External Force (3D External Force)
 
-![000_2_1__structural_stiffness.t.00008](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00012.png)
+![Sample 2 External Force](../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_6__3d_dynamics_external_force.png)
 
-![000_2_1__structural_stiffness.t.00012](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00024.png)
-
-![000_2_1__structural_stiffness.t.00016](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00042.png)
-
-*Note: TLU generates a sequence of these images over time. You may need to flip through them like a flipbook.*
-
-* **📊 Visual Structure**: A matrix (grid) heatmap. The color intensity of each cell represents the "Stiffness" between those two accounts (using the `RdBu_r` colormap: deep blue means independence or trade-off, while bright red indicates extremely strong coupling or "spring" linkage).
-* **📐 Physics Theory**: Hooke's Law ($K$). The "spring constant" or structural coupling between two nodes. It measures how deterministically one account reacts to another.
-* **🚨 Anomaly Detection**:
-  * **Collapse**: A cell that is historically dark (stiff) suddenly turns light or blank.
-  * **Rupture/Short-Circuit**: An unexpected, glowing dark spot appears between two accounts that should have no relationship.
-* **💼 Business Translation**:
-  * **Collapse**: A broken business process. If the Sales $\to$ Accounts Receivable stiffness collapses, it means sales are being made, but receivables are no longer being generated in tandem (e.g., off-book sales, invoicing system failure).
-  * **Rupture**: Unauthorized pathways. If Travel Expenses and Accounts Payable suddenly develop a massive stiffness, it indicates expenses are bypassing standard procedures and being dumped directly into liabilities (a classic kickback or embezzlement signature).
-* **💡 Concrete Example (from Samples)**:
-  * **Sample_3 (Unbalanced Mistake)**: Normally, an extremely strong "Stiffness" exists between Sales and Accounts Receivable. If one entry is omitted (accidentally or intentionally), the "spring" that binds them is unilaterally stretched. This accumulates massive Strain Energy in the system, visualizing as a sudden "Collapse" of stiffness on the heatmap.
+* **📊 Visual Structure**: Draws the trajectory of the "External Force" applied to the system in a 3D phase space.
+* **🚨 Anomaly Detection**: In a healthy state (Sample 0), the trajectory clusters densely near the central origin, forming a stable spherical cluster. However, when mass suddenly disappears (or is abnormally injected) from the system as in **Sample 2 (Embezzlement)**, a sharp, violent "needle (spike)" is instantly ejected far away from the central cluster into space.
 
 ---
 
-### 4. Principal Axes Ratio (`000_2_2__principal_axes_ratio.png`)
+## 🔬 Falsifiability and Model Limits (Application to Practice)
 
-![000_2_2__principal_axes_ratio](../../samples/Sample_0_Healthy/readme_plots/000_2_2__principal_axes_ratio.png)
+The Classical Mechanics approach reliably captures the **physical event** that "a spring (stiffness) ruptured at a specific point in the network, generating an abnormal force."
+However, kinematic data alone cannot determine whether the reason the stiffness collapsed was "the extraction of funds due to malicious insider crime" or "a sudden uncollectible receivable due to the bankruptcy of a business partner."
 
-* **📊 Visual Structure**: A simple bar or line chart showing the ratio of variance captured by the top 3 principal components (PC1, PC2, PC3).
-* **📐 Physics Theory**: Principal Component Analysis (PCA). It calculates how many dimensions the organization needs to operate.
-* **🚨 Anomaly Detection**:
-  * A sudden drop in the variance of PC2 or PC3, with PC1 shooting up to nearly 1.0 (100%).
-* **💼 Business Translation**: The organization has lost its operational diversity. All money is being forced through a single bottleneck or pathway. This often happens during "Wash Trading" schemes, where all funds are cyclically pumped through a single, massive artificial transaction loop, drowning out normal, diverse business operations.
-
----
-
-### 5. Eigenvector Evolution Heatmap (PC1) (`000_2_3__eigenvector_evolution.png`)
-
-![000_2_3__eigenvector_evolution](../../samples/Sample_0_Healthy/readme_plots/000_2_3__eigenvector_evolution.png)
-
-* **📊 Visual Structure**: A 2D Heatmap. The X-axis is time, the Y-axis lists the specific accounts (nodes), and the color intensity represents the absolute magnitude of the 1st Principal Component (PC1) for that account (using the `magma` colormap: dark black indicates irrelevance, while glowing orange/yellow/white cells indicate the account is currently "dominating" the entire organization).
-* **📐 Physics Theory**: Covariance of the Flux Differential ($dq$). TLU measures which accounts experience massive, simultaneous fluctuations (e.g., Cash dropping exactly when Payroll spikes). PC1 extracts the dominant "Main Engine" or primary synchronized flow of the entire organization.
-* **🚨 Anomaly Detection**: 
-  * A sudden horizontal shift where the historically bright accounts (e.g., Cash and Payroll) go dark, and entirely new, previously uncorrelated accounts suddenly light up.
-* **💼 Business Translation**: **Regime Change / Systemic Hijacking**. Because TLU analyzes the *derivative* (the rate of change) rather than static balances, this heatmap mathematically reverse-engineers the core business model. If the dominant flow axis suddenly shifts from "Sales/Cash" to "Suspense/Debt", the organization's core mechanism has been structurally altered, often a prime indicator of sophisticated, systemic fraud.
+If the timing of the stiffness collapse ($t$) and the vector of the abnormal force (direction of the spike) can be pinpointed, the auditor can form a hypothesis that "there must have been some massive external shock in the flow between these specific accounts in Week 30," and conduct a targeted cross-referencing audit (additional verification) of vouchers (invoices and contracts).
