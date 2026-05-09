@@ -59,6 +59,7 @@ SCRIPTS=(
     "005_1_1_run_resonant_frequency.sh"
     "005_1_2_run_phase_shift.sh"
     "005_2_1_run_fractal_noise.sh"
+    "006_1_1_run_wave_mechanics.sh"
 )
 
 echo "Starting TLU batch processing..."
