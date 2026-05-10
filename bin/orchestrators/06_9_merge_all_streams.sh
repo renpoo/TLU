@@ -43,9 +43,28 @@ fi
 
 echo " -> Merging streams into a single unified COO pipeline..."
 
-# We use awk to skip the CSV header for all files except the first one.
-awk 'FNR==1 && NR!=1{next;}{print}' "${STREAMS_TO_MERGE[@]}" \
-  > "${OUTPUT_FILE}"
+# We use Python to concatenate and sort the streams chronologically by t_idx.
+# Since t_idx is ISO-8601 formatted (e.g. YYYY-MM, YYYY-Www), string sorting works perfectly.
+# If the streams are not sorted, 000_1_1 will time-travel backward.
+$TLU_PY -c "
+import pandas as pd
+import sys
+
+streams = sys.argv[1:-1]
+output_file = sys.argv[-1]
+
+dfs = []
+for f in streams:
+    try:
+        dfs.append(pd.read_csv(f))
+    except Exception as e:
+        print(f'Error reading {f}: {e}')
+
+if dfs:
+    combined = pd.concat(dfs, ignore_index=True)
+    combined = combined.sort_values(['t_idx', 'src_idx', 'tgt_idx'])
+    combined.to_csv(output_file, index=False)
+" "${STREAMS_TO_MERGE[@]}" "${OUTPUT_FILE}"
 
 echo "✅ Success! Output saved to: ${OUTPUT_FILE}"
 echo "Ready for Phase Space generation (000_1_1_filter_dynamics_state.py) and subsequent TLU/WMU bifurcation."

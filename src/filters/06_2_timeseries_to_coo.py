@@ -43,8 +43,26 @@ def main():
     # If data doesn't exist for a day, no energy is injected.
     melted = melted.dropna(subset=['value'])
     
-    # Add dummy source
-    melted['src_idx'] = args.dummy_src
+    # Sector Mapping for Bipartite/Hierarchical Topology
+    SECTOR_MAP = {
+        'AAPL': 'Sector_IT', 'MSFT': 'Sector_IT', 'NVDA': 'Sector_IT', 'AVGO': 'Sector_IT', 'HPQ': 'Sector_IT', 'STX': 'Sector_IT',
+        'JNJ': 'Sector_Health', 'BIIB': 'Sector_Health', 'PRGO': 'Sector_Health',
+        'JPM': 'Sector_Fin', 'SYF': 'Sector_Fin', 'NAVI': 'Sector_Fin',
+        'AMZN': 'Sector_Disc', 'TSLA': 'Sector_Disc', 'HD': 'Sector_Disc', 'M': 'Sector_Disc', 'KSS': 'Sector_Disc',
+        'GOOG': 'Sector_Comm', 'META': 'Sector_Comm', 'DIS': 'Sector_Comm', 'LYV': 'Sector_Comm', 'NWSA': 'Sector_Comm',
+        'CAT': 'Sector_Ind', 'DOV': 'Sector_Ind', 'PNR': 'Sector_Ind',
+        'PG': 'Sector_Staples', 'CAG': 'Sector_Staples', 'CPB': 'Sector_Staples',
+        'XOM': 'Sector_Energy', 'HAL': 'Sector_Energy', 'APA': 'Sector_Energy',
+        'NEE': 'Sector_Util', 'NI': 'Sector_Util', 'PNW': 'Sector_Util',
+        'PLD': 'Sector_RE', 'BXP': 'Sector_RE', 'VNO': 'Sector_RE',
+        'LIN': 'Sector_Mat', 'SEE': 'Sector_Mat', 'OI': 'Sector_Mat'
+    }
+    
+    def map_sector(tgt):
+        ticker = tgt.split('_')[0]
+        return SECTOR_MAP.get(ticker, args.dummy_src)
+        
+    melted['src_idx'] = melted['tgt_idx'].apply(map_sector)
     
     # Rename time column to match TLU standard
     melted = melted.rename(columns={args.col_time: 't_idx'})

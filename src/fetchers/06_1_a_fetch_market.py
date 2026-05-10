@@ -20,13 +20,14 @@ def parse_args():
     parser.add_argument("--tickers", required=True, help="Comma separated tickers (e.g. ^GSPC,^VIX,AAPL)")
     parser.add_argument("--start", default="2020-01-01", help="Start date YYYY-MM-DD")
     parser.add_argument("--end", default="2024-01-01", help="End date YYYY-MM-DD")
+    parser.add_argument("--only_close", action="store_true", help="Only output Close prices (drops Open, High, Low, Volume)")
     return parser.parse_args()
 
 def main():
     args = parse_args()
     tickers = [t.strip() for t in args.tickers.split(",")]
     
-    # Note: auto_adjust=False keeps raw prices. We may want adjusted prices for forensics.
+    # Note: auto_adjust=True keeps adjusted prices.
     try:
         data = yf.download(tickers, start=args.start, end=args.end, progress=False, auto_adjust=True)
     except Exception as e:
@@ -49,6 +50,10 @@ def main():
     data = data.reset_index()
     # Normalize Date format
     data['Date'] = pd.to_datetime(data['Date']).dt.strftime('%Y-%m-%d')
+    
+    if args.only_close:
+        keep_cols = ['Date'] + [col for col in data.columns if col.endswith('_Close')]
+        data = data[keep_cols]
     
     data.to_csv(sys.stdout, index=False)
 

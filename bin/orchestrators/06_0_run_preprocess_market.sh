@@ -27,7 +27,7 @@ echo "Output: ${OUTPUT_FILE}"
 echo "Interval: ${INTERVAL}"
 echo "Running thin adapter pipeline..."
 
-$TLU_PY src/fetchers/06_1_a_fetch_market.py --tickers "${TICKERS}" --start "${START_DATE}" --end "${END_DATE}" \
+$TLU_PY src/fetchers/06_1_a_fetch_market.py --tickers "${TICKERS}" --start "${START_DATE}" --end "${END_DATE}" --only_close \
   | $TLU_PY src/filters/06_2_timeseries_to_coo.py --dummy_src "${DUMMY_SRC}" \
   | $TLU_PY src/filters/06_3_aggregate_market.py --interval "${INTERVAL}" \
   > "${OUTPUT_FILE}"
