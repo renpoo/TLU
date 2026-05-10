@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Attending Physician's Summary)
 
 **Target Environment:** `workspace`
-**Date Analyzed:** 2026-05-10 16:37:20
+**Date Analyzed:** 2026-05-10 19:55:06
 
 ## 1. Final Diagnosis
 
@@ -17,7 +17,7 @@
 |-----------------|------------------|-------|-----------|
 | Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 1e-06 |
 | Control Theory  | Max Spectral Radius      | 0.0000 | >= 0.6 |
-| Thermodynamics  | Relative Free Energy Ratio| 0.3975 | < -0.1 |
+| Thermodynamics  | Relative Free Energy Ratio| 0.8163 | < -0.1 |
 | Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine.*
@@ -25,15 +25,15 @@
 <!--
 <LLM_DIAGNOSTIC_CONTEXT>
 {
-  "timestamp": "2026-05-10T16:37:20.794853",
+  "timestamp": "2026-05-10T19:55:06.637984",
   "environment": "workspace",
   "physics_metrics": {
     "max_abs_residual": 0.0,
-    "mean_gross_activity": 1337387.234230769,
+    "mean_gross_activity": 54698.63799045801,
     "relative_leak_ratio": 0.0,
     "max_spectral": 0.0,
-    "min_free_energy": 85485.52,
-    "min_relative_free_energy": 0.39753770542549155,
+    "min_free_energy": 41461.9277,
+    "min_relative_free_energy": 0.8163497402118262,
     "max_z_score": 0.0,
     "max_leak_location": "Time: 2020-W01"
   },
@@ -46,127 +46,631 @@
     }
   ],
   "financial_baseline": {
-    "week": "2020-W52",
-    "assets": 229102.63999999908,
-    "liabilities": 181671.3700000001,
+    "week": "2025-W01",
+    "assets": 0.0,
+    "liabilities": 5707.103346824646,
     "equity": 0.0,
-    "net_income": 47431.269999999786,
-    "total_liab_eq": 229102.6399999999,
-    "revenue": 955157.5599999998,
-    "expense": 907726.29,
+    "net_income": -5707.103346824646,
+    "total_liab_eq": 0.0,
+    "revenue": -4487.158058166504,
+    "expense": 1219.945288658142,
     "is_balanced": true,
     "bs_items": [
       [
-        "ACC_Accounts_Payable",
+        "Sector_Comm",
         "Liability",
-        74067.95000000007
+        1039.6008262634277
       ],
       [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        115309.2699999999
+        "Sector_Disc",
+        "Liability",
+        1029.5489263534546
       ],
       [
-        "ACC_Cash",
-        "Asset",
-        113793.36999999918
+        "Sector_Energy",
+        "Liability",
+        150.93221664428717
       ],
       [
-        "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        107603.42000000004
+        "Sector_Fin",
+        "Liability",
+        308.27400398254406
+      ],
+      [
+        "Sector_Health",
+        "Liability",
+        316.82761001586914
+      ],
+      [
+        "Sector_IT",
+        "Liability",
+        1145.314962387085
+      ],
+      [
+        "Sector_Ind",
+        "Liability",
+        640.0221099853516
+      ],
+      [
+        "Sector_Mat",
+        "Liability",
+        455.4459304809571
+      ],
+      [
+        "Sector_RE",
+        "Liability",
+        212.2653121948241
+      ],
+      [
+        "Sector_Staples",
+        "Liability",
+        224.6026992797851
+      ],
+      [
+        "Sector_Util",
+        "Liability",
+        184.26874923706055
       ]
     ],
     "pl_items": [
       [
-        "ACC_COGS",
-        "Expense",
-        525436.7600000001
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        220971.34
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        62009.74
-      ],
-      [
-        "ACC_Sales_Revenue",
+        "AAPL_Close",
         "Revenue",
-        955157.5599999998
+        -249.05946350097656
       ],
       [
-        "ACC_Travel_Exp",
+        "AMZN_Close",
+        "Revenue",
+        -219.38999938964844
+      ],
+      [
+        "APA_Close",
         "Expense",
-        99308.44999999998
+        21.57927894592285
+      ],
+      [
+        "AVGO_Close",
+        "Revenue",
+        -229.2827911376953
+      ],
+      [
+        "BIIB_Close",
+        "Expense",
+        152.9199981689453
+      ],
+      [
+        "BXP_Close",
+        "Expense",
+        69.88532257080078
+      ],
+      [
+        "CAG_Close",
+        "Expense",
+        24.83213806152344
+      ],
+      [
+        "CAT_Close",
+        "Revenue",
+        -355.851806640625
+      ],
+      [
+        "CPB_Close",
+        "Expense",
+        38.79950714111328
+      ],
+      [
+        "DIS_Close",
+        "Revenue",
+        -110.13202667236328
+      ],
+      [
+        "DOV_Close",
+        "Expense",
+        185.0934906005859
+      ],
+      [
+        "GOOG_Close",
+        "Revenue",
+        -189.5679168701172
+      ],
+      [
+        "HAL_Close",
+        "Expense",
+        26.278162002563477
+      ],
+      [
+        "HD_Close",
+        "Revenue",
+        -377.0073547363281
+      ],
+      [
+        "HPQ_Close",
+        "Expense",
+        30.746503829956055
+      ],
+      [
+        "JNJ_Close",
+        "Revenue",
+        -139.58250427246094
+      ],
+      [
+        "JPM_Close",
+        "Revenue",
+        -232.4968414306641
+      ],
+      [
+        "KSS_Close",
+        "Expense",
+        13.342782974243164
+      ],
+      [
+        "LIN_Close",
+        "Revenue",
+        -411.72454833984375
+      ],
+      [
+        "LYV_Close",
+        "Expense",
+        129.5
+      ],
+      [
+        "META_Close",
+        "Revenue",
+        -583.170166015625
+      ],
+      [
+        "MSFT_Close",
+        "Revenue",
+        -417.4606018066406
+      ],
+      [
+        "M_Close",
+        "Expense",
+        15.968792915344238
+      ],
+      [
+        "NAVI_Close",
+        "Expense",
+        12.42878532409668
+      ],
+      [
+        "NEE_Close",
+        "Revenue",
+        -69.05056762695312
+      ],
+      [
+        "NI_Close",
+        "Expense",
+        35.284183502197266
+      ],
+      [
+        "NVDA_Close",
+        "Revenue",
+        -134.2460174560547
+      ],
+      [
+        "NWSA_Close",
+        "Expense",
+        27.230716705322266
+      ],
+      [
+        "OI_Close",
+        "Expense",
+        10.84000015258789
+      ],
+      [
+        "PG_Close",
+        "Revenue",
+        -160.97105407714844
+      ],
+      [
+        "PLD_Close",
+        "Revenue",
+        -101.24962615966795
+      ],
+      [
+        "PNR_Close",
+        "Expense",
+        99.07681274414062
+      ],
+      [
+        "PNW_Close",
+        "Expense",
+        79.93399810791016
+      ],
+      [
+        "PRGO_Close",
+        "Expense",
+        24.32510757446289
+      ],
+      [
+        "SEE_Close",
+        "Expense",
+        32.88138198852539
+      ],
+      [
+        "STX_Close",
+        "Expense",
+        84.51958465576172
+      ],
+      [
+        "SYF_Close",
+        "Expense",
+        63.3483772277832
+      ],
+      [
+        "TSLA_Close",
+        "Revenue",
+        -403.8399963378906
+      ],
+      [
+        "VNO_Close",
+        "Expense",
+        41.13036346435547
+      ],
+      [
+        "XOM_Close",
+        "Revenue",
+        -103.07477569580078
       ]
     ],
     "tb_items": [
       [
-        "ACC_Accounts_Payable",
-        "Liability",
-        343765.39,
-        417833.3400000001,
-        74067.95000000007
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        955157.5599999998,
-        839848.2899999999,
-        115309.2699999999
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        525436.7600000001,
-        0.0,
-        525436.7600000001
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        839848.2899999999,
-        726054.9200000007,
-        113793.36999999918
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        417833.3400000001,
-        525436.7600000001,
-        -107603.42000000004
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        220971.34,
-        0.0,
-        220971.34
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        62009.74,
-        0.0,
-        62009.74
-      ],
-      [
-        "ACC_Sales_Revenue",
+        "AAPL_Close",
         "Revenue",
+        249.05946350097656,
         0.0,
-        955157.5599999998,
-        955157.5599999998
+        -249.05946350097656
       ],
       [
-        "ACC_Travel_Exp",
-        "Expense",
-        99308.44999999998,
+        "AMZN_Close",
+        "Revenue",
+        219.38999938964844,
         0.0,
-        99308.44999999998
+        -219.38999938964844
+      ],
+      [
+        "APA_Close",
+        "Expense",
+        21.57927894592285,
+        0.0,
+        21.57927894592285
+      ],
+      [
+        "AVGO_Close",
+        "Revenue",
+        229.2827911376953,
+        0.0,
+        -229.2827911376953
+      ],
+      [
+        "BIIB_Close",
+        "Expense",
+        152.9199981689453,
+        0.0,
+        152.9199981689453
+      ],
+      [
+        "BXP_Close",
+        "Expense",
+        69.88532257080078,
+        0.0,
+        69.88532257080078
+      ],
+      [
+        "CAG_Close",
+        "Expense",
+        24.83213806152344,
+        0.0,
+        24.83213806152344
+      ],
+      [
+        "CAT_Close",
+        "Revenue",
+        355.851806640625,
+        0.0,
+        -355.851806640625
+      ],
+      [
+        "CPB_Close",
+        "Expense",
+        38.79950714111328,
+        0.0,
+        38.79950714111328
+      ],
+      [
+        "DIS_Close",
+        "Revenue",
+        110.13202667236328,
+        0.0,
+        -110.13202667236328
+      ],
+      [
+        "DOV_Close",
+        "Expense",
+        185.0934906005859,
+        0.0,
+        185.0934906005859
+      ],
+      [
+        "GOOG_Close",
+        "Revenue",
+        189.5679168701172,
+        0.0,
+        -189.5679168701172
+      ],
+      [
+        "HAL_Close",
+        "Expense",
+        26.278162002563477,
+        0.0,
+        26.278162002563477
+      ],
+      [
+        "HD_Close",
+        "Revenue",
+        377.0073547363281,
+        0.0,
+        -377.0073547363281
+      ],
+      [
+        "HPQ_Close",
+        "Expense",
+        30.746503829956055,
+        0.0,
+        30.746503829956055
+      ],
+      [
+        "JNJ_Close",
+        "Revenue",
+        139.58250427246094,
+        0.0,
+        -139.58250427246094
+      ],
+      [
+        "JPM_Close",
+        "Revenue",
+        232.4968414306641,
+        0.0,
+        -232.4968414306641
+      ],
+      [
+        "KSS_Close",
+        "Expense",
+        13.342782974243164,
+        0.0,
+        13.342782974243164
+      ],
+      [
+        "LIN_Close",
+        "Revenue",
+        411.72454833984375,
+        0.0,
+        -411.72454833984375
+      ],
+      [
+        "LYV_Close",
+        "Expense",
+        129.5,
+        0.0,
+        129.5
+      ],
+      [
+        "META_Close",
+        "Revenue",
+        583.170166015625,
+        0.0,
+        -583.170166015625
+      ],
+      [
+        "MSFT_Close",
+        "Revenue",
+        417.4606018066406,
+        0.0,
+        -417.4606018066406
+      ],
+      [
+        "M_Close",
+        "Expense",
+        15.968792915344238,
+        0.0,
+        15.968792915344238
+      ],
+      [
+        "NAVI_Close",
+        "Expense",
+        12.42878532409668,
+        0.0,
+        12.42878532409668
+      ],
+      [
+        "NEE_Close",
+        "Revenue",
+        69.05056762695312,
+        0.0,
+        -69.05056762695312
+      ],
+      [
+        "NI_Close",
+        "Expense",
+        35.284183502197266,
+        0.0,
+        35.284183502197266
+      ],
+      [
+        "NVDA_Close",
+        "Revenue",
+        134.2460174560547,
+        0.0,
+        -134.2460174560547
+      ],
+      [
+        "NWSA_Close",
+        "Expense",
+        27.230716705322266,
+        0.0,
+        27.230716705322266
+      ],
+      [
+        "OI_Close",
+        "Expense",
+        10.84000015258789,
+        0.0,
+        10.84000015258789
+      ],
+      [
+        "PG_Close",
+        "Revenue",
+        160.97105407714844,
+        0.0,
+        -160.97105407714844
+      ],
+      [
+        "PLD_Close",
+        "Revenue",
+        101.24962615966795,
+        0.0,
+        -101.24962615966795
+      ],
+      [
+        "PNR_Close",
+        "Expense",
+        99.07681274414062,
+        0.0,
+        99.07681274414062
+      ],
+      [
+        "PNW_Close",
+        "Expense",
+        79.93399810791016,
+        0.0,
+        79.93399810791016
+      ],
+      [
+        "PRGO_Close",
+        "Expense",
+        24.32510757446289,
+        0.0,
+        24.32510757446289
+      ],
+      [
+        "SEE_Close",
+        "Expense",
+        32.88138198852539,
+        0.0,
+        32.88138198852539
+      ],
+      [
+        "STX_Close",
+        "Expense",
+        84.51958465576172,
+        0.0,
+        84.51958465576172
+      ],
+      [
+        "SYF_Close",
+        "Expense",
+        63.3483772277832,
+        0.0,
+        63.3483772277832
+      ],
+      [
+        "Sector_Comm",
+        "Liability",
+        0.0,
+        1039.6008262634277,
+        1039.6008262634277
+      ],
+      [
+        "Sector_Disc",
+        "Liability",
+        0.0,
+        1029.5489263534546,
+        1029.5489263534546
+      ],
+      [
+        "Sector_Energy",
+        "Liability",
+        0.0,
+        150.93221664428717,
+        150.93221664428717
+      ],
+      [
+        "Sector_Fin",
+        "Liability",
+        0.0,
+        308.27400398254406,
+        308.27400398254406
+      ],
+      [
+        "Sector_Health",
+        "Liability",
+        0.0,
+        316.82761001586914,
+        316.82761001586914
+      ],
+      [
+        "Sector_IT",
+        "Liability",
+        0.0,
+        1145.314962387085,
+        1145.314962387085
+      ],
+      [
+        "Sector_Ind",
+        "Liability",
+        0.0,
+        640.0221099853516,
+        640.0221099853516
+      ],
+      [
+        "Sector_Mat",
+        "Liability",
+        0.0,
+        455.4459304809571,
+        455.4459304809571
+      ],
+      [
+        "Sector_RE",
+        "Liability",
+        0.0,
+        212.2653121948241,
+        212.2653121948241
+      ],
+      [
+        "Sector_Staples",
+        "Liability",
+        0.0,
+        224.6026992797851,
+        224.6026992797851
+      ],
+      [
+        "Sector_Util",
+        "Liability",
+        0.0,
+        184.26874923706055,
+        184.26874923706055
+      ],
+      [
+        "TSLA_Close",
+        "Revenue",
+        403.8399963378906,
+        0.0,
+        -403.8399963378906
+      ],
+      [
+        "VNO_Close",
+        "Expense",
+        41.13036346435547,
+        0.0,
+        41.13036346435547
+      ],
+      [
+        "XOM_Close",
+        "Revenue",
+        103.07477569580078,
+        0.0,
+        -103.07477569580078
       ]
     ]
   }
