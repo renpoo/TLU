@@ -10,8 +10,8 @@ try:
     # Ensure explicit 'family': 'monospace' properties also support Japanese characters
     plt.rcParams['font.monospace'] = ['IPAexGothic'] + plt.rcParams['font.monospace']
 except ImportError:
-    plt.rcParams['font.family'] = ['Noto Sans CJK JP', 'Hiragino Sans', 'YuGothic', 'sans-serif']
-    plt.rcParams['font.monospace'] = ['Noto Sans CJK JP', 'Hiragino Sans'] + plt.rcParams['font.monospace']
+    plt.rcParams['font.family'] = ['AppleGothic', 'Hiragino Sans', 'Hiragino Maru Gothic Pro', 'Noto Sans CJK JP', 'YuGothic', 'sans-serif']
+    plt.rcParams['font.monospace'] = ['AppleGothic', 'Hiragino Sans', 'Noto Sans CJK JP'] + plt.rcParams['font.monospace']
 
 def get_base_parser(description: str) -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=description)
@@ -195,7 +195,8 @@ def save_plot(fig, out_dir: str, filename: str):
     os.makedirs(out_dir, exist_ok=True)
     base_name = os.path.splitext(filename)[0]
     out_path = os.path.join(out_dir, f"{base_name}.png")
-    fig.savefig(out_path, dpi=150, bbox_inches='tight')
+    fig.tight_layout() # Compress contents to fit inside the fixed figsize
+    fig.savefig(out_path, dpi=150) # Removed bbox_inches='tight' to strictly fix image dimensions
     print(f"✅ Saved: {out_path}", file=sys.stderr)
     
     # Intentionally freeze execution natively displaying GUI interactively
