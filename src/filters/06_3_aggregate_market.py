@@ -68,6 +68,26 @@ def main():
         sys.exit(0)
         
     final_df = pd.DataFrame(aggregated)
+    
+    # ---------------------------------------------------------
+    # Dimensional Unification (Position -> Flux)
+    # ---------------------------------------------------------
+    # TLU's COO stream natively expects Net Flux (v) because `000_1_1` integrates it.
+    # Therefore, State/Position data (Prices, Rates) must be differentiated (.diff()).
+    # Flux data (Volume) is already Flux and remains unchanged.
+    flux_dfs = []
+    for (src, tgt), group in final_df.groupby(['src_idx', 'tgt_idx'], sort=False):
+        group = group.copy()
+        if 'Volume' not in str(tgt):
+            # By filling the first NaN with the original value, the integration (cumsum)
+            # in 000_1_1 will perfectly reconstruct the absolute Position.
+            group['value'] = group['value'].diff().fillna(group['value'])
+        flux_dfs.append(group)
+        
+    if flux_dfs:
+        final_df = pd.concat(flux_dfs, ignore_index=True)
+        final_df = final_df.sort_values(['t_idx', 'src_idx', 'tgt_idx'])
+        
     final_df.to_csv(sys.stdout, index=False)
 
 if __name__ == "__main__":

@@ -17,7 +17,7 @@ source "bin/orchestrators/_tlu_env.sh"
 
 JOURNAL_STREAM="${TARGET_ENV:-workspace}/input_stream/Aggregated_Journal_Stream.csv"
 MARKET_STREAM="${TARGET_ENV:-workspace}/input_stream/Aggregated_Market_Stream.csv"
-OUTPUT_FILE="${TARGET_ENV:-workspace}/input_stream/WMU_Time_Node_Stream.csv"
+OUTPUT_FILE="${TARGET_ENV:-workspace}/input_stream/Unified_COO_Stream.csv"
 
 echo "=================================================="
 echo "TLU Phase 06: Merging Global Streams (Internal + External)"
@@ -41,13 +41,11 @@ if [ ${#STREAMS_TO_MERGE[@]} -eq 0 ]; then
     exit 1
 fi
 
-echo " -> Merging streams and translating to Time-Node format..."
+echo " -> Merging streams into a single unified COO pipeline..."
 
-# We use awk to skip the CSV header for all files except the first one,
-# then pipe the concatenated COO stream directly into the Time-Node translator.
+# We use awk to skip the CSV header for all files except the first one.
 awk 'FNR==1 && NR!=1{next;}{print}' "${STREAMS_TO_MERGE[@]}" \
-  | $TLU_PY src/filters/06_4_coo_to_time_node_stream.py \
   > "${OUTPUT_FILE}"
 
 echo "✅ Success! Output saved to: ${OUTPUT_FILE}"
-echo "Ready for Wave Mechanics Unit (WMU) analysis."
+echo "Ready for Phase Space generation (000_1_1_filter_dynamics_state.py) and subsequent TLU/WMU bifurcation."
