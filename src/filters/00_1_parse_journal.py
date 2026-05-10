@@ -82,6 +82,12 @@ def main():
         src = str(row['Src_Account']) if pd.notna(row['Src_Account']) else 'UNKNOWN_LEAK'
         tgt = str(row['Tgt_Account']) if pd.notna(row['Tgt_Account']) else 'UNKNOWN_LEAK'
 
+        # Ensure ACC_ prefix for TLU compatibility
+        if src != 'UNKNOWN_LEAK' and not src.startswith('ACC_'):
+            src = f"ACC_{src}"
+        if tgt != 'UNKNOWN_LEAK' and not tgt.startswith('ACC_'):
+            tgt = f"ACC_{tgt}"
+
         # Main matched flow
         if base_amt > 0:
             final_edges.append({'t_idx': t_val, 'src_idx': src, 'tgt_idx': tgt, 'value': base_amt})

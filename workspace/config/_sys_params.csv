@@ -6,11 +6,11 @@
 # ---------------------------------------------------------
 # STREAM I/O COLUMN DEFINITIONS (Data Mapping)
 # ---------------------------------------------------------
-input_csv,input_stream/Dummy_Journal_Stream_Amount.Aggregated.csv
-col_trans_date,Trans_Date
-col_src,Src
-col_tgt,Tgt
-col_amount,Amount
+input_csv,input_stream/Aggregated_Journal_Stream.csv
+col_trans_date,t_idx
+col_src,src_idx
+col_tgt,tgt_idx
+col_amount,value
 
 # ---------------------------------------------------------
 # GLOBAL / SHARED HYPERPARAMETERS
