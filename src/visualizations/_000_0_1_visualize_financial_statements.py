@@ -83,7 +83,7 @@ def draw_pl_waterfall(report, out_path, min_y=None, max_y=None):
         expenses = top_exp
 
     for acc, cat, bal in expenses:
-        labels.append(acc.replace('ACC_', ''))
+        labels.append(str(acc).replace('ACC_', ''))
         values.append(-bal)
         
     labels.append('Net Income')
