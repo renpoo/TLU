@@ -40,7 +40,8 @@ def generate_stream(args):
             state_writer = csv.writer(f, lineterminator='\n')
             state_writer.writerow(["node_label", "initial_X"])
             for node in nodes:
-                # baseline initial values
+                # baseline initial values (Brain regions have very low static oxygen/glucose reserves. 
+                # They rely on continuous flux. Thus, low initial mass is biologically correct.)
                 state_writer.writerow([node, "100.00"])
     
     for tr in range(total_trs):

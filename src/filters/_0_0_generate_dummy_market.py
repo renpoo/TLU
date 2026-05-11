@@ -31,35 +31,60 @@ def generate_stream(args):
     global_trans_count = 1
     
     writer = csv.writer(sys.stdout)
-    writer.writerow(["Transaction_ID", "Timestamp", "Stock_ID", "Buyer_ID", "Seller_ID", "Price", "Volume", "Memo"])
+    writer.writerow(["Transaction_ID", "Timestamp", "Stock_ID", "Buyer_ID", "Seller_ID", "Price", "Volume", "Transaction_Amount", "Memo"])
 
     # Initialize Stocks
     stocks = [f"STK_{i:03d}" for i in range(1, args.num_stocks + 1)]
     stock_prices = {stock: random.uniform(100.0, 5000.0) for stock in stocks}
     
-    # Initialize Users (Agents)
+    # Initialize Users (Agents) and Profiles
     users = [f"USR_{i:03d}" for i in range(1, args.num_users + 1)]
     
-    # Stateful Ledger
-    user_cash = {u: random.uniform(1_000_000, 10_000_000) for u in users}
+    user_cash = {}
     user_portfolio = {u: {s: 0 for s in stocks} for u in users}
+    user_profiles = {}
     
-    # Initial IPO Allocation (Give users some starting stocks)
-    for u in users:
-        for s in stocks:
-            if random.random() > 0.5:
-                user_portfolio[u][s] = random.randint(100, 5000)
+    # Profile Assignment & IPO Allocation
+    for i, u in enumerate(users):
+        if i < max(1, int(args.num_users * 0.2)):
+            # Institutional (Whale): 20%
+            user_profiles[u] = "Institutional"
+            user_cash[u] = random.uniform(10_000_000, 50_000_000)
+            for s in stocks:
+                if random.random() > 0.2:
+                    user_portfolio[u][s] = random.randint(10000, 50000)
+        elif i >= args.num_users - max(1, int(args.num_users * 0.2)):
+            # HFT (Day Trader): 20%
+            user_profiles[u] = "HFT"
+            user_cash[u] = random.uniform(1_000_000, 5_000_000)
+            for s in stocks:
+                user_portfolio[u][s] = 0  # Starts with no stock, purely trades
+        else:
+            # Retail (General): 60%
+            user_profiles[u] = "Retail"
+            user_cash[u] = random.uniform(10_000, 100_000)
+            for s in stocks:
+                if random.random() > 0.5:
+                    user_portfolio[u][s] = random.randint(10, 500)
 
     # Export Initial State if requested (Day 0)
     if args.out_initial_state:
         with open(args.out_initial_state, "w", encoding="utf-8") as f:
             state_writer = csv.writer(f, lineterminator='\n')
             state_writer.writerow(["node_label", "initial_X"])
+            
+            # Initial X should represent the Total Stock Value + Cash (Total Asset)
+            # Or just Total Stock Value if we are tracking stock flow.
+            # Here we track Total Asset Value (Cash + Stock Value at IPO price)
             for u in users:
-                state_writer.writerow([u, f"{user_cash[u]:.2f}"])
+                initial_stock_value = sum(user_portfolio[u][s] * stock_prices[s] for s in stocks)
+                # We initialize with Stock Value, because the flow is 'Seller -> Buyer' which transfers Stock Value.
+                # If we tracked total assets, net flow is 0. Since we track Stock transfer, X = Stock Value.
+                state_writer.writerow([u, f"{initial_stock_value:.2f}"])
+                
             for s in stocks:
-                total_stock = sum(user_portfolio[u][s] for u in users)
-                state_writer.writerow([s, f"{total_stock:.2f}"])
+                total_stock_value = sum(user_portfolio[u][s] * stock_prices[s] for u in users)
+                state_writer.writerow([s, f"{total_stock_value:.2f}"])
 
     # Simple Random Walk params
     volatility = 0.02
@@ -74,59 +99,88 @@ def generate_stream(args):
             
         daily_transactions = []
         
-        # 1. Generate Normal Baseline Trading (Random Noise)
-        num_normal_trades = random.randint(10, 50)
-        for _ in range(num_normal_trades):
-            t_offset_seconds = random.randint(0, 6 * 3600) # Distribute within 6 hours
-            trans_time = current_date + datetime.timedelta(seconds=t_offset_seconds)
+        # 1. Generate Normal Baseline Trading based on Profiles
+        # Instead of completely random, we iterate users and they act based on their profile
+        for u in users:
+            profile = user_profiles[u]
+            trade_prob = 0.0
+            max_trades = 0
             
-            stock = random.choice(stocks)
-            # Find a valid seller (must have stock)
-            valid_sellers = [u for u in users if user_portfolio[u][stock] > 0]
-            if not valid_sellers:
-                continue
+            if profile == "Institutional":
+                trade_prob = 0.05  # Rare trades
+                max_trades = 1
+            elif profile == "Retail":
+                trade_prob = 0.1   # Occasional trades
+                max_trades = 1
+            elif profile == "HFT":
+                trade_prob = 0.9   # Trades almost every day
+                max_trades = random.randint(5, 20)
                 
-            seller = random.choice(valid_sellers)
-            buyer = random.choice([u for u in users if u != seller])
+            if random.random() < trade_prob:
+                num_trades = random.randint(1, max(1, max_trades))
+                for _ in range(num_trades):
+                    t_offset_seconds = random.randint(0, 6 * 3600)
+                    trans_time = current_date + datetime.timedelta(seconds=t_offset_seconds)
+                    
+                    stock = random.choice(stocks)
+                    price = round(stock_prices[stock] * (1 + np.random.normal(0, 0.005)), 2)
+                    
+                    # Decide buy or sell
+                    if random.random() > 0.5:
+                        # Buy
+                        buyer = u
+                        valid_sellers = [v for v in users if v != buyer and user_portfolio[v][stock] > 0]
+                        if not valid_sellers: continue
+                        seller = random.choice(valid_sellers)
+                    else:
+                        # Sell
+                        seller = u
+                        if user_portfolio[seller][stock] <= 0: continue
+                        valid_buyers = [v for v in users if v != seller and user_cash[v] > price]
+                        if not valid_buyers: continue
+                        buyer = random.choice(valid_buyers)
+                        
+                    # Constraint: Buyer cash and Seller shares
+                    max_buyable = int(user_cash[buyer] // price)
+                    max_sellable = user_portfolio[seller][stock]
+                    
+                    if max_buyable <= 0 or max_sellable <= 0:
+                        continue
+                        
+                    # Volume depends on profile
+                    if profile == "Institutional":
+                        requested_volume = random.randint(1000, 5000)
+                    elif profile == "HFT":
+                        requested_volume = random.randint(100, 500)
+                    else: # Retail
+                        requested_volume = random.randint(10, 100)
+                        
+                    volume = min(requested_volume, max_buyable, max_sellable)
+                    
+                    if volume > 0:
+                        user_cash[buyer] -= volume * price
+                        user_cash[seller] += volume * price
+                        user_portfolio[buyer][stock] += volume
+                        user_portfolio[seller][stock] -= volume
+                        
+                        daily_transactions.append([
+                            f"M_{global_trans_count:06d}",
+                            trans_time.isoformat(),
+                            stock,
+                            buyer,
+                            seller,
+                            f"{price:.2f}",
+                            str(volume),
+                            f"{volume * price:.2f}",
+                            "Normal"
+                        ])
+                        global_trans_count += 1
             
-            # Add some micro-volatility to the price
-            price = stock_prices[stock] * (1 + np.random.normal(0, 0.005))
-            price = round(price, 2)
-            
-            # Constraint: Buyer cash and Seller shares
-            max_buyable = int(user_cash[buyer] // price)
-            max_sellable = user_portfolio[seller][stock]
-            
-            if max_buyable <= 0 or max_sellable <= 0:
-                continue
-                
-            requested_volume = random.randint(10, 500)
-            volume = min(requested_volume, max_buyable, max_sellable)
-            
-            if volume > 0:
-                # Update Ledgers
-                user_cash[buyer] -= volume * price
-                user_cash[seller] += volume * price
-                user_portfolio[buyer][stock] += volume
-                user_portfolio[seller][stock] -= volume
-                
-                daily_transactions.append([
-                    f"M_{global_trans_count:06d}",
-                    trans_time.isoformat(),
-                    stock,
-                    buyer,
-                    seller,
-                    f"{price:.2f}",
-                    str(volume),
-                    "Normal"
-                ])
-                global_trans_count += 1
-            
-        # 2. Anomaly: Wash Trading
+        # 2. Anomaly: Wash Trading (unchanged, just needs to pick HFT/Institutional)
         if args.wash_trade_prob > 0.0 and random.random() < args.wash_trade_prob:
             w_stock = random.choice(stocks)
-            # Find two users who have some stock and cash
-            valid_w_users = [u for u in users if user_portfolio[u][w_stock] > 0 and user_cash[u] > 10000]
+            # Find two HFTs or Inst who have some stock and cash
+            valid_w_users = [u for u in users if user_profiles[u] != "Retail" and user_portfolio[u][w_stock] > 0 and user_cash[u] > 10000]
             if len(valid_w_users) >= 2:
                 w_user1, w_user2 = random.sample(valid_w_users, 2)
                 w_price = stock_prices[w_stock]
@@ -164,14 +218,15 @@ def generate_stream(args):
                             seller,
                             f"{price:.2f}",
                             str(volume),
+                            f"{volume * price:.2f}",
                             "Wash_Trade"
                         ])
                         global_trans_count += 1
 
-        # 3. Anomaly: Pump & Dump
+        # 3. Anomaly: Pump & Dump (unchanged)
         if args.pump_dump_prob > 0.0 and random.random() < args.pump_dump_prob:
             p_stock = random.choice(stocks)
-            valid_instigators = [u for u in users if user_cash[u] > 500000] # Must have high cash to pump
+            valid_instigators = [u for u in users if user_cash[u] > 500000 and user_profiles[u] != "Retail"] 
             
             if valid_instigators:
                 instigator = random.choice(valid_instigators)
@@ -214,6 +269,7 @@ def generate_stream(args):
                             seller,
                             f"{price:.2f}",
                             str(volume),
+                            f"{volume * price:.2f}",
                             "Pump_Phase"
                         ])
                         global_trans_count += 1
@@ -249,6 +305,7 @@ def generate_stream(args):
                             instigator,
                             f"{price:.2f}",
                             str(volume),
+                            f"{volume * price:.2f}",
                             "Dump_Phase"
                         ])
                         global_trans_count += 1
