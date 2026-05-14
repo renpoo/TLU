@@ -27,13 +27,15 @@ def generate_stream(args):
     writer = csv.writer(sys.stdout, lineterminator='\n')
     writer.writerow(["Trans_Date", "Src", "Tgt", "Amount"])
 
+    balances = {node: 100000.00 for node in nodes}
+
     if args.out_initial_state:
         with open(args.out_initial_state, "w", encoding="utf-8") as f:
             state_writer = csv.writer(f, lineterminator='\n')
             state_writer.writerow(["node_label", "initial_X"])
             for node in nodes:
-                # Baseline traffic capacity at each intersection
-                state_writer.writerow([node, f"{random.uniform(500, 1000):.2f}"])
+                # Baseline traffic capacity at each intersection (must be large enough)
+                state_writer.writerow([node, f"{balances[node]:.2f}"])
 
     for day in range(total_days):
         current_date = start_date + datetime.timedelta(days=day)
@@ -70,8 +72,21 @@ def generate_stream(args):
                             volume_A2B = max(1, int(volume_A2B * 0.05))
                             volume_B2A = max(1, int(volume_B2A * 0.05))
 
-                    writer.writerow([date_str, current_node, neighbor, volume_A2B])
-                    writer.writerow([date_str, neighbor, current_node, volume_B2A])
+                    # Enforce strict mass conservation (A -> B)
+                    if balances[current_node] < volume_A2B:
+                        volume_A2B = int(balances[current_node])
+                    if volume_A2B > 0:
+                        balances[current_node] -= volume_A2B
+                        balances[neighbor] += volume_A2B
+                        writer.writerow([date_str, current_node, neighbor, volume_A2B])
+
+                    # Enforce strict mass conservation (B -> A)
+                    if balances[neighbor] < volume_B2A:
+                        volume_B2A = int(balances[neighbor])
+                    if volume_B2A > 0:
+                        balances[neighbor] -= volume_B2A
+                        balances[current_node] += volume_B2A
+                        writer.writerow([date_str, neighbor, current_node, volume_B2A])
 
 if __name__ == "__main__":
     parser = setup_argparser()

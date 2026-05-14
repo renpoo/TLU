@@ -35,14 +35,14 @@ def generate_stream(args):
     
     nodes = ["Prefrontal_Cortex", "Motor_Cortex", "Visual_Cortex", "Parietal_Lobe", "Temporal_Lobe"]
 
+    balances = {node: 100000.00 for node in nodes}
     if args.out_initial_state:
         with open(args.out_initial_state, "w", encoding="utf-8") as f:
             state_writer = csv.writer(f, lineterminator='\n')
             state_writer.writerow(["node_label", "initial_X"])
             for node in nodes:
-                # baseline initial values (Brain regions have very low static oxygen/glucose reserves. 
-                # They rely on continuous flux. Thus, low initial mass is biologically correct.)
-                state_writer.writerow([node, "100.00"])
+                # baseline initial values (Must be large enough to sustain closed-loop flux without going negative)
+                state_writer.writerow([node, f"{balances[node]:.2f}"])
     
     for tr in range(total_trs):
         current_date = start_date + datetime.timedelta(seconds=tr * 2)
@@ -50,32 +50,39 @@ def generate_stream(args):
         
         t = tr * 0.1
         
-        for src in nodes:
-            for tgt in nodes:
+        # To avoid directional bias, shuffle the source order each TR
+        src_nodes = list(nodes)
+        random.shuffle(src_nodes)
+        
+        for src in src_nodes:
+            tgt_nodes = list(nodes)
+            random.shuffle(tgt_nodes)
+            for tgt in tgt_nodes:
                 if src == tgt:
                     continue
                 
                 # Base organic flow (1/f pink noise approximation via overlapping sine waves)
-                # Adds deterministic oscillation + random noise
                 base_flux = 100 + 30 * math.sin(t * 0.5) + 20 * math.sin(t * 1.2) + random.uniform(-10, 10)
                 
                 # Apply pathology
                 if args.pathology == "stroke" and tr >= 150:
-                    # Arterial blockage to Motor cortex
                     if tgt == "Motor_Cortex":
                         base_flux = base_flux * 0.05 # 95% blockage
                 
                 elif args.pathology == "seizure" and tr >= 150:
-                    # Epileptic Hypersynchrony: Temporal lobe broadcasts massive deterministic wave
-                    # To create a perfect Topological Feedback Loop (Spectral Radius = 1.0),
-                    # we make the Temporal node both send and receive perfectly symmetric synchronized flux.
                     if src == "Temporal_Lobe" or tgt == "Temporal_Lobe":
                         base_flux = 500 + 200 * math.sin(tr * 1.5)
                 
-                # Ensure positive flow
-                amount = max(1.0, round(base_flux, 2))
+                amount = round(base_flux, 2)
                 
-                writer.writerow([date_str, src, tgt, amount])
+                # Enforce physical mass conservation
+                if balances[src] < amount:
+                    amount = balances[src]
+                
+                if amount >= 1.0:
+                    balances[src] -= amount
+                    balances[tgt] += amount
+                    writer.writerow([date_str, src, tgt, f"{amount:.2f}"])
 
 def main():
     parser = setup_argparser()

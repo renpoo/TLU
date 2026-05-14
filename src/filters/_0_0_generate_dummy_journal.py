@@ -26,7 +26,7 @@ def setup_argparser() -> argparse.ArgumentParser:
     return parser
 
 def create_entry(entry_id: str, date_str: str, amount: float, debit_acc: str, debit_dept: str, credit_acc: str, credit_dept: str, memo: str, unbalanced_debit: float = None) -> list:
-    """Generate one double-entry bookkeeping transaction (2 rows)"""
+    """Generate one double-entry bookkeeping transaction (2 rows). (Legacy formatting only)"""
     amount = round(amount, 2)
     debit_amt = round(unbalanced_debit, 2) if unbalanced_debit is not None else amount
     entry = []
@@ -56,9 +56,28 @@ def generate_stream(args):
             # We'll just write some dummy global values for the accounts themselves.
             # Usually the mapping creates nodes like "Account_Name". We will just use the Account_Name.
             accounts = ["Cash", "Accounts_Receivable", "Accounts_Payable", "Inventory", "Sales_Revenue", "COGS", "Travel_Exp", "Payroll_Exp", "Rent_Exp"]
+            balances = {acc: 500000.00 for acc in accounts}
             for acc in accounts:
-                initial_val = random.uniform(10000, 50000) if acc in ["Cash", "Inventory"] else 0.0
-                state_writer.writerow([f"ACC_{acc}", f"{initial_val:.2f}"])
+                state_writer.writerow([f"ACC_{acc}", f"{balances[acc]:.2f}"])
+    else:
+        accounts = ["Cash", "Accounts_Receivable", "Accounts_Payable", "Inventory", "Sales_Revenue", "COGS", "Travel_Exp", "Payroll_Exp", "Rent_Exp"]
+        balances = {acc: 500000.00 for acc in accounts}
+
+    def attempt_entry(entry_id, date_str, amount, debit_acc, debit_dept, credit_acc, credit_dept, memo, unbalanced_debit=None):
+        nonlocal balances
+        amount = round(amount, 2)
+        if balances[credit_acc] < amount:
+            amount = balances[credit_acc] # Limit transaction to available mass
+        
+        if amount <= 0:
+            return [], 0.0
+
+        debit_amt = round(unbalanced_debit, 2) if unbalanced_debit is not None else amount
+        balances[credit_acc] -= amount
+        balances[debit_acc] += debit_amt
+
+        entry = create_entry(entry_id, date_str, amount, debit_acc, debit_dept, credit_acc, credit_dept, memo, unbalanced_debit)
+        return entry, amount
 
     # Seasonal fluctuation wave (sales wave)
     seasonal_wave = (np.sin(np.linspace(0, 4 * np.pi, total_days)) + 1) / 2
@@ -86,20 +105,23 @@ def generate_stream(args):
             amount = max(100.0, amount)
 
             # [Sales generated]
-            # Sales department generates sales, but accounts receivable (Accounts_Receivable) are managed by Admin
-            daily_entries.extend(create_entry(
+            entries, exec_amt = attempt_entry(
                 f"E_{global_entry_count:06d}", date_str, amount, 
                 "Accounts_Receivable", "DPT_Admin", "Sales_Revenue", "DPT_Sales", "Sales_Record"
-            ))
-            global_entry_count += 1
+            )
+            if entries:
+                daily_entries.extend(entries)
+                global_entry_count += 1
             
             # [Cost of goods sold recorded] (internal)
-            cogs_amount = amount * random.uniform(0.4, 0.7)
-            daily_entries.extend(create_entry(
+            cogs_amount = exec_amt * random.uniform(0.4, 0.7)
+            entries, _ = attempt_entry(
                 f"E_{global_entry_count:06d}", date_str, cogs_amount, 
                 "COGS", "DPT_Ops", "Inventory", "DPT_Ops", "COGS_Record"
-            ))
-            global_entry_count += 1
+            )
+            if entries:
+                daily_entries.extend(entries)
+                global_entry_count += 1
 
             # [Future: Accounts_Receivable collection] 30-90 days later (completed within Admin)
             collection_day = day + random.randint(30, 90)
@@ -113,12 +135,15 @@ def generate_stream(args):
                 amount -= stolen_from_sales
                 
                 # Unbalanced entry: Credit Accounts_Receivable, but Debit=0.0 (Money disappears into the void)
-                daily_entries.extend(create_entry(
+                entries, stolen_amt = attempt_entry(
                     f"E_{global_entry_count:06d}", date_str, stolen_from_sales,
                     "Cash", "DPT_Admin", "Accounts_Receivable", "DPT_Admin", "Embezzlement_Leak",
                     unbalanced_debit=0.0
-                ))
-                global_entry_count += 1
+                )
+                if entries:
+                    daily_entries.extend(entries)
+                    global_entry_count += 1
+                amount -= stolen_amt
 
             def make_collection(amt):
                 def task(d_str, e_count):
@@ -126,11 +151,14 @@ def generate_stream(args):
                     if args.unbalanced_mistake_prob > 0.0 and random.random() < args.unbalanced_mistake_prob:
                         unbalanced_debit = amt * random.uniform(0.0, 0.9) # Mistake leak
 
-                    return create_entry(
+                    entries, _ = attempt_entry(
                         f"E_{e_count:06d}", d_str, amt,
                         "Cash", "DPT_Admin", "Accounts_Receivable", "DPT_Admin", "AR_Collection",
                         unbalanced_debit=unbalanced_debit
-                    ), e_count + 1
+                    )
+                    if entries:
+                        return entries, e_count + 1
+                    return [], e_count
                 return task
 
             if amount > 0:
@@ -142,11 +170,14 @@ def generate_stream(args):
         # Ops replenishes inventory, but accounts payable (AP) are held by Admin
         if day % 7 == 0:
             purch_amount = np.random.normal(12000, 1500)
-            daily_entries.extend(create_entry(
+            entries, exec_purch = attempt_entry(
                 f"E_{global_entry_count:06d}", date_str, purch_amount, 
                 "Inventory", "DPT_Ops", "Accounts_Payable", "DPT_Admin", "Inventory_Purchase"
-            ))
-            global_entry_count += 1
+            )
+            if entries:
+                daily_entries.extend(entries)
+                global_entry_count += 1
+            purch_amount = exec_purch
             
             # [Future: AP payment] 30-90 days later (completed within Admin)
             pay_day = day + random.randint(30, 90)
@@ -159,19 +190,25 @@ def generate_stream(args):
                 purch_amount -= stolen_from_purchases
                 
                 # Unbalanced entry: Credit Cash (money leaves), but Debit=0.0 (AP is not reduced)
-                daily_entries.extend(create_entry(
+                entries, stolen_amt = attempt_entry(
                     f"E_{global_entry_count:06d}", date_str, stolen_from_purchases,
                     "Accounts_Payable", "DPT_Admin", "Cash", "DPT_Admin", "Embezzlement_Leak",
                     unbalanced_debit=0.0
-                ))
-                global_entry_count += 1
+                )
+                if entries:
+                    daily_entries.extend(entries)
+                    global_entry_count += 1
+                purch_amount -= stolen_amt
 
             def make_payment(amt):
                 def task(d_str, e_count):
-                    return create_entry(
+                    entries, _ = attempt_entry(
                         f"E_{e_count:06d}", d_str, amt,
                         "Accounts_Payable", "DPT_Admin", "Cash", "DPT_Admin", "AP_Payment"
-                    ), e_count + 1
+                    )
+                    if entries:
+                        return entries, e_count + 1
+                    return [], e_count
                 return task
 
             if purch_amount > 0:
@@ -183,11 +220,13 @@ def generate_stream(args):
         # Salesperson travel expenses (Sales expense, paid from Admin Cash)
         if random.random() < 0.4:
             travel_amt = random.uniform(30, 1200)
-            daily_entries.extend(create_entry(
+            entries, _ = attempt_entry(
                 f"E_{global_entry_count:06d}", date_str, travel_amt, 
                 "Travel_Exp", "DPT_Sales", "Cash", "DPT_Admin", "Travel_Reimburse"
-            ))
-            global_entry_count += 1
+            )
+            if entries:
+                daily_entries.extend(entries)
+                global_entry_count += 1
 
         # --------------------------------------------------
         # 5. Month-end cycle (company-wide fixed costs)
@@ -195,30 +234,30 @@ def generate_stream(args):
         if current_date.day == 25:
             # Department salaries (expense per dept, paid from Admin Cash)
             # Ops department salary
-            daily_entries.extend(create_entry(
+            entries, _ = attempt_entry(
                 f"E_{global_entry_count:06d}", date_str, 8000 + np.random.normal(0, 1000), 
                 "Payroll_Exp", "DPT_Ops", "Cash", "DPT_Admin", "Payroll_Ops"
-            ))
-            global_entry_count += 1
+            )
+            if entries: daily_entries.extend(entries); global_entry_count += 1
             # Sales department salary
-            daily_entries.extend(create_entry(
+            entries, _ = attempt_entry(
                 f"E_{global_entry_count:06d}", date_str, 6000 + np.random.normal(0, 1200), 
                 "Payroll_Exp", "DPT_Sales", "Cash", "DPT_Admin", "Payroll_Sales"
-            ))
-            global_entry_count += 1
+            )
+            if entries: daily_entries.extend(entries); global_entry_count += 1
             # Admin department salary
-            daily_entries.extend(create_entry(
+            entries, _ = attempt_entry(
                 f"E_{global_entry_count:06d}", date_str, 4000 + np.random.normal(0, 800), 
                 "Payroll_Exp", "DPT_Admin", "Cash", "DPT_Admin", "Payroll_Admin"
-            ))
-            global_entry_count += 1
+            )
+            if entries: daily_entries.extend(entries); global_entry_count += 1
             
             # Office rent (completed within Admin)
-            daily_entries.extend(create_entry(
+            entries, _ = attempt_entry(
                 f"E_{global_entry_count:06d}", date_str, 5000 + np.random.normal(0, 1200),
                 "Rent_Exp", "DPT_Admin", "Cash", "DPT_Admin", "Monthly_Rent"
-            ))
-            global_entry_count += 1
+            )
+            if entries: daily_entries.extend(entries); global_entry_count += 1
         # --------------------------------------------------
         # 6. Anomaly Injection: Wash Trading (Round-tripping / Kiting)
         # --------------------------------------------------
@@ -228,28 +267,27 @@ def generate_stream(args):
             wash_amount = max(20000.0, wash_amount)
             
             # Step 1: Fund the shell company secretly (CR Cash -> DR Accounts_Receivable)
-            # Flow: Cash -> Accounts_Receivable
-            daily_entries.extend(create_entry(
+            entries, wash_exec = attempt_entry(
                 f"E_{global_entry_count:06d}", date_str, wash_amount,
                 "Accounts_Receivable", "DPT_Admin", "Cash", "DPT_Admin", "Wash_Funding"
-            ))
-            global_entry_count += 1
-            
-            # Step 2: Fake Sale to the shell company (CR Sales_Revenue -> DR Accounts_Receivable)
-            # Flow: Sales -> Accounts_Receivable
-            daily_entries.extend(create_entry(
-                f"E_{global_entry_count:06d}", date_str, wash_amount,
-                "Accounts_Receivable", "DPT_Admin", "Sales_Revenue", "DPT_Sales", "Wash_Sale"
-            ))
-            global_entry_count += 1
-            
-            # Step 3: Shell company pays using the exact funded cash (CR Accounts_Receivable -> DR Cash)
-            # Flow: Accounts_Receivable -> Cash (This closes the Cash <-> Accounts_Receivable infinite loop)
-            daily_entries.extend(create_entry(
-                f"E_{global_entry_count:06d}", date_str, wash_amount,
-                "Cash", "DPT_Admin", "Accounts_Receivable", "DPT_Admin", "Wash_Collection"
-            ))
-            global_entry_count += 1
+            )
+            if entries:
+                daily_entries.extend(entries)
+                global_entry_count += 1
+                
+                # Step 2: Fake Sale to the shell company (CR Sales_Revenue -> DR Accounts_Receivable)
+                entries2, _ = attempt_entry(
+                    f"E_{global_entry_count:06d}", date_str, wash_exec,
+                    "Accounts_Receivable", "DPT_Admin", "Sales_Revenue", "DPT_Sales", "Wash_Sale"
+                )
+                if entries2: daily_entries.extend(entries2); global_entry_count += 1
+                
+                # Step 3: Shell company pays using the exact funded cash (CR Accounts_Receivable -> DR Cash)
+                entries3, _ = attempt_entry(
+                    f"E_{global_entry_count:06d}", date_str, wash_exec,
+                    "Cash", "DPT_Admin", "Accounts_Receivable", "DPT_Admin", "Wash_Collection"
+                )
+                if entries3: daily_entries.extend(entries3); global_entry_count += 1
 
         # Stream output
         for row in daily_entries:
