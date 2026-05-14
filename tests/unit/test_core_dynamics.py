@@ -33,32 +33,27 @@ class TestCoreDynamics(unittest.TestCase):
     def test_virtual_estimate_mass_and_viscosity_relative(self):
         """
         [Red] Test to estimate relative behavior of node mass (M) and viscosity (C).
-        Define expected physical properties (magnitude relationship) before implementing specific formulas.
+        Verify that Viscosity scales proportionally with Mass (Rayleigh damping).
         """
-
-        # History data for 3 time points and 2 nodes
-        # Node 0 (Left col): Large activity scale, wildly fluctuating velocity (Large mass, small viscosity)
-        # Node 1 (Right col): Small activity scale, velocity not changing at all (Small mass, large viscosity)
-        q_history = np.array([
+        # Node 0 (Left col): Large mass
+        # Node 1 (Right col): Small mass
+        X_history = np.array([
             [100.0, 10.0],
             [120.0, 10.0],
             [90.0,  10.0]
         ])
-        v_history = np.array([
-            [20.0, 0.0],
-            [20.0, 0.0],
-            [-30.0, 0.0]
-        ])
 
         # Act
-        M, C = estimate_virtual_mass_and_viscosity(q_history, v_history, base_epsilon=1e-10, velocity_scale_ratio=0.1)
+        M, C = estimate_virtual_mass_and_viscosity(X_history, damping_ratio=0.1)
 
         # Assert
-        # 1. Mass M: Node 0 with larger activity scale should be larger than Node 1
+        # 1. Mass M: Node 0 with larger absolute balance should have larger mass
         self.assertGreater(M[0], M[1])
         
-        # 2. Viscosity C: Node 1 completely fixed by friction should be larger than freely moving Node 0
-        self.assertGreater(C[1], C[0])
+        # 2. Viscosity C: Since C = M * damping_ratio, Node 0 should have proportionally larger viscosity
+        self.assertGreater(C[0], C[1])
+        self.assertAlmostEqual(C[0], M[0] * 0.1)
+        self.assertAlmostEqual(C[1], M[1] * 0.1)
     
     def test_compute_external_force_residual(self):
         """

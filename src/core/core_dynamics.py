@@ -55,46 +55,32 @@ def compute_optimal_time_lag(signal_A: np.ndarray, signal_B: np.ndarray, max_lag
     return best_lag, float(max_corr)
 
 
-def estimate_virtual_mass_and_viscosity(X_history: np.ndarray, v_history: np.ndarray, base_epsilon: float, velocity_scale_ratio: float) -> tuple[np.ndarray, np.ndarray]:
+def estimate_virtual_mass_and_viscosity(X_history: np.ndarray, damping_ratio: float = 0.1) -> tuple[np.ndarray, np.ndarray]:
     """!
     @brief Estimate the virtual mass (M) and viscosity (C) of each node.
-    @details Derives structural inertia (mass) and friction (viscosity) based on the volatility and scale of the historical flux and velocity. Eliminates scale-dependent magic numbers.
+    @details Derives structural inertia (mass) based on historical state.
+             Viscosity is modeled as mass-proportional structural damping (Rayleigh damping).
+             This eliminates volatile division-by-zero hacks and provides stable physical continuity.
 
     @param X_history Absolute balance (State) vector history (Time_steps x Nodes).
-    @param v_history Velocity vector history (Time_steps x Nodes).
-    @param base_epsilon Absolute minute value to prevent zero division.
-    @param velocity_scale_ratio Dynamic minute value ratio based on velocity scale.
+    @param damping_ratio Proportional constant relating mass to friction.
 
     @return A tuple of (M, C) arrays.
 
     @pre
-        - `X_history` and `v_history` must be 2D array-like structs.
-        - `base_epsilon` and `velocity_scale_ratio` must be positive floats.
+        - `X_history` must be a 2D array-like struct.
+        - `damping_ratio` must be a positive float.
     @post
         - Both `M` and `C` arrays are strictly non-negative.
-        - Safely falls back (C=0) if `v_history` has length <= 1.
     @invariant
         - M is strictly proportional to the accumulation of past scale.
-        - C is inversely proportional to the variance of velocity.
+        - C scales linearly with M (C = M * damping_ratio).
     """
     # Mass M (Inertia): Assumed to be proportional to the accumulation of past activity (scale)
     M = np.mean(np.abs(X_history), axis=0)
     
-    # Viscosity C (Friction): Assumed to be higher when velocity fluctuation is smaller (movement is fixed)
-    if v_history.shape[0] <= 1:
-        # Set all elements to zero if t_idx = 0 (history belongs to only 1 step)
-        C = np.zeros(v_history.shape[1])
-    else:
-        # Take the reciprocal of the standard deviation (volatility) of velocity.
-        v_std = np.std(v_history, axis=0)
-        
-        # Calculate a dynamic minute value to prevent zero division
-        global_v_scale = np.mean(v_std)
-        dynamic_epsilon = max(base_epsilon, global_v_scale * velocity_scale_ratio)
-        
-        # Apply epsilon only where v_std is exactly 0.0
-        v_std_safe = np.where(v_std == 0.0, dynamic_epsilon, v_std)
-        C = 1.0 / v_std_safe
+    # Viscosity C (Friction): Mass-proportional structural damping
+    C = M * damping_ratio
     
     return M, C
 
