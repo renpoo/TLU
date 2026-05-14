@@ -3,6 +3,7 @@
 import argparse
 import csv
 import sys
+import os
 from typing import Dict
 
 def load_sys_params(filepath: str) -> Dict[str, float]:
@@ -46,15 +47,21 @@ def load_sys_params(filepath: str) -> Dict[str, float]:
         print(f"[WARN] {filepath} not found. Using defaults.", file=sys.stderr)
         
     # Inject dynamically tuned parameters if auto-calibration was run
-    import os, json
     env_dir = os.environ.get("TARGET_ENV", "workspace")
-    tuned_params_path = os.path.join(env_dir, "ephemeral", "_tuned_params.json")
+    tuned_params_path = os.path.join(env_dir, "ephemeral", "_tuned_params.csv")
     if os.path.exists(tuned_params_path):
         try:
-            with open(tuned_params_path, 'r') as f:
-                tuned = json.load(f)
-                for k, v in tuned.items():
-                    params[k] = v
+            with open(tuned_params_path, 'r', encoding='utf-8') as f:
+                reader = csv.reader(f)
+                header = next(reader, None) # skip header
+                for row in reader:
+                    if len(row) >= 2:
+                        key = row[0].strip()
+                        val = row[1].strip()
+                        try:
+                            params[key] = float(val)
+                        except ValueError:
+                            params[key] = val
         except Exception:
             pass
             

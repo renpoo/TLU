@@ -13,7 +13,7 @@ class TestGenerateDummyMarket(unittest.TestCase):
         self.parser.add_argument("--num-users", type=int, default=10)
         self.parser.add_argument("--num-stocks", type=int, default=5)
         self.parser.add_argument("--wash-trade-prob", type=float, default=0.0)
-        self.parser.add_argument("--pump-dump-prob", type=float, default=0.0)
+        self.parser.add_argument("--panic-dump-prob", type=float, default=0.0)
         self.parser.add_argument("--out-initial-state", type=str, default="")
 
     def test_basic_invariants(self):
@@ -31,7 +31,7 @@ class TestGenerateDummyMarket(unittest.TestCase):
         header = output[0].strip()
         data = [line.strip() for line in output[1:]]
         
-        self.assertEqual(header, "Transaction_ID,Timestamp,Stock_ID,Buyer_ID,Seller_ID,Price,Volume,Memo")
+        self.assertEqual(header, "Transaction_ID,Timestamp,Stock_ID,Buyer_ID,Seller_ID,Price,Volume,Transaction_Amount,Memo")
         self.assertGreater(len(data), 0, "No transactions were generated.")
         
         for line in data:
