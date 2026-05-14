@@ -5,7 +5,7 @@
 # ==========================================
 import os
 import sys
-import json
+import csv
 import pandas as pd
 import numpy as np
 from scipy.stats import kurtosis
@@ -16,7 +16,7 @@ def main():
     env_dir = os.environ.get("TARGET_ENV", "workspace")
     sys_params_path = os.path.join(env_dir, "config", "_sys_params.csv")
     coo_path = os.path.join(env_dir, "ephemeral", "_coo_stream.csv")
-    out_json = os.path.join(env_dir, "ephemeral", "_tuned_params.json")
+    out_csv = os.path.join(env_dir, "ephemeral", "_tuned_params.csv")
     
     # 1. Check if auto-tuning is enabled
     sys_params = load_sys_params(sys_params_path)
@@ -25,8 +25,9 @@ def main():
     if not auto_tune:
         print("💡 Auto-Calibration is disabled in _sys_params.csv. Using manual static thresholds.")
         # Create empty tuned params to prevent errors down the line
-        with open(out_json, "w") as f:
-            json.dump({}, f)
+        with open(out_csv, "w", encoding="utf-8", newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(["Parameter", "Value"])
         return
 
     burn_in_period = int(sys_params.get("auto_tune_burn_in_period", 24))
@@ -42,8 +43,9 @@ def main():
         df = pd.read_csv(coo_path)
     except pd.errors.EmptyDataError:
         print("[WARN] Empty COO stream. Cannot auto-calibrate.")
-        with open(out_json, "w") as f:
-            json.dump({}, f)
+        with open(out_csv, "w", encoding="utf-8", newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(["Parameter", "Value"])
         return
         
     # 3. Filter for Burn-in Period
@@ -55,8 +57,9 @@ def main():
     
     if df_burn_in.empty:
         print("[WARN] Insufficient data in burn-in period.")
-        with open(out_json, "w") as f:
-            json.dump({}, f)
+        with open(out_csv, "w", encoding="utf-8", newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(["Parameter", "Value"])
         return
         
     # Calculate Gross Systemic Activity (U) per time step
@@ -122,8 +125,11 @@ def main():
             print(f"  📊 [Statistical Analysis] Flat distribution detected (Kurtosis={k:.2f}). Tightening Z-Score threshold to {new_z:.2f}")
 
     # 4. Save tuned parameters
-    with open(out_json, "w") as f:
-        json.dump(tuned_params, f, indent=4)
+    with open(out_csv, "w", encoding="utf-8", newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(["Parameter", "Value"])
+        for k, v in tuned_params.items():
+            writer.writerow([k, v])
         
     print(f"✅ Auto-Calibration Complete. Tuned parameters saved to ephemeral storage.")
 

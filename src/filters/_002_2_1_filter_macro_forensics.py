@@ -125,11 +125,11 @@ def main():
     leak_idx = -1
     try:
         df_map = pd.read_csv(args.node_map)
-        leak_row = df_map[df_map['node_label'] == 'UNKNOWN_LEAK']
+        leak_row = df_map[df_map['node_label'].isin(['UNKNOWN_LEAK', 'Unknown_Leak', 'ACC_Unknown_Leak'])]
         if not leak_row.empty:
             leak_idx = int(leak_row['node_idx'].iloc[0])
     except Exception as e:
-        print(f"Warning: could not read UNKNOWN_LEAK index: {e}", file=sys.stderr)
+        print(f"Warning: could not read leak node index: {e}", file=sys.stderr)
 
     thresholds = {
         'leak_tolerance': args.leak_tolerance,
