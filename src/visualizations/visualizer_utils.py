@@ -104,7 +104,8 @@ def load_node_labels(node_map_path: str, max_n: int) -> dict:
         df = pd.read_csv(node_map_path)
         for _, row in df.iterrows():
             idx = int(row['node_idx'])
-            if idx < max_n: idx_to_label[idx] = str(row['node_label'])
+            if idx < max_n: 
+                idx_to_label[idx] = f"{idx:02d}_{row['node_label']}"
     except Exception: 
         raise FileNotFoundError(f"❌ Node map file not found: {node_map_path}")
 

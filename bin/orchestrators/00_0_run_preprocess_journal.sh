@@ -6,9 +6,9 @@
 # ==========================================
 source "$(dirname "$0")/_tlu_env.sh"
 
-# Default interval is month
-INTERVAL=${1:-month}
-COL_TIME=${2:-Trans_Date}
+# Default interval is month (or defined in sys_params)
+INTERVAL=${1:-${TLU_AGGREGATION_INTERVAL:-month}}
+COL_TIME=${2:-${TLU_COL_TRANS_DATE:-Trans_Date}}
 
 # The dummy generator outputs raw journals here
 INPUT_FILE="${TLU_PROJECT_ROOT}/${TARGET_ENV:-workspace}/input_stream/Dummy_Journal_Stream.csv"

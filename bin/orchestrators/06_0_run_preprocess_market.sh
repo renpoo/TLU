@@ -9,7 +9,7 @@ set -euo pipefail
 cd "$(dirname "$0")/../.."
 source "bin/orchestrators/_tlu_env.sh"
 
-INTERVAL=${1:-quarter}
+INTERVAL=${1:-${TLU_AGGREGATION_INTERVAL:-quarter}}
 TICKERS=${2:-"^GSPC,^VIX"}
 START_DATE=${3:-"2020-01-01"}
 END_DATE=${4:-"2025-01-01"}

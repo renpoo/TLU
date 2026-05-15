@@ -9,7 +9,7 @@ set -euo pipefail
 cd "$(dirname "$0")/../.."
 source "bin/orchestrators/_tlu_env.sh"
 
-INTERVAL=${1:-month}
+INTERVAL=${1:-${TLU_AGGREGATION_INTERVAL:-month}}
 INPUT_CSV=${2:-"scratch/global_economics_data_2000_2024.csv"}
 COLUMNS=${3:-"US10Y,SP500,US_Unemployment,US_Inflation,US_Production,Copper,Oil"}
 DUMMY_SRC=${4:-"US_Economy"}
