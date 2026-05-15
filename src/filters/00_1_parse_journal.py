@@ -44,18 +44,17 @@ def main():
             sys.exit(1)
 
     # Extract debits and credits
-    debits = df[df['Debit'] > 0].groupby('Entry_ID').agg({
-        'Account_Name': 'first', 
-        'Debit': 'sum', 
-        args.col_time: 'first'
-    }).reset_index()
+    agg_dict_dr = {'Account_Name': 'first', 'Debit': 'sum'}
+    agg_dict_cr = {'Account_Name': 'first', 'Credit': 'sum'}
+    
+    if args.col_time != 'Entry_ID':
+        agg_dict_dr[args.col_time] = 'first'
+        agg_dict_cr[args.col_time] = 'first'
+
+    debits = df[df['Debit'] > 0].groupby('Entry_ID').agg(agg_dict_dr).reset_index()
     debits = debits.rename(columns={'Account_Name': 'Tgt_Account', 'Debit': 'Debit_Amt'})
 
-    credits = df[df['Credit'] > 0].groupby('Entry_ID').agg({
-        'Account_Name': 'first', 
-        'Credit': 'sum', 
-        args.col_time: 'first'
-    }).reset_index()
+    credits = df[df['Credit'] > 0].groupby('Entry_ID').agg(agg_dict_cr).reset_index()
     credits = credits.rename(columns={'Account_Name': 'Src_Account', 'Credit': 'Credit_Amt'})
 
     # Bipartite matching on Entry_ID
@@ -64,7 +63,10 @@ def main():
     edges['Credit_Amt'] = edges['Credit_Amt'].fillna(0)
     
     # Resolve time
-    edges['Time_Resolved'] = edges[f"{args.col_time}_dr"].combine_first(edges[f"{args.col_time}_cr"])
+    if args.col_time == 'Entry_ID':
+        edges['Time_Resolved'] = edges['Entry_ID']
+    else:
+        edges['Time_Resolved'] = edges[f"{args.col_time}_dr"].combine_first(edges[f"{args.col_time}_cr"])
     
     # Resolve Amount (Min of Debit/Credit for matching, excess goes to UNKNOWN_LEAK)
     edges['Base_Amount'] = edges[['Debit_Amt', 'Credit_Amt']].min(axis=1)

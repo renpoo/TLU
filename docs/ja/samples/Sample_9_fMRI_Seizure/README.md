@@ -12,8 +12,19 @@
 
 # 🔬 メタ解析 統合レポート (Meta-Analysis Synthesis Report / Laboratory Findings)
 
-## 1. エグゼクティブ・サマリー
-本システム（生体脳ドメイン）は、測定の後半において**「極限の位相幾何学的振動（Topological Feedback Loop）」**と**「熱力学的エネルギーの完全崩壊（Thermodynamic Energy Depletion）」**を発症している極めて危険な状態（HIGH Severity）と診断される。側頭葉（Temporal Lobe）を震源とする巨大で無意味な信号の波が、他の部位との間で完璧な双方向の過同期（Hypersynchrony）を引き起こしている。脳全体の代謝エネルギー（取引出来高）は異常に膨れ上がっているものの、有意義な情報処理を行うポテンシャル（自由エネルギー）が致命的に崩壊しており、「代謝だけが激しく行われているが有意義な仕事が全く行われていない」状態である。
+## 1. 最新の機械学習ベース自動診断結果 (ML-Based Automated Diagnosis)
+
+本サンプル（**Sample_9_fMRI_Seizure**）に対する自動判定結果です。純粋な物理指標がドメイン特有の異常をどう捉えるかを解説します。
+
+### 【A. 確定診断 (Final Pathologies) とドメイン解釈】
+
+### 【B. 構造的進化と摩擦分類 (Structural Evolution & Viscosity)】
+
+- **動粘度（摩擦係数）レンジ:** `0.00 ~ 7.13`
+- 🧊 **構造診断: 超流動 / 低摩擦（新世代型/アルゴリズム構造）**
+  - **解説:** システムは高度に自動化されており、摩擦が極端に低くなっています。効率的ですが、一度ショックが起きると歯止めが効かず、一瞬で熱死を引き起こす危険性を孕んでいます。
+
+### 【C. スケール不変の物理指標 (Scale-Invariant Diagnostic Metrics)】
 
 ## 2. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
 

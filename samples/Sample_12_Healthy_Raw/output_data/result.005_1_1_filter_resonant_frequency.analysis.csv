@@ -1,0 +1,10 @@
+node_idx,node_label,dominant_frequency,spectral_power
+4,ACC_Accounts_Payable,0.125,8633043.6006
+5,ACC_Cash,0.0833,8027688.7577
+2,ACC_Inventory,0.375,4738964.8305
+7,ACC_Payroll_Exp,0.0833,1911362.9619
+0,ACC_Sales_Revenue,0.4583,1292881.8131
+1,ACC_Accounts_Receivable,0.4583,1230300.261
+3,ACC_COGS,0.4583,398112.6655
+8,ACC_Rent_Exp,0.1667,197680.3402
+6,ACC_Travel_Exp,0.4167,48918.2486

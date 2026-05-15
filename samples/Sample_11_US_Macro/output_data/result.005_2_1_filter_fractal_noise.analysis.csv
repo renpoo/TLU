@@ -1,0 +1,9 @@
+node_idx,node_label,spectral_exponent_beta,noise_classification
+0,US_Economy,-1.3819,White Noise
+1,Copper,-1.5503,White Noise
+2,Oil,-1.4049,White Noise
+3,SP500,-1.4355,White Noise
+4,US10Y,-1.498,White Noise
+5,US_Inflation,-0.9711,White Noise
+6,US_Production,-1.2127,White Noise
+7,US_Unemployment,-1.2599,White Noise

@@ -51,11 +51,19 @@ def draw_bs_block_chart(report, out_path, max_y=None):
             ax.text(1, bottom_right + val/2, f"{val:,.0f}", ha='center', va='center', color='white', fontweight='bold', fontsize=9)
             bottom_right += val
         
-    eq_val = max(0, report['equity'] + report['net_income'])
-    if eq_val > 0:
-        ax.bar('Liabilities & Equity', eq_val, bottom=bottom_right, label='Equity (Retained Earnings)')
-        ax.text(1, bottom_right + eq_val/2, f"{eq_val:,.0f}", ha='center', va='center', color='white', fontweight='bold', fontsize=9)
-    
+    net_inc = report['net_income']
+    if net_inc > 0:
+        label = 'Net Income (Retained Earnings)'
+        ax.bar('Liabilities & Equity', net_inc, bottom=bottom_right, label=label)
+        ax.text(1, bottom_right + net_inc/2, f"{net_inc:,.0f}", ha='center', va='center', color='white', fontweight='bold', fontsize=9)
+        bottom_right += net_inc
+    elif net_inc < 0:
+        label = 'Net Loss (Deficit)'
+        loss_val = -net_inc
+        # Visualizing a deficit (negative equity) on the Asset side balances the graphical stacked bar heights
+        ax.bar('Assets', loss_val, bottom=bottom_left, label=label, color='tab:red', alpha=0.7, hatch='//')
+        ax.text(0, bottom_left + loss_val/2, f"{loss_val:,.0f}", ha='center', va='center', color='white', fontweight='bold', fontsize=9)
+        bottom_left += loss_val
     if max_y is not None:
         safe_max_y = max(max_y, 1)
         ax.set_ylim(0, safe_max_y * 1.1)

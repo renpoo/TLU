@@ -1,6 +1,6 @@
 node_idx,node_label,spectral_exponent_beta,noise_classification
-0,Motor_Cortex,2.2379,Brown Noise
-1,Parietal_Lobe,2.2561,Brown Noise
-2,Prefrontal_Cortex,2.2202,Brown Noise
-3,Temporal_Lobe,1.9859,Brown Noise
-4,Visual_Cortex,2.218,Brown Noise
+0,Parietal_Lobe,2.2385,Brown Noise
+1,Visual_Cortex,2.1676,Brown Noise
+2,Prefrontal_Cortex,2.2329,Brown Noise
+3,Temporal_Lobe,1.981,Brown Noise
+4,Motor_Cortex,2.2807,Brown Noise

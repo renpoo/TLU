@@ -46,6 +46,10 @@ def generate_stream(args):
     writer = csv.writer(sys.stdout)
     writer.writerow(["Entry_ID", "Trans_Date", "Account_Name", "Dept_Name", "Debit", "Credit", "Memo"])
 
+    # Inject Initial Capital to prevent negative Cash/Inventory in the stream
+    init_date = "2020-01-01"
+    init_entries = []
+    
     # Define some basic initial state (balances) for Day 0 if requested
     if args.out_initial_state:
         with open(args.out_initial_state, "w", encoding="utf-8") as f:
@@ -55,19 +59,46 @@ def generate_stream(args):
             # In TLU, typically nodes are formulated as "Account_Name_Dept_Name" or similar via the mapping.
             # We'll just write some dummy global values for the accounts themselves.
             # Usually the mapping creates nodes like "Account_Name". We will just use the Account_Name.
-            accounts = ["Cash", "Accounts_Receivable", "Accounts_Payable", "Inventory", "Sales_Revenue", "COGS", "Travel_Exp", "Payroll_Exp", "Rent_Exp"]
-            balances = {acc: 500000.00 for acc in accounts}
-            for acc in accounts:
-                state_writer.writerow([f"ACC_{acc}", f"{balances[acc]:.2f}"])
+            # Provide a mathematically balanced opening accounting state
+            balances = {
+                "Cash": 500000.00,
+                "Inventory": 500000.00,
+                "Equity_Capital": 1000000.00,
+                # Set others to 0 so they don't break mass limits but don't add false opening balances
+                "Accounts_Receivable": 0.0,
+                "Accounts_Payable": 0.0,
+                "Sales_Revenue": 0.0,
+                "COGS": 0.0,
+                "Travel_Exp": 0.0,
+                "Payroll_Exp": 0.0,
+                "Rent_Exp": 0.0
+            }
+            for acc, val in balances.items():
+                if val > 0:
+                    state_writer.writerow([f"ACC_{acc}", f"{val:.2f}"])
     else:
-        accounts = ["Cash", "Accounts_Receivable", "Accounts_Payable", "Inventory", "Sales_Revenue", "COGS", "Travel_Exp", "Payroll_Exp", "Rent_Exp"]
-        balances = {acc: 500000.00 for acc in accounts}
+        balances = {
+            "Cash": 500000.00,
+            "Inventory": 500000.00,
+            "Equity_Capital": 1000000.00,
+            "Accounts_Receivable": 0.0,
+            "Accounts_Payable": 0.0,
+            "Sales_Revenue": 0.0,
+            "COGS": 0.0,
+            "Travel_Exp": 0.0,
+            "Payroll_Exp": 0.0,
+            "Rent_Exp": 0.0
+        }
 
     def attempt_entry(entry_id, date_str, amount, debit_acc, debit_dept, credit_acc, credit_dept, memo, unbalanced_debit=None):
         nonlocal balances
         amount = round(amount, 2)
-        if balances[credit_acc] < amount:
-            amount = balances[credit_acc] # Limit transaction to available mass
+        
+        # Enforce mass conservation ONLY on internal physical assets.
+        # External sources (Revenue, Payables/Suppliers) have infinite capacity.
+        if credit_acc in ["Cash", "Accounts_Receivable", "Inventory"]:
+            if balances[credit_acc] < amount:
+                amount = balances[credit_acc] # Limit transaction to available mass
         
         if amount <= 0:
             return [], 0.0

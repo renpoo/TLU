@@ -10,7 +10,7 @@ input_csv,input_stream/Dummy_Market_Weekly_Bipartite_Graph.csv
 col_trans_date,Timestamp
 col_src,Src
 col_tgt,Tgt
-col_amount,Volume
+col_amount,Transaction_Amount
 
 # ---------------------------------------------------------
 # GLOBAL / SHARED HYPERPARAMETERS

@@ -9,3 +9,4 @@ ACC_Travel_Exp,Expense
 ACC_Rent_Exp,Expense
 ACC_Payroll_Exp,Expense
 UNKNOWN_LEAK,Expense
+ACC_Equity_Capital,Equity

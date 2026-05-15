@@ -75,14 +75,26 @@ def main():
     # TLU's COO stream natively expects Net Flux (v) because `000_1_1` integrates it.
     # Therefore, State/Position data (Prices, Rates) must be differentiated (.diff()).
     # Flux data (Volume) is already Flux and remains unchanged.
+    import os
+    env_dir = os.environ.get("TARGET_ENV", "workspace")
+    initial_states = []
+    
     flux_dfs = []
     for (src, tgt), group in final_df.groupby(['src_idx', 'tgt_idx'], sort=False):
         group = group.copy()
         if 'Volume' not in str(tgt):
-            # By filling the first NaN with the original value, the integration (cumsum)
-            # in 000_1_1 will perfectly reconstruct the absolute Position.
-            group['value'] = group['value'].diff().fillna(group['value'])
+            # Save the initial absolute position to the state registry (Source node holds the actual metric)
+            first_val = group['value'].iloc[0]
+            initial_states.append({'node_label': src, 'initial_X': first_val})
+            
+            # Transform to pure velocity (flux) and drop the boundary condition row
+            group['value'] = group['value'].diff()
+            group = group.dropna(subset=['value'])
         flux_dfs.append(group)
+        
+    if initial_states:
+        os.makedirs(f"{env_dir}/ephemeral", exist_ok=True)
+        pd.DataFrame(initial_states).to_csv(f"{env_dir}/ephemeral/_initial_state_labels.csv", index=False)
         
     if flux_dfs:
         final_df = pd.concat(flux_dfs, ignore_index=True)

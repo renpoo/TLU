@@ -1,0 +1,10 @@
+node_label,initial_X
+ACC_Cash,500000.00
+ACC_Accounts_Receivable,500000.00
+ACC_Accounts_Payable,500000.00
+ACC_Inventory,500000.00
+ACC_Sales_Revenue,500000.00
+ACC_COGS,500000.00
+ACC_Travel_Exp,500000.00
+ACC_Payroll_Exp,500000.00
+ACC_Rent_Exp,500000.00

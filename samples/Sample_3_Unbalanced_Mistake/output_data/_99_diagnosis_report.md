@@ -1,187 +1,39 @@
-# TLU Meta-Diagnosis Report (Attending Physician's Summary)
+# TLU Meta-Diagnosis Report (Statistical Upgrade V2)
 
 **Target Environment:** `samples/Sample_3_Unbalanced_Mistake`
-**Date Analyzed:** 2026-05-03 10:44:52
+**Date Analyzed:** 2026-05-15 09:11:51
 
 ## 1. Final Diagnosis
 
-### 🔴 Unbalanced Journal Mistake (Conservation Violation)
+### 🔴 Mass Conservation Violation (Leakage)
 - **Severity:** CRITICAL
-- **Evidence:** Relative Leak Ratio reached 0.0008 (Threshold: 1e-06). Raw residual: 1038.49. Peak Location: Time: 2020-W42.
-- **Interpretation:** The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere.
+- **Evidence:** Relative Leak Ratio: 0.000275.
+- **Interpretation:** Systemic flux is disappearing or materializing from nowhere.
 
 ---
-## 2. Scale-Invariant Diagnostic Metrics
+## 2. Statistical Array Forensics (Time-Series Diagnostics)
 
-| Physical Domain | Extracted Metric | Value | Threshold |
-|-----------------|------------------|-------|-----------|
-| Macro Forensics | Relative Mass Leak Ratio | 0.0008 | > 1e-06 |
-| Control Theory  | Max Spectral Radius      | 0.0000 | >= 0.6 |
-| Thermodynamics  | Relative Free Energy Ratio| 0.4183 | < -0.1 |
-| Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
+### Entropy (S) Dynamics
+- **Baseline (Mean / Median):** 1.52 / 1.49
+- **Volatility (Std Dev):** 0.19
+- **Distribution Shape (Skew / Kurtosis):** 0.68 / -0.52
+- **Anomaly Count (Z > 3.0):** 0 times
 
-> *Generated automatically by the TLU Meta-Diagnosis Engine.*
+### Free Energy (F) Dynamics
+- **Baseline (Mean / Median):** 2,716,935.99 / 2,677,552.83
+- **Volatility (Std Dev):** 335,776.52
+- **Distribution Shape (Skew / Kurtosis):** 0.08 / -1.39
+- **Anomaly Count (Z > 3.0):** 0 times
 
-<!--
-<LLM_DIAGNOSTIC_CONTEXT>
-{
-  "timestamp": "2026-05-03T10:44:52.733203",
-  "environment": "samples/Sample_3_Unbalanced_Mistake",
-  "physics_metrics": {
-    "max_abs_residual": 1038.49,
-    "mean_gross_activity": 1295569.3761538463,
-    "relative_leak_ratio": 0.000801570351317629,
-    "max_spectral": 0.0,
-    "min_free_energy": 93251.36,
-    "min_relative_free_energy": 0.4183309539237493,
-    "max_z_score": 0.0,
-    "max_leak_location": "Time: 2020-W42"
-  },
-  "detected_pathologies": [
-    {
-      "pathology": "Unbalanced Journal Mistake (Conservation Violation)",
-      "severity": "CRITICAL",
-      "evidence": "Relative Leak Ratio reached 0.0008 (Threshold: 1e-06). Raw residual: 1038.49. Peak Location: Time: 2020-W42.",
-      "interpretation": "The fundamental law of mass conservation is broken. A statistically significant percentage of systemic flux is disappearing or materializing from nowhere."
-    }
-  ],
-  "financial_baseline": {
-    "week": "2020-W52",
-    "assets": 207157.74,
-    "liabilities": 146496.88000000035,
-    "equity": 0.0,
-    "net_income": 60660.859999999986,
-    "total_liab_eq": 207157.74000000034,
-    "revenue": 955157.5599999998,
-    "expense": 894496.6999999998,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        99153.30000000016
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        109739.16999999969
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        47343.58000000019
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        97418.5700000003
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        529331.3999999999
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        220971.34
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        62009.74
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        955157.5599999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        77743.77000000003
-      ],
-      [
-        "UNKNOWN_LEAK",
-        "Expense",
-        4440.45
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        527596.67,
-        626749.9700000002,
-        99153.30000000016
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        955157.5599999998,
-        845418.3900000001,
-        109739.16999999969
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        529331.3999999999,
-        0.0,
-        529331.3999999999
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        840977.94,
-        888321.5200000001,
-        -47343.58000000019
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        626749.9700000002,
-        529331.3999999999,
-        97418.5700000003
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        220971.34,
-        0.0,
-        220971.34
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        62009.74,
-        0.0,
-        62009.74
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        955157.5599999998,
-        955157.5599999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        77743.77000000003,
-        0.0,
-        77743.77000000003
-      ],
-      [
-        "UNKNOWN_LEAK",
-        "Expense",
-        4440.45,
-        0.0,
-        4440.45
-      ]
-    ]
-  }
-}
-</LLM_DIAGNOSTIC_CONTEXT>
--->
+### Topological & Conservation Constraints
+- **Max Spectral Radius:** 0.0000
+- **Min Edge Stress:** 4.9203
+- **Relative Mass Leak Ratio:** 0.000275
+
+## 3. Structural Evolution (Viscosity Classification)
+
+- **Viscosity Range:** `230384.23 ~ 330043.47`
+  - 🩸 **Diagnosis:** Thrombosis / High-Friction (Old-Generation Structure). The system relies on manual/human friction.
+
+> *Generated automatically by the TLU Meta-Diagnosis Engine (Statistical Upgrade).* 
+

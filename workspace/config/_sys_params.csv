@@ -1,56 +1,20 @@
-# ==============================================================================
-# TLU System Configuration Parameters (_sys_params.csv)
-# Ordered by pipeline execution phases and shared global usage.
-# ==============================================================================
+input_csv,input_stream/us_macro_journal.csv
+col_trans_date,Date
+col_src,Source
+col_tgt,Target
+col_amount,Amount
 
-# ---------------------------------------------------------
-# STREAM I/O COLUMN DEFINITIONS (Data Mapping)
-# ---------------------------------------------------------
-input_csv,input_stream/Aggregated_Market_Stream.csv
-col_trans_date,t_idx
-col_src,src_idx
-col_tgt,tgt_idx
-col_amount,value
-
-# ---------------------------------------------------------
-# GLOBAL / SHARED HYPERPARAMETERS
-# ---------------------------------------------------------
-# Base observation scale to coarse-grain (macroscopize) the entire system
-# (Unifies all window sizes for Thermodynamics, Geometry, Forensics, Connectivity, etc.)
-# Note: Now treating this as 'steps' (weeks) instead of months. 24 weeks = ~6 months.
 observation_window_steps,12
-
-# Damping factor (gamma) for propagation depth (used in FK/IK & Sensitivity)
 damping_factor,0.85
-# Safe inversion penalty to prevent divergence (Tikhonov regularization)
 tikhonov_lambda,0.0001
 
-# ---------------------------------------------------------
-# [0_0] PHASE 0: Dummy Journal Stream Generator
-# ---------------------------------------------------------
-# Note: Dummy generation parameters (duration, seed) are decoupled and set 
-# directly in scratch/generate_all_samples.sh to ensure loose coupling.
+thermo_work_labels,US10Y,US_Inflation,US_Production,Copper,Oil
+thermo_heat_labels,SP500,US_Unemployment
 
-# ---------------------------------------------------------
-# [001] PHASE 1: Macro/Local Thermodynamics & Time-Lag
-# ---------------------------------------------------------
-# Definition of systemic Work vs. Heat (001_1_1)
-# Work (Leaders): Mag7 + Top tier in 11 sectors
-thermo_work_labels,AAPL_Close,MSFT_Close,GOOG_Close,AMZN_Close,NVDA_Close,META_Close,TSLA_Close,AVGO_Close,JNJ_Close,JPM_Close,HD_Close,DIS_Close,CAT_Close,PG_Close,XOM_Close,NEE_Close,PLD_Close,LIN_Close
-# Heat (Mid/Low Tiers): The remaining 22 companies (acting as friction/dissipation)
-thermo_heat_labels,HPQ_Close,STX_Close,BIIB_Close,PRGO_Close,SYF_Close,NAVI_Close,M_Close,KSS_Close,LYV_Close,NWSA_Close,DOV_Close,PNR_Close,CAG_Close,CPB_Close,HAL_Close,APA_Close,NI_Close,PNW_Close,BXP_Close,VNO_Close,SEE_Close,OI_Close
-
-# ---------------------------------------------------------
-# [002] PHASE 2: Information Curvature, Topology & Forensics
-# ---------------------------------------------------------
-# Thresholds for Anomaly Detection, Isolation & Pathological Drifts (002_2_x)
 anomaly_z_score_threshold,3.0
 leak_tolerance,1.0
 kl_drift_thresh,2.0
 
-# ---------------------------------------------------------
-# GLOBAL THRESHOLDS & BOUNDARIES (Visualization & Diagnosis)
-# ---------------------------------------------------------
 thresh_z_score,3.0
 thresh_spectral_radius,0.95
 thresh_fractal_lower,0.5
@@ -58,36 +22,19 @@ thresh_fractal_upper,1.5
 thresh_manifold_svd,1e-10
 target_phase_frequency,0.25
 
-# ---------------------------------------------------------
-# [003/004] PHASE 3 & 4: Optimal Control Theory (LQR)
-# ---------------------------------------------------------
-# Budget-allocable departments (intervention knobs for 004_1_1)
-lqr_controllable_labels,AVGO_Close,JPM_Close,HD_Close
-# Intended absolute target state (e.g., Sales Revenue goal: 004_1_1)
-lqr_target_state,NVDA_Close:1000
-# LQR weight parameters (Q: target adherence priority, R: budget saving austerity)
+lqr_controllable_labels,US10Y
+lqr_target_state,US_Inflation:2.0,US_Unemployment:4.0
 lqr_q_weight,1.0
 lqr_r_weight,0.1
 
-# Maximum propagation depth for kinematics/sensitivity
 kinematics_max_k,5
-
-# Forward Kinematics (FK)
 fk_input_mode,actual
-# Static delta q to inject if fk_input_mode is "static"
-fk_static_dq_labels,NVDA_Close:1000
+fk_static_dq_labels,US10Y:1.0
 
-# Inverse Kinematics (IK)
-ik_target_labels,NVDA_Close:1000.0
+ik_target_labels,US_Inflation:2.0,US_Unemployment:4.0
+sensitivity_delta,1.0
 
-# Sensitivity Analysis
-sensitivity_delta,10.0
-
-
-# ---------------------------------------------------------
-# AUTO-CALIBRATION (Baseline Tuning)
-# ---------------------------------------------------------
-auto_tune_enabled,True
+auto_tune_enabled,False
 auto_tune_burn_in_period,12
 phase_window_size,24
 phase_step_size,1

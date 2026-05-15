@@ -1,0 +1,10 @@
+node_idx,node_label,spectral_exponent_beta,noise_classification
+0,ACC_Sales_Revenue,-0.0601,White Noise
+1,ACC_Accounts_Receivable,1.0687,Pink Noise
+2,ACC_Inventory,-0.1679,White Noise
+3,ACC_COGS,-0.3169,White Noise
+4,ACC_Accounts_Payable,-0.0159,White Noise
+5,ACC_Cash,0.2164,White Noise
+6,ACC_Travel_Exp,-0.0923,White Noise
+7,ACC_Payroll_Exp,0.9875,Pink Noise
+8,ACC_Rent_Exp,0.0068,White Noise

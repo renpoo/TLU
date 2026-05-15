@@ -29,6 +29,7 @@ fi
 
 ${TLU_PY} -m src.filters._0_2_generate_financial_statements \
     --mapping "$MAPPING_CSV" \
+    --initial_state "${TARGET_ENV}/ephemeral/_initial_state_labels.csv" \
     --output "$OUTPUT_MD" \
     < "$INPUT_CSV"
 
