@@ -16,9 +16,9 @@ Stroke（Sample 8）と同様にスペクトル半径が `1.0` を記録して�
 
 ## 2. Foundation & Constitution (基礎体力と体質)
 
-![B/S Total](output_plots/000_0_1__BS_Block_Total.png)
-![P/L Waterfall](output_plots/000_0_1__PL_Waterfall_Total.png)
-![P/L Trend](output_plots/000_0_1__PL_Trend_Revenue_vs_Expenses.png)
+![B/S Total](readme_plots/000_0_1__BS_Block_Total.png)
+![P/L Waterfall](readme_plots/000_0_1__PL_Waterfall_Total.png)
+![P/L Trend](readme_plots/000_0_1__PL_Trend_Revenue_vs_Expenses.png)
 
 脳の総血流量（基礎代謝）自体は存在していますが、その使われ方（エネルギーの燃焼の仕方）に異常を来しています。
 
@@ -26,8 +26,8 @@ Stroke（Sample 8）と同様にスペクトル半径が `1.0` を記録して�
 
 ## 3. Statistical Baseline (基本統計量)
 
-![Histogram](output_plots/support/000_0_2_3__histogram_kde.png)
-![Rolling Quantiles](output_plots/000_0_2_4__rolling_quantiles.png)
+![Histogram](readme_plots/support/000_0_2_3__histogram_kde.png)
+![Rolling Quantiles](readme_plots/000_0_2_4__rolling_quantiles.png)
 
 自由エネルギーの統計分布において明確な異常値（発作）が検出されています。発作時以外は一見正常に機能しているように見えますが、「歪度（Skewness: 1.94）」と「尖度（Kurtosis: 3.91）」の高さから、周期的にこの巨大なエネルギーの暴走が襲いかかってくる体質であることが分かります。
 
@@ -35,9 +35,9 @@ Stroke（Sample 8）と同様にスペクトル半径が `1.0` を記録して�
 
 ## 4. Macro Thermodynamics (マクロ熱力学と気の滞り)
 
-![Thermodynamics Dashboard](output_plots/001_1_1__thermodynamics_dashboard.png)
-![Thermodynamics Stack](output_plots/001_1_2__thermodynamics_energy_stack.png)
-![T-S Diagram](output_plots/001_1_3__thermodynamics_ts_diagram.png)
+![Thermodynamics Dashboard](readme_plots/001_1_1__thermodynamics_dashboard.png)
+![Thermodynamics Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 - **分析 (熱力学的な暴走):** 発作が発生した瞬間、T-S Diagram において急激な自由エネルギーの放出（スパイク）が記録されています。脳の統制が取れなくなり、無意味な電気信号の嵐にエネルギーが浪費されています。
 
@@ -45,7 +45,7 @@ Stroke（Sample 8）と同様にスペクトル半径が `1.0` を記録して�
 
 ## 5. Structural Pathology (経絡の断裂と変異)
 
-![Macro Forensics](output_plots/002_2_1__macro_forensics_dashboard.png)
+![Macro Forensics](readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 - **分析:** Leak Ratio は `0.0` です。脳の外への物理的な出血ではなく、あくまで電気信号のソフトウェア的な暴走です。
 
@@ -53,7 +53,7 @@ Stroke（Sample 8）と同様にスペクトル半径が `1.0` を記録して�
 
 ## 6. System Stability (動的安定性と脈)
 
-![System Stability](output_plots/004_1_2__system_stability_dashboard.png)
+![System Stability](readme_plots/004_1_2__system_stability_dashboard.png)
 
 - **分析 (脈の暴走と共振):** 最大スペクトル半径が `1.0` です。特定の脳領野間で電気信号が無限にフィードバックし合い、増幅される「てんかんループ（過同期の暴走）」が完成しています。
 
@@ -62,34 +62,40 @@ Stroke（Sample 8）と同様にスペクトル半径が `1.0` を記録して�
 ## 7. Deep Dive Analytics & Treatment Plan (詳細病因特定と治療方針)
 
 ### 7.1 Micro Pathology (病因の特定)
-![3D Z-Score X](output_plots/support/002_2_2_2__3d_micro_z_score_X.png)
-![3D KL Drift](output_plots/support/002_2_2_1__3d_micro_kl_drift.png)
+
+![3D Z-Score X](readme_plots/support/002_2_2_2__3d_micro_z_score_X.png)
+![3D KL Drift](readme_plots/support/002_2_2_1__3d_micro_kl_drift.png)
 
 - **病因の特定:** 特定のノードにおいて、発作（Z-Scoreスパイク）の直前に急激な構造的変異（KL-Drift）が観測されます。ここがてんかんの焦点（Epileptic Focus）です。
 
 ### 7.2 Kinematic State Space (体格と肩こり)
-![Phase Portrait 3D](output_plots/support/000_1_8__phase_portrait_3d.png)
-![3D Inertia](output_plots/support/000_1_4__3d_dynamics_inertia.png)
-![3D Viscosity](output_plots/support/000_1_5__3d_dynamics_viscosity.png)
+
+![Phase Portrait 3D](readme_plots/support/000_1_8__phase_portrait_3d.png)
+![3D Inertia](readme_plots/support/000_1_4__3d_dynamics_inertia.png)
+![3D Viscosity](readme_plots/support/000_1_5__3d_dynamics_viscosity.png)
 
 - **体格と肩こりの診断:** 粘性は高い状態にありますが、Stroke（Sample 8）のような「完全な詰まり」ではなく、発作の摩擦熱によるものです。
 
 ### 7.3 Information Geometry & Stress (トポロジーの変遷)
-![Topology t=0](output_plots/support/002_1_2__network_topology.t.00000.png)
-![Topology t=3](output_plots/support/002_1_2__network_topology.t.00003.png)
-![Topology t=5](output_plots/support/002_1_2__network_topology.t.00005.png)
-![Topology t=8](output_plots/support/002_1_2__network_topology.t.00008.png)
-![Topology t=11](output_plots/support/002_1_2__network_topology.t.00011.png)
+
+![Topology t=0](readme_plots/support/002_1_2__network_topology.t.00000.png)
+![Topology t=3](readme_plots/support/002_1_2__network_topology.t.00003.png)
+![Topology t=5](readme_plots/support/002_1_2__network_topology.t.00005.png)
+![Topology t=8](readme_plots/support/002_1_2__network_topology.t.00008.png)
+![Topology t=11](readme_plots/support/002_1_2__network_topology.t.00011.png)
 
 ### 7.4 Wave Mechanics & Fractal Noise (波動と人工的同期)
-![Fractal Noise](output_plots/support/005_2_1_fractal_noise_spectrum.png)
+
+![Fractal Noise](readme_plots/support/005_2_1_fractal_noise_spectrum.png)
+
 - **分析:** 発作時に全脳の波形が完全に同期してしまう（Hypersynchrony）状態が観測されます。多様性が失われ、全細胞が一つの巨大な波に飲み込まれています。
 
 ### 7.5 LQR Control & Dynamic Treatment (経絡秘孔の特定と自律的治療提案)
-![LQR Space](output_plots/support/004_1_3__control_lqr_performance_space.png)
-![Sensitivity Matrix](output_plots/support/004_2_1__sensitivity_matrix.png)
 
-- **診断と治療方針 (Oriental Medicine Consulting):** 
+![LQR Space](readme_plots/support/004_1_3__control_lqr_performance_space.png)
+![Sensitivity Matrix](readme_plots/support/004_2_1__sensitivity_matrix.png)
+
+- **診断と治療方針 (Oriental Medicine Consulting):**
   発作を抑え込むためのツボ（てんかん焦点への介入ポイント）は以下の通りです。
   1. **慣性（Inertia / 抑制系）の強化:** 発作の原因は、特定の焦点における「興奮」が暴走することです。抗てんかん薬（GABA作動薬など）を投与し、システム全体の「仮想慣性（重さ・鈍感さ）」を人為的に引き上げることで、電気信号の連鎖反応（暴走）を物理的に遅延・鎮火させてください。
   2. **位相のズレ（Phase Shift）の強制切断:** 手術による焦点の切除、あるいは迷走神経刺激（VNS）により、暴走ループの位相を強制的にずらし、共振を断ち切ることが有効です。
@@ -98,7 +104,7 @@ Stroke（Sample 8）と同様にスペクトル半径が `1.0` を記録して�
 
 ## 8. 🚨 Forensic Alert & Falsifiability (異常・不正の別途指摘と反証可能性)
 
-* **🚨 Forensic Alert:** 
+- **🚨 Forensic Alert:**
   医療データであるため、本システムにおける「異常」は犯罪ではなく純粋な病気（Seizure）です。意図的な横領や質量欠損はありません。
-* **Verification Requirements (反証可能性の確認):**
+- **Verification Requirements (反証可能性の確認):**
   1. TLUが特定した発作の焦点（Z-Scoreの震源地）と、実際の脳波（EEG）における棘波（Spike Wave）の発生源が解剖学的に一致しているかを確認すること。

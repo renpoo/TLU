@@ -15,7 +15,7 @@ except ImportError:
 
 def get_base_parser(description: str) -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=description)
-    parser.add_argument("--out_dir", type=str, default="workspace/output_plots/")
+    parser.add_argument("--out_dir", type=str, default="workspace/readme_plots/")
     parser.add_argument("--filename", type=str, default=None)
     # Default theme is 'dark' (only starting point based on user agreement)
     parser.add_argument("--theme", type=str, default='dark')

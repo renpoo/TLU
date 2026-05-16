@@ -30,23 +30,23 @@ P/L（損益計算書）上では、売上高（Sales）が前例のない右肩
 
 以上がマクロな構造剛性と質量保存則の分析結果です。
 
-![Macro Forensics Dashboard](../../../../samples/Sample_1_Wash_Trade/output_plots/002_2_1__macro_forensics_dashboard.png)
+![Macro Forensics Dashboard](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 **剛性行列の進化（シネマティック・シーケンス）:**
 
-![1枚目 [Start]: 稼働直後の無垢な状態](../../../../samples/Sample_1_Wash_Trade/output_plots/support/000_2_1__structural_stiffness.t.00000.png)
+![1枚目 [Start]: 稼働直後の無垢な状態](../../../../samples/Sample_1_Wash_Trade/readme_plots/support/000_2_1__structural_stiffness.t.00000.png)
 
-![2枚目 [Just Before Change]: 異常が発生する直前](../../../../samples/Sample_1_Wash_Trade/output_plots/support/000_2_1__structural_stiffness.t.00002.png)
+![2枚目 [Just Before Change]: 異常が発生する直前](../../../../samples/Sample_1_Wash_Trade/readme_plots/support/000_2_1__structural_stiffness.t.00002.png)
 
-![3枚目 [The Exact Point of Change]: 異常の発生した決定的な瞬間](../../../../samples/Sample_1_Wash_Trade/output_plots/support/000_2_1__structural_stiffness.t.00004.png)
+![3枚目 [The Exact Point of Change]: 異常の発生した決定的な瞬間](../../../../samples/Sample_1_Wash_Trade/readme_plots/support/000_2_1__structural_stiffness.t.00004.png)
 
-![4枚目 [Immediately After Change]: 波及効果と局所的な硬直](../../../../samples/Sample_1_Wash_Trade/output_plots/support/000_2_1__structural_stiffness.t.00006.png)
+![4枚目 [Immediately After Change]: 波及効果と局所的な硬直](../../../../samples/Sample_1_Wash_Trade/readme_plots/support/000_2_1__structural_stiffness.t.00006.png)
 
-![5枚目 [End]: シミュレーションの最終状態](../../../../samples/Sample_1_Wash_Trade/output_plots/support/000_2_1__structural_stiffness.t.00011.png)
+![5枚目 [End]: シミュレーションの最終状態](../../../../samples/Sample_1_Wash_Trade/readme_plots/support/000_2_1__structural_stiffness.t.00011.png)
 
 以上が熱力学的エネルギースタックの分析結果です。
 
-![Thermodynamics Dashboard](../../../../samples/Sample_1_Wash_Trade/output_plots/001_1_1__thermodynamics_dashboard.png)
+![Thermodynamics Dashboard](../../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_1__thermodynamics_dashboard.png)
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
 

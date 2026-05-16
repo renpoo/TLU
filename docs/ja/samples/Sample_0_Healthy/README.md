@@ -7,11 +7,11 @@
 
 ## 2. 伝統的分析の限界（集計スナップショット）
 
-![BS Block Total](../../../../samples/Sample_0_Healthy/output_plots/000_0_1__BS_Block_Total.png)
+![BS Block Total](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__BS_Block_Total.png)
 
-![PL Waterfall Total](../../../../samples/Sample_0_Healthy/output_plots/000_0_1__PL_Waterfall_Total.png)
+![PL Waterfall Total](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Waterfall_Total.png)
 
-![PL Trend](../../../../samples/Sample_0_Healthy/output_plots/000_0_1__PL_Trend.png)
+![PL Trend](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Trend.png)
 
 伝統的なB/S（貸借対照表）やP/L（損益計算書）の観点からは、売上（Sales）と費用（Expenses）が一定のボラティリティを伴いながらも適切に推移していることが確認できます。しかし、これだけでは「裏で巧妙な循環取引が行われていないか」や「システムの回復力（スタミナ）が枯渇していないか」は証明できません。
 
@@ -28,24 +28,24 @@
 
 **剛性行列の進化（シネマティック・シーケンス）:**
 
-![Macro Forensics Dashboard](../../../../samples/Sample_0_Healthy/output_plots/002_2_1__macro_forensics_dashboard.png)
+![Macro Forensics Dashboard](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
-![1枚目 [Start]: 稼働直後の無垢な状態](../../../../samples/Sample_0_Healthy/output_plots/support/000_2_1__structural_stiffness.t.00000.png)
+![1枚目 [Start]: 稼働直後の無垢な状態](../../../../samples/Sample_0_Healthy/readme_plots/support/000_2_1__structural_stiffness.t.00000.png)
 
-![2枚目 [Just Before Change]: 異常が発生する直前](../../../../samples/Sample_0_Healthy/output_plots/support/000_2_1__structural_stiffness.t.00002.png)
+![2枚目 [Just Before Change]: 異常が発生する直前](../../../../samples/Sample_0_Healthy/readme_plots/support/000_2_1__structural_stiffness.t.00002.png)
 
-![3枚目 [The Exact Point of Change]: 異常の発生した決定的な瞬間](../../../../samples/Sample_0_Healthy/output_plots/support/000_2_1__structural_stiffness.t.00004.png)
+![3枚目 [The Exact Point of Change]: 異常の発生した決定的な瞬間](../../../../samples/Sample_0_Healthy/readme_plots/support/000_2_1__structural_stiffness.t.00004.png)
 
-![4枚目 [Immediately After Change]: 波及効果と局所的な硬直](../../../../samples/Sample_0_Healthy/output_plots/support/000_2_1__structural_stiffness.t.00006.png)
+![4枚目 [Immediately After Change]: 波及効果と局所的な硬直](../../../../samples/Sample_0_Healthy/readme_plots/support/000_2_1__structural_stiffness.t.00006.png)
 
-![5枚目 [End]: シミュレーションの最終状態](../../../../samples/Sample_0_Healthy/output_plots/support/000_2_1__structural_stiffness.t.00011.png)
+![5枚目 [End]: シミュレーションの最終状態](../../../../samples/Sample_0_Healthy/readme_plots/support/000_2_1__structural_stiffness.t.00011.png)
 
 ### 4.2. トポロジー異常とスペクトル半径
 
 * **最大スペクトル半径：** `0.0000`。
 * **解説：** スペクトル半径が 1.0 に全く接近していないことは、ネットワーク内に「人工的な資金の無限ループ（ウォッシュ・トレード）」が存在しないことの数学的証明です。
 
-![System Stability](../../../../samples/Sample_0_Healthy/output_plots/004_1_2__system_stability.png)
+![System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
 
 ### 4.3. 熱力学的エネルギースタック
 
@@ -53,9 +53,9 @@
 * **動粘度（Viscosity）：** `230,384 ~ 331,264`
 * **解説：** この高摩擦状態は「旧世代構造（Thrombosis / 人間の手動取引に基づく摩擦）」を示唆しています。システムはアルゴリズムによる超流動状態ではなく、健全で現実的な人間の経済活動によって駆動されています。
 
-![Thermodynamics Dashboard](../../../../samples/Sample_0_Healthy/output_plots/001_1_1__thermodynamics_dashboard.png)
+![Thermodynamics Dashboard](../../../../samples/Sample_0_Healthy/readme_plots/001_1_1__thermodynamics_dashboard.png)
 
-![Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/output_plots/001_1_2__thermodynamics_energy_stack.png)
+![Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
 
