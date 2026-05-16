@@ -26,8 +26,16 @@ while [[ $# -gt 0 ]]; do
       shift
       ;;
     *)
-      # Assume Theme fallback backward compatibility
-      export TLU_THEME="$1"
+      if [[ "$1" == --* ]]; then
+          echo "[ERROR] Unrecognized flag: $1"
+          echo "Usage: $0 [--target_env <dir>] [--sys_params <file>] [--interactive] [target_env_dir | theme]"
+          exit 1
+      elif [ -d "$1" ]; then
+          export TARGET_ENV="$1"
+      else
+          # Assume Theme fallback backward compatibility
+          export TLU_THEME="$1"
+      fi
       shift
       ;;
   esac
@@ -41,7 +49,6 @@ VIZ_ORCH_DIR="./bin/visualizers"
 # Primary Dashboards / Macro Indicators (Check Engine Lights)
 PRIMARY_SCRIPTS=(
     "vis_000_0_1_visualize_financial_statements.sh"
-    "vis_000_0_2_visualize_basic_statistics.sh"
     "vis_000_2_2_visualize_principal_axes.sh"
     "vis_001_1_1_visualize_macro_thermodynamics.sh"
     "vis_002_2_1_visualize_macro_forensics.sh"
@@ -50,6 +57,7 @@ PRIMARY_SCRIPTS=(
 
 # Support / Ancillary Diagnostics (Deep Dives)
 SUPPORT_SCRIPTS=(
+    "vis_000_0_2_visualize_basic_statistics.sh"
     "vis_000_1_1_visualize_dynamics_state.sh"
     "vis_000_2_1_visualize_structural_stiffness.sh"
     "vis_000_2_3_visualize_eigenvector_evolution.sh"

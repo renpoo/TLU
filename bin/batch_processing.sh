@@ -25,6 +25,15 @@ while [[ $# -gt 0 ]]; do
       shift 2
       ;;
     *)
+      if [[ "$1" == --* ]]; then
+          echo "[ERROR] Unrecognized flag: $1"
+          echo "Usage: $0 [--target_env <dir>] [--sys_params <file>] [--account_mapping <file>] [target_env_dir]"
+          exit 1
+      elif [ -d "$1" ]; then
+          export TARGET_ENV="$1"
+      else
+          echo "[WARN] Ignoring unrecognized argument: $1"
+      fi
       shift
       ;;
   esac
