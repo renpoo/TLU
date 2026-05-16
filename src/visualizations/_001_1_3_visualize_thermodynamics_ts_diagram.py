@@ -58,7 +58,7 @@ def main():
     top_k_indices = df.nlargest(args.top_k, 'temperature_T')['t_idx'].astype(int).tolist()
 
     fig = plt.figure(figsize=(18, 12))
-    ax = fig.add_axes([0.10, 0.30, 0.40, 0.50], projection='3d')
+    ax = fig.add_axes([0.15, 0.15, 0.60, 0.75], projection='3d')
     ax.view_init(elev=args.elev, azim=args.azim)
 
     # Drawing trajectories (lines)
@@ -99,7 +99,7 @@ def main():
     ax.tick_params(axis='y', pad=5, colors=text_col)
     ax.tick_params(axis='z', pad=5, colors=text_col)
 
-    cax = fig.add_axes([0.05, 0.35, 0.015, 0.45])
+    cax = fig.add_axes([0.05, 0.25, 0.015, 0.55])
     cbar = fig.colorbar(scatter, cax=cax)
     cbar.set_label('Temperature (T) - Heat / Volatility', color=text_col, fontsize=10)
     cbar.ax.yaxis.set_tick_params(color=text_col)
@@ -112,7 +112,7 @@ def main():
         labels.append(f"t={i:02d} : {time_labels.get(i, f'Time_{i:02d}')}")
 
     leg = ax.legend(handles, labels, title="Time Map:\n" + "-"*20,
-                    loc='center left', bbox_to_anchor=(1.2, 0.5), 
+                    loc='center left', bbox_to_anchor=(1.15, 0.5), 
                     facecolor=legend_bg, edgecolor=legend_edge,
                     handlelength=0, handletextpad=0, prop={'family': 'monospace', 'size': 10})
     plt.setp(leg.get_title(), color=text_col, family='monospace')

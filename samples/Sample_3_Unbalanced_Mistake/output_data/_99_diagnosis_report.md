@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Statistical Upgrade V2)
 
 **Target Environment:** `samples/Sample_3_Unbalanced_Mistake`
-**Date Analyzed:** 2026-05-15 09:11:51
+**Date Analyzed:** 2026-05-16 11:19:30
 
 ## 1. Final Diagnosis
 
@@ -20,19 +20,19 @@
 - **Anomaly Count (Z > 3.0):** 0 times
 
 ### Free Energy (F) Dynamics
-- **Baseline (Mean / Median):** 2,716,935.99 / 2,677,552.83
-- **Volatility (Std Dev):** 335,776.52
-- **Distribution Shape (Skew / Kurtosis):** 0.08 / -1.39
+- **Baseline (Mean / Median):** 2,944,787.79 / 2,890,151.94
+- **Volatility (Std Dev):** 548,435.90
+- **Distribution Shape (Skew / Kurtosis):** 0.20 / -1.37
 - **Anomaly Count (Z > 3.0):** 0 times
 
 ### Topological & Conservation Constraints
 - **Max Spectral Radius:** 0.0000
-- **Min Edge Stress:** 4.9203
+- **Min Edge Stress:** 7.2017
 - **Relative Mass Leak Ratio:** 0.000275
 
 ## 3. Structural Evolution (Viscosity Classification)
 
-- **Viscosity Range:** `230384.23 ~ 330043.47`
+- **Viscosity Range:** `230384.23 ~ 395402.52`
   - 🩸 **Diagnosis:** Thrombosis / High-Friction (Old-Generation Structure). The system relies on manual/human friction.
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine (Statistical Upgrade).* 

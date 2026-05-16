@@ -51,6 +51,10 @@ def main():
         target_t_list = [args.t_target]
     else:
         target_t_list = sorted(df['t_idx'].unique())
+        
+    # Load time dictionary for consistent sequence titles
+    T_max = max(target_t_list) if target_t_list else 0
+    time_labels = load_time_labels(args.time_map, T_max + 1)
 
     # Real time (t) loop
     for target_t in target_t_list:
@@ -84,7 +88,8 @@ def main():
                             xticklabels=axis_labels, yticklabels=axis_labels,
                             cbar_kws={'label': f'Impact Intensity (gamma={args.gamma})'})
                             
-                ax.set_title(f"Sensitivity Analysis Series Propagation: Order k={k}\n(Time Step: {target_t})", 
+                time_label_str = time_labels.get(target_t, f"t={target_t:02d}")
+                ax.set_title(f"Sensitivity Analysis Series Propagation: Order k={k}\nTimeline: {time_label_str} (t_idx={target_t})", 
                              fontsize=16, color=text_col, pad=args.max_k, fontweight='bold')
                 ax.set_xlabel("Target Node (Impact Received)", color=text_col, fontsize=12)
                 ax.set_ylabel("Source Node (Shock Origin)", color=text_col, fontsize=12)

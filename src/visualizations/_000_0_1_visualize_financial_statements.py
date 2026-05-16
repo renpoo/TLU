@@ -12,7 +12,7 @@ except ImportError:
     plt.rcParams['font.family'] = ['AppleGothic', 'Hiragino Sans', 'Hiragino Maru Gothic Pro', 'Noto Sans CJK JP', 'YuGothic', 'sans-serif']
 
 
-def draw_bs_block_chart(report, out_path, max_y=None, fixed_assets_order=None, fixed_liabs_order=None):
+def draw_bs_block_chart(report, out_path, max_y=None, fixed_assets_order=None, fixed_liabs_order=None, t_idx=None):
     fig, ax = plt.subplots(figsize=(10, 6))
     
     # Use fixed order if provided, otherwise calculate dynamically
@@ -79,12 +79,17 @@ def draw_bs_block_chart(report, out_path, max_y=None, fixed_assets_order=None, f
         ax.set_ylim(0, max(max_y, 1) * 1.1)
 
     ax.legend(loc='center left', bbox_to_anchor=(1.02, 0.5), fontsize=8)
-    ax.set_title(f"Balance Sheet (Block Chart): {report['week']}")
+    title_str = f"Balance Sheet (Block Chart): {report['week']}"
+    if t_idx is not None: title_str = f"Balance Sheet (Block Chart)\nTimeline: {report['week']} (t_idx={t_idx})"
+    ax.set_title(title_str)
     plt.subplots_adjust(left=0.1, right=0.7, top=0.9, bottom=0.1)
     plt.savefig(out_path, dpi=150)
+
+    print("✅ " + out_path)
+
     plt.close()
 
-def draw_pl_waterfall(report, out_path, min_y=None, max_y=None, fixed_expenses_order=None):
+def draw_pl_waterfall(report, out_path, min_y=None, max_y=None, fixed_expenses_order=None, t_idx=None):
     fig, ax = plt.subplots(figsize=(10, 6))
     
     labels = ['Revenue']
@@ -129,10 +134,15 @@ def draw_pl_waterfall(report, out_path, min_y=None, max_y=None, fixed_expenses_o
         range_y = max(abs(max_y), 1) if range_y == 0 else range_y
         ax.set_ylim(min_y - range_y * 0.1, max_y + range_y * 0.1)
 
-    ax.set_title(f"Profit & Loss (Waterfall): {report['week']}")
-    plt.xticks(rotation=45, ha='right', fontsize=8)
-    plt.subplots_adjust(left=0.1, right=0.95, top=0.9, bottom=0.2) # Reserve bottom space for labels
+    title_str = f"Profit & Loss (Waterfall): {report['week']}"
+    if t_idx is not None: title_str = f"Profit & Loss (Waterfall)\nTimeline: {report['week']} (t_idx={t_idx})"
+    ax.set_title(title_str)
+    plt.xticks(rotation=90, ha='center', fontsize=8)
+    plt.subplots_adjust(left=0.1, right=0.95, top=0.9, bottom=0.3) # Reserve more bottom space for vertical labels
     plt.savefig(out_path, dpi=150) # Removed bbox_inches='tight'
+
+    print("✅ " + out_path)
+
     plt.close()
 
 def draw_pl_trend(reports, out_path):
@@ -159,6 +169,9 @@ def draw_pl_trend(reports, out_path):
         
     plt.subplots_adjust(left=0.1, right=0.95, top=0.9, bottom=0.2)
     plt.savefig(out_path, dpi=150) # Removed bbox_inches='tight'
+
+    print("✅ " + out_path)
+
     plt.close()
 
 def main():
@@ -232,10 +245,20 @@ def main():
     for i, r in enumerate(reports):
         # Format index to have leading zeros for sorting
         idx_str = f"{i:03d}"
-        draw_bs_block_chart(r, os.path.join(seq_dir, f"BS_Block_{idx_str}_{r['week']}.png"), 
-                            max_y=global_max_bs, fixed_assets_order=fixed_assets, fixed_liabs_order=fixed_liabs)
-        draw_pl_waterfall(r, os.path.join(seq_dir, f"PL_Waterfall_{idx_str}_{r['week']}.png"), 
-                          min_y=global_min_pl, max_y=global_max_pl, fixed_expenses_order=fixed_expenses)
+        out_path = os.path.join(seq_dir, f"BS_Block_{idx_str}_{r['week']}.png")
+        draw_bs_block_chart(r, out_path, 
+                            max_y=global_max_bs, fixed_assets_order=fixed_assets, fixed_liabs_order=fixed_liabs, t_idx=i)
 
+        print("✅ " + out_path)
+
+    for i, r in enumerate(reports):
+        # Format index to have leading zeros for sorting
+        idx_str = f"{i:03d}"
+        out_path = os.path.join(seq_dir, f"PL_Waterfall_{idx_str}_{r['week']}.png")
+        draw_pl_waterfall(r, out_path, 
+                          min_y=global_min_pl, max_y=global_max_pl, fixed_expenses_order=fixed_expenses, t_idx=i)
+
+        print("✅ " + out_path)
+    
 if __name__ == "__main__":
     main()
