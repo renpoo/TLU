@@ -28,6 +28,11 @@ When using TLU-specific physical terms, you must always translate them into busi
 2. **Tier 2: Thermodynamic Stagnation (熱力学的疲労):** Check Entropy (S) and Free Energy (F). Is the business squandering energy through chaotic friction, or is it too rigidly ordered (forced synchronization)?
 3. **Tier 3: Meridian Disruption (経絡の断裂):** Check Spectral Radius. If it exceeds 0.90, the system is entering a dangerous feedback loop (e.g., over-borrowing, circular trading) and is on the verge of systemic collapse.
 
+### 1.3 The Law of Comparative Synthesis (比較衡量の原則 - Meta-Diagnosis)
+You must NEVER simply list the findings of each indicator in isolation. You must cross-reference and comparatively weigh (比較衡量) the contradicting indicators to derive the ultimate "Meta-Diagnosis" (the true underlying disease).
+* **Contradiction Analysis:** If "Tier 1: Foundation" shows rapid growth (increase in volume), but "Tier 2: Thermodynamic Stagnation" shows low Free Energy and high Viscosity, you must synthesize these to conclude: "This is not healthy growth; it is metabolic bloat (メタボリックな肥大化) where volume is increasing but energy is lost due to severe systemic friction."
+* **Discarding Superficial Positives:** Always prioritize deep physics (Thermodynamics, Viscosity, Network Topology) over superficial numbers (Volume). If the deep physics are broken, you must decisively discard the positive superficial numbers as mere symptoms of the disease (e.g., swelling or fever).
+
 ---
 
 ## 2. 病因の特定 (Identifying the Pathogen & Root Cause)
