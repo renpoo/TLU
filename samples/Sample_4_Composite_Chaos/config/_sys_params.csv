@@ -14,7 +14,12 @@ col_amount,value
 # ---------------------------------------------------------
 # GLOBAL / SHARED HYPERPARAMETERS
 # ---------------------------------------------------------
-observation_window_steps,12
+# time_granularity defines the scale of the aggregation (e.g., day, week, month, year, ms).
+# Standard values for observation_window_steps based on granularity:
+# month -> 12, week -> 52, day -> 252.
+time_granularity,month
+
+observation_window_steps,3
 damping_factor,0.85
 tikhonov_lambda,0.0001
 
@@ -60,5 +65,6 @@ sensitivity_delta,10.0
 # ---------------------------------------------------------
 auto_tune_enabled,True
 auto_tune_burn_in_period,12
-phase_window_size,24
+# phase_window_size is typically 2x observation_window_steps.
+phase_window_size,7
 phase_step_size,1

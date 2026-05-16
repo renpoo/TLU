@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Statistical Upgrade V2)
 
 **Target Environment:** `samples/Sample_6_Market_Bipartite_Weekly`
-**Date Analyzed:** 2026-05-15 09:13:23
+**Date Analyzed:** 2026-05-16 11:21:10
 
 ## 1. Final Diagnosis
 
@@ -28,9 +28,9 @@ The system is suffering from multiple overlapping structural failures.
 - **Anomaly Count (Z > 3.0):** 0 times
 
 ### Free Energy (F) Dynamics
-- **Baseline (Mean / Median):** 3,504,441,599.82 / 3,526,416,515.23
-- **Volatility (Std Dev):** 139,190,089.94
-- **Distribution Shape (Skew / Kurtosis):** -0.37 / -0.60
+- **Baseline (Mean / Median):** 3,623,458,959.18 / 3,668,293,483.37
+- **Volatility (Std Dev):** 105,763,132.99
+- **Distribution Shape (Skew / Kurtosis):** -1.24 / 0.85
 - **Anomaly Count (Z > 3.0):** 0 times
 
 ### Topological & Conservation Constraints

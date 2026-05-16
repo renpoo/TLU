@@ -1,6 +1,6 @@
 node_idx,node_label
-0,Parietal_Lobe
-1,Visual_Cortex
+0,Motor_Cortex
+1,Parietal_Lobe
 2,Prefrontal_Cortex
 3,Temporal_Lobe
-4,Motor_Cortex
+4,Visual_Cortex

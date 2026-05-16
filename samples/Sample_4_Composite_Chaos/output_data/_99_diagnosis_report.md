@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Statistical Upgrade V2)
 
 **Target Environment:** `samples/Sample_4_Composite_Chaos`
-**Date Analyzed:** 2026-05-15 09:12:14
+**Date Analyzed:** 2026-05-16 11:19:54
 
 ## 1. Final Diagnosis
 
@@ -28,19 +28,19 @@ The system is suffering from multiple overlapping structural failures.
 - **Anomaly Count (Z > 3.0):** 0 times
 
 ### Free Energy (F) Dynamics
-- **Baseline (Mean / Median):** 2,855,560.93 / 2,855,057.30
-- **Volatility (Std Dev):** 355,626.63
-- **Distribution Shape (Skew / Kurtosis):** 0.16 / -1.00
+- **Baseline (Mean / Median):** 3,126,535.00 / 3,113,421.02
+- **Volatility (Std Dev):** 594,029.59
+- **Distribution Shape (Skew / Kurtosis):** 0.20 / -1.22
 - **Anomaly Count (Z > 3.0):** 0 times
 
 ### Topological & Conservation Constraints
 - **Max Spectral Radius:** 0.7861
-- **Min Edge Stress:** 5.7965
+- **Min Edge Stress:** 5.5944
 - **Relative Mass Leak Ratio:** 0.001358
 
 ## 3. Structural Evolution (Viscosity Classification)
 
-- **Viscosity Range:** `240677.30 ~ 351612.65`
+- **Viscosity Range:** `240677.30 ~ 423217.59`
   - 🩸 **Diagnosis:** Thrombosis / High-Friction (Old-Generation Structure). The system relies on manual/human friction.
 
 > *Generated automatically by the TLU Meta-Diagnosis Engine (Statistical Upgrade).* 

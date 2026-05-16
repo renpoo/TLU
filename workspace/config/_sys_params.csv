@@ -4,6 +4,14 @@ col_src,Source
 col_tgt,Target
 col_amount,Amount
 
+# ---------------------------------------------------------
+# TIME GRANULARITY & WINDOW SIZES
+# ---------------------------------------------------------
+# time_granularity defines the scale of the aggregation (e.g., day, week, month, year).
+# Standard values for observation_window_steps based on granularity:
+# month -> 12, week -> 52, day -> 252.
+time_granularity,month
+
 observation_window_steps,12
 damping_factor,0.85
 tikhonov_lambda,0.0001
@@ -36,5 +44,6 @@ sensitivity_delta,1.0
 
 auto_tune_enabled,False
 auto_tune_burn_in_period,12
+# phase_window_size is typically 2x observation_window_steps (e.g., 24 for month, 104 for week).
 phase_window_size,24
 phase_step_size,1

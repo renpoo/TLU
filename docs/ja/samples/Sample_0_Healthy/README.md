@@ -1,118 +1,63 @@
-# Sample 0: 健全な状態（ベースライン）
+# 🔬 メタ分析統合レポート: Sample 0 (Healthy)
 
-> [!NOTE]
-> **概念実証実験にともなう免責事項**
-> 本レポートで分析されるデータは実世界の企業のものではありません。検証を目的として、特定の病理学的状態を意図的に再現するために設計されたダミーデータです。本サンプル（Sample_0_Healthy）は、すべての異常検知の基準となる「原器（グラウンド・トゥルース）」として機能します。
+## 1. エグゼクティブ・サマリー
 
----
+**【診断結果：NORMAL（正常なランダムウォーク）】**
+システムは全体として熱力学的に安定しており、相転移や構造破壊の兆候は見られません。すべての統計的モーメント（平均、分散、歪度、尖度）は安全な閾値内に収まっており、財務システムとして効率的に機能しています。
 
-# 🔬 メタ解析 統合レポート (Meta-Analysis Synthesis Report / Laboratory Findings)
+## 2. 伝統的分析の限界（集計スナップショット）
 
-## 1. 最新の機械学習ベース自動診断結果 (ML-Based Automated Diagnosis)
+![BS Block Total](../../../../samples/Sample_0_Healthy/output_plots/000_0_1__BS_Block_Total.png)
 
-本サンプル（**企業会計（健全なベースライン）**）に対する、TLUエンジン（Appendix A 実証的アルゴリズム）の最新の自動判定結果です。想定読者である**公認会計士・監査法人・CFO**に向け、純粋な物理指標が「健全な企業活動」をどう捉えるかを解説します。
+![PL Waterfall Total](../../../../samples/Sample_0_Healthy/output_plots/000_0_1__PL_Waterfall_Total.png)
 
-### 【A. 確定診断 (Final Pathologies) と監査上の解釈】
+![PL Trend](../../../../samples/Sample_0_Healthy/output_plots/000_0_1__PL_Trend.png)
 
-#### 🟢 正常稼働（構造的病理なし）
-- **深刻度:** 正常 (NORMAL)
-- **証拠 (Evidence):** マクロ・エントロピー (S) や相対質量漏洩率など、致命的な崩壊を示す指標がすべて安全圏内に収まっています。
-- **監査上の解釈:** 
-  期首から期末にかけて、帳簿上のデータは極めて自然な成長を描いています。資金の不自然な滞留（エントロピーの爆発）や、使途不明金の発生（質量の漏洩）、あるいは架空売上（無限ループ）の痕跡は一切ありません。企業の「血液（資金）」は健康的に循環し、外部への無駄な熱損失なく「企業価値（自由エネルギー）」へと変換されています。
+伝統的なB/S（貸借対照表）やP/L（損益計算書）の観点からは、売上（Sales）と費用（Expenses）が一定のボラティリティを伴いながらも適切に推移していることが確認できます。しかし、これだけでは「裏で巧妙な循環取引が行われていないか」や「システムの回復力（スタミナ）が枯渇していないか」は証明できません。
 
+## 3. 物理的病理の特定（根本的な病態生理）
 
-### 【B. 構造的進化と摩擦分類 (Structural Evolution & Viscosity)】
+本サンプルにはジェネレーターコードにおける病理（意図的な異常入力）は埋め込まれていません。純粋な「健康な企業活動」を模倣した正常なジャーナル・ストリームです。
 
-- **動粘度（摩擦係数）レンジ:** `0.00 ~ 0.00`
-- 🧊 **構造診断: 超流動 / 低摩擦（新世代型構造）**
-  - **解説:** この企業の取引プロセスには人的なボトルネック（手作業による承認遅延など）が存在せず、非常に効率的（低摩擦）に資金が流れています。これは理想的なデジタル会計システム（ERP）が稼働している状態に似ており、資金の滞留リスクが極めて低いことを示しています。
+## 4. 物理・数学エンジンによる証明
 
-### 【C. スケール不変の物理指標 (Scale-Invariant Diagnostic Metrics)】
+### 4.1. マクロ・フォレンジックと構造剛性
 
-| 物理ドメイン | 抽出メトリクス | 計測値 | マクロ基準閾値 |
-|---|---|---|---|
-| 熱力学 | 最大エントロピー (S) | `2.64` | `> 10.0` or `< -100.0` |
-| 熱力学 | 最小自由エネルギー (F) | `122485.49` | `< -1000.0` |
-| ネットワーク位相 | 最小エッジ応力 | `2.7302` | `< 0.1` |
-| マクロ・フォレンジック | 相対質量漏洩率 | `0.0000` | `> 1e-06` |
-| 制御理論 | 最大スペクトル半径 | `0.0000` | `>= 0.60` |
+* **剛性行列（＝キャッシュフローの回復力）：** 剛性は常に高い水準を維持しており、モザイク模様の健全なテンションが保たれています。外部からのショック（例：突発的な出費）に対しても、システムはリジッド・ロック（資金繰り停止）を起こすことなく衝撃を吸収しています。
+* **相対漏洩率（Leak Ratio）：** `0.000000`。質量保存の法則は完全に守られており、簿外への資金流出（横領など）は一切存在しません。
 
-## 2. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
+**剛性行列の進化（シネマティック・シーケンス）:**
 
-**【第52週 損益計算書 (P/L) ＆ 貸借対照表 (B/S)】**
-![Sample 0 PL Waterfall](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Waterfall_Total.png)
-![Sample 0 BS Block](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__BS_Block_Total.png)
+![Macro Forensics Dashboard](../../../../samples/Sample_0_Healthy/output_plots/002_2_1__macro_forensics_dashboard.png)
 
-従来の会計監査では、これを見て「帳簿の左右が完全に一致しており、利益も出ている優良企業だ」と判定して終了します。しかし、TLUでは「この静的な最終結果だけでは、期中にどれほど異常なプロセスがあったかを見抜くことは困難である」という前提に立ち、第4章で詳述する物理的・幾何学的アプローチによって**「そこに至るまでの1年間の形と流れが、完全に自然であったこと」**を数学的に証明しています。
+![1枚目 [Start]: 稼働直後の無垢な状態](../../../../samples/Sample_0_Healthy/output_plots/support/000_2_1__structural_stiffness.t.00000.png)
 
-## 3. 物理的病跡の特定（Fundamental Pathophysiology）
+![2枚目 [Just Before Change]: 異常が発生する直前](../../../../samples/Sample_0_Healthy/output_plots/support/000_2_1__structural_stiffness.t.00002.png)
 
-本サンプルには根本原因（アノマリー）が存在しません。
-ダミーデータ生成ロジック (`_0_0_generate_dummy_journal.py`) は、売上、給与、家賃、仕入などの正常な事業活動のみをシミュレートしています。
+![3枚目 [The Exact Point of Change]: 異常の発生した決定的な瞬間](../../../../samples/Sample_0_Healthy/output_plots/support/000_2_1__structural_stiffness.t.00004.png)
 
-## 4. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
+![4枚目 [Immediately After Change]: 波及効果と局所的な硬直](../../../../samples/Sample_0_Healthy/output_plots/support/000_2_1__structural_stiffness.t.00006.png)
 
-他のすべてのサンプル（Sample 1〜9）は、以下の基準グラフ（Sample 0）と比較して「どのような構造的崩壊を起こしているか」で診断されます。
+![5枚目 [End]: シミュレーションの最終状態](../../../../samples/Sample_0_Healthy/output_plots/support/000_2_1__structural_stiffness.t.00011.png)
 
-### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
+### 4.2. トポロジー異常とスペクトル半径
 
-上段の「System Conservation Residual（質量の絶対残差）」が完全に `0.0` の地平に張り付いています。これは「借方と貸方が1円の狂いもなく一致し、システム外へ消失した（漏れた）質量が一切ない」という貸借一致の原則（質量保存則）が完璧に機能していることを証明しています。異常系（Sample 2など）ではここに鋭いスパイクが発生します。
+* **最大スペクトル半径：** `0.0000`。
+* **解説：** スペクトル半径が 1.0 に全く接近していないことは、ネットワーク内に「人工的な資金の無限ループ（ウォッシュ・トレード）」が存在しないことの数学的証明です。
 
-![Sample 0 Macro Forensics](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![System Stability](../../../../samples/Sample_0_Healthy/output_plots/004_1_2__system_stability.png)
 
-**【構造的剛性 (Structural Stiffness) と 仮想外力 (External Force)】**
-1. **3D外力マップ（平穏な波形）:**
-   この Sample 0 の外力マップは1年間を通じて非常に穏やかな起伏しか観測されません。これは、システム（健全なサスペンション）が外部からの巨大な入力エネルギーを完璧に吸収・分散できている物理的証拠です。
-2. **剛性行列のタイムラプス（健康なモザイク模様）:**
-   剛性行列（システムの内部構造）を時系列で眺めると、全体として多様な色が混ざり合う**「健康なモザイク模様（弾力性）」**を1年間通して完璧に維持しています。異常系で発生する「Rigid Lock（絶対硬直 ＝ システムの完全停止やフリーズ）」は一度も起きていません。
+### 4.3. 熱力学的エネルギースタック
 
-![Sample 0 External Force 3D](../../../../samples/Sample_0_Healthy/readme_plots/000_1_6__3d_dynamics_external_force.png)
+* **自由エネルギー（$F$）：** 常にプラスを維持（平均 2,714,940）。システムには環境変化に抗う十分な「余力（スタミナ）」が残されています。
+* **動粘度（Viscosity）：** `230,384 ~ 331,264`
+* **解説：** この高摩擦状態は「旧世代構造（Thrombosis / 人間の手動取引に基づく摩擦）」を示唆しています。システムはアルゴリズムによる超流動状態ではなく、健全で現実的な人間の経済活動によって駆動されています。
 
-* **1枚目【始点】**: `t.00000` (第1週)
-* **2枚目【変化の直前】**: `t.00012` (第13週)
-* **3枚目【変化の当該時点】**: `t.00024` (第25週: 終始異常なし)
-* **4枚目【変化の直後】**: `t.00042` (第43週)
-* **5枚目【終点】**: `t.00051` (第52週)
+![Thermodynamics Dashboard](../../../../samples/Sample_0_Healthy/output_plots/001_1_1__thermodynamics_dashboard.png)
 
-![Sample 0 Structural Stiffness for Week 1](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00000.png)
-![Sample 0 Structural Stiffness for Week 13](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00012.png)
-![Sample 0 Structural Stiffness for Week 25](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00024.png)
-![Sample 0 Structural Stiffness for Week 43](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00042.png)
-![Sample 0 Structural Stiffness for Week 52](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00051.png)
-
-### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
-
-赤色の線「Max Spectral Radius（最大スペクトル半径 ＝ 無意味な循環・共鳴の激しさ）」が `0.0` の底に張り付いて安定しています。これはネットワーク内に「自己強化的な無限ループ（資金のキャッチボールなど）」が存在せず、システムに入ってきた資金が正常に流出しているというトポロジーの健全性を証明しています。循環取引（Sample 1）や交通渋滞（Sample 5）ではこの線が天井（1.0）に向けて発散します。
-
-![Sample 0 System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
-
-* **1枚目【始点】**: `t.00000` (第1週)
-* **2枚目【変化の直前】**: `t.00012` (第13週)
-* **3枚目【変化の当該時点】**: `t.00025` (第26週: 終始異常なし)
-* **4枚目【変化の直後】**: `t.00042` (第43週)
-* **5枚目【終点】**: `t.00051` (第52週)
-
-![Sample 0 Network Topology W1](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 0 Network Topology W13](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00012.png)
-![Sample 0 Network Topology W26](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00025.png)
-![Sample 0 Network Topology W43](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00042.png)
-![Sample 0 Network Topology W52](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00051.png)
-
-### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
-
-白色の線「Free Energy（自由エネルギー ＝ システムが健全に成長するための活動余力：F = U - TS）」が、総活動量（U）の拡大に伴い、右肩上がりに力強く成長しています。システムが活発に取引（運動）を行いながらも、摩擦（エントロピー損失 -TS ＝ 無駄な取引コストや浪費）にエネルギーを奪われることなく、ビジネスを継続・拡大するための十分な活動余力を維持し続けていることを証明しています。異常系では、摩擦損失が異常膨張し、この白色の線がゼロラインを割って沈み込みます。
-
-![Sample 0 Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-
-### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
-
-一年を通じて、全ノードで目立ったスパイクが一切存在せず、「完全に平坦で凪いだ海（Z-Score ＝ 過去の標準的な状態からの異常な突出度合い ≈ 0, 情報幾何学的変位 KL Drift ≈ 0）」を保っていることが視認できます。この「無風状態」が、他のサンプルで発生する鋭いスパイク（未知の異常パターンの発生）を検知するための絶対的なベースライン（原器）となります。
-
-![Sample 0 3D Z-Score](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
-![Sample 0 3D KL Drift](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+![Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/output_plots/001_1_2__thermodynamics_energy_stack.png)
 
 ## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
 
-* **偽陽性の可能性:** 本診断の「健全（NORMAL）」という結論は、「システム内部のトランザクションがすべて正確に観測・記録されていること」を前提としています。もし「帳簿外取引（Off-balance-sheet transactions）」が存在し、TLUの観測範囲外で資金の流出入が行われている場合、この「健全」という診断は誤り（実態は異常）となります。
-* **追加検証要件:**
-  外部の銀行口座取引明細（バンキング・ステートメント）と、TLU上の現金勘定の残高突き合わせ（Bank Reconciliation）を実施し、帳簿外の流出入が一切ないことを物理的に確認してください。上記の反証条件が棄却される（＝外部データとも完全に整合する）ことを前提に、本 Sample_0 の各種物理メトリクスおよび可視化プロファイルを、後続のすべてのサンプル（Sample_1〜9）における比較・診断の「原器」として確定させます。
+* **偽陽性の可能性：** 異常は検知されていないため、偽陽性のリスクはありません。
+* **追加検証要件：** 物理学的には完全な健康体です。念のため、現実世界の銀行口座残高と総勘定元帳の期末残高が一致しているか（バンク・リコンシリエーション）を定期的に確認することで、TLUの観測外での現金横領がないかを担保してください。

@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Statistical Upgrade V2)
 
 **Target Environment:** `samples/Sample_7_Market_Users_Weekly`
-**Date Analyzed:** 2026-05-15 09:13:48
+**Date Analyzed:** 2026-05-16 11:21:36
 
 ## 1. Final Diagnosis
 
@@ -10,7 +10,7 @@ The system is suffering from multiple overlapping structural failures.
 
 ### 🔴 Structural Energy Decay (Negative Skewness)
 - **Severity:** CRITICAL
-- **Evidence:** Free Energy Skew: -2.23, Z-Exceedances: 2.
+- **Evidence:** Free Energy Skew: -2.64, Z-Exceedances: 2.
 - **Interpretation:** The system's capacity to absorb shocks periodically collapses. This negative skewness indicates sudden, severe systemic vulnerability.
 
 ### 🟠 Topological Feedback Loop (Wash Trade / Resonance)
@@ -28,9 +28,9 @@ The system is suffering from multiple overlapping structural failures.
 - **Anomaly Count (Z > 3.0):** 1 times
 
 ### Free Energy (F) Dynamics
-- **Baseline (Mean / Median):** 3,707,892,741.19 / 3,717,161,918.01
-- **Volatility (Std Dev):** 24,644,440.91
-- **Distribution Shape (Skew / Kurtosis):** -2.23 / 4.90
+- **Baseline (Mean / Median):** 3,716,808,936.24 / 3,723,593,856.16
+- **Volatility (Std Dev):** 15,805,595.80
+- **Distribution Shape (Skew / Kurtosis):** -2.64 / 6.73
 - **Anomaly Count (Z > 3.0):** 2 times
 
 ### Topological & Conservation Constraints
