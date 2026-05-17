@@ -32,24 +32,48 @@ def main():
     if not df_roll.empty:
         t_vals = df_roll['t_idx'].values
         
-        # Draw Whisker Bounds (Min/Max or 1.5 IQR)
-        ax.fill_between(t_vals, df_roll['whisker_low'], df_roll['whisker_high'], 
-                        color=theme_cfg['ui_canvas']['grid_line'], alpha=0.3, label=f'Whiskers (Rolling {args.window_size})')
+        import matplotlib.colors as mcolors
+        color_box = mcolors.to_rgba(theme_cfg['ui_canvas']['text_primary'], alpha=0.5)
+        color_edge = theme_cfg['ui_canvas']['grid_line']
         
-        # Draw IQR Box (25th to 75th percentile)
-        ax.fill_between(t_vals, df_roll['q25'], df_roll['q75'], 
-                        color=theme_cfg['ui_canvas']['text_primary'], alpha=0.5, label='IQR (25th - 75th)')
+        boxprops = dict(facecolor=color_box, edgecolor=color_edge)
+        whiskerprops = dict(color=theme_cfg['ui_canvas']['grid_line'], linewidth=1.5, alpha=0.7)
+        capprops = dict(color=theme_cfg['ui_canvas']['grid_line'], linewidth=1.5, alpha=0.7)
+        medianprops = dict(color='tab:red', linewidth=2)
         
-        # Draw Median
-        ax.plot(t_vals, df_roll['median'], color='tab:red', lw=2, label='Median')
+        stats = []
+        for _, row in df_roll.iterrows():
+            stats.append({
+                'med': row['median'],
+                'q1': row['q25'],
+                'q3': row['q75'],
+                'whislo': row['whisker_low'],
+                'whishi': row['whisker_high']
+            })
+            
+        # Draw pure boxplots at each time step
+        ax.bxp(stats, positions=t_vals, widths=0.6, 
+               patch_artist=True, showfliers=False,
+               boxprops=boxprops, whiskerprops=whiskerprops,
+               capprops=capprops, medianprops=medianprops)
         
         # Draw the actual scattered data points
         ax.scatter(t_vals, df_roll['velocity_v'], color=theme_cfg['kinematics']['colors']['velocity_v'], 
-                   alpha=0.6, s=20, label='Actual Velocity')
+                   alpha=0.6, s=20, zorder=3)
             
         ax.set_ylabel('Velocity (Flux)', color=theme_cfg['ui_canvas']['text_primary'])
         ax.tick_params(colors=theme_cfg['ui_canvas']['grid_line'], labelcolor=theme_cfg['ui_canvas']['text_primary'])
-        ax.legend(facecolor=theme_cfg['ui_canvas']['background'], edgecolor=theme_cfg['ui_canvas']['grid_line'], labelcolor=theme_cfg['ui_canvas']['text_primary'])
+        
+        # Custom legend for boxplot elements
+        from matplotlib.patches import Patch
+        from matplotlib.lines import Line2D
+        legend_elements = [
+            Patch(facecolor=color_box, edgecolor=color_edge, label='IQR (25th - 75th)'),
+            Line2D([0], [0], color=theme_cfg['ui_canvas']['grid_line'], lw=1.5, label=f'Whiskers (Rolling {args.window_size})'),
+            Line2D([0], [0], color='tab:red', lw=2, label='Median'),
+            Line2D([0], [0], marker='o', color='w', markerfacecolor=theme_cfg['kinematics']['colors']['velocity_v'], alpha=0.6, markersize=8, label='Actual Velocity')
+        ]
+        ax.legend(handles=legend_elements, facecolor=theme_cfg['ui_canvas']['background'], edgecolor=theme_cfg['ui_canvas']['grid_line'], labelcolor=theme_cfg['ui_canvas']['text_primary'])
         
         # Smart X Labels matching the non-NaN t_vals exactly
         time_labels = df_dyn[['t_idx', 'time_label']].drop_duplicates()

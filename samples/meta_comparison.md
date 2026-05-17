@@ -6,8 +6,6 @@ This table compares the maximum (or minimum) physical anomaly signatures across 
 |-------------|----------------------------------------|----------------------------------|------------------------|-----------------------------------|
 | Sample_0_Healthy | 0.00 | 0.0000 | 2247308.52 | 0.00 |
 | Sample_1_Wash_Trade | 0.00 | 0.7488 | 2263565.62 | 0.00 |
-| Sample_10_NY_Stock | 0.00 | 0.0000 | 3196.30 | 0.00 |
-| Sample_11_US_Macro | 0.00 | 0.0000 | -177.25 | 0.00 |
 | Sample_2_Embezzlement_Leak | 364.53 | 0.0000 | 2215301.96 | 0.00 |
 | Sample_3_Unbalanced_Mistake | 906.29 | 0.0000 | 2238207.89 | 0.00 |
 | Sample_4_Composite_Chaos | 4773.57 | 0.7861 | 2332402.30 | 0.00 |
