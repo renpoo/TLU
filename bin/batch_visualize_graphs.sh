@@ -57,7 +57,6 @@ PRIMARY_SCRIPTS=(
 
 # Support / Ancillary Diagnostics (Deep Dives)
 SUPPORT_SCRIPTS=(
-    "vis_000_0_2_visualize_basic_statistics.sh"
     "vis_000_1_1_visualize_dynamics_state.sh"
     "vis_000_2_1_visualize_structural_stiffness.sh"
     "vis_000_2_3_visualize_eigenvector_evolution.sh"
