@@ -1,9 +1,0 @@
-node_idx,node_label,dominant_frequency,spectral_power
-4,04_US_Economy,0.375,103358.5719
-2,02_SP500,0.375,99720.5319
-1,01_Oil,0.4583,300.309
-6,06_US_Production,0.2917,6.5332
-7,07_US_Unemployment,0.375,2.7069
-5,05_US_Inflation,0.25,2.075
-0,00_Copper,0.4167,0.366
-3,03_US10Y,0.375,0.2207
