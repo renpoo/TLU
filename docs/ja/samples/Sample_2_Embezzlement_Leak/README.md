@@ -112,7 +112,7 @@ T-Sダイアグラムにおいて、本システムは元の状態に戻らな�
 
 *   **介入方針:** **流出ゲートの緊急閉鎖（キルヒホッフ残差に基づく自動サーキットブレーカー発動）**
 *   **LQR制御による介入検証（LQR パフォーマンススペース）:**
-    ![Sample 2 LQR Performance Space](../../../../samples/Sample_2_Embezzlement_Leak/output_plots/support/004_1_3__control_lqr_performance_space.png)
+    ![Sample 2 LQR Performance Space](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/004_1_3__control_lqr_performance_space.png)
     
     上図の LQR Performance Space では、流出経路に対する制御ゲインをどれだけ積極的に高めるか（介入パラメータ設定）と、その際のシステム復旧コストの相関関係を示しています。本病態は統計的 Z-Score に反応しない特徴があるため、物理エンジン側の `System Conservation Residual > 0` をトリガーとし、LQR フィードバック設計から導出された最適なしきい値を適用します。これにより、正常な営業活動取引に干渉しすぎることなく、Cash 口座から `UNKNOWN_LEAK` への不正流出取引のみに的確に高い抵抗値（インピーダンス）を印加し、自動サーキットブレーカーを発動させて不正出金を即座に抑止することが可能となります。
 *   **日常の運用アドバイス:**

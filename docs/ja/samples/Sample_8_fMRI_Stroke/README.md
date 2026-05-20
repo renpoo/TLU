@@ -114,7 +114,7 @@ T-Sダイアグラムにおいて、本システムは梗塞以降、エネル�
 
 *   **介入方針:** **血流バイパスの動的活性化（LQRフィードバックによる血管拡張介入）**
 *   **LQR制御による介入検証（LQR パフォーマンススペース）:**
-    ![Sample 8 LQR Performance Space](../../../samples/Sample_8_fMRI_Stroke/output_plots/support/004_1_3__control_lqr_performance_space.png)
+    ![Sample 8 LQR Performance Space](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_3__control_lqr_performance_space.png)
     
     上図の LQR Performance Space では、運動野の機能回復を目的として周辺の副側路（バイパス路）を活性化させる際の、「介入コスト（過剰刺激や血管拡張薬の副作用など生理学的負荷）」と、「機能的コヒーレンス（血流と活動伝達）の回復速度」のトレードオフ関係が示されています。LQR 制御空間での感度最適点を選択することで、脳全体のエネルギー代謝に不必要な負荷（過剰刺激や血圧低下など）を与えることなく、運動野の遮断エッジに対して的確な補正（副側路バイパスの活性化）を印加し、麻痺状態からの復旧を物理的かつ安全に最大化させることが可能となります。
 *   **日常の運用アドバイス:**

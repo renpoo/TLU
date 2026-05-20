@@ -113,7 +113,7 @@ T-Sダイアグラムでは、第4週に一瞬だけ右方向へ逸脱します�
 
 *   **介入方針:** **仕訳入力ゲートウェイにおける「入力強制バリデータ」の実装**
 *   **LQR制御による介入検証（LQR パフォーマンススペース）:**
-    ![Sample 3 LQR Performance Space](../../../../samples/Sample_3_Unbalanced_Mistake/output_plots/support/004_1_3__control_lqr_performance_space.png)
+    ![Sample 3 LQR Performance Space](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_1_3__control_lqr_performance_space.png)
     
     上図の LQR Performance Space において、本サンプルのように「一過性の仕訳入力ミス（不整合）」に対しては、状態フィードバックによる動的制御を強くかける必要がありません（制御介入コストを支払う領域は不要です）。なぜなら、仕訳作成時点で「借方金額計 ＝ 貸方金額計」を厳密にチェックし、一致しない場合はデータベースへの登録を一切許可しないという「静的バリデータ（ゲインゼロでの強制終了）」を実装するだけで、この病態は完全に根絶可能だからです。動的制御は不要ですが、この制御スペースは「一過性エラーに対する制御介入コストの非効率性」を示すリファレンスとして機能します。
 *   **日常の運用アドバイス:**

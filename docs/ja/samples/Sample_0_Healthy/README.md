@@ -79,7 +79,7 @@ T-S（温度・エントロピー）ダイアグラムにおいて、システ�
 
 *   **介入方針:** **治療不要（経過観察）**
 *   **LQR制御による介入検証（LQR パフォーマンススペース）:**
-    ![Sample 0 LQR Performance Space](../../../../samples/Sample_0_Healthy/output_plots/support/004_1_3__control_lqr_performance_space.png)
+    ![Sample 0 LQR Performance Space](../../../../samples/Sample_0_Healthy/readme_plots/004_1_3__control_lqr_performance_space.png)
     
     上図の LQR Performance Space において、本システムは全てのシミュレーション期間を通じて異常な状態遷移や還流ループが検出されておらず、安定状態で推移しています。そのため、動的な状態フィードバックによる制御介入コストを支払う必要は一切なく、図中の「介入不要な平穏領域」に位置していることが確認できます。したがって、実務上も動的介入制御（取引遅延や制限）は一切行わず、経過観察とすることが最も合理的です。
 *   **日常の運用アドバイス:**

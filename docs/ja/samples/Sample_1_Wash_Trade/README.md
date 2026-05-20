@@ -112,7 +112,7 @@ T-Sダイアグラムにおいて、本システムは「異常な時計回り�
 
 *   **介入方針:** **自己還流パスの動的減衰（LQR介入によるインピーダンス増大）**
 *   **LQR制御による介入検証（LQR パフォーマンススペース）:**
-    ![Sample 1 LQR Performance Space](../../../../samples/Sample_1_Wash_Trade/output_plots/support/004_1_3__control_lqr_performance_space.png)
+    ![Sample 1 LQR Performance Space](../../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_3__control_lqr_performance_space.png)
     
     上図の LQR Performance Space では、還流取引の抑制にかかる「制御コスト（介入に伴う取引遅延や流動性低下の痛み）」と、「システム状態（還流の流速やスペクトル半径）の収束パフォーマンス」のトレードオフが可視化されています。制御感度の最適領域を選択し、`ACC_Cash` と `ACC_Accounts_Receivable` の間の取引伝導率に対して的確な負のフィードバック（遅延注入）をかけることで、プラットフォームに過剰な取引停止コストを強いることなく、安全かつ速やかに病的ループを収束させることができます。
 *   **日常の運用アドバイス:**

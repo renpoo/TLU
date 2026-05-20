@@ -110,7 +110,7 @@ T-Sダイアグラムにおいて、本システムは極めて小さく潰れ�
 
 *   **介入方針:** **HFT/Wash_Trade接続エッジの動的減衰（LQRフィードバック制御による取引インターバル義務化）**
 *   **LQR制御による介入検証（LQR パフォーマンススペース）:**
-    ![Sample 6 LQR Performance Space](../../../../samples/Sample_6_Market_Bipartite_Weekly/output_plots/support/004_1_3__control_lqr_performance_space.png)
+    ![Sample 6 LQR Performance Space](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/004_1_3__control_lqr_performance_space.png)
     
     上図の LQR Performance Space において、制御コストパラメータ $R$ と状態軌道の収束性能（パフォーマンス）のトレードオフが示されています。制御ゲインが最適に設定された領域（最適なパラメータペア）を選択することで、過剰な制御介入コストを支払うことなく、システムエラー（ボットの暴走によるトポロジー偏り）を効果的に収束させることが可能です。具体的には、取引頻度が一定閾値を超える購入者ノード（ボット）の接続「伝導率（取引の通りやすさ）」を動的に抑制し、取引間のウェイト時間（インピーダンス）を急激に上昇させることで、ボットが市場トポロジーを独占する力を奪い、一般ユーザーの接続確率（自由エネルギー）を回復させます。
 *   **日常の運用アドバイス:**

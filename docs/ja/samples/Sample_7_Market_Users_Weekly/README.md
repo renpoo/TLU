@@ -114,7 +114,7 @@ T-Sダイアグラムにおいて、本システムは第6週以降、綺麗な�
 
 *   **介入方針:** **共謀ショートカットエッジへのインピーダンス（遅延・手数料）の動的課税（LQRフィードバック制御）**
 *   **LQR制御による介入検証（LQR パフォーマンススペース）:**
-    ![Sample 7 LQR Performance Space](../../../../samples/Sample_7_Market_Users_Weekly/output_plots/support/004_1_3__control_lqr_performance_space.png)
+    ![Sample 7 LQR Performance Space](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/004_1_3__control_lqr_performance_space.png)
     
     上図の LQR Performance Space では、3D Micro KL Drift で特定された共謀ユーザーグループの取引ルートに対して決済遅延（レイテンシ）を挿入したり手数料を課したりする際の、「プラットフォーム上の制御介入コスト」と「共謀循環の減衰・収束スピード」のトレードオフが示されています。LQR 設計に基づき最適なパラメータ制御ゲインを設定することで、健全な一般ユーザーのP2P取引活動に悪影響を与えることなく、共謀者のショートカット経路に対して的確かつ動的な負のフィードバック（遅延・手数料インピーダンス）を印加し、安全に病的ループを減衰させることができます。
 *   **日常の運用アドバイス:**

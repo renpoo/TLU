@@ -111,7 +111,7 @@ T-Sダイアグラムにおいて、本システムは渋滞発生以降、温�
 
 *   **介入方針:** **信号制御オフセットのコヒーレンス（同期）の動的復元（LQRフィードバック介入）**
 *   **LQR制御による介入検証（LQR パフォーマンススペース）:**
-    ![Sample 5 LQR Performance Space](../../../../samples/Sample_5_Kyoto_Traffic/output_plots/support/004_1_3__control_lqr_performance_space.png)
+    ![Sample 5 LQR Performance Space](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_3__control_lqr_performance_space.png)
     
     上図の LQR Performance Space では、交差点の信号タイミング（オフセット）に動的な調整介入を加える際の「制御コスト（信号切替頻度の増加や周囲交差点への一時的負荷）」と、「渋滞収束のパフォーマンス」のトレードオフが示されています。LQR 設計に基づいて最適なパラメータバランスを選択することで、周辺網に不要な赤信号停止による二次渋滞を誘発することなく、四条烏丸の信号サイクルに適切なフィードバック位相補正（流入インピーダンス制御）を印加し、最も効率的かつ最小コストで「剛性ロック（グリッドロック状態）」を解除して交通流を円滑に復元できます。
 *   **日常の運用アドバイス:**
