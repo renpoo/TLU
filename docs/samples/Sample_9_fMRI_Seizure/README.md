@@ -18,8 +18,8 @@ This system (biological brain domain) is diagnosed as being in an extremely dang
 ## 2. Limitations of Traditional Perspective
 
 **[Cumulative Flow for the Entire Period (P/L Waterfall) & Balance Sheet (B/S)]**
-![Sample 9 PL Waterfall](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_0_1__PL_Waterfall_Total.png)
-![Sample 9 BS Block](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_0_1__BS_Block_Total.png)
+![Sample 9 PL Waterfall](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 9 BS Block](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_0_1__BS_Block_Total.png)
 
 Only the activity volume (volume) of the temporal lobe protrudes abnormally. However, because the incoming signals (Debit) and outgoing signals (Credit) are perfectly synchronized and equal in volume, the net balance (P/L) has barely changed. In traditional aggregate approaches, recognition stops at the level of "the temporal lobe is actively working (massive P/L)." Whether this is "advanced information processing" or a "meaningless convulsion (seizure)" can absolutely not be distinguished from a static ledger.
 
@@ -36,8 +36,8 @@ The root cause of this sample is the "Abnormal Synchronization Script" intention
 
 Because abnormal synchronous waves from a seizure do not extremely bias the total mass (blood flow), they are difficult to observe as a macro residual. However, due to localized hypersynchrony, a localized rigid lock of the stiffness matrix occurs (a state where the brain network is hijacked by abnormal waveforms and rejects healthy information processing), falling into a state where healthy signal processing is not accepted.
 
-![Sample 9 Macro Forensics](../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_2_1__macro_forensics_dashboard.png)
-![Sample 9 External Force 3D](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_1_6__3d_dynamics_external_force.png)
+![Sample 9 Macro Forensics](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample 9 External Force 3D](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_1_6__3d_dynamics_external_force.png)
 
 * **1st Image [Start]**: `t.00000` (Normal stiffness)
 * **2nd Image [Just Before Change]**: `t.00029` (TR=145)
@@ -45,17 +45,17 @@ Because abnormal synchronous waves from a seizure do not extremely bias the tota
 * **4th Image [Just After Change]**: `t.00031` (TR=155)
 * **5th Image [End]**: `t.00059` (TR=295: Localized rigidity)
 
-![Sample 9 Structural Stiffness 0](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00000.png)
-![Sample 9 Structural Stiffness 29](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00029.png)
-![Sample 9 Structural Stiffness 30](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00030.png)
-![Sample 9 Structural Stiffness 31](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00031.png)
-![Sample 9 Structural Stiffness 59](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00059.png)
+![Sample 9 Structural Stiffness 0](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+![Sample 9 Structural Stiffness 29](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00029.png)
+![Sample 9 Structural Stiffness 30](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00030.png)
+![Sample 9 Structural Stiffness 31](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00031.png)
+![Sample 9 Structural Stiffness 59](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00059.png)
 
 ### 4.2. Topological Anomaly / Spectral Radius
 
 The red line (Max Spectral Radius = intensity of abnormal synchronization/catch-balling between the temporal lobe and other regions) is perfectly pinned to the ceiling of `1.0`. The temporal lobe and other regions are synchronizing the exact same massive waves and catch-balling them mutually. This is **mathematically the exact same structure as the "Wash Trade" in financial markets** proven in Sample 6, etc. The identical network resonance as infinite fund recycling accompanying meaningless frictional heat signifies the "Epileptic Seizure" itself.
 
-![Sample 9 System Stability](../../../samples/Sample_9_fMRI_Seizure/readme_plots/004_1_2__system_stability.png)
+![Sample 9 System Stability](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/004_1_2__system_stability.png)
 
 * **1st Image [Start]**: `t.00000`
 * **2nd Image [Just Before Change]**: `t.00029` (TR=145)
@@ -63,26 +63,26 @@ The red line (Max Spectral Radius = intensity of abnormal synchronization/catch-
 * **4th Image [Just After Change]**: `t.00031` (TR=155)
 * **5th Image [End]**: `t.00059` (TR=295)
 
-![Sample 9 Network Topology 0](../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 9 Network Topology 29](../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00029.png)
-![Sample 9 Network Topology 30](../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00030.png)
-![Sample 9 Network Topology 31](../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00031.png)
-![Sample 9 Network Topology 59](../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00059.png)
+![Sample 9 Network Topology 0](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00000.png)
+![Sample 9 Network Topology 29](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00029.png)
+![Sample 9 Network Topology 30](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00030.png)
+![Sample 9 Network Topology 31](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00031.png)
+![Sample 9 Network Topology 59](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00059.png)
 
 ### 4.3. Thermodynamic Energy Stack
 
 The exact same thermodynamic collapse as "Market Manipulation (Wash Trade)" in financial markets is occurring. Abnormal synchronous waves infinitely diverge only the "signal transaction volume (frictional heat = entropy = wasteful squandering of energy)" while keeping the "net balance (internal energy)" virtually unchanged. As a result, the system's free energy sinks into a fatal negative zone, reaching Thermodynamic Death (Heat Death = a state where brain metabolism is intensely active, but no meaningful work is being done at all).
 
 *(Top: Sample 0 Healthy Economic Growth / Bottom: Sample 9 Thermodynamic Death due to Seizure)*
-![Sample 0 Thermodynamics](../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-![Sample 9 Thermodynamics](../../../samples/Sample_9_fMRI_Seizure/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 9 Thermodynamics](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 ### 4.4. 3D Micro Z-Score & KL Drift
 
 In the 3D surface of Z-Score (degree of protrusion from past averages), the transmitting and receiving components of the temporal lobe stand tall as extreme spikes bounding at TR=150. Furthermore, in the Information Geometric Mutation (KL Drift = complete overwriting and collapse of the probability distribution due to excessive resonance), the probability distribution inherently possessed by the network is completely overwritten by the forced massive sine waves radiating from the temporal lobe, standing tall as extreme spikes in space. Excessive resonance (runaway waves) is directly visualized as an "Information Geometric Collapse."
 
-![Sample 9 3D Z-Score](../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
-![Sample 9 3D KL Drift](../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+![Sample 9 3D Z-Score](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+![Sample 9 3D KL Drift](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 ## 5. ⚠️ Falsification Analytics
 

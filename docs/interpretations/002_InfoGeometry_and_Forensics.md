@@ -47,8 +47,8 @@ Increasing the resolution further, we use topology to identify "on which route" 
 
 ### The Emergence of Abnormal Shortcuts
 
-![Sample 1 Topology](../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00038.png)
-*(※Sample 1: Topological structure of Wash Trade around Week 38)*
+![Sample 1 Topology](../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00003.png)
+*(※Sample 1: Topological structure of Wash Trade around Week 3)*
 
 * **Sample 1 (Wash Trade)**: Separate from normal transaction routes, an extremely thick, bright red "abnormal shortcut (back route)" is suddenly formed between Companies A, B, and C, which should originally have little direct connection. This is the pipeline (the crime scene) for circulating fictitious sales.
 

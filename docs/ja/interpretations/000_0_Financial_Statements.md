@@ -13,7 +13,7 @@
 
 ### 貸借対照表（B/S）ブロックチャートと基本原則
 
-![Sample 0 B/S](../../../samples/Sample_0_Healthy/readme_plots/000_0_1__BS_Block_Total.png)
+![Sample 0 B/S](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__BS_Block_Total.png)
 
 * **📊 視覚的構造**: 伝統的な左右対比型の積み上げ棒グラフ。
 * **🚨 異常の検知（マクロ・ミクロ）**:
@@ -28,14 +28,14 @@ B/Sで全体的な健全性を確認した後は、P/Lを通じて「日々の�
 
 ### 損益計算書（P/L）ウォーターフォール
 
-![Sample 0 P/L Waterfall](../../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 0 P/L Waterfall](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Waterfall_Total.png)
 
 * **📊 視覚的構造**: 収益から各種費用が差し引かれ、最終的な純利益に至るまでの流れを示す滝（カスケード）状のステップチャート。
 * **🚨 異常の検知**: 他の費用項目と比べて、不釣り合いに巨大な「赤い費用ブロック（特定の経費のスパイク）」がないかを探します。突如として特定の月に巨大な赤いブロックが現れた場合、その科目に絞った即時の監査（突発的な無駄遣いや不正の調査）が必要です。
 
 ### 損益計算書（P/L）トレンド
 
-![Sample 0 P/L Trend](../../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Trend.png)
+![Sample 0 P/L Trend](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Trend.png)
 
 * **📊 視覚的構造**: 時系列の棒グラフ（収益・費用）および折れ線グラフ（純利益）。
 * **🚨 異常の検知**: 緑の収益バー（売上）が横ばい、あるいは低下している時期に、赤い費用バー（経費）だけが突如として跳ね上がっている（説明のつかないスパイク）箇所がないかを探します。これは、組織が柔軟性を失い、構造的な固定費の重圧に苦しんでいるサインです。

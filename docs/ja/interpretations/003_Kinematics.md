@@ -15,13 +15,13 @@
 
 ### 【比較1】自然で効率的な最適ルート（ベースライン）
 
-![Sample 0 IK](../../../samples/Sample_0_Healthy/readme_plots/003_1_2__3d_kinematics_ik.png)
+![Sample 0 IK](../../../../samples/Sample_0_Healthy/readme_plots/003_1_2__3d_kinematics_ik.png)
 
 * **Sample 0 (Healthy)**: システムの摩擦や粘性が低いため、計算エンジン（IKソルバー）は目標に到達するための「最も自然で、なだらかな最適ルート（短いベクトル）」を即座に見つけ出します。これは、現在の組織リソースで十分に目標達成が可能であることを示しています。
 
 ### 【比較2】デッドロックによる計算の発散と破綻（Kyoto Traffic）
 
-![Sample 5 IK](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/003_1_2__3d_kinematics_ik.png)
+![Sample 5 IK](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/003_1_2__3d_kinematics_ik.png)
 *(※Sample 5: 慢性的なデッドロック状態での経路探索)*
 
 * **Sample 5 (Kyoto Traffic)**: 物流における目的地への到達時間や、金融における売上目標をシミュレートした際、すべてのルートが「大渋滞（極めて高い摩擦と剛性）」で塞がれている場合があります。このとき、IKソルバーは目標に到達できず、天文学的に巨大な異常値（ベクトル）を発散させるか、計算自体に失敗（エラー）します。これは、**「現在の組織リソースとプロセスでは、経営陣が設定したKPIは物理的に達成不可能である」**ことを数学的に証明しています。
@@ -34,7 +34,7 @@
 
 ### 予期せぬスパイクの検知
 
-![Sample 0 FK](../../../samples/Sample_0_Healthy/readme_plots/003_1_1__3d_kinematics_fk.png)
+![Sample 0 FK](../../../../samples/Sample_0_Healthy/readme_plots/003_1_1__3d_kinematics_fk.png)
 *(上図：Sample 0 における正常な連鎖反応)*
 
 * **📊 視覚的構造**: 特定の口座に力（資金）を加えたとき、他の口座がどれくらい移動（反応）するかを示す3D空間プロット。

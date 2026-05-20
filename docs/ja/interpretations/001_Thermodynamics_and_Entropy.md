@@ -15,19 +15,19 @@
 
 ### 【比較1】健全な自然成長（ベースライン）
 
-![Sample 0 Thermodynamics](../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 * **Sample 0 (Healthy)**: 白色の線「Free Energy（自由エネルギー）」が、総活動量の増加に伴って右肩上がりに力強く成長しています。システムが活発に活動しながらも、摩擦（エントロピー損失：赤色の層）にエネルギーを奪われることなく、健全なポテンシャルを維持し続けている「絶対的なゼロ基準」です。
 
 ### 【比較2】金融ドメインでの熱力学的な死（Wash Trade）
 
-![Sample 1 Thermodynamics](../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 1 Thermodynamics](../../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 * **Sample 1 (Wash Trade)**: 第41週と第48週に、赤色の層（無駄な摩擦熱 $T \times S$）が突然、異常な太さの柱となって出現し、白色の線（自由エネルギー $F$）をマイナス領域へ押し潰しています。実質的な価値（内部エネルギー）を生み出さない架空売上のキャッチボールが、システムを「熱的死（Heat Death ＝ 意味のある活動が停止した状態）」へと向かわせる物理的証拠です。
 
 ### 【比較3】生体ドメインでの熱力学的な死（脳梗塞）
 
-![Sample 8 Thermodynamics](../../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 8 Thermodynamics](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 * **Sample 8 (fMRI Stroke)**: 病変が発生する中盤（TR=150付近）から突如としてエントロピー損失（赤色の層）が激増し、自由エネルギーが深く沈み込んでいます。特定部位への血流遮断が引き起こした「意味のある情報処理の喪失」が、金融の循環取引と全く同じ「熱的死」のシグネチャとして数式上で完全に一致しています。
 
@@ -39,7 +39,7 @@
 
 ### 局所的なカオスの可視化 (Sample 0)
 
-![Sample 0 3D Entropy](../../../samples/Sample_0_Healthy/readme_plots/001_1_2_1__3d_local_entropy.png)
+![Sample 0 3D Entropy](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2_1__3d_local_entropy.png)
 *(上図：Sample 0 の平穏な状態。異常系ではここに鋭いスパイクが突き出します。)*
 
 * **📊 視覚的構造**: ネットワークの各ノード（X軸）と時間（Y軸）におけるエントロピー（複雑さ・無駄）をZ軸の高さとして可視化した 3D Surface ヒートマップです。

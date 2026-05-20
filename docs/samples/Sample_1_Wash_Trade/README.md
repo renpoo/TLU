@@ -16,9 +16,9 @@ This system (financial domain) is exhibiting a **Topological Feedback Loop** and
 
 It is extremely difficult to instantly detect this wash trade in a traditional accounting audit.
 
-**[Week 52 Profit and Loss (P/L) & Balance Sheet (B/S)]**
-![Sample 1 PL Waterfall](../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Waterfall_Total.png)
-![Sample 1 BS Block](../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__BS_Block_Total.png)
+**[Week 11 Profit and Loss (P/L) & Balance Sheet (B/S)]**
+![Sample 1 PL Waterfall](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Waterfall_Total.png)
+![Sample 1 BS Block](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__BS_Block_Total.png)
 
 Because the mastermind behind the wash trade strictly adheres to the "Principle of Balancing Debits/Credits" when making journal entries, the left and right sides of the B/S match without a single cent of deviation (difference of $0.00), and the P/L depicts a massive surplus (+$156,838.99). The "catch-balling of funds" hidden behind the static aggregated results cannot be captured without dynamic analysis by a physics engine.
 
@@ -26,7 +26,7 @@ Because the mastermind behind the wash trade strictly adheres to the "Principle 
 
 The root cause of this sample lies in the following "Window Dressing Script" intentionally embedded in the dummy data generation logic (`_0_0_generate_dummy_journal.py`).
 
-* **Week 41 and Week 48:**
+* **Week 5 and Week 48:**
   * Funds are flowed out externally from Cash (`ACC_Cash`).
   * An equivalent amount of fictitious sales (`ACC_Sales`) is booked, increasing Accounts Receivable (`ACC_Accounts_Receivable`).
   * The outflowed cash is returned to the cash account again as the collection of the fictitious sale.
@@ -39,52 +39,52 @@ How this act of "artificially rotating only the numbers on the books without gen
 
 The upper graph "System Conservation Residual" is completely pinned at the `0.0` horizon. This is because the entity conducting the wash trade strictly obeys the "Principle of Balancing Debits/Credits" itself, slipping through simple error-checking nets. Also, from the transitions of the stiffness matrix (suspension) and virtual external force, it is confirmed that the anomalies inside the system are concealed.
 
-![Sample 1 Macro Forensics](../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_1__macro_forensics_dashboard.png)
-![Sample 1 External Force 3D](../../../samples/Sample_1_Wash_Trade/readme_plots/000_1_6__3d_dynamics_external_force.png)
+![Sample 1 Macro Forensics](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample 1 External Force 3D](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_1_6__3d_dynamics_external_force.png)
 
 * **1st Image [Start]**: `t.00000` (Normal stiffness)
-* **2nd Image [Just Before Change]**: `t.00039`
-* **3rd Image [At the Time of Change]**: `t.00040` (Moment of forming wash trade loop)
-* **4th Image [Just After Change]**: `t.00041`
-* **5th Image [End]**: `t.00051`
+* **2nd Image [Just Before Change]**: `t.00003`
+* **3rd Image [At the Time of Change]**: `t.00004` (Moment of forming wash trade loop)
+* **4th Image [Just After Change]**: `t.00005`
+* **5th Image [End]**: `t.00011`
 
-![Sample 1 Structural Stiffness for Week 0](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00000.png)
-![Sample 1 Structural Stiffness for Week 39](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00039.png)
-![Sample 1 Structural Stiffness for Week 40](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00040.png)
-![Sample 1 Structural Stiffness for Week 41](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00041.png)
-![Sample 1 Structural Stiffness for Week 51](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00051.png)
+![Sample 1 Structural Stiffness for Week 0](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+![Sample 1 Structural Stiffness for Week 3](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+![Sample 1 Structural Stiffness for Week 4](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00003.png)
+![Sample 1 Structural Stiffness for Week 5](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00003.png)
+![Sample 1 Structural Stiffness for Week 11](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00004.png)
 
 ### 4.2. Topological Anomaly / Spectral Radius
 
-The red line "Max Spectral Radius (Intensity of abnormal resonance/fund recycling in the system)" suddenly jumps up from a calm state of `0.0` after Week 40 when the wash trade occurred, reaching a dangerous zone of `0.8353`. This is a definitive mathematical signature showing that a "self-reinforcing infinite loop" has formed within the system.
-Between Week 40 and Week 41, an unnaturally thick, self-reinforcing circulating closed loop forms between `ACC_Cash` (Cash) and `ACC_Accounts_Receivable` (Accounts Receivable).
+The red line "Max Spectral Radius (Intensity of abnormal resonance/fund recycling in the system)" suddenly jumps up from a calm state of `0.0` after Week 4 when the wash trade occurred, reaching a dangerous zone of `0.8353`. This is a definitive mathematical signature showing that a "self-reinforcing infinite loop" has formed within the system.
+Between Week 4 and Week 5, an unnaturally thick, self-reinforcing circulating closed loop forms between `ACC_Cash` (Cash) and `ACC_Accounts_Receivable` (Accounts Receivable).
 
-![Sample 1 System Stability](../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_2__system_stability.png)
+![Sample 1 System Stability](../../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_2__system_stability.png)
 
 * **1st Image [Start]**: `t.00000` (Normal state)
-* **2nd Image [Just Before Change]**: `t.00039`
-* **3rd Image [At the Time of Change]**: `t.00040` (Occurrence of abnormal loop)
-* **4th Image [Just After Change]**: `t.00041`
-* **5th Image [End]**: `t.00051`
+* **2nd Image [Just Before Change]**: `t.00003`
+* **3rd Image [At the Time of Change]**: `t.00004` (Occurrence of abnormal loop)
+* **4th Image [Just After Change]**: `t.00005`
+* **5th Image [End]**: `t.00011`
 
-![Sample 1 Network Topology W0](../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 1 Network Topology W39](../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00039.png)
-![Sample 1 Network Topology W40](../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00040.png)
-![Sample 1 Network Topology W41](../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00041.png)
-![Sample 1 Network Topology W51](../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00051.png)
+![Sample 1 Network Topology W0](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00000.png)
+![Sample 1 Network Topology W39](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00000.png)
+![Sample 1 Network Topology W40](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00003.png)
+![Sample 1 Network Topology W41](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00003.png)
+![Sample 1 Network Topology W51](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00004.png)
 
 ### 4.3. Thermodynamic Energy Stack
 
-At the timings of Week 41 and Week 48, the red layer (Entropy Loss $T\Delta S$) suddenly appears as abnormally thick pillars, pushing the white line (Free Energy $F$) downward. Because wash trading does not generate substantive value (Internal Energy) and only generates "frictional heat (= wasteful fees and transaction costs)", this is physical evidence driving the system toward Heat Death (a state where meaningful activity completely ceases).
+At the timings of Week 5 and Week 48, the red layer (Entropy Loss $T\Delta S$) suddenly appears as abnormally thick pillars, pushing the white line (Free Energy $F$) downward. Because wash trading does not generate substantive value (Internal Energy) and only generates "frictional heat (= wasteful fees and transaction costs)", this is physical evidence driving the system toward Heat Death (a state where meaningful activity completely ceases).
 
-![Sample 1 Thermodynamics](../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Sample 1 Thermodynamics](../../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 ### 4.4. 3D Micro Z-Score & KL Drift
 
-*In this sample, the macroscopic topological anomaly (Spectral Radius) is dominant, and the following Information-Geometric Mutation serves as more definitive evidence than the Z-Score (degree of protrusion from past averages), which merely shows an increase or decrease in volume.* KL Drift indicates "Information Geometric Mutation (= complete deviation from past normal transaction patterns / emergence of unknown methods)." At the time of the first offense in Week 41, a massive spike (alarm) pierces the space. However, what is noteworthy is that the spike has become smaller during the repeat offense in Week 48. This shows the weakness of statistical AI (the boiling frog phenomenon) where abnormal data is learned (polluted) by the system as a "new baseline," paradoxically proving the necessity of history-independent physical approaches (Topology and Thermodynamics).
+*In this sample, the macroscopic topological anomaly (Spectral Radius) is dominant, and the following Information-Geometric Mutation serves as more definitive evidence than the Z-Score (degree of protrusion from past averages), which merely shows an increase or decrease in volume.* KL Drift indicates "Information Geometric Mutation (= complete deviation from past normal transaction patterns / emergence of unknown methods)." At the time of the first offense in Week 5, a massive spike (alarm) pierces the space. However, what is noteworthy is that the spike has become smaller during the repeat offense in Week 48. This shows the weakness of statistical AI (the boiling frog phenomenon) where abnormal data is learned (polluted) by the system as a "new baseline," paradoxically proving the necessity of history-independent physical approaches (Topology and Thermodynamics).
 
-![Sample 1 3D Z-Score](../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
-![Sample 1 Micro Forensics (KL Divergence Drift)](../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+![Sample 1 3D Z-Score](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+![Sample 1 Micro Forensics (KL Divergence Drift)](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 ## 5. ⚠️ Falsification Analytics
 

@@ -15,13 +15,13 @@
 
 ### 【比較1】健全な減衰と自浄作用（ベースライン）
 
-![Sample 0 Stability](../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+![Sample 0 Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
 
 * **Sample 0 (Healthy)**: グラフの青い線「Spectral Radius」が常に「1.0」の閾値（赤い破線）を大きく下回っています。これは、市場のショックや一時的な赤字が発生しても、システムがそれを自己吸収して正常な状態に戻る「健全な自浄作用」を備えていることを意味します。
 
 ### 【比較2】無限ループによる自己崩壊の臨界点（Wash Trade）
 
-![Sample 1 Stability](../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_2__system_stability.png)
+![Sample 1 Stability](../../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_2__system_stability.png)
 *(※Sample 1: 第41週以降に1.0を突破)*
 
 * **Sample 1 (Wash Trade)**: グラフ中盤から青い線が「1.0」の閾値を突き抜け、そのまま高止まり（あるいは発散）しています。数学的に「1.0に到達する」ということは、減衰することのない**「位相幾何学的な無限の反響（Topological Feedback Loop）」**が形成されたことを意味します。悪意あるアクターが架空の売上を作るためにA→B→C→Aと資金を回し続けた結果、システムが自浄作用を完全に喪失した決定的な証拠です。
@@ -34,7 +34,7 @@
 
 ### 制御不能状態の検知（Control Error Convergence）
 
-![Sample 0 Error Convergence](../../../samples/Sample_0_Healthy/readme_plots/004_1_2__control_error_convergence.png)
+![Sample 0 Error Convergence](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__control_error_convergence.png)
 *(上図：Sample 0 における健全な制御（エラーがゼロへ収束する状態）)*
 
 * **📊 視覚的構造**: 最適な資金投入計画（LQRオートパイロット）を計算する過程における、目標との「エラー（誤差）」の減少を示す折れ線グラフ。
@@ -42,7 +42,7 @@
 
 ### 組織のアキレス腱（感度行列ヒートマップ）
 
-![Sample 0 Sensitivity Matrix](../../../samples/Sample_0_Healthy/readme_plots/004_2_1__sensitivity_matrix.png)
+![Sample 0 Sensitivity Matrix](../../../../samples/Sample_0_Healthy/readme_plots/004_2_1__sensitivity_matrix.png)
 
 * **📊 視覚的構造**: ある部署（ノード）に変更を加えたとき、別の部署がどれくらい敏感に反応するかを示すマトリックス。
 * **🚨 異常の検知**: 特定の交差点（セル）に、極度の過敏性を示す突然の明るい色が現れる場合、組織が特定の要因に対して極めて「脆い（過敏）」状態になっています。そこに対する僅かな過剰支出や業務の遅れが、直ちに全社的なキャッシュ危機や業務停止を引き起こす急所（ボトルネック）であることを警告します。

@@ -24,7 +24,7 @@ TLUは、組織の構造的な健康状態や隠れた不正を特定するた�
 * **分かること:** 「期末に向かって全体的に資金の滞留（波の隆起）が激しくなっている」といった正常な季節変動や、「システム全体が徐々に熱力学的な死（摩擦熱の無限増大）に向かっている」といった構造的な変化を把握します。
 
 **【🟢 正常な地形の例（Sample 0）】**
-![Macro Terrain](../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+![Macro Terrain](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
 ### 2. ミクロな視点：異常な「針（スパイク）」や「断裂」を読む
 
@@ -32,7 +32,7 @@ TLUは、組織の構造的な健康状態や隠れた不正を特定するた�
 * **分かること:** 「この特定の日、特定の口座にだけ、通常のトレンドから外れた巨大な質量欠損が発生している」といった、横領や架空計上、ピンポイントの脳梗塞（血流遮断）などの単発的な異常を特定します。
 
 **【🔴 異常なスパイクの例（Sample 2: 横領）】**
-![Micro Spike](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+![Micro Spike](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
 ### 3. 視点の組み合わせによる不正の特定
 

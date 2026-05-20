@@ -15,13 +15,13 @@
 
 ### 【比較1】自然なゆらぎと位相の遅れ（ベースライン）
 
-![Sample 0 Phase Drift](../../../samples/Sample_0_Healthy/readme_plots/005_1_2__phase_drift_heatmap.png)
+![Sample 0 Phase Drift](../../../../samples/Sample_0_Healthy/readme_plots/005_1_2__phase_drift_heatmap.png)
 
 * **Sample 0 (Healthy)**: 口座間の取引タイミングの「ズレ（位相シフト）」を示すマトリックス。真っ黒（完全に同期）ではなく、ある程度のグラデーションが存在し、正常な商取引に伴う自然な遅延（ラグ）が保たれています。
 
 ### 【比較2】相場操縦とてんかん発作における「過剰同期」
 
-![Sample 6 Phase Drift](../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/005_1_2__phase_drift_heatmap.png)
+![Sample 6 Phase Drift](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/005_1_2__phase_drift_heatmap.png)
 *(※Sample 6: Wash Tradeにおける極限の同期)*
 
 * **Sample 6 (Market Bipartite) / Sample 9 (fMRI Seizure)**: 本来独立して動くべきノード間の位相のズレが、不自然なほど完全に一致（マトリックスが真っ黒＝位相差ゼロ）しています。期末監査をごまかすための手作業での一括修正や、架空取引ボットの稼働、あるいは脳のてんかん発作に見られる**「過剰同期（Hypersynchrony）」**です。見えざる手によってシステムが強制的にコントロールされている決定的なシグネチャです。
@@ -34,7 +34,7 @@
 
 ### ランダム化による帳簿捏造の証明（Fractal Noise Spectrum）
 
-![Sample 0 Noise Spectrum](../../../samples/Sample_0_Healthy/readme_plots/005_2_1_fractal_noise_spectrum.png)
+![Sample 0 Noise Spectrum](../../../../samples/Sample_0_Healthy/readme_plots/005_2_1_fractal_noise_spectrum.png)
 *(上図：Sample 0 における自然なピンクノイズの減衰)*
 
 * **📊 視覚的構造**: ノイズの減衰を示す対数スケールの散布図。右肩下がりの線（ピンクノイズ・$1/f$ ゆらぎ）が自然界の正常な状態です。
@@ -42,7 +42,7 @@
 
 ### 自動ボットによる乗っ取り（Resonant Frequency）
 
-![Sample 0 Resonant Frequency](../../../samples/Sample_0_Healthy/readme_plots/005_1_1_resonant_frequency.png)
+![Sample 0 Resonant Frequency](../../../../samples/Sample_0_Healthy/readme_plots/005_1_1_resonant_frequency.png)
 *(上図：Sample 0 における正常なビジネスサイクル)*
 
 * **🚨 異常の検知**: 企業の正常な「30日サイクル」などのピークとは関係のない、不自然な周波数帯に鋭いピーク（スパイク）が現れる場合、監査の目をかいくぐる「自動プログラム（ボット）」が、人間には見えない正確な間隔で少額の資金着服（横領）を繰り返していることを強く示唆しています。

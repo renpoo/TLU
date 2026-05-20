@@ -15,13 +15,13 @@
 
 ### 【比較1】完璧な質量保存（ベースライン）
 
-![Sample 0 Macro Forensics](../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample 0 Macro Forensics](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 * **Sample 0 (Healthy)**: グラフ下段の青い線「Z-Score（過去の平均からの突出度）」が完全にゼロ付近に張り付いています。システム内の入力と出力が完璧に釣り合っており、質量の増減（残差）が一切存在しない健全な状態です。
 
 ### 【比較2】簿外への質量流出（横領）
 
-![Sample 2 Macro Forensics](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Sample 2 Macro Forensics](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 * **Sample 2 (Embezzlement Leak)**: Z-Scoreが閾値（例: 2.0）を大きく超えて「10.0以上」という異常な高さまで跳ね上がっています。これは、帳簿には記されていない「未知の外部」へ資金が流れ出し、システム全体の質量が失われている（保存則の破綻）ことを示す決定的な証拠です。
 
@@ -33,7 +33,7 @@
 
 ### 共謀グループのあぶり出し（異常なスパイク）
 
-![Sample 7 KL Drift](../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+![Sample 7 KL Drift](../../../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 *(※Sample 7: ユーザー間の資金移動における共謀検知)*
 
 * **📊 視覚的構造**: アカウントごとの過去の行動パターンからの逸脱度（KL Drift / 情報幾何学的な変異）をZ軸の高さとして可視化した 3D Surface ヒートマップです。
@@ -47,8 +47,8 @@
 
 ### 異常なショートカットの出現
 
-![Sample 1 Topology](../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00038.png)
-*(※Sample 1: 第38週付近におけるWash Tradeの位相構造)*
+![Sample 1 Topology](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00003.png)
+*(※Sample 1: 第3週付近におけるWash Tradeの位相構造)*
 
 * **Sample 1 (Wash Trade)**: 通常の取引ルートとは別に、本来直接的な関わりが薄いはずのA社・B社・C社間に、突如として極太で真っ赤な「異常なショートカット（裏ルート）」が形成されています。これが、架空売上を回すためのパイプライン（犯行現場）です。
 
