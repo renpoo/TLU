@@ -1,132 +1,118 @@
-# 🔬 メタ解析臨床診断報告書（Sample 2: Embezzlement Leak）
+# 🔬 メタ診断臨床検査レポート：資金流出による質量欠損 / 不正横領 (Sample 2)
 
-## 1. エグゼクティブ・サマリー
+## 1. 診断結論 (Executive Summary)
 
-*   **総合診断:** **簿外資産流出（役員横領）による致命的な「大出血」および統計的盲点**
-*   **概況:** 本システム（財務ドメイン）は、手元資金（Cash）から帳簿に記載されない未知の外部ノード（`UNKNOWN_LEAK`）へと資金が一方通行で抜き取られる**「簿外資産横領（大出血）」**を引き起こしており、極めて致命的な状態（CRITICAL）にあります。総資産が本来あるべき状態から大幅に欠損しており、物理的な質量保存則（キルヒホッフの第一法則）が完全に破綻しています。特筆すべきは、横領犯が一定額を規則的かつ機械的に抜き取ったため、その変動分散（分散・共分散行列）が「ゼロ」となり、統計的 AI が依存する共分散ベースの Z-Score（警告）を完全にすり抜けている（コールドスポット化）点です。物理エンジンによる質量保存の検証のみがこの病態を暴き出しました。
+*   **総合診断:** **質量保存則の破綻（簿外資金流出・大出血 / Mass Conservation Violation）**
+*   **重症度:** 🔴 **CRITICAL (極めて深刻な危機)**
+*   **臨床概要:**
+    本システムは、閉鎖系ネットワークであるべき複式簿記システムから、説明のつかない資金が持続的に外部へ漏れ出す「質量欠損（大出血）」を発症しています。
+    シミュレーション期間を通じて、**累計 $1,353.48** の質量がシステムから消失し、未知の領域へ吸い込まれました。この流出規模は全体の総活動量に対して約 0.05% と微小（Micro-Leakage）ですが、この「小さな傷口」がダブルエントリー（貸借平衡）の緊張感を損ない、最終的にシステム全体を「絶対硬直（Rigid Lock＝資金ショート）」と「壊滅的な共振現象（ノッキング）」に陥らせることが物理数理的に証明されました。
+    
+    統計的な Z-Score は、過去に履歴のない未知の経路に対する流出を捉えられず「正常（透過）」と判定する死角（偽陰性）を有していましたが、物理エンジンが計算する **`System Conservation Residual`（保存残差）が断続的に最大 `364.53` (2020-08)** に達する不整合を示すことで、不正流出の動かぬ数理的証拠（フォレンジック）を確立しました。
 
 ---
 
-## 2. 従来型監査・静的分析の限界
+## 2. 伝統的表層分析の限界 (Limitations of Traditional Audits)
 
-伝統的な会計監査（集計レポート）や静的分析では、意図的な片端仕訳（簿外操作）によって現預金が抜き取られているため、B/S の借方と貸方は表面上「帳尻が合っている」ように見せかけられています。
+従来の監査手続きやスナップショット型の財務レポートでは、このような巧妙な「簿外資金流出」の早期検知は極めて困難です。
 
-*   **B/S 資産・資本の推移およびブロック構成:**
-    ![Sample 2 BS Trend](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__BS_Trend.png)
+以下は、本サンプルの最終ステップにおける損益計算書（P/L）および貸借対照表（B/S）の構成・推移図です。
+
+*   **B/S 資産・資本推移**
+    ![B/S Trend](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__BS_Trend.png)
     ![Sample 2 BS Block](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__BS_Block_Total.png)
-*   **P/L 収益・費用の推移およびウォーターフォール構成:**
-    ![Sample 2 PL Trend](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__PL_Trend.png)
-    ![Sample 2 PL Waterfall](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__PL_Waterfall_Total.png)
+*   **P/L 売上・費用推移:**
+    ![P/L Trend](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__PL_Trend.png)
+    ![Sample 2 PL Waterfall](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/PL_Waterfall_009_2020-10.png)
 
-このように、ウォーターフォール図上では正常な費用支出に見えますが、B/S上では資産の積み上がりが正常系に比べて不自然に低迷しています。しかし、「意図的に抜き取られた金額」そのものは簿外で処理されているため、静的な試算表やトレンドの傾きだけで「横領である」と物理的に断定することは困難です。
-
----
-
-## 3. 根本病理の特定（根本的な病態生理）
-
-本サンプルの病的因果は、ダミーデータ生成ロジック（`_0_0_generate_dummy_journal.py`）内の横領犯による以下の**「簿外不正出金ロジック」**にあります。
-
-*   **第4週（t.00004）以降の一方通行流出:**
-    *   Cash 口座から、毎週決まった定額の資金を抜き取る。
-    *   この出金に対する相手勘定（貸方）を正規の帳簿に記録せず、システム外の隠しノード（`UNKNOWN_LEAK`）へ一方通行で流出（リーク）させる。
-
-この行為は、物理的には「閉じた流体回路上に突如として開いた亀裂（ドレイン）からの資源の漏出」として記述されます。
+**【静的監査の死角】**
+実務において、このような原因不明の差額が発生した際、経理担当者は決算を通すために一時的に「仮払金」や「雑損失」等のダミー勘定（`UNKNOWN_LEAK`）へ差額を放り込み、B/S の左右を「総資産 $211,258.12」で強制的にバランスさせることがあります。
+その結果、P/L 上は **+$62,863.53** の営業黒字としてカモフラージュされ、静的な構成比率を見ているだけでは、システムに致命的な「穴（漏洩）」が開いており、企業の血流（資金）が失われつつある事実（Kinematic Crisis）を直感的に視覚化することはできません。
 
 ---
 
-## 4. 物理・数学エンジンによる数理証明（臨床検査証拠）
+## 3. 根本病理 of the Crime (Fundamental Pathophysiology)
 
-### 4.1. 質量保存の検証（キルヒホッフ残差と出血の有無）
-物理的な保存則残差指標である **`System Conservation Residual`** は、第4週（t.00004）の横領開始の瞬間に `0.0` の水平線から一気に跳ね上がり、深刻な質量漏出（内出血）が発生していることを証明しています。
-また、マクロ Z-Score（下段の青線）が横領開始直後にもかかわらず **`0.0` 付近に張り付いて無反応（警告が出ない）** である様子がはっきりと確認されます。これは、定額横領により「変動のばらつき」が生まれず、共分散行列がこの異常を「変化なし（分散ゼロ）」として学習（盲点化）してしまったためです。
+本サンプルに注入された不正流出の発生機序は以下の通りです。
 
-*   **マクロ監視ダッシュボード（上: 本サンプル、下: 正常系）:**
+*   **不正の実行（2020-02, 03, 08, 09, 11 の各ステップ）**:
+    *   売掛金（`ACC_Accounts_Receivable`）が顧客から回収されたものとして減少処理（Credit）されます。
+    *   しかし、その回収資金は現預金（`ACC_Cash`）へ入金されず（Debit 側が $0.0 で起票されるなど）、システム外の私的口座等へとバイパス（着服）されます。
+    
+物理エンジンはこの「消失した質量」を計算上補正し、力学的閉鎖系を維持するために、メモリ上に仮想的なゴミ箱ノード **`UNKNOWN_LEAK`** を動的に構築し、失われた質量をそこへ流し込みます。これがどのように力学的異常を引き起こすかを以下に証明します。
+
+---
+
+## 4. 物理・数学エンジンによる数理証明 (Mathematical Evidence)
+
+### 4.1. 質量保存残差と構造的メルトダウン (Kirchhoff Residual & Rigid Lock)
+「質量保存の残差（System Conservation Residual）」は、資金流出が発生した月（2020-02に `307.30`、2020-03に `359.73`、2020-08に最大 `364.53`、2020-09に `260.74`、2020-11に `61.18`）において鋭いスパイクを記録しています。これは、貸借不一致（片面記帳による資金消失）の決定的なシグネチャです。
+
+*   **マクロ・フォレンジック・ダッシュボード (Macro Forensics):**
     ![Sample 2 Macro Forensics](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
-    ![Sample 0 Macro Forensics](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
-### 4.2. 主成分分析による主要な要素の検証
-PCA分析では、失われた資源の方向性（`UNKNOWN_LEAK` へのベクトル）が第一主成分に強く射影されます。統計的には盲点化されていても、固有値空間においては「エネルギーが外部へ吸い出されている次元」が明確に独立した固有軸として分離されます。
-（正常系の均等な分散状態については [正常系臨床リファレンス](../Sample_0_Healthy/README.md#42-主成分分析による主要な要素の検証) を参照）
+剛性行列（Stiffness Matrix）の時系列推移を見ると、流出が開始された Week 5 (`t.00004` ＝ 2020-02〜03の変曲点) 以降、それまで正常な「モザイク模様」を描いていた接続の柔軟性が失われ、特定のハブが濃い赤色に染まる **Rigid Lock（絶対硬直 ＝ 資金ショートに伴う流動性停止）** を引き起こしています。
+弾性を失ったシステムは通常取引のインプット（加振）を減衰できなくなり、後半ステップの 3D マップ上で **10億（1e9）スケールに達する壊滅的な共振現象（ノッキング＝システミック・ランウェイ）** を誘発します。たった 0.05% の資金漏洩が、システム全体の骨組みを揺るがし破壊する証拠です。
 
-*   **PCA主要軸比率:**
-    ![Sample 2 PCA Ratio](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_2__principal_axes_ratio.png)
+*   **3D動的外部力共振マップ (3D Dynamics External Force):**
+    ![Sample 2 External Force 3D](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_6__3d_dynamics_external_force.png)
 
-### 4.3. 剛性行列力学ストレス
-剛性行列の5定点観測において、横領が開始された第4週（t.00004）以降、`ACC_Cash` の接続剛性が著しく弱体化（骨折・剛性支持の喪失）し、システム全体の支柱が歪んでいく様子が証明されます。
-（正常系の安定した結合遷移については [正常系臨床リファレンス](../Sample_0_Healthy/README.md#43-剛性行列力学ストレス) を参照）
+*   **構造剛性行列の時系列シーケンス:**
+    *   **Previous (t=2):** ![Stiffness t2](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00002.png) 
+    *   **Onset (t=3):** ![Stiffness t3](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00003.png) （`UNKNOWN_LEAK` への横領発生に伴う流動性フリーズの余波）
+    *   **Post (t=4):** ![Stiffness t4](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00004.png) 
 
-*   **1枚目 [Start]**: `t.00000` (接続未確立・白紙状態)
-*   **2枚目 [Just Before Change]**: `t.00003` (正常結合)
-*   **3枚目 [The Exact Point of Change]**: `t.00004` (流出開始に伴う Cash 剛性リンクの亀裂発生)
-*   **4枚目 [Immediately After Change]**: `t.00005` (Cash 部の剛性低下の進行)
-*   **5枚目 [End]**: `t.00011` (支柱の強度が失われたまま崩壊状態で終了)
+### 4.2. トポロジー的不安定性と統計AIの死角 (Topological & Statistical Blind Spot)
+トポロジー図上において、`ACC_Cash` (現預金) から `UNKNOWN_LEAK` (未知の漏洩先) へ向けて、薄い青色の流出ベクトルが伸びているのが視覚化されます。
 
-*   **構造剛性の推移シーケンス:**
-    ![Sample 2 Stiffness t0](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00000.png)
-    ![Sample 2 Stiffness t3](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00003.png)
-    ![Sample 2 Stiffness t4](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00004.png)
-    ![Sample 2 Stiffness t5](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00005.png)
-    ![Sample 2 Stiffness t11](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00011.png)
+*   **ネットワーク・トポロジー時系列:**
+    *   **Previous (t=1):** ![Topology t1](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00001.png) （`UNKNOWN_LEAK` ノードの顕在化）
+    *   **Onset (t=2):** ![Topology t2](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00002.png)
+    *   **Post (t=3):** ![Topology t3](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00003.png)
 
-### 4.4. ネットワーク・トポロジーの可視化
-トポロジー遷移において、第4週（t.00004）以降、`ACC_Cash` から境界外の暗黒領域（`UNKNOWN_LEAK`）へ向かって、太い「一方通行の流出リンク（ドレイン）」が突き刺さり、システム全体の資源を絶え間なく体外へ排出している致命的な構造が可視化されます。
-（正常系のトポロジーについては [正常系臨床リファレンス](../Sample_0_Healthy/README.md#44-ネットワーク・トポロジーの可視化) を参照）
+**【統計Z値の死角（ゼロ・トゥ・ワン異常）】**
+この流出先は「過去に一度も取引履歴が存在しなかったノード」です。そのため、統計的なZ-Score（過去の平均からの突出度）を計算する際、分母となる標準偏差が定義されず、Z-Score 上は「変化なし（正常）」として透過（スルー）されてしまいます（トポロジー図上でベクトルが警告色の赤ではなく、正常色の青で描かれているのはそのためです）。
+歴史（過去データ）に依存する統計的AIがこれを見逃す一方で、物理エンジンは「流出入の絶対量」を監査するため、一瞬でこのアノマリーを検知します。
 
-*   **1枚目 [Start]**: `t.00000` (初期状態)
-*   **2枚目 [Just Before Change]**: `t.00003` (正常な分散)
-*   **3枚目 [The Exact Point of Change]**: `t.00004` (簿外流出ドレインの出現)
-*   **4枚目 [Immediately After Change]**: `t.00005` (流出ルートの太線化)
-*   **5枚目 [End]**: `t.00011` (資産が枯渇しトポロジーが萎縮した状態)
-
-*   **トポロジーの推移シーケンス:**
-    ![Sample 2 Topology t0](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00000.png)
-    ![Sample 2 Topology t3](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00003.png)
-    ![Sample 2 Topology t4](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00004.png)
-    ![Sample 2 Topology t5](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00005.png)
-    ![Sample 2 Topology t11](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00011.png)
-
-### 4.5. スペクトル半径における異常の検証
-最大スペクトル半径は、還流取引（ループ）が存在しないため危険な上昇（`0.8` 超）は見せません。しかし、自由エネルギーが吸い出されているため、システム全体の固有ダイナミクスが「減衰・枯渇」に向かう特徴を示しています。
-（正常系の安定した脈動については [正常系臨床リファレンス](../Sample_0_Healthy/README.md#45-スペクトル半径における異常の検証) を参照）
-
-*   **システム安定性指標（スペクトル半径）:**
+*   **システム安定性指標 (Spectral Radius):**
     ![Sample 2 System Stability](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/004_1_2__system_stability.png)
 
-### 4.6. 熱力学的エネルギースタック
-熱力学分析では、横領が継続するにつれて自由エネルギー（F）が急勾配で減少し、システムが空洞化していく様子が示されています。これは、熱散逸（エントロピー上昇）ではなく、システムの「内部エネルギー（質量）そのものの喪失（脱水症状）」を意味しています。
-（正常系の安定したエネルギー保存については [正常系臨床リファレンス](../Sample_0_Healthy/README.md#46-熱力学的エネルギースタック) を参照）
+### 4.3. 熱力学的エネルギーの緩やかな死 (Thermodynamics)
+資金の漏洩に伴い、システムの総内部エネルギー（総勘定残高）が少しずつ削り取られています。これにより、健全な営業活動を通じて蓄積されるはずの「自由エネルギー（Free Energy $F$）」の成長曲線が著しく阻害されていることが確認されます。
 
-*   **熱力学的エネルギースタック:**
-    ![Sample 2 Thermodynamics Energy Stack](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+*   **熱力学エネルギースタック (Thermodynamics Energy Stack):**
+    ![Sample 2 Thermodynamics](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
-### 4.7. T-S軌跡
-T-Sダイアグラムにおいて、本システムは元の状態に戻らない「不可逆的な開放曲線（体外への拡散軌跡）」を描き、エントロピー平面上で右下に脱落しています。これは、閉じた循環サイクルに戻ることのできない「持続的な血液損失（横領）」を示す決定的な物理署名です。
-（正常系の平穏なサイクルについては [正常系臨床リファレンス](../Sample_0_Healthy/README.md#47-T-S軌跡) を参照）
+### 4.4. 3D情報幾何学（KL Drift）の鋭い警告
+質量消失が発生したタイミングにおいて、情報幾何学空間（KL Drift）に鋭い超次元的スパイク（黄緑色の針）がそびえ立ち、確率分布の連続性が破壊されたことを視覚的に告発しています。
 
-*   **T-S軌跡:**
-    ![Sample 2 TS Diagram](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+*   **3D Micro Z-Score:** ![Sample 2 3D Z-Score Position](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+*   **3D Micro KL Drift:** ![Sample 2 3D KL Drift](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 ---
 
-## 5. 局所治療処方箋（Optimal Treatment / LQR制御）
+## 5. 局所治療処方箋 (LQR Control Treatment)
 
-*   **介入方針:** **流出ゲートの緊急閉鎖（キルヒホッフ残差に基づく自動サーキットブレーカー発動）**
-*   **LQR制御による介入検証（LQR パフォーマンススペース）:**
-    ![Sample 2 LQR Performance Space](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/004_1_3__control_lqr_performance_space.png)
-    
-    上図の LQR Performance Space では、流出経路に対する制御ゲインをどれだけ積極的に高めるか（介入パラメータ設定）と、その際のシステム復旧コストの相関関係を示しています。本病態は統計的 Z-Score に反応しない特徴があるため、物理エンジン側の `System Conservation Residual > 0` をトリガーとし、LQR フィードバック設計から導出された最適なしきい値を適用します。これにより、正常な営業活動取引に干渉しすぎることなく、Cash 口座から `UNKNOWN_LEAK` への不正流出取引のみに的確に高い抵抗値（インピーダンス）を印加し、自動サーキットブレーカーを発動させて不正出金を即座に抑止することが可能となります。
-*   **日常の運用アドバイス:**
-    相手勘定が存在しない、あるいは承認されていない外部口座へのダイレクトな資金移動を検知するため、すべてのトランザクションに対して「Debit = Credit」がリアルタイムで一致しているかを監視する物理検証ルールの導入が不可欠です。
+*   **治療方針: 大出血の即時止血と流路の閉塞**
+*   **LQR 感度介入（ツボの特定）:**
+    本ネットワークにおいて最も感度が高いのは、流出のトリガーとなっている `ACC_Accounts_Receivable` (売掛金) です。
+    ![Sample 2 LQR Control](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/004_1_3__control_lqr_performance_space.png)
+*   **経営・内部統制上のアクション:**
+    1.  **止血（Mass Block）**:
+        不整合な仕訳（Debitが0.0の売掛金減少）の入力を会計ソフト側でシステム強制的に「ブロック（Validation Lock）」するルールを導入。
+    2.  **実査による治療（臨床実査）**:
+        `UNKNOWN_LEAK` へと資金がバイパスされた仕訳（例：取引ID `E_000213`）を特定し、その仕訳を担当したオペレーターおよび承認者の操作ログを監査。
 
 ---
 
-## 6. 🚨 警告アラート・反証可能性分析
+## 6. 🚨 Forensic Alert & 反証可能性 (Falsification Analytics)
 
-### 6.1. 偽陽性（False Positive）判定
-*   **事象:** 統計的 AI（Z-Score）は「正常（青信号）」を維持しているが、物理キルヒホッフ残差は「重大異常（赤信号）」を指し示す乖離。
-*   **物理的接地:** 統計的モデルがコールドスタート期に無反応になることはありますが、物理的な保存則残差が定常的にプラスになる（資金が物理的に消滅する）現象は、自然界および簿記の数理上、絶対にあり得ません。よって、この乖離は統計モデルの「偽陰性（見落とし）」であり、物理キルヒホッフ残差による横領検知が「100%正しい」と臨床的に認定されます。
+### 6.1. 偽陽性評価 (False Positive Assessment)
+*   **異議申し立て:** 「これはシステムのデータ連携（APIエラー）によって、売掛金の消込データのうち、現金入金側のレコードだけが一時的に送信未完了または同期遅延を起こしただけであり、実際の資金は銀行口座に入金されている」という釈明が考えられます。
+*   **棄却の論拠:**
+    もし同期遅延であれば、翌ステップで遅れて入金仕訳（Debit Cash）が自動起票され、質量保存則は自己修復されるはずです。しかし、複数月（ステップ）にわたって不整合が未解消のまま累積しているため、単なる一時的なネットワーク同期遅延の釈明は物理的に棄却されます。
 
-### 6.2. 反証可能性（Falsifiability）
-本サンプルの「横領」という診断を否定するためには、以下のいずれかを提示する必要があります。
-1.  **簿外勘定の正当性の証明:** 横領と判断された流出先口座が、実は「登記手続き中の関係会社仮払金」であり、かつその帳簿記載漏れ（仕訳未入力エラー）であったことを示す法的書類。
-2.  **物理的インフラエラーの証明:** データベースサーバーのトランザクションログのバグにより、貸方レコードのみが一時的に消失したというインフラ障害の技術報告書。
+### 6.2. 本診断に対する反証条件 (Falsifiability)
+もし本診断が「横領・資金消失ではない」と反証するためには、以下の証拠の提示が必要です：
+1.  **外部通帳の原本:** 質量欠損が検知された該当仕訳の日付において、対象となる金額が実際に法人の銀行口座（または正規の決済代行口座）に全額入金されていることを示す、偽造不可能な「銀行預金通帳原本」または「オンラインバンクのAPIログ」。
+2.  **未達勘定の即時解消:** システム間で消失したと判定されたデータ残高が、翌月の調整仕訳によって「未達資金」として完全に消し込まれているプロセス証明。
