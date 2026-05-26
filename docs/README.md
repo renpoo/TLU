@@ -28,7 +28,7 @@ The TLU documentation has been reorganized and consolidated into 5 core files di
 *   **Contents:** Supreme meta-level prompt for AIエージェント (LLMs) to automatically generate clinical audit reports (diagnoses) based on physics engine outputs.
 *   **Highlights:** Pyramidal structure (conclusion-first), model pollution triage (boiled frog syndrome), and mandatory fact-checking protocols.
 
-### 5. [🔬 Verified Sample Registry & Cross-Verification Catalog](ja/samples/README.md)
+### 5. [🔬 Verified Sample Registry & Cross-Verification Catalog](samples/README.md)
 *   **Contents:** Verified sample registry containing diagnostic judgments, parameter limits, and detailed reports for all 10 samples (Sample 0 to 9) in Japanese.
 *   **Highlights:** Cross-verification matrix and pathological groupings (Mass Leakage vs. Recirculation).
 
