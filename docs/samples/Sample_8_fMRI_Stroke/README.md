@@ -50,23 +50,35 @@ Due to the localized blockage of blood flow, an imbalance arises in the mass con
 ![Sample 8 Structural Stiffness 31](../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00031.png)
 ![Sample 8 Structural Stiffness 59](../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00059.png)
 
-### 4.2. Topological Anomaly / Spectral Radius
+### 4.2. Mathematical Constraints of Spectral Radius & Physical Topology Disruption
 
-Because healthy regions of the brain form organic and perfectly bidirectional feedback loops with each other, this is mathematically captured as the same "Extreme Oscillation (Spectral Radius 1.0 = excessive bidirectional feedback between brain regions)" as wash trading. However, looking at the network topology, after TR=150, the inflow edge directed toward a specific node (Motor Cortex) becomes extremely thin, and organic connectivity is lost.
+* **System Stability (Spectral Radius):**
+    ![Sample 8 System Stability](../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)
 
-![Sample 8 System Stability](../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)
+* **Mathematical Background of Spectral Radius "1.00" (Stochastic Constraints):**
+    The TLU System Stability Filter (`_004_1_2_filter_system_stability.py`) calculates the **"transition probability matrix (Markov stochastic matrix)"** by normalizing the flow data by the total outflow of each brain region (node). According to the Perron-Frobenius theorem, the maximum eigenvalue (spectral radius) of any row-stochastic matrix is **mathematically guaranteed to be strictly and consistently `1.00`**, regardless of whether the brain is healthy or suffers from a localized stroke. Therefore, the spectral radius itself does not serve as a diagnostic indicator for detecting pathophysical state transitions.
 
-* **1st Image [Start]**: `t.00000`
-* **2nd Image [Just Before Change]**: `t.00029` (TR=145)
-* **3rd Image [At the Time of Change]**: `t.00030` (TR=150: Infarction occurs)
-* **4th Image [Just After Change]**: `t.00031` (TR=155)
-* **5th Image [End]**: `t.00059` (TR=295)
+* **Flickering of `is_stable` (Numerical Noise Mimicking State Change):**
+    The stability flag (`is_stable`) flickers rapidly between `1` (stable) and `0` (unstable) in the log. This is not a physical fluctuation of brain connectivity. Rather, it is a **numerical artifact caused by microscopic floating-point rounding errors** when calculating eigenvalues of exactly `1.0` in complex space.
+    * **False Positives (t < 30):** During the healthy baseline period, rounding errors occasionally cause the computed spectral radius to be slightly larger than `1.0` (e.g., `1.0000000000000002`), triggering a false unstable alarm (`is_stable = 0`).
+    * **False Negatives (t >= 30):** During the ischemic stroke period when the network is severely compromised, numerical rounding yields values slightly below or equal to `1.0`, resulting in a false stable classification (`is_stable = 1`).
+    Since this metric produces uninformative false alarms and false normals indiscriminately, it should be excluded from forensic clinical reasoning.
 
-![Sample 8 Network Topology 0](../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 8 Network Topology 29](../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00029.png)
-![Sample 8 Network Topology 30](../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00030.png)
-![Sample 8 Network Topology 31](../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00031.png)
-![Sample 8 Network Topology 59](../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00059.png)
+* **Physical Topology Disruption (Loss of Inflow Edges):**
+    In contrast, the actual physical collapse of connectivity due to the input blockage to the `Motor_Cortex` is clearly exposed in the temporal network graphs. After the stroke onset at `t=30` (TR=150), the inflow edge directed toward the `Motor_Cortex` completely vanishes, visualizing the structural disruption of active blood/information circulation.
+
+* **Network Topology 5-Point Sequence:**
+  * **① Start (t=0 / 10:00:00):**
+        ![Sample 8 Network Topology 0](../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00000.png)
+  * **② Just Before Change (t=29 / 10:04:50):**
+        ![Sample 8 Network Topology 29](../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00029.png)
+  * **③ The Exact Point of Change (t=30 / 10:05:00):**
+        ![Sample 8 Network Topology 30](../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00030.png)
+        The inflow edge directed toward the `Motor_Cortex` vanishes, indicating that the path for active blood/information flow has been severed.
+  * **④ Immediately After Change (t=31 / 10:05:10):**
+        ![Sample 8 Network Topology 31](../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00031.png)
+  * **⑤ End (t=59 / 10:09:50):**
+        ![Sample 8 Network Topology 59](../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00059.png)
 
 ### 4.3. Thermodynamic Energy Stack
 

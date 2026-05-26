@@ -1,10 +1,4 @@
 node_label,initial_X
-ACC_Cash,35577.07
-ACC_Accounts_Receivable,0.00
-ACC_Accounts_Payable,0.00
-ACC_Inventory,11000.43
-ACC_Sales_Revenue,0.00
-ACC_COGS,0.00
-ACC_Travel_Exp,0.00
-ACC_Payroll_Exp,0.00
-ACC_Rent_Exp,0.00
+ACC_Cash,500000.00
+ACC_Inventory,500000.00
+ACC_Equity_Capital,1000000.00

@@ -58,7 +58,7 @@ def run_dynamics_state_analysis(
     v_latest, a_current = compute_derivatives(temp_v_hist)
     
     # 3. Virtual mass M and Viscosity C
-    M, C = estimate_virtual_mass_and_viscosity(temp_X_hist, temp_v_hist, base_epsilon=1e-10, velocity_scale_ratio=0.1)
+    M, C = estimate_virtual_mass_and_viscosity(temp_X_hist, damping_ratio=0.1)
 
     # 4. External input (F_ext)
     K = np.zeros(N, dtype=float)

@@ -1,89 +1,170 @@
-# Sample 8: 生体ネットワークへの適用（fMRI Stroke - 脳卒中/虚血の熱力学）
+# 🔬 メタ診断臨床検査レポート：局所的脳血流遮断（虚血性脳梗塞）(Sample 8)
 
 > [!NOTE]
-> **【重要】Sample 8 と Sample 9 の関係性と対象ドメインについて**
-> 本サンプル（Sample 8）と次サンプル（Sample 9）は、金融データや交通データではなく、人間の脳（fMRI）における**「BOLD信号の有効接続性（Effective Connectivity）」**をシミュレートした生体データです。
-> TLUの「汎用物理エンジン」が、社会科学（金融・交通）の領域を超え、生命科学（生体ネットワークの病変）をもシームレスに診断できることを証明するためのグランドフィナーレとなるテストケースです。
-> * **Sample 8（本作）:** 脳ネットワークの特定の部位（運動野）への血流・信号が物理的に遮断される**「脳卒中・梗塞（Stroke / Ischemia）」**をシミュレートします。ネットワークの一部が「枯渇・壊死」していくプロセスを検証します。
-> * **Sample 9（次作）:** 特定の部位（側頭葉）から異常な同期信号が放射される**「てんかん発作（Epileptic Seizure）」**をシミュレートします。エネルギーが過剰に「暴走・共鳴」するプロセスを検証します。
+> **【重要】Sample 8（脳梗塞）と Sample 9（てんかん）の対比について**
+>
+> * **Sample 8（本レポート）:** 脳の特定部位（運動野）への血流流入が急激に閉塞し、局所的な「飢餓・壊死（質量欠落・局所熱的死）」を引き起こす**虚血性病態（脳梗塞 / Stroke）**をモデル化しています。
+> * **Sample 9（次レポート）:** 脳の特定部位（側頭葉）を起点として、全脳の血流（エネルギー）が異常に過同期・暴走する**過同期性病態（てんかん発作 / Seizure）**をモデル化しています。
+> * 健常脳の活動については、[正常系臨床リファレンス](../Sample_0_Healthy/README.md)を参照してください。
 
 ---
 
-# 🔬 メタ解析 統合レポート (Meta-Analysis Synthesis Report / Laboratory Findings)
+## 1. 診断結論 (Executive Summary)
 
-## 1. エグゼクティブ・サマリー
-本システム（生体脳ドメイン）は、時間経過の中盤において**「特定のノード（運動野）に対する致命的なエネルギー供給の遮断（Stroke/梗塞）」**を発症し、結果としてネットワーク全体が**「熱力学的エネルギーの崩壊（Thermodynamic Energy Depletion）」**に陥る極めて重篤な状態（HIGH Severity）にあると診断される。運動野への流入経路だけが閉塞し、「他の部位へノイズは出力するが、入力は一切受け取れない」という孤立と壊死のプロセスが進行している。
+* **総合診断:** **局所的脳虚血による急性脳梗塞（Acute Ischemic Stroke / Localized Brain Ischemia）**
+* **重症度:** 🟠 **HIGH (極めて深刻な急性局所血流不全)**
+* **臨床概要:**
+    本システムは、BOLD信号（気血・質量）の流れにおいて、タイムステップ **`t=30`（10:05:00、TR=150相当）**の瞬間に、運動野（`Motor_Cortex`）への流入血流が約95%急激に遮断されるという「局所的血行障害（虚血 / 血管の局所的閉塞）」を発症しています。
 
-## 2. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
+    伝統的財務諸表（B/S・P/L）モデル上は、収入源（Revenue）を伴わない経費（Expense）のみの流出として表現されるため、「会計上の不均衡（UNBALANCED、自己資本 `-500,000.00`）」として警告されていますが、物理保存則（キルヒホッフ残差）は全期間を通して `0.00` であり、血流全体が消滅したのではなく「内部的な流路の遮断」であることを数学的に示しています。
 
-**【全期間の累積フロー (P/L Waterfall) & 貸借対照表 (B/S)】**
-![Sample 8 PL Waterfall](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_0_1__PL_Waterfall_Total.png)
-![Sample 8 BS Block](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_0_1__BS_Block_Total.png)
+    異常発生と同時に、主成分分析（PCA）における第1主成分（PC1）の説明分散比率が **`37.60%`** (t=29) から **`94.72%`** (t=30) へと急騰し、その主成分ベクトルは運動野（`Motor_Cortex`）の負の方向（**`-0.8942`**）へ極端に偏在（剛性ロック / 血栓）しました。また、運動野の Z-Score も一時的に **`51.04`** (t=30) に達しています。これらの臨床検査証拠から、運動野を灌流する中大脳動脈（MCA）枝の急性閉塞に伴う、局所的脳虚血および代謝虚脱（脳梗塞）と診断します。
 
-P/Lサマリーを見ると、運動野（Motor Cortex）だけが極端なマイナス（-$60,191）になっている。「他の部位へ信号は出しているが、入力は一切受け取れていない」という物理的な動脈閉塞のサインである。しかし従来の静的な集計ツールでは、この単なる「残高の異常」が、ネットワーク全体にどのような熱力学的な負荷（エントロピーの増大 ＝ 無駄な摩擦熱やエネルギー浪費の増大）を与え、生命活動全体をどう蝕んでいるかの「動的な死のプロセス」を描き出すことは不可能である。
+---
 
-## 3. 物理的病跡の特定（Fundamental Pathophysiology）
-本サンプルの根本原因は、ジェネレーターコード `_0_0_generate_dummy_fmri.py` において意図的に組み込まれた「動脈閉塞のスクリプト」にある。
+## 2. 伝統的表層分析の限界 (Limitations of Traditional Snapshots)
 
-* **特定された証拠:**
-  `if tgt == "Motor_Cortex": base_flux = base_flux * 0.05`
-  時間ステップ `TR >= 150` 以降、運動野（`Motor_Cortex`）へ向かうすべての血流（エッジ）が人為的に 95% カット（虚血状態）されていた。TLUが検知したマクロな崩壊は、この局所的な質量保存の破綻が引き金となっている。
+伝統的な時系列データの平均値監視や、単純な総流量（P/L）およびストック（B/S）の集計スナップショットでは、この局所的な急性梗塞を早期に特定することは不可能です。
 
-## 4. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
+以下は、全期間における累積流量（P/L）および残差（B/S）の集計図です。
 
-### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
+* **P/L 相当（交差点ごとの総交通量）:**
+    ![P/L Trend](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_0_1__PL_Trend.png)
+* **B/S 相当（残差・ストック累計）:**
+    ![B/S Trend](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_0_1__BS_Trend.png)
 
-局所的な血流の遮断により、システム全体の質量保存に不均衡が生じている。さらに、運動野の「入力ゼロ・出力のみ」という非対称な状態が長引くにつれ、システムの剛性行列（内部構造）は徐々に硬直（Rigid Lock ＝ 脳全体の弾力性が失われ、健全な信号処理を受け付けない状態）へと向かい、脳全体の弾力性が失われていく。
+**【伝統的監視の死角】**
+伝統的なデータ管理手法では、システム全体の活動レベルが維持されている（Total Volume が維持されている）限り、特定の流路が閉塞していることを見落とします。
+例えば、運動野の累積収支は最終ステップにおいて `40,052.43` となり、他の領域（前頭前野 `115,078.12`、側頭葉 `115,335.59`）と比較して「やや低い」程度にしか見えません。これは、t=30 以前の正常な血流データが累積値に混ざることで、t=30 以降の「急性遮断」のシグナルが希釈されてしまうためです。静的な平均値分析は、梗塞が発生した「正確な変曲点」および「閉塞したノード」をしっかりと隠蔽してしまいます。
 
-![Sample 8 Macro Forensics](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_1__macro_forensics_dashboard.png)
-![Sample 8 External Force 3D](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_1_6__3d_dynamics_external_force.png)
+---
 
-* **1枚目【始点】**: `t.00000` (正常な剛性)
-* **2枚目【変化の直前】**: `t.00029` (TR=145)
-* **3枚目【変化の当該時点】**: `t.00030` (TR=150: 梗塞発生)
-* **4枚目【変化の直後】**: `t.00031` (TR=155)
-* **5枚目【終点】**: `t.00059` (TR=295: 完全硬直)
+## 3. 根本病理の特定 (Fundamental Pathophysiology)
 
-![Sample 8 Structural Stiffness 0](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00000.png)
-![Sample 8 Structural Stiffness 29](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00029.png)
-![Sample 8 Structural Stiffness 30](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00030.png)
-![Sample 8 Structural Stiffness 31](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00031.png)
-![Sample 8 Structural Stiffness 59](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00059.png)
+物理解析エンジンは、中間流路の結合剛性を解析することで、急性梗塞の発生機序を以下のように特定しました。
 
-### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+* **梗塞の発生メカニズム**:
+    タイムステップ **`t=30`（10:05:00）**において、側頭葉、前頭前野、頂頭葉、視覚野から運動野（`Motor_Cortex`）へ流れ込む血流量（BOLD信号流量）が一斉に約95%急減（平均約 `540` から `29` 前後へ）しました。
+    一方で、運動野から他領域への血流流出（`Motor_Cortex` -> 他ノード）は `570〜590` 前後の高水準を維持したため、運動野の内部は瞬間的に「気血の真空状態（局所的な大出血・血流枯渇）」に陥りました。この物理的流量のインバランスこそが、組織を壊死に至らしめる根本病理（中大脳動脈閉塞）の証拠です。
 
-健常な脳の部位同士が、有機的かつ完全な双方向性のフィードバックループを形成しているため、数学的には循環取引と同じ「極限振動（スペクトル半径 1.0 ＝ 脳部位同士の双方向の過剰なフィードバック）」として捉えられている。しかしネットワークトポロジーを見ると、TR=150以降、特定のノード（Motor Cortex）に向かう流入エッジが極端に細くなり、有機的な結びつきが失われている。
+---
 
-![Sample 8 System Stability](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)
+## 4. 物理・数学エンジンによる詳細臨床データ（数理証明）
 
-* **1枚目【始点】**: `t.00000`
-* **2枚目【変化の直前】**: `t.00029` (TR=145)
-* **3枚目【変化の当該時点】**: `t.00030` (TR=150: 梗塞発生)
-* **4枚目【変化の直後】**: `t.00031` (TR=155)
-* **5枚目【終点】**: `t.00059` (TR=295)
+物理数理エンジンが算出した定量的な臨床データに基づき、本システムの構造的破壊を数理的に証明します。
 
-![Sample 8 Network Topology 0](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 8 Network Topology 29](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00029.png)
-![Sample 8 Network Topology 30](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00030.png)
-![Sample 8 Network Topology 31](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00031.png)
-![Sample 8 Network Topology 59](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00059.png)
+### 4.1. 脳血流（質量）の局所遮断とキルヒホッフ保存則の検証
 
-### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+システム全体の流入・流出の不整合を示す `System Conservation Residual`（相対漏洩率）は、全期間において **`0.0`** を維持しています。これは、システム境界の外側への「物質的な漏洩」はないものの、内部トポロジーにおける運動野ノードのみが血流不足に陥っていることを示します。
 
-Sample 8 では、病変が発生する中盤（TR=150付近）から突如としてエントロピー損失（$T \Delta S$：赤色の層）が激増し、自由エネルギーがマイナス領域へと深く沈み込んでいる。特定部位への血流遮断がネットワーク内に強烈な不均衡を生み出し、システム全体として有意義な情報処理を行うポテンシャルが致命的に損なわれたことを示す完璧な証明であり、熱力学的な死（Heat Death ＝ 脳が有意義な情報処理を行うポテンシャルの致命的な喪失、宇宙が最後に行き着く静寂のようなエネルギーの完全な均質化と無秩序化）を意味する。
+* **マクロ・フォレンジック・ダッシュボード (Macro Forensics):**
+    ![Macro Forensics](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
-*(上: Sample 0 正常な経済成長 ／ 下: Sample 8 脳の熱力学的な死)*
-![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-![Sample 8 Thermodynamics](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+### 4.2. 結合剛性の急激な変動（剛性ロック）と主成分ベクトルの極端な偏在
 
-### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+異常発生の瞬間、システムの固有構造に劇的な地殻変動（Regime Shift）が発生しています。
 
-Z-Score（過去の平均からの突出度合い）の3Dサーフェスにおいて、TR=150を境に運動野への流入成分が突如として深淵（マイナスのスパイク）へと沈み込み、局所的な「虚血・壊死」が検知されている。さらに 情報幾何学的変位（KL Drift ＝ 血流の欠落によるネットワークの確率分布の局所的な崩壊）において、運動野への情報流路が絶たれたことでネットワークの確率分布が局所的に崩壊し、巨大なスパイクが空間に突き刺さっている。血流（質量）の欠落がそのまま「情報幾何学的な死」として可視化されている。
+* **剛性行列のシネマティック5定点シーケンス:**
+  * **① Start (t=0 / 10:00:00):**
+        ![Stiffness t0](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+        無垢な初期状態。脳全体の機能的結合は均一で、動的な結合剛性（しなやかさ）を維持しています。
+  * **② Just Before Change (t=29 / 10:04:50):**
+        ![Stiffness t29](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00029.png)
+        閉塞直前。PCAの第1主成分（PC1）説明比率は **`37.60%`**、固有値は **`6296.66`** であり、脳全体にエネルギーが分散しています。
+  * **③ The Exact Point of Change (t=30 / 10:05:00):**
+        ![Stiffness t30](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00030.png)
+        **【急性梗塞発症の瞬間】** 運動野への流入路が閉塞。PC1説明比率が **`94.72%`** （固有値 **`201,402.52`**）へ爆発的に跳ね上がり、主成分ベクトルは `00_Motor_Cortex` に **`-0.8942`** という圧倒的な負の負荷で極偏在しました。
+  * **④ Immediately After Change (t=31 / 10:05:10):**
+        ![Stiffness t31](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00031.png)
+        閉塞直後。PC1比率は **`94.71%`**、運動野負荷は **`-0.8943`** に固着し、運動野がシステム全体の自由度（動的変動）を支配（剛性ロック / 血栓化）し続けています。
+  * **⑤ End (t=59 / 10:09:50):**
+        ![Stiffness t59](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00059.png)
+        最終状態。PC1比率は **`92.33%`** と依然として極めて高い値を維持しており、運動野の「不可逆的な機能喪失（脳梗塞の固定化）」を裏付けています。
 
-![Sample 8 3D Z-Score](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
-![Sample 8 3D KL Drift](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+* **PCA 主要軸比率:**
+    ![PCA Ratio](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_2__principal_axes_ratio.png)
 
-## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
+### 4.3. ネットワーク・トポロジーと接続性の虚脱（スペクトル半径の数学的限界とトポロジー解析）
 
-* **偽陽性の可能性:** もしこれが実際のfMRIデータであった場合、特定の脳回に対するBOLD信号の流入だけが95%消失し、異常な共振を伴っている以上、単なる測定ノイズではなく、明らかな「器質的病変（虚血・梗塞）」である可能性が極めて高い。
-* **追加検証要件:** TLUが「 Universal Physics Engine 」であることを証明した。金融の「横領」、交通網の「デッドロック」、脳の「脳卒中」は、すべて「ネットワークにおける質量の欠損と熱力学的崩壊」という同一の物理方程式でシームレスに診断できることが確認された。
+* **システム安定性指標 (Spectral Radius):**
+    ![System Stability](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)
+
+* **スペクトル半径「1.00」の数学的背景（確率遷移マトリクスによる制約）：**
+    生きている脳ネットワークは流出ゼロの領域が存在しないため、確率遷移マトリクス（行要素の和 1.0）の性質から、スペクトル半径は常に 1.0 に固定される。
+    したがって、安定性指標（スペクトル半径）そのものからは病変を検知できない。
+    脳梗塞という「病変（トポロジーの破壊）」は、スペクトル半径ではなく、**「接続エッジの急激な虚脱（流入の遮断）」および「結合剛性の剛性ロック（PC1の偏在）」**によって物理的に証明される。
+
+* **真のトポロジー崩壊（接続エッジの物理的消退）：**
+  一方で、運動野（`00_Motor_Cortex`）の入力閉塞に伴う物理的なトポロジーの破壊は、時系列ネットワーク構造図における**接続エッジの急激な虚脱（流入エッジの遮断）**として明確に可視化されています。
+
+* **ネットワーク・トポロジー時系列の5定点シーケンス:**
+  * **① Start (t=0 / 10:00:00):**
+        ![Topology t0](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00000.png)
+  * **② Just Before Change (t=29 / 10:04:50):**
+        ![Topology t29](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00029.png)
+  * **③ The Exact Point of Change (t=30 / 10:05:00):**
+        ![Topology t30](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00030.png)
+        **【流入遮断のトポロジー変化】** 運動野（`00_Motor_Cortex`）へ向かう流入エッジが極端に細く消退し、トポロジー的な結合が断裂した様子が可視化されています。
+  * **④ Immediately After Change (t=31 / 10:05:10):**
+        ![Topology t31](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00031.png)
+  * **⑤ End (t=59 / 10:09:50):**
+        ![Topology t59](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00059.png)
+
+### 4.4. 代謝エントロピーと自由エネルギーの圧迫崩壊
+
+システム全体の統計物理指標は、深刻な「スタミナ（自由エネルギー）の枯渇」を告げています。
+全期間を通じたエントロピー $S$ の平均は **`9.36`** (標準偏差 `0.65`)、自由エネルギー $F$ の平均は **`413,922.35`** (標準偏差 `107,638.13`) ですが、t=30 の閉塞以降、自由エネルギー $F$ は急激に低下し続け、最終ステップ（t=59）では最小値 **`167,265.39`** にまで叩き落とされています。これは、活動を維持するための気血ポテンシャルがしっかりと枯渇（熱死・代謝停止）したことを意味します。
+
+* **熱力学エネルギースタック:**
+    ![Thermodynamics Energy Stack](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+* **T-S ダイアグラム:**
+    ![T-S Diagram](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+
+### 4.5. 3D立体可視化による虚血病巣の特定
+
+時間（Time Step）× 空間（ノード）の3次元情報幾何学・統計プロットは、閉塞の発生箇所をピンポイントで抉り出しています。
+
+* **3D Micro Z-Score (Position):**
+    ![3D Micro Z-Score](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+* **3D Micro KL Drift:**
+    ![3D Micro KL Drift](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+
+3D Micro Z-Score プロット（`002_2_2_2__3d_micro_z_score_X.png`）において、t=30 の瞬間に `00_Motor_Cortex` の座標上に **`51.04`** という天を突く「超高圧の警告スパイク」が聳え立っています。
+また、周囲の他ノード（`01_Parietal_Lobe` `17.12`、`02_Prefrontal_Cortex` `12.35` 等）も同期して異常圧力を示しており、運動野の閉塞（虚血）がもたらした強烈な機能的ひずみが脳全体（全経絡）に津波のように波及した動的プロセスが完璧に記録されています。
+
+---
+
+## 5. 局所治療処方箋 (Optimal Treatment / LQR制御)
+
+* **治療方針: 閉塞パスの動的再開通（血栓溶解）および LQR フィードバック制御による補助灌流**
+* **LQR 感度介入（経絡秘孔の特定）:**
+    最適制御理論（LQR）に基づく感度解析において、本ネットワークでは `Motor_Cortex` が可観測・可制御の介入ハブに指定されており、治療感度指標（`fk_total_ripple`）は **`41.5234`** を示しています。
+    特に、t=30 における `00_Motor_Cortex` の外力変化は `02_Prefrontal_Cortex` に対して最大感度（`fk_max_impact = 7.8304`）を持っており、ここがシステム崩壊を防ぐための「ツボ（介入点）」となります。
+
+* **具体的な治療介入計画:**
+    1. **超急性期血栓溶解療法 (Thrombolysis / tPA 投与シミュレーション):**
+        閉塞発生から数分以内（シミュレーション上の t=30〜33）に、`Motor_Cortex` への流入経路の結合剛性を強制的に引き下げる（血管拡張・血栓溶解）介入を行い、流入量を `540` 前後の正常ベースラインへ復帰させます。これにより、PC1寄与率を正常範囲（約37%）に引き下げ、運動野の壊死を未然に防ぎます。
+    2. **経頭蓋磁気刺激 (TMS) による位相補助 (LQR Feedback Control):**
+        LQR 感度行列に基づき、前頭前野（`02_Prefrontal_Cortex`）および頂頭葉（`01_Parietal_Lobe`）に対して「逆位相の刺激パルス」を動的に印加します。これにより、運動野の虚血領域の機能的負担を側副路経由で一時的に代償・サポートし、自由エネルギーの致命的崩壊を防ぎます。
+        ![Control LQR](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_3__control_lqr_performance_space.png)
+
+---
+
+## 6. 🚨 Forensic Alert & 反証可能性 (Falsification Analytics)
+
+### 6.1. 茹でガエル現象（モデル汚染）とアーティファクトのトリアージ
+
+* **統計モデルの限界とトリアージ:**
+    Z-Score 統計モデルは、t=30 で Z=51.04 という最大警告を発報した後、t=31 には **`6.31`**、t=32 には **`4.54`** と、警告レベルを急激に平坦化させてしまいます。これは、統計モデルが「虚血状態」を新しいベースラインとして急速に順応（モデル汚染）させてしまうためです。
+    しかし、物理不変量である「自由エネルギーの持続的降下（`167,265.39` への虚脱）」および「剛性行列の PC1 異常偏在（~92.3%）」は、病的状態が継続していることを頑健に告発し続けます。トリアージにおいて、沈黙しつつある Z-Score を棄却し、現在進行形の深刻な虚血梗塞状態であると診断を確定します。
+* **アーティファクト（ノイズ）との区別:**
+    fMRI 測定における「被験者の頭部運動（ヘッドノイズ）」や「スキャナーの振動」は、脳の全ノードに対して同調的かつ均一な Z-Score の変動（同等のノイズ）をもたらします。一方、本アノマリーのように「PC1 が運動野単一ノードに 94.72% 集中し、他ノードと極端な方向性の非対称性を描く」という剛性構造の局所破壊は物理的にアーティファクトでは再現不可能です。よって、これを真の脳梗塞病理と判定します。
+
+### 6.2. 本診断に対する反証条件 (Falsifiability)
+
+もし「本脳ネットワークの血流低下は病的梗塞（中大脳動脈閉塞）ではなく、正常な生理機能またはアーティファクトである」と反証するためには、以下の**「データ境界の外側にある客観的物理証拠原本」**を提示する必要があります：
+
+1. **DWI（拡散強調画像）および T2 強調 MRI 画像原本の提示:**
+    t=30（10:05:00）に対応するタイムスタンプで撮影された脳の拡散強調画像（DWI）において、運動野（`Motor_Cortex`）領域に「細胞毒性水腫」を示す高信号（白い輝度変化）が観察されず、局所水分子の拡散能（ADCマップ）の低下も認められないことの物理的証明。
+2. **脳血管造影（MRA / CTA）の生画像データ原本:**
+    被験者の頭頭部MRA（磁気共鳴血管造影）またはCTA（CT血管造影）において、運動野に血液を供給する中大脳動脈（MCA）のM4/M5遠位枝がしっかりと開通しており、器質的閉塞（血栓・塞栓）や高度狭窄が一切認められないことを示す血管造影生ログの提示。

@@ -1,85 +1,115 @@
-# Sample 3: Unbalanced Journal Mistake
+# 🔬 Anomaly Detection & Financial Health Report (Sample 0)
 
-> [!NOTE]
-> **Disclaimer regarding Proof of Concept Experiments**
-> The data analyzed in this report is not from a real-world company. It is dummy data designed to intentionally reproduce specific pathological states for verification purposes. This sample (Sample_3_Unbalanced_Mistake) is for proving the physical mass deficit caused not by intentional fraud, but by a "Debit != Credit" imbalance due to manual transcription errors or "rounding discrepancies" during legacy system integrations.
+## 1. Executive Summary
+
+* **Overall Judgment:** **Healthy / Normal**
+* **Severity:** 🟢 **NORMAL (No anomalies)**
+* **Summary:**
+    This system maintains a healthy state with no discrepancies in either asset balance trends (B/S) or transaction flows (P/L). No signs of wash trading (fictitious recirculation), fund outflow (off-book transactions), or bookkeeping errors were detected.
+
+    In the time-series estimation process, the liquidity Z-Score temporarily exceeded the threshold of `3.0` in April, June, July, and December, **reaching a maximum of `4.90` in July**. However, this is judged to be a **"Statistical False Positive"** caused by statistical covariance instability due to lack of initial data (cold start problem) or seasonal concentration of business transactions at the end of fiscal periods.
+
+    The **"System Conservation Residual (Kirchhoff Residual)" based on physical conservation laws remains at `0.00`** throughout the period, mathematically proving that no off-book fund outflows have occurred.
 
 ---
 
-# 🔬 Meta-Analysis Synthesis Report / Laboratory Findings
+## 2. Limitations of Traditional Audits
 
-## 1. Executive Summary
-This system (financial domain) is exhibiting a **Conservation Violation** in some transactions, but the overall system stiffness (suspension) has escaped fatal destruction and is diagnosed as a **WARNING: Data Corruption** state. A total mass of `$4,440.45` has disappeared from the system into an unknown node, but as physical circumstantial evidence indicates, it has been mathematically proven that this is not "malicious continuous embezzlement" but rather a "single-shot/accidental human error (journal mistake/data corruption)."
+Traditional accounting audits that monitor only upward trends in revenue or equity struggle to detect potential cash stagnation or minor leakages to off-book accounts. The traditional B/S and P/L trends of this system are shown below:
 
-## 2. Limitations of Traditional Perspective
+* **B/S Assets/Capital Trends & Block Diagrams:**
+    ![B/S Trend](../../../samples/Sample_0_Healthy/readme_plots/000_0_1__BS_Trend.png)
+    ![B/S Block Total](../../../samples/Sample_0_Healthy/readme_plots/000_0_1__BS_Block_Total.png)
+* **P/L Revenue/Expenses Trends & Waterfall Diagrams:**
+    ![P/L Trend](../../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Trend.png)
+    ![P/L Waterfall Total](../../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Waterfall_Total.png)
 
-**[Week 52 Profit and Loss (P/L) & Balance Sheet (B/S)]**
-![Sample 3 PL Waterfall](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__PL_Waterfall_Total.png)
-![Sample 3 BS Block](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__BS_Block_Total.png)
+While these appear healthy at first glance because cash is increasing and SG&A expenses are expanding in proportion to revenue, proving true security requires multi-dimensional validation using the trade network topology and thermodynamic parameters.
 
-When a one-sided entry (Debit != Credit) occurs, traditional accounting software forcibly balances it as a temporary "suspense payment" or "unaccounted-for funds." As a result, the net income shows a surplus (+$60,660.86), and the static B/S balance also matches, creating the illusion that the business is running normally. Without TLU's dynamic analysis, this data corruption would silently continue to progress.
+---
 
 ## 3. Fundamental Pathophysiology
-The root cause of this sample is a "mismatch of debit and credit amounts (rounding discrepancy)" intentionally planted in the dummy data generation logic.
-* **Modus Operandi of the Crime (Error):**
-  * Proper processing was neglected for partial uncollectibility due to a business partner's financial deterioration or settlement fees.
-  * In `E_002830` etc., an inconsistency occurred during data linkage between systems, such as a credit (AR decrease) of `$1642.03` against a debit (Cash increase) of `$960.62`.
-  * As a result, the difference "disappeared" from the system, and TLU's engine processed it as a mass transfer to a special node called `UNKNOWN_LEAK`.
 
-## 4. Physical and Mathematical Proof
+In this sample, **no anomalies (pathologies) were detected.**
 
-### 4.1. Macro Forensics & Structural Stiffness
+All transaction flows between the management, sales, manufacturing, and other departments satisfy the conservation laws. There are no redundant recirculation loops or abnormal concentrations on specific transaction relationships, indicating normal business activities.
 
-Intermittent spikes (maximum value `1038.49`) of Macro Absolute Residuals (the balancing figure that no longer matches on the books / disappeared amount) are observed, centered around Week 42. However, the "Rigid Lock (cash shortfall)" that occurred in Sample 2 (Embezzlement) does not happen. The stiffness matrix (bookkeeping integrity and resilience) temporarily ripples red, but immediately self-recovers to its original healthy mosaic pattern. Also, abnormal resonance of external force has not occurred. This is physical proof that a single-shot input mistake does not have enough energy to destroy the entire system, and the suspension can absorb the shock.
+---
 
-![Sample 3 Macro Forensics](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_1__macro_forensics_dashboard.png)
-![Sample 3 External Force](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_1_6__3d_dynamics_external_force.png)
+## 4. Quantitative Data from the Mathematical Analysis Engine
 
-* **1st Image [Start]**: `t.00000` (Normal stiffness)
-* **2nd Image [Just Before Change]**: `t.00018` (Week 19)
-* **3rd Image [At the Time of Change]**: `t.00019` (Week 20: Mistake occurs, temporary ripple)
-* **4th Image [Just After Change]**: `t.00020` (Week 21: Self-recovery)
-* **5th Image [End]**: `t.00051` (Week 52: No rigidity)
+### 4.1. Verification of Mass Conservation (Kirchhoff Residual)
 
-![Sample 3 Structural Stiffness for Week 1](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00000.png)
-![Sample 3 Structural Stiffness for Week 19](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00018.png)
-![Sample 3 Structural Stiffness for Week 20](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00019.png)
-![Sample 3 Structural Stiffness for Week 21](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00020.png)
-![Sample 3 Structural Stiffness for Week 52](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00051.png)
+The `System Conservation Residual`, which shows the difference between cash inflows and outflows for the entire system, is **`0.00` (no error)** throughout the period, proving there are no fraudulent off-book fund transfers.
 
-### 4.2. Topological Anomaly / Spectral Radius
+* **Macro Forensics Dashboard:**
+    ![Macro Forensics](../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
-Max Spectral Radius remains `0.0000`, and loops like self-reinforcing wash trades (Sample 1) do not exist. The overall topological structure of the system is maintained.
+### 4.2. Connection Stiffness & Principal Component Analysis (Stiffness & PCA)
 
-![Sample 3 System Stability](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_1_2__system_stability.png)
+In the Stiffness Matrix analysis, a flexible, unbiased connection is built between account titles after the start of transactions. No cash stagnation (stiffness lock) has occurred between specific accounts. In addition, the Eigenvalue Ratio in the Principal Component Analysis (PCA) is smoothly distributed, showing no extreme transaction synchronization between specific pairs.
 
-* **1st Image [Start]**: `t.00000`
-* **2nd Image [Just Before Change]**: `t.00018`
-* **3rd Image [At the Time of Change]**: `t.00019` (Week 20: Micro leak to unknown node)
-* **4th Image [Just After Change]**: `t.00020`
-* **5th Image [End]**: `t.00051`
+* **Structural Stiffness Matrix (t=6):**
+    ![Stiffness Month 7](../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00006.png)
+* **PCA Principal Axes Ratio:**
+    ![PCA Ratio](../../../samples/Sample_0_Healthy/readme_plots/000_2_2__principal_axes_ratio.png)
 
-![Sample_3_Unbalanced_Mistake Network Topology W1](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample_3_Unbalanced_Mistake Network Topology W19](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00018.png)
-![Sample_3_Unbalanced_Mistake Network Topology W20](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00019.png)
-![Sample_3_Unbalanced_Mistake Network Topology W21](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00020.png)
-![Sample_3_Unbalanced_Mistake Network Topology W52](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00051.png)
+### 4.3. Topological Analysis & Wash Trade Elimination (Spectral Radius)
 
-### 4.3. Thermodynamic Energy Stack
-The frictional heat and entropy loss of the entire system are limited, and it is not heading towards fatal thermodynamic death. Although there are localized mass deficits, the transition of total energy approximates the baseline.
+The "Spectral Radius," which is the maximum eigenvalue of the adjacency connection matrix, remains at **`0.00`** throughout the period. This proves that no cash recirculation loops (such as fake revenue) exist.
 
-![Sample 3 Thermodynamics](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+* **System Stability Index (Spectral Radius):**
+    ![System Stability](../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
 
-### 4.4. 3D Micro Z-Score & KL Drift
+### 4.4. Thermodynamic Indicators & Entropy (Entropy & Free Energy)
 
-In the 3D surface of the Z-Score (degree of protrusion from past averages), at the moment the first "rounding discrepancy" occurs in Week 20, a sharp spike protrudes toward the `UNKNOWN_LEAK` node. Because the past standard deviation is zero, this "mutation from 0 to 1" is easily made transparent in traditional statistical monitoring, but TLU's topology and information geometry (KL Drift = generation of new noise uncatchable by past standard deviations) captures this without fail as the destruction of a probability distribution.
+Internal Energy (Gross Activity $U$) increased from `2,303,842.32` in January to `4,132,519.04` in December. Parallel to this, Free Energy (Free Energy $F$), which shows the effective potential, steadily increased from `2,303,842.32` to `3,869,999.47`.
 
-![Sample 3 3D Z-Score](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
-![Sample 3 3D KL Drift](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+There is no abnormal increase in frictional heat (entropy $T \times S$) due to useless round-trip transactions, resulting in a gentle dissipation consistent with commercial payment cycles (approximately 30 to 90 days).
 
-## 5. ⚠️ Falsification Analytics
+* **Thermodynamics Energy Stack:**
+    ![Thermodynamics Energy Stack](../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+* **T-S Diagram:**
+    ![T-S Diagram](../../../samples/Sample_0_Healthy/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
-* **Possibility of False Positives:** It is highly likely that this data is not an "intentional embezzlement" but rather a "business mistake of writing off accounts receivable without recording the expense against a shortfall in payment due to a business partner's dishonored bill or settlement fee" or a "specification bug (rounding inconsistency) when migrating data from a legacy system to a new system."
-* **Additional Verification Requirements:**
-  1. For the transactions identified in Chapter 2 (`E_002786`, `E_002811`, `E_002830`), reconcile the original invoice copies with the actual bank account receiving history (Bank Statements) to determine whether the actual received amount matches the debit or credit side.
-  2. Audit whether there is a fatal validation flaw in the ERP system's input form that "allows forced saving even if the debit and credit amounts do not match."
+### 4.5. Multi-Angle Analysis via 3D Plots
+
+The 3D plots visualize the stability of the system across all directions of time and space.
+
+* **① 3D Kinetic Phase Space Trajectory:**
+    ![3D Phase Portrait](../../../samples/Sample_0_Healthy/readme_plots/000_1_8__phase_portrait_3d.png)
+    The trajectory smoothly converges to a stable attractor, with no distortion or burst due to recirculation.
+* **② 3D Local Thermodynamics Plots:**
+    ![3D Local Entropy](../../../samples/Sample_0_Healthy/readme_plots/001_1_2_1__3d_local_entropy.png)
+    ![3D Local Temperature](../../../samples/Sample_0_Healthy/readme_plots/001_1_2_2__3d_local_temperature.png)
+  * **Local Entropy ($s_i$):** Accounts with only a single outflow destination are mathematically `0.00`. Only the cash node (`ACC_Cash`), which has multiple outflow destinations (expense payments and purchases), transitions at low entropy within the normal range (1.18 to 1.86 bits, average of approximately 1.51 bits).
+  * **Local Temperature ($T_i$):** Indicates the time-series volatility of account balances. Since there are no rapid round-trips of cash or discrepancies, the temperature distribution is low and stable across all periods.
+* **③ 3D Micro Information Geometry Plot:**
+    ![3D Micro KL Drift](../../../samples/Sample_0_Healthy/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+    The KL Drift is close to zero for all nodes, and no spikes indicating the onset of fraud were detected.
+
+---
+
+## 5. LQR & Operations
+
+* **Treatment Plan:** **No Treatment Required**
+* **LQR Intervention:** Since the system is in an optimal balance state, no feedback control intervention is needed.
+    ![Sample 0 LQR Control](../../../samples/Sample_0_Healthy/readme_plots/004_1_3__control_lqr_performance_space.png)
+* **Recommended Action:**
+    Structural health has been fully proven in the data. We recommend that the audit and management teams focus resources on verifying physical existence outside the system—such as checking the original bank balance certificates directly—rather than investigating data integrity.
+
+---
+
+## 6. 🚨 Alert Triage & Falsifiability
+
+### 6.1. False Positive Assessment
+
+* **Alert Details:** Z-Score exceeded the warning threshold of `3.0` in April (`4.7943`), June (`3.3940`), July (`4.90`), and December (`3.8833`).
+* **Reason for Judgment:**
+    This is a transient false positive of the statistical model. It is judged that incomplete covariance estimation in the initial steps and temporary concentration of funds transfers (due to seasonal factors) were exaggerated. Since the conservation law residual remains perfectly at `0.00` and no recirculation topology is formed, these alerts can be safely dismissed as normal fluctuations.
+
+### 6.2. Falsifiability
+
+To overturn this diagnosis (healthy), either of the following objective evidences is required:
+1. **Discrepancy in Bank Account Balances:** A discrepancy between the ledger cash balance and the original bank passbook/statement obtained directly from the financial institution.
+2. **Existence of Off-Book Accounts:** The existence of unregistered accounts or external entities outside the known transaction network designed to receive funds leaked from the system.

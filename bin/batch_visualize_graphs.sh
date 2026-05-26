@@ -26,8 +26,16 @@ while [[ $# -gt 0 ]]; do
       shift
       ;;
     *)
-      # Assume Theme fallback backward compatibility
-      export TLU_THEME="$1"
+      if [[ "$1" == --* ]]; then
+          echo "[ERROR] Unrecognized flag: $1"
+          echo "Usage: $0 [--target_env <dir>] [--sys_params <file>] [--interactive] [target_env_dir | theme]"
+          exit 1
+      elif [ -d "$1" ]; then
+          export TARGET_ENV="$1"
+      else
+          # Assume Theme fallback backward compatibility
+          export TLU_THEME="$1"
+      fi
       shift
       ;;
   esac

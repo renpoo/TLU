@@ -36,7 +36,7 @@ ${TLU_PY} -m src.filters._0_0_generate_dummy_market \
     --num-users "${NUM_USERS}" \
     --num-stocks "${NUM_STOCKS}" \
     --wash-trade-prob "${DUMMY_WASH_TRADE_PROB:-0.05}" \
-    --pump-dump-prob "${DUMMY_PUMP_DUMP_PROB:-0.02}" \
+    --panic-dump-prob "${DUMMY_PUMP_DUMP_PROB:-0.02}" \
     --out-initial-state "${TLU_PROJECT_ROOT}/${ENV_DIR}/ephemeral/_initial_state_labels.csv" \
     > "${OUTPUT_FILE}"
 

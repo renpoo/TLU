@@ -1,140 +1,43 @@
-# TLU Meta-Diagnosis Report (Attending Physician's Summary)
+# TLU Meta-Diagnosis Report (Statistical Upgrade V2)
 
 **Target Environment:** `samples/Sample_9_fMRI_Seizure`
-**Date Analyzed:** 2026-05-03 10:44:54
+**Date Analyzed:** 2026-05-21 07:25:23
 
 ## 1. Final Diagnosis
 
-### ⚠️ COMPOSITE PATHOLOGY DETECTED
-The system is suffering from multiple overlapping structural failures.
+### 🟠 Topological Feedback Loop (Wash Trade / Resonance)
 
-### 🟠 Topological Feedback Loop (Wash Trade)
 - **Severity:** HIGH
-- **Evidence:** Spectral Radius reached 1.0000 (Threshold: 0.6).
-- **Interpretation:** An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading).
-
-### 🟠 Thermodynamic Energy Depletion (Embezzlement/Leak)
-- **Severity:** HIGH
-- **Evidence:** Relative Free Energy Ratio sank to -5.5882 (Threshold: -0.1). Raw F: -4295.29
-- **Interpretation:** Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale.
+- **Evidence:** Max Spectral Radius: 1.00.
+- **Interpretation:** An artificial loop of funds or extreme resonance has formed in the network.
 
 ---
-## 2. Scale-Invariant Diagnostic Metrics
 
-| Physical Domain | Extracted Metric | Value | Threshold |
-|-----------------|------------------|-------|-----------|
-| Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 1e-06 |
-| Control Theory  | Max Spectral Radius      | 1.0000 | >= 0.6 |
-| Thermodynamics  | Relative Free Energy Ratio| -5.5882 | < -0.1 |
-| Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
+## 2. Statistical Array Forensics (Time-Series Diagnostics)
 
-> *Generated automatically by the TLU Meta-Diagnosis Engine.*
+### Entropy (S) Dynamics
 
-<!--
-<LLM_DIAGNOSTIC_CONTEXT>
-{
-  "timestamp": "2026-05-03T10:44:54.276437",
-  "environment": "samples/Sample_9_fMRI_Seizure",
-  "physics_metrics": {
-    "max_abs_residual": 0.0,
-    "mean_gross_activity": 861.2969999999999,
-    "relative_leak_ratio": 0.0,
-    "max_spectral": 1.0,
-    "min_free_energy": -4295.2928,
-    "min_relative_free_energy": -5.588217973290466,
-    "max_z_score": 0.0,
-    "max_leak_location": "Time: 2024-01-01T10:00:00"
-  },
-  "detected_pathologies": [
-    {
-      "pathology": "Topological Feedback Loop (Wash Trade)",
-      "severity": "HIGH",
-      "evidence": "Spectral Radius reached 1.0000 (Threshold: 0.6).",
-      "interpretation": "An artificial loop of funds has formed in the network, creating infinite mathematical resonance. This is the structural signature of cyclical fraud (e.g., Wash Trading)."
-    },
-    {
-      "pathology": "Thermodynamic Energy Depletion (Embezzlement/Leak)",
-      "severity": "HIGH",
-      "evidence": "Relative Free Energy Ratio sank to -5.5882 (Threshold: -0.1). Raw F: -4295.29",
-      "interpretation": "Despite high transaction volume, the operational 'blood' of the system is leaking outwards. The network's capacity to perform work has collapsed relative to its scale."
-    }
-  ],
-  "financial_baseline": {
-    "week": "2024-01-01T10:09:50",
-    "assets": 0.0,
-    "liabilities": 0.0,
-    "equity": 0.0,
-    "net_income": -1.1641532182693481e-10,
-    "total_liab_eq": -1.1641532182693481e-10,
-    "revenue": 0.0,
-    "expense": 1.1641532182693481e-10,
-    "is_balanced": true,
-    "bs_items": [],
-    "pl_items": [
-      [
-        "Motor_Cortex",
-        "Expense",
-        -61.70999999996275
-      ],
-      [
-        "Parietal_Lobe",
-        "Expense",
-        20.46999999997206
-      ],
-      [
-        "Prefrontal_Cortex",
-        "Expense",
-        -184.7499999999418
-      ],
-      [
-        "Temporal_Lobe",
-        "Expense",
-        452.1700000000419
-      ],
-      [
-        "Visual_Cortex",
-        "Expense",
-        -226.17999999999302
-      ]
-    ],
-    "tb_items": [
-      [
-        "Motor_Cortex",
-        "Expense",
-        184194.14000000007,
-        184255.85000000003,
-        -61.70999999996275
-      ],
-      [
-        "Parietal_Lobe",
-        "Expense",
-        184441.46,
-        184420.99000000002,
-        20.46999999997206
-      ],
-      [
-        "Prefrontal_Cortex",
-        "Expense",
-        184115.93000000002,
-        184300.67999999996,
-        -184.7499999999418
-      ],
-      [
-        "Temporal_Lobe",
-        "Expense",
-        362403.6800000002,
-        361951.5100000002,
-        452.1700000000419
-      ],
-      [
-        "Visual_Cortex",
-        "Expense",
-        184118.61,
-        184344.78999999998,
-        -226.17999999999302
-      ]
-    ]
-  }
-}
-</LLM_DIAGNOSTIC_CONTEXT>
--->
+- **Baseline (Mean / Median):** 9.10 / 9.52
+- **Volatility (Std Dev):** 1.00
+- **Distribution Shape (Skew / Kurtosis):** -0.48 / -1.33
+- **Anomaly Count (Z > 3.0):** 0 times
+
+### Free Energy (F) Dynamics
+
+- **Baseline (Mean / Median):** 496,949.39 / 496,711.15
+- **Volatility (Std Dev):** 779.13
+- **Distribution Shape (Skew / Kurtosis):** 1.94 / 3.91
+- **Anomaly Count (Z > 3.0):** 1 times
+
+### Topological & Conservation Constraints
+
+- **Max Spectral Radius:** 1.00
+- **Min Edge Stress:** 1.7878
+- **Relative Mass Leak Ratio:** 0.00
+
+## 3. Structural Evolution (Viscosity Classification)
+
+- **Viscosity Range:** `50000.00 ~ 50000.00`
+  - 🩸 **Diagnosis:** Thrombosis / High-Friction (Old-Generation Structure). The system relies on manual/human friction.
+
+> *Generated automatically by the TLU Meta-Diagnosis Engine (Statistical Upgrade).*

@@ -1,441 +1,13 @@
 [
   {
-    "week": "2020-W01",
-    "assets": 17497.31,
-    "liabilities": 13226.07,
-    "equity": 0.0,
-    "net_income": 4271.24,
-    "total_liab_eq": 17497.309999999998,
-    "revenue": 11688.16,
-    "expense": 7416.92,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        11648.77
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        11688.16
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        1577.3
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        5809.150000000001
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        5839.62
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        11688.16
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        1577.3
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        0.0,
-        11648.77,
-        11648.77
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        11688.16,
-        0.0,
-        11688.16
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        5839.62,
-        0.0,
-        5839.62
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        0.0,
-        1577.3,
-        -1577.3
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        11648.77,
-        5839.62,
-        5809.150000000001
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        11688.16,
-        11688.16
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        1577.3,
-        0.0,
-        1577.3
-      ]
-    ]
-  },
-  {
-    "week": "2020-W02",
-    "assets": 35833.25,
-    "liabilities": 24579.5,
-    "equity": 0.0,
-    "net_income": 11253.75,
-    "total_liab_eq": 35833.25,
-    "revenue": 30192.64,
-    "expense": 18938.89,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        22062.2
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        30192.64
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        2517.3
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        5640.610000000001
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        16421.59
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        30192.64
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        2517.3
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        0.0,
-        22062.2,
-        22062.2
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        30192.64,
-        0.0,
-        30192.64
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        16421.59,
-        0.0,
-        16421.59
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        0.0,
-        2517.3,
-        -2517.3
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        22062.2,
-        16421.59,
-        5640.610000000001
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        30192.64,
-        30192.64
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        2517.3,
-        0.0,
-        2517.3
-      ]
-    ]
-  },
-  {
-    "week": "2020-W03",
-    "assets": 59575.56999999999,
-    "liabilities": 38561.29,
-    "equity": 0.0,
-    "net_income": 21014.28,
-    "total_liab_eq": 59575.57,
-    "revenue": 54171.84,
-    "expense": 33157.56,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        35567.5
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        54171.84
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        2993.79
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        5403.73
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        30163.77
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        54171.84
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        2993.79
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        0.0,
-        35567.5,
-        35567.5
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        54171.84,
-        0.0,
-        54171.84
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        30163.77,
-        0.0,
-        30163.77
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        0.0,
-        2993.79,
-        -2993.79
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        35567.5,
-        30163.77,
-        5403.73
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        54171.84,
-        54171.84
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        2993.79,
-        0.0,
-        2993.79
-      ]
-    ]
-  },
-  {
-    "week": "2020-W04",
-    "assets": 81870.96,
-    "liabilities": 76955.6,
-    "equity": 0.0,
-    "net_income": 4915.360000000001,
-    "total_liab_eq": 81870.96,
-    "revenue": 78681.97,
-    "expense": 73766.61,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        46364.08
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        78681.97
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        30591.520000000004
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        3188.9900000000052
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        43175.09
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        18973.66
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        6683.35
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        78681.97
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        4934.51
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        0.0,
-        46364.08,
-        46364.08
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        78681.97,
-        0.0,
-        78681.97
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        43175.09,
-        0.0,
-        43175.09
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        0.0,
-        30591.520000000004,
-        -30591.520000000004
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        46364.08,
-        43175.09,
-        3188.9900000000052
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        18973.66,
-        0.0,
-        18973.66
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        6683.35,
-        0.0,
-        6683.35
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        78681.97,
-        78681.97
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        4934.51,
-        0.0,
-        4934.51
-      ]
-    ]
-  },
-  {
-    "week": "2020-W05",
-    "assets": 104382.12,
-    "liabilities": 90400.79000000001,
-    "equity": 0.0,
-    "net_income": 13981.329999999987,
-    "total_liab_eq": 104382.12,
-    "revenue": 104382.12,
-    "expense": 90400.79000000001,
+    "week": "2020-01",
+    "assets": 1066281.35,
+    "liabilities": 55952.86,
+    "equity": 1000000.0,
+    "net_income": 10328.490000000005,
+    "total_liab_eq": 1066281.35,
+    "revenue": 95968.3,
+    "expense": 85639.81,
     "is_balanced": true,
     "bs_items": [
       [
@@ -446,24 +18,29 @@
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        104382.12
+        95968.3
       ],
       [
         "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        33001.280000000006
+        "Asset",
+        468161.54
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        1000000.0
       ],
       [
         "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        1446.6499999999942
+        "Asset",
+        502151.51
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        57399.509999999995
+        53801.35
       ],
       [
         "ACC_Payroll_Exp",
@@ -478,12 +55,12 @@
       [
         "ACC_Sales_Revenue",
         "Revenue",
-        104382.12
+        95968.3
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        7344.27
+        6181.45
       ]
     ],
     "tb_items": [
@@ -497,30 +74,37 @@
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        104382.12,
+        95968.3,
         0.0,
-        104382.12
+        95968.3
       ],
       [
         "ACC_COGS",
         "Expense",
-        57399.509999999995,
+        53801.35,
         0.0,
-        57399.509999999995
+        53801.35
       ],
       [
         "ACC_Cash",
         "Asset",
+        500000.0,
+        31838.460000000003,
+        468161.54
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
         0.0,
-        33001.280000000006,
-        -33001.280000000006
+        1000000.0,
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        55952.86,
-        57399.509999999995,
-        -1446.6499999999942
+        555952.86,
+        53801.35,
+        502151.51
       ],
       [
         "ACC_Payroll_Exp",
@@ -540,430 +124,60 @@
         "ACC_Sales_Revenue",
         "Revenue",
         0.0,
-        104382.12,
-        104382.12
+        95968.3,
+        95968.3
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        7344.27,
+        6181.45,
         0.0,
-        7344.27
+        6181.45
       ]
     ]
   },
   {
-    "week": "2020-W06",
-    "assets": 129348.25,
-    "liabilities": 103679.98,
-    "equity": 0.0,
-    "net_income": 25668.270000000004,
-    "total_liab_eq": 129348.25,
-    "revenue": 132221.72,
-    "expense": 106553.45,
+    "week": "2020-02",
+    "assets": 1116579.92,
+    "liabilities": 86795.7,
+    "equity": 1000000.0,
+    "net_income": 29784.22000000003,
+    "total_liab_eq": 1116579.92,
+    "revenue": 212214.51,
+    "expense": 182430.28999999998,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        66667.12
+        86795.7
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        129348.25
+        187495.92
       ],
       [
         "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        30984.320000000007
+        "Asset",
+        449346.02999999997
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        1000000.0
       ],
       [
         "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        6028.539999999994
+        "Asset",
+        479737.97
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        72695.65999999999
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        18973.66
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        6683.35
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        132221.72
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        8200.78
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        0.0,
-        66667.12,
-        66667.12
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        132221.72,
-        2873.47,
-        129348.25
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        72695.65999999999,
-        0.0,
-        72695.65999999999
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        2873.47,
-        33857.79000000001,
-        -30984.320000000007
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        66667.12,
-        72695.65999999999,
-        -6028.539999999994
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        18973.66,
-        0.0,
-        18973.66
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        6683.35,
-        0.0,
-        6683.35
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        132221.72,
-        132221.72
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        8200.78,
-        0.0,
-        8200.78
-      ]
-    ]
-  },
-  {
-    "week": "2020-W07",
-    "assets": 149922.01,
-    "liabilities": 114823.15999999999,
-    "equity": 0.0,
-    "net_income": 35098.850000000006,
-    "total_liab_eq": 149922.01,
-    "revenue": 161256.81,
-    "expense": 126157.95999999999,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        75866.22
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        149922.01
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        25898.10000000001
-      ],
-      [
-        "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        13058.839999999982
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        88925.05999999998
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        18973.66
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        6683.35
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        161256.81
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        11575.890000000001
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        0.0,
-        75866.22,
-        75866.22
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        161256.81,
-        11334.8,
-        149922.01
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        88925.05999999998,
-        0.0,
-        88925.05999999998
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        11334.8,
-        37232.90000000001,
-        -25898.10000000001
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        75866.22,
-        88925.05999999998,
-        -13058.839999999982
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        18973.66,
-        0.0,
-        18973.66
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        6683.35,
-        0.0,
-        6683.35
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        161256.81,
-        161256.81
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        11575.890000000001,
-        0.0,
-        11575.890000000001
-      ]
-    ]
-  },
-  {
-    "week": "2020-W08",
-    "assets": 169376.80000000002,
-    "liabilities": 125651.54,
-    "equity": 0.0,
-    "net_income": 43725.26000000001,
-    "total_liab_eq": 169376.8,
-    "revenue": 188153.13,
-    "expense": 144427.87,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        76062.39000000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        169376.80000000002
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        31755.63000000001
-      ],
-      [
-        "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        17833.519999999975
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        104309.33999999998
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        18973.66
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        6683.35
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        188153.13
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        14461.52
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        10413.43,
-        86475.82,
-        76062.39000000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        188153.13,
-        18776.329999999998,
-        169376.80000000002
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        104309.33999999998,
-        0.0,
-        104309.33999999998
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        18776.329999999998,
-        50531.96000000001,
-        -31755.63000000001
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        86475.82,
-        104309.33999999998,
-        -17833.519999999975
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        18973.66,
-        0.0,
-        18973.66
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        6683.35,
-        0.0,
-        6683.35
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        188153.13,
-        188153.13
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        14461.52,
-        0.0,
-        14461.52
-      ]
-    ]
-  },
-  {
-    "week": "2020-W09",
-    "assets": 188562.45,
-    "liabilities": 155883.84999999998,
-    "equity": 0.0,
-    "net_income": 32678.600000000035,
-    "total_liab_eq": 188562.45,
-    "revenue": 216188.67,
-    "expense": 183510.06999999998,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        88031.04000000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        188562.45
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        46800.03000000001
-      ],
-      [
-        "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        21052.779999999984
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        119497.24999999999
+        118706.5
       ],
       [
         "ACC_Payroll_Exp",
@@ -978,49 +192,56 @@
       [
         "ACC_Sales_Revenue",
         "Revenue",
-        216188.67
+        212214.51
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        14741.84
+        14452.810000000001
       ]
     ],
     "tb_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        10413.43,
+        11648.77,
         98444.47,
-        88031.04000000001
+        86795.7
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        216188.67,
-        27626.219999999998,
-        188562.45
+        212214.51,
+        24718.59,
+        187495.92
       ],
       [
         "ACC_COGS",
         "Expense",
-        119497.24999999999,
+        118706.5,
         0.0,
-        119497.24999999999
+        118706.5
       ],
       [
         "ACC_Cash",
         "Asset",
-        27626.219999999998,
-        74426.25000000001,
-        -46800.03000000001
+        524718.59,
+        75372.56,
+        449346.02999999997
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        0.0,
+        1000000.0,
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        98444.47,
-        119497.24999999999,
-        -21052.779999999984
+        598444.47,
+        118706.5,
+        479737.97
       ],
       [
         "ACC_Payroll_Exp",
@@ -1040,430 +261,60 @@
         "ACC_Sales_Revenue",
         "Revenue",
         0.0,
-        216188.67,
-        216188.67
+        212214.51,
+        212214.51
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        14741.84,
+        14452.810000000001,
         0.0,
-        14741.84
+        14452.810000000001
       ]
     ]
   },
   {
-    "week": "2020-W10",
-    "assets": 198945.47,
-    "liabilities": 158840.21000000002,
-    "equity": 0.0,
-    "net_income": 40105.26000000001,
-    "total_liab_eq": 198945.47000000003,
-    "revenue": 238622.6,
-    "expense": 198517.34,
+    "week": "2020-03",
+    "assets": 1141743.53,
+    "liabilities": 99035.24000000002,
+    "equity": 1000000.0,
+    "net_income": 42708.29000000004,
+    "total_liab_eq": 1141743.53,
+    "revenue": 312673.28,
+    "expense": 269964.99,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        87148.94
+        99035.24000000002
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        198945.47
+        207787.59000000003
       ],
       [
         "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        49325.89000000002
+        "Asset",
+        463410.86999999994
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        1000000.0
       ],
       [
         "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        22365.37999999999
+        "Asset",
+        470545.07
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        131576.52
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        37218.869999999995
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        12052.11
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        238622.6
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        17669.84
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        22062.2,
-        109211.14,
-        87148.94
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        238622.6,
-        39677.13,
-        198945.47
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        131576.52,
-        0.0,
-        131576.52
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        39677.13,
-        89003.02000000002,
-        -49325.89000000002
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        109211.14,
-        131576.52,
-        -22365.37999999999
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        37218.869999999995,
-        0.0,
-        37218.869999999995
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        12052.11,
-        0.0,
-        12052.11
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        238622.6,
-        238622.6
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        17669.84,
-        0.0,
-        17669.84
-      ]
-    ]
-  },
-  {
-    "week": "2020-W11",
-    "assets": 205618.29000000004,
-    "liabilities": 156631.82,
-    "equity": 0.0,
-    "net_income": 48986.47000000006,
-    "total_liab_eq": 205618.29000000007,
-    "revenue": 265932.83,
-    "expense": 216946.35999999996,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        88409.13999999998
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        205618.29000000004
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        41470.760000000024
-      ],
-      [
-        "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        26751.919999999984
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        146812.03999999998
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        37218.869999999995
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        12052.11
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        265932.83
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        20863.34
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        31650.980000000003,
-        120060.12,
-        88409.13999999998
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        265932.83,
-        60314.53999999999,
-        205618.29000000004
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        146812.03999999998,
-        0.0,
-        146812.03999999998
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        60314.53999999999,
-        101785.30000000002,
-        -41470.760000000024
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        120060.12,
-        146812.03999999998,
-        -26751.919999999984
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        37218.869999999995,
-        0.0,
-        37218.869999999995
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        12052.11,
-        0.0,
-        12052.11
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        265932.83,
-        265932.83
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        20863.34,
-        0.0,
-        20863.34
-      ]
-    ]
-  },
-  {
-    "week": "2020-W12",
-    "assets": 217086.79,
-    "liabilities": 158180.31,
-    "equity": 0.0,
-    "net_income": 58906.47999999998,
-    "total_liab_eq": 217086.78999999998,
-    "revenue": 291020.12,
-    "expense": 232113.64,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        100589.57999999999
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        217086.79
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        29330.960000000036
-      ],
-      [
-        "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        28259.76999999999
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        160500.33
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        37218.869999999995
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        12052.11
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        291020.12
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        22342.33
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        31650.980000000003,
-        132240.56,
-        100589.57999999999
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        291020.12,
-        73933.32999999999,
-        217086.79
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        160500.33,
-        0.0,
-        160500.33
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        73933.32999999999,
-        103264.29000000002,
-        -29330.960000000036
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        132240.56,
-        160500.33,
-        -28259.76999999999
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        37218.869999999995,
-        0.0,
-        37218.869999999995
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        12052.11,
-        0.0,
-        12052.11
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        291020.12,
-        291020.12
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        22342.33,
-        0.0,
-        22342.33
-      ]
-    ]
-  },
-  {
-    "week": "2020-W13",
-    "assets": 217748.38999999998,
-    "liabilities": 175413.10000000003,
-    "equity": 0.0,
-    "net_income": 42335.28999999998,
-    "total_liab_eq": 217748.39,
-    "revenue": 307939.02999999997,
-    "expense": 265603.74,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        99035.23999999999
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        217748.38999999998
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        50411.30000000005
-      ],
-      [
-        "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        25966.559999999998
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        170158.08
+        173646.45
       ],
       [
         "ACC_Payroll_Exp",
@@ -1478,12 +329,12 @@
       [
         "ACC_Sales_Revenue",
         "Revenue",
-        307939.02999999997
+        312673.28
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        25589.030000000002
+        26461.910000000003
       ]
     ],
     "tb_items": [
@@ -1491,36 +342,43 @@
         "ACC_Accounts_Payable",
         "Liability",
         45156.28,
-        144191.52,
-        99035.23999999999
+        144191.52000000002,
+        99035.24000000002
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        307939.02999999997,
-        90190.63999999998,
-        217748.38999999998
+        312673.28,
+        104885.69,
+        207787.59000000003
       ],
       [
         "ACC_COGS",
         "Expense",
-        170158.08,
+        173646.45,
         0.0,
-        170158.08
+        173646.45
       ],
       [
         "ACC_Cash",
         "Asset",
-        90190.63999999998,
-        140601.94000000003,
-        -50411.30000000005
+        604885.69,
+        141474.82,
+        463410.86999999994
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        0.0,
+        1000000.0,
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        144191.52,
-        170158.08,
-        -25966.559999999998
+        644191.52,
+        173646.45,
+        470545.07
       ],
       [
         "ACC_Payroll_Exp",
@@ -1540,430 +398,60 @@
         "ACC_Sales_Revenue",
         "Revenue",
         0.0,
-        307939.02999999997,
-        307939.02999999997
+        312673.28,
+        312673.28
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        25589.030000000002,
+        26461.910000000003,
         0.0,
-        25589.030000000002
+        26461.910000000003
       ]
     ]
   },
   {
-    "week": "2020-W14",
-    "assets": 215017.81,
-    "liabilities": 167359.03000000006,
-    "equity": 0.0,
-    "net_income": 47658.77999999997,
-    "total_liab_eq": 215017.81000000003,
-    "revenue": 325562.92,
-    "expense": 277904.14,
+    "week": "2020-04",
+    "assets": 1157106.04,
+    "liabilities": 125246.29000000002,
+    "equity": 1000000.0,
+    "net_income": 31859.75,
+    "total_liab_eq": 1157106.04,
+    "revenue": 363153.76,
+    "expense": 331294.01,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        90737.46
+        125246.29000000002
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        215017.81
+        156995.12
       ],
       [
         "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        55093.600000000064
+        "Asset",
+        498427.8899999999
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        1000000.0
       ],
       [
         "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        21527.97
+        "Asset",
+        501683.03
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        180186.94
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        52000.909999999996
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        17855.72
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        325562.92
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        27860.570000000003
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        67921.51,
-        158658.97,
-        90737.46
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        325562.92,
-        110545.10999999999,
-        215017.81
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        180186.94,
-        0.0,
-        180186.94
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        110545.10999999999,
-        165638.71000000005,
-        -55093.600000000064
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        158658.97,
-        180186.94,
-        -21527.97
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        52000.909999999996,
-        0.0,
-        52000.909999999996
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        17855.72,
-        0.0,
-        17855.72
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        325562.92,
-        325562.92
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        27860.570000000003,
-        0.0,
-        27860.570000000003
-      ]
-    ]
-  },
-  {
-    "week": "2020-W15",
-    "assets": 194365.65999999997,
-    "liabilities": 143297.01000000007,
-    "equity": 0.0,
-    "net_income": 51068.649999999965,
-    "total_liab_eq": 194365.66000000003,
-    "revenue": 337846.82999999996,
-    "expense": 286778.18,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        105601.58
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        194365.65999999997
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        24107.48000000007
-      ],
-      [
-        "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        13587.950000000012
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        187111.04
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        52000.909999999996
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        17855.72
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        337846.82999999996
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        29810.510000000002
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        67921.51,
-        173523.09,
-        105601.58
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        337846.82999999996,
-        143481.16999999998,
-        194365.65999999997
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        187111.04,
-        0.0,
-        187111.04
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        143481.16999999998,
-        167588.65000000005,
-        -24107.48000000007
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        173523.09,
-        187111.04,
-        -13587.950000000012
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        52000.909999999996,
-        0.0,
-        52000.909999999996
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        17855.72,
-        0.0,
-        17855.72
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        337846.82999999996,
-        337846.82999999996
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        29810.510000000002,
-        0.0,
-        29810.510000000002
-      ]
-    ]
-  },
-  {
-    "week": "2020-W16",
-    "assets": 181121.14999999997,
-    "liabilities": 128344.5300000001,
-    "equity": 0.0,
-    "net_income": 52776.61999999994,
-    "total_liab_eq": 181121.15000000002,
-    "revenue": 346976.49999999994,
-    "expense": 294199.88,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        116607.64
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        181121.14999999997
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        3766.4300000000803
-      ],
-      [
-        "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        7970.460000000021
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        192499.61000000002
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        52000.909999999996
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        17855.72
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        346976.49999999994
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        31843.640000000003
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        67921.51,
-        184529.15,
-        116607.64
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        346976.49999999994,
-        165855.34999999998,
-        181121.14999999997
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        192499.61000000002,
-        0.0,
-        192499.61000000002
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        165855.34999999998,
-        169621.78000000006,
-        -3766.4300000000803
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        184529.15,
-        192499.61000000002,
-        -7970.460000000021
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        52000.909999999996,
-        0.0,
-        52000.909999999996
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        17855.72,
-        0.0,
-        17855.72
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        346976.49999999994,
-        346976.49999999994
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        31843.640000000003,
-        0.0,
-        31843.640000000003
-      ]
-    ]
-  },
-  {
-    "week": "2020-W17",
-    "assets": 161347.81,
-    "liabilities": 130378.26000000014,
-    "equity": 0.0,
-    "net_income": 30969.549999999872,
-    "total_liab_eq": 161347.81,
-    "revenue": 356221.01999999996,
-    "expense": 325251.4700000001,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        126913.08
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        161347.81
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        1135.2100000001083
-      ],
-      [
-        "ACC_Inventory",
-        "Liability (Short/Overdraft)",
-        2329.9700000000303
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        197164.56000000003
+        202094.37
       ],
       [
         "ACC_Payroll_Exp",
@@ -1978,49 +466,56 @@
       [
         "ACC_Sales_Revenue",
         "Revenue",
-        356221.01999999996
+        363153.76
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        34090.96000000001
+        35203.69
       ]
     ],
     "tb_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        67921.51,
-        194834.59,
-        126913.08
+        78531.11,
+        203777.40000000002,
+        125246.29000000002
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        356221.01999999996,
-        194873.20999999996,
-        161347.81
+        363153.76,
+        206158.64,
+        156995.12
       ],
       [
         "ACC_COGS",
         "Expense",
-        197164.56000000003,
+        202094.37,
         0.0,
-        197164.56000000003
+        202094.37
       ],
       [
         "ACC_Cash",
         "Asset",
-        194873.20999999996,
-        196008.42000000007,
-        -1135.2100000001083
+        706158.6399999999,
+        207730.75000000003,
+        498427.8899999999
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        0.0,
+        1000000.0,
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        194834.59,
-        197164.56000000003,
-        -2329.9700000000303
+        703777.4,
+        202094.37,
+        501683.03
       ],
       [
         "ACC_Payroll_Exp",
@@ -2040,527 +535,27 @@
         "ACC_Sales_Revenue",
         "Revenue",
         0.0,
-        356221.01999999996,
-        356221.01999999996
+        363153.76,
+        363153.76
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        34090.96000000001,
+        35203.69,
         0.0,
-        34090.96000000001
+        35203.69
       ]
     ]
   },
   {
-    "week": "2020-W18",
-    "assets": 147697.02999999985,
-    "liabilities": 114532.03,
-    "equity": 0.0,
-    "net_income": 33164.99999999988,
-    "total_liab_eq": 147697.02999999988,
-    "revenue": 366813.73,
-    "expense": 333648.7300000001,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        114532.03
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        146650.06000000003
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        523.5099999998638
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        523.4599999999627
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        203253.94000000003
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        70834.92
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        23161.030000000002
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        366813.73
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        36398.840000000004
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        89245.37,
-        203777.4,
-        114532.03
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        366813.73,
-        220163.66999999995,
-        146650.06000000003
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        203253.94000000003,
-        0.0,
-        203253.94000000003
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        220163.66999999995,
-        219640.1600000001,
-        523.5099999998638
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        203777.4,
-        203253.94000000003,
-        523.4599999999627
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        70834.92,
-        0.0,
-        70834.92
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        23161.030000000002,
-        0.0,
-        23161.030000000002
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        366813.73,
-        366813.73
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        36398.840000000004,
-        0.0,
-        36398.840000000004
-      ]
-    ]
-  },
-  {
-    "week": "2020-W19",
-    "assets": 139235.14999999988,
-    "liabilities": 102310.15000000001,
-    "equity": 0.0,
-    "net_income": 36924.99999999994,
-    "total_liab_eq": 139235.14999999997,
-    "revenue": 377403.16,
-    "expense": 340478.16000000003,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        102310.15000000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        130939.39000000001
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        3580.33999999988
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        4715.419999999984
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        209787.21000000002
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        70834.92
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        23161.030000000002
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        377403.16
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        36695.00000000001
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        112192.48,
-        214502.63,
-        102310.15000000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        377403.16,
-        246463.76999999996,
-        130939.39000000001
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        209787.21000000002,
-        0.0,
-        209787.21000000002
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        246463.76999999996,
-        242883.43000000008,
-        3580.33999999988
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        214502.63,
-        209787.21000000002,
-        4715.419999999984
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        70834.92,
-        0.0,
-        70834.92
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        23161.030000000002,
-        0.0,
-        23161.030000000002
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        377403.16,
-        377403.16
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        36695.00000000001,
-        0.0,
-        36695.00000000001
-      ]
-    ]
-  },
-  {
-    "week": "2020-W20",
-    "assets": 133562.94999999984,
-    "liabilities": 91999.41,
-    "equity": 0.0,
-    "net_income": 41563.53999999992,
-    "total_liab_eq": 133562.94999999992,
-    "revenue": 389415.88999999996,
-    "expense": 347852.35000000003,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        91999.41
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        119875.27999999997
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        4796.919999999867
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        8890.75
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        216451.2
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        70834.92
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        23161.030000000002
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        389415.88999999996
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        37405.200000000004
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        133342.54,
-        225341.95,
-        91999.41
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        389415.88999999996,
-        269540.61,
-        119875.27999999997
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        216451.2,
-        0.0,
-        216451.2
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        269540.61,
-        264743.6900000001,
-        4796.919999999867
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        225341.95,
-        216451.2,
-        8890.75
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        70834.92,
-        0.0,
-        70834.92
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        23161.030000000002,
-        0.0,
-        23161.030000000002
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        389415.88999999996,
-        389415.88999999996
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        37405.200000000004,
-        0.0,
-        37405.200000000004
-      ]
-    ]
-  },
-  {
-    "week": "2020-W21",
-    "assets": 148970.54999999987,
-    "liabilities": 103810.73000000001,
-    "equity": 0.0,
-    "net_income": 45159.81999999995,
-    "total_liab_eq": 148970.54999999996,
-    "revenue": 399918.42,
-    "expense": 354758.60000000003,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        103810.73000000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        108814.09000000003
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        24995.279999999853
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        15161.179999999993
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        221992.09000000003
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        70834.92
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        23161.030000000002
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        399918.42
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        38770.560000000005
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        133342.54,
-        237153.27000000002,
-        103810.73000000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        399918.42,
-        291104.32999999996,
-        108814.09000000003
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        221992.09000000003,
-        0.0,
-        221992.09000000003
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        291104.32999999996,
-        266109.0500000001,
-        24995.279999999853
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        237153.27000000002,
-        221992.09000000003,
-        15161.179999999993
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        70834.92,
-        0.0,
-        70834.92
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        23161.030000000002,
-        0.0,
-        23161.030000000002
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        399918.42,
-        399918.42
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        38770.560000000005,
-        0.0,
-        38770.560000000005
-      ]
-    ]
-  },
-  {
-    "week": "2020-W22",
-    "assets": 142763.34999999983,
+    "week": "2020-05",
+    "assets": 1141764.68,
     "liabilities": 118584.16,
-    "equity": 0.0,
-    "net_income": 24179.189999999886,
-    "total_liab_eq": 142763.3499999999,
-    "revenue": 408505.13999999996,
-    "expense": 384325.95000000007,
+    "equity": 1000000.0,
+    "net_income": 23180.52000000002,
+    "total_liab_eq": 1141764.68,
+    "revenue": 408505.14,
+    "expense": 385324.62,
     "is_balanced": true,
     "bs_items": [
       [
@@ -2576,19 +571,24 @@
       [
         "ACC_Cash",
         "Asset",
-        16990.85999999987
+        516999.5699999999
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        25335.76999999999
+        524328.3900000001
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        226590.93000000002
+        227598.31
       ],
       [
         "ACC_Payroll_Exp",
@@ -2603,12 +603,12 @@
       [
         "ACC_Sales_Revenue",
         "Revenue",
-        408505.13999999996
+        408505.14
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        40878.96000000001
+        40870.25
       ]
     ],
     "tb_items": [
@@ -2622,30 +622,37 @@
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        408505.13999999996,
-        308068.42,
+        408505.14,
+        308068.42000000004,
         100436.71999999997
       ],
       [
         "ACC_COGS",
         "Expense",
-        226590.93000000002,
+        227598.31,
         0.0,
-        226590.93000000002
+        227598.31
       ],
       [
         "ACC_Cash",
         "Asset",
-        308068.42,
-        291077.5600000001,
-        16990.85999999987
+        808068.4199999999,
+        291068.85000000003,
+        516999.5699999999
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        0.0,
+        1000000.0,
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        251926.7,
-        226590.93000000002,
-        25335.76999999999
+        751926.7000000001,
+        227598.31,
+        524328.3900000001
       ],
       [
         "ACC_Payroll_Exp",
@@ -2665,430 +672,60 @@
         "ACC_Sales_Revenue",
         "Revenue",
         0.0,
-        408505.13999999996,
-        408505.13999999996
+        408505.14,
+        408505.14
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        40878.96000000001,
+        40870.25,
         0.0,
-        40878.96000000001
+        40870.25
       ]
     ]
   },
   {
-    "week": "2020-W23",
-    "assets": 158233.26999999984,
-    "liabilities": 132453.29,
-    "equity": 0.0,
-    "net_income": 25779.979999999923,
-    "total_liab_eq": 158233.26999999993,
-    "revenue": 418276.88999999996,
-    "expense": 392496.91000000003,
+    "week": "2020-06",
+    "assets": 1108014.21,
+    "liabilities": 91056.5,
+    "equity": 1000000.0,
+    "net_income": 16957.71000000002,
+    "total_liab_eq": 1108014.21,
+    "revenue": 463384.81,
+    "expense": 446427.1,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        132453.29
+        91056.5
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        95034.18
+        103072.60999999993
       ],
       [
         "ACC_Cash",
         "Asset",
-        29702.60999999987
+        457255.4799999999
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        33496.47999999998
+        547686.1200000001
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        232299.35000000003
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        88989.92
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        27866.140000000003
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        418276.88999999996
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        43341.50000000001
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        133342.54,
-        265795.83,
-        132453.29
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        418276.88999999996,
-        323242.70999999996,
-        95034.18
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        232299.35000000003,
-        0.0,
-        232299.35000000003
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        323242.70999999996,
-        293540.1000000001,
-        29702.60999999987
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        265795.83,
-        232299.35000000003,
-        33496.47999999998
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        88989.92,
-        0.0,
-        88989.92
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        27866.140000000003,
-        0.0,
-        27866.140000000003
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        418276.88999999996,
-        418276.88999999996
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        43341.50000000001,
-        0.0,
-        43341.50000000001
-      ]
-    ]
-  },
-  {
-    "week": "2020-W24",
-    "assets": 134233.33,
-    "liabilities": 105320.76000000013,
-    "equity": 0.0,
-    "net_income": 28912.56999999989,
-    "total_liab_eq": 134233.33000000002,
-    "revenue": 429253.00999999995,
-    "expense": 400340.44000000006,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        99854.38
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        93691.88
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        5466.380000000121
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        40541.44999999998
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        237920.77000000005
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        88989.92
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        27866.140000000003
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        429253.00999999995
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        45563.61000000001
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        178607.84000000003,
-        278462.22000000003,
-        99854.38
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        429253.00999999995,
-        335561.12999999995,
-        93691.88
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        237920.77000000005,
-        0.0,
-        237920.77000000005
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        335561.12999999995,
-        341027.51000000007,
-        -5466.380000000121
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        278462.22000000003,
-        237920.77000000005,
-        40541.44999999998
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        88989.92,
-        0.0,
-        88989.92
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        27866.140000000003,
-        0.0,
-        27866.140000000003
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        429253.00999999995,
-        429253.00999999995
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        45563.61000000001,
-        0.0,
-        45563.61000000001
-      ]
-    ]
-  },
-  {
-    "week": "2020-W25",
-    "assets": 141267.96999999997,
-    "liabilities": 107389.62000000017,
-    "equity": 0.0,
-    "net_income": 33878.34999999986,
-    "total_liab_eq": 141267.97000000003,
-    "revenue": 443334.1099999999,
-    "expense": 409455.76000000007,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        102147.64000000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        95857.98999999999
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        5241.980000000156
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        45409.97999999998
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        245650.94000000006
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        88989.92
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        27866.140000000003
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        443334.1099999999
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        46948.76000000001
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        188913.28000000003,
-        291060.92000000004,
-        102147.64000000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        443334.1099999999,
-        347476.11999999994,
-        95857.98999999999
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        245650.94000000006,
-        0.0,
-        245650.94000000006
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        347476.11999999994,
-        352718.1000000001,
-        -5241.980000000156
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        291060.92000000004,
-        245650.94000000006,
-        45409.97999999998
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        88989.92,
-        0.0,
-        88989.92
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        27866.140000000003,
-        0.0,
-        27866.140000000003
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        443334.1099999999,
-        443334.1099999999
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        46948.76000000001,
-        0.0,
-        46948.76000000001
-      ]
-    ]
-  },
-  {
-    "week": "2020-W26",
-    "assets": 150640.43000000002,
-    "liabilities": 134700.6800000002,
-    "equity": 0.0,
-    "net_income": 15939.749999999825,
-    "total_liab_eq": 150640.43000000002,
-    "revenue": 457421.2299999999,
-    "expense": 441481.4800000001,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        91056.50000000003
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        98560.57
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        43644.18000000017
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        52079.860000000015
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        253479.27000000005
+        257873.01
       ],
       [
         "ACC_Payroll_Exp",
@@ -3103,49 +740,56 @@
       [
         "ACC_Sales_Revenue",
         "Revenue",
-        457421.2299999999
+        463384.81
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        47855.350000000006
+        48407.229999999996
       ]
     ],
     "tb_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        214502.63000000003,
-        305559.13000000006,
-        91056.50000000003
+        214502.63,
+        305559.13,
+        91056.5
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        457421.2299999999,
-        358860.6599999999,
-        98560.57
+        463384.81,
+        360312.20000000007,
+        103072.60999999993
       ],
       [
         "ACC_COGS",
         "Expense",
-        253479.27000000005,
+        257873.01,
         0.0,
-        253479.27000000005
+        257873.01
       ],
       [
         "ACC_Cash",
         "Asset",
-        358860.6599999999,
-        402504.8400000001,
-        -43644.18000000017
+        860312.2,
+        403056.72000000003,
+        457255.4799999999
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        0.0,
+        1000000.0,
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        305559.13000000006,
-        253479.27000000005,
-        52079.860000000015
+        805559.1300000001,
+        257873.01,
+        547686.1200000001
       ],
       [
         "ACC_Payroll_Exp",
@@ -3165,430 +809,60 @@
         "ACC_Sales_Revenue",
         "Revenue",
         0.0,
-        457421.2299999999,
-        457421.2299999999
+        463384.81,
+        463384.81
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        47855.350000000006,
+        48407.229999999996,
         0.0,
-        47855.350000000006
+        48407.229999999996
       ]
     ]
   },
   {
-    "week": "2020-W27",
-    "assets": 164549.44,
-    "liabilities": 141331.1100000002,
-    "equity": 0.0,
-    "net_income": 23218.32999999984,
-    "total_liab_eq": 164549.44000000003,
-    "revenue": 478844.0799999999,
-    "expense": 455625.75000000006,
+    "week": "2020-07",
+    "assets": 1136116.8399999999,
+    "liabilities": 104801.27999999997,
+    "equity": 1000000.0,
+    "net_income": 31315.55999999994,
+    "total_liab_eq": 1136116.8399999999,
+    "revenue": 575052.77,
+    "expense": 543737.2100000001,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        104005.11000000002
+        104801.27999999997
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        110862.40999999997
+        165036.24999999994
       ],
       [
         "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        37326.000000000175
+        "Asset",
+        418322.0699999998
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        53687.03000000003
+        552758.5200000001
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        264820.71
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        107056.6
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        33090.26
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        478844.0799999999
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        50658.18000000001
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        214502.63000000003,
-        318507.74000000005,
-        104005.11000000002
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        478844.0799999999,
-        367981.6699999999,
-        110862.40999999997
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        264820.71,
-        0.0,
-        264820.71
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        367981.6699999999,
-        405307.6700000001,
-        -37326.000000000175
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        318507.74000000005,
-        264820.71,
-        53687.03000000003
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        107056.6,
-        0.0,
-        107056.6
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        33090.26,
-        0.0,
-        33090.26
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        478844.0799999999,
-        478844.0799999999
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        50658.18000000001,
-        0.0,
-        50658.18000000001
-      ]
-    ]
-  },
-  {
-    "week": "2020-W28",
-    "assets": 174865.76999999996,
-    "liabilities": 141961.47000000018,
-    "equity": 0.0,
-    "net_income": 32904.299999999814,
-    "total_liab_eq": 174865.77,
-    "revenue": 501410.60999999987,
-    "expense": 468506.31000000006,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        103730.03
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        121084.07999999996
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        38231.44000000018
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        53781.69
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        276262.29000000004
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        107056.6
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        33090.26
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        501410.60999999987
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        52097.16000000001
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        226313.95000000004,
-        330043.98000000004,
-        103730.03
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        501410.60999999987,
-        380326.5299999999,
-        121084.07999999996
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        276262.29000000004,
-        0.0,
-        276262.29000000004
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        380326.5299999999,
-        418557.9700000001,
-        -38231.44000000018
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        330043.98000000004,
-        276262.29000000004,
-        53781.69
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        107056.6,
-        0.0,
-        107056.6
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        33090.26,
-        0.0,
-        33090.26
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        501410.60999999987,
-        501410.60999999987
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        52097.16000000001,
-        0.0,
-        52097.16000000001
-      ]
-    ]
-  },
-  {
-    "week": "2020-W29",
-    "assets": 186713.62999999995,
-    "liabilities": 143571.7600000002,
-    "equity": 0.0,
-    "net_income": 43141.86999999976,
-    "total_liab_eq": 186713.62999999998,
-    "revenue": 526723.0899999999,
-    "expense": 483581.2200000001,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        89796.30000000002
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        134121.37999999995
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        53775.460000000196
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        52592.25
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        289130.75000000006
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        107056.6
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        33090.26
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        526723.0899999999
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        54303.61000000001
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        251926.70000000004,
-        341723.00000000006,
-        89796.30000000002
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        526723.0899999999,
-        392601.7099999999,
-        134121.37999999995
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        289130.75000000006,
-        0.0,
-        289130.75000000006
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        392601.7099999999,
-        446377.1700000001,
-        -53775.460000000196
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        341723.00000000006,
-        289130.75000000006,
-        52592.25
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        107056.6,
-        0.0,
-        107056.6
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        33090.26,
-        0.0,
-        33090.26
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        526723.0899999999,
-        526723.0899999999
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        54303.61000000001,
-        0.0,
-        54303.61000000001
-      ]
-    ]
-  },
-  {
-    "week": "2020-W30",
-    "assets": 203246.68999999994,
-    "liabilities": 176795.14000000025,
-    "equity": 0.0,
-    "net_income": 26451.549999999697,
-    "total_liab_eq": 203246.68999999994,
-    "revenue": 556193.9199999998,
-    "expense": 529742.3700000001,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        91889.44000000006
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        151845.7799999999
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        84905.70000000019
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        51400.91000000003
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        305013.93000000005
+        316568.16000000003
       ],
       [
         "ACC_Payroll_Exp",
@@ -3603,12 +877,12 @@
       [
         "ACC_Sales_Revenue",
         "Revenue",
-        556193.9199999998
+        575052.77
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        57200.270000000004
+        59640.88
       ]
     ],
     "tb_items": [
@@ -3616,36 +890,43 @@
         "ACC_Accounts_Payable",
         "Liability",
         264525.4,
-        356414.8400000001,
-        91889.44000000006
+        369326.68,
+        104801.27999999997
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        556193.9199999998,
-        404348.1399999999,
-        151845.7799999999
+        575052.77,
+        410016.5200000001,
+        165036.24999999994
       ],
       [
         "ACC_COGS",
         "Expense",
-        305013.93000000005,
+        316568.16000000003,
         0.0,
-        305013.93000000005
+        316568.16000000003
       ],
       [
         "ACC_Cash",
         "Asset",
-        404348.1399999999,
-        489253.8400000001,
-        -84905.70000000019
+        910016.5199999999,
+        491694.4500000001,
+        418322.0699999998
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        0.0,
+        1000000.0,
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        356414.8400000001,
-        305013.93000000005,
-        51400.91000000003
+        869326.6800000002,
+        316568.16000000003,
+        552758.5200000001
       ],
       [
         "ACC_Payroll_Exp",
@@ -3665,555 +946,60 @@
         "ACC_Sales_Revenue",
         "Revenue",
         0.0,
-        556193.9199999998,
-        556193.9199999998
+        575052.77,
+        575052.77
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        57200.270000000004,
+        59640.88,
         0.0,
-        57200.270000000004
+        59640.88
       ]
     ]
   },
   {
-    "week": "2020-W31",
-    "assets": 218773.94999999995,
-    "liabilities": 183944.6900000003,
-    "equity": 0.0,
-    "net_income": 34829.25999999966,
-    "total_liab_eq": 218773.94999999995,
-    "revenue": 582255.2699999998,
-    "expense": 547426.0100000001,
+    "week": "2020-08",
+    "assets": 1183334.45,
+    "liabilities": 127737.04999999993,
+    "equity": 1000000.0,
+    "net_income": 55597.39999999991,
+    "total_liab_eq": 1183334.4499999997,
+    "revenue": 699279.99,
+    "expense": 643682.5900000001,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        90932.15000000008
+        127737.04999999993
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        168929.4599999999
+        222312.29999999993
       ],
       [
         "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        93012.54000000021
+        "Asset",
+        427744.31999999983
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        49844.49000000005
+        533277.8300000002
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        319482.19000000006
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        127779.32
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        39748.850000000006
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        582255.2699999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        60415.65
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        278394.53,
-        369326.6800000001,
-        90932.15000000008
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        582255.2699999998,
-        413325.8099999999,
-        168929.4599999999
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        319482.19000000006,
-        0.0,
-        319482.19000000006
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        413325.8099999999,
-        506338.3500000001,
-        -93012.54000000021
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        369326.6800000001,
-        319482.19000000006,
-        49844.49000000005
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        127779.32,
-        0.0,
-        127779.32
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        39748.850000000006,
-        0.0,
-        39748.850000000006
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        582255.2699999998,
-        582255.2699999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        60415.65,
-        0.0,
-        60415.65
-      ]
-    ]
-  },
-  {
-    "week": "2020-W32",
-    "assets": 231637.1899999999,
-    "liabilities": 187365.24000000028,
-    "equity": 0.0,
-    "net_income": 44271.949999999604,
-    "total_liab_eq": 231637.1899999999,
-    "revenue": 609022.9799999997,
-    "expense": 564751.0300000001,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        105097.8000000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        182562.07999999984
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        82267.44000000018
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        49075.110000000044
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        334417.2200000001
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        127779.32
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        39748.850000000006
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        609022.9799999997
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        62805.64
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        278394.53,
-        383492.33000000013,
-        105097.8000000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        609022.9799999997,
-        426460.8999999999,
-        182562.07999999984
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        334417.2200000001,
-        0.0,
-        334417.2200000001
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        426460.8999999999,
-        508728.3400000001,
-        -82267.44000000018
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        383492.33000000013,
-        334417.2200000001,
-        49075.110000000044
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        127779.32,
-        0.0,
-        127779.32
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        39748.850000000006,
-        0.0,
-        39748.850000000006
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        609022.9799999997,
-        609022.9799999997
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        62805.64,
-        0.0,
-        62805.64
-      ]
-    ]
-  },
-  {
-    "week": "2020-W33",
-    "assets": 243936.61999999988,
-    "liabilities": 186666.0800000003,
-    "equity": 0.0,
-    "net_income": 57270.53999999957,
-    "total_liab_eq": 243936.61999999988,
-    "revenue": 639510.3599999998,
-    "expense": 582239.8200000002,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        116074.82000000012
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        200661.25999999983
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        70591.26000000018
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        43275.360000000044
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        351193.9900000001
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        127779.32
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        39748.850000000006
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        639510.3599999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        63517.659999999996
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        278394.53,
-        394469.35000000015,
-        116074.82000000012
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        639510.3599999998,
-        438849.0999999999,
-        200661.25999999983
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        351193.9900000001,
-        0.0,
-        351193.9900000001
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        438849.0999999999,
-        509440.3600000001,
-        -70591.26000000018
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        394469.35000000015,
-        351193.9900000001,
-        43275.360000000044
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        127779.32,
-        0.0,
-        127779.32
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        39748.850000000006,
-        0.0,
-        39748.850000000006
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        639510.3599999998,
-        639510.3599999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        63517.659999999996,
-        0.0,
-        63517.659999999996
-      ]
-    ]
-  },
-  {
-    "week": "2020-W34",
-    "assets": 256434.18999999983,
-    "liabilities": 188764.0800000003,
-    "equity": 0.0,
-    "net_income": 67670.10999999952,
-    "total_liab_eq": 256434.18999999983,
-    "revenue": 668796.3599999998,
-    "expense": 601126.2500000002,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        129045.6100000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        217016.93999999983
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        59718.470000000205
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        39417.25
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        368022.89000000013
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        127779.32
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        39748.850000000006
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        668796.3599999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        65575.19
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        278394.53,
-        407440.14000000013,
-        129045.6100000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        668796.3599999998,
-        451779.4199999999,
-        217016.93999999983
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        368022.89000000013,
-        0.0,
-        368022.89000000013
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        451779.4199999999,
-        511497.89000000013,
-        -59718.470000000205
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        407440.14000000013,
-        368022.89000000013,
-        39417.25
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        127779.32,
-        0.0,
-        127779.32
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        39748.850000000006,
-        0.0,
-        39748.850000000006
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        668796.3599999998,
-        668796.3599999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        65575.19,
-        0.0,
-        65575.19
-      ]
-    ]
-  },
-  {
-    "week": "2020-W35",
-    "assets": 255271.81999999983,
-    "liabilities": 200647.38000000035,
-    "equity": 0.0,
-    "net_income": 54624.439999999595,
-    "total_liab_eq": 255271.81999999995,
-    "revenue": 694653.7699999998,
-    "expense": 640029.3300000002,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        127737.0500000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        218551.51999999984
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        72910.33000000025
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        36720.29999999999
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        382077.67000000016
+        385520.14
       ],
       [
         "ACC_Payroll_Exp",
@@ -4228,12 +1014,12 @@
       [
         "ACC_Sales_Revenue",
         "Revenue",
-        694653.7699999998
+        699279.99
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        66603.0
+        66813.79
       ]
     ],
     "tb_items": [
@@ -4241,36 +1027,43 @@
         "ACC_Accounts_Payable",
         "Liability",
         291060.92000000004,
-        418797.97000000015,
-        127737.0500000001
+        418797.97,
+        127737.04999999993
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        694653.7699999998,
-        476102.24999999994,
-        218551.51999999984
+        699279.99,
+        476967.69000000006,
+        222312.29999999993
       ],
       [
         "ACC_COGS",
         "Expense",
-        382077.67000000016,
+        385520.14,
         0.0,
-        382077.67000000016
+        385520.14
       ],
       [
         "ACC_Cash",
         "Asset",
-        476102.24999999994,
-        549012.5800000002,
-        -72910.33000000025
+        976967.69,
+        549223.3700000001,
+        427744.31999999983
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        0.0,
+        1000000.0,
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        418797.97000000015,
-        382077.67000000016,
-        36720.29999999999
+        918797.9700000002,
+        385520.14,
+        533277.8300000002
       ],
       [
         "ACC_Payroll_Exp",
@@ -4290,430 +1083,60 @@
         "ACC_Sales_Revenue",
         "Revenue",
         0.0,
-        694653.7699999998,
-        694653.7699999998
+        699279.99,
+        699279.99
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        66603.0,
+        66813.79,
         0.0,
-        66603.0
+        66813.79
       ]
     ]
   },
   {
-    "week": "2020-W36",
-    "assets": 269551.21999999974,
-    "liabilities": 204906.8100000003,
-    "equity": 0.0,
-    "net_income": 64644.40999999945,
-    "total_liab_eq": 269551.21999999974,
-    "revenue": 723029.4599999997,
-    "expense": 658385.0500000003,
+    "week": "2020-09",
+    "assets": 1161268.56,
+    "liabilities": 96793.2099999999,
+    "equity": 1000000.0,
+    "net_income": 64475.34999999986,
+    "total_liab_eq": 1161268.5599999998,
+    "revenue": 794387.6699999999,
+    "expense": 729912.3200000001,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        115895.3500000001
+        96793.2099999999
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        232135.36999999976
+        211127.60999999987
       ],
       [
         "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        89011.4600000002
+        "Asset",
+        407577.82999999996
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        37415.84999999998
+        542563.1200000001
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        396987.24000000017
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        146656.11000000002
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        44692.55
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        723029.4599999997
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        70049.15
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        318507.74000000005,
-        434403.09000000014,
-        115895.3500000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        723029.4599999997,
-        490894.08999999997,
-        232135.36999999976
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        396987.24000000017,
-        0.0,
-        396987.24000000017
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        490894.08999999997,
-        579905.5500000002,
-        -89011.4600000002
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        434403.09000000014,
-        396987.24000000017,
-        37415.84999999998
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        146656.11000000002,
-        0.0,
-        146656.11000000002
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        44692.55,
-        0.0,
-        44692.55
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        723029.4599999997,
-        723029.4599999997
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        70049.15,
-        0.0,
-        70049.15
-      ]
-    ]
-  },
-  {
-    "week": "2020-W37",
-    "assets": 268847.8999999998,
-    "liabilities": 195046.28000000038,
-    "equity": 0.0,
-    "net_income": 73801.61999999953,
-    "total_liab_eq": 268847.8999999999,
-    "revenue": 748456.2199999997,
-    "expense": 674654.6000000002,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        130358.37000000011
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        231004.3999999998
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        64687.910000000265
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        37843.5
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        411022.61000000016
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        146656.11000000002
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        44692.55
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        748456.2199999997
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        72283.32999999999
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        318507.74000000005,
-        448866.11000000016,
-        130358.37000000011
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        748456.2199999997,
-        517451.81999999995,
-        231004.3999999998
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        411022.61000000016,
-        0.0,
-        411022.61000000016
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        517451.81999999995,
-        582139.7300000002,
-        -64687.910000000265
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        448866.11000000016,
-        411022.61000000016,
-        37843.5
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        146656.11000000002,
-        0.0,
-        146656.11000000002
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        44692.55,
-        0.0,
-        44692.55
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        748456.2199999997,
-        748456.2199999997
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        72283.32999999999,
-        0.0,
-        72283.32999999999
-      ]
-    ]
-  },
-  {
-    "week": "2020-W38",
-    "assets": 264942.13999999984,
-    "liabilities": 184280.90000000043,
-    "equity": 0.0,
-    "net_income": 80661.23999999953,
-    "total_liab_eq": 264942.13999999996,
-    "revenue": 766950.8799999998,
-    "expense": 686289.6400000002,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        116319.53000000009
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        225661.73999999987
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        67961.37000000034
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        39280.399999999965
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        421248.7600000002
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        146656.11000000002
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        44692.55
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        766950.8799999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        73692.21999999999
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        344209.63000000006,
-        460529.16000000015,
-        116319.53000000009
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        766950.8799999998,
-        541289.1399999999,
-        225661.73999999987
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        421248.7600000002,
-        0.0,
-        421248.7600000002
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        541289.1399999999,
-        609250.5100000002,
-        -67961.37000000034
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        460529.16000000015,
-        421248.7600000002,
-        39280.399999999965
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        146656.11000000002,
-        0.0,
-        146656.11000000002
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        44692.55,
-        0.0,
-        44692.55
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        766950.8799999998,
-        766950.8799999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        73692.21999999999,
-        0.0,
-        73692.21999999999
-      ]
-    ]
-  },
-  {
-    "week": "2020-W39",
-    "assets": 258117.02999999974,
-    "liabilities": 193072.90000000043,
-    "equity": 0.0,
-    "net_income": 65044.12999999942,
-    "total_liab_eq": 258117.02999999985,
-    "revenue": 788745.5699999997,
-    "expense": 723701.4400000003,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        100695.65000000008
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        220388.2799999998
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        92377.25000000035
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        37728.74999999994
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        433547.3900000002
+        437722.42000000004
       ],
       [
         "ACC_Payroll_Exp",
@@ -4728,137 +1151,12 @@
       [
         "ACC_Sales_Revenue",
         "Revenue",
-        788745.5699999997
+        794387.6699999999
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        74278.62999999999
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        370580.49000000005,
-        471276.14000000013,
-        100695.65000000008
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        788745.5699999997,
-        568357.2899999999,
-        220388.2799999998
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        433547.3900000002,
-        0.0,
-        433547.3900000002
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        568357.2899999999,
-        660734.5400000003,
-        -92377.25000000035
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        471276.14000000013,
-        433547.3900000002,
-        37728.74999999994
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        167826.63,
-        0.0,
-        167826.63
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        48048.79,
-        0.0,
-        48048.79
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        788745.5699999997,
-        788745.5699999997
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        74278.62999999999,
-        0.0,
-        74278.62999999999
-      ]
-    ]
-  },
-  {
-    "week": "2020-W40",
-    "assets": 242382.91999999975,
-    "liabilities": 174596.4300000004,
-    "equity": 0.0,
-    "net_income": 67786.48999999941,
-    "total_liab_eq": 242382.9199999998,
-    "revenue": 803860.3299999997,
-    "expense": 736073.8400000003,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        96793.21000000008
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        203599.5299999998
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        77803.22000000032
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        38783.389999999956
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        441502.1500000002
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        167826.63
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        48048.79
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        803860.3299999997
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        78696.26999999999
+        76314.48
       ]
     ],
     "tb_items": [
@@ -4866,36 +1164,43 @@
         "ACC_Accounts_Payable",
         "Liability",
         383492.3300000001,
-        480285.54000000015,
-        96793.21000000008
+        480285.54,
+        96793.2099999999
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        803860.3299999997,
-        600260.7999999999,
-        203599.5299999998
+        794387.6699999999,
+        583260.06,
+        211127.60999999987
       ],
       [
         "ACC_COGS",
         "Expense",
-        441502.1500000002,
+        437722.42000000004,
         0.0,
-        441502.1500000002
+        437722.42000000004
       ],
       [
         "ACC_Cash",
         "Asset",
-        600260.7999999999,
-        678064.0200000003,
-        -77803.22000000032
+        1083260.06,
+        675682.2300000001,
+        407577.82999999996
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        0.0,
+        1000000.0,
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        480285.54000000015,
-        441502.1500000002,
-        38783.389999999956
+        980285.5400000002,
+        437722.42000000004,
+        542563.1200000001
       ],
       [
         "ACC_Payroll_Exp",
@@ -4915,305 +1220,60 @@
         "ACC_Sales_Revenue",
         "Revenue",
         0.0,
-        803860.3299999997,
-        803860.3299999997
+        794387.6699999999,
+        794387.6699999999
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        78696.26999999999,
+        76314.48,
         0.0,
-        78696.26999999999
+        76314.48
       ]
     ]
   },
   {
-    "week": "2020-W41",
-    "assets": 234489.69999999984,
-    "liabilities": 160137.9200000005,
-    "equity": 0.0,
-    "net_income": 74351.77999999956,
-    "total_liab_eq": 234489.70000000007,
-    "revenue": 821306.3599999998,
-    "expense": 746954.5800000002,
+    "week": "2020-10",
+    "assets": 1165248.65,
+    "liabilities": 109662.22999999986,
+    "equity": 1000000.0,
+    "net_income": 55586.419999999925,
+    "total_liab_eq": 1165248.65,
+    "revenue": 850620.5199999999,
+    "expense": 795034.1,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        84381.7300000001
+        109662.22999999986
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        194441.11999999988
+        152561.45999999985
       ],
       [
         "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        75756.19000000041
+        "Asset",
+        453091.97999999986
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        40048.57999999996
+        559595.2100000002
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        451773.2900000002
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        167826.63
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        48048.79
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        821306.3599999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        79305.87
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        407440.1400000001,
-        491821.87000000017,
-        84381.7300000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        821306.3599999998,
-        626865.2399999999,
-        194441.11999999988
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        451773.2900000002,
-        0.0,
-        451773.2900000002
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        626865.2399999999,
-        702621.4300000003,
-        -75756.19000000041
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        491821.87000000017,
-        451773.2900000002,
-        40048.57999999996
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        167826.63,
-        0.0,
-        167826.63
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        48048.79,
-        0.0,
-        48048.79
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        821306.3599999998,
-        821306.3599999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        79305.87,
-        0.0,
-        79305.87
-      ]
-    ]
-  },
-  {
-    "week": "2020-W42",
-    "assets": 221292.48999999987,
-    "liabilities": 143064.3900000006,
-    "equity": 0.0,
-    "net_income": 78228.09999999963,
-    "total_liab_eq": 221292.49000000022,
-    "revenue": 833996.2399999998,
-    "expense": 755768.1400000001,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        96424.00000000012
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        176362.3899999999
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        46640.39000000048
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        44930.09999999998
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        458934.0400000002
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        167826.63
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        48048.79
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        833996.2399999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        80958.68
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        407440.1400000001,
-        503864.1400000002,
-        96424.00000000012
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        833996.2399999998,
-        657633.8499999999,
-        176362.3899999999
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        458934.0400000002,
-        0.0,
-        458934.0400000002
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        657633.8499999999,
-        704274.2400000003,
-        -46640.39000000048
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        503864.1400000002,
-        458934.0400000002,
-        44930.09999999998
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        167826.63,
-        0.0,
-        167826.63
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        48048.79,
-        0.0,
-        48048.79
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        833996.2399999998,
-        833996.2399999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        80958.68,
-        0.0,
-        80958.68
-      ]
-    ]
-  },
-  {
-    "week": "2020-W43",
-    "assets": 217362.22999999992,
-    "liabilities": 160227.02000000072,
-    "equity": 0.0,
-    "net_income": 57135.20999999961,
-    "total_liab_eq": 217362.23000000033,
-    "revenue": 845591.7899999998,
-    "expense": 788456.5800000002,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        108207.87000000011
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        166767.32999999996
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        52019.150000000605
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        50594.899999999965
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        465053.1100000002
+        468864.99000000005
       ],
       [
         "ACC_Payroll_Exp",
@@ -5228,137 +1288,12 @@
       [
         "ACC_Sales_Revenue",
         "Revenue",
-        845591.7899999998
+        850620.5199999999
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        82585.48999999999
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        407440.1400000001,
-        515648.0100000002,
-        108207.87000000011
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        845591.7899999998,
-        678824.4599999998,
-        166767.32999999996
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        465053.1100000002,
-        0.0,
-        465053.1100000002
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        678824.4599999998,
-        730843.6100000005,
-        -52019.150000000605
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        515648.0100000002,
-        465053.1100000002,
-        50594.899999999965
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        186340.41,
-        0.0,
-        186340.41
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        54477.57,
-        0.0,
-        54477.57
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        845591.7899999998,
-        845591.7899999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        82585.48999999999,
-        0.0,
-        82585.48999999999
-      ]
-    ]
-  },
-  {
-    "week": "2020-W44",
-    "assets": 210563.81999999995,
-    "liabilities": 154392.08000000066,
-    "equity": 0.0,
-    "net_income": 56171.73999999964,
-    "total_liab_eq": 210563.8200000003,
-    "revenue": 852468.3299999998,
-    "expense": 796296.5900000002,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        109662.2300000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        151064.33999999997
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        44729.85000000056
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        59499.47999999998
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        468960.7200000002
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        186340.41
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        54477.57
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        852468.3299999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        86517.88999999998
+        85351.12999999999
       ]
     ],
     "tb_items": [
@@ -5366,36 +1301,43 @@
         "ACC_Accounts_Payable",
         "Liability",
         418797.9700000001,
-        528460.2000000002,
-        109662.2300000001
+        528460.2,
+        109662.22999999986
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        852468.3299999998,
-        701403.9899999999,
-        151064.33999999997
+        850620.5199999999,
+        698059.06,
+        152561.45999999985
       ],
       [
         "ACC_COGS",
         "Expense",
-        468960.7200000002,
+        468864.99000000005,
         0.0,
-        468960.7200000002
+        468864.99000000005
       ],
       [
         "ACC_Cash",
         "Asset",
-        701403.9899999999,
-        746133.8400000004,
-        -44729.85000000056
+        1198059.06,
+        744967.0800000002,
+        453091.97999999986
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        0.0,
+        1000000.0,
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        528460.2000000002,
-        468960.7200000002,
-        59499.47999999998
+        1028460.2000000002,
+        468864.99000000005,
+        559595.2100000002
       ],
       [
         "ACC_Payroll_Exp",
@@ -5415,325 +1357,80 @@
         "ACC_Sales_Revenue",
         "Revenue",
         0.0,
-        852468.3299999998,
-        852468.3299999998
+        850620.5199999999,
+        850620.5199999999
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        86517.88999999998,
+        85351.12999999999,
         0.0,
-        86517.88999999998
+        85351.12999999999
       ]
     ]
   },
   {
-    "week": "2020-W45",
-    "assets": 198898.56,
-    "liabilities": 139652.08000000066,
-    "equity": 0.0,
-    "net_income": 59246.47999999975,
-    "total_liab_eq": 198898.5600000004,
-    "revenue": 860863.3299999998,
-    "expense": 801616.8500000001,
+    "week": "2020-11",
+    "assets": 1166417.0499999998,
+    "liabilities": 121618.72999999986,
+    "equity": 1000000.0,
+    "net_income": 44798.31999999983,
+    "total_liab_eq": 1166417.0499999998,
+    "revenue": 897064.5899999999,
+    "expense": 852266.27,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        95720.51000000013
+        121618.72999999986
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        133416.93999999994
+        108343.07999999984
       ],
       [
         "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        43931.57000000053
+        "Asset",
+        476833.46999999986
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        65481.62000000005
+        581240.5000000001
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        473651.3800000002
+        494537.70000000007
       ],
       [
         "ACC_Payroll_Exp",
         "Expense",
-        186340.41
+        204032.91
       ],
       [
         "ACC_Rent_Exp",
         "Expense",
-        54477.57
+        60456.45
       ],
       [
         "ACC_Sales_Revenue",
         "Revenue",
-        860863.3299999998
+        897064.5899999999
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        87147.48999999999
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        443412.4900000001,
-        539133.0000000002,
-        95720.51000000013
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        860863.3299999998,
-        727446.3899999999,
-        133416.93999999994
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        473651.3800000002,
-        0.0,
-        473651.3800000002
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        727446.3899999999,
-        771377.9600000004,
-        -43931.57000000053
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        539133.0000000002,
-        473651.3800000002,
-        65481.62000000005
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        186340.41,
-        0.0,
-        186340.41
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        54477.57,
-        0.0,
-        54477.57
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        860863.3299999998,
-        860863.3299999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        87147.48999999999,
-        0.0,
-        87147.48999999999
-      ]
-    ]
-  },
-  {
-    "week": "2020-W46",
-    "assets": 194095.51999999996,
-    "liabilities": 130309.15000000072,
-    "equity": 0.0,
-    "net_income": 63786.369999999646,
-    "total_liab_eq": 194095.52000000037,
-    "revenue": 872181.1499999998,
-    "expense": 808394.7800000001,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        107768.52000000014
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        122852.02999999991
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        22540.630000000587
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        71243.49000000005
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        479937.5200000002
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        186340.41
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        54477.57
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        872181.1499999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        87639.27999999998
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        443412.4900000001,
-        551181.0100000002,
-        107768.52000000014
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        872181.1499999998,
-        749329.1199999999,
-        122852.02999999991
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        479937.5200000002,
-        0.0,
-        479937.5200000002
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        749329.1199999999,
-        771869.7500000005,
-        -22540.630000000587
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        551181.0100000002,
-        479937.5200000002,
-        71243.49000000005
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        186340.41,
-        0.0,
-        186340.41
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        54477.57,
-        0.0,
-        54477.57
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        872181.1499999998,
-        872181.1499999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        87639.27999999998,
-        0.0,
-        87639.27999999998
-      ]
-    ]
-  },
-  {
-    "week": "2020-W47",
-    "assets": 189122.59999999998,
-    "liabilities": 121370.71000000078,
-    "equity": 0.0,
-    "net_income": 67751.88999999966,
-    "total_liab_eq": 189122.60000000044,
-    "revenue": 884452.6599999998,
-    "expense": 816700.7700000001,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        111273.54000000015
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        110385.43999999994
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        10097.170000000624
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        78737.16000000003
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        486695.8500000002
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        186340.41
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        54477.57
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        884452.6599999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        89186.93999999999
+        93239.20999999999
       ]
     ],
     "tb_items": [
@@ -5741,161 +1438,43 @@
         "ACC_Accounts_Payable",
         "Liability",
         454159.4700000001,
-        565433.0100000002,
-        111273.54000000015
+        575778.2,
+        121618.72999999986
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        884452.6599999998,
-        774067.2199999999,
-        110385.43999999994
+        897064.5899999999,
+        788721.51,
+        108343.07999999984
       ],
       [
         "ACC_COGS",
         "Expense",
-        486695.8500000002,
+        494537.70000000007,
         0.0,
-        486695.8500000002
+        494537.70000000007
       ],
       [
         "ACC_Cash",
         "Asset",
-        774067.2199999999,
-        784164.3900000005,
-        -10097.170000000624
+        1288721.51,
+        811888.0400000002,
+        476833.46999999986
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        0.0,
+        1000000.0,
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        565433.0100000002,
-        486695.8500000002,
-        78737.16000000003
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        186340.41,
-        0.0,
-        186340.41
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        54477.57,
-        0.0,
-        54477.57
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        884452.6599999998,
-        884452.6599999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        89186.93999999999,
-        0.0,
-        89186.93999999999
-      ]
-    ]
-  },
-  {
-    "week": "2020-W48",
-    "assets": 192175.0799999999,
-    "liabilities": 145917.58000000066,
-    "equity": 0.0,
-    "net_income": 46257.49999999965,
-    "total_liab_eq": 192175.0800000003,
-    "revenue": 895800.5499999998,
-    "expense": 849543.0500000002,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        121618.7300000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        109265.53999999992
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        24298.85000000056
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        82909.53999999998
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        492868.6600000002
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        204032.91
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        60456.45
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        895800.5499999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        92185.02999999998
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        454159.4700000001,
-        575778.2000000002,
-        121618.7300000001
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        895800.5499999998,
-        786535.0099999999,
-        109265.53999999992
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        492868.6600000002,
-        0.0,
-        492868.6600000002
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        786535.0099999999,
-        810833.8600000005,
-        -24298.85000000056
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        575778.2000000002,
-        492868.6600000002,
-        82909.53999999998
+        1075778.2000000002,
+        494537.70000000007,
+        581240.5000000001
       ],
       [
         "ACC_Payroll_Exp",
@@ -5915,430 +1494,60 @@
         "ACC_Sales_Revenue",
         "Revenue",
         0.0,
-        895800.5499999998,
-        895800.5499999998
+        897064.5899999999,
+        897064.5899999999
       ],
       [
         "ACC_Travel_Exp",
         "Expense",
-        92185.02999999998,
+        93239.20999999999,
         0.0,
-        92185.02999999998
+        93239.20999999999
       ]
     ]
   },
   {
-    "week": "2020-W49",
-    "assets": 197656.94,
-    "liabilities": 147013.03000000078,
-    "equity": 0.0,
-    "net_income": 50643.9099999998,
-    "total_liab_eq": 197656.94000000058,
-    "revenue": 908382.4799999999,
-    "expense": 857738.5700000001,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        125858.20000000013
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        105503.09999999998
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        21154.830000000657
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        92153.84000000003
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        499526.8800000002
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        204032.91
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        60456.45
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        908382.4799999999
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        93722.32999999999
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        465822.5200000001,
-        591680.7200000002,
-        125858.20000000013
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        908382.4799999999,
-        802879.3799999999,
-        105503.09999999998
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        499526.8800000002,
-        0.0,
-        499526.8800000002
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        802879.3799999999,
-        824034.2100000005,
-        -21154.830000000657
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        591680.7200000002,
-        499526.8800000002,
-        92153.84000000003
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        204032.91,
-        0.0,
-        204032.91
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        60456.45,
-        0.0,
-        60456.45
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        908382.4799999999,
-        908382.4799999999
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        93722.32999999999,
-        0.0,
-        93722.32999999999
-      ]
-    ]
-  },
-  {
-    "week": "2020-W50",
-    "assets": 198035.06,
-    "liabilities": 143412.47000000073,
-    "equity": 0.0,
-    "net_income": 54622.589999999735,
-    "total_liab_eq": 198035.06000000046,
-    "revenue": 922152.8499999999,
-    "expense": 867530.2600000001,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        112488.1500000002
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        100273.65999999992
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        30924.32000000053
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        97761.40000000008
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        506548.62000000017
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        204032.91
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        60456.45
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        922152.8499999999
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        96492.27999999998
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        491821.87000000005,
-        604310.0200000003,
-        112488.1500000002
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        922152.8499999999,
-        821879.19,
-        100273.65999999992
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        506548.62000000017,
-        0.0,
-        506548.62000000017
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        821879.19,
-        852803.5100000005,
-        -30924.32000000053
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        604310.0200000003,
-        506548.62000000017,
-        97761.40000000008
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        204032.91,
-        0.0,
-        204032.91
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        60456.45,
-        0.0,
-        60456.45
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        922152.8499999999,
-        922152.8499999999
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        96492.27999999998,
-        0.0,
-        96492.27999999998
-      ]
-    ]
-  },
-  {
-    "week": "2020-W51",
-    "assets": 204235.2599999999,
-    "liabilities": 142713.52000000066,
-    "equity": 0.0,
-    "net_income": 61521.73999999964,
-    "total_liab_eq": 204235.2600000003,
-    "revenue": 941040.6799999998,
-    "expense": 879518.9400000002,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        111619.10000000015
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        106021.07999999984
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        31094.420000000508
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        98214.18000000005
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        517269.0600000002
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        204032.91
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        60456.45
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        941040.6799999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        97760.51999999999
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        503864.1400000001,
-        615483.2400000002,
-        111619.10000000015
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        941040.6799999998,
-        835019.6,
-        106021.07999999984
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        517269.0600000002,
-        0.0,
-        517269.0600000002
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        835019.6,
-        866114.0200000005,
-        -31094.420000000508
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        615483.2400000002,
-        517269.0600000002,
-        98214.18000000005
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        204032.91,
-        0.0,
-        204032.91
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        60456.45,
-        0.0,
-        60456.45
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        941040.6799999998,
-        941040.6799999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        97760.51999999999,
-        0.0,
-        97760.51999999999
-      ]
-    ]
-  },
-  {
-    "week": "2020-W52",
-    "assets": 216622.47999999998,
-    "liabilities": 169191.21000000084,
-    "equity": 0.0,
-    "net_income": 47431.269999999786,
-    "total_liab_eq": 216622.48000000062,
+    "week": "2020-12",
+    "assets": 1157534.5499999998,
+    "liabilities": 111101.9599999999,
+    "equity": 1000000.0,
+    "net_income": 46432.58999999985,
+    "total_liab_eq": 1157534.5499999998,
     "revenue": 955157.5599999998,
-    "expense": 907726.29,
+    "expense": 908724.97,
     "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable",
         "Liability",
-        111101.96000000014
+        111101.9599999999
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
-        115309.2699999999
+        115309.26999999979
       ],
       [
         "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        58089.2500000007
+        "Asset",
+        441919.45999999973
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        101313.21000000008
+        600305.8200000002
       ]
     ],
     "pl_items": [
       [
         "ACC_COGS",
         "Expense",
-        525436.7600000001
+        526444.15
       ],
       [
         "ACC_Payroll_Exp",
@@ -6358,7 +1567,7 @@
       [
         "ACC_Travel_Exp",
         "Expense",
-        99308.44999999998
+        99299.73999999999
       ]
     ],
     "tb_items": [
@@ -6366,36 +1575,43 @@
         "ACC_Accounts_Payable",
         "Liability",
         515648.01000000007,
-        626749.9700000002,
-        111101.96000000014
+        626749.97,
+        111101.9599999999
       ],
       [
         "ACC_Accounts_Receivable",
         "Asset",
         955157.5599999998,
-        839848.2899999999,
-        115309.2699999999
+        839848.29,
+        115309.26999999979
       ],
       [
         "ACC_COGS",
         "Expense",
-        525436.7600000001,
+        526444.15,
         0.0,
-        525436.7600000001
+        526444.15
       ],
       [
         "ACC_Cash",
         "Asset",
-        839848.2899999999,
-        897937.5400000006,
-        -58089.2500000007
+        1339848.29,
+        897928.8300000003,
+        441919.45999999973
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        0.0,
+        1000000.0,
+        1000000.0
       ],
       [
         "ACC_Inventory",
         "Asset",
-        626749.9700000002,
-        525436.7600000001,
-        101313.21000000008
+        1126749.9700000002,
+        526444.15,
+        600305.8200000002
       ],
       [
         "ACC_Payroll_Exp",
@@ -6421,9 +1637,9 @@
       [
         "ACC_Travel_Exp",
         "Expense",
-        99308.44999999998,
+        99299.73999999999,
         0.0,
-        99308.44999999998
+        99299.73999999999
       ]
     ]
   }

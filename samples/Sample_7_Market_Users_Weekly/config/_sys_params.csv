@@ -10,7 +10,7 @@ input_csv,input_stream/Dummy_Market_Weekly_User_Graph.csv
 col_trans_date,Timestamp
 col_src,Seller_ID
 col_tgt,Buyer_ID
-col_amount,Volume
+col_amount,Transaction_Amount
 
 # ---------------------------------------------------------
 # GLOBAL / SHARED HYPERPARAMETERS
@@ -18,7 +18,7 @@ col_amount,Volume
 # Base observation scale to coarse-grain (macroscopize) the entire system
 # (Unifies all window sizes for Thermodynamics, Geometry, Forensics, Connectivity, etc.)
 # Note: Now treating this as 'steps' (weeks) instead of months. 24 weeks = ~6 months.
-observation_window_steps,12
+observation_window_steps,3
 
 # Damping factor (gamma) for propagation depth (used in FK/IK & Sensitivity)
 damping_factor,0.85
@@ -87,5 +87,5 @@ sensitivity_delta,10.0
 # ---------------------------------------------------------
 auto_tune_enabled,True
 auto_tune_burn_in_period,12
-phase_window_size,24
+phase_window_size,7
 phase_step_size,1

@@ -10,12 +10,12 @@ try:
     # Ensure explicit 'family': 'monospace' properties also support Japanese characters
     plt.rcParams['font.monospace'] = ['IPAexGothic'] + plt.rcParams['font.monospace']
 except ImportError:
-    plt.rcParams['font.family'] = ['Noto Sans CJK JP', 'Hiragino Sans', 'YuGothic', 'sans-serif']
-    plt.rcParams['font.monospace'] = ['Noto Sans CJK JP', 'Hiragino Sans'] + plt.rcParams['font.monospace']
+    plt.rcParams['font.family'] = ['AppleGothic', 'Hiragino Sans', 'Hiragino Maru Gothic Pro', 'Noto Sans CJK JP', 'YuGothic', 'sans-serif']
+    plt.rcParams['font.monospace'] = ['AppleGothic', 'Hiragino Sans', 'Noto Sans CJK JP'] + plt.rcParams['font.monospace']
 
 def get_base_parser(description: str) -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=description)
-    parser.add_argument("--out_dir", type=str, default="workspace/output_plots/")
+    parser.add_argument("--out_dir", type=str, default="workspace/readme_plots/")
     parser.add_argument("--filename", type=str, default=None)
     # Default theme is 'dark' (only starting point based on user agreement)
     parser.add_argument("--theme", type=str, default='dark')
@@ -104,7 +104,8 @@ def load_node_labels(node_map_path: str, max_n: int) -> dict:
         df = pd.read_csv(node_map_path)
         for _, row in df.iterrows():
             idx = int(row['node_idx'])
-            if idx < max_n: idx_to_label[idx] = str(row['node_label'])
+            if idx < max_n: 
+                idx_to_label[idx] = f"{idx:02d}_{row['node_label']}"
     except Exception: 
         raise FileNotFoundError(f"❌ Node map file not found: {node_map_path}")
 
@@ -195,7 +196,8 @@ def save_plot(fig, out_dir: str, filename: str):
     os.makedirs(out_dir, exist_ok=True)
     base_name = os.path.splitext(filename)[0]
     out_path = os.path.join(out_dir, f"{base_name}.png")
-    fig.savefig(out_path, dpi=150, bbox_inches='tight')
+    fig.tight_layout() # Compress contents to fit inside the fixed figsize
+    fig.savefig(out_path, dpi=150) # Removed bbox_inches='tight' to strictly fix image dimensions
     print(f"✅ Saved: {out_path}", file=sys.stderr)
     
     # Intentionally freeze execution natively displaying GUI interactively

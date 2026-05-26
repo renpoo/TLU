@@ -1,85 +1,157 @@
-# Sample 3: 単純な貸借不一致・転記ミス（Unbalanced Journal Mistake）
+# 🔬 メタ診断臨床検査レポート：単発の入力ミス / 経理システム不整合 (Sample 3)
 
-> [!NOTE]
-> **概念実証実験にともなう免責事項**
-> 本レポートで分析されるデータは実世界の企業のものではありません。検証を目的として、特定の病理学的状態を意図的に再現するために設計されたダミーデータです。本サンプル（Sample_3_Unbalanced_Mistake）は、意図的な不正ではなく、手作業の転記ミスやレガシーシステム連携時の「端数ズレ」などによる「貸借不一致（Debit != Credit）」が引き起こす物理的な質量欠損を証明するためのものです。
+## 1. 診断結論 (Executive Summary)
+
+* **総合診断:** **一時的データ不整合 / 経理ヒューマンエラー（WARNING: Data Mismatch / Transient Anomaly）**
+* **重症度:** 🟡 **WARNING (警告・要監視)**
+* **臨床概要:**
+    本システムは、一部の売掛金回収仕訳において貸借金額が一致しない「局所的データ不整合（質量欠損）」を発症しています。シミュレーション期間中の累計で **`$1,412.88`** の質量が一時的にシステム外へ流出し、仮想的なゴミ箱ノードである `UNKNOWN_LEAK` へ振り分けられました。
+
+    しかし、物理・数学エンジンの解析結果は、これが悪意のある継続的な資金着服（横領）ではなく、**「偶発的または連携バグに起因する単発の入力不整合（打撲・ねんざ）」**であることを証明しています。ネットワークの最大スペクトル半径は全期間を通じて **`0.00`** を維持しており、循環取引（架空還流ループ）のような病的共振トポロジーは一切存在しません。さらに、質量欠損（衝撃）が発生した直後に、剛性行列（システムの力学的骨組み）が速やかに元の健全な状態へ復元する**「自己治癒能力（弾性）」**が機能しています。
+
+    統計的な Z-Score 監視においては、7月および8月に一時的な売上急増（季節変動）に反応した**「統計的偽陽性 (False Positive)」**の警告スパイクが立ち上がる一方、11月の最大不整合（`$906.29`）に対しては取引全体の流動成分に埋没しアラートが沈黙する**「統計的偽陰性 (False Negative)」**が発生しています。表層の Z-Score のみでは真の不整合を看過する危険性がありますが、物理保存則（キルヒホッフ残差）およびトポロジーの自己修復性に基づく TLU 統合診断アプローチにより、本件は正常構造維持下の「単発ミス」と判定されます。
 
 ---
 
-# 🔬 メタ解析 統合レポート (Meta-Analysis Synthesis Report / Laboratory Findings)
+## 2. 伝統的表層分析の限界 (Limitations of Traditional Audits)
 
-## 1. エグゼクティブ・サマリー
-本システム（金融ドメイン）は、一部のトランザクションにおいて**質量保存則違反（Conservation Violation）** を発症しているものの、システム全体の剛性（サスペンション）は致命的な破壊を免れており、**警告状態（WARNING: Data Corruption）** と診断される。システム内から総額 `$4,440.45` の質量が未知のノードへと消失しているが、物理的傍証が示す通り、これは「悪意ある継続的な横領」ではなく、「単発的・偶発的なヒューマンエラー（仕訳ミス・データ腐敗）」であることが数学的に証明された。
+伝統的な会計監査や単一時点のスナップショット監視では、入力時の「貸借不一致（Debit != Credit）」が発生した際、決算処理を成立させるために「諸口」や「仮受・仮払金」といった一時的なサスペンス勘定（本システムでは `UNKNOWN_LEAK` に相当）を用いて B/S の貸借バランスを強制的に合致させてしまいます。
 
-## 2. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
+以下は、本サンプルの最終ステップにおける財務諸表（P/L、B/S）の構成・推移図です。
 
-**【第52週 損益計算書 (P/L) & 貸借対照表 (B/S)】**
-![Sample 3 PL Waterfall](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__PL_Waterfall_Total.png)
-![Sample 3 BS Block](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__BS_Block_Total.png)
+* **B/S 資産・資本推移:**
+    ![B/S Trend](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__BS_Trend.png)
+    ![B/S Block Total](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__BS_Block_Total.png)
+* **P/L 売上・費用推移:**
+    ![P/L Trend](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__PL_Trend.png)
+    ![P/L Waterfall Total](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__PL_Waterfall_Total.png)
 
-従来の会計ソフトは、片端入力（Debit != Credit）があった場合、一時的な「仮払金」や「使途不明金」として強制的にバランスを合わせてしまう。結果として純利益は黒字（+$60,660.86）となり、静的なB/Sのバランスも一致するため、事業は正常に回っているように錯覚される。TLUの動的解析がなければ、このデータの腐敗は静かに進行し続ける。
+P/L 上は累積売上高に対して営業費用が健全に連動しており、最終的に利益剰余金が積み上がっています。B/S の総額バランスも維持されているため、静的な集計値だけを見ている経営管理層や外部監査人は、システム内部でデータの整合性が崩れている（質量欠損が発生している）事実に気づくことができません。物理エンジンによる動的残差の追跡がない限り、このデータの「腐食」はしっかりと隠蔽されます。
 
-## 3. 物理的病跡の特定（Fundamental Pathophysiology）
-本サンプルの根本原因は、ダミーデータ生成ロジックにおいて意図的に仕込まれた「借方と貸方の金額の不一致（端数ズレ）」にある。
-* **犯行（エラー）の手口:**
-  * 取引先の経営悪化による一部未回収や決済手数料等に対し、適切な処理を怠った。
-  * `E_002830` 等において、貸方(AR減少) `$1642.03` に対し、借方(現金増加) `$960.62` のように、システム間のデータ連携で不整合が発生した。
-  * 結果として、差額がシステムから「消失」し、TLUのエンジンはそれを `UNKNOWN_LEAK` という特設ノードへの質量移動として処理した。
+---
 
-## 4. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
+## 3. 根本病理の特定 (Fundamental Pathophysiology)
 
-### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
+物理解析エンジンは、対象データ内に発生した不整合の具体的な発生箇所と金額をしっかりと捕捉しています。本不整合は、すべて売掛金回収プロセス（`AR_Collection`）における片面入力エラーによるものです。
 
-第42週を中心に、マクロ絶対残差（＝帳簿上で合わなくなった帳尻・消失した金額）の断続的なスパイク（最大値 `1038.49`）が観測される。しかし、Sample 2（横領）で発生した「絶対硬直（Rigid Lock ＝ 資金ショート）」は起きていない。剛性行列（＝帳簿の整合性と回復力）は一時的に赤く波及するが、直後には元の健康なモザイク模様へと自己回復している。また、外力の異常共振も発生していない。これは、単発の入力ミスがシステム全体を破壊するほどのエネルギーを持たず、サスペンションが衝撃を吸収できている物理的証拠である。
+* **不整合仕訳の発生機序（計4件、累計不整合額 `$1,412.88`）**:
+    1. **2020-02 (t=1):** 取引ID [E_000484](../../../../samples/Sample_3_Unbalanced_Mistake/input_stream/Dummy_Journal_Stream.csv#L968-L969) において、売掛金（`Accounts_Receivable`）の減少（Credit）が `$513.93` 記録されたのに対し、現預金（`Cash`）の増加（Debit）が `$347.35` しか記録されず、差額 **`$166.58`** が質量欠損となりました。
+    2. **2020-03 (t=2):** 取引ID [E_000771](../../../../samples/Sample_3_Unbalanced_Mistake/input_stream/Dummy_Journal_Stream.csv#L1542-L1543) において、売掛金（`Accounts_Receivable`）の減少が `$571.88` に対し、現預金の増加が `$231.87` となり、差額 **`$340.01`** が質量欠損となりました。
+    3. **2020-11 (t=10):** 以下の2つの仕訳で同時に片端入力ミスが発生しました。
+        * 取引ID [E_002988](../../../../samples/Sample_3_Unbalanced_Mistake/input_stream/Dummy_Journal_Stream.csv#L5976-L5977) において、売掛金減少 `$950.16` に対し、現預金増加が `$171.60` （差額 **`$778.56`**）。
+        * 取引ID [E_003179](../../../../samples/Sample_3_Unbalanced_Mistake/input_stream/Dummy_Journal_Stream.csv#L6358-L6359) において、売掛金減少 `$734.53` に対し、現預金増加が `$606.80` （差額 **`$127.73`**）。
+        * 11月の合計不整合額は **`$906.29`** となります。
 
-![Sample 3 Macro Forensics](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_1__macro_forensics_dashboard.png)
-![Sample 3 External Force](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_1_6__3d_dynamics_external_force.png)
+物理エンジンは、この「宙に浮いた質量」を相殺して複式簿記の閉鎖系を保つために、自動的に `UNKNOWN_LEAK` ノードへこの差額を割り振ります。しかし、組織的横領（Sample 2）のように資金の流出経路がトポロジー的に固定・肥大化するのとは異なり、本サンプルは後述の通り「剛性の自己治癒性」を極めて明瞭に示しています。
 
-* **1枚目【始点】**: `t.00000` (正常な剛性)
-* **2枚目【変化の直前】**: `t.00018` (第19週)
-* **3枚目【変化の当該時点】**: `t.00019` (第20週: ミス発生、一時的な波及)
-* **4枚目【変化の直後】**: `t.00020` (第21週: 自己回復)
-* **5枚目【終点】**: `t.00051` (第52週: 硬直なし)
+---
 
-![Sample 3 Structural Stiffness for Week 1](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00000.png)
-![Sample 3 Structural Stiffness for Week 19](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00018.png)
-![Sample 3 Structural Stiffness for Week 20](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00019.png)
-![Sample 3 Structural Stiffness for Week 21](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00020.png)
-![Sample 3 Structural Stiffness for Week 52](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00051.png)
+## 4. 数理物理エンジンによる詳細臨床データ（数理証明）
 
-### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+物理数理エンジンが算出した定量的な臨床データに基づき、本システムの構造的特徴を数理的に証明します。
 
-Max Spectral Radius は `0.0000` のままであり、自己強化的な循環取引（Sample 1）のようなループは存在しない。システム全体のトポロジー構造は維持されている。
+### 4.1. キルヒホッフ残差と質量保存の局所的破れ
 
-![Sample 3 System Stability](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_1_2__system_stability.png)
+システムの資金の流入・流出の差分を示す物理保存則残差（`System Conservation Residual`）は、不整合が発生した 2020-02 に **`166.58`**、2020-03 に **`340.01`**、そして 2020-11 に **`906.29`** という局所的な不一致のスパイクを示しています（累計 `$1,412.88`）。これ以外の月においては残差はしっかりと `0.00` であり、流出が持続していないことを物理的に示しています。
 
-* **1枚目【始点】**: `t.00000`
-* **2枚目【変化の直前】**: `t.00018`
-* **3枚目【変化の当該時点】**: `t.00019` (第20週: 未知ノードへの微小な漏れ)
-* **4枚目【変化の直後】**: `t.00020`
-* **5枚目【終点】**: `t.00051`
+* **マクロ・フォレンジック・ダッシュボード (Macro Forensics):**
+    ![Macro Forensics](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
-![Sample_3_Unbalanced_Mistake Network Topology W1](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample_3_Unbalanced_Mistake Network Topology W19](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00018.png)
-![Sample_3_Unbalanced_Mistake Network Topology W20](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00019.png)
-![Sample_3_Unbalanced_Mistake Network Topology W21](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00020.png)
-![Sample_3_Unbalanced_Mistake Network Topology W52](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00051.png)
+### 4.2. 構造剛性の動的復元力とPCA支配軸の安定性
 
-### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
-システム全体の摩擦熱やエントロピー損失は限定的であり、致命的な熱的死には向かっていない。局所的な質量欠損はあるものの、総エネルギー量の推移はベースラインに近似している。
+剛性行列（Stiffness Matrix）の時系列シーケンスは、本エラーが「一時的なひずみ」に過ぎないことを極めて動的に視覚化しています。
 
-![Sample 3 Thermodynamics](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+* **剛性行列のシネマティック5定点シーケンス:**
+  * **① Start (t=0 / 2020-01):**
+        ![Stiffness t0](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+        無垢な初期状態。結合剛性は全体に均等に分散しており、健康な構造を示しています。
+  * **② Just Before Change (t=3 / 2020-04):**
+        ![Stiffness t3](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00003.png)
+        2月・3月の入力ミスの直後のステップ。システムは受けた局所的なひずみを徐々に減衰させ、安定したベースラインを維持しています。
+  * **③ The Exact Point of Change (t=4 / 2020-05):**
+        ![Stiffness t4](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00004.png)
+        一時的な剛性の乱れが発生している瞬間。特定のノード間で薄くストレスの伝播を示す赤色の領域が走っています。
+  * **④ Immediately After Change (t=5 / 2020-06):**
+        ![Stiffness t5](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00005.png)
+        **【自己治癒の証明】** エラーの衝撃波が通過した直後のステップ。歪みは残留せず、剛性行列は速やかに元の調和の取れた「青と緑のモザイク模様（健全状態）」へと完全自己復元しています。
+  * **⑤ End (t=11 / 2020-12):**
+        ![Stiffness t11](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00011.png)
+        最終期。11月の不整合に対してもシステムの復元力が働き、末端の慢性的な剛性ロックや破壊をしっかりと回避した状態で安定しています。
 
-### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+主成分分析（PCA）において、2020-03 (`t_idx=2`) の PC0 固有値は **`3,624,242,561.66`** となり、説明分散比率は **`100.0%`** に達しています。この主成分ベクトル（PC0）の構成要素は `01_ACC_Accounts_Receivable` (`-0.7546`)、`07_ACC_Sales_Revenue` (`0.4236`)、`04_ACC_Inventory` (`0.4259`)、および `02_ACC_COGS` (`-0.2296`) と `03_ACC_Cash` (`0.1135`) によって占められています。これは、主要な取引の Volume 変化によるものであり、異常な `UNKNOWN_LEAK` ノードが支配軸を固定的にハイジャックする現象（Sample 2で観察されたような病的同期）は起きていません。
 
-Z-Score（過去の平均からの突出度合い）の3Dサーフェスにおいて、第20週に最初の「端数ズレ」が発生した瞬間、`UNKNOWN_LEAK` ノードへ鋭いスパイクが突き出ている。この「0から1への変異」は過去の標準偏差がゼロであるため従来の統計監視では透明化されやすいが、TLUのトポロジーと情報幾何学（KL Drift ＝ 過去の標準偏差では捉えられない新たなノイズの発生）は確率分布の破壊としてこれを逃さず捕捉している。
+* **PCA 主要軸比率 (PCA Principal Axes Ratio):**
+    ![PCA Ratio](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_2__principal_axes_ratio.png)
 
-![Sample 3 3D Z-Score](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
-![Sample 3 3D KL Drift](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+### 4.3. トポロジー安定性と熱力学サイクル軌跡
 
-## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
+隣接結合行列の最大固有値である最大スペクトル半径（Spectral Radius）は、全期間を通じて **`0.00`** を維持しています。これはシステム内に「自己還流ループ（循環取引）」が存在しないことを示しています。
 
-* **偽陽性の可能性:** 今回のデータは「意図的な横領」というよりは、「取引先の不渡りや決済手数料による入金不足に対し、費用を計上せず売掛金を消し込んだ業務ミス」や「レガシーシステムから新システムへデータを移行する際の仕様バグ（端数処理の不一致）」である可能性が高い。
-* **追加検証要件:**
-  1. 第2章で特定された取引（`E_002786`, `E_002811`, `E_002830`）について、元の請求書控えと実際の銀行口座の着金履歴（Bank Statements）を突合し、実際の着金額が借方・貸方のどちらと一致しているかを確定させること。
-  2. ERPシステムの入力フォームにおいて、「借方と貸方の金額が一致していない場合でも強制保存できてしまう」というシステム上の致命的なバリデーション欠陥がないか監査すること。
+* **システム安定性指標 (Spectral Radius):**
+    ![System Stability](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_1_2__system_stability.png)
+
+また、熱力学エネルギースタックおよび T-S ダイアグラムの軌跡も、健全な商業的自然成長モデルである [Sample 0の臨床リファレンス](../Sample_0_Healthy/README.md) にきわめて近い開放的な軌道を描いています。摩擦熱（エントロピー $-TS$）の異常な拡大はなく、自由エネルギー $F$ の蓄積も順調であり、熱力学的「熱死」の兆候は一切見られません。
+
+* **熱力学エネルギースタック (Thermodynamics Energy Stack):**
+    ![Thermodynamics Energy Stack](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+* **T-S ダイアグラム (T-S Diagram):**
+    ![T-S Diagram](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+
+### 4.4. 3D Ribbon / Surface 立体プロットによる統合アプローチ
+
+時間・空間・異常指標を立体化した3Dプロットは、入力ミスの発生機序と、それがシステムに与えた局所的な熱力学的影響を可視化します。
+
+* **① 3D局所熱力学プロット:**
+    ![3D Local Entropy](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_1__3d_local_entropy.png)
+    ![3D Local Temperature](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_2__3d_local_temperature.png)
+  * **局所エントロピー ($s_i$):** 空間的フローの分散度を示します。本サンプルは単発の入力ミス（貸借不一致）であり、定常的な流路（トポロジー）の組み換えが行われたわけではないため、空間的な分散度は全ノードでほぼ平坦で低く保たれており、持続的な構造汚染はありません。
+  * **局所温度 ($T_i$):** 各科目の残高の時系列ボラティリティ（標準偏差）を示します。入力ミスが発生した月（2月, 3月, 11月）において、不整合分が `UNKNOWN_LEAK` に滞留することで、`ACC_Accounts_Receivable` および `UNKNOWN_LEAK` の残高が一時的に急変し、その月限定でピンポイントの温度スパイク（局所発熱）を記録しています。これは、組織的横領のように熱が継続的に蓄積されるのとは対照的に、エラー発生月のみに局在する「瞬間的な打撲熱」のような挙動を示しています。
+
+* **② 3Dミクロ情報幾何学および3D Z-Scoreプロット:**
+    ![3D Micro KL Drift](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+    ![3D Micro Z-Score (Position)](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+
+  ##### 1. 3D Micro KL Drift (情報幾何学の「ゼロ・トゥ・ワン」高感度検知)
+
+    情報幾何学プロットでは、2020-02 (`t_idx=1`) において `01_ACC_Accounts_Receivable` (売掛金) ノードに **`20.6829`**、`03_ACC_Cash` (現預金) に **`5.0088`** の極めて鋭くそびえ立つ単一の「尖塔（KL Drift の壁）」が立ち上がっています。
+    これは、1月には存在しなかった「売掛金の回収フロー」が2月に初めて発生したことによる不連続な確率分布の相転移（ゼロから非ゼロへの構造変化）を捉えたものです。
+    一方、3月の入力ミス期は **`0.6936`** (売掛金)、11月の最大不整合（`$906.29`）に対しては **`0.1330`** とほぼ平坦になっています。これは、既にトポロジー構造に回収フローおよび漏洩ノードが接続された後の出来事であり、さらに11月は月間総取引量（約10万ドル）に占める不整合額（約0.88%）の割合が極めて小さいため、確率分布の幾何学的変位としては「無風（ノイズ以下）」とみなされたためです。
+
+1. **3D Micro Z-Score (統計ベースラインの Volume 依存死角):**
+    Z-Score プロットは、不整合が起きた2月、3月、11月には沈黙（Z-Score < 1.5）しているのに対し、**2020-07および2020-08において最大のスパイク警告針**を突き立たせています。
+    7月には `01_ACC_Accounts_Receivable` が **`8.2579`**、`07_ACC_Sales_Revenue` が **`6.5021`** に達し、8月には `06_ACC_Rent_Exp` が **`10.4443`** に急上昇しています。これは、7月に売上高が通常の2倍（約12.4万ドル）に拡大し、8月に家賃等の支払いに伴う正常な Volume の拡大が起きたため、過去の平均から統計的に外れ値として「過剰検知」されたものです（偽陽性の典型例）。
+    逆に、11月の最大不整合に対しては、取引全体の分散が大きくなったことに埋没し、Z-Score が **`1.4817`** (売掛金)、**`0.2926`** (現預金) としっかりと沈黙しています（統計的偽陰性）。
+
+---
+
+## 5. 局所治療処方箋 (LQR Control Parameter Tuning)
+
+* **治療方針: 会計データ連携のシステムロックと手動突合プロセスの確立**
+* **LQR 感度介入（ツボの特定）:**
+    本ネットワークにおける制御感度解析（Sensitivity Matrix）では、不整合の発生経路である `ACC_Accounts_Receivable` (売掛金) ノードが改善感度の最大点として算出されています。
+    ![LQR Control](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_1_3__control_lqr_performance_space.png)
+* **実務上の改善介入提案:**
+    1. **スキーマバリデーションの強制適用:**
+        会計システム（ERP）への仕訳インポート時、借方（Debit）と貸方（Credit）の差額がしっかりとゼロでない場合、インポートプロセスをインターロック（強制遮断）し、エラーログを吐き出すようにコードを修正します。
+    2. **API 端数処理ロジックの修正:**
+        基幹業務システム（SFA/CRM）から会計システムへ売掛消込データを自動送信するバッチプログラムにおいて、消費税計算や丸め誤差（端数調整）の処理方法に論理的なバグが存在していないかを点検・修正します。
+    3. **手動差異調整のプロセス導入:**
+        月次の締め処理において、`Accounts_Receivable` の減少総額と `Cash` の増加総額を毎月自動突合し、差額が発生した場合は翌営業日までに手動で追跡・解消するワークフローを社内規定に追加します。
+
+---
+
+## 6. 🚨 Forensic Alert & 反証可能性 (Falsification Analytics)
+
+### 6.1. 統計的偽陽性と偽陰性のトリアージ (Triaging Statistical Anomalies)
+
+* **トリアージ判定:** 7月および8月に発生した Z-Score のスパイク警告は、すべて**「正常活動に伴う統計的偽陽性」**として正式に棄却（Dismiss）します。これは、深層のキルヒホッフ物理残差がその期間中に完璧な `0.00` を示しており、スペクトル半径もゼロで安定しているためです。
+* **偽陰性の克服:** 一方、Z-Score が沈黙した11月には、キルヒホッフ残差が **`906.29`** の異常値を示しているため、統計モデルの沈黙（正常判定）を棄却し、**「物理不整合（データ破損）」**が発生しているとトリアージ（診断確定）します。剛性行列が一時的な歪みのあとに即座に自己治癒していることから、組織的な資金流出（横領）ではなく「単発のエラー」と判断します。
+
+### 6.2. 本診断に対する反証条件 (Falsifiability)
+
+もし本診断が「偶発的なヒューマンエラーではなく、組織的な悪意ある資金着服（横領）」であると反証するためには、監査人は以下の**「システム外の客観的な第三者証拠・物理的原本」**を提示しなければなりません：
+
+1. **金融機関の送金指図書（原本）との突合:**
+    消失したとされる差額（計 `$1,412.88`）について、対応する日付（2020-02-23, 2020-03-20, 2020-11-02, 2020-11-27）において、法人の正規口座から第三者の未開示口座へ同額の送金が実際に行われていることを示す、改ざん不能な「銀行口座取引明細書原本」または「送金受領書原本」。
+2. **物理的配送ログとの不一致の提示:**
+    売掛金の減少（消込）が過大に行われた取引先に関して、物流業者（ヤマト運輸、佐川急便等）の独立した「出荷・検収伝票原本」を照合し、帳簿上の減少額と、実際に配送・納品された商品の物理的質量（数量・金額）との間に、説明のつかない不一致が存在することの提示。

@@ -1,88 +1,161 @@
-# Sample 6: 株式市場における相場操縦（二部グラフ: 操縦銘柄の特定 / 仮装売買の熱力学）
+# 🔬 メタ診断臨床検査レポート：二部グラフによる市場操縦と架空還流 (Sample 6)
 
 > [!NOTE]
-> **【重要】Sample 6 と Sample 7 の関係性と対象アノマリー（相場操縦）について**
-> 本サンプル（Sample 6）と次サンプル（Sample 7）は、完全に同一の株式市場のダミーデータから派生した一対の実験セットです。
-> * **Sample 6（本作）:** ログを「ユーザーと銘柄」の二部グラフ（Bipartite Graph）に射影したもの。**「どの銘柄が操縦されているか」**という視点（左からの景色）を検証します。
-> * **Sample 7（次作）:** 同じログを「ユーザー間」の直接グラフに射影したもの。**「誰と誰が結託して馴合売買を行っているか」**という視点（右からの景色）を検証します。
+> **【重要】Sample 6 と Sample 7 の関係および対象アノマリー（相場操縦）について**
+> 本サンプル（Sample 6）と次サンプル（Sample 7）は、全く同一の株式市場ダミーデータから生成された一対の解析セットです。
+>
+> * **Sample 6（本レポート）:** 取引ログを「ユーザーと銘柄」の二部グラフ（Bipartite Graph）に投影し、**「どの銘柄が操縦されているか」**（左側からの視点）を検証します。
+> * **Sample 7（次レポート）:** 同一のログを銘柄を挟まない「ユーザー間の直接の資金移動」に投影し、**「誰と誰が共謀して循環取引（対当買い・自己取引）を行っているか」**（右側からのグループ構造の視点）を浮き彫りにします。
 
 ---
 
-# 🔬 メタ解析 統合レポート (Meta-Analysis Synthesis Report / Laboratory Findings)
+## 1. 診断結論 (Executive Summary)
 
-## 1. エグゼクティブ・サマリー
-本システム（株式市場ドメイン）は、システム全体が**「極限の位相幾何学的振動（Topological Feedback Loop）」**とそれに伴う**「熱力学的エネルギーの完全崩壊（Thermodynamic Energy Depletion）」**を発症しており、市場の価格形成機能が完全に破壊された極めて危険な状態（HIGH Severity）にあると診断される。実質的な権利移転を伴わない同一銘柄の超高速キャッチボール（Wash Trade）の反復により、市場のエネルギーが不正な摩擦熱に支配されていることが証明された。
+* **総合診断:** **株式市場における特定銘柄の仮装取引・相場操縦（Stock Wash Trading / Topological Bipartite Lock）**
+* **重症度:** 🟠 **HIGH (極めて深刻な市場歪曲)**
+* **臨床概要:**
+    本システム（株式市場ドメイン）は、特定の悪意ある主体による超高速の自己取引（Wash Trade）により、市場価格形成機能がしっかりと麻痺した状態（HIGH Severity）にあります。
+    ネットワーク全体において、実質的な所有権の移転を伴わない資金と株式の高速往復キャッチボールが発生しており、**「極端な位相幾何学的還流閉路（最大スペクトル半径 $\rho = 1.00$ への飽和）」**が検出されています。
+    この中身のない取引ループによって生じる取引手数料等のコストは、有効な経済的駆動力である「自由エネルギー（Free Energy $F$）」を大幅に浪費（平均自由エネルギー $F = 3,623,458,959.18$、標準偏差 $105,763,132.99$）させており、本質的な価値創造のないままシステム全体が摩擦熱（エントロピー $S$）だけで燃え盛る「熱力学的熱死」を呈していると診断します。
 
-## 2. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
+---
 
-**【全期間の累積フロー (P/L Waterfall) & 貸借対照表 (B/S)】**
-![Sample 6 PL Waterfall](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_0_1__PL_Waterfall_Total.png)
-![Sample 6 BS Block](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_0_1__BS_Block_Total.png)
+## 2. 伝統的表層分析の限界 (Limitations of Traditional Snapshots)
 
-株式市場の総体は「純粋な運動系（閉鎖系）」であるため、全期間のネット蓄積量（B/S）はプラスマイナスゼロ（白紙）となる。従来の証券ツールの集計ダッシュボードでは、Wash Trade が行われた銘柄は単に**「出来高が急増している活発で人気のある銘柄（巨大なP/L）」**として表示され、無関係な一般投資家の買いを誘発してしまう。静的な集計ツールは、その膨大な出来高が「有意義な経済活動」なのか「少人数による自作自演の摩擦熱」なのかを区別できない。
+伝統的な証券ダッシュボードや、取引量のスナップショット監視だけで本アノマリー（相場操縦）を検知することは困難です。
 
-## 3. 物理的病跡の特定（Fundamental Pathophysiology）
-本サンプルの根本原因は、特定のユーザー群による「仮装売買（Wash Trade）」アルゴリズムの意図的な稼働である。
+以下は、全期間における累積出来高（P/L）および残差（B/S）の集計図です。
 
-* **特定された証拠:**
-  `USR_001` と `USR_006` の2名が、わずか **2.5秒間** の間に、`STK_005` に対して 1,000〜3,000株（約3000ドル/株）の巨大な売買注文を **9回連続** で相互に約定させていた事実がトランザクションレベルで確認された。このアルゴリズムの暴走が、マクロな異常指標の完全な発生源である。
+* **P/L 相当（交差点ごとの総交通量）:**
+    ![P/L Trend](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_0_1__PL_Trend.png)
+* **B/S 相当（残差・ストック累計）:**
+    ![B/S Trend](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_0_1__BS_Trend.png)
 
-## 4. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
+**【伝統的監査の死角】**
+株式市場は基本的には「クローズドな運動系」であり、市場全体の資産総額（B/S）の純増はゼロ（ブランク）です。一方、P/Lに相当する取引出来高（フロー）は `$3,623,458,959.18` という巨大な金額を計上しています。
+一般的な取引ツールでは、操縦された銘柄は単に「出来高が急増しており、流動性が極めて高い人気の優良銘柄」として表示され、かえって無関係な一般投資家の買いを誘い込むカモフラージュとして機能してしまいます。静的な集計ツールでは、この巨大な出来高が「市場の真の需要」なのか、「特定グループが仕組んだ摩擦熱」なのかを区別できません。
 
-### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
+---
 
-Wash Tradeは市場内で完結する取引であるため、システム外への質量漏洩（マクロ残差）は発生しない。しかし、異常な頻度での資金還流により、剛性行列（サスペンション）は特定のノード間で絶対硬直（Rigid Lock ＝ 外部からの健全な注文を受け付けられない市場のフリーズ状態）を起こし、外部からの健全な注文を受け入れられない状態に陥っている。
+## 3. 根本病理の特定 (Fundamental Pathophysiology)
 
-![Sample 6 Macro Forensics](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_2_1__macro_forensics_dashboard.png)
-![Sample 6 External Force 3D](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_1_6__3d_dynamics_external_force.png)
+物理解析エンジンは、取引トランザクションの深層から以下の「仮装取引アルゴリズムの稼働」を犯行証拠としてしっかりと特定しました。
 
-* **1枚目【始点】**: `t.00000` (正常な剛性)
-* **2枚目【変化の直前】**: `t.00005` (第6週)
-* **3枚目【変化の当該時点】**: `t.00006` (第7週: 資金還流による硬直発生)
-* **4枚目【変化の直後】**: `t.00007` (第8週)
-* **5枚目【終点】**: `t.00051` (第52週)
+* **特定された犯罪事実:**
+    特定の2つのアカウント `USR_003` と `USR_004` が、2020-W40 (`t_idx=39`) に銘柄 `STK_004`（株価約 $1,917.08）に対しわずか **1.0秒間** の間に1回あたり1,693株の自己取引を **20回連続**、また 2020-W46 (`t_idx=45`) に銘柄 `STK_003`（株価約 $2,066.28）に対しわずか **1.0秒間** の間に1回あたり5,000株の自己取引を **20回連続**（合計40トランザクション）で対当（マッチング）させていることが確認されました。
+    この瞬間的な資金還流往復ループこそが、ネットワーク全体に位相的・熱力学的アトラクターを形成し、すべての力学指標を狂わせた根本原因（病巣）です。
 
-![Sample 6 Structural Stiffness Week 1](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_2_1__structural_stiffness.t.00000.png)
-![Sample 6 Structural Stiffness Week 6](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_2_1__structural_stiffness.t.00005.png)
-![Sample 6 Structural Stiffness Week 7](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_2_1__structural_stiffness.t.00006.png)
-![Sample 6 Structural Stiffness Week 8](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_2_1__structural_stiffness.t.00007.png)
-![Sample 6 Structural Stiffness Week 52](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_2_1__structural_stiffness.t.00051.png)
+---
 
-### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+## 4. 物理・数学エンジンによる数理証明 (数理証明)
 
-赤色の線（Max Spectral Radius ＝ 資金の完全な還流ループの強度）が常に `1.0`（理論上の限界値）の天井に張り付いている。これは `User A -> Stock X -> User B -> Stock X -> User A` という完全な閉回路（資金の還流ループ）が常態化していることを示し、市場のエネルギーが「外部からの健全な投資」ではなく「内部の自作自演による共鳴（ハウリング）」によって支配されていることを数学的に証明している。
+### 4.1. 取引循環トポロジーと位相同期暴走
 
-![Sample 6 System Stability](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/004_1_2__system_stability.png)
+株式と資金が二部グラフ上で相互に投げ合われる構造は、隣接結合行列の最大スペクトル半径（Spectral Radius）に直接現れます。
+アノマリーが発生した 2020-W07 (`t_idx=6`) において、最大スペクトル半径は理論上限値である **`1.00`** に到達し、その後も高い還流状態（2020-W52時点で `0.995126`）を維持しています。これは、システムが強固な「自律的還流閉路（`USR_003 -> STK_004/STK_003 -> USR_004 -> STK_004/STK_003 -> USR_003`）」に束縛され、正常な外部流動性を拒絶している数学的証拠です。
 
-* **1枚目【始点】**: `t.00000`
-* **2枚目【変化の直前】**: `t.00005`
-* **3枚目【変化の当該時点】**: `t.00006`
-* **4枚目【変化の直後】**: `t.00007`
-* **5枚目【終点】**: `t.00051`
+* **システム安定性指標 (Spectral Radius):**
+    ![System Stability](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/004_1_2__system_stability.png)
 
-![Sample 6 Network Topology W1](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 6 Network Topology W6](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00005.png)
-![Sample 6 Network Topology W7](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00006.png)
-![Sample 6 Network Topology W8](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00007.png)
-![Sample 6 Network Topology W52](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00051.png)
+* **ネットワーク・トポロジー時系列の5定点シーケンス:**
+  * **① Start (t=0 / 2020-W01):**
+        ![Topology t0](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00000.png)
+        初期状態。ユーザーと銘柄間のエッジ強度は均一で、健全な分散投資トポロジーを示しています。
+  * **② Just Before Change (t=38 / 2020-W39):**
+        ![Topology t38](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00038.png)
+        アノマリー発生前。HFT口座間でのインベントリ調整取引はあるものの、特定の架空還流（Wash Trade）はまだ形成されていません。
+  * **③ The Exact Point of Change (t=39 / 2020-W40):**
+        ![Topology t39](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00039.png)
+        相場操縦アルゴリズム（Wash Trade）が発動した決定的な瞬間。`USR_003` と `USR_004` の間で `STK_004` を中心とした極端に太い架空還流の双方向エッジが形成され、位相同期（還流閉路）が成立しています。
+  * **④ Immediately After Change (t=40 / 2020-W41):**
+        ![Topology t40](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00040.png)
+        操縦直後。還流の残響（出来高急増の記憶）がトポロジー構造に深く刻まれ、他の取引が締め出されています。
+  * **⑤ End (t=51 / 2020-W52):**
+        ![Topology t51](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00051.png)
+        最終状態。一時的なバーストは収まったものの、依然として特定の結合強度が異常に偏った慢性的な病的歪みが残存しています。
 
-### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+### 4.2. 結合剛性の喪失と固有ベクトル進化による剛性ロック証明
 
-Wash Tradeは、「実質的な資金やポジションの純増減（内部エネルギー $U$）」をほぼ `0` に保ちながら、「グロスの取引量＝摩擦熱（エントロピー $S$）」だけを天文学的に増大させる。結果として $F = 0 - T(\infty)$ となり、自由エネルギーがマイナスへ無限に沈み込んでいる。「出来高が多いのに、状態が変化していない」という矛盾を、TLUは熱力学的死（Heat Death ＝ 実質的な経済活動を伴わない摩擦熱だけの状態）として正確に検知している。
+株式市場のような動的な取引ドメインにおいては、物理的なばねや永続的な構造結合が存在しないため、取引トランザクションがない定常期間の剛性行列（Stiffness Matrix）および偏相関行列の値は数学的に `0.0`（無結合・白紙状態）となります。
+しかし、主成分分析（PCA）を用いて剛性行列の支配的な固有空間の時系列推移を追跡した **「固有ベクトル進化図（`000_2_3__eigenvector_evolution.png`）」** を見ると、アノマリー期間において特定の支配的成分（PC1）が異常に成長し、特定のノード群を強力に拘束（剛性ロック）する様子が極めて鮮烈に視覚化されます。
 
-*(上: Sample 0 正常な経済成長 ／ 下: Sample 6 熱力学的な死)*
-![Sample 0 Thermodynamics](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-![Sample 6 Thermodynamics](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+* **剛性固有ベクトル進化時系列 (Eigenvector Evolution):**
+    ![Eigenvector Evolution](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_2_3__eigenvector_evolution.png)
 
-### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+**【固有ベクトル進化図に基づくアノマリーの解析】**
 
-Z-Score（過去の平均からの突出度合い）および情報幾何学的変位（KL Drift ＝ 過去の市場の確率分布からの極端な逸脱）の3Dサーフェスにおいて、一部の特定銘柄（Stock）と特定ユーザー群（User）の間に極端なスパイクが突き出しており、市場全体に不自然なエントロピーを波波させ、確率分布を汚染していることが視認できる。
+1. **初期〜アノマリー前 (t=0 〜 38 / 2020-W01 〜 W39):**
+   初期状態 `t=0` は履歴不足により完全なゼロ状態ですが、その後は `USR_002`（売り抜けクジラ）や `USR_003`（HFT）を中心とする偏相関関係が発生しています。アノマリー直前の `t=38`（W39）時点では、PC1寄与率は **`85.15%`**（固有値 `1.0530e+15`）、PC1ローディング（重み）は `USR_002` (`-0.7499`) と `USR_003` (`0.6475`) に集中しています。これは、大規模なポジション調整に伴う通常の流動性供給活動を示しています。
+2. **対当取引発生時 (t=39 〜 40 / 2020-W40 〜 W41):**
+   `t=39`（W40）の瞬間、PC1寄与率は **`67.24%`**（固有値 `3.3610e+14`）となり、ロードは `USR_002` (`-0.7720`)、`USR_004` (`0.5166`)、`USR_003` (`0.3645`) へと移行します。
+   続く `t=40`（W41）においては、PC1寄与率が **`99.67%`**（固有値 `3.2624e+14`）へと急上昇し、系全体の剛性をほぼ100%支配する強烈な「剛性ロック（Stiffness Lock）」が完成します。この時のPC1ベクトルは、Wash Tradeを実行した共謀グループである **`USR_004` (`-0.7287`)** と **`USR_003` (`0.6820`)** に異常集中しており、彼らの仮装キャッチボール取引が他の全市場参加者をトポロジー的・物理的に締め出し、市場を完全支配（ハッキング）した動かぬ数学的証拠となっています。
+3. **アノマリーの谷間（静穏期）におけるPC2への退避 (t=41 〜 44 / 2020-W42 〜 W45):**
+   対当取引の第1波（W40）と第2波（W46）の間の期間において、固有ベクトル進化図（PC1のみを描出）を見ると、`USR_003` と `USR_004` の loadings が一時的に `0.0` 付近まで低下して暗く沈んでいる（重要性を失っている）ように見えます。
+   これは彼らの架空循環取引が一時的に休止したため、系全体の支配的変動（PC1、寄与率 `87.84%`）が `USR_001` と `USR_002` 間の大口資金移動へと主役を譲ったためです。しかし、彼らの共謀関係が完全に消滅したわけではありません。このとき、`USR_003` と `USR_004` は **PC2（寄与率 `12.16%`）** へと退避しており、PC2の中では **`USR_004` (`-0.6965`)** と **`USR_003` (`0.6921`)** という極めて高い重要性（loadings）を維持し続けています。
+4. **最終期 (t=51 / 2020-W52):**
+   取引バーストは終息したものの、PC1寄与率は **`97.59%`**（固有値 `2.0151e+15`）を維持し、PC1ベクトルは `USR_002` (`0.7135`) と `USR_003` (`-0.6992`) の結合が固着したまま、系全体の柔軟性は回復していません。
 
-![Sample 6 3D Z-Score](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
-![Sample 6 3D KL Drift](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+また、結合応力を示す `Min Edge Stress` は **`0.00`** まで低下（臨界値）しており、これは特定の閉路だけで空回りが起き、他の大半のネットワーク結合のテンションが失われて麻痺していることを示しています。
 
-## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
+* **PCA 主要軸比率:**
+    ![PCA Ratio](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_2_2__principal_axes_ratio.png)
 
-* **偽陽性の可能性:** HFT（高頻度取引）業者のマーケットメイク・アルゴリズムが偶発的に共鳴した可能性もゼロではないが、2.5秒間に9回という極端な頻度と、スペクトル半径が1.0に張り付く完全な閉回路構造を考慮すると、意図的な相場操縦（Wash Trade）である可能性が極めて高い。
-* **追加検証要件:**
-  `USR_001` と `USR_006` の口座開設情報、IPアドレス、MACアドレス等を突合し、同一人物による複数口座の使い回し（シビル攻撃）でないかを規制当局に開示請求すること。未知の手口であっても、物理法則に反する資金還流はTLUの目をごまかすことはできない。
+### 4.3. 資金循環熱力学とアノマリー摩擦の検出
+
+本市場ネットワークはクローズドな運動系であり、系全体の総活動量を示す内部エネルギー $U$（青い領域）は全期間を通して **`3.725665e+09`** と完全に一定（保存）されています。また、システムの実質的な健全性を維持するための自由エネルギー $F$（白い実線）も、`3.3e+09`〜`3.7e+09` という非常に高い正の領域で安定して推移しており、市場全体の基本構造（エコシステム）自体は頑健に維持されています。
+
+しかし、アノマリーの発生前後やポジション調整期において、システムは顕著な「摩擦熱（$-TS$：エンジ色の領域）」の増大を検出しています。
+
+* **熱力学エネルギースタック:**
+    ![Thermodynamics Energy Stack](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+
+**【熱力学的摩擦の検知メカニズム】**
+架空還流（Wash Trade）や急激な資金移動が発生すると、一時的に局所的な流動性分布の乱れ（エントロピー $S$）やボラティリティ（温度 $T$）が上昇し、散逸エネルギーとしての摩擦（$TS = U - F$）が拡大します。
+物理エンジンは、市場の全体構造（$U$ と $F$ の高水準維持）を崩すことなく、アノマリーが引き起こす「不毛な局所防衛的な摩擦熱」のみをきれいなエネルギー損失シグナルとして抽出・可視化することに成功しています。
+T-Sダイアグラムは、健全な市場がエントロピーを発散させる「開放経路」をたどるのに対し、卵型に閉じた「異常な還流閉回路」を形成しています。これは外部に対して価値ある経済活動を提供せず、市場の内部だけで不毛に資金を空回りさせ、手数料コスト（摩擦）のみを垂れ流していることの決定的な物理学的証明です。
+
+* **T-S ダイアグラム:**
+    ![T-S Diagram](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+
+### 4.4. 3D幾何学的変位と情報幾何学的スパイク
+
+3Dミクロ情報幾何学プロット（`002_2_2_1__3d_micro_kl_drift.png`）において、W03における `STK_003` の大規模売り抜け（Panic Dump Whale）の後、2020-W07（`t_idx=6`）の時点で、ポートフォリオを完全に空にした一般小売投資家 `USR_006`, `USR_007`, `USR_010` などの口座座標から、統計的なベースライン乖離を示す「巨大な尖塔（KL Driftスパイク）」がそびえ立ちました。これは、通常の統計分布がその瞬間にしっかりと断裂し、過去の行動パターンから著しく乖離した相場操縦の影響が開始された犯行現場を鮮烈に可視化しています。
+
+* **3D Micro Z-Score (Position):**
+    ![3D Micro Z-Score](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+* **3D Micro KL Drift:**
+    ![3D Micro KL Drift](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+
+---
+
+## 5. 局所治療処方箋 (LQR Control Treatment)
+
+* **治療方針: 二部グラフ上のアトラクター破壊とピンポイント介入**
+* **LQR 感度介入 (経絡秘孔の特定):**
+    流動性制御理論（LQR）に基づく感度解析において、本二部グラフネットワークでは、`07_USR_003`、`08_USR_004`、`02_STK_003`、および `03_STK_004` のノード群が、システム全体の流動性を正常化するための最大介入感度（`fk_total_ripple` = `41.5234`）を有していると算出されました。
+* **具体的な治療介入計画:**
+    1. **特定銘柄への動的遅延挿入 (Phase Disruption):**
+        `STK_003` および `STK_004` に対する超高速の往復注文を検知した際、取引マッチングエンジンにミリ秒単位の「動的レイテンシー（取引実行遅延）」を強制挿入します。これにより、アルゴリズムの位相同期（キャッチボール）を物理的に破壊し、還流ループを解体します。
+    2. **LQR感度に基づくアカウント取引凍結 (Stiffness Destabilization):**
+        感度マトリクスに基づき、還流のハブとなっている `USR_003` および `USR_004` のアカウントに対し、一時的な取引上限ロック（指値注文 of 検証強化）を実施します。他の一般投資家の正常な注文（全身麻酔）を阻害することなく、病的アトラクターのみをピンポイントで外科的切除（治療）することが可能です。
+        ![LQR Performance Space](../../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/004_1_3__control_lqr_performance_space.png)
+
+---
+
+## 6. 🚨 Forensic Alert & 反証可能性 (Falsification Analytics)
+
+### 6.1. 茹でガエル現象（モデル汚染）のトリアージ (Model Pollution Assessment)
+
+* **統計ベースラインの死角:**
+    相場操縦（Wash Trading）が数週間から数ヶ月にわたり執拗に繰り返されると、機械学習や移動平均を用いた Z-Score 監視システムは、その異常出来高を「市場の新しい正常状態（ベースライン）」として誤って自己学習してしまいます。その結果、後半のタイムステップにおいて Z-Score は低下し、アラートが消滅する「茹でガエル現象（偽陰性）」が発生します。
+* **物理的不変量によるトリアージ:**
+    統計アラートが沈黙している後半戦においても、隣接トポロジーの「最大スペクトル半径 $\rho \ge 0.95$」および熱力学の「閉じた T-S サイクル軌道」は異常高値を維持し続けています。当フォレンジック監査においては、汚染されやすい Z-Score よりも、これらの物理的・構造的不変量を優先（トリアージ）し、**「相場操縦は現在も継続中である」** と断固として判定します。
+
+### 6.2. 本診断に対する反証条件 (Falsifiability)
+
+もし「本取引は相場操縦ではなく、正常な裁定取引やマーケットメイクである」と反証するためには、当事者は監査人に対し以下の**「データ境界の外側にある客観的物理証拠（原本）」**を提示する必要があります：
+
+1. **東証 matching engine (取引所生ログ原本) の開示:**
+    第三者取引所（東京証券取引所等）のシステムから直接出力された、発注から約定にいたるタイムスタンプ（ナノ秒単位）の生ログ原本。他の無関係なマーケットメイカーの注文と正当に競合した結果として約定したことのタイムシークエンス証明。
+2. **実質的支配関係の不存在証明 (Beneficial Ownership Transfer):**
+    `USR_003` と `USR_004` の背後にある法的主体がしっかりと独立しており、資金の出所や利益の帰属先に関して一切の裏合意・還流が存在しないことを示す、銀行の資金移動証明書原本および監査済み親会社法人登記簿原本。

@@ -48,13 +48,10 @@ def main():
     N = int(df['node_idx'].max()) + 1
     node_labels = load_node_labels(args.node_map, N)
 
-    fig = plt.figure(figsize=(16, 16))
+    fig = plt.figure(figsize=(18, 12))
     
-    # [Fix] Move 3D plot area to the left and widen it.
-    # Old: [0.12, 0.18, 0.55, 0.65] (left margin 12%, width 55%)
-    # New: [0.05, 0.18, 0.60, 0.65] (left margin 5%, width 60%)
-    # This moves the plot to the left and widens the right margin.
-    ax = fig.add_axes([0.05, 0.20, 0.60, 0.65], projection='3d')
+    # [Fix] Apply the same balanced layout as the Thermodynamics T-S Diagram
+    ax = fig.add_axes([0.15, 0.15, 0.60, 0.75], projection='3d')
     ax.view_init(elev=args.elev, azim=args.azim)
 
     # Allocation of trajectory color (hue).
@@ -117,7 +114,7 @@ def main():
     if legend_elements:
         # [Fix] Shorten the separator line in the legend title (30 hyphens -> 20 hyphens).
         # This narrows the legend width and eliminates overlapping.
-        leg = ax.legend(handles=legend_elements, loc='center left', bbox_to_anchor=(1.05, 0.5), 
+        leg = ax.legend(handles=legend_elements, loc='center left', bbox_to_anchor=(1.15, 0.5), 
                         title="Node Map (Index -> Name):\n" + "-"*24,
                         facecolor=bg_col, edgecolor=edge_col, 
                         prop={'family': 'monospace', 'size': 8})

@@ -14,14 +14,13 @@ bash bin/orchestrators/0_0_run_market_generator.sh
 # 3. Pre-aggregate (Project) to Weekly User Network
 # We specify col_multiplier="Price" so that Value = Volume * Price (Transaction Amount)
 echo "Aggregating master stream into Weekly User Network..."
-${TLU_PY} -m src.filters._0_1_aggregate_stream \
-    --col_time "Timestamp" \
-    --col_src "Seller_ID" \
-    --col_tgt "Buyer_ID" \
-    --col_val "Volume" \
-    --col_multiplier "Price" \
-    --interval "week" \
-    < "${ENV_DIR}/input_stream/Dummy_Market_Stream.csv" \
+cat "${ENV_DIR}/input_stream/Dummy_Market_Stream.csv" \
+    | ${TLU_PY} -m src.filters._0_1_aggregate_stream \
+        --col_time "Timestamp" \
+        --col_src "Seller_ID" \
+        --col_tgt "Buyer_ID" \
+        --col_val "Transaction_Amount" \
+        --interval "week" \
     > "${ENV_DIR}/input_stream/Dummy_Market_Weekly_User_Graph.csv"
 
 echo "Weekly User Network generated at ${ENV_DIR}/input_stream/Dummy_Market_Weekly_User_Graph.csv"
@@ -34,8 +33,7 @@ cat "${ENV_DIR}/input_stream/Dummy_Market_Stream.csv" \
         --col_time "Timestamp" \
         --col_src "Src" \
         --col_tgt "Tgt" \
-        --col_val "Volume" \
-        --col_multiplier "Price" \
+        --col_val "Transaction_Amount" \
         --interval "week" \
     > "${ENV_DIR}/input_stream/Dummy_Market_Weekly_Bipartite_Graph.csv"
 

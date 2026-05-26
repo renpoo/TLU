@@ -1,175 +1,43 @@
-# TLU Meta-Diagnosis Report (Attending Physician's Summary)
+# TLU Meta-Diagnosis Report (Statistical Upgrade V2)
 
 **Target Environment:** `samples/Sample_0_Healthy`
-**Date Analyzed:** 2026-05-03 10:44:51
+**Date Analyzed:** 2026-05-21 07:21:41
 
 ## 1. Final Diagnosis
 
-### 🟢 Healthy System (No Structural Pathologies Detected)
+### 🟢 Healthy System (Statistically Stable)
+
 - **Severity:** NORMAL
-- **Evidence:** All physical parameters remained within stable thresholds.
-- **Interpretation:** The system is functioning efficiently without any detectable structural anomalies, leaks, or loops.
+- **Evidence:** All statistical moments (Mean, Variance, Skew, Kurtosis) remain within stable thresholds.
+- **Interpretation:** The system is functioning efficiently with normal random-walk volatility.
 
 ---
-## 2. Scale-Invariant Diagnostic Metrics
 
-| Physical Domain | Extracted Metric | Value | Threshold |
-|-----------------|------------------|-------|-----------|
-| Macro Forensics | Relative Mass Leak Ratio | 0.0000 | > 1e-06 |
-| Control Theory  | Max Spectral Radius      | 0.0000 | >= 0.6 |
-| Thermodynamics  | Relative Free Energy Ratio| 0.4061 | < -0.1 |
-| Micro Forensics | Max Local Z-Score        | 0.00 | > 3.0 |
+## 2. Statistical Array Forensics (Time-Series Diagnostics)
 
-> *Generated automatically by the TLU Meta-Diagnosis Engine.*
+### Entropy (S) Dynamics
 
-<!--
-<LLM_DIAGNOSTIC_CONTEXT>
-{
-  "timestamp": "2026-05-03T10:44:51.943812",
-  "environment": "samples/Sample_0_Healthy",
-  "physics_metrics": {
-    "max_abs_residual": 0.0,
-    "mean_gross_activity": 1302063.825769231,
-    "relative_leak_ratio": 0.0,
-    "max_spectral": 0.0,
-    "min_free_energy": 93251.36,
-    "min_relative_free_energy": 0.406125999313399,
-    "max_z_score": 0.0,
-    "max_leak_location": "Time: 2020-W01"
-  },
-  "detected_pathologies": [
-    {
-      "pathology": "Healthy System (No Structural Pathologies Detected)",
-      "severity": "NORMAL",
-      "evidence": "All physical parameters remained within stable thresholds.",
-      "interpretation": "The system is functioning efficiently without any detectable structural anomalies, leaks, or loops."
-    }
-  ],
-  "financial_baseline": {
-    "week": "2020-W52",
-    "assets": 216622.47999999998,
-    "liabilities": 169191.21000000084,
-    "equity": 0.0,
-    "net_income": 47431.269999999786,
-    "total_liab_eq": 216622.48000000062,
-    "revenue": 955157.5599999998,
-    "expense": 907726.29,
-    "is_balanced": true,
-    "bs_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        111101.96000000014
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        115309.2699999999
-      ],
-      [
-        "ACC_Cash",
-        "Liability (Short/Overdraft)",
-        58089.2500000007
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        101313.21000000008
-      ]
-    ],
-    "pl_items": [
-      [
-        "ACC_COGS",
-        "Expense",
-        525436.7600000001
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        220971.34
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        62009.74
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        955157.5599999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        99308.44999999998
-      ]
-    ],
-    "tb_items": [
-      [
-        "ACC_Accounts_Payable",
-        "Liability",
-        515648.01000000007,
-        626749.9700000002,
-        111101.96000000014
-      ],
-      [
-        "ACC_Accounts_Receivable",
-        "Asset",
-        955157.5599999998,
-        839848.2899999999,
-        115309.2699999999
-      ],
-      [
-        "ACC_COGS",
-        "Expense",
-        525436.7600000001,
-        0.0,
-        525436.7600000001
-      ],
-      [
-        "ACC_Cash",
-        "Asset",
-        839848.2899999999,
-        897937.5400000006,
-        -58089.2500000007
-      ],
-      [
-        "ACC_Inventory",
-        "Asset",
-        626749.9700000002,
-        525436.7600000001,
-        101313.21000000008
-      ],
-      [
-        "ACC_Payroll_Exp",
-        "Expense",
-        220971.34,
-        0.0,
-        220971.34
-      ],
-      [
-        "ACC_Rent_Exp",
-        "Expense",
-        62009.74,
-        0.0,
-        62009.74
-      ],
-      [
-        "ACC_Sales_Revenue",
-        "Revenue",
-        0.0,
-        955157.5599999998,
-        955157.5599999998
-      ],
-      [
-        "ACC_Travel_Exp",
-        "Expense",
-        99308.44999999998,
-        0.0,
-        99308.44999999998
-      ]
-    ]
-  }
-}
-</LLM_DIAGNOSTIC_CONTEXT>
--->
+- **Baseline (Mean / Median):** 1.53 / 1.64
+- **Volatility (Std Dev):** 0.24
+- **Distribution Shape (Skew / Kurtosis):** -0.33 / -1.43
+- **Anomaly Count (Z > 3.0):** 0 times
+
+### Free Energy (F) Dynamics
+
+- **Baseline (Mean / Median):** 2,945,002.83 / 2,881,969.53
+- **Volatility (Std Dev):** 548,343.12
+- **Distribution Shape (Skew / Kurtosis):** 0.25 / -1.24
+- **Anomaly Count (Z > 3.0):** 0 times
+
+### Topological & Conservation Constraints
+
+- **Max Spectral Radius:** 0.00
+- **Min Edge Stress:** 8.0988
+- **Relative Mass Leak Ratio:** 0.00
+
+## 3. Structural Evolution (Viscosity Classification)
+
+- **Viscosity Range:** `230384.23 ~ 396820.32`
+  - 🩸 **Diagnosis:** Thrombosis / High-Friction (Old-Generation Structure). The system relies on manual/human friction.
+
+> *Generated automatically by the TLU Meta-Diagnosis Engine (Statistical Upgrade).*

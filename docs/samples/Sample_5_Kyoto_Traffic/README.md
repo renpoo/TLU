@@ -1,88 +1,186 @@
-# Sample 5: Application to Cross-Domain Disciplines (Virtual Kyoto Traffic - Flow and Thermodynamic Collapse in Traffic Networks)
-
-> [!NOTE]
-> **Disclaimer regarding Proof of Concept Experiments**
-> The data analyzed in this report is not from a real-world company. Furthermore, this sample (Sample_5_Kyoto_Traffic) is **not even "accounting data (flow of money)."** It is specialized non-financial data simulating the "traffic volume of automobiles" traveling across a grid of intersections in central Kyoto. This is an extreme test to prove that TLU is a "Universal Physics Engine" applicable to all network flows (logistics, traffic, communications) beyond the realm of accounting.
-
----
-
-# 🔬 Meta-Analysis Synthesis Report / Laboratory Findings
+# 🔬 Clinical Meta-Diagnostic Forensic Report: Flow Paralysis & Thermodynamic Death of Urban Traffic Network (Sample 5)
 
 ## 1. Executive Summary
 
-This system (traffic and mobility domain) is diagnosed as being in a state of complete paralysis (deadlock) as an urban traffic network (HIGH Severity), with the entire system exhibiting **"Thermodynamic Energy Depletion"** and **"Extreme Topological Feedback Loops."** Non-conservation of mass is occurring at localized intersections, meaningful fluidity (Free Energy) has sunk deep into the negative zone, and the system is experiencing Thermodynamic Death (Heat Death).
+* **Overall Diagnosis:** **Urban Traffic Network Localized Thermodynamic Freeze (Kyoto Traffic Grid Deadlock / Severe Localized Freeze)**
+* **Severity:** 🟠 **HIGH (Extremely Serious Functional Failure)**
+* **Clinical Overview:**
+    This system (representing vehicle flow volume data across a 25-intersection network in the center of Kyoto) is a closed kinetic system where the total number of vehicles (mass) is strictly conserved at $U = 2,500,000.0$. However, due to a sudden physical closure of a major intersection (the Shijo-Karasuma bottleneck) in the later stages of the simulation (from Week 52 of 2020 onward), a severe stoppage of flow is occurring in part of the network.
 
-## 2. Limitations of Traditional Perspective
+    The physical feature of this anomaly is not macro thermal breakdown or mass leakage, but rather a **"local thermodynamic freeze (solidification/freezing)"**. While the local temperature (流量ボラティリティ $T_i$) at the bottleneck intersection `23_四条烏丸` (Shijo-Karasuma) plummeted from `32.58` to **`1.87`**, entering a "frozen state," an extremely sharp temperature gradient of **`+65.31`** (local thermal stress / cold-island effect) formed between it and the active surrounding intersections.
 
-**[Week 52 Profit and Loss (P/L) & Balance Sheet (B/S)]**
-![Sample 5 PL Waterfall](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__PL_Waterfall_Total.png)
-![Sample 5 BS Block](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__BS_Block_Total.png)
+    Furthermore, at the surrounding upstream intersections (e.g., `21_四条室町` (Shijo-Muromachi)), the local entropy (spatial path dispersion $s_i$) decreased from `1.993` to **`1.674`** because the outflow route was blocked (loss of routing options), propagating severe congestion and deadlocks throughout the flow network. The macro free energy $F$ remains stable at a massive positive value (average $F = 2,480,816.31$), but this merely indicates that the entire system has entered a "thermally frozen state" where it is completely static and crystallized.
 
-In a "purely kinetic system" like a traffic network, the net accumulation amount (B/S) for the entire period is plus/minus zero (blank slate). The visual contrast where "the B/S is blank, but only the P/L (throughput) has become abnormally massive" indicates that the system is not accumulating value but generating intense frictional heat. With traditional dashboards, one might know "which intersection has the most inflow," but it is impossible to predict the dynamic lifespan of "how much longer until the entire system completely deadlocks (Thermodynamic Death)."
+---
+
+## 2. Limitations of Traditional Snapshots
+
+If we force-apply the traditional accounting concepts (B/S and P/L) to a traffic network, static aggregated values alone cannot reveal this fatal traffic paralysis. Below are the cumulative flow volume (P/L equivalent) and stock (B/S equivalent) charts across the entire period:
+
+* **P/L Equivalent (Total Traffic Volume per Intersection):**
+    ![P/L Trend](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__PL_Trend.png)
+* **B/S Equivalent (Unbalanced Stock Accumulation):**
+    ![B/S Trend](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__BS_Trend.png)
+
+**【Blind Spots of Traditional Aggregates】**
+In a "Closed Kinetic System" like a traffic network, the cumulative residual stock of vehicles (B/S equivalent) net out to `$0.00` (zero net variance). On the other hand, the total passing flow volume (P/L equivalent) at each intersection displays a massive volume of `$2,500,000.00`.
+
+A typical traffic monitoring dashboard can identify static rankings of "which intersection has the most traffic," but it cannot evaluate the dynamic health of the flow structure—such as capturing whether vehicles are simply cycling futilely between the same intersections without moving closer to their destinations, or calculating how many minutes remain before the entire system falls silent (countdown to thermodynamic heat death).
+
+---
 
 ## 3. Fundamental Pathophysiology
 
-The root cause of this sample is a "generation logic ignoring laws of physics" intentionally planted in the dummy data generation logic (`_0_0_generate_dummy_traffic.py`).
+The physics engine accurately captures the following structural changes and pathological bottlenecks embedded in the data generation logic (`_0_0_generate_dummy_traffic.py`):
 
-* **Lack of Localized Law of Conservation of Mass (Occurrence of Paranormal Phenomenon):**
-  Traffic between adjacent intersections is generated as completely independent random values for inflow and outflow.
-  As a result, localized non-conservation of mass—"cars spontaneously springing forth at an intersection and spontaneously disappearing at another intersection"—occurred simultaneously across all nodes, causing thermal friction that collapsed the entire system.
+1. **Dynamic Flow Blockage & Back-Up (Shijo-Karasuma Bottleneck)**:
+    Starting from Day 360 of the simulation (Week 52 onward), the flow capacity of edges connecting to the major intersection "Shijo-Karasuma" was restricted to a mere **5%** of its normal capacity (simulating road construction or an accident). As inflow was severely restricted, a rapid backflow and accumulation of vehicles occurred at upstream intersections such as `08_三条烏丸` (Sanjo-Karasuma) and `21_四条室町` (Shijo-Muromachi). This was captured as a sudden change in spatiotemporal transition probabilities (a spike in `kl_divergence_drift` to **`1.7629`** in Week 53).
+2. **Local Freezing & Topological Constraint (Cooling & Directional Restraint)**:
+    Since `23_四条烏丸` (Shijo-Karasuma) itself was almost completely shut off from inflows and outflows, there was no vehicle turnover (flow volatility), causing its local temperature to drop near absolute zero ("thermal freeze"). At the same time, at surrounding intersections, vehicles struggled to find detours, restricting their progress directions (spatial outflow uncertainty) and triggering a significant drop in local entropy, which represents a "loss of topological degrees of freedom."
 
-## 4. Physical and Mathematical Proof
+---
 
-### 4.1. Macro Forensics & Structural Stiffness
+## 4. Mathematical Evidence from the Physics Engine
 
-Because cars are springing forth and disappearing in defiance of the laws of physics, the macro Law of Conservation of Mass is completely collapsed. It is confirmed from physical quantities that the stiffness matrix (suspension) is also in a state of absolute rigidity (Rigid Lock = complete paralysis and deadlock of the traffic network) due to extreme frictional stress.
+### 4.1. Strict Mass Conservation & Verification
 
-![Sample 5 Macro Forensics](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_1__macro_forensics_dashboard.png)
-![Sample 5 External Force 3D](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_1_6__3d_dynamics_external_force.png)
+The Kirchhoff conservation residual (**`System Conservation Residual`** / relative leak ratio) measuring vehicle total mass discrepancy remains at **`0.00` (perfect zero)** throughout the period. This physically proves that this system is defined as a strict closed kinetic system equivalent to double-entry bookkeeping, and not a single vehicle leaked or was created in the data (unlike Samples 2 and 3 where embezzlement or input errors occurred).
 
-* **1st Image [Start]**: `t.00000` (Initial state: 0 months elapsed)
-* **2nd Image [In Progress]**: `t.00006` (6 months elapsed: Frictional heat begins accumulating)
-* **3rd Image [Constant Friction]**: `t.00012` (12 months elapsed: Partial paralysis)
-* **4th Image [In Progress]**: `t.00018` (18 months elapsed)
-* **5th Image [End]**: `t.00024` (24 months elapsed: Complete deadlock state)
+* **Macro Forensics Dashboard:**
+    ![Macro Forensics](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
-![Sample 5 Structural Stiffness Month 0](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00000.png)
-![Sample 5 Structural Stiffness Month 6](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00006.png)
-![Sample 5 Structural Stiffness Month 12](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00012.png)
-![Sample 5 Structural Stiffness Month 18](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00018.png)
-![Sample 5 Structural Stiffness Month 24](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00024.png)
+### 4.2. Total Rigidification of Traffic & 3D External Force Resonance
 
-### 4.2. Topological Anomaly / Spectral Radius
+The time-series sequence of the Stiffness Matrix documents how the entire network rigidifies fatally over time.
 
-The red line (Max Spectral Radius = intensity of traffic jams due to meaningless back-and-forth movement and loops) has been pinned entirely to the ceiling of `1.0` (theoretical maximum). A "perfect two-way reciprocating motion (extreme oscillation like a pendulum)" where a car traveling from intersection A to B returns exactly back to A is dominant. The system is no longer a "flowing river," but is completely deadlocked as "sound waves violently reflecting against each other inside a sealed box."
+* **Stiffness Matrix 5-Point Sequence (centered around 2020-W52):**
+  * **① Start (t=0 / 2020-W01):**
+        ![Stiffness t0](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+        At the start of the simulation, no overall stiffness lock has occurred, maintaining a flexible, low-stiffness flow state.
+  * **② Pre-Anomaly (t=50 / 2020-W51):**
+        ![Stiffness t50](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00050.png)
+        Immediately before bottleneck injection. Under daily flow patterns, the PC1 contribution ratio is **`81.41%`** (eigenvalue **`63735.4365`**), with the primary stiffness axes concentrating on `13_二条烏丸` (Nijo-Karasuma) (`-0.5750`) and `07_三条新町` (Sanjo-Shinmachi) (`0.3907`).
+  * **③ Onset (t=51 / 2020-W52):**
+        ![Stiffness t51](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00051.png)
+        Anomaly week. The capacity restriction (5%) at Shijo-Karasuma starts, introducing local strain to the transition probability balance.
+  * **④ Paralysis / Peak Drift (t=52 / 2020-W53):**
+        ![Stiffness t52](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00052.png)
+        Full paralysis occurs. Shijo-Karasuma is completely blocked, creating irreversible bias in upstream transition probabilities and peaking the KL Drift at `1.7629`.
+  * **⑤ Chronic Deadlock (t=53 / 2021-W01):**
+        ![Stiffness t53](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00053.png)
+        Solidification of paralysis. The KL Drift remains high at `0.9154` in the first week of the new year, the local temperature at Shijo-Karasuma remains frozen at `1.87`, and the temperature gradient (`local_grad_t`) reaches `+87.54`, showing transition to a chronic deadlock where local flow friction is permanently fixed.
 
-![Sample 5 System Stability](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_2__system_stability.png)
+### 4.3. Topological Strong Connectivity & Spectral Radius Constancy
 
-* **1st Image [Start]**: `t.00000`
-* **2nd Image [In Progress]**: `t.00006`
-* **3rd Image [Constant Friction]**: `t.00012`
-* **4th Image [In Progress]**: `t.00018`
-* **5th Image [End]**: `t.00024`
+The "Spectral Radius," which is the maximum eigenvalue of the adjacency connection matrix, remains perfectly fixed at **`1.00`** throughout the period. This is a mathematical consequence (Perron-Frobenius theorem) of the fact that the intersection network is a closed, strongly connected network with bidirectional flows and no external drains.
 
-![Sample 5 Network Topology Month 0](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 5 Network Topology Month 6](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00006.png)
-![Sample 5 Network Topology Month 12](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00012.png)
-![Sample 5 Network Topology Month 18](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00018.png)
-![Sample 5 Network Topology Month 24](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00024.png)
+* **Time-Series Trend of System Stability (Spectral Radius):**
+    ![System Stability](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_2__system_stability.png)
 
-### 4.3. Thermodynamic Energy Stack
+As shown in the graph, the spectral radius draws a flat line at exactly `1.00`, proving that the network's connection topology is preserved. The occurrence of this anomaly is instead convicted by the **distortion of the adjacency topology transition (KL Divergence Drift) and the sudden shift of the PCA dominant axes**. At the moment of bottleneck injection in Week 52 of 2020, the KL Drift measuring transition probability displacement jumped from a normal average of `0.08` to **`1.7629`** (Week 53), proving a sudden structural phase transition.
 
-Compared to the "upward growth of the white line (Free Energy)" in Sample 0, in Sample 5, the free energy is completely crushed, and the entropy loss ($T \Delta S$: red layer) sinks violently deep underground into the negative zone. This is perfect proof that "although a massive number of cars are moving (total activity is high), most of it disappears into localized retention and wasteful energy consumption (entropy generation) due to friction, killing off the 'power to flow' of the network as a whole," meaning Thermodynamic Death (Heat Death = cars are moving but no one can reach their destination in a state of complete paralysis).
+* **Network Topology 5-Point Sequence (centered around 2020-W52):**
+  * **① Start (t=0 / 2020-W01):**
+        ![Topology t0](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00000.png)
+        Initial state. Probability flows are evenly dispersed, maintaining healthy dynamic circulation.
+  * **② Pre-Anomaly (t=50 / 2020-W51):**
+        ![Topology t50](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00050.png)
+        Immediately before bottleneck injection. Although seasonal fluctuations exist, the connection patterns show a stable steady state.
+  * **③ Onset (t=51 / 2020-W52):**
+        ![Topology t51](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00051.png)
+        Anomaly week. The capacity restriction (5%) at Shijo-Karasuma starts, introducing local strain to the transition probability balance.
+  * **④ Paralysis / Peak Drift (t=52 / 2020-W53):**
+        ![Topology t52](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00052.png)
+        Full paralysis occurs. Shijo-Karasuma is completely blocked, creating irreversible bias in upstream transition probabilities and peaking the KL Drift at `1.7629`.
+  * **⑤ Chronic Deadlock (t=53 / 2021-W01):**
+        ![Topology t53](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00053.png)
+        Solidification of paralysis. The KL Drift remains high at `0.9154` in the first week of the new year, the local temperature at Shijo-Karasuma remains frozen at `1.87`, and the temperature gradient (`local_grad_t`) reaches `+87.54`, showing transition to a chronic deadlock where local flow friction is permanently fixed.
 
-*(Top: Sample 0 Healthy Economic Growth / Bottom: Sample 5 Thermodynamic Death)*
-![Sample 0 Thermodynamics](../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-![Sample 5 Thermodynamics](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+### 4.4. Thermodynamic "Freezing" & Local Entropy/Temperature Analysis
 
-### 4.4. 3D Micro Z-Score & KL Drift
+In macro thermodynamic metrics, for the total number of vehicles (internal energy $U = 2,500,000.0$), the macro free energy $F$ remains stable at a **very high positive value of approximately `2.48 × 10^6`** due to the very small $TS$ term.
 
-In the 3D surface of Z-Score (degree of protrusion from past averages) and Information Geometric Mutation (KL Drift = collapse of past laws of physics, such as cars suddenly disappearing), probabilistically impossible abnormal spikes (cars suddenly springing forth or disappearing) at specific groups of intersections ripple across the entire network, and the destruction of the probability distribution is visually identifiable.
+Following the gridlock onset in Week 52 of 2020, flow restriction caused the macro entropy $S$ to decrease slightly from `40.50` to **`38.70`**, but local intense friction (velocity variance) drove the macro temperature $T$ up from `457.24` to **`547.06`**, reducing the free energy $F = U - TS$ from `2,481,482` to **`2,478,826`**. This is thermodynamic proof of energy dissipation (entropy loss) due to flow friction.
 
-![Sample 5 3D Z-Score](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
-![Sample 5 3D KL Drift](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+* **Thermodynamics Energy Stack & 3D Local Plots:**
+    ![Thermodynamics Energy Stack](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+    ![3D Local Entropy](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2_1__3d_local_entropy.png)
+    ![3D Local Temperature](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2_2__3d_local_temperature.png)
 
-## 5. ⚠️ Falsification Analytics
+The 3D spatiotemporal plots and local spatiotemporal analysis clearly prove the pathological mechanism of this "local freeze":
 
-* **Possibility of False Positives:** If this were real-world traffic data, it would be impossible for cars to physically disappear or appear inside an intersection, so there is an extremely high probability that it is a hardware failure of the traffic sensors installed at the intersection or a fatal bug in the data aggregation server.
-* **Proof of TLU's Universality:** Despite TLU not knowing the concept of "money," it automatically diagnosed the structural defect that "it locally ignores the laws of physics (conservation of mass) and is thermodynamically completely broken" from a mere sequence of numbers. This strongly proves that TLU is a **Universal Physics Engine** capable of diagnosing the dynamic health of any complex network.
+1. **Local Cooling of the Bottleneck Intersection (Temperature Freeze):**
+    At **`23_四条烏丸`** (Shijo-Karasuma) where passing activity was blocked, the local temperature (流量ボラティリティ $T_i$ of flow) plummeted from `32.58` to **`1.87`**, causing a complete thermal freeze. This formed a massive local temperature gradient (`local_grad_t`) of **`+65.31`** (a yellow spire) between it and active neighboring nodes, showing that flow friction is heavily localized.
+    ![3D Local Gradient](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2_3__3d_local_gradient.png)
+    ![Local Thermo Gradient](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2_6__local_thermo_gradient.png)
+2. **Topological Restriction at Upstream Intersections (Entropy Decay):**
+    At the upstream intersection **`21_四条室町`** (Shijo-Muromachi) feeding vehicles into Shijo-Karasuma, the options for turn/straight routing (spatial dispersion $s_i$ of outflows) were closed off, dropping local entropy from `1.993` to **`1.674`**. This mathematically indicts the topological rigidity where vehicles are robbed of routing freedom and forced into stagnation.
+
+* **T-S Diagram:**
+    ![T-S Diagram](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+
+The T-S diagram draws an abnormal closed cycle that contracts from the upper-right layer (FY2020) to the lower-left layer (post-accident FY2021), decreasing both entropy and temperature. This is clear evidence that the system's flexible flow capacity (elasticity) has frozen, lock-stepping major intersections into a static gridlock.
+
+### 4.5. 3D Geometric Anomaly Identification & Information Geometric Spikes
+
+The 3D spatiotemporal plots visualize where and when the structural phase transition of the flow (local congestion and backflow) occurred.
+
+* **3D Micro Z-Score (Position):**
+    ![3D Micro Z-Score](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+* **3D Micro KL Drift:**
+    ![3D Micro KL Drift](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+
+#### Interpretation of the 3D Plots
+
+1. **3D Micro KL Drift (Phase Transition of Transition Probabilities):**
+    In **`2020-W53` (t=52)** when the bottleneck occurred, a giant spatiotemporal spike rises around `23_四条烏丸` (Shijo-Karasuma). This physically identifies the exact moment the flow structure changed due to A/R capacity restriction (5%) that altered upstream routing probabilities.
+2. **Astronomical Z-Score Spike at `2021-W18` (t=70):**
+    In this plot, long after the accident, a single spatiotemporal spire with a Z-Score of **`612,559.82`** explodes at `23_四条烏丸` (Shijo-Karasuma). This is not a physical influx of vehicles or a breakdown of conservation, but rather a statistical false positive (mathematical illusion of the Z-Score) caused by **"boiled frog syndrome (baseline adaptation)"**.
+
+    * **Mechanism Proof**:
+      * After the bottleneck onset (`2020-W52`), flow through Shijo-Karasuma was suppressed, and the net flow velocity (`velocity_v`) flattened to nearly `0` or `1` (complete deadlock).
+      * Consequently, the rolling standard deviation (`std`) over the 12-week past window **shrank close to absolute zero (`0.0`)**.
+      * In `2021-W18`, a minor fluctuation occurred: passing vehicles increased by only 5 cars (net velocity `velocity_v` increased from `1.0` to `6.0`).
+      * Because the standard deviation in the denominator was extremely small, this minor variation was amplified by division, manifesting as a Z-Score spike exceeding **610,000**.
+      * By `2021-W19`, this variation was integrated into the past window, resetting the Z-Score to a normal `1.13`.
+
+    This phenomenon demonstrates that static statistical models (Z-scores) adapt to chronic paralysis and misinterpret minor fluctuations as disasters, proving the necessity of information-geometric metrics (such as KL Drift, which remained flat at `0.0004` during W18) to reliably capture structural phase transitions.
+
+---
+
+## 5. LQR Control Treatment
+
+* **Treatment Plan:** **Dynamic Signal Phase Adjustment & Stiffness Lock Mitigation**
+* **LQR Sensitivity Intervention (Acupoint Identification):**
+    In LQR flow control sensitivity analysis, the nodes showing the highest dynamic intervention sensitivities are `00_一条堀川` (Ichijo-Horikawa), `13_二条烏丸` (Nijo-Karasuma), and `23_四条烏丸` (Shijo-Karasuma) (with sensitivity `41.5234`).
+    ![LQR Sensitivity](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_3__control_lqr_performance_space.png)
+* **Specific Intervention Plan:**
+    1. **Signal Phase Disruption:**
+       Implement phase offsets (cycle time-difference adjustments) to traffic signal cycles at the bottleneck intersections (Ichijo-Horikawa, Nijo-Karasuma, Shijo-Karasuma) based on LQR feedback. This physically interferes with and breaks up the vehicle recirculation waves, clearing the deadlock.
+    2. **Stiffness Softening:**
+       Apply temporary gate controls (inflow restrictions) at intersections upstream of stiffness lock hubs (such as `17_五条新町` and `22_四条新町`). Relaxing local joint rigidity restores normal traffic flow (circulation of Qi) across the entire network.
+
+---
+
+## 6. 🚨 Forensic Alert & Falsification Analytics
+
+### 6.1. Triaging Statistical Anomalies
+
+* **Triaging Decision:**
+    Temporary surges in traffic (seasonal fluctuations) during tourist seasons scale the entire network's volume, but do not freeze specific intersections or drop local entropy, keeping KL Drift stable.
+
+    Conversely, the data starting from Week 52 satisfies:
+    1. **Kirchhoff Residual Conservation:** Macro and micro residuals remain `0.00` (no data corruption).
+    2. **Structural Phase Transition:** KL Drift jumps 20-fold to **`1.7629`** (Week 53), indicating structural transition.
+    3. **Local Thermodynamic Stress:** Shijo-Karasuma's local temperature drops to `1.87` (freeze) and the temperature gradient (**`+65.31`**) spikes, forming a cold island (bottleneck).
+
+    Thus, we triage this case as a **"flow paralysis due to physical bottleneck closure"** rather than "seasonal congestion."
+
+### 6.2. Falsifiability
+
+To disprove the "paralysis due to Shijo-Karasuma bottleneck" hypothesis, the auditor must present the following **"original documents from outside the database"**:
+
+1. **Road Traffic Logs / Infrastructure Logs:**
+    Original management records proving that no road construction, accidents, lane restrictions, or signal failures occurred around Shijo-Karasuma during the target period (especially Week 52 onward), and that lane capacity was 100% maintained.
+2. **Taxi Probe GPS logs:**
+    Original vehicle GPS trajectory logs (time-series velocity/position data) proving that taxis and probe cars passed through Shijo-Karasuma at normal speeds (e.g., 20–30 km/h) instead of decelerating to 0–5% of normal speeds during the bottleneck weeks.

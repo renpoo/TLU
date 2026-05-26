@@ -77,14 +77,47 @@ def process_csv_stream(in_stream, out_stream, mapping_config, node_registry, tim
     @post
         - Generates COO formatted flat outputs directly resolving out_stream targets.
     @invariant
-        - Operates in strict O(1) space complexity scaling indefinitely across row counts.
+        - Operates by loading the full stream into memory to guarantee deterministic alphabetical sorting of topological nodes before tensor assignment.
     """
-    reader = csv.DictReader(in_stream)
+    df = pd.read_csv(in_stream)
+    if df.empty:
+        writer = csv.writer(out_stream, lineterminator='\n')
+        writer.writerow(["t_idx", "src_idx", "tgt_idx", "value"])
+        out_stream.flush()
+        return
+
+    # Fail-Fast: Immediately error out if the column name does not exist
+    time_col = mapping_config.get("col_time")
+    src_col  = mapping_config.get("col_src")
+    tgt_col  = mapping_config.get("col_tgt")
+    val_col  = mapping_config.get("col_val")
+
+    for col_name in [time_col, src_col, tgt_col, val_col]:
+        if col_name not in df.columns:
+            raise KeyError(f"CRITICAL: Column '{col_name}' not found in the input CSV. "
+                           f"Available columns are: {list(df.columns)}")
+
+    # 1. Alphabetical sorting of unique nodes to ensure deterministic mapping
+    unique_nodes = set(df[src_col].dropna().unique()).union(set(df[tgt_col].dropna().unique()))
+    sorted_nodes = sorted(list(unique_nodes))
+    for node in sorted_nodes:
+        node_registry.assign_new_id(node)
+
+    # 2. Sequential registration of time indices
+    # (Time is usually already sorted, but we register sequentially as they appear)
+    unique_times = df[time_col].dropna().unique()
+    for t in unique_times:
+        time_registry.assign_new_id(t)
+
+    # 3. Output stream
     writer = csv.writer(out_stream, lineterminator='\n')
     writer.writerow(["t_idx", "src_idx", "tgt_idx", "value"])
-
-    for record in reader:
+    
+    # Fast iteration over records
+    records = df[[time_col, src_col, tgt_col, val_col]].to_dict('records')
+    for record in records:
         writer.writerow(project_record(record, mapping_config, node_registry, time_registry))
+    
     out_stream.flush()
 
 def export_registry(registry, out_stream, idx_col_name, label_col_name):

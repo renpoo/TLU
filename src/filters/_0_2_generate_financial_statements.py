@@ -10,6 +10,7 @@ def main():
     parser = argparse.ArgumentParser(description="Generate Financial Statements from TLU Graph Edges")
     parser.add_argument("--mapping", required=True, help="Path to _account_mapping.csv")
     parser.add_argument("--output", required=True, help="Path to output markdown file")
+    parser.add_argument("--initial_state", default="", help="Path to ephemeral/_initial_state_labels.csv")
     args, unknown = parser.parse_known_args()
 
     from src.filters.cli_parser import parse_projector_args
@@ -49,6 +50,20 @@ def main():
     cum_credits = collections.defaultdict(float)
     
     weekly_reports = []
+    
+    if args.initial_state and os.path.exists(args.initial_state):
+        try:
+            init_df = pd.read_csv(args.initial_state)
+            for _, row in init_df.iterrows():
+                acc = row.get("node_label", "")
+                val = float(row.get("initial_X", 0.0))
+                cat = account_map.get(acc, 'Expense')
+                if cat in ['Asset', 'Expense']:
+                    cum_debits[acc] += val
+                else:
+                    cum_credits[acc] += val
+        except Exception as e:
+            print(f"[WARN] Failed to load initial state from {args.initial_state}: {e}", file=sys.stderr)
     
     def get_balance(account, dr, cr):
         category = account_map.get(account, 'Expense') # Default to Expense if unknown

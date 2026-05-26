@@ -19,7 +19,7 @@ import argparse
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Temporal aggregator for Journal COO.")
-    parser.add_argument("--interval", choices=['day', 'week', 'month', 'quarter', 'year'], required=True, help="Aggregation interval")
+    parser.add_argument("--interval", choices=['none', 'day', 'week', 'month', 'quarter', 'year'], required=True, help="Aggregation interval")
     return parser.parse_args()
 
 def main():
@@ -41,25 +41,28 @@ def main():
             sys.stderr.write(f"[ERROR] Missing required column: {req}\n")
             sys.exit(1)
 
-    # Parse dates
-    df['t_idx'] = pd.to_datetime(df['t_idx'], format='mixed', errors='coerce')
-    df = df.dropna(subset=['t_idx'])
+    if args.interval == "none":
+        # Bypass temporal aggregation entirely. Keep exact sequence/ID as t_idx.
+        df['_Agg_Time'] = df['t_idx']
+    else:
+        # Parse dates
+        df['t_idx'] = pd.to_datetime(df['t_idx'], format='mixed', errors='coerce')
+        df = df.dropna(subset=['t_idx'])
 
-    # Apply temporal grouping mapping
-    if args.interval == "day":
-        # Pass-through temporal wise, but spatial aggregation will still occur
-        df['_Agg_Time'] = df['t_idx'].dt.strftime('%Y-%m-%d')
-    elif args.interval == "week":
-        # ISO week format
-        df['_Agg_Time'] = df['t_idx'].dt.isocalendar().year.astype(str) + "-W" + df['t_idx'].dt.isocalendar().week.astype(str).str.zfill(2)
-    elif args.interval == "month":
-        df['_Agg_Time'] = df['t_idx'].dt.strftime('%Y-%m')
-    elif args.interval == "quarter":
-        df['_Agg_Time'] = df['t_idx'].dt.year.astype(str) + "-Q" + df['t_idx'].dt.quarter.astype(str)
-    elif args.interval == "year":
-        df['_Agg_Time'] = df['t_idx'].dt.year.astype(str)
+        # Apply temporal grouping mapping
+        if args.interval == "day":
+            df['_Agg_Time'] = df['t_idx'].dt.strftime('%Y-%m-%d')
+        elif args.interval == "week":
+            df['_Agg_Time'] = df['t_idx'].dt.isocalendar().year.astype(str) + "-W" + df['t_idx'].dt.isocalendar().week.astype(str).str.zfill(2)
+        elif args.interval == "month":
+            df['_Agg_Time'] = df['t_idx'].dt.strftime('%Y-%m')
+        elif args.interval == "quarter":
+            df['_Agg_Time'] = df['t_idx'].dt.year.astype(str) + "-Q" + df['t_idx'].dt.quarter.astype(str)
+        elif args.interval == "year":
+            df['_Agg_Time'] = df['t_idx'].dt.year.astype(str)
 
     # Execute spatial and temporal aggregation (SUM for Flux)
+    # If interval is 'none', this only spatial-aggregates identical source-targets within the exact same Entry_ID/t_idx.
     summary = df.groupby(['_Agg_Time', 'src_idx', 'tgt_idx'])['value'].sum().reset_index()
     summary = summary.rename(columns={'_Agg_Time': 't_idx'})
 

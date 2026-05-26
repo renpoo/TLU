@@ -1,93 +1,222 @@
-# Sample 1: 循環取引（Wash Trading）
+# 🔬 メタ診断臨床検査レポート：循環取引（架空売上の自己還流ループ） (Sample 1)
 
-> [!NOTE]
-> **概念実証実験にともなう免責事項**
-> 本レポートで分析されるデータは実世界の企業のものではありません。検証を目的として、特定の病理学的状態を意図的に再現するために設計されたダミーデータです。本サンプル（Sample_1_Wash_Trade）は、売上の水増しを目的とした「循環取引（資金のキャッチボール）」がシステムに与えるトポロジー的異常を証明するためのものです。
+## 1. 診断結論 (Executive Summary)
+
+* **総合診断:** **位相幾何学的循環不全（Topological Feedback Loop / Wash Trade）**
+* **重症度:** 🟠 **HIGH (重篤な病的還流)**
+* **臨床概要:**
+    本システムは、実体的な経済活動（価値移送）を伴わない「売掛金と現預金の高速キャッチボール（還流ループ）」による深刻な事業機能不全（循環取引による売上水増し）を発症しています。
+    累積総売上高 `$1,094,143.89` のうち、相当割合がこの架空還流取引によって占められています。ダブルエントリーによる貸借平均の原則（保存則）は完璧に維持されているため、従来の静的監査では異常の発見が不可能ですが、物理数理エンジンが検知した隣接結合行列の最大固有値（**最大スペクトル半径 $\rho = 0.7488$**）が、システム内にエネルギーを自己還流させる強固な閉路（架空売上の往復仕訳）の形成を数学的に告発しています。
+    この中身のない往復取引により、ノード残高の急激な時系列変動が発生し、システム温度（ボラティリティ $T$）が異常に上昇しています。この温度上昇がエントロピー（$S$）と結びついて「熱損失・摩擦熱（$TS$）」を膨張させ、システム全体の真の活動余力である「自由エネルギー（Free Energy $F$）」を継続的に低下させており、放置すればシステム熱力学的死（黒字倒産・資金ショート）を招く致命的な病態であると診断します。
 
 ---
 
-# 🔬 メタ解析 統合レポート (Meta-Analysis Synthesis Report / Laboratory Findings)
+## 2. 伝統的表層分析の限界 (Limitations of Traditional Audits)
 
-## 1. エグゼクティブ・サマリー
+伝統的な会計監査や、単一時点のスナップショット監視（B/S, P/L のみ）で本病態を見抜くことは不可能です。
 
-本システム（金融ドメイン）は、**位相幾何学的な異常ループ（Topological Feedback Loop）** を発症しており、危険な状態（HIGH）にあります。総収益 $1,067,391.62 のうち、複数の「売掛金と現金のキャッチボール」による架空売上（循環取引）が混入しています。質量保存則は維持されているため貸借対照表（B/S）の左右は完全に一致していますが、物理的な構造崩壊が数学的に証明されました。
+以下は、シミュレーション最終ステップにおける貸借対照表（B/S）および損益計算書（P/L）の集計図です。
 
-## 2. 従来型分析（集計的スナップショット）の限界 (Traditional Perspective)
+* **B/S 資産・資本推移:**
+    ![B/S Trend](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__BS_Trend.png)
+    ![B/S Block Total](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__BS_Block_Total.png)
+* **P/L 売上・費用推移:**
+    ![P/L Trend](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Trend.png)
+    ![P/L Waterfall Total](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Waterfall_Total.png)
 
-従来の会計監査では、この循環取引を瞬時に見抜くことは極めて困難です。
+**【伝統的監査の死角】**
+循環取引のスキーム実行者は「借方（Debit）と貸方（Credit）」を完璧に一致させて記帳しているため、最終期の B/S 上で貸借差額は `$0.00` で綺麗にバランスしています。さらに、P/L 上では売上高が急拡大し、あたかも純利益 **`$201,321.16`**（累積売上 `$1,094,143.89` に対して費用 `$892,822.73`）という極めて健全な「営業黒字」が達成されているように見えます。
+しかし、この営業活動の拡大や利益の創出は「現金の自己還流」により人工的に描かれた虚像にすぎず、実際の事業価値やキャッシュ（真の自由エネルギー $F$）の増加を伴っていません。
 
-**【第52週 損益計算書 (P/L) ＆ 貸借対照表 (B/S)】**
-![Sample 1 PL Waterfall](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Waterfall_Total.png)
-![Sample 1 BS Block](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__BS_Block_Total.png)
+---
 
-循環取引の首謀者は「貸借一致の原則」を厳密に守って仕訳を切るため、B/Sの左右は1円の狂いもなく一致し（差額 $0.00）、P/Lは巨額の黒字（+$156,838.99）を描き出します。静的な集計結果の裏に隠された「資金のキャッチボール」は、物理エンジンによる動的解析なしには捉えられません。
+## 3. 根本病理の特定 (Fundamental Pathophysiology)
 
-## 3. 物理的病跡の特定（Fundamental Pathophysiology）
+物理解析エンジンは、対象データ内に埋め込まれた以下の病的因果ループ（循環取引スクリプトの機序）を捉えています。
 
-本サンプルの根本原因は、ダミーデータ生成ロジック (`_0_0_generate_dummy_journal.py`) において意図的に組み込まれた以下の「粉飾決算スクリプト」にあります。
+### 循環取引の3ステップ・シーケンス
 
-* **第41週および第48週:**
-  * 現金（ACC_Cash）から外部へ資金を流出させる。
-  * 同額の架空売上（ACC_Sales）を計上し、売掛金（ACC_Accounts_Receivable）を増やす。
-  * 流出させた現金を、架空売上の回収として再び現金勘定に戻す。
+本データ内では、循環取引実行日に同一の金額で以下の3つの仕訳が同時に起きています。
 
-このように「一切の外部価値を伴わずに、帳簿上の数字だけを人為的に回転させる」行為が、TLUの物理エンジンにおいてどのような悲鳴（特異点）として観測されるかを以降の章で証明します。
+1. **資金の不正迂回（Wash Funding）**:
+    * **会計仕訳:** `(借) 売掛金 $X / (貸) 現金預金 $X`
+    * **データ上の流れ:** `ACC_Cash` $\rightarrow$ `ACC_Accounts_Receivable` (貸方: Cash, 借方: Accounts_Receivable)
+    * **実務的意図:** 自社の「現預金」を外部のペーパーカンパニー（あるいは共謀先）へ送金する際、送金理由を偽装するために「売掛金」を借方に計上します。
+2. **架空売上の計上（Wash Sale）**:
+    * **会計仕訳:** `(借) 売掛金 $X / (貸) 売上高 $X`
+    * **データ上の流れ:** `ACC_Sales_Revenue` $\rightarrow$ `ACC_Accounts_Receivable` (貸方: Sales_Revenue, 借方: Accounts_Receivable)
+    * **実務的意図:** 共謀先に対する架空売上高を計上し、P/Lの利益を水増しします。
+3. **資金の回収（Wash Collection）**:
+    * **会計仕訳:** `(借) 現金預金 $X / (貸) 売掛金 $X`
+    * **データ上の流れ:** `ACC_Accounts_Receivable` $\rightarrow$ `ACC_Cash` (貸方: Accounts_Receivable, 借方: Cash)
+    * **実務的意図:** 送金しておいた資金を「売掛金の回収金」として自社口座に戻し、取引が完了したように見せかけます。
 
-## 4. 物理・数理エンジンによる証明 (Physical and Mathematical Proof)
+### データの足し引きと貸借一致（バランス）の偽装
 
-### 4.1. マクロフォレンジックと剛性の硬直 (Macro Forensics & Structural Stiffness)
+この3つの仕訳が同時に発生した場合、貸借対照表（B/S）および損益計算書（P/L）へのネットの影響は以下のようになります：
 
-上段の「System Conservation Residual（質量の絶対残差）」は完全に `0.0` の地平に張り付いています。これは、循環取引を行う主体が「貸借一致の原則」自体は厳格に守っているためであり、単なるエラーチェックの網はすり抜けてしまいます。また、剛性行列（サスペンション）および仮想外力の推移からも、システム内部の異常が隠蔽されていることが確認できます。
+* **現預金 (Cash) の変動:** 送金 (`-$X`) + 回収 (`+$X`) = **`$0.00`** （キャッシュアウト・インがなく無傷）
+* **売上高 (Sales_Revenue) の変動:** 架空売上 = **`+$X`** （営業売上の水増し）
+* **売掛金 (Accounts_Receivable) の変動:** 送金時発生 (`+$X`) + 売上時発生 (`+$X`) - 回収時消込 (`-$X`) = **`+$X`** （資産の水増し）
 
-![Sample 1 Macro Forensics](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_1__macro_forensics_dashboard.png)
-![Sample 1 External Force 3D](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_1_6__3d_dynamics_external_force.png)
+B/S の恒等式にあてはめると、
+$$\text{資産の増加 (売掛金 } +X) = \text{純資産の増加 (売上利益 } +X)$$
+となり、決算書の左右は**完璧に一致（バランス）**します。
 
-* **1枚目【始点】**: `t.00000` (正常な剛性)
-* **2枚目【変化の直前】**: `t.00039`
-* **3枚目【変化の当該時点】**: `t.00040` (循環取引ループ形成の瞬間)
-* **4枚目【変化の直後】**: `t.00041`
-* **5枚目【終点】**: `t.00051`
+### 元データ内の具体的な犯行形跡（原本照合）
 
-![Sample 1 Structural Stiffness for Week 0](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00000.png)
-![Sample 1 Structural Stiffness for Week 39](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00039.png)
-![Sample 1 Structural Stiffness for Week 40](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00040.png)
-![Sample 1 Structural Stiffness for Week 41](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00041.png)
-![Sample 1 Structural Stiffness for Week 51](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00051.png)
+[Dummy_Journal_Stream.csv](../../../../samples/Sample_1_Wash_Trade/input_stream/Dummy_Journal_Stream.csv) を直接抽出すると、以下の時間ステップにおいて、上記3つの仕訳が全く同一の金額（ノイズのない完全一致）で実行されていることが確認できます。
 
-### 4.2. ネットワークトポロジーの異常 (Topological Anomaly / Spectral Radius)
+* **2020-01-03 (t=0): 金額 `$40,433.60`**
+  * `E_000020` (Wash_Funding): `Cash` $\rightarrow$ `Accounts_Receivable`
+  * `E_000021` (Wash_Sale): `Sales_Revenue` $\rightarrow$ `Accounts_Receivable`
+  * `E_000022` (Wash_Collection): `Accounts_Receivable` $\rightarrow$ `Cash`
+* **2020-02-01 (t=1): 金額 `$53,282.77`**
+  * `E_000257` (Wash_Funding), `E_000258` (Wash_Sale), `E_000259` (Wash_Collection)
+* **2020-05-22 (t=4): 金額 `$44,939.48`**
+  * `E_001327` (Wash_Funding), `E_001328` (Wash_Sale), `E_001329` (Wash_Collection)
 
-赤色の線「Max Spectral Radius（最大スペクトル半径＝システム内の異常な共鳴・資金還流の激しさ）」が、循環取引が発生した第40週以降、`0.0` の平穏な状態から突如として跳ね上がり、`0.8353` という危険水域に達しています。これはシステム内に「自己強化的な無限ループ」が形成されたことを示す決定的な数学的署名です。
-第40週〜第41週において、`ACC_Cash`（現金）と `ACC_Accounts_Receivable`（売掛金）の間に、不自然に太く、自己強化的に循環する閉路が形成されています。
+この **現預金 ⇄ 売掛金** の高速な自己還流（catch-balling）により、実質的な事業価値（内部エネルギー $U$）を何一つ生み出さないまま、売上（流量 Flux）と資産（質量 Mass）のみを意図的に膨張させています。東洋医学的には「気血の空転（還流ロック）」であり、脳神経領域における「てんかん過同期発作」と数学的に同型の病理を示しています。
 
-![Sample 1 System Stability](../../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_2__system_stability.png)
+---
 
-* **1枚目【始点】**: `t.00000` (正常な状態)
-* **2枚目【変化の直前】**: `t.00039`
-* **3枚目【変化の当該時点】**: `t.00040` (異常なループの発生)
-* **4枚目【変化の直後】**: `t.00041`
-* **5枚目【終点】**: `t.00051`
+## 4. 数理物理エンジンによる詳細臨床データ（数理証明）
 
-![Sample 1 Network Topology W0](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 1 Network Topology W39](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00039.png)
-![Sample 1 Network Topology W40](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00040.png)
-![Sample 1 Network Topology W41](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00041.png)
-![Sample 1 Network Topology W51](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00051.png)
+物理解析エンジンが検出した定量的証拠に基づき、循環取引病理の存在を数理的に証明します。
 
-### 4.3. 熱力学的なエネルギー推移 (Thermodynamic Energy Stack)
+### 4.1. 借貸対称性の検証と質量保存の成立
 
-第41週と第48週のタイミングで、赤色の層（エントロピー損失 $T\Delta S$）が突然、異常な太さの柱となって出現し、白色の線（自由エネルギー $F$）を下方に押し下げています。循環取引は実質的な価値（内部エネルギー）を生み出さず、単なる「摩擦熱（＝無駄な手数料や取引コスト）」だけを発生させるため、システムを熱的な死（Heat Death ＝ 意味のある活動が完全に停止する状態）へと向かわせる物理的証拠です。
+システムの資金（質量）の流入・流出の差分を示す **`System Conservation Residual`**（相対漏洩率）は、全期間において **`0.00`（完全なるゼロ）** を維持しています。
+これは、仕訳の記述ルール（ダブルエントリーの制約）が物理的に破られていないことを示します。すなわち、資金の「簿外への一方的消失（大出血・横領）」は本サンプルでは起きておらず、帳簿の整合性を保ちながら完璧な還流が閉じていることの間接的証明となります。
 
-![Sample 1 Thermodynamics](../../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+* **マクロ・フォレンジック・ダッシュボード (Macro Forensics):**
+    ![Macro Forensics](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
-### 4.4. 局所的アノマリーと情報幾何学的変位 (3D Micro Z-Score & KL Drift)
+### 4.2. 結合剛性と固有トポロジーの超同期
 
-※本サンプルでは、巨視的なトポロジー異常（Spectral Radius）が支配的であり、単なる出来高の増減を示すZ-Score（過去の平均からの突出度合い）よりも、以下の情報幾何学的変位がより決定的な証拠となります。KL Driftは「情報幾何学的変位（＝過去の正常な取引パターンからの完全な逸脱・未知の手口の出現）」を示します。第41週の初犯時に巨大なスパイク（警報）が空間に突き刺さっています。しかし注目すべきは、第48週の再犯時にはスパイクが小さくなっている点です。これは異常データが「新たなベースライン」としてシステムに学習（汚染）されてしまう統計的AIの弱点（茹でガエル現象）を示しており、履歴に依存しない物理アプローチ（トポロジーと熱力学）の必要性を逆説的に証明しています。
+剛性行列（Stiffness Matrix）の時系列シーケンスは、本アノマリーの発生前後における結合強度の劇的な変化を明確に視覚化しています。
 
-![Sample 1 3D Z-Score](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
-![Sample 1 Micro Forensics (KL Divergence Drift)](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+* **剛性行列のシネマティック5定点シーケンス:**
+  * **① Start (t=0 / 2020-01):**
+        ![Stiffness t0](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+        シミュレーション開始時点。すでに `ACC_Cash` と `ACC_Accounts_Receivable` 間に不自然な高剛性（結合の硬直化）が成立しており、流動性ネットワークの自由度が低下しています。
+  * **② Just Before Change (t=3 / 2020-04):**
+        ![Stiffness t3](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00003.png)
+        アノマリー活動が一時的に沈静化している時点。各ノードの剛性バランスは一旦平均化され、硬直化は一時的に緩和されています。
+  * **③ The Exact Point of Change (t=4 / 2020-05):**
+        ![Stiffness t4](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00004.png)
+        2回目の主要な循環取引が実行された瞬間。`ACC_Cash` ⇄ `ACC_Accounts_Receivable` 間の結合セルが極端な濃赤色として描出され、強力な「剛性ロック」が再発しています。
+  * **④ Immediately After Change (t=5 / 2020-06):**
+        ![Stiffness t5](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00005.png)
+        異常トランザクション終了直後のフェーズ。還流活動の停止に伴い、剛性の偏りは徐々に解消の兆しを見せます。
+  * **⑤ End (t=11 / 2020-12):**
+        ![Stiffness t11](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00011.png)
+        最終観測時点。アノマリーの再注入がないため、剛性ロックは解消され、比較的緩やかな接続状態に戻っています。
 
-## 5. ⚠️ 反証可能性と検証要件（Falsification Analytics）
+主成分分析（PCA）において、アノマリー期の第1主成分（PC1）のエネルギー寄与率は **`95.28%`** (t=4 / 2020-05) に達し、主成分ベクトル（PC1）の構成要素は `01_ACC_Accounts_Receivable` (`-0.7162`) と `07_ACC_Sales_Revenue` (`0.5183`)、および `03_ACC_Cash` (`0.3524`) に異常に集中しています。これは、企業の全経済活動の大部分が、この限られた特定の勘定科目ペアの超同期・往復流動によってハイジャックされていたことを数学的に証明しています。
 
-* **偽陽性の可能性:** 本診断の「循環取引」という結論は、極めて短い期間に特定の口座間で同額の資金が還流しているという「物理的挙動」に依存しています。もしこれが正当な「短期貸付と別件の独立した売上回収」であった場合、この診断は偽陽性となります。
-* **追加検証要件:**
-  現金流出先の銀行口座名義と、入金元の銀行口座名義が同一（または関連会社）であるかを確認してください。また、対象となる売上について、実際の納品書、受領書、および物流記録（Shipping records）を提示させ、物理的な商品の移動が伴っているか（実需の存在）を監査してください。
+* **PCA 主要軸比率 (PCA Principal Axes Ratio):**
+    ![PCA Ratio](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_2__principal_axes_ratio.png)
+
+また、隣接結合行列から算出されるシステムの最大スペクトル半径（Spectral Radius）は、アノマリー注入開始の 2020-01 (`t_idx=0`) において **`0.7488`** に跳ね上がり、2020-02 (`t_idx=1`) にも **`0.6615`**、そして 2020-05 (`t_idx=4`) に **`0.5501`** という危険高値をマークしています。これは、システムが強固な「自律的エネルギー還流閉路」にトポロジー的に拘束されていた証拠です。
+
+* **システム安定性指標 (Spectral Radius):**
+    ![System Stability](../../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_2__system_stability.png)
+
+* **ネットワーク・トポロジー時系列の5定点シーケンス:**
+  * **① Start (t=0 / 2020-01):**
+        ![Topology t0](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00000.png)
+        `ACC_Cash` (現預金) と `ACC_Accounts_Receivable` (売掛金) の間に、双方向の太いエッジ（往復路）が形成されています。
+  * **② Just Before Change (t=3 / 2020-04):**
+        ![Topology t3](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00003.png)
+        還流ループが消滅し、通常の営業プロセス（仕入れ・経費支出等）への分散流路が一時的に優位になっています。
+  * **③ The Exact Point of Change (t=4 / 2020-05):**
+        ![Topology t4](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00004.png)
+        再び現預金と売掛金の間で、相互に資金を投げ合う極太の還流チャネルが再接続されています。
+  * **④ Immediately After Change (t=5 / 2020-06):**
+        ![Topology t5](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00005.png)
+        還流エッジが細くなり、再び周辺の経費系ノードへの流路が顕在化します。
+  * **⑤ End (t=11 / 2020-12):**
+        ![Topology t11](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00011.png)
+        最終状態。循環取引はしっかりと沈静化し、ネットワークトポロジーは自然な接続状態に戻っています。
+
+### 4.3. 永久空転熱力学サイクル
+
+熱力学的指標は、循環取引がもたらす無駄な「エネルギー浪費（摩擦）」を明確に暴露します。
+
+* **熱力学エネルギースタック (Thermodynamics Energy Stack):**
+    ![Thermodynamics Energy Stack](../../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+* **T-S ダイアグラム (T-S Diagram):**
+    ![T-S Diagram](../../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+
+1. **エネルギースタックの挙動 (摩擦熱の増大):**
+    循環取引が激化する月（2020-01, 2020-02, 2020-05）において、エントロピー損失（摩擦熱）を示す赤色の領域（$-TS$）が急激に底へ拡張し、システムが外部に干渉するための真の余力である自由エネルギー $F$（白い境界線）を下方向へ強く圧縮しています。
+
+    これは、ダミーデータ内の決済経費などを仮定せずとも、**TLUモデルの熱力学数理そのものから直接説明できます**。
+    * **温度 $T$（ボラティリティ）の急上昇:** TLUにおける温度 $T$ は、勘定残高の時系列における標準偏差（変動幅の大きさ）です。正常月は緩やかですが、循環取引月は一瞬にして数万ドル規模の「現金 $\rightarrow$ 売掛金 $\rightarrow$ 現金」の往復流動が起きるため、残高が急変し、**温度 $T$ の巨大なスパイク**が発生します。
+    * **エントロピー損失 $TS$ の膨張:** この温度の上昇がエントロピー $S$ と乗算されることで、エントロピー損失（摩擦熱） $TS$ が爆発的に増大します。
+    * **結果:** 見かけの総活動量（内部エネルギー $U$）が増大しているにもかかわらず、高熱の摩擦（$TS$）に食いつぶされるため、企業活動の真のポテンシャル（自由エネルギー $F = U - TS$）が極度に圧縮されます。帳簿上の黒字（$U$ の拡大）が、実際の流動性余力（$F$）の拡大に一切結びついていないことを表しています。
+2. **T-S 軌跡（カルノーサイクル的閉回路の数学的証明）:**
+    温度-エントロピー（T-S）ダイアグラムは、極めて異常な「反時計回りに閉じた卵型のサイクル軌道」を描いています。健全な事業体（Sample 0）がエントロピーを単調に発散させて外部と結合する「開放経路」を描くのに対し、本サンプルは閉じた熱力学サイクルを形成しています。
+    物理学において、T-S線図上の閉路が囲む面積は**「システムが外部に有効な仕事をせず、内部だけで無駄に放出した熱量（摩擦）」**そのものです。これは、外部に対して実質的な経済価値（製品提供等）を提供しないまま、内部だけで流動性を激しく空回りさせ、摩擦熱（ボラティリティによる損失）を発生させ続けていることの客観的な数理証明です。
+
+### 4.4. 3Dミクロ情報幾何学とモデル汚染（茹でガエル現象）
+
+3D立体プロットは、時間と空間（各ノード）の両軸における異常発生時の「変異」と、統計モデルの限界を明らかにします。
+
+* **① 3D位置プロット、または運動位相空間軌跡:**
+    ![3D Dynamics Position](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_1_1__3d_dynamics_position.png)
+    ![3D Phase portrait](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_1_8__phase_portrait_3d.png)
+
+    軌道が特定の安定アトラクターに収束せず、極めて平坦な異常平面上に潰れており、自由度の著しい喪失（特定の往復運動への固着）を示します。
+
+* **② 3D局所熱力学プロット:**
+    ![3D Local Entropy](../../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2_1__3d_local_entropy.png)
+    ![3D Local Temperature](../../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2_2__3d_local_temperature.png)
+  * **局所エントロピー ($s_i$):** 空間的流路の分散度を示します。還流（循環取引）が発生する月（1月, 2月, 5月）において、`ACC_Cash` が売掛金への異常な迂回流路（Wash Funding）を形成したことで、流出確率分布が変化し、局所エントロピーに明確な盛り上がりが検知されます。一方、流出先が売掛金のみに固定されている `ACC_Sales_Revenue` などは、取引額がいかに巨額であっても空間的な分散度は `0.00` のまましっかりと平坦です。
+  * **局所温度 ($T_i$):** 時間的な残高ボラティリティ（標準偏差）を示します。巨額の架空往復取引の発生と同期して、`ACC_Cash`、`ACC_Accounts_Receivable`、および `ACC_Sales_Revenue` の3つのノードにおいて局所温度が同時に巨大な山のようにスパイク（過熱）しており、時間的な動的激変がこの特定の還流三角環に伝播・局在化していることを示しています。
+
+* **③ 3Dミクロ情報幾何学プロット:**
+    ![3D Micro KL Drift](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+    2020-01〜02の初期の還流の瞬間において、`ACC_Cash` ノードの座標から巨大な「尖塔状の壁（KL Drift の急上昇）」が突き立っており、犯行の開始時点（異常発生源）を数学的に特定しています。
+
+* **3D Micro Z-Score (Position):**
+    ![3D Micro Z-Score](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+
+**【茹でガエル現象（Model Pollution）の証明】**
+情報幾何学プロット（3D Micro KL Drift）において、2020-01〜02の「最初の還流」の瞬間には巨大な KL Drift スパイクが立ち上がっていますが、2020-05の「3回目の還流」では、同様の規模の循環取引が行われているにもかかわらず、検出されるスパイクが著しく縮小しています。
+これは、統計的なAIモデルが異常な取引パターンを「正常なベースライン」として自己のパラメータに徐々に学習・取り込んでしまったこと（モデル汚染による適応）を物語っています。統計的監視のみに頼っていると、後半の異常（リピート犯）がしっかりと隠蔽され見落とされることになります。これに対し、本マニュアルが提唱する「物理保存則（キルヒホッフ残差）」および「スペクトル半径（トポロジー不変量）」を用いた二重構造検証こそが、この統計の死角を突破する絶対的な論理となります。
+
+---
+
+## 5. 局所治療処方箋 (LQR Control Treatment)
+
+* **治療方針: 位相的還流破壊とピンポイント介入**
+* **LQR 感度介入（ツボの特定）:**
+    流動性制御理論（LQR）による感度解析（Sensitivity Matrix）において、本ネットワークでは `ACC_Accounts_Receivable` (売掛金) ノードへの制御介入効果（流動性改善感度）が最大であると算出されています。
+    ![LQR Control](../../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_3__control_lqr_performance_space.png)
+* **実務上の治療介入計画:**
+    1. **還流パスのトポロジー的切断 (Phase Disruption):**
+        `ACC_Cash` ⇄ `ACC_Accounts_Receivable` 間の高速往復を検知・遮断するため、取引消込システムに「同一名義人・短時間往復取引に対するインターロック（1分以上の遅延、または個別ID突合の強制義務）」を導入します。
+    2. **LQR的ピンポイント抑制 (Stiffness Destabilization):**
+        循環取引のハブとして機能している特定の取引先（ペーパーカンパニー）に紐づく売掛金口座に対して、個別かつ動的に「取引制限（取引枠の上限ロック、または入金承認の個別エスカレーション）」を実施します。一般の正常取引に影響（全身麻酔）を与えることなく、アノマリーの発生源である「特定の結合（ツボ）」のみをピンポイントで凍結・治療することが可能です。
+
+---
+
+## 6. 🚨 Forensic Alert & 反証可能性 (Falsification Analytics)
+
+### 6.1. 統計的モデル汚染のトリアージ (Model Pollution Assessment)
+
+* **観測事実:** 2020-01〜02および2020-05において、スペクトル半径が基準（`0.0`）を大幅に超える `0.7488` および `0.5501` を記録しているのに対し、2020-05以降の Z-Score（流動性変化）はしきい値 `3.0` を超えず、アラートが発報されていない（偽陰性）。
+* **物理的判断:**
+    これはアノマリー活動の終了または健全化による沈黙ではなく、統計ベースラインが異常データによって書き換えられた「茹でガエル現象（モデル汚染）」と判定します。
+    物理的構造評価である「閉じた T-S サイクル軌道」および「スペクトル半径の異常上昇」というトポロジー的不変量が存在する限り、統計アラートの沈黙（正常判定）をトリアージにおいて棄却し、継続的な病的循環状態であると判定します。
+
+### 6.2. 本診断に対する反証条件 (Falsifiability)
+
+もし本システムが「健全な取引」であり「循環取引ではない」と反証するためには、監査人に対し以下の**「データ外の物理的原本または第三者証拠」**の提示が必要です：
+
+1. **第三者物流の原本証明:**
+    問題となっている取引金額（計 `$1,094,143.89` の構成取引）としっかりと一致する、ヤマト運輸・佐川急便等の独立した大手物流業者が発行した「商品出荷伝票原本（追跡番号付き）」および「納品受領書原本」。実物の移動（物理的質量 Flow）が本当に存在したことの証明。
+2. **法的主体の独立性証明:**
+    送金元および送金先となっている法人が、実質的な同一支配下にない（親会社、子会社、役員の兼任、親族関係などの還流関係がない）ことを証明する、第三者法務機関（法務局等）が発行した「登記事項証明書原本」および「実質的支配者リスト（株主名簿原本）」。

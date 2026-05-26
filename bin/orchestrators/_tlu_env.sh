@@ -92,6 +92,23 @@ else
     echo "[WARN] Parameter file ${TLU_SYS_PARAMS} not found. Subsequent runs may fail if variables are missing."
 fi
 
+# Apply fail-first defaults for time granularity and windows if missing
+export TLU_TIME_GRANULARITY="${TLU_TIME_GRANULARITY:-month}"
+
+if [ -z "${TLU_OBSERVATION_WINDOW_STEPS:-}" ]; then
+    case "$TLU_TIME_GRANULARITY" in
+        day)   export TLU_OBSERVATION_WINDOW_STEPS=252 ;; # Trading days
+        week)  export TLU_OBSERVATION_WINDOW_STEPS=52 ;;
+        month) export TLU_OBSERVATION_WINDOW_STEPS=12 ;;
+        year)  export TLU_OBSERVATION_WINDOW_STEPS=5 ;;
+        *)     export TLU_OBSERVATION_WINDOW_STEPS=12 ;;
+    esac
+fi
+
+if [ -z "${TLU_PHASE_WINDOW_SIZE:-}" ]; then
+    export TLU_PHASE_WINDOW_SIZE=$(( TLU_OBSERVATION_WINDOW_STEPS * 2 ))
+fi
+
 # Dynamically construct the absolute path to the input CSV based on the active target environment
 export TLU_INPUT_CSV="${TARGET_ENV:-workspace}/${TLU_INPUT_CSV:?Environment variable TLU_INPUT_CSV is missing. Please define input_csv in _sys_params.csv}"
 

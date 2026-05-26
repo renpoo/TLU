@@ -6,8 +6,9 @@
 # ==========================================
 source "$(dirname "$0")/_tlu_env.sh"
 
-# Default interval is month
-INTERVAL=${1:-month}
+# Default interval is month (or defined in sys_params)
+INTERVAL=${1:-${TLU_AGGREGATION_INTERVAL:-month}}
+COL_TIME=${2:-${TLU_COL_TRANS_DATE:-Trans_Date}}
 
 # The dummy generator outputs raw journals here
 INPUT_FILE="${TLU_PROJECT_ROOT}/${TARGET_ENV:-workspace}/input_stream/Dummy_Journal_Stream.csv"
@@ -20,6 +21,7 @@ echo "=================================================="
 echo "Input: ${INPUT_FILE}"
 echo "Output: ${OUTPUT_FILE}"
 echo "Interval: ${INTERVAL}"
+echo "Time Column: ${COL_TIME}"
 echo "Running thin adapter pipeline..."
 
 # Ensure output directory exists
@@ -27,7 +29,7 @@ mkdir -p "$(dirname "${OUTPUT_FILE}")"
 
 # Unix Pipeline: Parse -> Aggregate
 cat "${INPUT_FILE}" \
-  | $TLU_PY src/filters/00_1_parse_journal.py \
+  | $TLU_PY src/filters/00_1_parse_journal.py --col_time "${COL_TIME}" \
   | $TLU_PY src/filters/00_2_aggregate_journal.py --interval "${INTERVAL}" \
   > "${OUTPUT_FILE}"
 

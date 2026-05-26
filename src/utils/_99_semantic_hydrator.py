@@ -24,7 +24,14 @@ def main():
 
     # Load dictionaries
     time_map = load_map(args.time_map, 't_idx', 'time_label')
-    node_map = load_map(args.node_map, 'node_idx', 'node_label')
+    
+    # Custom load for node_map to prepend zero-padded node_idx
+    try:
+        df_nodes = pd.read_csv(args.node_map)
+        node_map = {int(row['node_idx']): f"{int(row['node_idx']):02d}_{row['node_label']}" for _, row in df_nodes.iterrows()}
+    except Exception as e:
+        print(f"[WARN] Hydrator failed to load node map {args.node_map}: {e}", file=sys.stderr)
+        node_map = {}
 
     try:
         df = pd.read_csv(sys.stdin)
