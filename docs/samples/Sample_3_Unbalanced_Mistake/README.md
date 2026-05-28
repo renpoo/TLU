@@ -24,13 +24,13 @@ In traditional accounting audits or single-point snapshot monitoring, when a deb
     ![P/L Trend](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__PL_Trend.png)
     ![P/L Waterfall Total](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__PL_Waterfall_Total.png)
 
-On the P/L, operating expenses link healthily with cumulative revenue, and retained earnings accumulate normally. Since the B/S balances perfectly, management and external auditors who look only at static aggregates cannot detect the spatiotemporal data mismatch (mass deficit) occurring inside the system. Without dynamic residual tracking via the physics engine, this data corruption remains hidden.
+On the P/L, operating expenses link healthily with cumulative revenue, and retained earnings accumulate normally. Since the B/S balances perfectly, management and external auditors who look only at static aggregates cannot detect the spatiotemporal data mismatch (mass deficit) occurring inside the system. Without dynamic residual tracking via the Physics-Mathematics Engine, this data corruption remains hidden.
 
 ---
 
 ## 3. Fundamental Pathophysiology
 
-The physics engine captures the exact location and amounts of the mismatches occurring in the data. All of these mismatches are due to one-sided entry errors during the accounts receivable collection process (`AR_Collection`).
+The Physics-Mathematics Engine captures the exact location and amounts of the mismatches occurring in the data. All of these mismatches are due to one-sided entry errors during the accounts receivable collection process (`AR_Collection`).
 
 ### Mechanism of Unbalanced Journal Entries (4 cases, cumulative mismatch of `$1,412.88`)
 
@@ -41,7 +41,7 @@ The physics engine captures the exact location and amounts of the mismatches occ
     * In transaction ID [E_003179](../../../samples/Sample_3_Unbalanced_Mistake/input_stream/Dummy_Journal_Stream.csv#L6358-L6359), A/R decreased by `$734.53` while Cash increased by only `$606.80` (difference of **`$127.73`**).
     * The total mismatch in November was **`$906.29`**.
 
-To maintain a double-entry closed system, the physics engine routes this discrepancy to the `UNKNOWN_LEAK` node. However, unlike corporate embezzlement (Sample 2) where the outflow path solidifies and grows topologically, this sample displays extremely clear "stiffness self-healing" as detailed below.
+To maintain a double-entry closed system, the Physics-Mathematics Engine routes this discrepancy to the `UNKNOWN_LEAK` node. However, unlike corporate embezzlement (Sample 2) where the outflow path solidifies and grows topologically, this sample displays extremely clear "stiffness self-healing" as detailed below.
 
 ---
 
@@ -108,11 +108,13 @@ The 3D plots visualize spatiotemporal variations and the local thermodynamic imp
     ![3D Micro Z-Score (Position)](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
   ##### 1. 3D Micro KL Drift (High-Sensitivity Detection of Zero-to-One Transitions)
+
   In 2020-02 (`t_idx=1`), a very sharp "needle-like tower" (KL Drift spike) of **`20.6829`** for `01_ACC_Accounts_Receivable` (A/R) and **`5.0088`** for `03_ACC_Cash` (Cash) rises.
   This captures the discontinuous phase transition of the probability distribution (zero-to-nonzero structure change) when the "accounts receivable collection flow" occurs for the first time in February (having been absent in January).
   Meanwhile, the KL Drift is almost flat at **`0.6936`** (A/R) in March and **`0.1330`** during the maximum mismatch in November (`$906.29`). This is because the collection flow and leakage node were already established in the topology, and in November, the mismatch represents only a tiny fraction (0.88%) of the total transaction volume (approx. $100k), rendering the spatiotemporal probability shift as "calm (below noise levels)."
 
   ##### 2. 3D Micro Z-Score (Volume-Dependent Blind Spot of Statistical Baselines)
+
   The Z-Score plot remains silent (Z-Score < 1.5) during the months of the actual mismatches (Feb, Mar, Nov), but shows massive warning spikes in **July and August 2020**.
   In July, A/R (`01_ACC_Accounts_Receivable`) peaks at **`8.2579`** and Sales (`07_ACC_Sales_Revenue`) at **`6.5021`**, while in August, Rent Expense (`06_ACC_Rent_Exp`) spikes to **`10.4443`**. This is because sales doubled in July (approx. $124k) and rent payments expanded normally, making the statistical baseline flag them as outliers (classic false positives).
   Conversely, the maximum mismatch in November is completely buried in high transaction volumes, leaving the Z-Scores silent at **`1.4817`** (A/R) and **`0.2926`** (Cash) (statistical false negative).

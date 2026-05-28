@@ -11,7 +11,7 @@
 
     Furthermore, spatiotemporal mass conservation discrepancies (Kirchhoff residuals) were detected intermittently from 2020-06 (`t_idx=5`) to 2020-09 (`t_idx=8`), with a **maximum single-month leakage of `$4,773.57` in 2020-09 (`t_idx=8`)**. The cumulative mass deficit reached **`$6,255.99`**, siphoned into the `UNKNOWN_LEAK` dummy node representing mismatched entries.
 
-    Exploiting blind spots in traditional audits, the system presents a net income of **`$200,478.42`** and maintains a balanced B/S. However, the physics engine mathematically convicts this malicious scheme—"playing circular catch-ball at the front gate while siphoning cash out the back door"—using spatiotemporal residuals and structural stiffness decay.
+    Exploiting blind spots in traditional audits, the system presents a net income of **`$200,478.42`** and maintains a balanced B/S. However, the Physics-Mathematics Engine mathematically convicts this malicious scheme—"playing circular catch-ball at the front gate while siphoning cash out the back door"—using spatiotemporal residuals and structural stiffness decay.
 
 ---
 
@@ -29,7 +29,7 @@ It is impossible to capture this "composite catastrophe" through traditional sta
 **【Blind Spots of Static Audits (Simulated Health)】**
 The balance sheet (B/S) balances perfectly with total assets of **`$1,296,558.10`** and a difference of `$0.00`. The income statement (P/L) also displays a rich "net income" of **`$200,478.42`** on revenue of **`$1,107,242.30`**.
 
-However, this healthy-looking snapshot is a fake presentation created by intentional journal manipulation and fictitious recirculation. The `$6,255.99` cash leakage captured as a conservation residual by the physics engine was hidden inside normal expenses under the node name `UNKNOWN_LEAK` (as miscellaneous loss / other expenses). External audits or normal ledger checks cannot detect this reality.
+However, this healthy-looking snapshot is a fake presentation created by intentional journal manipulation and fictitious recirculation. The `$6,255.99` cash leakage captured as a conservation residual by the Physics-Mathematics Engine was hidden inside normal expenses under the node name `UNKNOWN_LEAK` (as miscellaneous loss / other expenses). External audits or normal ledger checks cannot detect this reality.
 
 ---
 
@@ -46,7 +46,7 @@ Through this "double erosion," the system drains its internal energy (real cash)
 
 ---
 
-## 4. Mathematical Evidence from the Physics Engine
+## 4. Mathematical Evidence from the Physics-Mathematics Engine
 
 ### 4.1. Violation of Mass Conservation & Tracking of Mass Deficit
 
@@ -145,6 +145,7 @@ The 3D plots visualize spatiotemporal variations and the local thermodynamic imp
     ![3D Micro Z-Score](../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
   ##### 1. Phase Transition Detection via 3D Micro KL Drift
+
   The KL Drift spatiotemporal plot catches phase transitions where flow paths reorganize, rendering them as sharp spires.
   * **2020-02 (`t_idx=1`) [Start of Circular Loop]:**
     A massive KL Drift spike of **`4.2076`** towers at Cash (`03_ACC_Cash`). During this step, the statistical model (Z-score) using a 3-month window remains silent (`0.00`) due to its burn-in period, but information geometry successfully captures the discontinuous probability shift from normal to circular flow.
@@ -152,6 +153,7 @@ The 3D plots visualize spatiotemporal variations and the local thermodynamic imp
     At the end of the simulation, Cash records its maximum peak of **`6.7072`** (while the Z-Score remains silent at `0.1453`). This directly shows the phase transition shock (restoration vector) as the system topology was shifted back from circular/leakage to normal flows after the anomalies stopped in September.
 
   ##### 2. Statistical Scale Deviation via 3D Micro Z-Score
+
   The Z-Score plot detects activity shocks where transaction energy surges relative to the baseline:
   * **2020-03 (`t_idx=2`) [Peak of Wash Trading]:**
     Cash (`03_ACC_Cash`) records destructive spikes of **`z_score_X = 52.2638`** and **`z_score_v = 491.4002`**. The outflow speed of A/R (`01_ACC_Accounts_Receivable`) also marks **`z_score_v = 136.2789`**, providing ironclad proof of high-speed round-trips hundreds of times larger than the normal baseline.

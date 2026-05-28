@@ -33,7 +33,7 @@ However, this expansion of operating activity and profit creation is merely an i
 
 ## 3. Fundamental Pathophysiology
 
-The physics engine captures the following pathological causal loops (the mechanism of the wash trade script) embedded in the target data:
+The Physics-Mathematics Engine captures the following pathological causal loops (the mechanism of the wash trade script) embedded in the target data:
 
 ### 3-Step Wash Trade Sequence
 
@@ -81,7 +81,7 @@ This fast self-recirculation (catch-balling) between **Cash ⇄ Accounts Receiva
 
 ---
 
-## 4. Quantitative Clinical Data from the Physics Engine (Mathematical Proof)
+## 4. Quantitative Clinical Data from the Physics-Mathematics Engine (Mathematical Proof)
 
 ### 4.1. Debit-Credit Symmetry & Mass Conservation
 

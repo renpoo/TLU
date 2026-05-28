@@ -9,7 +9,7 @@
 
     Throughout the simulation period, **a cumulative total of `$1,353.48`** of mass disappeared from the system, siphoned into unknown regions. Although this leakage is relatively minor (representing about 0.05% of the total activity, a micro-leakage), it is physically and mathematically proven that this "small wound" degrades the tension of double-entry balance, ultimately driving the entire system into "absolute rigidity (Rigid Lock / cash shortage)" and "catastrophic resonance (knocking)" in the later steps.
 
-    Traditional statistical Z-scores suffered from a critical blind spot (false negative), classifying the system as "normal (healthy)" because they failed to capture the outflow to a previously unrecorded route. However, the **`System Conservation Residual`** computed by the physics engine established ironclad forensic proof by showing discrepancies reaching a maximum of `364.53` (August 2020).
+    Traditional statistical Z-scores suffered from a critical blind spot (false negative), classifying the system as "normal (healthy)" because they failed to capture the outflow to a previously unrecorded route. However, the **`System Conservation Residual`** computed by the Physics-Mathematics Engine established ironclad forensic proof by showing discrepancies reaching a maximum of `364.53` (August 2020).
 
 ---
 
@@ -39,7 +39,7 @@ The mechanism of the fraudulent leakage injected into this sample is as follows:
   * Accounts receivable (`ACC_Accounts_Receivable`) is decreased (credited), indicating that it was collected from customers.
   * However, the collected cash is bypassed (embezzled) to an off-book personal account instead of being deposited into cash and deposits (`ACC_Cash`) (e.g., the debit side is recorded as $0.0).
 
-The physics engine corrects for this "disappearing mass" mathematically to maintain a dynamic closed system, constructing a virtual garbage-bin node **`UNKNOWN_LEAK`** in memory and routing the lost mass there. Below we prove how this causes dynamic anomalies.
+The Physics-Mathematics Engine corrects for this "disappearing mass" mathematically to maintain a dynamic closed system, constructing a virtual garbage-bin node **`UNKNOWN_LEAK`** in memory and routing the lost mass there. Below we prove how this causes dynamic anomalies.
 
 ---
 

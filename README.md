@@ -21,22 +21,23 @@ To guarantee reproducibility and prevent AI hallucination or human bias, TLU mai
 
 | # | Document Title (English Version) | Japanese Reference Version (日本語版) | Core Contents & Highlights |
 | :---: | :--- | :--- | :--- |
-| **1** | **[📂 01. Physics Engine Theory & Interpretation Guide](docs/01_Physics_Engine_Theory_and_Interpretation.md)** | **[01. 物理・数理エンジン基礎理論と解釈ガイド](docs/ja/01_Physics_Engine_Theory_and_Interpretation.md)** | Mathematical foundations of TLU's 8 cores ($F = U - TS$, $K$, $\rho$) and how to visually read the generated 3D phase-space plots. |
+| **1** | **[📂 01. Physics-Mathematics Engine Theory & Interpretation Guide](docs/01_Physics_Mathematics_Engine_Theory_and_Interpretation.md)** | **[01. 物理・数理エンジン基礎理論と解釈ガイド](docs/ja/01_Physics_Mathematics_Engine_Theory_and_Interpretation.md)** | Mathematical foundations of TLU's 8 cores ($F = U - TS$, $K$, $\rho$) and how to visually read the generated 3D phase-space plots. |
 | **2** | **[📂 02. System Architecture & Operations Guide](docs/02_System_Architecture_and_Operations.md)** | **[02. システム構造定義とパイプライン運用ガイド](docs/ja/02_System_Architecture_and_Operations.md)** | Pipeline container orchestration, HSL theme visualizers, anomaly dummy generators, and LQR control feedback simulation models. |
 | **3** | **[📂 03. Market Forensics & Compliance Rules](docs/03_Market_Forensics_Rules.md)** | **[03. 市場フォレンジック・監査ルール定義](docs/ja/03_Market_Forensics_Rules.md)** | Millisecond-level order book dynamics, wash trades, and bipartite graph projection vs. direct user-to-user collusion network analysis. |
-| **4** | **[📂 LLM Diagnostic Manual (Supreme prompt)](docs/LLM_Diagnostic_Manual.md)** | **[LLM臨床診断マニュアル (Supreme Prompt)](docs/ja/LLM_Diagnostic_Manual.md)** | The meta-level system instructions for AI agents to write clinical reports, handle statistical false alarms, and perform raw fact-checking. |
-| **5** | **[📂 Verified Sample Registry & Catalog](docs/samples/README.md)** | **[検証サンプル比較・メタ診断総合カタログ](docs/ja/samples/README.md)** | Cross-verification registry, pathological groupings, and optimal LQR control therapy guidelines for all 10 validation samples. |
+| **4** | **[📂 LLM Diagnostic Manual (Supreme prompt)](docs/LLM_Diagnostic_Manual.md)** | **[LLM臨床検査マニュアル (Supreme Prompt)](docs/ja/LLM_Diagnostic_Manual.md)** | The meta-level system instructions for AI agents to write clinical reports, handle statistical false alarms, and perform raw fact-checking. |
+| **5** | **[📂 Verified Sample Registry & Catalog](docs/samples/README.md)** | **[検証サンプル比較・メタ検査総合カタログ](docs/ja/samples/README.md)** | Cross-verification registry, pathological groupings, and optimal LQR control therapy guidelines for all 10 validation samples. |
 
 ---
 
 ## ⚕️ Core Paradigm: Network Dynamics as Physical Media
 
-TLU models transaction networks not as static ledgers, but as **continuous elastic media (networks of masses, springs, and dampers)**. 
+TLU models transaction networks not as static ledgers, but as **continuous elastic media (networks of masses, springs, and dampers)**.
 
 ![Mass-Spring-Damper Model](docs/readme_plots/Mass-Spring-Damper-Model.jpg)
 *Figure 1: Conceptual mapping of transaction flows onto a Mass-Spring-Damper physical system.*
 
 ### The Eastern Medicine Metaphor (SME Physician)
+
 Rather than treating network analysis as cold statistics, TLU operates like a physician diagnosing the flow of **"Qi and Blood (気血水)"** (liquidity and flux) through **"Meridians (経絡)"** (transaction paths). TLU identifies where circulation is blocked (Stiffness Rigidity / Thrombus) or hemorrhaging (Mass Deficit / Bleeding), and uses **Control Theory (LQR Sensitivity)** to pinpoint the exact **"Acupoints (経穴)"** to apply feedback pulses to restore systemic health.
 
 ### Domain-to-Physics Mapping Matrix
@@ -58,10 +59,11 @@ Rather than treating network analysis as cold statistics, TLU operates like a ph
 TLU extracts **4 physical signatures** to detect systemic anomalies. These signatures act as objective mathematical invariants that bypass surface-level book manipulation.
 
 ### 1. Macro Forensics (Conservation of Mass & Kirchhoff's Law)
+
 Monitors whether funds or resources have "unnaturally vanished or spawned" from the global system. Any off-book siphoning violates the Law of Conservation of Mass, exposing a massive spike in the System Conservation Residual.
 
-*   **🟢 Healthy Baseline (Sample 0):** The macro residual remains at absolute zero (`0.00`) throughout, proving no leakages exist.
-*   **🚨 Mass Leakage (Sample 2 / Embezzlement):** Accounts receivable collections bypass the cash account into an off-book leak. The system conservation residual violently spikes, capturing the exact moment of siphoned leakage.
+* **🟢 Healthy Baseline (Sample 0):** The macro residual remains at absolute zero (`0.00`) throughout, proving no leakages exist.
+* **🚨 Mass Leakage (Sample 2 / Embezzlement):** Accounts receivable collections bypass the cash account into an off-book leak. The system conservation residual violently spikes, capturing the exact moment of siphoned leakage.
 
 | Healthy Normal State (Sample 0) | Pathological Mass Leakage (Sample 2) |
 | :---: | :---: |
@@ -71,10 +73,11 @@ Monitors whether funds or resources have "unnaturally vanished or spawned" from 
 ---
 
 ### 2. Topology & System Stability (Spectral Radius $\rho$)
+
 Monitors whether a closed loop (such as circular wash trades or traffic deadlocks) has formed. If the red trajectory line (Spectral Radius) approaches or breaches the warning threshold of `1.00`, it mathematically proves the system is locked in an out-of-control recirculation spiral.
 
-*   **🟢 Healthy Baseline (Sample 0):** The Spectral Radius constantly hovers in the safe zone below 1.0, meaning transaction flows organically disperse and self-converge.
-*   **🚨 Out-of-Control Loop (Sample 4 / Wash Trade):** High-speed circular fictitious trades force the Spectral Radius to saturate and lock onto the boundary limit of `1.00`, proving a state of empty recirculation.
+* **🟢 Healthy Baseline (Sample 0):** The Spectral Radius constantly hovers in the safe zone below 1.0, meaning transaction flows organically disperse and self-converge.
+* **🚨 Out-of-Control Loop (Sample 4 / Wash Trade):** High-speed circular fictitious trades force the Spectral Radius to saturate and lock onto the boundary limit of `1.00`, proving a state of empty recirculation.
 
 | Healthy Normal State (Sample 0) | Pathological Recirculation Loop (Sample 4) |
 | :---: | :---: |
@@ -84,10 +87,11 @@ Monitors whether a closed loop (such as circular wash trades or traffic deadlock
 ---
 
 ### 3. Thermodynamic Energy Stack (Organizational Exhaustion & Heat Death)
+
 Monitors the system's useful potential—Free Energy ($F = U - TS$). If Free Energy (white line) plummets below zero, the system has entered **"Thermodynamic Heat Death"**—a pathological state where the system consumes massive amounts of energy (Gross Activity $U$) but wastes it entirely as frictional heat (Entropy $TS$) without doing useful work.
 
-*   **🟢 Healthy Baseline (Sample 0):** Free Energy (white layer) steadily accumulates and grows in proportion to internal energy, proving a healthy, generative metabolism.
-*   **🚨 Heat Death (Sample 6 / Market Manipulation):** Fictitious trade volume between bots generates massive entropy. Free Energy plummets into the deep negative zone, indicating a useless, self-consuming system convulsion.
+* **🟢 Healthy Baseline (Sample 0):** Free Energy (white layer) steadily accumulates and grows in proportion to internal energy, proving a healthy, generative metabolism.
+* **🚨 Heat Death (Sample 6 / Market Manipulation):** Fictitious trade volume between bots generates massive entropy. Free Energy plummets into the deep negative zone, indicating a useless, self-consuming system convulsion.
 
 | Healthy Normal State (Sample 0) | Pathological Heat Death (Sample 6) |
 | :---: | :---: |
@@ -97,10 +101,11 @@ Monitors the system's useful potential—Free Energy ($F = U - TS$). If Free Ene
 ---
 
 ### 4. 3D Spatial Geometry (KL Drift & Local Temperature)
+
 Models the spatiotemporal probability distribution of transaction networks as a smooth manifold. Localized anomalies (such as a sudden bottleneck, circular trade collusion, or brain infarction) deform this manifold, erecting sharp, yellow-green needle-like spikes in 3D space.
 
-*   **🟢 Healthy Baseline (Sample 0):** After the initial "Edge Effect" (a mathematical illusion due to lack of historical data at start step $t=0$), the 3D surface is a flat, peaceful landscape of minor normal fluctuations.
-*   **🚨 Spatiotemporal Mutation (Sample 5 / Traffic Deadlock):** A sharp, towering spike pierces the information manifold, pinpointing the exact node (intersection `23_四条烏丸`) and timestamp of the deadlock.
+* **🟢 Healthy Baseline (Sample 0):** After the initial "Edge Effect" (a mathematical illusion due to lack of historical data at start step $t=0$), the 3D surface is a flat, peaceful landscape of minor normal fluctuations.
+* **🚨 Spatiotemporal Mutation (Sample 5 / Traffic Deadlock):** A sharp, towering spike pierces the information manifold, pinpointing the exact node (intersection `23_四条烏丸`) and timestamp of the deadlock.
 
 | Healthy Normal State (Sample 0) | Pathological Manifold Mutation (Sample 5) |
 | :---: | :---: |
@@ -132,8 +137,8 @@ TLU includes **10 pre-configured sample datasets** simulating both socioeconomic
 
 TLU does not merely flag anomalies; it models the network as a state-space system and uses **LQR (Linear Quadratic Regulator)** control theory ($u(t) = -K_{lqr} \cdot X(t)$) to compute the **acupoints (nodes)** and control pulses required to damp the pathological waveforms and return the system to its healthy limit cycle.
 
-*   **Financial (Sample 7):** Target the matching engine of collusive accounts (`USR_003` ⇄ `USR_004`) to inject millisecond-level match latency, physically damping and disrupting the wash trade loop.
-*   **Biological (Sample 9):** Target the epileptic focus in the `Temporal_Lobe` with Transcranial Magnetic Stimulation (TMS) to emit anti-phase waves, neutralizing hypersynchrony.
+* **Financial (Sample 7):** Target the matching engine of collusive accounts (`USR_003` ⇄ `USR_004`) to inject millisecond-level match latency, physically damping and disrupting the wash trade loop.
+* **Biological (Sample 9):** Target the epileptic focus in the `Temporal_Lobe` with Transcranial Magnetic Stimulation (TMS) to emit anti-phase waves, neutralizing hypersynchrony.
 
 ---
 
@@ -142,9 +147,11 @@ TLU does not merely flag anomalies; it models the network as a state-space syste
 TLU ensures 100% environment reproducibility and eliminates human bias using containerized pipelines and Test-Driven Development (TDD).
 
 ### Preparation: Custom Ingestion Requirements
+
 To run TLU with your own data, place the following two CSV files inside the `workspace/` directory:
-1.  **Transaction Flux Stream (`workspace/input_stream/`)**: A chronological CSV containing the columns: `Trans_Date`, `Account_Name` (or node name), `Debit` (Inflow), and `Credit` (Outflow).
-2.  **Account Mapping Dictionary (`workspace/config/_account_mapping.csv`)**: Maps your custom nodes to TLU's standard physical categories (Asset, Liability, Revenue, etc.) for Phase 1 B/S and P/L block calculations.
+
+1. **Transaction Flux Stream (`workspace/input_stream/`)**: A chronological CSV containing the columns: `Trans_Date`, `Account_Name` (or node name), `Debit` (Inflow), and `Credit` (Outflow).
+2. **Account Mapping Dictionary (`workspace/config/_account_mapping.csv`)**: Maps your custom nodes to TLU's standard physical categories (Asset, Liability, Revenue, etc.) for Phase 1 B/S and P/L block calculations.
 
 ### Automated Simulation Pipeline Steps
 
@@ -176,7 +183,9 @@ It is **not** an AI that makes assumptions about moral intent (e.g. distinguishi
 ---
 
 ## 🔬 Verification Status
+
 All unit tests and physical checks in the TLU environment are active and passing:
+
 ```bash
 python3 scratch/verify_corrections.py
 # Output: === Verification Successful: ALL CHECKS PASSED! ===

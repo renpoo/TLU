@@ -3,9 +3,10 @@
 > [!NOTE]
 > **[IMPORTANT] Relationship Between Sample 8 and Sample 9 and Target Domain**
 > This sample (Sample 9) is the counterpart to the previous sample (Sample 8), and the second part of the human brain (fMRI) network simulation.
+>
 > * **Sample 8 (Previous Report):** Simulated a **"Stroke/Infarction (Anomaly of Deficit)"** where blood flow to the motor cortex was physically blocked, verifying the process of necrosis.
 > * **Sample 9 (This Report):** Simulates an **"Epileptic Seizure (Anomaly of Excessive Resonance)"** where pathological abnormal synchronous waves radiate from a specific region (Temporal Lobe).
-> 
+>
 > This is the grand finale of the project, demonstrating how "financial market crimes (market manipulation)" and "biological seizures (epilepsy)" are described by **"the exact same physical equations"** within TLU's space.
 
 ---
@@ -13,6 +14,7 @@
 # 🔬 Meta-Analysis Synthesis Report / Laboratory Findings
 
 ## 1. Executive Summary
+
 This system (biological brain domain) is diagnosed as being in an extremely dangerous state (HIGH Severity) where it exhibits **"Extreme Topological Feedback Loops"** and **"Thermodynamic Energy Depletion"** in the latter half of the measurement. Massive, meaningless waves of signals originating from the Temporal Lobe are causing perfect bidirectional Hypersynchrony with other regions. Although the metabolic energy (transaction volume) of the entire brain is abnormally inflated, the potential to perform meaningful information processing (free energy) is fatally collapsing, a state where "metabolism is intensely active, but no meaningful work is being done at all."
 
 ## 2. Limitations of Traditional Perspective
@@ -24,6 +26,7 @@ This system (biological brain domain) is diagnosed as being in an extremely dang
 Only the activity volume (volume) of the temporal lobe protrudes abnormally. However, because the incoming signals (Debit) and outgoing signals (Credit) are perfectly synchronized and equal in volume, the net balance (P/L) has barely changed. In traditional aggregate approaches, recognition stops at the level of "the temporal lobe is actively working (massive P/L)." Whether this is "advanced information processing" or a "meaningless convulsion (seizure)" can absolutely not be distinguished from a static ledger.
 
 ## 3. Fundamental Pathophysiology
+
 The root cause of this sample is the "Abnormal Synchronization Script" intentionally planted in the generator code `_0_0_generate_dummy_fmri.py`.
 
 * **Identified Evidence:**
@@ -61,8 +64,8 @@ Because abnormal synchronous waves from a seizure do not extremely bias the tota
 
 * **Flickering of `is_stable` (Numerical Noise Mimicking State Change):**
     The stability flag (`is_stable`) flickers rapidly between `1` (stable) and `0` (unstable) in the log. This is not a physical fluctuation of brain connectivity. Rather, it is a **numerical artifact caused by microscopic floating-point rounding errors** when calculating eigenvalues of exactly `1.0` in complex space.
-    * **False Positives (t < 30):** During the healthy baseline period, rounding errors occasionally cause the computed spectral radius to be slightly larger than `1.0` (e.g., `1.0000000000000002`), triggering a false unstable alarm (`is_stable = 0`).
-    * **False Negatives (t >= 30):** During the hypersynchronous seizure period when the network is severely compromised, numerical rounding yields values slightly below or equal to `1.0`, resulting in a false stable classification (`is_stable = 1`).
+  * **False Positives (t < 30):** During the healthy baseline period, rounding errors occasionally cause the computed spectral radius to be slightly larger than `1.0` (e.g., `1.0000000000000002`), triggering a false unstable alarm (`is_stable = 0`).
+  * **False Negatives (t >= 30):** During the hypersynchronous seizure period when the network is severely compromised, numerical rounding yields values slightly below or equal to `1.0`, resulting in a false stable classification (`is_stable = 1`).
     Since this metric produces uninformative false alarms and false normals indiscriminately, it should be excluded from forensic clinical reasoning.
 
 * **Physical Topology Disruption (Pathological Synchronization Hub):**
@@ -106,4 +109,4 @@ In the 3D surface of Z-Score (degree of protrusion from past averages), the tran
 
 * **Possibility of False Positives:** If this were actual fMRI data, for a specific brain region to continue emitting such perfect sine waves is physiologically abnormal, and it is extremely likely to be an organic or functional epileptic focus.
 * **Grand Finale of the TLU Project:**
-  "Malicious market manipulation" in finance, and "abnormal brain synchronization (epilepsy)" in living organisms. In TLU's physical space (Thermodynamics and Topology), these two completely aligned mathematically (diagnosed as the identical pathology) as "perfect infinite loops accompanying meaningless frictional heat (entropy)." TLU is completed here as a true "Universal Physics Engine," beautifully unraveling seemingly disparate social and biological phenomena with a unified equation ($F = U - TS$).
+  "Malicious market manipulation" in finance, and "abnormal brain synchronization (epilepsy)" in living organisms. In TLU's physical space (Thermodynamics and Topology), these two completely aligned mathematically (diagnosed as the identical pathology) as "perfect infinite loops accompanying meaningless frictional heat (entropy)." TLU is completed here as a true "Universal Physics-Mathematics Engine," beautifully unraveling seemingly disparate social and biological phenomena with a unified equation ($F = U - TS$).

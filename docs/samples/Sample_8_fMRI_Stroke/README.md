@@ -3,7 +3,8 @@
 > [!NOTE]
 > **[IMPORTANT] Relationship Between Sample 8 and Sample 9 and Target Domain**
 > This sample (Sample 8) and the next sample (Sample 9) are not financial or traffic data, but biological data simulating the **"Effective Connectivity of BOLD signals"** in the human brain (fMRI).
-> This is the grand finale test case proving that TLU's "Universal Physics Engine" can seamlessly diagnose across disciplines, from social sciences (finance/traffic) to life sciences (biological network pathologies).
+> This is the grand finale test case proving that TLU's "Universal Physics-Mathematics Engine" can seamlessly diagnose across disciplines, from social sciences (finance/traffic) to life sciences (biological network pathologies).
+>
 > * **Sample 8 (This Report):** Simulates a **"Stroke/Ischemia"** where blood flow/signals to a specific part of the brain network (Motor Cortex) are physically blocked. It verifies the process where part of the network "depletes and necrotizes."
 > * **Sample 9 (Next Report):** Simulates an **"Epileptic Seizure"** where abnormal synchronous signals radiate from a specific region (Temporal Lobe). It verifies the process of excessive "runaway resonance" of energy.
 
@@ -12,6 +13,7 @@
 # 🔬 Meta-Analysis Synthesis Report / Laboratory Findings
 
 ## 1. Executive Summary
+
 This system (biological brain domain) is diagnosed as being in an extremely critical state (HIGH Severity) where a **"fatal blockage of energy supply to a specific node (Motor Cortex) (Stroke/Infarction)"** occurs mid-way through the timeline, resulting in the entire network falling into **"Thermodynamic Energy Depletion."** Only the inflow path to the motor cortex is blocked, and the process of isolation and necrosis progresses: "It outputs noise to other regions, but receives absolutely no input."
 
 ## 2. Limitations of Traditional Perspective
@@ -23,6 +25,7 @@ This system (biological brain domain) is diagnosed as being in an extremely crit
 Looking at the P/L summary, only the Motor Cortex is showing an extreme negative (-$60,191). This is a physical sign of an arterial blockage: "It is sending signals to other parts, but receiving no input." However, traditional static aggregation tools cannot depict the "dynamic process of death" regarding how this mere "balance anomaly" places a thermodynamic load on the entire network (increasing entropy = wasteful frictional heat and energy squandering) and undermines overall biological activity.
 
 ## 3. Fundamental Pathophysiology
+
 The root cause of this sample lies in an "Arterial Blockage Script" intentionally embedded in the generator code `_0_0_generate_dummy_fmri.py`.
 
 * **Identified Evidence:**
@@ -60,8 +63,8 @@ Due to the localized blockage of blood flow, an imbalance arises in the mass con
 
 * **Flickering of `is_stable` (Numerical Noise Mimicking State Change):**
     The stability flag (`is_stable`) flickers rapidly between `1` (stable) and `0` (unstable) in the log. This is not a physical fluctuation of brain connectivity. Rather, it is a **numerical artifact caused by microscopic floating-point rounding errors** when calculating eigenvalues of exactly `1.0` in complex space.
-    * **False Positives (t < 30):** During the healthy baseline period, rounding errors occasionally cause the computed spectral radius to be slightly larger than `1.0` (e.g., `1.0000000000000002`), triggering a false unstable alarm (`is_stable = 0`).
-    * **False Negatives (t >= 30):** During the ischemic stroke period when the network is severely compromised, numerical rounding yields values slightly below or equal to `1.0`, resulting in a false stable classification (`is_stable = 1`).
+  * **False Positives (t < 30):** During the healthy baseline period, rounding errors occasionally cause the computed spectral radius to be slightly larger than `1.0` (e.g., `1.0000000000000002`), triggering a false unstable alarm (`is_stable = 0`).
+  * **False Negatives (t >= 30):** During the ischemic stroke period when the network is severely compromised, numerical rounding yields values slightly below or equal to `1.0`, resulting in a false stable classification (`is_stable = 1`).
     Since this metric produces uninformative false alarms and false normals indiscriminately, it should be excluded from forensic clinical reasoning.
 
 * **Physical Topology Disruption (Loss of Inflow Edges):**
@@ -98,4 +101,4 @@ In the 3D surface of Z-Score (degree of protrusion from past averages), bounding
 ## 5. ⚠️ Falsification Analytics
 
 * **Possibility of False Positives:** If this were actual fMRI data, given that only the inflow of the BOLD signal to a specific gyrus vanishes by 95% and is accompanied by abnormal resonance, there is an extremely high probability that it is a clear "organic lesion (ischemia/infarction)" rather than mere measurement noise.
-* **Additional Verification Requirements:** TLU has proven itself to be a "Universal Physics Engine." It has been confirmed that "embezzlement" in finance, "deadlock" in traffic networks, and "stroke" in the brain can all be seamlessly diagnosed with the same physical equation: "Mass deficit and thermodynamic collapse in a network."
+* **Additional Verification Requirements:** TLU has proven itself to be a "Universal Physics-Mathematics Engine." It has been confirmed that "embezzlement" in finance, "deadlock" in traffic networks, and "stroke" in the brain can all be seamlessly diagnosed with the same physical equation: "Mass deficit and thermodynamic collapse in a network."

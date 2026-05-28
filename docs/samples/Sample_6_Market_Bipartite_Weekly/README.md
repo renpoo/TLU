@@ -40,7 +40,7 @@ In typical trading tools, the manipulated ticker is simply displayed as a "highl
 
 ## 3. Fundamental Pathophysiology
 
-The physics engine identified the operation of the fictitious transaction algorithm from the deep layers of transactions as evidence:
+The Physics-Mathematics Engine identified the operation of the fictitious transaction algorithm from the deep layers of transactions as evidence:
 
 * **Identified Infractions:**
     Two specific accounts, `USR_003` and `USR_004`, matched wash trades consecutively **20 times** at a rate of 1,693 shares per trade within just **1.0 second** on ticker `STK_004` (price approx. $1,917.08) in 2020-W40 (`t_idx=39`), and another **20 times** consecutively at 5,000 shares per trade within just **1.0 second** on ticker `STK_003` (price approx. $2,066.28) in 2020-W46 (`t_idx=45`) (totaling 40 transactions).
@@ -49,7 +49,7 @@ The physics engine identified the operation of the fictitious transaction algori
 
 ---
 
-## 4. Mathematical Evidence from the Physics Engine
+## 4. Mathematical Evidence from the Physics-Mathematics Engine
 
 ### 4.1. Transaction Recirculation Topology & Phase Synchronization Runaway
 
@@ -116,7 +116,7 @@ However, during the anomalies and position adjustments, the system detects a pro
 **【Thermodynamic Friction Detection Mechanism】**
 When wash trading or rapid fund transfers occur, they temporarily raise local flow distribution dispersion (entropy $S$) and volatility (temperature $T$), expanding friction ($TS = U - F$) as dissipative energy.
 
-The physics engine successfully extracts and visualizes this "hollow local friction" as a clean energy loss signal, without disrupting the overall market structure.
+The Physics-Mathematics Engine successfully extracts and visualizes this "hollow local friction" as a clean energy loss signal, without disrupting the overall market structure.
 
 The T-S diagram draws a counterclockwise closed oval loop, contrasting with the open path of a healthy market. This is thermodynamic proof that the system is merely spinning capital internally, generating fee costs (friction) without delivering economic value.
 

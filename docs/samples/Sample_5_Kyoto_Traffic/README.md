@@ -31,7 +31,7 @@ A typical traffic monitoring dashboard can identify static rankings of "which in
 
 ## 3. Fundamental Pathophysiology
 
-The physics engine accurately captures the following structural changes and pathological bottlenecks embedded in the data generation logic (`_0_0_generate_dummy_traffic.py`):
+The Physics-Mathematics Engine accurately captures the following structural changes and pathological bottlenecks embedded in the data generation logic (`_0_0_generate_dummy_traffic.py`):
 
 1. **Dynamic Flow Blockage & Back-Up (Shijo-Karasuma Bottleneck)**:
     Starting from Day 360 of the simulation (Week 52 onward), the flow capacity of edges connecting to the major intersection "Shijo-Karasuma" was restricted to a mere **5%** of its normal capacity (simulating road construction or an accident). As inflow was severely restricted, a rapid backflow and accumulation of vehicles occurred at upstream intersections such as `08_三条烏丸` (Sanjo-Karasuma) and `21_四条室町` (Shijo-Muromachi). This was captured as a sudden change in spatiotemporal transition probabilities (a spike in `kl_divergence_drift` to **`1.7629`** in Week 53).
@@ -40,7 +40,7 @@ The physics engine accurately captures the following structural changes and path
 
 ---
 
-## 4. Mathematical Evidence from the Physics Engine
+## 4. Mathematical Evidence from the Physics-Mathematics Engine
 
 ### 4.1. Strict Mass Conservation & Verification
 
