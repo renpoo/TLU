@@ -3,7 +3,6 @@
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-red.svg)](https://www.gnu.org/licenses/agpl-3.0.html)
 [![Python Version](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
 [![Docker Status](https://img.shields.io/badge/Docker-Compatible-emerald.svg)](https://www.docker.com/)
-[![Engine Status](https://img.shields.io/badge/System_Verification-Passing-brightgreen.svg)](#-ユニットテスト検証ステータス)
 
 ### 物理数学による数理解析で会社の帳簿のような様々な「やりとりのデータ」を可視化する
 
@@ -11,7 +10,7 @@ Tensor-Link Utility (TLU) 技術デキュメント・ポータルへお越しい
 TLUが導き出した数理的・物理的帰結は：
 **「会計帳簿（B/SやP/L）の上でどれほど仮装取引や粉飾を施そうとも、『質量保存の法則（貸借一致の原則）』や『熱力学の法則』といった普遍的な物理法則を欺くことは不可能である」**という点にあります。
 
-TLUは、複式簿記、都市交通フロー、株式市場取引、および脳神経機能（fMRI）といった一見すると全く異なるドメインの、時系列トランザクション・データを、**質量・ばね・ダンパーで構成される連続弾性体（弾性ネットワーク）**を流れる「力の流れ」として再定義し、システム内に潜む病的異常（横領、循環取引、デッド・ロック、相場操縦、脳梗塞、てんかんなど）を**客観的な物理署名（シグネチャ）**（剛性の崩壊、病的共鳴、熱的異常、相関異常など）として可視化するメタ検査プラットフォームです。
+TLUは、複式簿記、都市交通フロー、株式市場取引、および脳神経機能（fMRI）といった一見すると全く異なるドメインの、時系列トランザクション・データを、**質量・ばね・ダンパーで構成される連続弾性体（弾性ネットワーク）**を流れる「力の流れ」として再定義し、システム内に潜む病的異常（横領、循環取引、デッド・ロック、相場操縦、脳梗塞、てんかんなど）を**客観的な物理数学的署名（シグネチャ）**（剛性の崩壊、病的共鳴、熱的異常、相関異常など）として可視化するメタ検査プラットフォームです。
 
 物理数学エンジンが出力した数理解析の指標は、TLUをいっしょに使う AI エージェントによって、[`LLM_Diagnostic_Manual.md`](LLM_Diagnostic_Manual.md) に準拠して解読され、人間の監査人や専門家が直感的に理解できる客観的な「臨床検査カルテ」へと翻訳されます。
 
@@ -23,8 +22,8 @@ TLUは、複式簿記、都市交通フロー、株式市場取引、および�
 
 | # | ドキュメントタイトル（英語版） | 対応する日本語版（日本語推奨） | コアコンテンツと見どころ |
 | :---: | :--- | :--- | :--- |
-| **1** | **[📂 01. Physics-Mathematics Engine Theory & Interpretation Guide](../01_Physics_Mathematics_Engine_Theory_and_Interpretation.md)** | **[01. 物理・数理エンジン基礎理論と解釈ガイド](01_Physics_Mathematics_Engine_Theory_and_Interpretation.md)** | TLUの主要8コアモジュール（$F = U - TS$, $K$, $\rho$など）の数学的・物理的基礎と、3D相空間挙動プロットの解釈マニュアル。 |
-| **2** | **[📂 02. System Architecture & Operations Guide](../02_System_Architecture_and_Operations.md)** | **[02. システム構造定義とパイプライン運用ガイド](02_System_Architecture_and_Operations.md)** | パイプライン・コンテナ運用、HSLテーマ可視化エンジン、病的ダミーデータ生成器、およびLQR介入フィードバック制御シミュレーションモデル。 |
+| **1** | **[📂 01. Physics-Mathematics Engine Theory & Interpretation Guide](../01_Physics_Mathematics_Engine_Theory_and_Interpretation.md)** | **[01. 物理・数理エンジン基礎理論と解釈ガイド](01_Physics_Mathematics_Engine_Theory_and_Interpretation.md)** | TLUの主要8コアモジュール（ $F = U - TS$ , $K$, $\rho$ など）の数学的・物理的基礎と、3D相空間挙動プロットの解釈マニュアル。 |
+| **2** | **[📂 02. System Architecture & Operations Guide](../02_System_Architecture_and_Operations.md)** | **[02. システム構造定義とパイプライン運用ガイド](02_System_Architecture_and_Operations.md)** | パイプライン・コンテナ運用、デザインテーマ管理（JSON）、障害込みダミー・データ生成スクリプト、およびLQR介入フィードバック制御シミュレーションモデル。 |
 | **3** | **[📂 03. Market Forensics & Compliance Rules](../03_Market_Forensics_Rules.md)** | **[03. 市場フォレンジック・監査ルール定義](03_Market_Forensics_Rules.md)** | ミリ秒単位の注文簿（オーダーブック）力学、ボット循環取引、二部グラフ投影 vs ユーザー間直接送金トポロジーによる共謀ネットワーク監査。 |
 | **4** | **[📂 LLM Diagnostic Manual (Supreme prompt)](../LLM_Diagnostic_Manual.md)** | **[LLM臨床検査マニュアル (Supreme Prompt)](LLM_Diagnostic_Manual.md)** | 物理数学エンジンの数値からAIが客観的なカルテを自動生成するためのプロトコル。統計的偽陽性判定と、原本データへのファクトチェック義務化。 |
 | **5** | **[📂 Verified Sample Registry & Catalog](../samples/README.md)** | **[検証サンプル比較・メタ検査総合カタログ](samples/README.md)** | TLUに実装されている全10種類の検証サンプルの判定判定、物理数学パラメータ限界値、およびLQR介入治療ガイド。 |
