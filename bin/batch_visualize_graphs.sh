@@ -49,6 +49,7 @@ VIZ_ORCH_DIR="./bin/visualizers"
 # Primary Dashboards / Macro Indicators (Check Engine Lights)
 PRIMARY_SCRIPTS=(
     "vis_000_0_1_visualize_financial_statements.sh"
+    "vis_000_0_1_visualize_financial_statements_periodic.sh"
     "vis_000_2_2_visualize_principal_axes.sh"
     "vis_001_1_1_visualize_macro_thermodynamics.sh"
     "vis_002_2_1_visualize_macro_forensics.sh"

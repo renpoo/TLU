@@ -1,0 +1,224 @@
+#!/usr/bin/env python3
+import sys
+import argparse
+import pandas as pd
+import collections
+import json
+import os
+
+def main():
+    parser = argparse.ArgumentParser(description="Generate Periodic Financial Statements from TLU Graph Edges")
+    parser.add_argument("--mapping", required=True, help="Path to _account_mapping.csv")
+    parser.add_argument("--output", required=True, help="Path to output markdown file")
+    parser.add_argument("--initial_state", default="", help="Path to ephemeral/_initial_state_labels.csv")
+    args, unknown = parser.parse_known_args()
+
+    from src.filters.cli_parser import parse_projector_args
+    # Pass unknown args to cli_parser to get column mappings (or it will default to sys_params)
+    mapping_config = parse_projector_args(unknown)
+    col_time = mapping_config.get("col_time", "Trans_Date")
+    col_src = mapping_config.get("col_src", "Src")
+    col_tgt = mapping_config.get("col_tgt", "Tgt")
+    col_val = mapping_config.get("col_val", "Amount")
+
+    # Read mapping
+    try:
+        mapping_df = pd.read_csv(args.mapping)
+        account_map = dict(zip(mapping_df['Account_Name'], mapping_df['Category']))
+    except Exception as e:
+        print(f"Error reading mapping file: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    # Read aggregated journal from stdin
+    try:
+        df = pd.read_csv(sys.stdin)
+    except Exception as e:
+        print(f"Error reading input stream: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    if df.empty:
+        sys.exit(0)
+
+    # df has columns: Trans_Date, Src, Tgt, Amount
+    # Src = Credit, Tgt = Debit
+    
+    # Process transactions by week/month
+    weeks = sorted(df[col_time].unique())
+    
+    # Track cumulative debits and credits for B/S
+    cum_debits = collections.defaultdict(float)
+    cum_credits = collections.defaultdict(float)
+    
+    weekly_reports = []
+    
+    if args.initial_state and os.path.exists(args.initial_state):
+        try:
+            init_df = pd.read_csv(args.initial_state)
+            for _, row in init_df.iterrows():
+                acc = row.get("node_label", "")
+                val = float(row.get("initial_X", 0.0))
+                cat = account_map.get(acc, 'Expense')
+                # Initialize B/S cumulative state
+                if cat in ['Asset', 'Expense']:
+                    cum_debits[acc] += val
+                else:
+                    cum_credits[acc] += val
+        except Exception as e:
+            print(f"[WARN] Failed to load initial state from {args.initial_state}: {e}", file=sys.stderr)
+    
+    def get_balance(account, dr, cr):
+        category = account_map.get(account, 'Expense') # Default to Expense if unknown
+        if category in ['Asset', 'Expense']:
+            return dr - cr
+        else:
+            return cr - dr
+
+    for w in weeks:
+        week_df = df[df[col_time] == w]
+        
+        # Track monthly (periodic) flow for P/L
+        monthly_debits = collections.defaultdict(float)
+        monthly_credits = collections.defaultdict(float)
+        
+        # Accumulate period
+        for _, row in week_df.iterrows():
+            src = row[col_src]
+            tgt = row[col_tgt]
+            amt = row[col_val]
+            
+            # Cumulative for B/S
+            cum_credits[src] += amt
+            cum_debits[tgt] += amt
+            
+            # Periodic for P/L
+            monthly_credits[src] += amt
+            monthly_debits[tgt] += amt
+            
+        # Calculate balances for this period
+        assets = 0.0
+        liabilities = 0.0
+        equity = 0.0
+        revenue = 0.0
+        expense = 0.0
+        
+        bs_items = []
+        pl_items = []
+        tb_items = [] # Trial Balance for Gross Flow (periodic for P/L, cumulative for B/S)
+        
+        all_accounts = set(cum_debits.keys()) | set(cum_credits.keys()) | set(monthly_debits.keys()) | set(monthly_credits.keys())
+        for acc in sorted(all_accounts):
+            cat = account_map.get(acc, 'Expense')
+            
+            if cat in ['Asset', 'Liability', 'Equity']:
+                # B/S items use Cumulative Values
+                dr = cum_debits[acc]
+                cr = cum_credits[acc]
+                bal = get_balance(acc, dr, cr)
+                tb_items.append((acc, cat, dr, cr, bal))
+                
+                if cat == 'Asset':
+                    if bal < 0:
+                        liabilities += -bal
+                        bs_items.append((acc, 'Liability (Short/Overdraft)', -bal))
+                    else:
+                        assets += bal
+                        bs_items.append((acc, cat, bal))
+                elif cat == 'Liability':
+                    if bal < 0:
+                        assets += -bal
+                        bs_items.append((acc, 'Asset (Receivable)', -bal))
+                    else:
+                        liabilities += bal
+                        bs_items.append((acc, cat, bal))
+                elif cat == 'Equity':
+                    equity += bal
+                    bs_items.append((acc, cat, bal))
+            else:
+                # P/L items use Periodic (Monthly) Values
+                dr = monthly_debits[acc]
+                cr = monthly_credits[acc]
+                bal = get_balance(acc, dr, cr)
+                tb_items.append((acc, cat, dr, cr, bal))
+                
+                if cat == 'Revenue':
+                    revenue += bal
+                    pl_items.append((acc, cat, bal))
+                elif cat == 'Expense':
+                    expense += bal
+                    pl_items.append((acc, cat, bal))
+        
+        net_income = revenue - expense
+        total_equity = equity + net_income
+        total_liab_eq = liabilities + total_equity
+        
+        is_balanced = abs(assets - total_liab_eq) < 0.01
+        
+        report = {
+            'week': w,
+            'assets': assets,
+            'liabilities': liabilities,
+            'equity': equity,
+            'net_income': net_income,
+            'total_liab_eq': total_liab_eq,
+            'revenue': revenue,
+            'expense': expense,
+            'is_balanced': is_balanced,
+            'bs_items': bs_items,
+            'pl_items': pl_items,
+            'tb_items': tb_items
+        }
+        weekly_reports.append(report)
+
+    # Generate Markdown Output
+    with open(args.output, 'w') as f:
+        f.write("# TLU Periodic Financial Statements Report (PROTOTYPE)\n\n")
+        f.write("> *This report displays monthly non-cumulative traffic flow for P/L statements.*\n\n")
+        
+        # 1. Total Period Summary (Last Week)
+        final = weekly_reports[-1]
+        f.write("## 1. Final Month Summary (Periodic P/L, Cumulative B/S)\n\n")
+        f.write(f"**Period End:** {final['week']}\n")
+        f.write(f"**Status:** {'✅ BALANCED' if final['is_balanced'] else '❌ UNBALANCED'}\n\n")
+        
+        f.write("### Balance Sheet (B/S - Cumulative)\n")
+        f.write("| Account | Category | Balance |\n")
+        f.write("|---|---|---|\n")
+        for acc, cat, bal in final['bs_items']:
+            f.write(f"| {acc} | {cat} | {bal:,.2f} |\n")
+        f.write(f"| **Retained Earnings (Net Income)** | Equity | **{final['net_income']:,.2f}** |\n")
+        f.write("|---|---|---|\n")
+        f.write(f"| **Total Assets** | | **{final['assets']:,.2f}** |\n")
+        f.write(f"| **Total Liabilities & Equity** | | **{final['total_liab_eq']:,.2f}** |\n\n")
+        
+        f.write("### Profit & Loss (P/L - Monthly Non-Cumulative)\n")
+        f.write("| Account | Category | Monthly Flow |\n")
+        f.write("|---|---|---|\n")
+        for acc, cat, bal in final['pl_items']:
+            f.write(f"| {acc} | {cat} | {bal:,.2f} |\n")
+        f.write("|---|---|---|\n")
+        f.write(f"| **Total Revenue** | | **{final['revenue']:,.2f}** |\n")
+        f.write(f"| **Total Expenses** | | **{final['expense']:,.2f}** |\n")
+        f.write(f"| **Net Income** | | **{final['net_income']:,.2f}** |\n\n")
+        
+        f.write("---\n")
+        f.write("## 2. Gross Flow / Trial Balance (T/B - Periodic/Cumulative Mixed)\n\n")
+        f.write("| Account | Category | Gross Debit (Dr) | Gross Credit (Cr) | Net Balance |\n")
+        f.write("|---|---|---|---|---|\n")
+        for acc, cat, dr, cr, bal in final['tb_items']:
+            f.write(f"| {acc} | {cat} | {dr:,.2f} | {cr:,.2f} | {bal:,.2f} |\n")
+        f.write("\n---\n")
+
+        f.write("## 3. Weekly Trend Summary\n\n")
+        f.write("| Week | Total Assets | Total Liab. | Retained Earnings | Net Income | Balanced? |\n")
+        f.write("|---|---|---|---|---|---|\n")
+        for r in weekly_reports:
+            status = '✅' if r['is_balanced'] else '❌'
+            f.write(f"| {r['week']} | {r['assets']:,.2f} | {r['liabilities']:,.2f} | {r['equity']:,.2f} | {r['net_income']:,.2f} | {status} |\n")
+
+    # Generate JSON Output for Visualizer
+    json_path = args.output.replace('.md', '.json')
+    with open(json_path, 'w') as f:
+        json.dump(weekly_reports, f, indent=2)
+
+if __name__ == "__main__":
+    main()

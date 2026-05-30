@@ -148,9 +148,10 @@ def draw_pl_waterfall(report, out_path, min_y=None, max_y=None, fixed_expenses_o
         range_y = max(abs(max_y), 1) if range_y == 0 else range_y
         ax.set_ylim(min_y - range_y * 0.1, max_y + range_y * 0.1)
 
-    title_str = f"Profit & Loss (Waterfall): {report['week']}"
-    if t_idx is not None: title_str = f"Profit & Loss (Waterfall)\nTimeline: {report['week']} (t_idx={t_idx})"
+    title_str = f"Monthly Profit and Loss Flow (Waterfall): {report['week']}"
+    if t_idx is not None: title_str = f"Monthly Profit and Loss Flow (Waterfall)\nTimeline: {report['week']} (t_idx={t_idx})"
     ax.set_title(title_str)
+    ax.set_ylabel("Monthly Profit and Loss (Amount)")
     plt.xticks(rotation=90, ha='center', fontsize=8)
     plt.subplots_adjust(left=0.1, right=0.95, top=0.9, bottom=0.3) # Reserve more bottom space for vertical labels
     plt.savefig(out_path, dpi=150) # Removed bbox_inches='tight'
@@ -192,7 +193,8 @@ def draw_pl_trend(reports, out_path, fixed_expenses_order):
     ax.plot(weeks, net_incomes, label='Net Income', color='#3498db', marker='o', linewidth=2)
     
     ax.axhline(0, color='black', linewidth=1)
-    ax.set_title("Profit & Loss Trend Over Time (Revenue vs Expenses)")
+    ax.set_title("Monthly Profit and Loss Trend Over Time (Revenue vs Expenses)")
+    ax.set_ylabel("Monthly Profit and Loss (Amount)")
     ax.legend(loc='center left', bbox_to_anchor=(1.02, 0.5), fontsize=8)
     
     if len(weeks) > 20:
@@ -361,16 +363,16 @@ def main():
     fixed_liabs = get_top_k(global_liabs, args.top_k)
     fixed_expenses = get_top_k(global_expenses, args.top_k)
 
-    draw_bs_block_chart(final_report, os.path.join(args.out_dir, "000_0_1__BS_Block_Total.png"),
+    draw_bs_block_chart(final_report, os.path.join(args.out_dir, "000_0_1__BS_Block_Total_Periodic.png"),
                         fixed_assets_order=fixed_assets, fixed_liabs_order=fixed_liabs, top_k=args.top_k)
-    draw_pl_waterfall(final_report, os.path.join(args.out_dir, "000_0_1__PL_Waterfall_Total.png"),
+    draw_pl_waterfall(final_report, os.path.join(args.out_dir, "000_0_1__PL_Waterfall_Total_Periodic.png"),
                       fixed_expenses_order=fixed_expenses, top_k=args.top_k)
 
     # Generate B/S Trend Image
-    draw_bs_trend(reports, os.path.join(args.out_dir, "000_0_1__BS_Trend.png"), fixed_assets, fixed_liabs)
+    draw_bs_trend(reports, os.path.join(args.out_dir, "000_0_1__BS_Trend_Periodic.png"), fixed_assets, fixed_liabs)
 
     # Generate P/L Trend Image
-    draw_pl_trend(reports, os.path.join(args.out_dir, "000_0_1__PL_Trend.png"), fixed_expenses)
+    draw_pl_trend(reports, os.path.join(args.out_dir, "000_0_1__PL_Trend_Periodic.png"), fixed_expenses)
 
     # 2. Individual Sequence Images (for every time step)
     seq_dir = args.seq_dir
@@ -378,7 +380,7 @@ def main():
     for i, r in enumerate(reports):
         # Format index to have leading zeros for sorting
         idx_str = f"{i:03d}"
-        out_path = os.path.join(seq_dir, f"BS_Block_{idx_str}_{r['week']}.png")
+        out_path = os.path.join(seq_dir, f"BS_Block_{idx_str}_{r['week']}_Periodic.png")
         draw_bs_block_chart(r, out_path, 
                             max_y=global_max_bs, fixed_assets_order=fixed_assets, fixed_liabs_order=fixed_liabs, t_idx=i)
 
@@ -387,7 +389,7 @@ def main():
     for i, r in enumerate(reports):
         # Format index to have leading zeros for sorting
         idx_str = f"{i:03d}"
-        out_path = os.path.join(seq_dir, f"PL_Waterfall_{idx_str}_{r['week']}.png")
+        out_path = os.path.join(seq_dir, f"PL_Waterfall_{idx_str}_{r['week']}_Periodic.png")
         draw_pl_waterfall(r, out_path, 
                           min_y=global_min_pl, max_y=global_max_pl, fixed_expenses_order=fixed_expenses, t_idx=i)
 
