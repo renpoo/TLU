@@ -40,7 +40,7 @@ However, the **"process of collusion (existence of a clique)"**—where `USR_003
 
 ## 3. Fundamental Pathophysiology
 
-By discarding the intermediate ticker nodes and tracking only the moving paths of capital (mass), the Physics-Mathematics Engine exposes the core of the collusive syndicate (matched order loop):
+By discarding the intermediate ticker nodes and tracking only the moving paths of capital (mass), the Physics-Mathematics-Mathematics Engine exposes the core of the collusive syndicate (matched order loop):
 
 * **Identified Collusion Structure:**
     The pathological causal attractor detected across the stock market is the ultra-high-speed direct matching transactions between `USR_003` and `USR_004` in 2020-W40 (`t_idx=39`) on `STK_004` (approx. $1,917.08 × 1,693 shares, 20 executions, approx. 1.0 second) and in 2020-W46 (`t_idx=45`) on `STK_003` (approx. $2,066.28 × 5,000 shares, 20 executions, approx. 1.0 second, totaling 40 transactions).
@@ -49,7 +49,7 @@ By discarding the intermediate ticker nodes and tracking only the moving paths o
 
 ---
 
-## 4. Mathematical Evidence from the Physics-Mathematics Engine
+## 4. Mathematical Evidence from the Physics-Mathematics-Mathematics Engine
 
 ### 4.1. Collusion Topology & Spectral Radius
 
@@ -114,7 +114,7 @@ However, during the anomalies and position adjustments, the system detects a pro
 **【Thermodynamic Friction Detection Mechanism】**
 When wash trading or rapid fund transfers occur, they temporarily raise local flow distribution dispersion (entropy $S$) and volatility (temperature $T$), expanding friction ($TS = U - F$) as dissipative energy.
 
-The Physics-Mathematics Engine successfully extracts and visualizes this "hollow local friction" as a clean energy loss signal, without disrupting the overall market structure.
+The Physics-Mathematics-Mathematics Engine successfully extracts and visualizes this "hollow local friction" as a clean energy loss signal, without disrupting the overall market structure.
 
 The Temperature-Entropy (T-S) diagram clearly shows the "counterclockwise closed oval trajectory" triggered by circular trading. This represents a "fictitious recirculation engine" that merely spins capital internally, generating fee costs (friction) without delivering economic value.
 

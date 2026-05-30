@@ -7,7 +7,7 @@
 * **Clinical Overview:**
     This system suffers from severe business dysfunction (revenue inflation via circular transactions) caused by a "high-speed catch-ball of accounts receivable and cash (recirculation loop)" that lacks substantial economic activity (value transfer).
 
-    A substantial portion of the cumulative gross revenue of `$1,094,143.89` is occupied by this fictitious wash trade. Since the double-entry principle of matching debits and credits (conservation law) is perfectly maintained, traditional static audits fail to discover any anomalies. However, the maximum eigenvalue of the adjacency connection matrix (**maximum spectral radius $\rho = 0.7488$**) detected by the physics-mathematical engine mathematically convicts the formation of a robust closed circuit (round-trip journaling of fictitious sales) that recirculates energy inside the system.
+    A substantial portion of the cumulative gross revenue of `$1,094,143.89` is occupied by this fictitious wash trade. Since the double-entry principle of matching debits and credits (conservation law) is perfectly maintained, traditional static audits fail to discover any anomalies. However, the maximum eigenvalue of the adjacency connection matrix (**maximum spectral radius $\rho = 0.7488$**) detected by the Physics-Mathematics-mathematical engine mathematically convicts the formation of a robust closed circuit (round-trip journaling of fictitious sales) that recirculates energy inside the system.
 
     This hollow round-trip transaction causes rapid time-series fluctuations in node balances, abnormally heating up the system temperature (volatility $T$). This temperature rise, combined with entropy ($S$), expands the "heat loss/frictional heat ($TS$)" and continuously drains the system's actual stamina—"Free Energy ($F$)." If left untreated, this is diagnosed as a fatal pathology that will lead to thermodynamic system death (insolvency/cash crunch).
 
@@ -18,11 +18,11 @@
 It is impossible to detect this pathology through traditional financial audits or single-point snapshot monitoring (B/S and P/L only). Below are the balance sheet (B/S) and income statement (P/L) charts at the final simulation step:
 
 * **B/S Assets/Capital Trends:**
-    ![B/S Trend](../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__BS_Trend.png)
-    ![B/S Block Total](../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__BS_Block_Total.png)
+    ![B/S Trend](../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__BS_Trend.png)
+    ![B/S Block Total](../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__BS_Block_Total.png)
 * **P/L Revenue/Expenses Trends:**
-    ![P/L Trend](../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Trend.png)
-    ![P/L Waterfall Total](../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Waterfall_Total.png)
+    ![P/L Trend](../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Trend.png)
+    ![P/L Waterfall Total](../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Waterfall_Total.png)
 
 **【Blind Spots of Traditional Audits】**
 Because the circular transactions are recorded with perfect debit-credit balance, the final-period B/S is beautifully balanced with a difference of `$0.00`. Furthermore, on the P/L, revenue appears to grow rapidly, making it seem as though a very healthy "operating profit" of **`$201,321.16`** (cumulative revenue of `$1,094,143.89` against expenses of `$892,822.73`) has been achieved.
@@ -33,7 +33,7 @@ However, this expansion of operating activity and profit creation is merely an i
 
 ## 3. Fundamental Pathophysiology
 
-The Physics-Mathematics Engine captures the following pathological causal loops (the mechanism of the wash trade script) embedded in the target data:
+The Physics-Mathematics-Mathematics Engine captures the following pathological causal loops (the mechanism of the wash trade script) embedded in the target data:
 
 ### 3-Step Wash Trade Sequence
 
@@ -66,7 +66,7 @@ Thus, both sides of the financial statements **match (balance) perfectly**.
 
 ### Specific Traces in Raw Data (Source Verification)
 
-Extracting [Dummy_Journal_Stream.csv](../../../samples/Sample_1_Wash_Trade/input_stream/Dummy_Journal_Stream.csv) directly confirms that the above three entries are executed at the exact same timesteps with identical amounts (noise-free exact matching):
+Extracting [Dummy_Journal_Stream.csv](../../samples/Sample_1_Wash_Trade/input_stream/Dummy_Journal_Stream.csv) directly confirms that the above three entries are executed at the exact same timesteps with identical amounts (noise-free exact matching):
 
 * **2020-01-03 (t=0): Amount `$40,433.60`**
   * `E_000020` (Wash_Funding): `Cash` $\rightarrow$ `Accounts_Receivable`
@@ -81,7 +81,7 @@ This fast self-recirculation (catch-balling) between **Cash ⇄ Accounts Receiva
 
 ---
 
-## 4. Quantitative Clinical Data from the Physics-Mathematics Engine (Mathematical Proof)
+## 4. Quantitative Clinical Data from the Physics-Mathematics-Mathematics Engine (Mathematical Proof)
 
 ### 4.1. Debit-Credit Symmetry & Mass Conservation
 
@@ -90,7 +90,7 @@ The **`System Conservation Residual`** (relative leak ratio) remains at **`0.00`
 This shows that the journaling rules (double-entry constraint) are not physically violated. That is, unilateral cash leaks (major hemorrhage/embezzlement) did not occur in this sample, which indirectly proves that a perfect recirculation loop is closed while keeping the ledger balanced.
 
 * **Macro Forensics Dashboard:**
-    ![Macro Forensics](../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_1__macro_forensics_dashboard.png)
+    ![Macro Forensics](../../samples/Sample_1_Wash_Trade/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 ### 4.2. Connection Stiffness & Hyper-synchronization of Eigen-topology
 
@@ -98,46 +98,46 @@ The time-series sequence of the Stiffness Matrix clearly visualizes the dramatic
 
 * **Stiffness Matrix 5-Point Cinematic Sequence:**
   * **① Start (t=0 / 2020-01):**
-        ![Stiffness t0](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+        ![Stiffness t0](../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00000.png)
         At the start of the simulation, an unnatural high stiffness (rigidity of connection) has already formed between `ACC_Cash` and `ACC_Accounts_Receivable`, reducing the degrees of freedom of the liquidity network.
   * **② Just Before Change (t=3 / 2020-04):**
-        ![Stiffness t3](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00003.png)
+        ![Stiffness t3](../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00003.png)
         A point where anomalous activities have temporarily calmed down. The stiffness balance of each node is averaged, and rigidity is temporarily relieved.
   * **③ The Exact Point of Change (t=4 / 2020-05):**
-        ![Stiffness t4](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00004.png)
+        ![Stiffness t4](../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00004.png)
         The moment the second major wash trade is executed. The connection cell between `ACC_Cash` ⇄ `ACC_Accounts_Receivable` is rendered in deep crimson, showing that a powerful "Stiffness Lock" has recurred.
   * **④ Immediately After Change (t=5 / 2020-06):**
-        ![Stiffness t5](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00005.png)
+        ![Stiffness t5](../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00005.png)
         Immediately after the anomalous transactions end. With the recirculation activity stopped, the stiffness bias gradually begins to resolve.
   * **⑤ End (t=11 / 2020-12):**
-        ![Stiffness t11](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00011.png)
+        ![Stiffness t11](../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00011.png)
         Final observation point. With no re-injection of anomalies, the stiffness lock has resolved, returning to a relatively gentle connection state.
 
 In the PCA analysis, the energy contribution ratio of the first principal component (PC1) during the anomalous phase reaches **`95.28%`** (t=4 / 2020-05). The PC1 loadings are abnormally concentrated on `01_ACC_Accounts_Receivable` (`-0.7162`), `07_ACC_Sales_Revenue` (`0.5183`), and `03_ACC_Cash` (`0.3524`). This mathematically proves that a large portion of the company's economic activity was hijacked by the hyper-synchronized round-trip flow of this specific pair of accounts.
 
 * **PCA Principal Axes Ratio:**
-    ![PCA Ratio](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_2__principal_axes_ratio.png)
+    ![PCA Ratio](../../samples/Sample_1_Wash_Trade/readme_plots/000_2_2__principal_axes_ratio.png)
 
 The system's maximum spectral radius calculated from the connection matrix jumped to **`0.7488`** at the start of anomaly injection in 2020-01 (`t_idx=0`), and marked dangerous highs of **`0.6615`** in 2020-02 (`t_idx=1`) and **`0.5501`** in 2020-05 (`t_idx=4`). This proves that the system was topologically constrained by a strong "autonomous energy recirculation loop."
 
 * **System Stability Index (Spectral Radius):**
-    ![System Stability](../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_2__system_stability.png)
+    ![System Stability](../../samples/Sample_1_Wash_Trade/readme_plots/004_1_2__system_stability.png)
 
 * **Network Topology 5-Point Sequence:**
   * **① Start (t=0 / 2020-01):**
-        ![Topology t0](../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00000.png)
+        ![Topology t0](../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00000.png)
         A thick bidirectional edge (round-trip path) is formed between `ACC_Cash` (Cash) and `ACC_Accounts_Receivable` (A/R).
   * **② Just Before Change (t=3 / 2020-04):**
-        ![Topology t3](../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00003.png)
+        ![Topology t3](../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00003.png)
         The recirculation loop disappears, and paths dispersing to normal operating processes (purchases, expense payments, etc.) temporarily dominate.
   * **③ The Exact Point of Change (t=4 / 2020-05):**
-        ![Topology t4](../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00004.png)
+        ![Topology t4](../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00004.png)
         A very thick recirculation channel that throws cash back and forth between Cash and A/R is reconnected.
   * **④ Immediately After Change (t=5 / 2020-06):**
-        ![Topology t5](../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00005.png)
+        ![Topology t5](../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00005.png)
         The recirculation edge thins out, and paths to surrounding expense nodes manifest again.
   * **⑤ End (t=11 / 2020-12):**
-        ![Topology t11](../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00011.png)
+        ![Topology t11](../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00011.png)
         Final state. The wash trade has settled down, and the topology has returned to a natural connection state.
 
 ### 4.3. Perpetual Recirculation Thermodynamic Cycle
@@ -145,9 +145,9 @@ The system's maximum spectral radius calculated from the connection matrix jumpe
 Thermodynamic indicators clearly expose the energy waste (friction) brought by wash trading.
 
 * **Thermodynamics Energy Stack:**
-    ![Thermodynamics Energy Stack](../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+    ![Thermodynamics Energy Stack](../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 * **T-S Diagram:**
-    ![T-S Diagram](../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+    ![T-S Diagram](../../samples/Sample_1_Wash_Trade/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 1. **Energy Stack Behavior (Increased Frictional Heat):**
     In months when wash trading intensifies (2020-01, 2020-02, 2020-05), the maroon area ($-TS$) representing entropy loss (frictional heat) expands rapidly downward, strongly compressing the free energy $F$ (white boundary line) which represents the system's true capacity to interact with the outside.
@@ -158,26 +158,26 @@ Thermodynamic indicators clearly expose the energy waste (friction) brought by w
     * **Result:** Although the apparent gross activity (internal energy $U$) increases, it is consumed by the high-temperature friction ($TS$), meaning the true potential of corporate activity (free energy $F = U - TS$) is severely compressed. This shows that paper profits (expansion of $U$) do not lead to any increase in actual liquidity capacity ($F$).
 2. **T-S Trajectory (Mathematical Proof of a Carnot-like Closed Cycle):**
     The Temperature-Entropy (T-S) diagram draws an abnormal, counterclockwise closed oval cycle. While a healthy business entity (Sample 0) draws an "open path" that monotonically disperses entropy to integrate with the outside, this sample forms a closed thermodynamic cycle.
-    In physics, the area enclosed by a loop on a T-S diagram represents the **"amount of heat (friction) wasted and released inside the system without doing any effective external work."** This is objective mathematical proof that the system is merely spinning liquidity internally, generating frictional heat (volatility-driven loss) without delivering any real economic value (such as product provision) to the outside.
+    In Physics-Mathematics, the area enclosed by a loop on a T-S diagram represents the **"amount of heat (friction) wasted and released inside the system without doing any effective external work."** This is objective mathematical proof that the system is merely spinning liquidity internally, generating frictional heat (volatility-driven loss) without delivering any real economic value (such as product provision) to the outside.
 
 ### 4.4. 3D Micro Information Geometry & Model Pollution (Boiled Frog Syndrome)
 
 The 3D spatiotemporal plots highlight the structural variations and statistical limits of the system when anomalies occur.
 
 * **① 3D Dynamics Position / Phase Space Trajectory:**
-    ![3D Dynamics Position](../../../samples/Sample_1_Wash_Trade/readme_plots/000_1_1__3d_dynamics_position.png)
-    ![3D Phase portrait](../../../samples/Sample_1_Wash_Trade/readme_plots/000_1_8__phase_portrait_3d.png)
+    ![3D Dynamics Position](../../samples/Sample_1_Wash_Trade/readme_plots/000_1_1__3d_dynamics_position.png)
+    ![3D Phase portrait](../../samples/Sample_1_Wash_Trade/readme_plots/000_1_8__phase_portrait_3d.png)
     The trajectory does not converge to a stable attractor but collapses onto an abnormal flat plane, showing a severe loss of degrees of freedom (fixation on a specific round-trip motion).
 * **② 3D Local Thermodynamics Plots:**
-    ![3D Local Entropy](../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2_1__3d_local_entropy.png)
-    ![3D Local Temperature](../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2_2__3d_local_temperature.png)
+    ![3D Local Entropy](../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2_1__3d_local_entropy.png)
+    ![3D Local Temperature](../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2_2__3d_local_temperature.png)
   * **Local Entropy ($s_i$):** Indicates spatial path dispersion. During months with circular transactions (Jan, Feb, May), `ACC_Cash` forms an abnormal detour to A/R (Wash Funding), changing its outflow probability distribution and triggering a clear bump in local entropy. Meanwhile, nodes like `ACC_Sales_Revenue`, whose outflows are fixed to A/R, remain flat at `0.00` regardless of the transaction volume.
   * **Local Temperature ($T_i$):** Indicates temporal balance volatility (standard deviation). Synchronized with the massive fictitious round-trips, the local temperatures of `ACC_Cash`, `ACC_Accounts_Receivable`, and `ACC_Sales_Revenue` spike simultaneously like heated mountains, showing that temporal volatility is propagated and localized within this specific triangular loop.
 * **③ 3D Micro Information Geometry Plot:**
-    ![3D Micro KL Drift](../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+    ![3D Micro KL Drift](../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
     At the first moment of recirculation in 2020-01 to 02, a giant "needle-like tower" (sharp rise in KL Drift) rises from the coordinates of the `ACC_Cash` node, mathematically identifying the origin and start of the infraction.
 * **3D Micro Z-Score (Position):**
-    ![3D Micro Z-Score](../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+    ![3D Micro Z-Score](../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
 **【Proof of Boiled Frog Syndrome (Model Pollution)】**
 In the information geometry plot (3D Micro KL Drift), a massive KL Drift spike stands tall during the "first recirculation" in 2020-01 to 02, but in the "third recirculation" in 2020-05, the detected spike is significantly smaller despite similar circular transaction volumes.
@@ -191,7 +191,7 @@ This shows that the statistical AI model has gradually learned and integrated th
 * **Treatment Plan:** **Topological Loop Destruction & Pinpoint Intervention**
 * **LQR Sensitivity Intervention (Acupoint Identification):**
     In the flow control sensitivity analysis (Sensitivity Matrix) calculated by LQR, the node with the maximum control sensitivity (flow improvement sensitivity) is identified as the `ACC_Accounts_Receivable` (Accounts Receivable) node.
-    ![LQR Control](../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_3__control_lqr_performance_space.png)
+    ![LQR Control](../../samples/Sample_1_Wash_Trade/readme_plots/004_1_3__control_lqr_performance_space.png)
 * **Practical Treatment Plan:**
     1. **Topological Disruption of the Recirculation Path (Phase Disruption):**
        To detect and block high-speed round-trips between `ACC_Cash` ⇄ `ACC_Accounts_Receivable`, introduce an "interlock on same-name, short-term round-trip transactions (mandatory delay of 1 minute or more, or forced matching of transaction IDs)" in the settlement system.

@@ -1,8 +1,8 @@
-# 🔬 TLU 物理・数理エンジン：検証サンプル統合比較・メタ検査総合カタログ (Universal Forensic Cross-Verification Registry)
+# 🔬 TLU 物理数学エンジン：検証サンプル統合比較・メタ検査総合カタログ (Universal Forensic Cross-Verification Registry)
 
 > [!IMPORTANT]
 > **【経営の主治医（SME Physician）による臨床宣言】**
-> Tensor-Link Utility (TLU) は、複式簿記、都市交通、金融市場、脳神経機能（fMRI）という一見すると全く異なるドメインのネットワークデータを、熱力学（Thermodynamics）、トポロジー（Topology）、運動学（Kinematics）の物理法則に基づいて統一的に検査する**「普遍的物理数学エンジン (Universal Physics-Mathematics Engine)」**です。
+> Tensor-Link Utility (TLU) は、複式簿記、都市交通、金融市場、脳神経機能（fMRI）という一見すると全く異なるドメインのネットワークデータを、熱力学（Thermodynamics）、トポロジー（Topology）、運動学（Kinematics）の物理法則に基づいて統一的に検査する**「普遍的物理数学エンジン (Universal Physics-Mathematics-Mathematics Engine)」**です。
 >
 > 本書は、システム内に潜む病的異常がどのようにエネルギーを浪費し、構造的硬直（血栓・渋滞）を招き、あるいは質量保存を破綻（横領・出血）させてシステムを「熱的死」へと至らしめるかを、東洋医学（漢方・気血水・経絡理論）の臨床メタファーを交えて体系的に解き明かした、10の検証サンプルの比較検証ドキュメント兼総合インデックスです。
 
@@ -47,7 +47,7 @@
 
 ## ⚖️ 統合比較検証マトリクス (Cross-Verification Matrix)
 
-物理数学エンジンおよびフォレンジック・フィルターから得られた、各サンプルの主要な数学的・物理的指標の極値一覧です。
+物理数学エンジンおよびフォレンジック・フィルターから得られた、各サンプルの主要な物理数学的指標の極値一覧です。
 
 | ID | サンプル名称 (Report Link) | 対象ドメイン | 判定 | 最大スペクトル半径 ($\rho$) | 最大保存残差 (Max Residual) | 最大流動性 Z-Score ($Z_v$) | 最大状態 Z-Score ($Z_X$) | 期末純損益 (Net Income) | 東洋医学メタファー |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- | :--- |

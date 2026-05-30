@@ -1,0 +1,4562 @@
+[
+  {
+    "week": "2024-01-01 10:00:00",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 4.547473508864641e-13,
+    "total_liab_eq": 4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": -4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        63.7199999999998
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        -48.09999999999991
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        -66.07999999999993
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        9.980000000000018
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        40.47999999999956
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2182.0,
+        2118.28,
+        63.7199999999998
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2119.83,
+        2167.93,
+        -48.09999999999991
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2136.65,
+        2202.73,
+        -66.07999999999993
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2128.6,
+        2118.62,
+        9.980000000000018
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2183.72,
+        2143.2400000000002,
+        40.47999999999956
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:00:10",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 1.3642420526593924e-12,
+    "total_liab_eq": 1.3642420526593924e-12,
+    "revenue": 0.0,
+    "expense": -1.3642420526593924e-12,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        5.109999999999673
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        -20.650000000000546
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        21.31999999999971
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        -64.62999999999965
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        58.849999999999454
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2486.17,
+        2481.0600000000004,
+        5.109999999999673
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2469.62,
+        2490.2700000000004,
+        -20.650000000000546
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2527.75,
+        2506.4300000000003,
+        21.31999999999971
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2457.1000000000004,
+        2521.73,
+        -64.62999999999965
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2491.1899999999996,
+        2432.34,
+        58.849999999999454
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:00:20",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -4.547473508864641e-13,
+    "total_liab_eq": -4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": 4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        6.809999999999945
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        -10.149999999999636
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        20.76000000000022
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        6.049999999999727
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        -23.4699999999998
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2733.07,
+        2726.26,
+        6.809999999999945
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2719.17,
+        2729.3199999999997,
+        -10.149999999999636
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2732.41,
+        2711.6499999999996,
+        20.76000000000022
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2732.22,
+        2726.17,
+        6.049999999999727
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2716.84,
+        2740.31,
+        -23.4699999999998
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:00:30",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        38.600000000000364
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        -51.26000000000022
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        73.65999999999985
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        -37.440000000000055
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        -23.559999999999945
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2829.38,
+        2790.7799999999997,
+        38.600000000000364
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2778.46,
+        2829.7200000000003,
+        -51.26000000000022
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2823.96,
+        2750.3,
+        73.65999999999985
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2775.67,
+        2813.11,
+        -37.440000000000055
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2794.41,
+        2817.97,
+        -23.559999999999945
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:00:40",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -4.547473508864641e-13,
+    "total_liab_eq": -4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": 4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -18.110000000000127
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        4.6899999999996
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        47.96000000000049
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        -35.97999999999956
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1.4400000000000546
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2754.93,
+        2773.04,
+        -18.110000000000127
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2726.6099999999997,
+        2721.92,
+        4.6899999999996
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2785.8100000000004,
+        2737.85,
+        47.96000000000049
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2736.6800000000003,
+        2772.66,
+        -35.97999999999956
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2729.11,
+        2727.67,
+        1.4400000000000546
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:00:50",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 4.547473508864641e-13,
+    "total_liab_eq": 4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": -4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -47.76000000000022
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        16.3100000000004
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        -7.140000000000327
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        17.83999999999969
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        20.75
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2505.79,
+        2553.55,
+        -47.76000000000022
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2529.7200000000003,
+        2513.41,
+        16.3100000000004
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2525.5499999999997,
+        2532.69,
+        -7.140000000000327
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2548.3399999999997,
+        2530.5,
+        17.83999999999969
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2528.6499999999996,
+        2507.8999999999996,
+        20.75
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:01:00",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -57.940000000000055
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        -47.08999999999969
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        40.590000000000146
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        36.840000000000146
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        27.599999999999454
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2319.2599999999998,
+        2377.2,
+        -57.940000000000055
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2316.8100000000004,
+        2363.9,
+        -47.08999999999969
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2348.1800000000003,
+        2307.59,
+        40.590000000000146
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2380.78,
+        2343.94,
+        36.840000000000146
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2386.6499999999996,
+        2359.05,
+        27.599999999999454
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:01:10",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -21.09999999999991
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        -29.890000000000327
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        6.880000000000109
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        62.190000000000055
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        -18.079999999999927
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2204.49,
+        2225.5899999999997,
+        -21.09999999999991
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2163.7799999999997,
+        2193.67,
+        -29.890000000000327
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2202.36,
+        2195.48,
+        6.880000000000109
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2229.02,
+        2166.83,
+        62.190000000000055
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2195.24,
+        2213.3199999999997,
+        -18.079999999999927
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:01:20",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -8.61999999999989
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        67.83999999999969
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        7.890000000000327
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        -12.349999999999909
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        -54.76000000000022
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2140.09,
+        2148.71,
+        -8.61999999999989
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2199.6,
+        2131.76,
+        67.83999999999969
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2152.92,
+        2145.0299999999997,
+        7.890000000000327
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2142.7200000000003,
+        2155.07,
+        -12.349999999999909
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2113.21,
+        2167.9700000000003,
+        -54.76000000000022
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:01:30",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2.400000000000091
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        0.7200000000002547
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        -3.0799999999999272
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        26.90000000000009
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        -26.94000000000051
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2192.05,
+        2189.65,
+        2.400000000000091
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2193.98,
+        2193.2599999999998,
+        0.7200000000002547
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2188.68,
+        2191.7599999999998,
+        -3.0799999999999272
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2212.68,
+        2185.7799999999997,
+        26.90000000000009
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2181.16,
+        2208.1000000000004,
+        -26.94000000000051
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:01:40",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -4.547473508864641e-13,
+    "total_liab_eq": -4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": 4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -36.9399999999996
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1.3899999999998727
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        57.94999999999982
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        -7.859999999999673
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        -14.539999999999964
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2260.9500000000003,
+        2297.89,
+        -36.9399999999996
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2294.4799999999996,
+        2293.0899999999997,
+        1.3899999999998727
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2322.0,
+        2264.05,
+        57.94999999999982
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2287.63,
+        2295.49,
+        -7.859999999999673
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2293.8900000000003,
+        2308.4300000000003,
+        -14.539999999999964
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:01:50",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -34.43000000000029
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        59.70000000000027
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        57.070000000000164
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        -3.5399999999999636
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        -78.80000000000018
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2367.46,
+        2401.8900000000003,
+        -34.43000000000029
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2420.3900000000003,
+        2360.69,
+        59.70000000000027
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2410.13,
+        2353.06,
+        57.070000000000164
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2354.09,
+        2357.63,
+        -3.5399999999999636
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2352.91,
+        2431.71,
+        -78.80000000000018
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:02:00",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -4.547473508864641e-13,
+    "total_liab_eq": -4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": 4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        64.91000000000031
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        -71.69999999999982
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        -16.789999999999964
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        10.649999999999636
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        12.930000000000291
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2445.1400000000003,
+        2380.23,
+        64.91000000000031
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2362.96,
+        2434.66,
+        -71.69999999999982
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2380.11,
+        2396.9,
+        -16.789999999999964
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2386.58,
+        2375.9300000000003,
+        10.649999999999636
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2413.92,
+        2400.99,
+        12.930000000000291
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:02:10",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -4.547473508864641e-13,
+    "total_liab_eq": -4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": 4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        18.86999999999989
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        -13.849999999999909
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        35.179999999999836
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        44.23000000000047
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        -84.42999999999984
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2249.38,
+        2230.51,
+        18.86999999999989
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2283.3900000000003,
+        2297.2400000000002,
+        -13.849999999999909
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2285.0,
+        2249.82,
+        35.179999999999836
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2283.28,
+        2239.0499999999997,
+        44.23000000000047
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2201.9900000000002,
+        2286.42,
+        -84.42999999999984
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:02:20",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -2.2737367544323206e-13,
+    "total_liab_eq": -2.2737367544323206e-13,
+    "revenue": 0.0,
+    "expense": 2.2737367544323206e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -99.6700000000003
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        27.060000000000173
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        -15.759999999999764
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        25.04000000000019
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        63.32999999999993
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        1970.1299999999999,
+        2069.8,
+        -99.6700000000003
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2035.49,
+        2008.4299999999998,
+        27.060000000000173
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2024.4,
+        2040.1599999999999,
+        -15.759999999999764
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1997.64,
+        1972.6,
+        25.04000000000019
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2055.04,
+        1991.71,
+        63.32999999999993
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:02:30",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        33.289999999999964
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        -3.559999999999718
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        6.610000000000127
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        -26.930000000000064
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        -9.41000000000031
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        1692.8200000000002,
+        1659.5300000000002,
+        33.289999999999964
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1662.5400000000002,
+        1666.1,
+        -3.559999999999718
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1712.1,
+        1705.4899999999998,
+        6.610000000000127
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1693.84,
+        1720.77,
+        -26.930000000000064
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1680.1399999999999,
+        1689.5500000000002,
+        -9.41000000000031
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:02:40",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 2.2737367544323206e-13,
+    "total_liab_eq": 2.2737367544323206e-13,
+    "revenue": 0.0,
+    "expense": -2.2737367544323206e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -40.65000000000009
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        17.59999999999991
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        -43.460000000000036
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        55.41000000000008
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        11.099999999999909
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        1335.52,
+        1376.17,
+        -40.65000000000009
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1385.62,
+        1368.02,
+        17.59999999999991
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1348.13,
+        1391.5900000000001,
+        -43.460000000000036
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1394.59,
+        1339.1799999999998,
+        55.41000000000008
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1365.69,
+        1354.5900000000001,
+        11.099999999999909
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:02:50",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -28.90000000000009
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        -30.860000000000127
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        32.710000000000264
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        -1.2899999999999636
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        28.339999999999918
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        1115.12,
+        1144.02,
+        -28.90000000000009
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1076.1299999999999,
+        1106.99,
+        -30.860000000000127
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1136.18,
+        1103.4699999999998,
+        32.710000000000264
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1106.33,
+        1107.62,
+        -1.2899999999999636
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1113.35,
+        1085.01,
+        28.339999999999918
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:03:00",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        67.64999999999998
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        10.090000000000146
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        -90.3900000000001
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        -19.67999999999995
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        32.32999999999993
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        1049.26,
+        981.61,
+        67.64999999999998
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1040.91,
+        1030.82,
+        10.090000000000146
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        950.28,
+        1040.67,
+        -90.3900000000001
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1020.62,
+        1040.3,
+        -19.67999999999995
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1028.01,
+        995.6800000000001,
+        32.32999999999993
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:03:10",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 2.2737367544323206e-13,
+    "total_liab_eq": 2.2737367544323206e-13,
+    "revenue": 0.0,
+    "expense": -2.2737367544323206e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        4.789999999999964
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        -4.5900000000001455
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        39.42000000000007
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        19.37999999999988
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        -59.0
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        1089.02,
+        1084.23,
+        4.789999999999964
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1093.73,
+        1098.3200000000002,
+        -4.5900000000001455
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1086.83,
+        1047.4099999999999,
+        39.42000000000007
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1094.22,
+        1074.8400000000001,
+        19.37999999999988
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1061.09,
+        1120.09,
+        -59.0
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:03:20",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 2.2737367544323206e-13,
+    "total_liab_eq": 2.2737367544323206e-13,
+    "revenue": 0.0,
+    "expense": -2.2737367544323206e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -22.730000000000018
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        16.3599999999999
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        39.3900000000001
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        -50.120000000000346
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        17.100000000000136
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        1334.27,
+        1357.0,
+        -22.730000000000018
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1344.05,
+        1327.69,
+        16.3599999999999
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1365.57,
+        1326.1799999999998,
+        39.3900000000001
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1307.4299999999998,
+        1357.5500000000002,
+        -50.120000000000346
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1340.5,
+        1323.3999999999999,
+        17.100000000000136
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:03:30",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 2.2737367544323206e-13,
+    "total_liab_eq": 2.2737367544323206e-13,
+    "revenue": 0.0,
+    "expense": -2.2737367544323206e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -29.539999999999964
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        9.3599999999999
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        19.810000000000173
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        -7.430000000000291
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        7.7999999999999545
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        1607.88,
+        1637.42,
+        -29.539999999999964
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1627.3899999999999,
+        1618.03,
+        9.3599999999999
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1615.04,
+        1595.2299999999998,
+        19.810000000000173
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1588.5299999999997,
+        1595.96,
+        -7.430000000000291
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1612.27,
+        1604.47,
+        7.7999999999999545
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:03:40",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 2.2737367544323206e-13,
+    "total_liab_eq": 2.2737367544323206e-13,
+    "revenue": 0.0,
+    "expense": -2.2737367544323206e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        40.82999999999993
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        -17.539999999999964
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        -60.299999999999955
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        54.6099999999999
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        -17.600000000000136
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        1981.82,
+        1940.99,
+        40.82999999999993
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1903.23,
+        1920.77,
+        -17.539999999999964
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1902.0900000000001,
+        1962.39,
+        -60.299999999999955
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1949.6399999999999,
+        1895.03,
+        54.6099999999999
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1922.08,
+        1939.68,
+        -17.600000000000136
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:03:50",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -4.547473508864641e-13,
+    "total_liab_eq": -4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": 4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        33.43000000000029
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        0.7900000000004184
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        20.609999999999673
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        -32.789999999999964
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        -22.039999999999964
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2152.87,
+        2119.4399999999996,
+        33.43000000000029
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2153.73,
+        2152.9399999999996,
+        0.7900000000004184
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2165.0299999999997,
+        2144.42,
+        20.609999999999673
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2108.49,
+        2141.2799999999997,
+        -32.789999999999964
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2151.35,
+        2173.39,
+        -22.039999999999964
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:04:00",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -76.25
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        -8.329999999999927
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        47.32999999999993
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        22.480000000000473
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        14.769999999999527
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2191.7,
+        2267.95,
+        -76.25
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2202.72,
+        2211.0499999999997,
+        -8.329999999999927
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2252.68,
+        2205.35,
+        47.32999999999993
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2253.79,
+        2231.3099999999995,
+        22.480000000000473
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2211.8199999999997,
+        2197.05,
+        14.769999999999527
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:04:10",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 4.547473508864641e-13,
+    "total_liab_eq": 4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": -4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        17.81999999999971
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        25.769999999999982
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        64.9699999999998
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        -24.609999999999673
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        -83.95000000000027
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2235.72,
+        2217.9,
+        17.81999999999971
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2247.0699999999997,
+        2221.2999999999997,
+        25.769999999999982
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2249.42,
+        2184.4500000000003,
+        64.9699999999998
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2220.4,
+        2245.0099999999998,
+        -24.609999999999673
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2142.08,
+        2226.03,
+        -83.95000000000027
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:04:20",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -9.094947017729282e-13,
+    "total_liab_eq": -9.094947017729282e-13,
+    "revenue": 0.0,
+    "expense": 9.094947017729282e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        1.330000000000382
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        -10.0
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        79.92000000000053
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1.7899999999999636
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        -73.03999999999996
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2143.5800000000004,
+        2142.25,
+        1.330000000000382
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2128.6800000000003,
+        2138.6800000000003,
+        -10.0
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2156.1000000000004,
+        2076.18,
+        79.92000000000053
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2105.13,
+        2103.34,
+        1.7899999999999636
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2060.03,
+        2133.07,
+        -73.03999999999996
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:04:30",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 1.1368683772161603e-12,
+    "total_liab_eq": 1.1368683772161603e-12,
+    "revenue": 0.0,
+    "expense": -1.1368683772161603e-12,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        63.94999999999936
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        -50.75999999999999
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        -80.87000000000035
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        53.01999999999998
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        14.659999999999854
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2067.3599999999997,
+        2003.4100000000003,
+        63.94999999999936
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2033.47,
+        2084.23,
+        -50.75999999999999
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2001.9899999999998,
+        2082.86,
+        -80.87000000000035
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2086.17,
+        2033.15,
+        53.01999999999998
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2043.29,
+        2028.63,
+        14.659999999999854
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:04:40",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -4.547473508864641e-13,
+    "total_liab_eq": -4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": 4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        54.76000000000022
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        7.559999999999945
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        -38.039999999999964
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        -25.31999999999971
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1.0399999999999636
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2040.38,
+        1985.62,
+        54.76000000000022
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2064.51,
+        2056.9500000000003,
+        7.559999999999945
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2017.9099999999999,
+        2055.95,
+        -38.039999999999964
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2036.0,
+        2061.3199999999997,
+        -25.31999999999971
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2066.6,
+        2065.56,
+        1.0399999999999636
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:04:50",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -43.179999999999836
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        14.730000000000473
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        9.1899999999996
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        23.360000000000127
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        -4.100000000000364
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        2163.36,
+        2206.54,
+        -43.179999999999836
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2167.19,
+        2152.4599999999996,
+        14.730000000000473
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2170.8599999999997,
+        2161.67,
+        9.1899999999996
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2157.73,
+        2134.37,
+        23.360000000000127
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2138.35,
+        2142.4500000000003,
+        -4.100000000000364
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:05:00",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 4.547473508864641e-13,
+    "total_liab_eq": 4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": -4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -2217.8299999999995
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        520.2899999999997
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        561.9599999999998
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        569.44
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        566.1399999999994
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        117.07,
+        2334.8999999999996,
+        -2217.8299999999995
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2336.87,
+        1816.5800000000002,
+        520.2899999999997
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2368.99,
+        1807.03,
+        561.9599999999998
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2352.83,
+        1783.3899999999999,
+        569.44
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2364.4799999999996,
+        1798.3400000000001,
+        566.1399999999994
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:05:10",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 2.2737367544323206e-13,
+    "total_liab_eq": 2.2737367544323206e-13,
+    "revenue": 0.0,
+    "expense": -2.2737367544323206e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -2502.12
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        629.6999999999996
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        645.02
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        594.56
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        632.8400000000001
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        132.66000000000003,
+        2634.7799999999997,
+        -2502.12
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2630.7599999999998,
+        2001.0600000000002,
+        629.6999999999996
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2637.9300000000003,
+        1992.9100000000003,
+        645.02
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2632.76,
+        2038.2000000000003,
+        594.56
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2604.38,
+        1971.54,
+        632.8400000000001
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:05:20",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 9.094947017729282e-13,
+    "total_liab_eq": 9.094947017729282e-13,
+    "revenue": 0.0,
+    "expense": -9.094947017729282e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -2659.0299999999997
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        684.3599999999997
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        661.3899999999994
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        704.46
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        608.8199999999997
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        138.03,
+        2797.06,
+        -2659.0299999999997
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2812.79,
+        2128.4300000000003,
+        684.3599999999997
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2819.3499999999995,
+        2157.96,
+        661.3899999999994
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2837.66,
+        2133.2,
+        704.46
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2760.16,
+        2151.34,
+        608.8199999999997
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:05:30",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -9.094947017729282e-13,
+    "total_liab_eq": -9.094947017729282e-13,
+    "revenue": 0.0,
+    "expense": 9.094947017729282e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -2793.2
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        686.0
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        693.0100000000002
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        679.75
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        734.4400000000005
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        143.99,
+        2937.1899999999996,
+        -2793.2
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2927.76,
+        2241.76,
+        686.0
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2889.92,
+        2196.91,
+        693.0100000000002
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2889.62,
+        2209.87,
+        679.75
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2923.9900000000002,
+        2189.5499999999997,
+        734.4400000000005
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:05:40",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 9.094947017729282e-13,
+    "total_liab_eq": 9.094947017729282e-13,
+    "revenue": 0.0,
+    "expense": -9.094947017729282e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -2701.46
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        646.1799999999998
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        653.0399999999995
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        755.9399999999996
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        646.3000000000002
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        142.73999999999998,
+        2844.2,
+        -2701.46
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2831.0499999999997,
+        2184.87,
+        646.1799999999998
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2812.72,
+        2159.6800000000003,
+        653.0399999999995
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2849.91,
+        2093.9700000000003,
+        755.9399999999996
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2796.33,
+        2150.0299999999997,
+        646.3000000000002
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:05:50",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -4.547473508864641e-13,
+    "total_liab_eq": -4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": 4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -2471.33
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        619.5300000000007
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        605.6399999999999
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        556.7399999999998
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        689.4200000000001
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        130.84,
+        2602.17,
+        -2471.33
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2581.6000000000004,
+        1962.0699999999997,
+        619.5300000000007
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2587.6,
+        1981.96,
+        605.6399999999999
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2575.14,
+        2018.4,
+        556.7399999999998
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2632.29,
+        1942.87,
+        689.4200000000001
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:06:00",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -2.2737367544323206e-13,
+    "total_liab_eq": -2.2737367544323206e-13,
+    "revenue": 0.0,
+    "expense": 2.2737367544323206e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -2150.6899999999996
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        486.39999999999964
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        492.0500000000002
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        568.5599999999997
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        603.6800000000003
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        112.16999999999999,
+        2262.8599999999997,
+        -2150.6899999999996
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2213.41,
+        1727.0100000000002,
+        486.39999999999964
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2196.7200000000003,
+        1704.67,
+        492.0500000000002
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2262.91,
+        1694.3500000000001,
+        568.5599999999997
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2297.57,
+        1693.8899999999999,
+        603.6800000000003
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:06:10",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -2.2737367544323206e-13,
+    "total_liab_eq": -2.2737367544323206e-13,
+    "revenue": 0.0,
+    "expense": 2.2737367544323206e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -1733.5900000000001
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        441.3400000000004
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        403.24
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        457.46000000000004
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        431.54999999999995
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        93.46000000000001,
+        1827.0500000000002,
+        -1733.5900000000001
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1877.7000000000003,
+        1436.36,
+        441.3400000000004
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1842.6100000000001,
+        1439.3700000000001,
+        403.24
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1854.38,
+        1396.92,
+        457.46000000000004
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1852.03,
+        1420.48,
+        431.54999999999995
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:06:20",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 2.2737367544323206e-13,
+    "total_liab_eq": 2.2737367544323206e-13,
+    "revenue": 0.0,
+    "expense": -2.2737367544323206e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -1478.79
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        361.98
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        399.9699999999998
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        405.72
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        311.1199999999999
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        77.30000000000001,
+        1556.09,
+        -1478.79
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1509.11,
+        1147.1299999999999,
+        361.98
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1524.4099999999999,
+        1124.44,
+        399.9699999999998
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1557.38,
+        1151.66,
+        405.72
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1488.6,
+        1177.48,
+        311.1199999999999
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:06:30",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -1286.77
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        320.8399999999999
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        316.6400000000001
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        318.5899999999999
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        330.70000000000005
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        68.03,
+        1354.8,
+        -1286.77
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1353.74,
+        1032.9,
+        320.8399999999999
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1365.6200000000001,
+        1048.98,
+        316.6400000000001
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1334.9099999999999,
+        1016.3199999999999,
+        318.5899999999999
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1365.31,
+        1034.61,
+        330.70000000000005
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:06:40",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -2.2737367544323206e-13,
+    "total_liab_eq": -2.2737367544323206e-13,
+    "revenue": 0.0,
+    "expense": 2.2737367544323206e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -1235.6599999999999
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        316.81000000000006
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        353.62
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        291.2199999999998
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        274.0100000000002
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        65.72999999999999,
+        1301.3899999999999,
+        -1235.6599999999999
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1319.4,
+        1002.59,
+        316.81000000000006
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1322.56,
+        968.9399999999999,
+        353.62
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1301.62,
+        1010.4000000000001,
+        291.2199999999998
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1301.63,
+        1027.62,
+        274.0100000000002
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:06:50",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 4.547473508864641e-13,
+    "total_liab_eq": 4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": -4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -1365.6200000000003
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        335.8299999999999
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        395.15999999999985
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        340.28
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        294.35000000000014
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        71.61999999999999,
+        1437.2400000000002,
+        -1365.6200000000003
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1388.18,
+        1052.3500000000001,
+        335.8299999999999
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1450.27,
+        1055.1100000000001,
+        395.15999999999985
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1376.76,
+        1036.48,
+        340.28
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1380.46,
+        1086.11,
+        294.35000000000014
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:07:00",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -1482.18
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        401.89999999999986
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        391.48
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        350.49
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        338.3100000000002
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        79.28,
+        1561.46,
+        -1482.18
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1556.51,
+        1154.6100000000001,
+        401.89999999999986
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1566.76,
+        1175.28,
+        391.48
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1528.4,
+        1177.91,
+        350.49
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1540.2,
+        1201.8899999999999,
+        338.3100000000002
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:07:10",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -1660.0800000000002
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        436.24
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        404.67999999999984
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        423.44000000000005
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        395.72000000000025
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        86.09,
+        1746.17,
+        -1660.0800000000002
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1752.93,
+        1316.69,
+        436.24
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1709.4099999999999,
+        1304.73,
+        404.67999999999984
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1752.02,
+        1328.58,
+        423.44000000000005
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1699.64,
+        1303.9199999999998,
+        395.72000000000025
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:07:20",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -4.547473508864641e-13,
+    "total_liab_eq": -4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": 4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -1698.26
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        413.72
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        439.5300000000002
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        401.23
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        443.7800000000002
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        92.8,
+        1791.06,
+        -1698.26
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1803.77,
+        1390.05,
+        413.72
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1801.2900000000002,
+        1361.76,
+        439.5300000000002
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1805.02,
+        1403.79,
+        401.23
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1791.8000000000002,
+        1348.02,
+        443.7800000000002
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:07:30",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -2.2737367544323206e-13,
+    "total_liab_eq": -2.2737367544323206e-13,
+    "revenue": 0.0,
+    "expense": 2.2737367544323206e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -1693.28
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        378.21000000000004
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        458.97
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        398.23
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        457.8700000000001
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        90.19,
+        1783.47,
+        -1693.28
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1773.44,
+        1395.23,
+        378.21000000000004
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1795.94,
+        1336.97,
+        458.97
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1779.36,
+        1381.1299999999999,
+        398.23
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1788.0700000000002,
+        1330.2,
+        457.8700000000001
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:07:40",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -2.2737367544323206e-13,
+    "total_liab_eq": -2.2737367544323206e-13,
+    "revenue": 0.0,
+    "expense": 2.2737367544323206e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -1536.0
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        426.46000000000026
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        361.35000000000014
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        373.98
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        374.2099999999998
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        82.64,
+        1618.64,
+        -1536.0
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1681.64,
+        1255.1799999999998,
+        426.46000000000026
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1636.14,
+        1274.79,
+        361.35000000000014
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1637.91,
+        1263.93,
+        373.98
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1648.82,
+        1274.6100000000001,
+        374.2099999999998
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:07:50",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 4.547473508864641e-13,
+    "total_liab_eq": 4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": -4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -1442.88
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        383.94000000000005
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        278.76999999999975
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        412.5599999999997
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        367.6100000000001
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        76.86000000000001,
+        1519.74,
+        -1442.88
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1557.6,
+        1173.6599999999999,
+        383.94000000000005
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1462.56,
+        1183.7900000000002,
+        278.76999999999975
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1569.8999999999999,
+        1157.3400000000001,
+        412.5599999999997
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1538.42,
+        1170.81,
+        367.6100000000001
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:08:00",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -4.547473508864641e-13,
+    "total_liab_eq": -4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": 4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -1405.2899999999997
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        283.23
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        352.7800000000002
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        447.39999999999986
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        321.8800000000001
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        69.64,
+        1474.9299999999998,
+        -1405.2899999999997
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1407.58,
+        1124.35,
+        283.23
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1484.8600000000001,
+        1132.08,
+        352.7800000000002
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1504.1299999999999,
+        1056.73,
+        447.39999999999986
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1446.5,
+        1124.62,
+        321.8800000000001
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:08:10",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -2.2737367544323206e-13,
+    "total_liab_eq": -2.2737367544323206e-13,
+    "revenue": 0.0,
+    "expense": 2.2737367544323206e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -1417.12
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        414.52
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        320.99
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        347.79999999999995
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        333.8100000000002
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        74.52000000000001,
+        1491.6399999999999,
+        -1417.12
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1513.3799999999999,
+        1098.86,
+        414.52
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1478.79,
+        1157.8,
+        320.99
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1489.8999999999999,
+        1142.1,
+        347.79999999999995
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1456.8600000000001,
+        1123.05,
+        333.8100000000002
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:08:20",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 9.094947017729282e-13,
+    "total_liab_eq": 9.094947017729282e-13,
+    "revenue": 0.0,
+    "expense": -9.094947017729282e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -1585.4
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        383.22999999999956
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        376.30999999999995
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        429.6600000000001
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        396.1999999999996
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        80.36,
+        1665.76,
+        -1585.4
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1661.7199999999998,
+        1278.4900000000002,
+        383.22999999999956
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1692.15,
+        1315.8400000000001,
+        376.30999999999995
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1684.97,
+        1255.31,
+        429.6600000000001
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1658.7299999999998,
+        1262.5300000000002,
+        396.1999999999996
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:08:30",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -1897.2999999999997
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        453.1999999999998
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        464.53999999999974
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        474.74
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        504.82000000000016
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        98.16,
+        1995.4599999999998,
+        -1897.2999999999997
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        1962.2899999999997,
+        1509.09,
+        453.1999999999998
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        1945.9199999999998,
+        1481.38,
+        464.53999999999974
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        1968.04,
+        1493.3,
+        474.74
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        1989.2,
+        1484.3799999999999,
+        504.82000000000016
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:08:40",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -2.2737367544323206e-13,
+    "total_liab_eq": -2.2737367544323206e-13,
+    "revenue": 0.0,
+    "expense": 2.2737367544323206e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -2144.49
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        562.5899999999999
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        540.0000000000005
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        514.8299999999999
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        527.0699999999997
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        115.97,
+        2260.4599999999996,
+        -2144.49
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2310.37,
+        1747.78,
+        562.5899999999999
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2305.8100000000004,
+        1765.81,
+        540.0000000000005
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2325.2799999999997,
+        1810.4499999999998,
+        514.8299999999999
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2301.5,
+        1774.4300000000003,
+        527.0699999999997
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:08:50",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 6.821210263296962e-13,
+    "total_liab_eq": 6.821210263296962e-13,
+    "revenue": 0.0,
+    "expense": -6.821210263296962e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -2462.6899999999996
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        654.99
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        530.8999999999996
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        619.6099999999997
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        657.1899999999996
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        132.58999999999997,
+        2595.2799999999997,
+        -2462.6899999999996
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2670.19,
+        2015.2,
+        654.99
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2599.6099999999997,
+        2068.71,
+        530.8999999999996
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2679.5099999999998,
+        2059.9,
+        619.6099999999997
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2663.0699999999997,
+        2005.88,
+        657.1899999999996
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:09:00",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -4.547473508864641e-13,
+    "total_liab_eq": -4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": 4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -2718.47
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        700.19
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        680.3700000000003
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        629.94
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        707.9699999999998
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        144.07,
+        2862.54,
+        -2718.47
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2911.96,
+        2211.77,
+        700.19
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2857.57,
+        2177.2,
+        680.3700000000003
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2850.7799999999997,
+        2220.8399999999997,
+        629.94
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2897.23,
+        2189.26,
+        707.9699999999998
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:09:10",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -2775.06
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        728.98
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        632.4200000000005
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        744.6099999999997
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        669.0499999999997
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        148.65,
+        2923.71,
+        -2775.06
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2985.33,
+        2256.35,
+        728.98
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2919.2900000000004,
+        2286.87,
+        632.4200000000005
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2968.22,
+        2223.61,
+        744.6099999999997
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2945.1299999999997,
+        2276.08,
+        669.0499999999997
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:09:20",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -4.547473508864641e-13,
+    "total_liab_eq": -4.547473508864641e-13,
+    "revenue": 0.0,
+    "expense": 4.547473508864641e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -2704.3500000000004
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        643.5100000000002
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        734.4000000000001
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        687.0900000000001
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        639.3500000000004
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        140.75,
+        2845.1000000000004,
+        -2704.3500000000004
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2806.1000000000004,
+        2162.59,
+        643.5100000000002
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2884.96,
+        2150.56,
+        734.4000000000001
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2842.13,
+        2155.04,
+        687.0900000000001
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2823.35,
+        2183.9999999999995,
+        639.3500000000004
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:09:30",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 6.821210263296962e-13,
+    "total_liab_eq": 6.821210263296962e-13,
+    "revenue": 0.0,
+    "expense": -6.821210263296962e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -2480.5
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        642.77
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        570.4399999999998
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        660.8999999999999
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        606.3899999999996
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        131.3,
+        2611.8,
+        -2480.5
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2644.7200000000003,
+        2001.9500000000003,
+        642.77
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2617.2599999999998,
+        2046.82,
+        570.4399999999998
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2641.99,
+        1981.09,
+        660.8999999999999
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2633.1699999999996,
+        2026.78,
+        606.3899999999996
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:09:40",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": -6.821210263296962e-13,
+    "total_liab_eq": -6.821210263296962e-13,
+    "revenue": 0.0,
+    "expense": 6.821210263296962e-13,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -2216.41
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        520.1100000000001
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        552.19
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        569.8000000000002
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        574.3100000000002
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        117.66,
+        2334.0699999999997,
+        -2216.41
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2363.86,
+        1843.75,
+        520.1100000000001
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2348.0,
+        1795.81,
+        552.19
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2369.8,
+        1800.0,
+        569.8000000000002
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2356.57,
+        1782.26,
+        574.3100000000002
+      ]
+    ]
+  },
+  {
+    "week": "2024-01-01 10:09:50",
+    "assets": 0.0,
+    "liabilities": 0.0,
+    "equity": 0.0,
+    "net_income": 0.0,
+    "total_liab_eq": 0.0,
+    "revenue": 0.0,
+    "expense": 0.0,
+    "is_balanced": true,
+    "bs_items": [],
+    "pl_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        -1984.1699999999998
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        525.1100000000001
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        499.9500000000003
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        486.75999999999976
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        472.3499999999997
+      ]
+    ],
+    "tb_items": [
+      [
+        "Motor_Cortex",
+        "Expense",
+        105.14,
+        2089.31,
+        -1984.1699999999998
+      ],
+      [
+        "Parietal_Lobe",
+        "Expense",
+        2095.71,
+        1570.6,
+        525.1100000000001
+      ],
+      [
+        "Prefrontal_Cortex",
+        "Expense",
+        2099.01,
+        1599.06,
+        499.9500000000003
+      ],
+      [
+        "Temporal_Lobe",
+        "Expense",
+        2103.99,
+        1617.23,
+        486.75999999999976
+      ],
+      [
+        "Visual_Cortex",
+        "Expense",
+        2120.83,
+        1648.4800000000002,
+        472.3499999999997
+      ]
+    ]
+  }
+]

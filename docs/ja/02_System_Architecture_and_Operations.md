@@ -23,7 +23,7 @@ TLUの全体的なデータおよび検査処理の流れは、以下の多層�
 ```mermaid
 graph TD
     A[Raw Data Source: 仕訳ログ, 交通GPS, fMRI BOLD, 市場注文簿] -->|データ抽出| B[Data Projection Layer]
-    B -->|グラフ・行列化| C[Physics-Mathematics Engine Layer]
+    B -->|グラフ・行列化| C[Physics-Mathematics-Mathematics Engine Layer]
     C -->|6つの物理フィルター適用| D[Forensic Filter Layer]
     D -->|物理・数学指標の計算| E[Visualization Layer: 3Dプロット, 剛性行列, TS図]
     E -->|画像 & CSV 出力| F[LLM Meta-Diagnosis Layer]
@@ -33,7 +33,7 @@ graph TD
 ### パイプラインの各層の役割
 
 1. **データ投影層 (Data Projection Layer):** 異種ドメインのデータを汎用的な「ノード」と「エッジ（流量）」のグラフ構造に投影します。
-2. **物理数学エンジン層 (Physics-Mathematics Engine Layer):** クラシカル剛性、熱力学ポテンシャル、情報多様体、LQRフィードバック、波動コヒーレンスの6つの物理コアが計算を行います。
+2. **物理数学エンジン層 (Physics-Mathematics-Mathematics Engine Layer):** クラシカル剛性、熱力学ポテンシャル、情報多様体、LQRフィードバック、波動コヒーレンスの6つの物理コアが計算を行います。
 3. **可視化層 (Visualization Layer):** 生成された時空間データを、直感的な 3D 空間リボン、マトリクス、T-SグラフなどのPNG画像としてレンダリングします。
 4. **AIメタ検査層 (LLM Meta-Diagnosis Layer):** 統合されたLLMが最高メタレベルプロンプト（`LLM_Diagnostic_Manual.md`）に準拠し、物理数学エンジン出力からデータに裏打ちされた客観的カルテを日本語で自動生成します。
 

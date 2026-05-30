@@ -1,8 +1,8 @@
-# 01. Physics-Mathematics Engine Theory & Data Interpretation Guide
+# 01. Physics-Mathematics-Mathematics Engine Theory & Data Interpretation Guide
 
-Tensor-Link Utility (TLU) is equipped with 8 main analytical modules (physics-mathematical filters) that assign physical reality such as "mass," "force," "energy," and "viscosity" to abstract network data, and determine systemic anomalies based on structural deformation and energy balance.
+Tensor-Link Utility (TLU) is equipped with 8 main analytical modules (Physics-Mathematics-mathematical filters) that assign physical reality such as "mass," "force," "energy," and "viscosity" to abstract network data, and determine systemic anomalies based on structural deformation and energy balance.
 
-This document is a core manual of the TLU system that integrates the **mathematical and physical theoretical foundations (Physics Theory)** of each filter with the **forensic interpretation guide (Data Interpretation)** of the output visualization graphs. We explain the concepts by contrasting and citing actual charts from validation samples (healthy, traffic deadlock, embezzlement, market manipulation, etc.).
+This document is a core manual of the TLU system that integrates the **mathematical and physical theoretical foundations (Physics-Mathematics Theory)** of each filter with the **forensic interpretation guide (Data Interpretation)** of the output visualization graphs. We explain the concepts by contrasting and citing actual charts from validation samples (healthy, traffic deadlock, embezzlement, market manipulation, etc.).
 
 ---
 
@@ -21,7 +21,7 @@ This document is a core manual of the TLU system that integrates the **mathemati
 
 ## 0. Basic Statistics & Foundation (Prefix: `000_0`)
 
-### 🔬 Physics & Mathematical Theory
+### 🔬 Physics-Mathematics & Mathematical Theory
 
 Grabs the overall absolute activity level (revenue, assets, total vehicles, etc.) of the system as the "baseline physical capacity and size," and then applies traditional statistical analysis (Probability Density Function KDE, Rolling Quantiles, Skewness, Kurtosis) to temporal variations of the state variables.
 
@@ -50,7 +50,7 @@ Where $\mu_{window}$ and $\sigma_{window}$ are the rolling mean and standard dev
 
 ## 1. Structural Stiffness & PCA / Classical Mechanics (Prefix: `000_2`)
 
-### 🔬 Physics & Mathematical Theory
+### 🔬 Physics-Mathematics & Mathematical Theory
 
 Models the transaction relationships (edges) between nodes in the network as **"Elastic Springs"** based on Hooke's Law.
 Calculates the "Stiffness Matrix" $K$ of the system from the partial correlations and flow volatility between nodes:
@@ -99,7 +99,7 @@ In the user funding network (Sample 7), when colluding bot accounts (`USR_003` a
 
 ## 2. Kinematics & Dynamic State-Space (Prefix: `000_1`)
 
-### 🔬 Physics & Mathematical Theory
+### 🔬 Physics-Mathematics & Mathematical Theory
 
 Visualizes the dynamic process of the system as a state-space trajectory (Phase Portrait). Defines flow resistance or mass transfer delay between nodes as "Viscosity $C$," and defines the scale or inertial mass as "Inertia $J$" based on the equations of motion:
 
@@ -130,7 +130,7 @@ The system's behavior is projected onto a 3D state-space phase portrait (Phase P
 
 ## 3. Thermodynamics & Entropy (Prefix: `001_1`, `001_2`)
 
-### 🔬 Physics & Mathematical Theory
+### 🔬 Physics-Mathematics & Mathematical Theory
 
 Defines the total system activity as "Internal Energy $U$," the dispersion of transition probabilities between nodes (disorder) as "Entropy $S$," and the rate of change of the system over time (flow volatility) as "Temperature $T$." Using these variables, we define the **"Free Energy $F$"**—the remaining potential for the system to maintain its structure and carry out activities:
 
@@ -175,7 +175,7 @@ Consequently, dissipation loss ($TS$) increased, and free energy $F$ dropped fro
 
 ## 4. Information Geometry & Relative Conservation Laws (Prefix: `002_1`, `002_2`)
 
-### 🔬 Physics & Mathematical Theory
+### 🔬 Physics-Mathematics & Mathematical Theory
 
 In a closed network, Kirchhoff's First Law (Current Law = Mass Conservation Law) holds strictly.
 The difference between the total inflow and total outflow at any node is defined as the **"Conservation Residual"** or the **"Relative Leak Ratio"**:
@@ -222,7 +222,7 @@ In market manipulation (Sample 7), high-speed matched orders by a collusive grou
 
 ## 5. Inverse Kinematics & Target Reachability (Prefix: `003_1`)
 
-### 🔬 Physics & Mathematical Theory
+### 🔬 Physics-Mathematics & Mathematical Theory
 
 Maps business targets (KPIs) or network control targets as the **"End-Effector (hand position)"** of a multi-joint robot arm, and models the operating potential of each sector or transaction account as **"Arm Joint Angles (joints)."**
 
@@ -248,7 +248,7 @@ In urban traffic with injected bottlenecks (Sample 5), no matter how vehicles ar
 
 ## 6. System Stability & Feedback Control (Prefix: `004_1`, `004_2`)
 
-### 🔬 Physics & Mathematical Theory
+### 🔬 Physics-Mathematics & Mathematical Theory
 
 Describes network state transitions using discrete state equations:
 
@@ -285,7 +285,7 @@ $$u(t) = -K_{lqr} \cdot X(t)$$
 
 ## 7. Signal Processing & Wave Mechanics (Prefix: `005_1`, `005_2`)
 
-### 🔬 Physics & Mathematical Theory
+### 🔬 Physics-Mathematics & Mathematical Theory
 
 In a healthy system (natural commerce, daily traffic, resting brain neurons), countless independent decision-making nodes are involved, so the combined frequency spectrum exhibits **"1/f noise (Fractal Noise)."**
 

@@ -7,7 +7,7 @@
 * **Clinical Overview:**
     This system suffers from severe business dysfunction (revenue inflation via circular transactions) caused by a "high-speed catch-ball of accounts receivable and cash (recirculation loop)" that lacks substantial economic activity (value transfer).
 
-    A substantial portion of the cumulative gross revenue of `$1,094,143.89` is occupied by this fictitious wash trade. Since the double-entry principle of matching debits and credits (conservation law) is perfectly maintained, traditional static audits fail to discover any anomalies. However, the maximum eigenvalue of the adjacency connection matrix (**maximum spectral radius $\rho = 0.7488$**) detected by the physics-mathematical engine mathematically convicts the formation of a robust closed circuit (round-trip journaling of fictitious sales) that recirculates energy inside the system.
+    A substantial portion of the cumulative gross revenue of `$1,094,143.89` is occupied by this fictitious wash trade. Since the double-entry principle of matching debits and credits (conservation law) is perfectly maintained, traditional static audits fail to discover any anomalies. However, the maximum eigenvalue of the adjacency connection matrix (**maximum spectral radius $\rho = 0.7488$**) detected by the Physics-Mathematics-mathematical engine mathematically convicts the formation of a robust closed circuit (round-trip journaling of fictitious sales) that recirculates energy inside the system.
 
     This hollow round-trip transaction causes rapid time-series fluctuations in node balances, abnormally heating up the system temperature (volatility $T$). This temperature rise, combined with entropy ($S$), expands the "heat loss/frictional heat ($TS$)" and continuously drains the system's actual stamina—"Free Energy ($F$)." If left untreated, this is diagnosed as a fatal pathology that will lead to thermodynamic system death (insolvency/cash crunch).
 
@@ -33,7 +33,7 @@ However, this expansion of operating activity and profit creation is merely an i
 
 ## 3. Fundamental Pathophysiology
 
-The Physics-Mathematics Engine captures the following pathological causal loops (the mechanism of the wash trade script) embedded in the target data:
+The Physics-Mathematics-Mathematics Engine captures the following pathological causal loops (the mechanism of the wash trade script) embedded in the target data:
 
 ### 3-Step Wash Trade Sequence
 
@@ -81,7 +81,7 @@ This fast self-recirculation (catch-balling) between **Cash ⇄ Accounts Receiva
 
 ---
 
-## 4. Quantitative Clinical Data from the Physics-Mathematics Engine (Mathematical Proof)
+## 4. Quantitative Clinical Data from the Physics-Mathematics-Mathematics Engine (Mathematical Proof)
 
 ### 4.1. Debit-Credit Symmetry & Mass Conservation
 
@@ -158,7 +158,7 @@ Thermodynamic indicators clearly expose the energy waste (friction) brought by w
     * **Result:** Although the apparent gross activity (internal energy $U$) increases, it is consumed by the high-temperature friction ($TS$), meaning the true potential of corporate activity (free energy $F = U - TS$) is severely compressed. This shows that paper profits (expansion of $U$) do not lead to any increase in actual liquidity capacity ($F$).
 2. **T-S Trajectory (Mathematical Proof of a Carnot-like Closed Cycle):**
     The Temperature-Entropy (T-S) diagram draws an abnormal, counterclockwise closed oval cycle. While a healthy business entity (Sample 0) draws an "open path" that monotonically disperses entropy to integrate with the outside, this sample forms a closed thermodynamic cycle.
-    In physics, the area enclosed by a loop on a T-S diagram represents the **"amount of heat (friction) wasted and released inside the system without doing any effective external work."** This is objective mathematical proof that the system is merely spinning liquidity internally, generating frictional heat (volatility-driven loss) without delivering any real economic value (such as product provision) to the outside.
+    In Physics-Mathematics, the area enclosed by a loop on a T-S diagram represents the **"amount of heat (friction) wasted and released inside the system without doing any effective external work."** This is objective mathematical proof that the system is merely spinning liquidity internally, generating frictional heat (volatility-driven loss) without delivering any real economic value (such as product provision) to the outside.
 
 ### 4.4. 3D Micro Information Geometry & Model Pollution (Boiled Frog Syndrome)
 

@@ -11,7 +11,7 @@
 
     Furthermore, spatiotemporal mass conservation discrepancies (Kirchhoff residuals) were detected intermittently from 2020-06 (`t_idx=5`) to 2020-09 (`t_idx=8`), with a **maximum single-month leakage of `$4,773.57` in 2020-09 (`t_idx=8`)**. The cumulative mass deficit reached **`$6,255.99`**, siphoned into the `UNKNOWN_LEAK` dummy node representing mismatched entries.
 
-    Exploiting blind spots in traditional audits, the system presents a net income of **`$200,478.42`** and maintains a balanced B/S. However, the Physics-Mathematics Engine mathematically convicts this malicious scheme—"playing circular catch-ball at the front gate while siphoning cash out the back door"—using spatiotemporal residuals and structural stiffness decay.
+    Exploiting blind spots in traditional audits, the system presents a net income of **`$200,478.42`** and maintains a balanced B/S. However, the Physics-Mathematics-Mathematics Engine mathematically convicts this malicious scheme—"playing circular catch-ball at the front gate while siphoning cash out the back door"—using spatiotemporal residuals and structural stiffness decay.
 
 ---
 
@@ -29,7 +29,7 @@ It is impossible to capture this "composite catastrophe" through traditional sta
 **【Blind Spots of Static Audits (Simulated Health)】**
 The balance sheet (B/S) balances perfectly with total assets of **`$1,296,558.10`** and a difference of `$0.00`. The income statement (P/L) also displays a rich "net income" of **`$200,478.42`** on revenue of **`$1,107,242.30`**.
 
-However, this healthy-looking snapshot is a fake presentation created by intentional journal manipulation and fictitious recirculation. The `$6,255.99` cash leakage captured as a conservation residual by the Physics-Mathematics Engine was hidden inside normal expenses under the node name `UNKNOWN_LEAK` (as miscellaneous loss / other expenses). External audits or normal ledger checks cannot detect this reality.
+However, this healthy-looking snapshot is a fake presentation created by intentional journal manipulation and fictitious recirculation. The `$6,255.99` cash leakage captured as a conservation residual by the Physics-Mathematics-Mathematics Engine was hidden inside normal expenses under the node name `UNKNOWN_LEAK` (as miscellaneous loss / other expenses). External audits or normal ledger checks cannot detect this reality.
 
 ---
 
@@ -46,7 +46,7 @@ Through this "double erosion," the system drains its internal energy (real cash)
 
 ---
 
-## 4. Mathematical Evidence from the Physics-Mathematics Engine
+## 4. Mathematical Evidence from the Physics-Mathematics-Mathematics Engine
 
 ### 4.1. Violation of Mass Conservation & Tracking of Mass Deficit
 

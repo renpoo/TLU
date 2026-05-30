@@ -2,9 +2,9 @@
 
 Welcome to the Tensor-Link Utility (TLU) Technical Documentation Portal.
 
-Tensor-Link Utility (TLU) is a **"Universal Physics-Mathematics Engine"** that unified-diagnoses network data from seemingly completely different domains—double-entry bookkeeping, urban traffic, financial markets, and neural brain fMRI—based on the physical laws of **Thermodynamics**, **Topology**, and **Kinematics**.
+Tensor-Link Utility (TLU) is a **"Universal Physics-Mathematics-Mathematics Engine"** that unified-diagnoses network data from seemingly completely different domains—double-entry bookkeeping, urban traffic, financial markets, and neural brain fMRI—based on the physical laws of **Thermodynamics**, **Topology**, and **Kinematics**.
 
-This portal serves as a comprehensive guide to understanding how pathological anomalies hidden within systems (such as fraudulent accounting, embezzlement, gridlocks, market manipulation, and epilepsy) waste energy, cause structural rigidity, or violate mass conservation to drive systems toward thermodynamic "heat death." These insights are explained using both mathematical physics equations and clinical metaphors from Eastern medicine (Qi-Blood-Water, Meridians, and Acupoints).
+This portal serves as a comprehensive guide to understanding how pathological anomalies hidden within systems (such as fraudulent accounting, embezzlement, gridlocks, market manipulation, and epilepsy) waste energy, cause structural rigidity, or violate mass conservation to drive systems toward thermodynamic "heat death." These insights are explained using both mathematical Physics-Mathematics equations and clinical metaphors from Eastern medicine (Qi-Blood-Water, Meridians, and Acupoints).
 
 ---
 
@@ -12,7 +12,7 @@ This portal serves as a comprehensive guide to understanding how pathological an
 
 The TLU documentation has been reorganized and consolidated into 5 core files directly under `docs/`, featuring practical explanations interspersed with actual empirical graphs from our sample studies.
 
-### 1. [01. Physics-Mathematics Engine Theory & Interpretation Guide](01_Physics_Mathematics_Engine_Theory_and_Interpretation.md)
+### 1. [01. Physics-Mathematics-Mathematics Engine Theory & Interpretation Guide](01_Physics-Mathematics_Mathematics_Engine_Theory_and_Interpretation.md)
 
 * **Contents:** Mathematical and physical theories behind TLU's 8 core analytical modules (Stiffness, Thermodynamics, Information Geometry, Kinematics, Control Theory, Wave Mechanics, etc.), and a guide to interpreting their 3D plots.
 * **Highlights:** Side-by-side comparative analyses using actual empirical charts from healthy growth (Sample 0), traffic gridlocks (Sample 5), and collusion (Sample 7).
@@ -29,7 +29,7 @@ The TLU documentation has been reorganized and consolidated into 5 core files di
 
 ### 4. [LLM Diagnostic Manual (Supreme Meta-Level Prompt)](LLM_Diagnostic_Manual.md)
 
-* **Contents:** Supreme meta-level prompt for AIエージェント (LLMs) to automatically generate clinical audit reports (diagnoses) based on Physics-Mathematics Engine outputs.
+* **Contents:** Supreme meta-level prompt for AIエージェント (LLMs) to automatically generate clinical audit reports (diagnoses) based on Physics-Mathematics-Mathematics Engine outputs.
 * **Highlights:** Pyramidal structure (conclusion-first), model pollution triage (boiled frog syndrome), and mandatory fact-checking protocols.
 
 ### 5. [🔬 Verified Sample Registry & Cross-Verification Catalog](samples/README.md)

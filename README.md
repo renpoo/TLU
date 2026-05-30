@@ -5,7 +5,7 @@
 [![Docker Status](https://img.shields.io/badge/Docker-Compatible-emerald.svg)](https://www.docker.com/)
 [![Engine Status](https://img.shields.io/badge/System_Verification-Passing-brightgreen.svg)](#-verification-status)
 
-### Unified Spatiotemporal Physics & Thermodynamic Engine for Multi-Domain Network Forensics
+### Unified Spatiotemporal Physics-Mathematics & Thermodynamic Engine for Multi-Domain Network Forensics
 
 The ultimate conclusion of the **Tensor-Link Utility (TLU)** is the mathematical and physical proof that: **"No matter how perfectly transaction networks or ledgers are manipulated on the surface, it is absolutely impossible to deceive universal physical laws, such as the Law of Conservation of Mass and the Laws of Thermodynamics."**
 
@@ -21,7 +21,7 @@ To guarantee reproducibility and prevent AI hallucination or human bias, TLU mai
 
 | # | Document Title (English Version) | Japanese Reference Version (日本語版) | Core Contents & Highlights |
 | :---: | :--- | :--- | :--- |
-| **1** | **[📂 01. Physics-Mathematics Engine Theory & Interpretation Guide](docs/01_Physics_Mathematics_Engine_Theory_and_Interpretation.md)** | **[01. 物理・数理エンジン基礎理論と解釈ガイド](docs/ja/01_Physics_Mathematics_Engine_Theory_and_Interpretation.md)** | Mathematical foundations of TLU's 8 cores ($F = U - TS$, $K$, $\rho$) and how to visually read the generated 3D phase-space plots. |
+| **1** | **[📂 01. Physics-Mathematics-Mathematics Engine Theory & Interpretation Guide](docs/01_Physics-Mathematics_Mathematics_Engine_Theory_and_Interpretation.md)** | **[01. 物理数学エンジン基礎理論と解釈ガイド](docs/ja/01_Physics-Mathematics_Mathematics_Engine_Theory_and_Interpretation.md)** | Mathematical foundations of TLU's 8 cores ($F = U - TS$, $K$, $\rho$) and how to visually read the generated 3D phase-space plots. |
 | **2** | **[📂 02. System Architecture & Operations Guide](docs/02_System_Architecture_and_Operations.md)** | **[02. システム構造定義とパイプライン運用ガイド](docs/ja/02_System_Architecture_and_Operations.md)** | Pipeline container orchestration, HSL theme visualizers, anomaly dummy generators, and LQR control feedback simulation models. |
 | **3** | **[📂 03. Market Forensics & Compliance Rules](docs/03_Market_Forensics_Rules.md)** | **[03. 市場フォレンジック・監査ルール定義](docs/ja/03_Market_Forensics_Rules.md)** | Millisecond-level order book dynamics, wash trades, and bipartite graph projection vs. direct user-to-user collusion network analysis. |
 | **4** | **[📂 LLM Diagnostic Manual (Supreme prompt)](docs/LLM_Diagnostic_Manual.md)** | **[LLM臨床検査マニュアル (Supreme Prompt)](docs/ja/LLM_Diagnostic_Manual.md)** | The meta-level system instructions for AI agents to write clinical reports, handle statistical false alarms, and perform raw fact-checking. |
@@ -40,7 +40,7 @@ TLU models transaction networks not as static ledgers, but as **continuous elast
 
 Rather than treating network analysis as cold statistics, TLU operates like a physician diagnosing the flow of **"Qi and Blood (気血水)"** (liquidity and flux) through **"Meridians (経絡)"** (transaction paths). TLU identifies where circulation is blocked (Stiffness Rigidity / Thrombus) or hemorrhaging (Mass Deficit / Bleeding), and uses **Control Theory (LQR Sensitivity)** to pinpoint the exact **"Acupoints (経穴)"** to apply feedback pulses to restore systemic health.
 
-### Domain-to-Physics Mapping Matrix
+### Domain-to-Physics-Mathematics Mapping Matrix
 
 | Physical Variable | Classical Mechanics / Thermo | Financial Ledger Domain | Urban Traffic Domain | Stock Market Domain | Biological Neural (fMRI) |
 | :--- | :--- | :--- | :--- | :--- | :--- |

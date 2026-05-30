@@ -51,7 +51,7 @@ t_idx,time_label,node_idx,node_label,optimal_input_u,state_error_x
 4,2020-05,9,09_ACC_Equity_Capital,0.0,0.0
 5,2020-06,0,00_ACC_Accounts_Payable,0.0,31515.67
 5,2020-06,1,01_ACC_Accounts_Receivable,0.0,2563.53
-5,2020-06,2,02_ACC_COGS,0.0,30401.24
+5,2020-06,2,02_ACC_COGS,-0.0,30401.24
 5,2020-06,3,03_ACC_Cash,0.0,2430.64
 5,2020-06,4,04_ACC_Inventory,0.0,23231.19
 5,2020-06,5,05_ACC_Payroll_Exp,-5967.1397,18066.68
@@ -61,7 +61,7 @@ t_idx,time_label,node_idx,node_label,optimal_input_u,state_error_x
 5,2020-06,9,09_ACC_Equity_Capital,0.0,0.0
 6,2020-07,0,00_ACC_Accounts_Payable,0.0,16659.69
 6,2020-07,1,01_ACC_Accounts_Receivable,0.0,63676.11
-6,2020-07,2,02_ACC_COGS,-0.0,62957.71
+6,2020-07,2,02_ACC_COGS,0.0,62957.71
 6,2020-07,3,03_ACC_Cash,0.0,35400.0
 6,2020-07,4,04_ACC_Inventory,0.0,809.84
 6,2020-07,5,05_ACC_Payroll_Exp,-254.7837,20722.72

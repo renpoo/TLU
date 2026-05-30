@@ -17,7 +17,7 @@ col_amount,Amount
 # time_granularity defines the scale of the aggregation (e.g., day, week, month, year, ms).
 # Standard values for observation_window_steps based on granularity:
 # month -> 12, week -> 52, day -> 252.
-time_granularity,hour
+time_granularity,month
 
 observation_window_steps,3
 damping_factor,0.85
@@ -26,8 +26,8 @@ tikhonov_lambda,0.0001
 # ---------------------------------------------------------
 # [001] PHASE 1: Macro/Local Thermodynamics & Time-Lag
 # ---------------------------------------------------------
-thermo_work_labels,Higashiyama_Sanjo
-thermo_heat_labels,Gion,Kiyomizu_dera
+thermo_work_labels,ShijoKarasuma
+thermo_heat_labels,ShijoMuromachi,ShijoKurumayacho,SanjoKarasuma,GojoKarasuma
 
 # ---------------------------------------------------------
 # [002] PHASE 2: Information Curvature, Topology & Forensics
@@ -49,15 +49,15 @@ target_phase_frequency,0.25
 # ---------------------------------------------------------
 # [003/004] PHASE 3 & 4: Optimal Control Theory (LQR)
 # ---------------------------------------------------------
-lqr_controllable_labels,Kyoto_Station,Karasuma_Oike
-lqr_target_state,ACC_Sales_Revenue:10000
+lqr_controllable_labels,ShijoMuromachi,ShijoKurumayacho,SanjoKarasuma,GojoKarasuma
+lqr_target_state,ShijoKarasuma:10000
 lqr_q_weight,1.0
 lqr_r_weight,0.1
 kinematics_max_k,5
 
 fk_input_mode,actual
-fk_static_dq_labels,ACC_Sales_Revenue:10000
-ik_target_labels,ACC_Sales_Revenue:10000.0
+fk_static_dq_labels,ShijoKarasuma:10000
+ik_target_labels,ShijoKarasuma:10000.0
 sensitivity_delta,10.0
 
 # ---------------------------------------------------------

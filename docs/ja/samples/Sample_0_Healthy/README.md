@@ -1,117 +1,142 @@
-# 🔬 異常検知・財務健全性判定レポート (Sample 0)
+# 🔬 異常検知・財務健全性判定レポート (Sample 0 - 正常・健全システム)
 
 ## 1. 検査結論 (Executive Summary)
 
-* **総合判定:** **正常・健全 (Healthy / Normal)**
+* **総合判定:** 🟢 **正常・健全 (Healthy / Normal)**
 * **重症度:** 🟢 **NORMAL (異常なし)**
-* **概要:**
-    本システムは、資産残高の推移（B/S）および取引流量（P/L）のいずれにおいても、不整合のない健全な状態を維持しています。循環取引（架空還流）、資金流出（簿外取引）、記帳ミスの兆候は検出されませんでした。
-
-    時系列の推定過程において、4月、6月、7月、12月に流動性の Z-Score が一時的にしきい値 `3.0` を超え、**7月に最大 `4.90`** に達していますが、これは初期データの不足に伴う統計共分散の不安定性（コールドスタート問題）や、期末・決算期などの商取引の季節的集中に起因する**「統計的偽陽性 (False Positive)」**と判断されます。
-
-    物理保存則に基づく **「システム保存残差（キルヒホッフ残差）`System Conservation Residual`」は全期間を通じて `0.00`** を維持しており、簿外への資金流出が発生していないことが数学的に証明されています。
+* **概要:** 本システムは、資産残高（B/S）および取引流量（P/L）の双方において、不整合のない極めて健全な状態を維持しています。質量保存則（キルヒホッフ残差）は完全に `0.00` であり、不正流出や架空循環取引の兆候はありません。
 
 ---
 
-## 2. 伝統的会計分析の限界 (Limitations of Traditional Audits)
+## 2. 財務諸表と取引流量の比較
 
-売上高や自己資本の右肩上がりの推移のみを監視する従来の会計監査では、潜在的な資金滞留や簿外口座へのわずかな資金リークを検出することは困難です。本システムの伝統的なB/SおよびP/L推移は以下の通りです。
+従来の累積的な財務諸表と、新しく追加された期間別（単月非累積）の取引流量を比較します。
 
-* **B/S 資産・資本推移 & ブロック図:**
-    ![B/S Trend](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__BS_Trend.png)
-    ![B/S Block Total](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__BS_Block_Total.png)
-* **P/L 売上・費用推移 & ウォーターフォール図:**
-    ![P/L Trend](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Trend.png)
-    ![P/L Waterfall Total](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Waterfall_Total.png)
+### 貸借対照表（B/S）の比較
 
-これらは一見すると現預金が増加し、販管費も売上に比例して拡大しているため健全に見えますが、真の安全性を確認するには、取引ネットワークのトポロジーや熱力学的パラメータを用いた多角的な検証が必要です。
+* **B/S 資産・資本の累積推移 & ブロック図 (累積値):**
+  ![B/S Cumulative Trend](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__BS_Trend.png)
+  ![B/S Block Total](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__BS_Block_Total.png)
+
+* **B/S 資産・資本の期間推移 (単月非累積値):**
+  ![B/S Periodic Trend](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__BS_Trend_Periodic.png)
+
+### 損益計算書（P/L）の比較
+
+* **P/L 売上・費用の累積推移:**
+  ![P/L Cumulative Trend](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Trend.png)
+
+* **P/L 売上・費用の期間推移 (単月非累積値):**
+  ![P/L Periodic Trend](../../../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Trend_Periodic.png)
+
+* **観察:** 累積および期間別の双方において流量は安定的に推移しており、突発的な急落や閉塞（平坦化）はありません。
 
 ---
 
-## 3. 根本的な異常の特定 (Fundamental Pathophysiology)
+## 3. 根本的な病態生理解説 (Pathophysiology)
 
-本サンプルにおいて、**検出された異常（病理）はありません。**
-
-管理部門、販売部門、製造部門等の間で行われるすべての取引フローは保存則を満たしており、不要な還流閉路や特定の取引関係への異常な集中は見られず、正常な取引活動に基づいています。
+* **病態判定:** **正常循環 (Normal Circulation)**
+* 組織内の管理・販売・製造部門間における取引フローはすべて物理的な保存則を満たしており、資金の滞留や特定のルートへの偏りは見られません。
 
 ---
 
-## 4. 数理解析エンジンによる定量データ
+## 4. 数理解析結果の要約
 
-解析エンジンにより得られた主要な指標と可視化データは以下の通りです。
+### 4.1. 質量保存則とネットワークトポロジー
 
-### 4.1. 質量保存則の検証 (Kirchhoff Residual)
-
-システム全体の資金流入と流出の差分を示す `System Conservation Residual` は全期間を通じて **`0.00` (誤差なし)** であり、不正な簿外資金移動がないことを証明しています。
+キルヒホッフ残差は完全に **`0.00`** であり、簿外の未登録口座等への漏洩はありません。
 
 * **マクロフォレンジックダッシュボード:**
-    ![Macro Forensics](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
+  ![Macro Forensics](../../../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
-### 4.2. 結合剛性と主成分分析 (Stiffness & PCA)
+* **ネットワークトポロジーの変化:**
+  ![Network Topology (t=1)](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00001.png)
+  ![Network Topology (t=2)](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00002.png)
+  ![Network Topology (t=3)](../../../../samples/Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00003.png)
 
-剛性行列（Stiffness Matrix）の解析では、取引開始後、各勘定科目の間に偏りのないしなやかな接続が構築されています。特定の勘定科目間での資金滞留（剛性ロック）は発生していません。また、主成分分析（PCA）における主成分比率（Eigenvalue Ratio）もなだらかに分布しており、特定ペアへの極端な取引同期はありません。
+### 4.2. 剛性接続 & 主成分分析 (Stiffness & PCA)
 
-* **構造剛性行列 (t=6):**
-    ![Stiffness Month 7](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00006.png)
-* **PCA 主要軸比率:**
-    ![PCA Ratio](../../../../samples/Sample_0_Healthy/readme_plots/000_2_2__principal_axes_ratio.png)
+剛性行列はしなやかな結合状態を示し、取引の閉塞はありません。主要固有ベクトル（PC1, PC2, PC3）の固有値比率および時間推移も偏りなく安定しています。
 
-### 4.3. トポロジー解析と循環取引の排除 (Spectral Radius)
+* **構造剛性行列の推移:**
+  ![Stiffness (t=5)](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00005.png)
+  ![Stiffness (t=6)](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00006.png)
+  ![Stiffness (t=7)](../../../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00007.png)
 
-隣接結合行列の最大固有値である「スペクトル半径（Spectral Radius）」は、全期間にわたって **`0.00`** を維持しています。これは、架空売上などの資金還流ループが一切存在しないことを証明しています。
+* **主要軸比率 & 固有ベクトル推移 (PC1, PC2, PC3):**
+  ![PCA Ratio](../../../../samples/Sample_0_Healthy/readme_plots/000_2_2__principal_axes_ratio.png)
+  ![PCA PC1 Evolution](../../../../samples/Sample_0_Healthy/readme_plots/000_2_3__eigenvector_evolution.png)
+  ![PCA PC2 Evolution](../../../../samples/Sample_0_Healthy/readme_plots/000_2_3__eigenvector_evolution_pc2.png)
+  ![PCA PC3 Evolution](../../../../samples/Sample_0_Healthy/readme_plots/000_2_3__eigenvector_evolution_pc3.png)
 
-* **システム安定性指標 (Spectral Radius):**
-    ![System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+### 4.3. 循環取引の排除 (Spectral Radius)
 
-### 4.4. 熱力学指標とエントロピー (Entropy & Free Energy)
+スペクトル半径は全期間を通じて **`0.00`** であり、架空還流ループ（循環取引）はありません。
 
-内部エネルギー（Gross Activity $U$）は1月の `2,303,842.32` から12月の `4,132,519.04` へと増加し、それに並行して有効ポテンシャルを示す自由エネルギー（Free Energy $F$）も `2,303,842.32` から `3,869,999.47` へと着実に増加しています。
-無駄な往復取引に起因する摩擦熱（エントロピー $T \times S$）の異常増加は見られず、商業的な支払サイクル（30〜90日程度）に整合する緩やかな散逸となっています。
+* **システム安定性指標:**
+  ![System Stability](../../../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
 
-* **熱力学エネルギースタック:**
-    ![Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-* **T-S ダイアグラム:**
-    ![T-S Diagram](../../../../samples/Sample_0_Healthy/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+### 4.4. 熱力学指標と3D位相幾何
 
-### 4.5. 3D立体プロットによる多角解析
+有効エネルギーは円滑に増加し、摩擦損失（エントロピー）の発生も商業的な決済周期に基づき正常に制御されています。
 
-3Dプロットは、時間・空間の全方位においてシステムの平穏性を可視化しています。
-
-* **① 3D運動位相空間軌跡:**
-    ![3D Phase Portrait](../../../../samples/Sample_0_Healthy/readme_plots/000_1_8__phase_portrait_3d.png)
-    軌道は安定アトラクターに滑らかに収束しており、還流による歪みやバーストは生じていません。
-* **② 3D局所熱力学プロット:**
-    ![3D Local Entropy](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2_1__3d_local_entropy.png)
-    ![3D Local Temperature](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2_2__3d_local_temperature.png)
-  * **局所エントロピー ($s_i$):** 単一の流出先しか持たない科目は数学的に `0.00` です。複数の流出先（経費支払や仕入れ）を持つ現預金ノード（`ACC_Cash`）のみが、正常範囲内（1.18〜1.86 bits、平均約 1.51 bits）の低エントロピーで推移しています。
-  * **局所温度 ($T_i$):** 勘定残高の時系列ボラティリティを示します。急激な資金の往復や不整合が存在しないため、全期間において低く安定した平坦な温度分布を描いています。
-* **③ 3Dミクロ情報幾何学プロット:**
-    ![3D Micro KL Drift](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
-    全ノードにおいて KL Drift はゼロに近く、不正の開始を示すスパイクは一切検出されていません。
+* **熱力学特性 & 3D軌跡:**
+  ![Thermodynamics Energy Stack](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+  ![T-S Diagram](../../../../samples/Sample_0_Healthy/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+  ![3D Phase Portrait](../../../../samples/Sample_0_Healthy/readme_plots/000_1_8__phase_portrait_3d.png)
+  ![3D Local Entropy](../../../../samples/Sample_0_Healthy/readme_plots/001_1_2_1__3d_local_entropy.png)
+  ![3D Micro KL Drift](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 ---
 
 ## 5. 制御介入と推奨アクション (LQR & Operations)
 
-* **治療方針:** **対応不要 (No Treatment Required)**
-* **LQR 介入:** システムは最適なバランス状態にあるため、フィードバック制御による介入は不要です。
-    ![Sample 0 LQR Control](../../../../samples/Sample_0_Healthy/readme_plots/004_1_3__control_lqr_performance_space.png)
-* **推奨アクション:**
-    データ上の構造的健全性は証明されています。監査・管理チームは、データ整合性の調査ではなく、実地での銀行残高証明書の原本照合など、システム外の物理的実在性の検証にリソースを集中することを推奨します。
+* **介入要否:** **対応不要 (No Treatment Required)**
+* システムは自己安定状態にあり、LQR制御フィードバックによる最適値補正も不要です。
+
+![LQR Control Space](../../../../samples/Sample_0_Healthy/readme_plots/004_1_3__control_lqr_performance_space.png)
+
+### 💡 経営改善における「レバレッジ・ポイント（経費削減のツボ）」の定量的評価
+本サンプルの数理解析データ（LQR制御努力量および逆運動学感度 `ik_strain_energy`）から、経費3種（人件費、旅費交通費、地代家賃）の削減に伴う**レバレッジ効果（経営改善のツボ）**は以下のように明確に序列化されます。
+
+1. **第1位：人件費 (`ACC_Payroll_Exp`)**
+   * **定量的特徴:** 調整に伴う組織負荷・摩擦を示す `ik_strain_energy` が **`6.5682`** と経費3種の中で最も低く、高い弾力性を持ちます。また、LQRコントローラによる最適制御入力（絶対調整量）の規模も最大（他経費の2〜4倍）であり、**「最も組織的摩擦（ストレス）が少なく、かつ効果の絶対額が大きい最大のツボ」**です。
+2. **第2位：旅費交通費 (`ACC_Travel_Exp`)**
+   * **定量的特徴:** `ik_strain_energy` は **`8.0020`**。地代家賃に比べて調整時の摩擦が低く、短期的な変動費としての調整レバーとして機能します。
+3. **第3位：地代家賃 (`ACC_Rent_Exp`)**
+   * **定量的特徴:** `ik_strain_energy` が **`8.1039`** と最も高く、システム内で最も「硬直的（剛性が高い）」な固定費ノードです。契約解除や移転に伴う組織的負荷（摩擦）が最大であるため、短期的な経営改善レバーとしての優先度は最も低くなります。
+
+#### 📊 3Dリボン進化グラフとスケール乖離に関する補足
+順運動学（FK）および逆運動学（IK）の3Dリボングラフは、システム全体の流量伝播を可視化しています。
+
+* **順運動学（FK Impact - 衝撃波及）:** 
+  経費は取引の終点（吸収ノード）であるため、衝撃が他に波及せず、リボンの高さはフラット（ほぼゼロ）で推移します。
+  ![3D Kinematics FK](../../../../samples/Sample_0_Healthy/readme_plots/003_1_1__3d_kinematics_fk.png)
+
+* **逆運動学（IK Impact - 目標達成のための調整量）:**
+  目標売上高（`ACC_Sales_Revenue`）を達成するための最適な調整量を示します。
+  ![3D Kinematics IK](../../../../samples/Sample_0_Healthy/readme_plots/003_1_2__3d_kinematics_ik.png)
+
+> [!NOTE]
+> **可視化上のスケール制限に関する注意点:**
+> 3Dリボングラフ上では、経費3種のレーンは一見すると平坦（フラット）に見えます。これは、売掛金や売上高など**メインストリームの調整量（10万規模）が巨大であるため、グラフのZ軸スケールがそちらに支配され、相対的に規模の小さい経費の波（数千〜数万規模）が視覚的に圧縮されているため**です。
+> 数理解析のデータ上では、経費3種（特に人件費）もキャッシュフローの位相（季節変動の波）と同調し、月ごとに「増額（プラス）」と「削減（マイナス）」を繰り返す動的なうねりを描いています。
 
 ---
 
-## 6. 🚨 アラートトリアージ & 反証可能性
+## 6. アラート & 反証可能性
 
-### 6.1. 統計的偽陽性の判定 (False Positive Assessment)
+### 6.1. 統計的偽陽性アラートの判定
 
-* **アラート内容:** 4月 (`4.7943`), 6月 (`3.3940`), 7月 (`4.90`), 12月 (`3.8833`) において Z-Score が警告閾値 `3.0` を超過。
-* **判定理由:**
-    これは統計モデルの過渡的な偽陽性です。初期ステップにおける共分散推定の不さや、一時的な資金移動の集中（季節的要因）が強調されたものと判断されます。保存則残差が `0.00` を維持し、循環トポロジーも形成されていないため、これらのアラートは正常なゆらぎとして無視（Dismiss）して差し支えありません。
+![Z-Score (Position)](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+![Z-Score (Velocity)](../../../../samples/Sample_0_Healthy/readme_plots/002_2_2_3__3d_micro_z_score_v.png)
 
-### 6.2. 本検査に対する反証条件 (Falsifiability)
+* **アラート内容:** 主に四半期末や期末（3月、4月、6月、7月、8月、10月、11月、12月）において、一時的に Z-Score が警告しきい値 `3.0` を超過しました。
+* **判定結果:** 偽陽性（問題なし）。決算期等の記帳集中による正常な季節的ゆらぎであり、保存則（キルヒホッフ残差）に一切不整合がないため無視（Dismiss）して差し支えありません。
 
-本検査（健全）を覆すには、以下のいずれかの客観的証拠が必要です。
+### 6.2. 本判定に対する反証条件
 
-1. **銀行口座残高の不一致:** 帳簿上の現金残高と、金融機関から直接取得した「銀行預金通帳原本」等の残高の間に、1円でも調整不能なズレが存在すること。
-2. **簿外口座の存在:** 把握している取引ネットワーク外に、システムから漏洩した資金を受け取るための未登録口座・別会社が存在すること。
+本レポートの「正常健全」判定を覆すには、以下のいずれかの証拠が必要です。
+
+1. **実地残高不一致:** 金融機関から直接入手した実際の預金口座残高と、帳簿残高の間のズレ。
+2. **簿外実体の存在:** システムでモデル化されていない隠し口座や外部ペーパーカンパニーへの資金移動。

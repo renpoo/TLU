@@ -7,7 +7,7 @@
 * **Clinical Overview:**
     This system suffers from "local data mismatch (mass deficit)" where the debit and credit amounts do not match in some accounts receivable collection journal entries. Throughout the simulation period, a cumulative total of **`$1,412.88`** of mass temporarily leaked outside the system and was allocated to the virtual garbage-bin node `UNKNOWN_LEAK`.
 
-    However, the physics-mathematical engine proves that this is not a malicious, ongoing siphoning of funds (embezzlement), but rather a **"single input mismatch due to accidental error or integration bugs (sprain/bruise)"**. The network's maximum spectral radius remains at **`0.00`** throughout the period, proving the absence of any pathological resonance topology like circular wash trading. Furthermore, immediately after the mass deficit (shock) occurs, the **"self-healing capacity (elasticity)"** functions, rapidly restoring the Stiffness Matrix (the mechanical framework of the system) to its original healthy state.
+    However, the Physics-Mathematics-mathematical engine proves that this is not a malicious, ongoing siphoning of funds (embezzlement), but rather a **"single input mismatch due to accidental error or integration bugs (sprain/bruise)"**. The network's maximum spectral radius remains at **`0.00`** throughout the period, proving the absence of any pathological resonance topology like circular wash trading. Furthermore, immediately after the mass deficit (shock) occurs, the **"self-healing capacity (elasticity)"** functions, rapidly restoring the Stiffness Matrix (the mechanical framework of the system) to its original healthy state.
 
     In statistical Z-Score monitoring, a **"Statistical False Positive"** warning spike is triggered in July and August in response to temporary seasonal revenue spikes, while a **"Statistical False Negative"** occurs in November when the maximum mismatch (`$906.29`) is buried inside the high flow volume of the system, causing the alert to remain silent. Relying solely on superficial Z-Scores poses the risk of overlooking true mismatches. However, the TLU integrated diagnostic approach based on physical conservation laws (Kirchhoff residuals) and topological self-healing correctly identifies this case as a "single entry mistake" under a preserved healthy structure.
 
@@ -24,13 +24,13 @@ In traditional accounting audits or single-point snapshot monitoring, when a deb
     ![P/L Trend](readme_plots/000_0_1__PL_Trend.png)
     ![P/L Waterfall Total](readme_plots/000_0_1__PL_Waterfall_Total.png)
 
-On the P/L, operating expenses link healthily with cumulative revenue, and retained earnings accumulate normally. Since the B/S balances perfectly, management and external auditors who look only at static aggregates cannot detect the spatiotemporal data mismatch (mass deficit) occurring inside the system. Without dynamic residual tracking via the Physics-Mathematics Engine, this data corruption remains hidden.
+On the P/L, operating expenses link healthily with cumulative revenue, and retained earnings accumulate normally. Since the B/S balances perfectly, management and external auditors who look only at static aggregates cannot detect the spatiotemporal data mismatch (mass deficit) occurring inside the system. Without dynamic residual tracking via the Physics-Mathematics-Mathematics Engine, this data corruption remains hidden.
 
 ---
 
 ## 3. Fundamental Pathophysiology
 
-The Physics-Mathematics Engine captures the exact location and amounts of the mismatches occurring in the data. All of these mismatches are due to one-sided entry errors during the accounts receivable collection process (`AR_Collection`).
+The Physics-Mathematics-Mathematics Engine captures the exact location and amounts of the mismatches occurring in the data. All of these mismatches are due to one-sided entry errors during the accounts receivable collection process (`AR_Collection`).
 
 ### Mechanism of Unbalanced Journal Entries (4 cases, cumulative mismatch of `$1,412.88`)
 
@@ -41,11 +41,11 @@ The Physics-Mathematics Engine captures the exact location and amounts of the mi
     * In transaction ID [E_003179](input_stream/Dummy_Journal_Stream.csv#L6358-L6359), A/R decreased by `$734.53` while Cash increased by only `$606.80` (difference of **`$127.73`**).
     * The total mismatch in November was **`$906.29`**.
 
-To maintain a double-entry closed system, the Physics-Mathematics Engine routes this discrepancy to the `UNKNOWN_LEAK` node. However, unlike corporate embezzlement (Sample 2) where the outflow path solidifies and grows topologically, this sample displays extremely clear "stiffness self-healing" as detailed below.
+To maintain a double-entry closed system, the Physics-Mathematics-Mathematics Engine routes this discrepancy to the `UNKNOWN_LEAK` node. However, unlike corporate embezzlement (Sample 2) where the outflow path solidifies and grows topologically, this sample displays extremely clear "stiffness self-healing" as detailed below.
 
 ---
 
-## 4. Mathematical Evidence from the Physics & Math Engine
+## 4. Mathematical Evidence from the Physics-Mathematics & Math Engine
 
 ### 4.1. Kirchhoff Residual & Local Violation of Mass Conservation
 

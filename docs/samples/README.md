@@ -1,8 +1,8 @@
-# 🔬 TLU Physics & Mathematical Engine: Universal Forensic Cross-Verification Registry & Diagnostic Catalog
+# 🔬 TLU Physics-Mathematics & Mathematical Engine: Universal Forensic Cross-Verification Registry & Diagnostic Catalog
 
 > [!IMPORTANT]
 > **【Clinical Declaration by the SME Physician】**
-> Tensor-Link Utility (TLU) is a **"Universal Physics-Mathematics Engine"** that diagnoses network data from seemingly completely different domains—double-entry bookkeeping, urban traffic, financial markets, and neural brain fMRI—based on the physical laws of **Thermodynamics**, **Topology**, and **Kinematics**.
+> Tensor-Link Utility (TLU) is a **"Universal Physics-Mathematics-Mathematics Engine"** that diagnoses network data from seemingly completely different domains—double-entry bookkeeping, urban traffic, financial markets, and neural brain fMRI—based on the physical laws of **Thermodynamics**, **Topology**, and **Kinematics**.
 >
 > This document serves as a comprehensive index and cross-verification catalog of 10 validation samples. It systematically explains how pathological anomalies hidden within systems waste energy, cause structural rigidity (thrombi/congestion), or violate mass conservation (embezzlement/hemorrhage) to drive systems toward thermodynamic "heat death," using clinical metaphors from Eastern medicine (Qi-Blood-Water, Meridians, and Acupoints).
 
@@ -47,7 +47,7 @@ Below is the diagnostic catalog for all 10 samples included in the TLU environme
 
 ## ⚖️ Cross-Verification Matrix
 
-Below is a summary of the main mathematical and physical metrics obtained from the Physics-Mathematics Engine and forensic filters for all 10 validation samples.
+Below is a summary of the main mathematical and physical metrics obtained from the Physics-Mathematics-Mathematics Engine and forensic filters for all 10 validation samples.
 
 | ID | Sample Name (Report Link) | Domain | Judgment | Max Spectral Radius ($\rho$) | Max Conservation Residual (Max Residual) | Max Flow Z-Score ($Z_v$) | Max State Z-Score ($Z_X$) | Net Income / Equivalent | Eastern Medicine Metaphor |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- | :--- |

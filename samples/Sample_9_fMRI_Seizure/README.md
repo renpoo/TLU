@@ -86,7 +86,7 @@ Because abnormal synchronous waves from a seizure do not extremely bias the tota
 
 ### 4.3. Functional Entropy Collapse & Free Energy Periodic Alignment
 
-The statistical physics indicators show that the system's entropy $S$ averages **`9.10`** (std `1.00`) and the free energy $F$ averages **`496,949.39`** (std `779.13`) across the timeline.
+The statistical Physics-Mathematics indicators show that the system's entropy $S$ averages **`9.10`** (std `1.00`) and the free energy $F$ averages **`496,949.39`** (std `779.13`) across the timeline.
 
 * **Entropy Collapse (Loss of Functional Degrees of Freedom):**
   At the onset of the seizure (`t=30`), the system's entropy $S$ **rapidly collapses from `9.99` down to `8.67`**. This sharp drop demonstrates that an epileptic seizure is not an increase in disorder ("entropy explosion"), but rather a pathological locking of the brain's activity into a single, forced sinusoidal pattern, severely stripping the network of its functional degrees of freedom.
@@ -109,4 +109,4 @@ In the 3D surface of Z-Score (degree of protrusion from past averages), the tran
 
 * **Possibility of False Positives:** If this were actual fMRI data, for a specific brain region to continue emitting such perfect sine waves is physiologically abnormal, and it is extremely likely to be an organic or functional epileptic focus.
 * **Grand Finale of the TLU Project:**
-  "Malicious market manipulation" in finance, and "abnormal brain synchronization (epilepsy)" in living organisms. In TLU's physical space (Thermodynamics and Topology), these two completely aligned mathematically (diagnosed as the identical pathology) as "perfect infinite loops accompanying meaningless frictional heat (entropy)." TLU is completed here as a true "Universal Physics-Mathematics Engine," beautifully unraveling seemingly disparate social and biological phenomena with a unified equation ($F = U - TS$).
+  "Malicious market manipulation" in finance, and "abnormal brain synchronization (epilepsy)" in living organisms. In TLU's physical space (Thermodynamics and Topology), these two completely aligned mathematically (diagnosed as the identical pathology) as "perfect infinite loops accompanying meaningless frictional heat (entropy)." TLU is completed here as a true "Universal Physics-Mathematics-Mathematics Engine," beautifully unraveling seemingly disparate social and biological phenomena with a unified equation ($F = U - TS$).

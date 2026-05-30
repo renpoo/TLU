@@ -3,7 +3,7 @@
 > [!NOTE]
 > **[IMPORTANT] Relationship Between Sample 8 and Sample 9 and Target Domain**
 > This sample (Sample 8) and the next sample (Sample 9) are not financial or traffic data, but biological data simulating the **"Effective Connectivity of BOLD signals"** in the human brain (fMRI).
-> This is the grand finale test case proving that TLU's "Universal Physics-Mathematics Engine" can seamlessly diagnose across disciplines, from social sciences (finance/traffic) to life sciences (biological network pathologies).
+> This is the grand finale test case proving that TLU's "Universal Physics-Mathematics-Mathematics Engine" can seamlessly diagnose across disciplines, from social sciences (finance/traffic) to life sciences (biological network pathologies).
 >
 > * **Sample 8 (This Report):** Simulates a **"Stroke/Ischemia"** where blood flow/signals to a specific part of the brain network (Motor Cortex) are physically blocked. It verifies the process where part of the network "depletes and necrotizes."
 > * **Sample 9 (Next Report):** Simulates an **"Epileptic Seizure"** where abnormal synchronous signals radiate from a specific region (Temporal Lobe). It verifies the process of excessive "runaway resonance" of energy.
@@ -101,4 +101,4 @@ In the 3D surface of Z-Score (degree of protrusion from past averages), bounding
 ## 5. ⚠️ Falsification Analytics
 
 * **Possibility of False Positives:** If this were actual fMRI data, given that only the inflow of the BOLD signal to a specific gyrus vanishes by 95% and is accompanied by abnormal resonance, there is an extremely high probability that it is a clear "organic lesion (ischemia/infarction)" rather than mere measurement noise.
-* **Additional Verification Requirements:** TLU has proven itself to be a "Universal Physics-Mathematics Engine." It has been confirmed that "embezzlement" in finance, "deadlock" in traffic networks, and "stroke" in the brain can all be seamlessly diagnosed with the same physical equation: "Mass deficit and thermodynamic collapse in a network."
+* **Additional Verification Requirements:** TLU has proven itself to be a "Universal Physics-Mathematics-Mathematics Engine." It has been confirmed that "embezzlement" in finance, "deadlock" in traffic networks, and "stroke" in the brain can all be seamlessly diagnosed with the same physical equation: "Mass deficit and thermodynamic collapse in a network."

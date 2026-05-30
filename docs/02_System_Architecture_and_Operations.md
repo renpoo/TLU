@@ -23,8 +23,8 @@ The overall data and diagnostic processing flow of TLU is defined as the followi
 ```mermaid
 graph TD
     A[Raw Data Source: Journal logs, Traffic GPS, fMRI BOLD, Market order books] -->|Data Extraction| B[Data Projection Layer]
-    B -->|Graph/Matrix Formulation| C[Physics-Mathematics Engine Layer]
-    C -->|Apply 6 Physics Filters| D[Forensic Filter Layer]
+    B -->|Graph/Matrix Formulation| C[Physics-Mathematics-Mathematics Engine Layer]
+    C -->|Apply 6 Physics-Mathematics Filters| D[Forensic Filter Layer]
     D -->|Compute Physical/Mathematical Invariants| E[Visualization Layer: 3D Plots, Stiffness Matrix, T-S Diagrams]
     E -->|Output Images & CSVs| F[LLM Meta-Diagnosis Layer]
     F -->|Apply Manuals & Fact-checking| G[Final Diagnostic Report: Clinical Chart]
@@ -33,9 +33,9 @@ graph TD
 ### Roles of Each Pipeline Layer
 
 1. **Data Projection Layer:** Projects heterogeneous domain data into a generic graph structure of "nodes" and "edges (flow volume)."
-2. **Physics-Mathematics Engine Layer:** Computes metrics across six physical cores: Classical Stiffness, Thermodynamic Potentials, Information Manifolds, LQR Feedback, and Wave Coherence.
+2. **Physics-Mathematics-Mathematics Engine Layer:** Computes metrics across six physical cores: Classical Stiffness, Thermodynamic Potentials, Information Manifolds, LQR Feedback, and Wave Coherence.
 3. **Visualization Layer:** Renders generated spatiotemporal data as intuitive PNG images such as 3D space ribbons, matrices, and T-S graphs.
-4. **LLM Meta-Diagnosis Layer:** An integrated LLM complies with the supreme meta-level prompt (`LLM_Diagnostic_Manual.md`) to automatically generate objective clinical charts in English backed by the Physics-Mathematics Engine's output.
+4. **LLM Meta-Diagnosis Layer:** An integrated LLM complies with the supreme meta-level prompt (`LLM_Diagnostic_Manual.md`) to automatically generate objective clinical charts in English backed by the Physics-Mathematics-Mathematics Engine's output.
 
 ---
 
@@ -43,7 +43,7 @@ graph TD
 
 The most prominent feature of TLU is its data projection algorithm, which projects any arbitrary data onto a closed graph that satisfies **"Double-Entry Bookkeeping"** and **"Kirchhoff's Conservation Law."**
 
-### Domain-to-Physics Projection Rules
+### Domain-to-Physics-Mathematics Projection Rules
 
 * **Financial Ledger Domain:**
   * **Nodes:** Account titles (Cash and Deposits, Accounts Receivable, Revenue, Cost of Goods Sold, etc.).

@@ -27,9 +27,9 @@
 It is difficult to detect this anomaly (market manipulation) through traditional securities dashboards or transaction volume snapshot monitoring alone. Below are the cumulative volume (P/L equivalent) and stock (B/S equivalent) charts across the entire period:
 
 * **P/L Equivalent (Total Volume per Ticker):**
-    ![P/L Trend](../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_0_1__PL_Trend.png)
+    ![P/L Trend](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_0_1__PL_Trend.png)
 * **B/S Equivalent (Unbalanced Stock Accumulation):**
-    ![B/S Trend](../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_0_1__BS_Trend.png)
+    ![B/S Trend](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_0_1__BS_Trend.png)
 
 **【Blind Spots of Traditional Audits】**
 The stock market is basically a closed kinetic system, and the net increase in the market's total assets (B/S equivalent) is zero (blank). On the other hand, the transaction volume (flow) corresponding to P/L records a massive amount of `$3,623,458,959.18`.
@@ -40,7 +40,7 @@ In typical trading tools, the manipulated ticker is simply displayed as a "highl
 
 ## 3. Fundamental Pathophysiology
 
-The Physics-Mathematics Engine identified the operation of the fictitious transaction algorithm from the deep layers of transactions as evidence:
+The Physics-Mathematics-Mathematics Engine identified the operation of the fictitious transaction algorithm from the deep layers of transactions as evidence:
 
 * **Identified Infractions:**
     Two specific accounts, `USR_003` and `USR_004`, matched wash trades consecutively **20 times** at a rate of 1,693 shares per trade within just **1.0 second** on ticker `STK_004` (price approx. $1,917.08) in 2020-W40 (`t_idx=39`), and another **20 times** consecutively at 5,000 shares per trade within just **1.0 second** on ticker `STK_003` (price approx. $2,066.28) in 2020-W46 (`t_idx=45`) (totaling 40 transactions).
@@ -49,7 +49,7 @@ The Physics-Mathematics Engine identified the operation of the fictitious transa
 
 ---
 
-## 4. Mathematical Evidence from the Physics-Mathematics Engine
+## 4. Mathematical Evidence from the Physics-Mathematics-Mathematics Engine
 
 ### 4.1. Transaction Recirculation Topology & Phase Synchronization Runaway
 
@@ -58,23 +58,23 @@ The spatiotemporal structure of stocks and cash being thrown back and forth on t
 In 2020-W07 (`t_idx=6`), the maximum spectral radius reached its theoretical upper limit of **`1.00`** and remained high (recording `0.995126` in 2020-W52). This is mathematical proof that the system is bound by a strong "autonomous recirculation loop (`USR_003 -> STK_004/STK_003 -> USR_004 -> STK_004/STK_003 -> USR_003`)," shutting out normal external liquidity.
 
 * **System Stability Index (Spectral Radius):**
-    ![System Stability](../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/004_1_2__system_stability.png)
+    ![System Stability](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/004_1_2__system_stability.png)
 
 * **Network Topology 5-Point Sequence:**
   * **① Start (t=0 / 2020-W01):**
-        ![Topology t0](../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00000.png)
+        ![Topology t0](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00000.png)
         Initial state. Edge strengths between users and tickers are uniform, showing a healthy diversified investment topology.
   * **② Just Before Change (t=38 / 2020-W39):**
-        ![Topology t38](../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00038.png)
+        ![Topology t38](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00038.png)
         Before the anomaly. Although inventory adjustments occur between HFT accounts, specific fictitious recirculation (wash trading) has not yet formed.
   * **③ The Exact Point of Change (t=39 / 2020-W40):**
-        ![Topology t39](../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00039.png)
+        ![Topology t39](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00039.png)
         The moment the manipulation algorithm (Wash Trade) triggers. Extremely thick bidirectional edges form between `USR_003` and `USR_004` around `STK_004`, establishing phase synchronization (recirculation loop).
   * **④ Immediately After Change (t=40 / 2020-W41):**
-        ![Topology t40](../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00040.png)
+        ![Topology t40](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00040.png)
         Immediately after the manipulation. The resonance of the wash trade (memory of volume surge) is deeply engraved in the topology, shutting out other trades.
   * **⑤ End (t=51 / 2020-W52):**
-        ![Topology t51](../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00051.png)
+        ![Topology t51](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00051.png)
         Final state. Although temporary bursts have calmed down, chronic pathological distortion where specific connection strengths are abnormally biased remains.
 
 ### 4.2. Stiffness Loss & Proof of Stiffness Lock via Eigenvector Evolution
@@ -84,7 +84,7 @@ In dynamic transaction domains like stock markets, there are no physical springs
 However, tracking the time-series evolution of the dominant eigenspace of the Stiffness Matrix using PCA (**"Eigenvector Evolution Chart (`000_2_3__eigenvector_evolution.png`)"**) vividly visualizes how a specific dominant component (PC1) grows abnormally and locks specific nodes (Stiffness Lock).
 
 * **Eigenvector Evolution:**
-    ![Eigenvector Evolution](../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_2_3__eigenvector_evolution.png)
+    ![Eigenvector Evolution](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_2_3__eigenvector_evolution.png)
 
 **【Anomaly Analysis based on the Eigenvector Evolution Chart】**
 
@@ -102,7 +102,7 @@ However, tracking the time-series evolution of the dominant eigenspace of the St
 Additionally, the `Min Edge Stress` collapsed to **`0.00`**, indicating that only the circular loop is active while the tension of all other network connections is lost.
 
 * **PCA Principal Axes Ratio:**
-    ![PCA Ratio](../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_2_2__principal_axes_ratio.png)
+    ![PCA Ratio](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/000_2_2__principal_axes_ratio.png)
 
 ### 4.3. Recirculation Thermodynamics & Anomaly Friction Detection
 
@@ -111,26 +111,26 @@ This market network is a closed kinetic system, so the internal energy $U$ (blue
 However, during the anomalies and position adjustments, the system detects a prominent increase in "frictional heat ($-TS$: maroon area)."
 
 * **Thermodynamics Energy Stack:**
-    ![Thermodynamics Energy Stack](../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+    ![Thermodynamics Energy Stack](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 **【Thermodynamic Friction Detection Mechanism】**
 When wash trading or rapid fund transfers occur, they temporarily raise local flow distribution dispersion (entropy $S$) and volatility (temperature $T$), expanding friction ($TS = U - F$) as dissipative energy.
 
-The Physics-Mathematics Engine successfully extracts and visualizes this "hollow local friction" as a clean energy loss signal, without disrupting the overall market structure.
+The Physics-Mathematics-Mathematics Engine successfully extracts and visualizes this "hollow local friction" as a clean energy loss signal, without disrupting the overall market structure.
 
 The T-S diagram draws a counterclockwise closed oval loop, contrasting with the open path of a healthy market. This is thermodynamic proof that the system is merely spinning capital internally, generating fee costs (friction) without delivering economic value.
 
 * **T-S Diagram:**
-    ![T-S Diagram](../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+    ![T-S Diagram](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 ### 4.4. 3D Geometric Displacements & Information Geometric Spikes
 
 In the 3D spatiotemporal information geometry plot (`002_2_2_1__3d_micro_kl_drift.png`), following the massive panic dump by whale `USR_002` in W03, giant KL Drift spikes tower from the coordinates of retail investors `USR_006`, `USR_007`, and `USR_010` in 2020-W07 (`t_idx=6`). This visualizes the onset of market manipulation where the normal statistical distribution was broken, deviating from past behavioral patterns.
 
 * **3D Micro Z-Score (Position):**
-    ![3D Micro Z-Score](../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+    ![3D Micro Z-Score](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 * **3D Micro KL Drift:**
-    ![3D Micro KL Drift](../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+    ![3D Micro KL Drift](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 ---
 
@@ -144,7 +144,7 @@ In the 3D spatiotemporal information geometry plot (`002_2_2_1__3d_micro_kl_drif
        When ultra-high-speed round-trip orders are detected on `STK_003` and `STK_004`, force-inject a millisecond-level dynamic latency in the transaction matching engine. This physically breaks up the algorithm's phase synchronization (circular catch-ball), dismantling the loop.
     2. **Acupoint Account Freezing based on LQR Sensitivity:**
        Apply temporary trading limits (limit orders with enhanced verification) to the accounts `USR_003` and `USR_004` acting as the hubs of recirculation. This surgically cuts out the pathological attractor without disrupting the normal orders of other investors.
-        ![LQR Performance Space](../../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/004_1_3__control_lqr_performance_space.png)
+        ![LQR Performance Space](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/004_1_3__control_lqr_performance_space.png)
 
 ---
 
