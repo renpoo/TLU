@@ -4,6 +4,7 @@ import json
 import os
 import argparse
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 
 try:
@@ -12,7 +13,7 @@ except ImportError:
     plt.rcParams['font.family'] = ['AppleGothic', 'Hiragino Sans', 'Hiragino Maru Gothic Pro', 'Noto Sans CJK JP', 'YuGothic', 'sans-serif']
 
 
-def draw_bs_block_chart(report, out_path, max_y=None, fixed_assets_order=None, fixed_liabs_order=None, t_idx=None, top_k=8):
+def draw_bs_block_chart(report, out_path, max_y=None, fixed_assets_order=None, fixed_liabs_order=None, t_idx=None, top_k=8, time_labels=None):
     fig, ax = plt.subplots(figsize=(10, 6))
     
     # Use fixed order if provided, otherwise calculate dynamically
@@ -84,7 +85,9 @@ def draw_bs_block_chart(report, out_path, max_y=None, fixed_assets_order=None, f
 
     ax.legend(loc='center left', bbox_to_anchor=(1.02, 0.5), fontsize=8)
     title_str = f"Balance Sheet (Block Chart): {report['week']}"
-    if t_idx is not None: title_str = f"Balance Sheet (Block Chart)\nTimeline: {report['week']} (t_idx={t_idx})"
+    if t_idx is not None:
+        current_time_label = time_labels.get(t_idx, report['week']) if (time_labels and t_idx in time_labels) else report['week']
+        title_str = f"Balance Sheet (Block Chart)\nTimeline: {current_time_label} (t_idx={t_idx})"
     ax.set_title(title_str)
     plt.subplots_adjust(left=0.1, right=0.7, top=0.9, bottom=0.1)
     plt.savefig(out_path, dpi=150)
@@ -93,7 +96,7 @@ def draw_bs_block_chart(report, out_path, max_y=None, fixed_assets_order=None, f
 
     plt.close()
 
-def draw_pl_waterfall(report, out_path, min_y=None, max_y=None, fixed_expenses_order=None, t_idx=None, top_k=8):
+def draw_pl_waterfall(report, out_path, min_y=None, max_y=None, fixed_expenses_order=None, t_idx=None, top_k=8, time_labels=None):
     fig, ax = plt.subplots(figsize=(10, 6))
     
     labels = ['Revenue']
@@ -149,7 +152,9 @@ def draw_pl_waterfall(report, out_path, min_y=None, max_y=None, fixed_expenses_o
         ax.set_ylim(min_y - range_y * 0.1, max_y + range_y * 0.1)
 
     title_str = f"Profit & Loss (Waterfall): {report['week']}"
-    if t_idx is not None: title_str = f"Profit & Loss (Waterfall)\nTimeline: {report['week']} (t_idx={t_idx})"
+    if t_idx is not None:
+        current_time_label = time_labels.get(t_idx, report['week']) if (time_labels and t_idx in time_labels) else report['week']
+        title_str = f"Profit & Loss (Waterfall)\nTimeline: {current_time_label} (t_idx={t_idx})"
     ax.set_title(title_str)
     plt.xticks(rotation=90, ha='center', fontsize=8)
     plt.subplots_adjust(left=0.1, right=0.95, top=0.9, bottom=0.3) # Reserve more bottom space for vertical labels
@@ -159,9 +164,9 @@ def draw_pl_waterfall(report, out_path, min_y=None, max_y=None, fixed_expenses_o
 
     plt.close()
 
-def draw_pl_trend(reports, out_path, fixed_expenses_order):
+def draw_pl_trend(reports, out_path, fixed_expenses_order, time_labels=None):
     fig, ax = plt.subplots(figsize=(12, 6))
-    weeks = [r['week'] for r in reports]
+    weeks = [time_labels.get(i, r['week']) if (time_labels and i in time_labels) else r['week'] for i, r in enumerate(reports)]
     revenues = [r['revenue'] for r in reports]
     net_incomes = [r['net_income'] for r in reports]
     
@@ -207,9 +212,9 @@ def draw_pl_trend(reports, out_path, fixed_expenses_order):
     print("✅ " + out_path)
     plt.close()
 
-def draw_bs_trend(reports, out_path, fixed_assets_order, fixed_liabs_order):
+def draw_bs_trend(reports, out_path, fixed_assets_order, fixed_liabs_order, time_labels=None):
     fig, ax = plt.subplots(figsize=(12, 6))
-    weeks = [r['week'] for r in reports]
+    weeks = [time_labels.get(i, r['week']) if (time_labels and i in time_labels) else r['week'] for i, r in enumerate(reports)]
     
     # Collect timeseries data for each category
     asset_data = {acc: [] for acc in fixed_assets_order}
@@ -312,8 +317,18 @@ def main():
     if not reports:
         sys.exit(0)
         
+    # Load time labels from time_map if provided
+    time_labels = {}
+    if args.time_map and os.path.exists(args.time_map):
+        try:
+            df_time = pd.read_csv(args.time_map)
+            time_labels = dict(zip(df_time['t_idx'], df_time['time_label']))
+        except Exception as e:
+            print(f"[WARN] Failed to load time map from {args.time_map}: {e}", file=sys.stderr)
+
     # 1. Total Summary Images
     final_report = reports[-1]
+    final_t_idx = len(reports) - 1
     
     # Pre-calculate Global Max/Min and Global Account Ordering for Animation Sequences
     global_max_bs = max([max(r['assets'], r['total_liab_eq']) for r in reports])
@@ -362,15 +377,15 @@ def main():
     fixed_expenses = get_top_k(global_expenses, args.top_k)
 
     draw_bs_block_chart(final_report, os.path.join(args.out_dir, "000_0_1__BS_Block_Total.png"),
-                        fixed_assets_order=fixed_assets, fixed_liabs_order=fixed_liabs, top_k=args.top_k)
+                        fixed_assets_order=fixed_assets, fixed_liabs_order=fixed_liabs, t_idx=final_t_idx, top_k=args.top_k, time_labels=time_labels)
     draw_pl_waterfall(final_report, os.path.join(args.out_dir, "000_0_1__PL_Waterfall_Total.png"),
-                      fixed_expenses_order=fixed_expenses, top_k=args.top_k)
+                      fixed_expenses_order=fixed_expenses, t_idx=final_t_idx, top_k=args.top_k, time_labels=time_labels)
 
     # Generate B/S Trend Image
-    draw_bs_trend(reports, os.path.join(args.out_dir, "000_0_1__BS_Trend.png"), fixed_assets, fixed_liabs)
+    draw_bs_trend(reports, os.path.join(args.out_dir, "000_0_1__BS_Trend.png"), fixed_assets, fixed_liabs, time_labels=time_labels)
 
     # Generate P/L Trend Image
-    draw_pl_trend(reports, os.path.join(args.out_dir, "000_0_1__PL_Trend.png"), fixed_expenses)
+    draw_pl_trend(reports, os.path.join(args.out_dir, "000_0_1__PL_Trend.png"), fixed_expenses, time_labels=time_labels)
 
     # 2. Individual Sequence Images (for every time step)
     seq_dir = args.seq_dir
@@ -378,18 +393,20 @@ def main():
     for i, r in enumerate(reports):
         # Format index to have leading zeros for sorting
         idx_str = f"{i:03d}"
-        out_path = os.path.join(seq_dir, f"BS_Block_{idx_str}_{r['week']}.png")
+        week_str = str(r['week']).replace('/', '_')
+        out_path = os.path.join(seq_dir, f"BS_Block_{idx_str}_{week_str}.png")
         draw_bs_block_chart(r, out_path, 
-                            max_y=global_max_bs, fixed_assets_order=fixed_assets, fixed_liabs_order=fixed_liabs, t_idx=i)
+                            max_y=global_max_bs, fixed_assets_order=fixed_assets, fixed_liabs_order=fixed_liabs, t_idx=i, time_labels=time_labels)
 
         print("✅ " + out_path)
 
     for i, r in enumerate(reports):
         # Format index to have leading zeros for sorting
         idx_str = f"{i:03d}"
-        out_path = os.path.join(seq_dir, f"PL_Waterfall_{idx_str}_{r['week']}.png")
+        week_str = str(r['week']).replace('/', '_')
+        out_path = os.path.join(seq_dir, f"PL_Waterfall_{idx_str}_{week_str}.png")
         draw_pl_waterfall(r, out_path, 
-                          min_y=global_min_pl, max_y=global_max_pl, fixed_expenses_order=fixed_expenses, t_idx=i)
+                          min_y=global_min_pl, max_y=global_max_pl, fixed_expenses_order=fixed_expenses, t_idx=i, time_labels=time_labels)
 
         print("✅ " + out_path)
     

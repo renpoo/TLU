@@ -193,12 +193,26 @@ def draw_matrix_heatmap(ax, pivot_df, cmap, cbar_label, title_text, axis_labels,
     return
 
 def save_plot(fig, out_dir: str, filename: str):
+    import time
     os.makedirs(out_dir, exist_ok=True)
     base_name = os.path.splitext(filename)[0]
     out_path = os.path.join(out_dir, f"{base_name}.png")
     fig.tight_layout() # Compress contents to fit inside the fixed figsize
-    fig.savefig(out_path, dpi=150) # Removed bbox_inches='tight' to strictly fix image dimensions
-    print(f"✅ Saved: {out_path}", file=sys.stderr)
+    
+    max_retries = 5
+    for attempt in range(max_retries):
+        try:
+            fig.savefig(out_path, dpi=150) # Removed bbox_inches='tight' to strictly fix image dimensions
+            print(f"✅ Saved: {out_path}", file=sys.stderr)
+            break
+        except Exception as e:
+            if attempt < max_retries - 1:
+                print(f"[WARN] Failed to save {out_path} (temporary lock?). Retrying in 0.5s... (Attempt {attempt+1}/{max_retries}): {e}", file=sys.stderr)
+                time.sleep(0.5)
+                os.makedirs(out_dir, exist_ok=True)
+            else:
+                print(f"[ERROR] Hard failure saving {out_path} after {max_retries} attempts: {e}", file=sys.stderr)
+                raise e
     
     # Intentionally freeze execution natively displaying GUI interactively
     if '--interactive' in sys.argv:
