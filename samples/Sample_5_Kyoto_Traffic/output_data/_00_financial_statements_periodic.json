@@ -3,17 +3,17 @@
     "week": "2020-01",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 10058.0,
+    "equity": 58.0,
     "net_income": -58.0,
-    "total_liab_eq": 10000.0,
+    "total_liab_eq": 0.0,
     "revenue": -208.0,
     "expense": -150.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        10058.0
+        58.0
       ]
     ],
     "pl_items": [
@@ -143,8 +143,8 @@
         "GojoHorikawa",
         "Equity",
         7028.0,
-        17086.0,
-        10058.0
+        7086.0,
+        58.0
       ],
       [
         "GojoKarasuma",
@@ -320,17 +320,17 @@
     "week": "2020-02",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 10063.0,
+    "equity": 5.0,
     "net_income": -5.0,
-    "total_liab_eq": 10058.0,
+    "total_liab_eq": 0.0,
     "revenue": -38.0,
     "expense": -33.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        10063.0
+        5.0
       ]
     ],
     "pl_items": [
@@ -459,9 +459,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        11361.0,
-        21424.0,
-        10063.0
+        4333.0,
+        4338.0,
+        5.0
       ],
       [
         "GojoKarasuma",
@@ -637,17 +637,17 @@
     "week": "2020-03",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 10024.0,
+    "equity": -39.0,
     "net_income": 39.0,
-    "total_liab_eq": 10063.0,
+    "total_liab_eq": 0.0,
     "revenue": 351.0,
     "expense": 312.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        10024.0
+        -39.0
       ]
     ],
     "pl_items": [
@@ -776,9 +776,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        18395.0,
-        28419.0,
-        10024.0
+        7034.0,
+        6995.0,
+        -39.0
       ],
       [
         "GojoKarasuma",
@@ -954,17 +954,17 @@
     "week": "2020-04",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 10045.0,
+    "equity": 21.0,
     "net_income": -21.0,
-    "total_liab_eq": 10024.0,
+    "total_liab_eq": 0.0,
     "revenue": 198.0,
     "expense": 219.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        10045.0
+        21.0
       ]
     ],
     "pl_items": [
@@ -1093,9 +1093,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        23102.0,
-        33147.0,
-        10045.0
+        4707.0,
+        4728.0,
+        21.0
       ],
       [
         "GojoKarasuma",
@@ -1271,17 +1271,17 @@
     "week": "2020-05",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 10036.0,
+    "equity": -9.0,
     "net_income": 9.0,
-    "total_liab_eq": 10045.0,
+    "total_liab_eq": 0.0,
     "revenue": 64.0,
     "expense": 55.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        10036.0
+        -9.0
       ]
     ],
     "pl_items": [
@@ -1410,9 +1410,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        30209.0,
-        40245.0,
-        10036.0
+        7107.0,
+        7098.0,
+        -9.0
       ],
       [
         "GojoKarasuma",
@@ -1588,17 +1588,17 @@
     "week": "2020-06",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 10054.0,
+    "equity": 18.0,
     "net_income": -18.0,
-    "total_liab_eq": 10036.0,
+    "total_liab_eq": 0.0,
     "revenue": -139.0,
     "expense": -121.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        10054.0
+        18.0
       ]
     ],
     "pl_items": [
@@ -1727,9 +1727,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        34866.0,
-        44920.0,
-        10054.0
+        4657.0,
+        4675.0,
+        18.0
       ],
       [
         "GojoKarasuma",
@@ -1905,17 +1905,17 @@
     "week": "2020-07",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 10106.0,
+    "equity": 52.0,
     "net_income": -52.0,
-    "total_liab_eq": 10054.0,
+    "total_liab_eq": 0.0,
     "revenue": 144.0,
     "expense": 196.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        10106.0
+        52.0
       ]
     ],
     "pl_items": [
@@ -2044,9 +2044,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        41562.0,
-        51668.0,
-        10106.0
+        6696.0,
+        6748.0,
+        52.0
       ],
       [
         "GojoKarasuma",
@@ -2222,17 +2222,17 @@
     "week": "2020-08",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 10131.0,
+    "equity": 25.0,
     "net_income": -25.0,
-    "total_liab_eq": 10106.0,
+    "total_liab_eq": 0.0,
     "revenue": 50.0,
     "expense": 75.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        10131.0
+        25.0
       ]
     ],
     "pl_items": [
@@ -2361,9 +2361,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        46819.0,
-        56950.0,
-        10131.0
+        5257.0,
+        5282.0,
+        25.0
       ],
       [
         "GojoKarasuma",
@@ -2539,17 +2539,17 @@
     "week": "2020-09",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 10105.0,
+    "equity": -26.0,
     "net_income": 26.0,
-    "total_liab_eq": 10131.0,
+    "total_liab_eq": 0.0,
     "revenue": -46.0,
     "expense": -72.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        10105.0
+        -26.0
       ]
     ],
     "pl_items": [
@@ -2678,9 +2678,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        53282.0,
-        63387.0,
-        10105.0
+        6463.0,
+        6437.0,
+        -26.0
       ],
       [
         "GojoKarasuma",
@@ -2856,17 +2856,17 @@
     "week": "2020-10",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 9984.0,
+    "equity": -121.0,
     "net_income": 121.0,
-    "total_liab_eq": 10105.0,
+    "total_liab_eq": 0.0,
     "revenue": -14.0,
     "expense": -135.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        9984.0
+        -121.0
       ]
     ],
     "pl_items": [
@@ -2995,9 +2995,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        58657.0,
-        68641.0,
-        9984.0
+        5375.0,
+        5254.0,
+        -121.0
       ],
       [
         "GojoKarasuma",
@@ -3173,17 +3173,17 @@
     "week": "2020-11",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 9944.0,
+    "equity": -40.0,
     "net_income": 40.0,
-    "total_liab_eq": 9984.0,
+    "total_liab_eq": 0.0,
     "revenue": -193.0,
     "expense": -233.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        9944.0
+        -40.0
       ]
     ],
     "pl_items": [
@@ -3312,9 +3312,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        65184.0,
-        75128.0,
-        9944.0
+        6527.0,
+        6487.0,
+        -40.0
       ],
       [
         "GojoKarasuma",
@@ -3490,17 +3490,17 @@
     "week": "2020-12",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 9965.0,
+    "equity": 21.0,
     "net_income": -21.0,
-    "total_liab_eq": 9944.0,
+    "total_liab_eq": 0.0,
     "revenue": 2569.0,
     "expense": 2590.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        9965.0
+        21.0
       ]
     ],
     "pl_items": [
@@ -3629,9 +3629,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        70416.0,
-        80381.0,
-        9965.0
+        5232.0,
+        5253.0,
+        21.0
       ],
       [
         "GojoKarasuma",
@@ -3807,17 +3807,17 @@
     "week": "2021-01",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 9947.0,
+    "equity": -18.0,
     "net_income": 18.0,
-    "total_liab_eq": 9965.0,
+    "total_liab_eq": 0.0,
     "revenue": 16160.0,
     "expense": 16142.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        9947.0
+        -18.0
       ]
     ],
     "pl_items": [
@@ -3946,9 +3946,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        76936.0,
-        86883.0,
-        9947.0
+        6520.0,
+        6502.0,
+        -18.0
       ],
       [
         "GojoKarasuma",
@@ -4124,17 +4124,17 @@
     "week": "2021-02",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 9991.0,
+    "equity": 44.0,
     "net_income": -44.0,
-    "total_liab_eq": 9947.0,
+    "total_liab_eq": 0.0,
     "revenue": 13597.0,
     "expense": 13641.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        9991.0
+        44.0
       ]
     ],
     "pl_items": [
@@ -4263,9 +4263,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        82005.0,
-        91996.0,
-        9991.0
+        5069.0,
+        5113.0,
+        44.0
       ],
       [
         "GojoKarasuma",
@@ -4441,17 +4441,17 @@
     "week": "2021-03",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 9949.0,
+    "equity": -42.0,
     "net_income": 42.0,
-    "total_liab_eq": 9991.0,
+    "total_liab_eq": 0.0,
     "revenue": 6864.0,
     "expense": 6822.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        9949.0
+        -42.0
       ]
     ],
     "pl_items": [
@@ -4580,9 +4580,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        87834.0,
-        97783.0,
-        9949.0
+        5829.0,
+        5787.0,
+        -42.0
       ],
       [
         "GojoKarasuma",
@@ -4758,17 +4758,17 @@
     "week": "2021-04",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 9896.0,
+    "equity": -53.0,
     "net_income": 53.0,
-    "total_liab_eq": 9949.0,
+    "total_liab_eq": 0.0,
     "revenue": 222.0,
     "expense": 169.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        9896.0
+        -53.0
       ]
     ],
     "pl_items": [
@@ -4897,9 +4897,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        93636.0,
-        103532.0,
-        9896.0
+        5802.0,
+        5749.0,
+        -53.0
       ],
       [
         "GojoKarasuma",
@@ -5075,17 +5075,17 @@
     "week": "2021-05",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 9858.0,
+    "equity": -38.0,
     "net_income": 38.0,
-    "total_liab_eq": 9896.0,
+    "total_liab_eq": 0.0,
     "revenue": -257.0,
     "expense": -295.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        9858.0
+        -38.0
       ]
     ],
     "pl_items": [
@@ -5214,9 +5214,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        99515.0,
-        109373.0,
-        9858.0
+        5879.0,
+        5841.0,
+        -38.0
       ],
       [
         "GojoKarasuma",
@@ -5392,17 +5392,17 @@
     "week": "2021-06",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 9761.0,
+    "equity": -97.0,
     "net_income": 97.0,
-    "total_liab_eq": 9858.0,
+    "total_liab_eq": 0.0,
     "revenue": 220.0,
     "expense": 123.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        9761.0
+        -97.0
       ]
     ],
     "pl_items": [
@@ -5531,9 +5531,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        105531.0,
-        115292.0,
-        9761.0
+        6016.0,
+        5919.0,
+        -97.0
       ],
       [
         "GojoKarasuma",
@@ -5709,17 +5709,17 @@
     "week": "2021-07",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 9814.0,
+    "equity": 53.0,
     "net_income": -53.0,
-    "total_liab_eq": 9761.0,
+    "total_liab_eq": 0.0,
     "revenue": -491.0,
     "expense": -438.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        9814.0
+        53.0
       ]
     ],
     "pl_items": [
@@ -5848,9 +5848,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        111090.0,
-        120904.0,
-        9814.0
+        5559.0,
+        5612.0,
+        53.0
       ],
       [
         "GojoKarasuma",
@@ -6026,17 +6026,17 @@
     "week": "2021-08",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 9800.0,
+    "equity": -14.0,
     "net_income": 14.0,
-    "total_liab_eq": 9814.0,
+    "total_liab_eq": 0.0,
     "revenue": 502.0,
     "expense": 488.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        9800.0
+        -14.0
       ]
     ],
     "pl_items": [
@@ -6165,9 +6165,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        117477.0,
-        127277.0,
-        9800.0
+        6387.0,
+        6373.0,
+        -14.0
       ],
       [
         "GojoKarasuma",
@@ -6343,17 +6343,17 @@
     "week": "2021-09",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 9747.0,
+    "equity": -53.0,
     "net_income": 53.0,
-    "total_liab_eq": 9800.0,
+    "total_liab_eq": 0.0,
     "revenue": -244.0,
     "expense": -297.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        9747.0
+        -53.0
       ]
     ],
     "pl_items": [
@@ -6482,9 +6482,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        122744.0,
-        132491.0,
-        9747.0
+        5267.0,
+        5214.0,
+        -53.0
       ],
       [
         "GojoKarasuma",
@@ -6660,17 +6660,17 @@
     "week": "2021-10",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 9698.0,
+    "equity": -49.0,
     "net_income": 49.0,
-    "total_liab_eq": 9747.0,
+    "total_liab_eq": 0.0,
     "revenue": -39.0,
     "expense": -88.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        9698.0
+        -49.0
       ]
     ],
     "pl_items": [
@@ -6799,9 +6799,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        129513.0,
-        139211.0,
-        9698.0
+        6769.0,
+        6720.0,
+        -49.0
       ],
       [
         "GojoKarasuma",
@@ -6977,17 +6977,17 @@
     "week": "2021-11",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 9643.0,
+    "equity": -55.0,
     "net_income": 55.0,
-    "total_liab_eq": 9698.0,
+    "total_liab_eq": 0.0,
     "revenue": 91.0,
     "expense": 36.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        9643.0
+        -55.0
       ]
     ],
     "pl_items": [
@@ -7116,9 +7116,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        134474.0,
-        144117.0,
-        9643.0
+        4961.0,
+        4906.0,
+        -55.0
       ],
       [
         "GojoKarasuma",
@@ -7294,17 +7294,17 @@
     "week": "2021-12",
     "assets": 0.0,
     "liabilities": 0.0,
-    "equity": 9659.0,
+    "equity": 16.0,
     "net_income": -16.0,
-    "total_liab_eq": 9643.0,
+    "total_liab_eq": 0.0,
     "revenue": 28.0,
     "expense": 44.0,
-    "is_balanced": false,
+    "is_balanced": true,
     "bs_items": [
       [
         "GojoHorikawa",
         "Equity",
-        9659.0
+        16.0
       ]
     ],
     "pl_items": [
@@ -7433,9 +7433,9 @@
       [
         "GojoHorikawa",
         "Equity",
-        139283.0,
-        148942.0,
-        9659.0
+        4809.0,
+        4825.0,
+        16.0
       ],
       [
         "GojoKarasuma",
