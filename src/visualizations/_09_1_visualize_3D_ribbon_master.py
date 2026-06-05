@@ -81,8 +81,11 @@ def main():
     node_labels = load_node_labels(args.node_map, max_n)
     time_labels = load_time_labels(args.time_map, max_t)
     
-    z_matrix = df.pivot(index='node_idx', columns='t_idx', values=args.target_col).reindex(index=range(max_n), columns=range(max_t)).fillna(0).values
-    c_matrix = df.pivot(index='node_idx', columns='t_idx', values=color_target).reindex(index=range(max_n), columns=range(max_t)).fillna(0).values
+    cols_to_keep = list(set(['node_idx', 't_idx', args.target_col, color_target]))
+    df_unique = df[cols_to_keep].groupby(['node_idx', 't_idx']).first().reset_index()
+
+    z_matrix = df_unique.pivot(index='node_idx', columns='t_idx', values=args.target_col).reindex(index=range(max_n), columns=range(max_t)).fillna(0).values
+    c_matrix = df_unique.pivot(index='node_idx', columns='t_idx', values=color_target).reindex(index=range(max_n), columns=range(max_t)).fillna(0).values
 
     # Luxuriously use the graph area to fill the screen (since there is no legend)
     fig = plt.figure(figsize=(18, 14))
