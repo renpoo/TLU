@@ -20,7 +20,7 @@ TLUの検査レポートを作成する際、事実を時系列で徐々に明�
 
 TLUの各分析モジュールから出力されたグラフとデータを読み解く際、まずは各モジュールに対応する数理物理フィルター解説ドキュメント（`samples/` 以下に分割配置）：
 * **[000_0: 統計](samples/000_0_Basic_Statistics.md)** / **[000_1: 運動学](samples/000_1_Dynamics_Kinematics.md)** / **[000_2: 剛性・PCA](samples/000_2_Stiffness_PCA.md)**
-* **[001_1: 熱力学](samples/001_1_Thermodynamics.md)** / **[001_2: エントロピー](samples/001_2_Entropy.md)**
+* **[001_1: 熱力学](samples/001_1_Thermodynamics.md)** / **[001_2: 局所エントロピー](samples/001_2_Local_Entropy.md)** / **[001_3: 局所温度](samples/001_3_Local_Temperature.md)** / **[001_4: 局所勾配](samples/001_4_Local_Gradient.md)** / **[001_5: 局所内部エネルギー](samples/001_5_Local_Internal_Energy.md)**
 * **[002_1: 情報幾何](samples/002_1_Information_Geometry.md)** / **[002_2: 保存則・監査](samples/002_2_Forensics.md)**
 * **[003_1: 逆運動学](samples/003_1_Inverse_Kinematics.md)**
 * **[004_1: LQR制御](samples/004_1_Control_Theory.md)** / **[004_2: 介入感度](samples/004_2_Stability.md)**
@@ -31,16 +31,16 @@ TLUの各分析モジュールから出力されたグラフとデータを読�
 
 1. **財務基礎状態と基本統計量 (Basic Statistics & Foundation - Prefix: `000_0`):**
     * **東洋医学メタファー:** 「骨格・気血の総量、脈の乱れ・発作」
-    * **分析内容:** B/SおよびP/Lの静的構成、Z-Scoreの時系列推移、KDE分布の歪度・尖度によるファットテールリスクの検出。
+    * **分析内容:** B/SおよびP/Lの静的構成、Z-Score의 시계열 추이 (時系列推移)、KDE分布の歪度・尖度によるファットテールリスクの検出。
 2. **運動学と動的状態空間 (Kinematics & State-Space - Prefix: `000_1`):**
     * **東洋医学メタファー:** 「肩こり・血栓・肥大化・運動位相」
     * **分析内容:** 慣性（Inertia）と粘性（Viscosity）の偏り、および**3D状態空間軌道**（3D Ribbon Plot）。軌道リボンの「ねじれ」「一点への固着」「爆発的発散」からシステムの動的安定性とカオス状態を特定します。
 3. **剛性と主成分分析 (Stiffness & PCA - Prefix: `000_2`):**
     * **東洋医学メタファー:** 「骨硬化・関節拘縮・関節のすり減り」
     * **分析内容:** 剛性行列（Stiffness Matrix）の時系列進化（結合の硬直化・ロック）、主成分分析（PCA）の支配軸（PC1）寄与率の入れ替わり、および固有ベクトル進化（Eigenvector Evolution）による結合剛性の偏在特定。
-4. **熱力学とエントロピー (Thermodynamics & Entropy - Prefix: `001_1`, `001_2`):**
-    * **東洋医学メタファー:** 「気の滞り・自律神経失調・熱的死・コールドアイランド」
-    * **分析内容:** マクロ・ミクロのエントロピー（$S, s_i$）と自由エネルギー（$F$）のT-S図。Lag行列による反応遅延の集中箇所、および**3D局所熱力学プロット**による局所的な冷化（凍結）や温度勾配（`local_grad_t`）の検出。
+4. **熱力学とエントロピー (Thermodynamics & Entropy - Prefix: `001_1`〜`001_5`):**
+    * **東洋医学メタファー:** 「気の滞り・自律神経失調・熱的死・コールドアイランド・流量の盛衰」
+    * **分析内容:** マクロ・ミクロのエントロピー（$S, s_i$）と自由エネルギー（$F$）のT-S図。Lag行列による反応遅延の集中箇所、および**3D局所熱力学プロット**による局所的な冷化（凍結）、温度勾配（`local_grad_t`）、流量規模（内部エネルギー $u_i$）の検出。
 5. **情報幾何学と相対保存則 (Information Geometry & Forensics - Prefix: `002_1`, `002_2`):**
     * **東洋医学メタファー:** 「経絡の断裂・病巣の焦点・大出血」
     * **分析内容:** キルヒホッフの電流則（質量保存則）に基づく相対漏洩率（`relative_leak_ratio` / `conservation_residual`）の残差確認、および**3Dミクロ情報幾何学プロット**によるKL DriftやZ-Scoreの時空間上の尖塔状の壁（病因）の特定。

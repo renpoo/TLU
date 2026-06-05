@@ -87,7 +87,7 @@ In urban traffic gridlocks (Sample 5), the structure of the stiffness matrix cha
 
 In the user funding network (Sample 7), when colluding bot accounts (`USR_003` and `USR_004`) begin matched trades, the PC1 contribution ratio instantly spikes to **`99.67%`**.
 
-* **Eigenvector Evolution:** [Sample 7 Eigenvector Evolution](../samples/Sample_7_Market_Users_Weekly/readme_plots/000_2_3__eigenvector_evolution.png)
+* **Eigenvector Evolution:** [Sample 7 Eigenvector Evolution](../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_3__eigenvector_evolution.png)
   * *Key Insight:* At the moment of W41 (`t=40`), the PC1 loading (eigenvector direction) concentrates abnormally on `USR_004` (`0.7287`) and `USR_003` (`-0.6820`), clearly exposing how the mechanical stiffness between these two accounts is locked to almost 100% (dominance by matched orders).
 
 #### ⚕️ Audit Criteria & Primary Findings
@@ -209,7 +209,7 @@ In a single-sided journal entry error (Sample 3), residuals temporarily spike up
 
 In market manipulation (Sample 7), high-speed matched orders by a collusive group trigger drastic changes in information geometric transition probabilities.
 
-* **3D Micro KL Drift (Clique Wall):** [Sample 7 3D Micro KL Drift](../samples/Sample_7_Market_Users_Weekly/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+* **3D Micro KL Drift (Clique Wall):** [Sample 7 3D Micro KL Drift](../samples/Sample_7_Market_Cash_Flow/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
   * *Key Insight:* Along the coordinate axes of retail investors who fell into panic selling (e.g., `USR_010`), a **"geometric fortress wall"** stands tall, far exceeding the background noise of normal trading. This proves the aftermath of the market's liquidity being hijacked by the specific collusive relationship (PC1).
 
 #### ⚕️ Audit Criteria & Primary Findings
@@ -272,13 +272,13 @@ $$u(t) = -K_{lqr} \cdot X(t)$$
 #### 🔴 Boundary Saturation of System Stability (Sample 5, 7)
 
 * **Traffic Gridlock Stability:** [Sample 5 Stability Graph](../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_2__system_stability.png)
-* **Collusive Fund Transfer Stability:** [Sample 7 Stability Graph](../samples/Sample_7_Market_Users_Weekly/readme_plots/004_1_2__system_stability.png)
+* **Collusive Fund Transfer Stability:** [Sample 7 Stability Graph](../samples/Sample_7_Market_Cash_Flow/readme_plots/004_1_2__system_stability.png)
   * *Key Insight:* The spectral radius clings to a flat horizontal line at exactly `1.00`, proving that the system has completely lost its autonomous damping capability and has formed a closed permanent attractor (deadlock) due to pathological recirculation.
 
 #### ⚕️ Acupoint Identification via LQR Sensitivity
 
 * **Sample 5 LQR Control Sensitivity Space:** [Sample 5 LQR Space](../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_3__control_lqr_performance_space.png)
-* **Sample 7 LQR Control Sensitivity Space:** [Sample 7 LQR Space](../samples/Sample_7_Market_Users_Weekly/readme_plots/004_1_3__control_lqr_performance_space.png)
+* **Sample 7 LQR Control Sensitivity Space:** [Sample 7 LQR Space](../samples/Sample_7_Market_Cash_Flow/readme_plots/004_1_3__control_lqr_performance_space.png)
   * *Key Insight:* "Sharp yellow peaks" on the graph point to nodes with the highest intervention sensitivity. In Sample 5, these are `23_四条烏丸` (Shijo-Karasuma) and `13_二条烏丸` (Nijo-Karasuma) (sensitivity `41.52`), and in Sample 7, they are the recirculation hubs `USR_003` and `USR_004`. This indicates that applying dynamic limits to these nodes can disrupt the recirculation loop at the lowest intervention cost.
 
 ---
@@ -301,7 +301,7 @@ TLU calculates **"Phase Drift"** and coherence matrices to measure time-series c
 
 In ultra-high-speed matched orders in stock markets (Sample 7), the phase difference between two colluding parties is locked close to zero.
 
-* **Phase Drift Heatmap:** [Sample 7 Phase Drift Heatmap](../samples/Sample_7_Market_Users_Weekly/readme_plots/005_1_2__phase_drift_heatmap.png)
+* **Phase Drift Heatmap:** [Sample 7 Phase Drift Heatmap](../samples/Sample_7_Market_Cash_Flow/readme_plots/005_1_2__phase_drift_heatmap.png)
   * *Key Insight:* Only between the specific user pair (`USR_003` and `USR_004`) does the variance in phase difference completely vanish, creating a pitch-black band (phase difference `0.00`) on the heatmap. This is wave-mechanical proof of market manipulation, showing they are not ordering independently and randomly, but are "perfectly synchronized to play catch in milliseconds."
 
 #### ⚕️ Audit Criteria & Primary Findings

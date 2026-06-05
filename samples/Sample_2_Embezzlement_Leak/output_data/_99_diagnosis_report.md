@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Statistical Upgrade V2)
 
 **Target Environment:** `samples/Sample_2_Embezzlement_Leak`
-**Date Analyzed:** 2026-06-05 21:44:48
+**Date Analyzed:** 2026-06-06 06:40:55
 
 ## 1. Final Diagnosis
 

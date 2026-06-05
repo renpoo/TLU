@@ -48,8 +48,8 @@
     正常な市場では、多数の参加者による注文がぶつかり合うため、各エッジ（取引経路）には力学的な緊張（Edge Stress）が張られています。しかし、ボット同士が裏で同期して注文をキャッチボールしている場合、注文の不確実性がゼロとなり、エッジストレスが極限の **`0.00`** へと崩壊します。
     * *参照:* 二部グラフ検証（Sample 6）では、特定のボット群と操縦銘柄の接続剛性が異常凝固する一方、エッジストレスが `0.00` に沈み込み、トポロジーの緊張が消え失せる「虚無の還流」が捉えられています。
 
-    ![Sample 6 Network Topology](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00051.png)
-    *図: [Sample 6 ネットワークトポロジー(t=51)](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/002_1_2__network_topology.t.00051.png) — 特定銘柄と複数のボット口座（`USR_003`/`USR_004`等）の間で強固に結合された、閉鎖的な取引還流構造。*
+    ![Sample 6 Network Topology](../../samples/Sample_6_Market_Stock_Flow/readme_plots/002_1_2__network_topology.t.00051.png)
+    *図: [Sample 6 ネットワークトポロジー(t=51)](../../samples/Sample_6_Market_Stock_Flow/readme_plots/002_1_2__network_topology.t.00051.png) — 特定銘柄と複数のボット口座（`USR_003`/`USR_004`等）の間で強固に結合された、閉鎖的な取引還流構造。*
 
 ---
 
@@ -64,8 +64,8 @@
 1. **固有ベクトル進化の剛性ロック (PCA Stiffness Lock):**
     共謀アカウントが対当取引を発生させた瞬間、主成分分析（PCA）のPC1寄与率がほぼ100%（Sample 7では **`99.67%`** ）に跳ね上がります。この時、PC1の固有ベクトル loadings が共謀口座（`USR_003` と `USR_004`）に異常集中し、他の健全な取引関係を力学的に圧倒・拘束（Stiffness Lock）している様子が検出されます。
 
-    ![Sample 7 Eigenvector Evolution](../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_2_3__eigenvector_evolution.png)
-    *図: [Sample 7 固有ベクトル進化図](../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_2_3__eigenvector_evolution.png) — 共謀取引開始（W41/t=40）の瞬間、PC1ローディングが両口座に異常偏在（剛性ロック）します。*
+    ![Sample 7 Eigenvector Evolution](../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_3__eigenvector_evolution.png)
+    *図: [Sample 7 固有ベクトル進化図](../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_3__eigenvector_evolution.png) — 共謀取引開始（W41/t=40）の瞬間、PC1ローディングが両口座に異常偏在（剛性ロック）します。*
 
 2. **静穏期におけるPC2への「退避」の看破:**
     共謀者が監査の目を盗むため、一時的に循環取引を休止（静穏期）させることがあります。このとき、PC1の loadings からは彼らの姿が消えますが、物理数学エンジンは彼らが **PC2（第2主成分）** の中に loadings **`-0.6965`** と **`0.6921`** （具体的には `t=42 / 2020-W43`）として依然として強固に退避・潜伏している「共謀の残存」を暴きます。

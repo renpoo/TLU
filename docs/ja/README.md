@@ -22,7 +22,7 @@ TLUは、複式簿記、都市交通の流れ、株式市場の取引、およ�
 
 | # | ドキュメントタイトル（英語版） | 対応する日本語版（日本語推奨） | コアコンテンツと見どころ |
 | :---: | :--- | :--- | :--- |
-| **1** | **[📂 01. Physics-Mathematics Engine Theory & Interpretation Guide](../01_Physics_Engine_Theory_and_Interpretation.md)** | 000〜005番系 数理解析ガイドの再整備（`samples/` 以下に分割配置）：<br>・**[000_0: 統計](samples/000_0_Basic_Statistics.md)** / **[000_1: 運動学](samples/000_1_Dynamics_Kinematics.md)** / **[000_2: 剛性・PCA](samples/000_2_Stiffness_PCA.md)**<br>・**[001_1: 熱力学](samples/001_1_Thermodynamics.md)** / **[001_2: エントロピー](samples/001_2_Entropy.md)**<br>・**[002_1: 情報幾何](samples/002_1_Information_Geometry.md)** / **[002_2: 保存則・監査](samples/002_2_Forensics.md)**<br>・**[003_1: 逆運動学](samples/003_1_Inverse_Kinematics.md)**<br>・**[004_1: LQR制御](samples/004_1_Control_Theory.md)** / **[004_2: 介入感度](samples/004_2_Stability.md)**<br>・**[005_1: 波動力学](samples/005_1_Wave_Mechanics.md)** / **[005_2: 1/fゆらぎ](samples/005_2_Coherence.md)** | TLUの主要8コアモジュール（000〜005番系）の数理的・物理的基礎理論と、全10個の検証サンプルに対応する実機可視化グラフをモジュールごとに分割し、元データまで遡って精査した診断解釈ガイド群。 |
+| **1** | **[📂 01. Physics-Mathematics Engine Theory & Interpretation Guide](../01_Physics_Engine_Theory_and_Interpretation.md)** | 000〜005番系 数理解析ガイドの再整備（`samples/` 以下に分割配置）：<br>・**[000_0: 統計](samples/000_0_Basic_Statistics.md)** / **[000_1: 運動学](samples/000_1_Dynamics_Kinematics.md)** / **[000_2: 剛性・PCA](samples/000_2_Stiffness_PCA.md)**<br>・**[001_1: 熱力学](samples/001_1_Thermodynamics.md)** / **[001_2: 局所エントロピー](samples/001_2_Local_Entropy.md)** / **[001_3: 局所温度](samples/001_3_Local_Temperature.md)** / **[001_4: 局所勾配](samples/001_4_Local_Gradient.md)** / **[001_5: 局所内部エネルギー](samples/001_5_Local_Internal_Energy.md)**<br>・**[002_1: 情報幾何](samples/002_1_Information_Geometry.md)** / **[002_2: 保存則・監査](samples/002_2_Forensics.md)**<br>・**[003_1: 逆運動学](samples/003_1_Inverse_Kinematics.md)**<br>・**[004_1: LQR制御](samples/004_1_Control_Theory.md)** / **[004_2: 介入感度](samples/004_2_Stability.md)**<br>・**[005_1: 波動力学](samples/005_1_Wave_Mechanics.md)** / **[005_2: 1/fゆらぎ](samples/005_2_Coherence.md)** | TLUの主要8コアモジュール（000〜005番系）の数理的・物理的基礎理論と、全10個の検証サンプルに対応する実機可視化グラフをモジュールごとに分割し、元データまで遡って精査した診断解釈ガイド群。 |
 | **2** | **[📂 02. System Architecture & Operations Guide](../02_System_Architecture_and_Operations.md)** | **[02. システム構造定義とパイプライン運用ガイド](02_System_Architecture_and_Operations.md)** | パイプライン・コンテナ運用、デザインテーマ管理（JSON）、障害込みダミー・データ生成スクリプト、および線形最適制御（LQR）シミュレーションモデル。 |
 | **3** | **[📂 03. Market Forensics & Compliance Rules](../03_Market_Forensics_Rules.md)** | **[03. 市場フォレンジック・監査ルール定義](03_Market_Forensics_Rules.md)** | ミリ秒単位の注文簿（オーダーブック）力学、ボット循環取引、二部グラフ投影 vs ユーザー間直接送金トポロジーによる共謀ネットワーク監査。 |
 | **4** | **[📂 LLM Diagnostic Manual (Supreme prompt)](../LLM_Diagnostic_Manual.md)** | **[LLM臨床検査マニュアル (Supreme Prompt)](LLM_Diagnostic_Manual.md)** | 物理数学エンジンの数値からAIが客観的なカルテを自動生成するためのプロトコル。統計的偽陽性判定と、原本データへのファクトチェック義務化。 |
@@ -127,8 +127,8 @@ TLUには、物理数学エンジンのクロスドメインな検査精度を�
 | **3** | **[🟡 会計上の単純な記帳ミス (Unbalanced Mistake)](samples/Sample_3_Unbalanced_Mistake/README.md)** | 金融 | **WARNING (記帳ミス)** | 一時的な残差およびKL幾何タワー | 気血の局部不均衡、自己治癒の余地 |
 | **4** | **[🔴 会計上の複合的な崩壊 (Composite Chaos)](samples/Sample_4_Composite_Chaos/README.md)** | 金融 | **CRITICAL (複合崩壊)** | $\rho = 0.79$, 最大残差 = $4,773.57$ | 気血の空転と出血 |
 | **5** | **[🔴 仮想京都の都市交通（デッド・ロック） (Kyoto Traffic)](samples/Sample_5_Kyoto_Traffic/README.md)** | 交通 | **CRITICAL (デッドロック)** | $\rho = 1.00$, 局所温度 $T = 547.06$ | 経絡の閉塞、滞血、対流の停止 |
-| **6** | **[🟡 相場操縦における銘柄と株主の相互関係の二部グラフ (Market Bipartite)](samples/Sample_6_Market_Bipartite_Weekly/README.md)** | 株式市場 | **HIGH (仮装約定)** | $\rho = 1.00$, PC1説明比率 = $99.67\%$ | 市場経絡の還流、虚偽の共鳴 |
-| **7** | **[🟡 相場操縦における株主間関係のみの一部グラフ (Market Users)](samples/Sample_7_Market_Users_Weekly/README.md)** | 株式市場 | **HIGH (共謀集団)** | 自由エネルギー偏歪度 = $-2.72$ | 共謀や結託、結節、暗流での還流 |
+| **6** | **[🟡 相場操縦における銘柄と株主の相互関係の二部グラフ (Market Bipartite)](samples/Sample_6_Market_Stock_Flow/README.md)** | 株式市場 | **HIGH (仮装約定)** | $\rho = 1.00$, PC1説明比率 = $99.67\%$ | 市場経絡の還流、虚偽の共鳴 |
+| **7** | **[🟡 相場操縦における株主間関係のみの一部グラフ (Market Users)](samples/Sample_7_Market_Stock_User/README.md)** | 株式市場 | **HIGH (共謀集団)** | 自由エネルギー偏歪度 = $-2.72$ | 共謀や結託、結節、暗流での還流 |
 | **8** | **[🔴 脳梗塞発症時を模した fMRI (fMRI Stroke)](samples/Sample_8_fMRI_Stroke/README.md)** | 脳機能 | **CRITICAL (血流途絶)** | 流入経路95%遮断、結合剛性固着 | 脳経絡の閉塞、局所の気血の枯渇、組織の壊死 |
 | **9** | **[🔴 てんかん発症時を模した fMRI (fMRI Seizure)](samples/Sample_9_fMRI_Seizure/README.md)** | 脳機能 | **CRITICAL (異常共振)** | $\rho = 1.00$, エントロピー垂直落下 | 脳経絡の過剰な同期、気血の暴走 |
 
@@ -140,7 +140,7 @@ TLUは、対象システムの異常を検知するだけでなく、ネット�
 
 | 金融市場 (Sample 7) | 脳神経科学 (Sample 9) |
 | :---: | :---: |
-| ![相場操縦のハブを特定](../../samples/Sample_7_Market_Users_Weekly/readme_plots/004_1_3__control_lqr_performance_space.png) | ![てんかんの震源である側頭葉を特定](../../samples/Sample_9_fMRI_Seizure/readme_plots/004_1_3__control_lqr_performance_space.png) |
+| ![相場操縦のハブを特定](../../samples/Sample_7_Market_Cash_Flow/readme_plots/004_1_3__control_lqr_performance_space.png) | ![てんかんの震源である側頭葉を特定](../../samples/Sample_9_fMRI_Seizure/readme_plots/004_1_3__control_lqr_performance_space.png) |
 | 図6a：相場操縦のハブである `USR_004` や `USR_005` を特定 | 図6b：てんかんの病的同期の震源である、側頭葉（`Temporal_Lobe`）を特定 |
 
 ---

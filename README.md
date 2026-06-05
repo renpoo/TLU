@@ -95,7 +95,7 @@ Monitors the system's useful potential—Free Energy ($F = U - TS$). If Free Ene
 
 | Healthy Normal State (Sample 0) | Pathological Heat Death (Sample 6) |
 | :---: | :---: |
-| ![Thermodynamics Normal](samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png) | ![Thermodynamics Abnormal](samples/Sample_6_Market_Bipartite_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png) |
+| ![Thermodynamics Normal](samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png) | ![Thermodynamics Abnormal](samples/Sample_6_Market_Stock_Flow/readme_plots/001_1_2__thermodynamics_energy_stack.png) |
 | *Figure 4a: Healthy accumulation of Free Energy.* | *Figure 4b: Free Energy collapsing into the negative zone.* |
 
 ---
@@ -126,8 +126,8 @@ TLU includes **10 pre-configured sample datasets** simulating both socioeconomic
 | **3** | **[🟡 Unbalanced Mistake (Input Error)](samples/Sample_3_Unbalanced_Mistake/README.md)** | Financial | **WARNING** | Transient residual & KL spike | Local Qi-Blood Imbalance, Meridian Sprain |
 | **4** | **[🔴 Composite Chaos (Combined Anomalies)](samples/Sample_4_Composite_Chaos/README.md)** | Financial | **CRITICAL** | $\rho = 0.79$, Residual = $4,773.57$ | Depletion of Qi & Blood, Recirculation Collapse |
 | **5** | **[🔴 Kyoto Traffic (Deadlocked Intersections)](samples/Sample_5_Kyoto_Traffic/README.md)** | Traffic | **CRITICAL** | $\rho = 1.00$, Temp $T = 547.06$ | Meridian Obstruction, Qi Stagnation & Blood Stasis |
-| **6** | **[🟡 Market Bipartite (Matched Trades)](samples/Sample_6_Market_Bipartite_Weekly/README.md)** | Stock Market | **HIGH** | $\rho = 1.00$, PC1 = $99.67\%$ | Market Meridian Recirculation, Recirculation Lock |
-| **7** | **[🟡 Market Users (Collusion Syndicate)](samples/Sample_7_Market_Users_Weekly/README.md)** | Stock Market | **HIGH** | Free Energy Skew = $-2.72$ | Collusive Syndicate, Dark Undercurrent Recirculation |
+| **6** | **[🟡 Market Bipartite (Matched Trades)](samples/Sample_6_Market_Stock_Flow/README.md)** | Stock Market | **HIGH** | $\rho = 1.00$, PC1 = $99.67\%$ | Market Meridian Recirculation, Recirculation Lock |
+| **7** | **[🟡 Market Users (Collusion Syndicate)](samples/Sample_7_Market_Cash_Flow/README.md)** | Stock Market | **HIGH** | Free Energy Skew = $-2.72$ | Collusive Syndicate, Dark Undercurrent Recirculation |
 | **8** | **[🔴 fMRI Stroke (Cerebral Infarction)](samples/Sample_8_fMRI_Stroke/README.md)** | Brain fMRI | **CRITICAL** | Inflow cut 95%, local Rigid Lock | Brain Meridian Obstruction, Local Qi-Blood Depletion |
 | **9** | **[🔴 fMRI Seizure (Epileptic Seizure)](samples/Sample_9_fMRI_Seizure/README.md)** | Brain fMRI | **CRITICAL** | $\rho = 1.00$, Entropy collapse | Brain Meridian Hypersynchrony, Qi-Blood Runaway |
 

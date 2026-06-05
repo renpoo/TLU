@@ -18,9 +18,9 @@
 It is extremely difficult to detect this anomaly using traditional management dashboards where users (investors) are nodes and fund inflows/outflows between users are edges. Below are the cumulative volume (P/L equivalent) and stock (B/S equivalent) charts and weekly trends across the entire period:
 
 * **P/L Equivalent (Total Flow per User):**
-    ![P/L Trend](../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_0_1__PL_Trend.png)
+    ![P/L Trend](../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_0_1__PL_Trend.png)
 * **B/S Equivalent (Unbalanced Stock Accumulation):**
-    ![B/S Trend](../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_0_1__BS_Trend.png)
+    ![B/S Trend](../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_0_1__BS_Trend.png)
 
 **【Blind Spots of Traditional Audits】**
 Aggregating the net income (net assets change from the initial state) of individual users (accounts) at Simulation Week 52 (final period) yields:
@@ -58,23 +58,23 @@ The maximum spectral radius computed from the adjacency connection matrix in the
 This is mathematical proof that instead of new capital entering the market and circulating, energy (mass) is permanently recycled only between the specific pair `USR_003 -> USR_004 -> USR_003`, causing recirculation lock (thrombosis / organized clot).
 
 * **System Stability Index (Spectral Radius):**
-    ![System Stability](../../samples/Sample_7_Market_Users_Weekly/readme_plots/004_1_2__system_stability.png)
+    ![System Stability](../../samples/Sample_7_Market_Cash_Flow/readme_plots/004_1_2__system_stability.png)
 
 * **Network Topology 5-Point Sequence:**
   * **① Start (t=0 / 2020-W01):**
-        ![Topology t0](../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00000.png)
+        ![Topology t0](../../samples/Sample_7_Market_Cash_Flow/readme_plots/002_1_2__network_topology.t.00000.png)
         Initial state. All users disperse and circulate funds evenly; no recirculation loop exists.
   * **② Just Before Change (t=38 / 2020-W39):**
-        ![Topology t38](../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00038.png)
+        ![Topology t38](../../samples/Sample_7_Market_Cash_Flow/readme_plots/002_1_2__network_topology.t.00038.png)
         Before the anomaly. Topological stability is maintained.
   * **③ The Exact Point of Change (t=39 / 2020-W40):**
-        ![Topology t39](../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00039.png)
+        ![Topology t39](../../samples/Sample_7_Market_Cash_Flow/readme_plots/002_1_2__network_topology.t.00039.png)
         The moment collusive trading triggers. An extremely thick bidirectional edge forms between `USR_003` and `USR_004`, clearly visualizing the collusive group.
   * **④ Immediately After Change (t=40 / 2020-W41):**
-        ![Topology t40](../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00040.png)
+        ![Topology t40](../../samples/Sample_7_Market_Cash_Flow/readme_plots/002_1_2__network_topology.t.00040.png)
         Immediately after collusive trading. The collusive edge persists as the topological attractor of the entire system.
   * **⑤ End (t=51 / 2020-W52):**
-        ![Topology t51](../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_1_2__network_topology.t.00051.png)
+        ![Topology t51](../../samples/Sample_7_Market_Cash_Flow/readme_plots/002_1_2__network_topology.t.00051.png)
         Final state. Although the temporary burst has ended, connection stiffness between users remains distorted.
 
 ### 4.2. Rigidity of Collusive Group & Proof of Stiffness Lock via Eigenvector Evolution
@@ -84,7 +84,7 @@ In the direct user graph, since no physical structural connections exist, Stiffn
 However, tracking the spatiotemporal evolution of the dominant eigenspace of the Stiffness Matrix using PCA (**"Eigenvector Evolution Chart (`000_2_3__eigenvector_evolution.png`)"**) vividly depicts how the PC1 component grows abnormally and locks the colluding accounts.
 
 * **Eigenvector Evolution:**
-    ![Eigenvector Evolution](../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_2_3__eigenvector_evolution.png)
+    ![Eigenvector Evolution](../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_3__eigenvector_evolution.png)
 
 **【Anomaly Analysis based on the Eigenvector Evolution Chart】**
 
@@ -100,7 +100,7 @@ However, tracking the spatiotemporal evolution of the dominant eigenspace of the
    PC1 contribution ratio is **`97.59%`** (eigenvalue `2.0151e+15`), with the connection between `USR_002` (`-0.7135`) and `USR_003` (`0.6992`) locked.
 
 * **PCA Principal Axes Ratio:**
-    ![PCA Ratio](../../samples/Sample_7_Market_Users_Weekly/readme_plots/000_2_2__principal_axes_ratio.png)
+    ![PCA Ratio](../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_2__principal_axes_ratio.png)
 
 ### 4.3. Recirculation Thermodynamics & Anomaly Friction Detection
 
@@ -109,7 +109,7 @@ This market network is a closed kinetic system, so the internal energy $U$ (blue
 However, during the anomalies and position adjustments, the system detects a prominent increase in "frictional heat ($-TS$: maroon area)."
 
 * **Thermodynamics Energy Stack:**
-    ![Thermodynamics Energy Stack](../../samples/Sample_7_Market_Users_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+    ![Thermodynamics Energy Stack](../../samples/Sample_7_Market_Cash_Flow/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 **【Thermodynamic Friction Detection Mechanism】**
 When wash trading or rapid fund transfers occur, they temporarily raise local flow distribution dispersion (entropy $S$) and volatility (temperature $T$), expanding friction ($TS = U - F$) as dissipative energy.
@@ -119,16 +119,16 @@ The Physics-Mathematics-Mathematics Engine successfully extracts and visualizes 
 The Temperature-Entropy (T-S) diagram clearly shows the "counterclockwise closed oval trajectory" triggered by circular trading. This represents a "fictitious recirculation engine" that merely spins capital internally, generating fee costs (friction) without delivering economic value.
 
 * **T-S Diagram:**
-    ![T-S Diagram](../../samples/Sample_7_Market_Users_Weekly/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+    ![T-S Diagram](../../samples/Sample_7_Market_Cash_Flow/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 ### 4.4. 3D Information Geometry Surface identifying Collusive Group
 
 In the **3D spatiotemporal information geometry plot (`002_2_2_1__3d_micro_kl_drift.png`)**, following the massive panic dump by whale `USR_002` in W03, giant KL Drift spikes (local_kl_drift = 20.7233) tower from the coordinates of retail investors `USR_007` and `USR_010` in 2020-W07 (`t_idx=6`). Spikes are also captured at `USR_010` and `USR_005` in W40 and W46, highlighting the aftermath of the market manipulation (wash trading) and panic selling across the entire system.
 
 * **3D Micro Z-Score (Position):**
-    ![3D Micro Z-Score](../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+    ![3D Micro Z-Score](../../samples/Sample_7_Market_Cash_Flow/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 * **3D Micro KL Drift:**
-    ![3D Micro KL Drift](../../samples/Sample_7_Market_Users_Weekly/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+    ![3D Micro KL Drift](../../samples/Sample_7_Market_Cash_Flow/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 ---
 
@@ -142,7 +142,7 @@ In the **3D spatiotemporal information geometry plot (`002_2_2_1__3d_micro_kl_dr
        When opposite buy/sell orders of identical prices and volumes are matched between `USR_003` and `USR_004` within a short window (e.g., 1 minute), force-inject a random execution latency (tens of milliseconds) in the matching engine. This physically breaks up the algorithm's phase synchronization (circular catch-ball), dismantling the loop.
     2. **Acupoint-based Trading Limit on Colluding Nodes (Stiffness Softening):**
        Implement dynamic credit reduction or individual approval flows for the accounts `USR_003` and `USR_004` acting as the hubs of recirculation, only during suspected periods. This targets the pathological nodes without reducing the overall liquidity of other market participants.
-        ![LQR Performance Space](../../samples/Sample_7_Market_Users_Weekly/readme_plots/004_1_3__control_lqr_performance_space.png)
+        ![LQR Performance Space](../../samples/Sample_7_Market_Cash_Flow/readme_plots/004_1_3__control_lqr_performance_space.png)
 
 ---
 
