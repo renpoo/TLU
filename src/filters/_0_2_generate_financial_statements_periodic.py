@@ -109,43 +109,35 @@ def main():
         for acc in sorted(all_accounts):
             cat = account_map.get(acc, 'Expense')
             
-            if cat in ['Asset', 'Liability', 'Equity']:
-                # B/S items use Cumulative Values
-                dr = cum_debits[acc]
-                cr = cum_credits[acc]
-                bal = get_balance(acc, dr, cr)
-                tb_items.append((acc, cat, dr, cr, bal))
-                
-                if cat == 'Asset':
-                    if bal < 0:
-                        liabilities += -bal
-                        bs_items.append((acc, 'Liability (Short/Overdraft)', -bal))
-                    else:
-                        assets += bal
-                        bs_items.append((acc, cat, bal))
-                elif cat == 'Liability':
-                    if bal < 0:
-                        assets += -bal
-                        bs_items.append((acc, 'Asset (Receivable)', -bal))
-                    else:
-                        liabilities += bal
-                        bs_items.append((acc, cat, bal))
-                elif cat == 'Equity':
-                    equity += bal
+            # Use periodic (monthly) values for all items in periodic statements
+            dr = monthly_debits[acc]
+            cr = monthly_credits[acc]
+            bal = get_balance(acc, dr, cr)
+            tb_items.append((acc, cat, dr, cr, bal))
+            
+            if cat == 'Asset':
+                if bal < 0:
+                    liabilities += -bal
+                    bs_items.append((acc, 'Liability (Short/Overdraft)', -bal))
+                else:
+                    assets += bal
                     bs_items.append((acc, cat, bal))
-            else:
-                # P/L items use Periodic (Monthly) Values
-                dr = monthly_debits[acc]
-                cr = monthly_credits[acc]
-                bal = get_balance(acc, dr, cr)
-                tb_items.append((acc, cat, dr, cr, bal))
-                
-                if cat == 'Revenue':
-                    revenue += bal
-                    pl_items.append((acc, cat, bal))
-                elif cat == 'Expense':
-                    expense += bal
-                    pl_items.append((acc, cat, bal))
+            elif cat == 'Liability':
+                if bal < 0:
+                    assets += -bal
+                    bs_items.append((acc, 'Asset (Receivable)', -bal))
+                else:
+                    liabilities += bal
+                    bs_items.append((acc, cat, bal))
+            elif cat == 'Equity':
+                equity += bal
+                bs_items.append((acc, cat, bal))
+            elif cat == 'Revenue':
+                revenue += bal
+                pl_items.append((acc, cat, bal))
+            elif cat == 'Expense':
+                expense += bal
+                pl_items.append((acc, cat, bal))
         
         net_income = revenue - expense
         total_equity = equity + net_income

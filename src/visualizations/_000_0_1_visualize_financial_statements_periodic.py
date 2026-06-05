@@ -281,7 +281,8 @@ def draw_bs_trend(reports, out_path, fixed_assets_order, fixed_liabs_order, time
         bottom_neg -= gain_vals
         
     ax.axhline(0, color='black', linewidth=1)
-    ax.set_title("Balance Sheet Trend Over Time (Assets vs Liabilities & Equity)")
+    ax.set_title("Balance Sheet Periodic Flow Over Time (Assets vs Liabilities & Equity)")
+    ax.set_ylabel("Periodic Flow (Amount)")
     ax.legend(loc='center left', bbox_to_anchor=(1.02, 0.5), fontsize=8)
     
     if len(weeks) > 20:
