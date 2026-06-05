@@ -16,13 +16,6 @@ TLUは、ノード間の位相差の時系列変化を測定する**「位相ド
 
 ---
 
-## 🧭 目次
-- [共振周波数スペクトル](#1-共振周波数スペクトル-005_1_1_resonant_frequencypng)
-- [位相ドリフトヒートマップ](#2-位相ドリフトヒートマップ-005_1_2__phase_drift_heatmappng)
-- [フラクタルノイズ（1/f ゆらぎ）スペクトル](#3-フラクタルノイズ1f-ゆらぎスペクトル-005_2_1_fractal_noise_spectrumpng)
-
----
-
 ## 📊 波動力学・信号処理グラフと個別サンプルの所見
 
 ### 1. 共振周波数スペクトル (`005_1_1_resonant_frequency.png`)
@@ -31,9 +24,7 @@ TLUは、ノード間の位相差の時系列変化を測定する**「位相ド
 #### 🟢 Sample 0 (正常代謝)
 **臨床解説:**
 特定の特定の周波数だけに突出した鋭いスパイク（共振ピーク）は存在せず、全帯域にわたってなだらかな雑音（自然なゆらぎ）となって分散しており、健全な定常状態であることを示します。
-![Sample 0 Resonant Frequency](../../samples/Sample_0_Healthy/readme_plots/005_1_1_resonant_frequency.png)
-
----
+![Sample 0 Resonant Frequency](Sample_0_Healthy/readme_plots/005_1_1_resonant_frequency.png)
 
 ### 2. 位相ドリフトヒートマップ (`005_1_2__phase_drift_heatmap.png`)
 各ノードペア間における時系列の位相差（Phase Difference）の進化を示したヒートマップです。
@@ -41,24 +32,14 @@ TLUは、ノード間の位相差の時系列変化を測定する**「位相ド
 #### 🟢 Sample 0 (正常代謝)
 **臨床解説:**
 特定のペアに偏ることなく、全領域で位相差がランダムに拡散（ゆらぎ）しており、人工的な同期（キャッチボール）や位相同調は一切見られません。
-![Sample 0 Phase Drift](../../samples/Sample_0_Healthy/readme_plots/005_1_2__phase_drift_heatmap.png)
+![Sample 0 Phase Drift](Sample_0_Healthy/readme_plots/005_1_2__phase_drift_heatmap.png)
 
-#### 🟡 Sample 6 (市場二部グラフ)
+#### 🟢 Sample 6 (株券流体)
 **臨床解説:**
-アノマリー期のボット同期取引中、特定のボットアカウントと対象銘柄の間に、真っ黒に染まる「位相差ゼロ（または完全に一定）の病的定常バンド」が形成されており、人工的な強制同期売買を看破します。
-![Sample 6 Phase Drift](../../samples/Sample_6_Market_Bipartite_Weekly/readme_plots/005_1_2__phase_drift_heatmap.png)
+位相差ヒートマップは、特定のペアに偏ることなく全領域で位相差がランダムに拡散（ゆらぎ）しており、人工的な同期（強制同調）は検出されません。
+![Sample 6 Phase Drift](Sample_6_Market_Stock_Flow/readme_plots/005_1_2__phase_drift_heatmap.png)
 
-#### 🟡 Sample 7 (市場資金移動)
+#### 🟢 Sample 7 (現金流体)
 **臨床解説:**
-直接送金還流ループにおいて、`USR_003` と `USR_004` の間に完全に真っ黒な「位相差ゼロの定常バンド（同期の死）」が長期間固定化されており、共謀キャッチボールを証明しています。
-![Sample 7 Phase Drift](../../samples/Sample_7_Market_Users_Weekly/readme_plots/005_1_2__phase_drift_heatmap.png)
-
----
-
-### 3. フラクタルノイズ（1/f ゆらぎ）スペクトル (`005_2_1_fractal_noise_spectrum.png`)
-システムの合成信号におけるパワースペクトル密度の対数プロットです。べき乗則指数 $\beta$ の値を求め、システムに多様な自律性が維持されているかを判定します。
-
-#### 🟢 Sample 0 (正常代謝)
-**臨床解説:**
-スペクトルが対数グラフ上で綺麗な右下がりの直線を描いており、べき乗則指数 $\beta \approx 1.0$ の「フラクタル（1/f）ゆらぎ」が成立している、健全な新陳代謝の証拠です。
-![Sample 0 Fractal Noise](../../samples/Sample_0_Healthy/readme_plots/005_2_1_fractal_noise_spectrum.png)
+直接送金口座間において、位相差の病的固定化（定常バンド）は観察されず、位相差はランダムに拡散し、共謀の兆候はありません。
+![Sample 7 Phase Drift](Sample_7_Market_Cash_Flow/readme_plots/005_1_2__phase_drift_heatmap.png)

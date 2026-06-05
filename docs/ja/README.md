@@ -22,7 +22,7 @@ TLUは、複式簿記、都市交通の流れ、株式市場の取引、およ�
 
 | # | ドキュメントタイトル（英語版） | 対応する日本語版（日本語推奨） | コアコンテンツと見どころ |
 | :---: | :--- | :--- | :--- |
-| **1** | **[📂 01. Physics-Mathematics Engine Theory & Interpretation Guide](../01_Physics_Engine_Theory_and_Interpretation.md)** | 000〜005番系数理解析ガイドの再整備：<br>・**[000. 統計・剛性・運動学](000_Basic_Statistics_Stiffness_Kinematics.md)**<br>・**[001. 熱力学とエントロピー](001_Thermodynamics_Entropy.md)**<br>・**[002. 情報幾何と相対保存則](002_Information_Geometry_Forensics.md)**<br>・**[003. 逆運動学と目標到達性](003_Inverse_Kinematics_Reachability.md)**<br>・**[004. 安定性と制御理論(LQR)](004_Control_Theory_Stability.md)**<br>・**[005. 信号処理と波動力学](005_Wave_Mechanics_Coherence.md)** | TLUの主要8コアモジュール（000〜005番系）の数理的・物理的基礎理論と、全10個の検証サンプルに対応する実機可視化グラフを縦積み配列し、元データまで遡って精査した診断解釈ガイド。 |
+| **1** | **[📂 01. Physics-Mathematics Engine Theory & Interpretation Guide](../01_Physics_Engine_Theory_and_Interpretation.md)** | 000〜005番系 数理解析ガイドの再整備（`samples/` 以下に分割配置）：<br>・**[000_0: 統計](samples/000_0_Basic_Statistics.md)** / **[000_1: 運動学](samples/000_1_Dynamics_Kinematics.md)** / **[000_2: 剛性・PCA](samples/000_2_Stiffness_PCA.md)**<br>・**[001_1: 熱力学](samples/001_1_Thermodynamics.md)** / **[001_2: エントロピー](samples/001_2_Entropy.md)**<br>・**[002_1: 情報幾何](samples/002_1_Information_Geometry.md)** / **[002_2: 保存則・監査](samples/002_2_Forensics.md)**<br>・**[003_1: 逆運動学](samples/003_1_Inverse_Kinematics.md)**<br>・**[004_1: LQR制御](samples/004_1_Control_Theory.md)** / **[004_2: 介入感度](samples/004_2_Stability.md)**<br>・**[005_1: 波動力学](samples/005_1_Wave_Mechanics.md)** / **[005_2: 1/fゆらぎ](samples/005_2_Coherence.md)** | TLUの主要8コアモジュール（000〜005番系）の数理的・物理的基礎理論と、全10個の検証サンプルに対応する実機可視化グラフをモジュールごとに分割し、元データまで遡って精査した診断解釈ガイド群。 |
 | **2** | **[📂 02. System Architecture & Operations Guide](../02_System_Architecture_and_Operations.md)** | **[02. システム構造定義とパイプライン運用ガイド](02_System_Architecture_and_Operations.md)** | パイプライン・コンテナ運用、デザインテーマ管理（JSON）、障害込みダミー・データ生成スクリプト、および線形最適制御（LQR）シミュレーションモデル。 |
 | **3** | **[📂 03. Market Forensics & Compliance Rules](../03_Market_Forensics_Rules.md)** | **[03. 市場フォレンジック・監査ルール定義](03_Market_Forensics_Rules.md)** | ミリ秒単位の注文簿（オーダーブック）力学、ボット循環取引、二部グラフ投影 vs ユーザー間直接送金トポロジーによる共謀ネットワーク監査。 |
 | **4** | **[📂 LLM Diagnostic Manual (Supreme prompt)](../LLM_Diagnostic_Manual.md)** | **[LLM臨床検査マニュアル (Supreme Prompt)](LLM_Diagnostic_Manual.md)** | 物理数学エンジンの数値からAIが客観的なカルテを自動生成するためのプロトコル。統計的偽陽性判定と、原本データへのファクトチェック義務化。 |
@@ -64,12 +64,12 @@ TLUは、システム内に発生した病的アノマリーを検出するた�
 システム全体の資金流入と流出に「簿外の消失や生成（残差）」がないかを検証します。資金が簿外へ隠蔽されると、質量保存則が破綻し、フォレンジック残差プロットに巨大なスパイクが立ち上がります。
 
 * **🟢 健常状態 (Sample 0):** システム保存残差（残差）は全期間を通じて `0.00`（誤差ゼロ）を維持し、資金の簿外リークがないことを物理的に証明します。
-* **🚨 質量欠損状態 (Sample 2 / 横領):** 売掛金の回収資金が現預金口座にデポジットされず、簿外の隠蔽ノードへバイパスされています。質量保存則が崩壊し、横領の発生と同時に強力なマイナス・スパイクを検知します。
+* **🚨 質量欠損状態 (Sample 2 / 横領):** 売掛金の回収資金が現預金口座にデポジットされず、簿外の隠蔽ノードへバイパスされています。質量保存則が崩壊し、横領の発生と同時に絶対値としての保存残差が強力な上向きのスパイク（正方向のスパイク）として検知されます。
 
 | 健常 steady-state (Sample 0) | 病的質量欠損 (Sample 2) |
 | :---: | :---: |
 | ![Macro Forensics Normal](../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png) | ![Macro Forensics Abnormal](../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png) |
-| *図2a:（上段）質量保存の維持 (残差 = 0)* | *図2b:（上段）資金横領に伴う巨大なマイナス・スパイクの検知* |
+| *図2a:（上段）質量保存の維持 (残差 = 0)* | *図2b:（上段）資金横領に伴う絶対値残差のスパイク検知* |
 
 ---
 
@@ -78,12 +78,12 @@ TLUは、システム内に発生した病的アノマリーを検出するた�
 接続行列の最大固有値である「スペクトル半径」を計算し、ネットワーク内に閉じた還流閉路（自己循環）が形成されているかを検証します。スペクトル半径がオレンジ色の警報ライン `1.00` に達した場合、システムが自己循環にロックされ暴走していることを数学的に実証します。
 
 * **🟢 健常状態 (Sample 0):** スペクトル半径は全期間を通じて `0.00` 付近に留まり、取引が循環せず正常に代謝・収束していることを示します。
-* **🚨 還流固着状態 (Sample 4 / 複合アノマリー):** 架空売上の循環取引により、スペクトル半径が数学的限界境界である `1.00`（ペロン・フロベニウスの定理に基づく飽和点）に固着し、虚構ループが形成されていることを証明します。
+* **🚨 還流固着状態 (Sample 4 / 複合アノマリー):** 架空売上の循環取引により、スペクトル半径が最大 `0.79` へ急上昇し、虚構ループが形成されていることを証明します（なお、交通網や脳機能などの完全閉鎖循環システムでは数学的帰結として `1.00` に飽和・固着します）。
 
 | 健常 steady-state (Sample 0) | 病的還流ループ (Sample 4) |
 | :---: | :---: |
 | ![System Stability Normal](../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png) | ![System Stability Abnormal](../../samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png) |
-| *図3a: 安全圏で収束するスペクトル半径* | *図3b: 限界境界 1.00 に近づくスペクトル半径* |
+| *図3a: 安全圏で収束するスペクトル半径* | *図3b: 限界境界に向けて上昇するスペクトル半径* |
 
 ---
 
@@ -92,12 +92,12 @@ TLUは、システム内に発生した病的アノマリーを検出するた�
 システムが持っている有効仕事能力である「自由エネルギー（$F = U - TS$）」を計算します。自由エネルギー（白色レイヤー）がゼロを下回ってマイナス領域に沈むと、システムは**「熱的死 (Heat Death)」**に至ります。これは、活動（内部エネルギー $U$）を行えば行うほど、無駄な還流摩擦熱（エントロピー $TS$）を排出し、組織を疲弊させる病的状態を意味します。
 
 * **🟢 健常状態 (Sample 0):** 自由エネルギーが常にプラスの領域で推移し、活動に比例して余力（貯留エネルギー）が増大する健全な代謝プロセスを示します。
-* **🚨 熱的死状態 (Sample 8 / fMRI):** fMRIの計測により、脳の活動（内部エネルギー $U$）が極めて高いにもかかわらず、脳循環の応答が遅れる（エントロピー $S$ 増大）ために、有効仕事能力 $F$ がゼロに近づいてゆく状態を暴き出します。
+* **🚨 熱的死状態 (Sample 8 / fMRI):** fMRIの計測により、運動野への血流（BOLD信号質量）遮断に伴い、機能的結合がフリーズしてエントロピー $S$ が急激に低下（脳梗塞による機能固着）し、一方で摩擦熱（マクロ温度 $T$）が急上昇するため、有効仕事能力 $F$ が急激に減少（熱的死へ沈下）してゆく状態を暴き出します。
 
 | 健常 steady-state (Sample 0) | 病的熱的死 (Sample 8) |
 | :---: | :---: |
 | ![Thermodynamics Normal](../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png) | ![Thermodynamics Abnormal](../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_2__thermodynamics_energy_stack.png) |
-| *図4a: 自由エネルギーの健全な蓄積* | *図4b: 自由エネルギーがゼロへと沈没してゆく熱的死状態* |
+| *図4a: 自由エネルギーの健全な蓄積* | *図4b: 自由エネルギーが減少してゆく熱的死状態* |
 
 ---
 
@@ -171,8 +171,6 @@ docker compose up -d
 bash bin/batch_processing.sh --target_env "samples/Sample_1_Wash_Trade"
 bash bin/batch_visualize_graphs.sh --target_env "samples/Sample_1_Wash_Trade"
 
-# 4. 生成された AI 自動カルテ（検査レポート）を確認
-cat workspace/output_data/_99_diagnosis_report.md
 ```
 
 ---
@@ -186,4 +184,4 @@ TLUは、「この時空間ノードでキルヒホッフの質量保存則が $
 ---
 
 **ライセンス**: AGPL-3.0  
-**開発者**: Renpoo & Google DeepMind Agent (Antigravity)
+**開発者**: Renpoo & Google Gemini Agent (Antigravity)

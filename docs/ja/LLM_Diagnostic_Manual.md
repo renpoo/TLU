@@ -18,7 +18,14 @@ TLUの検査レポートを作成する際、事実を時系列で徐々に明�
 
 ## 1. 検査プロセスと解説ドキュメントの参照
 
-TLUの各分析モジュールから出力されたグラフとデータを読み解く際、まずは各モジュールに対応する数理物理フィルター解説ドキュメント（**[000番系](000_Basic_Statistics_Stiffness_Kinematics.md)**、**[001番系](001_Thermodynamics_Entropy.md)**、**[002番系](002_Information_Geometry_Forensics.md)**、**[003番系](003_Inverse_Kinematics_Reachability.md)**、**[004番系](004_Control_Theory_Stability.md)**、**[005番系](005_Wave_Mechanics_Coherence.md)**）に記載された判定しきい値や数理理論に従い、個別の「一次所見」を導き出してください。
+TLUの各分析モジュールから出力されたグラフとデータを読み解く際、まずは各モジュールに対応する数理物理フィルター解説ドキュメント（`samples/` 以下に分割配置）：
+* **[000_0: 統計](samples/000_0_Basic_Statistics.md)** / **[000_1: 運動学](samples/000_1_Dynamics_Kinematics.md)** / **[000_2: 剛性・PCA](samples/000_2_Stiffness_PCA.md)**
+* **[001_1: 熱力学](samples/001_1_Thermodynamics.md)** / **[001_2: エントロピー](samples/001_2_Entropy.md)**
+* **[002_1: 情報幾何](samples/002_1_Information_Geometry.md)** / **[002_2: 保存則・監査](samples/002_2_Forensics.md)**
+* **[003_1: 逆運動学](samples/003_1_Inverse_Kinematics.md)**
+* **[004_1: LQR制御](samples/004_1_Control_Theory.md)** / **[004_2: 介入感度](samples/004_2_Stability.md)**
+* **[005_1: 波動力学](samples/005_1_Wave_Mechanics.md)** / **[005_2: 1/fゆらぎ](samples/005_2_Coherence.md)**
+これらに記載された判定しきい値や数理理論に従い、個別の「一次所見」を導き出してください。
 
 各分析モジュールは以下の対応関係を持っています：
 

@@ -17,11 +17,7 @@ $$Joint\_Angles_{required} = IK(Target\_KPI)$$
 
 ---
 
-## 🧭 目次
-- [順運動学（FK）到達ポテンシャル空間](#1-順運動学fk到達ポテンシャル空間-003_1_1__3d_kinematics_fkpng)
-- [逆運動学（IK）軌道リボン](#2-逆運動学ik軌道リボン-003_1_2__3d_kinematics_ikpng)
 
----
 
 ## 📊 運動学・可動域グラフと個別サンプルの所見
 
@@ -31,7 +27,7 @@ $$Joint\_Angles_{required} = IK(Target\_KPI)$$
 #### 🟢 Sample 0 (正常代謝)
 **臨床解説:**
 到達ポテンシャル空間（FK空間）が非常に広く、対称的かつなだらかに球状に広がっており、様々な不測の事態や急な目標変更に対しても十分に対応可能な幾何学的「マージン」が確保されています。
-![Sample 0 Kinematics FK](../../samples/Sample_0_Healthy/readme_plots/003_1_1__3d_kinematics_fk.png)
+![Sample 0 Kinematics FK](Sample_0_Healthy/readme_plots/003_1_1__3d_kinematics_fk.png)
 
 ---
 
@@ -41,9 +37,9 @@ $$Joint\_Angles_{required} = IK(Target\_KPI)$$
 #### 🟢 Sample 0 (正常代謝)
 **臨床解説:**
 目標とする手先位置（KPI目標）に対して、アームのジョイント軌跡リボンが特異点を踏むことなく、滑らかかつしなやかに接続解を算出しています。到達誤差はほぼゼロであり、構造的に目標が無理なく達成可能であることを示します。
-![Sample 0 Kinematics IK](../../samples/Sample_0_Healthy/readme_plots/003_1_2__3d_kinematics_ik.png)
+![Sample 0 Kinematics IK](Sample_0_Healthy/readme_plots/003_1_2__3d_kinematics_ik.png)
 
 #### 🔴 Sample 5 (京都交差点網)
 **臨床解説:**
 渋滞による極限状態（$t=51$）の発生に伴い、3次元のIK解軌跡リボンが極めて平坦な単一平面へとつぶれるように折りたたまれ、特異点（自由度の完全喪失）へと吸い込まれています。主要交差点の容量飽和（幾何学限界）によって、交通流量目標が物理的に達成不可能となったことを証明します。
-![Sample 5 Kinematics IK](../../samples/Sample_5_Kyoto_Traffic/readme_plots/003_1_2__3d_kinematics_ik.png)
+![Sample 5 Kinematics IK](Sample_5_Kyoto_Traffic/readme_plots/003_1_2__3d_kinematics_ik.png)
