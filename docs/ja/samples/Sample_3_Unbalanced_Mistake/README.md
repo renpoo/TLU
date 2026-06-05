@@ -20,19 +20,19 @@
 ### 貸借対照表（B/S）の比較
 
 * **B/S 資産・資本の累積推移 & ブロック図 (累積値):**
-  ![B/S Cumulative Trend](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__BS_Trend.png)
-  ![B/S Block Total](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__BS_Block_Total.png)
+  ![B/S Cumulative Trend](readme_plots/000_0_1__BS_Trend.png)
+  ![B/S Block Total](readme_plots/000_0_1__BS_Block_Total.png)
 
 * **B/S 資産・資本の期間推移 (単月非累積値):**
-  ![B/S Periodic Trend](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__BS_Trend_Periodic.png)
+  ![B/S Periodic Trend](readme_plots/000_0_1__BS_Trend_Periodic.png)
 
 ### 損益計算書（P/L）の比較
 
 * **P/L 売上・費用の累積推移:**
-  ![P/L Cumulative Trend](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__PL_Trend.png)
+  ![P/L Cumulative Trend](readme_plots/000_0_1__PL_Trend.png)
 
 * **P/L 売上・費用の期間推移 (単月非累積値):**
-  ![P/L Periodic Trend](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__PL_Trend_Periodic.png)
+  ![P/L Periodic Trend](readme_plots/000_0_1__PL_Trend_Periodic.png)
 
 * **観察:** 累積グラフでは営業活動が極めて順調に見えますが、期間別（Periodic）グラフを観察すると、不整合が発生した月（2月, 3月, 11月）において、取引フローに局所的かつ一時的な歪みが生じていることが確認されます。
 
@@ -60,19 +60,19 @@
 質量保存の残差を示す `System Conservation Residual` は、不整合が発生した月（2月: `166.58`、3月: `340.01`、11月: `906.29`）にのみ鋭いスパイクを記録し、それ以外の月は完全に `0.00` を維持しています。これは、流出が持続していない（単発エラーである）ことを物理的に示しています。
 
 * **マクロフォレンジックダッシュボード:**
-  ![Macro Forensics](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_1__macro_forensics_dashboard.png)
+  ![Macro Forensics](readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 * **ネットワークトポロジーの変化:**
   * **2020-01 (t=0 - 健全な初期トポロジー):**
-    ![Network Topology t0](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00000.png)
+    ![Network Topology t0](readme_plots/002_1_2__network_topology.t.00000.png)
   * **2020-02 (t=1 - 最初の入力不整合により、一時的に `UNKNOWN_LEAK` ノードが出現):**
-    ![Network Topology t1](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00001.png)
+    ![Network Topology t1](readme_plots/002_1_2__network_topology.t.00001.png)
   * **2020-03 (t=2 - 2回目の不整合によりエッジが接続される):**
-    ![Network Topology t2](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00002.png)
+    ![Network Topology t2](readme_plots/002_1_2__network_topology.t.00002.png)
   * **2020-04 (t=3 - 不整合が停止し、トポロジー上の漏洩接続が細分・沈静化へ移行):**
-    ![Network Topology t3](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00003.png)
+    ![Network Topology t3](readme_plots/002_1_2__network_topology.t.00003.png)
   * **2020-12 (t=11 - 11月の不整合後も自己修復し、再び `UNKNOWN_LEAK` との結合は消失):**
-    ![Network Topology t11](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00011.png)
+    ![Network Topology t11](readme_plots/002_1_2__network_topology.t.00011.png)
 
 ### 4.2. 剛性接続 & 主成分分析 (Stiffness & PCA)
 
@@ -81,43 +81,43 @@
 
 * **構造剛性行列の推移:**
   * **2020-01 (t=0 - 均等に分散した健全な剛性分布):**
-    ![Stiffness t0](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+    ![Stiffness t0](readme_plots/000_2_1__structural_stiffness.t.00000.png)
   * **2020-04 (t=3 - 初期エラー直後のステップ。歪みを吸収・減衰して安定化):**
-    ![Stiffness t3](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00003.png)
+    ![Stiffness t3](readme_plots/000_2_1__structural_stiffness.t.00003.png)
   * **2020-05 (t=4 - 一時的な処理集中により、局所ストレスが軽微に伝随):**
-    ![Stiffness t4](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00004.png)
+    ![Stiffness t4](readme_plots/000_2_1__structural_stiffness.t.00004.png)
   * **2020-06 (t=5 - 【自己治癒】 歪みが残留せず、健全な剛性状態へ自己復元):**
-    ![Stiffness t5](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00005.png)
+    ![Stiffness t5](readme_plots/000_2_1__structural_stiffness.t.00005.png)
   * **2020-12 (t=11 - 最終期。11月の不整合に対してもシステムの復元力が働き、硬直ロックを回避して安定化):**
-    ![Stiffness t11](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00011.png)
+    ![Stiffness t11](readme_plots/000_2_1__structural_stiffness.t.00011.png)
 
 * **主要軸比率 & 固有ベクトル推移 (PC1, PC2, PC3):**
-  ![PCA Ratio](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_2__principal_axes_ratio.png)
-  ![PCA PC1 Evolution](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_3__eigenvector_evolution.png)
-  ![PCA PC2 Evolution](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_3__eigenvector_evolution_pc2.png)
-  ![PCA PC3 Evolution](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_3__eigenvector_evolution_pc3.png)
+  ![PCA Ratio](readme_plots/000_2_2__principal_axes_ratio.png)
+  ![PCA PC1 Evolution](readme_plots/000_2_3__eigenvector_evolution.png)
+  ![PCA PC2 Evolution](readme_plots/000_2_3__eigenvector_evolution_pc2.png)
+  ![PCA PC3 Evolution](readme_plots/000_2_3__eigenvector_evolution_pc3.png)
 
 ### 4.3. 循環取引の排除 (Spectral Radius)
 
 最大スペクトル半径は、全期間を通じて完全に **`0.00`** を維持しており、架空還流ループ（循環取引）は本システムには存在しないことがトポロジー的に証明されています。
 
 * **システム安定性指標:**
-  ![System Stability](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_1_2__system_stability.png)
+  ![System Stability](readme_plots/004_1_2__system_stability.png)
 
 ### 4.4. 熱力学指標と3D位相幾何
 
 本サンプルの熱力学エネルギースタックおよび T-S ダイアグラムの軌跡は、健全な自然成長モデルである [Sample 0](../../Sample_0_Healthy/README.md) にきわめて近い開放的な軌道を描いています。エントロピー損失（$-TS$）の異常な拡大はなく、自由エネルギー $F$ の蓄積も右肩上がりで順調であり、熱力学的「熱死」の兆候は一切見られません。
 
 * **熱力学特性 & 3D軌跡:**
-  ![Thermodynamics Energy Stack](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-  ![T-S Diagram](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
-  ![3D Phase Portrait](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_1_8__phase_portrait_3d.png)
-  ![3D Local Entropy](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_1__3d_local_entropy.png)
-  ![3D Micro KL Drift](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+  ![Thermodynamics Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
+  ![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+  ![3D Phase Portrait](readme_plots/000_1_8__phase_portrait_3d.png)
+  ![3D Local Entropy](readme_plots/001_1_2_1__3d_local_entropy.png)
+  ![3D Micro KL Drift](readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 **【3D Local Temperature と瞬間的打撲熱の証明】**
 * **3D Local Temperature:**
-  ![3D Local Temperature](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_2__3d_local_temperature.png)
+  ![3D Local Temperature](readme_plots/001_1_2_2__3d_local_temperature.png)
   入力不整合が発生した月（2月, 3月, 11月）において、一時的な不整合残高が `UNKNOWN_LEAK` に滞留することで、`ACC_Accounts_Receivable` と `UNKNOWN_LEAK` のノード局所温度にその月限定の過熱スパイク（瞬間的な打撲熱）が記録されます。熱が慢性的に蓄積し続ける横領病態（Sample 2）とは明確に異なる弾性的特徴です。
 
 **【しきい値統計モデル（Z-Score）の限界とゼロ・トゥ・ワン異常】**
@@ -138,7 +138,7 @@
      基幹業務システム（SFA/CRM）から会計システムへデータを自動送信するバッチプログラムにおいて、端数調整や消費税処理で論理的な丸めバグが存在していないかを点検・修正します。
 
 * **LQR 制御空間:**
-  ![LQR Control Space](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_1_3__control_lqr_performance_space.png)
+  ![LQR Control Space](readme_plots/004_1_3__control_lqr_performance_space.png)
 
 ### 💡 経営改善における「レバレッジ・ポイント（経費削減のツボ）」の定量的評価
 

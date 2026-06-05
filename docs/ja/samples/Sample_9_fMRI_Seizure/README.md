@@ -27,12 +27,12 @@
 ### 取引残高（B/S相当）の比較
 
 * **B/S 資産・資本の累積推移 (残差・ストック累計):**
-  ![B/S Trend](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_0_1__BS_Trend.png)
+  ![B/S Trend](readme_plots/000_0_1__BS_Trend.png)
 
 ### 取引流量（P/L相当）の比較
 
 * **P/L 取引高の累積推移 (交差点ごとの総交通量):**
-  ![P/L Trend](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_0_1__PL_Trend.png)
+  ![P/L Trend](readme_plots/000_0_1__PL_Trend.png)
 
 #### 🔍 伝統的監査の死角
 伝統的なスナップショット分析において、側頭葉の累積収支は最終ステップにおいて他の領域とほぼ同水準のバランスを保っています。また、P/L 相当のトレンド（総流量）で見ても、システム全体の活動規模が全領域で一様に高まっているように見えるため、伝統的な監査や監視システムはこれを「活発で健全な相互取引（新陳代謝の活性化）」と判断してしまいます。
@@ -57,7 +57,7 @@
 システム全体の流入・流出の不整合を示す `System Conservation Residual`（相対漏洩率）は、全期間において **`0.00`** を維持しています。これは、外部への資金（血流）の漏洩や消失はなく、あくまでシステム内部の「結合状態の異常（気血の還流・逆流）」によって過同期が発生していることを意味します。
 
 * **マクロ・フォレンジック・ダッシュボード (Macro Forensics):**
-  ![Macro Forensics](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_2_1__macro_forensics_dashboard.png)
+  ![Macro Forensics](readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 ### 4.2. 脳機能結合の過同期（剛性ロック）とPCA主成分分析の死角
 異常発生の瞬間、システムの固有構造に劇的な同期現象が発生しています。
@@ -65,35 +65,35 @@
 #### 剛性行列のシネマティック5定点シーケンス
 
 * **① 初期状態 (t=0 / 10:00:00):**
-  ![Stiffness t0](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+  ![Stiffness t0](readme_plots/000_2_1__structural_stiffness.t.00000.png)
   脳全体の結合剛性は均一であり、しなやかな変動（機能的分離）を示しています。
 
 * **② 発作前夜 (t=29 / 10:04:50):**
-  ![Stiffness t29](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00029.png)
+  ![Stiffness t29](readme_plots/000_2_1__structural_stiffness.t.00029.png)
   PCAの第1主成分（PC1）説明分散比率は **`37.60%`**（固有値 `6296.66`）であり、脳全体にエネルギー（情報）が多次元的に分散しています。
 
 * **③ 発作 Onset (t=30 / 10:05:00):**
-  ![Stiffness t30](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00030.png)
+  ![Stiffness t30](readme_plots/000_2_1__structural_stiffness.t.00030.png)
   側頭葉（`03_Temporal_Lobe`）を媒介とする全結合の偏相関係数（Partial Correlation）が急激に同期。しかし、PC1説明比率は **`37.53%`**（固有値 `6143.12`）とほぼ変化しません。これは、すべてのノードが同じサイン波を共有したため、特定の1軸に分散が集中するのではなく、空間的な分散の「バランス」自体は均等に保たれたまま、すべての軸が同調したためです（PCAの死角）。
 
 * **④ 発作直後 (t=31 / 10:05:10):**
-  ![Stiffness t31](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00031.png)
+  ![Stiffness t31](readme_plots/000_2_1__structural_stiffness.t.00031.png)
   発作開始直後。PC1比率は **`37.39%`**、PC1の負荷ベクトルは `02_Prefrontal_Cortex`（**`0.7386`**）、`00_Motor_Cortex`（**`-0.4903`**）などと安定した値を維持しつつ、側頭葉との結合剛性（偏相関）は非常に硬直した状態（同期ロック）を維持しています。
 
 * **⑤ 最終状態 (t=59 / 10:09:50):**
-  ![Stiffness t59](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_1__structural_stiffness.t.00059.png)
+  ![Stiffness t59](readme_plots/000_2_1__structural_stiffness.t.00059.png)
   最終状態。PC1比率は **`37.43%`** であり、静的なPCA次元削減ではこの壊滅的な過同期ロック状態を終始検出できていません。
 
 * **PCA 主要軸比率:**
-  ![PCA Ratio](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_2__principal_axes_ratio.png)
+  ![PCA Ratio](readme_plots/000_2_2__principal_axes_ratio.png)
 
 * **PC1 第一主要軸成分比率推移:**
-  ![PC1 固有ベクトル](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_3__eigenvector_evolution.png)
+  ![PC1 固有ベクトル](readme_plots/000_2_3__eigenvector_evolution.png)
 
 ### 4.3. ネットワーク・トポロジーの過同期とスペクトル半径の数学的限界
 
 * **システム安定性指標 (Spectral Radius):**
-  ![System Stability](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/004_1_2__system_stability.png)
+  ![System Stability](readme_plots/004_1_2__system_stability.png)
 
 #### スペクトル半径「1.0000」の数学的背景（確率遷移マトリクスによる制約）
 生存している脳ネットワークは流出ゼロの領域が存在しない（行要素の和が 1.0 に正規化される）ため、確率遷移マトリクスの数学的性質から、スペクトル半径 $\rho$ は全期間を通じて **`1.0000`** に固定されます。したがって、安定性指標（スペクトル半径）そのものからはてんかん発作の構造破壊を検知することは不可能です。
@@ -103,20 +103,20 @@
 #### ネットワーク・トポロジー時系列の5定点シーケンス
 
 * **① 初期状態 (t=0 / 10:00:00):**
-  ![Topology t0](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00000.png)
+  ![Topology t0](readme_plots/002_1_2__network_topology.t.00000.png)
 
 * **② 発作前夜 (t=29 / 10:04:50):**
-  ![Topology t29](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00029.png)
+  ![Topology t29](readme_plots/002_1_2__network_topology.t.00029.png)
 
 * **③ 発作 Onset (t=30 / 10:05:00):**
-  ![Topology t30](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00030.png)
+  ![Topology t30](readme_plots/002_1_2__network_topology.t.00030.png)
   側頭葉（`03_Temporal_Lobe`）をハブとする放射状の太い同期エッジ（流量 `2336.88`）が突如としてネットワーク全体を覆い尽くします。
 
 * **④ 発作直後 (t=31 / 10:05:10):**
-  ![Topology t31](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00031.png)
+  ![Topology t31](readme_plots/002_1_2__network_topology.t.00031.png)
 
 * **⑤ 最終状態 (t=59 / 10:09:50):**
-  ![Topology t59](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00059.png)
+  ![Topology t59](readme_plots/002_1_2__network_topology.t.00059.png)
 
 ### 4.4. 機能的エントロピーの虚脱と自由エネルギーの周期的同調
 
@@ -129,20 +129,20 @@
 発作開始（t=30）以降、自由エネルギー $F$ は高い正のレベル（`496,000`〜`497,000`）を維持したまま、発作のサイン波の位相と連動して周期的に微小な上下動（振幅約750、全体の0.15%程度）を繰り返します。これは、システムが枯渇することなく高いエネルギーを持ったまま病的安定状態（過還流・過同期）にロックされ、一定周期でエネルギー（情報）の散逸運動を繰り返しながら異常状態を自己維持しているダイナミクスを裏付けています。
 
 * **熱力学エネルギースタック:**
-  ![Thermodynamics Energy Stack](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+  ![Thermodynamics Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 * **T-S ダイアグラム:**
-  ![T-S Diagram](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+  ![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 ### 4.5. 3D情報幾何学・Z-Score立体プロットによる異常同調の証明
 
 時間（Time Step）× 空間（ノード）の3次元情報幾何学プロットは、側頭葉から波及した異常信号を受信した側（周りを取り巻く経絡）に生じた地殻変動を劇的に捉えています。
 
 * **3D Micro Z-Score (Position):**
-  ![3D Micro Z-Score](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+  ![3D Micro Z-Score](readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
 * **3D Micro KL Drift:**
-  ![3D Micro KL Drift](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+  ![3D Micro KL Drift](readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 3D Micro KL Drift プロット（`002_2_2_1__3d_micro_kl_drift.png`）において、発作開始の t=30 以降、発作焦点である側頭葉（`03_Temporal_Lobe`）自体の KL Drift は **`0.0000`** と極めて低値に留まる一方、その周囲に位置する受信側の `00_Motor_Cortex` (**`0.2333`**), `01_Parietal_Lobe` (**`0.2325`**), `02_Prefrontal_Cortex` (**`0.2255`**), `04_Visual_Cortex` (**`0.2301`**) の座標上に、「急峻な崖のような情報の変異壁（KL Drift の急上昇）」がそびえ立ちます。
 
@@ -173,7 +173,7 @@
    側頭葉から他領域へ繋がるシナプス結合剛性を LQR 感度に従って一時的に引き下げる（ダンピング）介入を行い、最大スペクトル半径 $\rho$ を `1.00` から臨界値未満（`0.95`以下）へと押し下げます。これにより、機能的ハイパーコネクティビティを解除し、脳を安定（定常）アトラクターへと軟着陸させます。
 
 * **LQR 制御空間の最適性能面 (LQR Performance Space):**
-  ![LQR Performance Space](../../../../samples/Sample_9_fMRI_Seizure/readme_plots/004_1_3__control_lqr_performance_space.png)
+  ![LQR Performance Space](readme_plots/004_1_3__control_lqr_performance_space.png)
 
 ---
 

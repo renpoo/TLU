@@ -27,19 +27,19 @@
 ### 貸借対照表相当（B/S：累積車両ストック）の比較
 
 * **B/S 累積車両ストックの推移 & ブロック図:**
-  ![B/S Cumulative Trend](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__BS_Trend.png)
-  ![B/S Block Total](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__BS_Block_Total.png)
+  ![B/S Cumulative Trend](readme_plots/000_0_1__BS_Trend.png)
+  ![B/S Block Total](readme_plots/000_0_1__BS_Block_Total.png)
 
 * **B/S 車両ストックの期間推移 (単月非累積値):**
-  ![B/S Periodic Trend](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__BS_Trend_Periodic.png)
+  ![B/S Periodic Trend](readme_plots/000_0_1__BS_Trend_Periodic.png)
 
 ### 損益計算書相当（P/L：交差点通過流量）の比較
 
 * **P/L 累積通過流量の推移:**
-  ![P/L Cumulative Trend](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__PL_Trend.png)
+  ![P/L Cumulative Trend](readme_plots/000_0_1__PL_Trend.png)
 
 * **P/L 通過流量の期間推移 (単月非累積値):**
-  ![P/L Periodic Trend](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_0_1__PL_Trend_Periodic.png)
+  ![P/L Periodic Trend](readme_plots/000_0_1__PL_Trend_Periodic.png)
 
 * **観察と死角の解説:** 
   P/L 期間推移（単月非累積）グラフの負の側（下半分）を観察すると、四条烏丸（`ShijoKarasuma`）に割り当てられたカラーの帯幅が、ボトルネック制限の始まった **2021年1月 (t=12) を境に突如として極端に収縮し、ほぼ完全に消失** している様子が他の安定した交差点と対比して直接目視できます。
@@ -66,49 +66,49 @@
 車両の総和（質量）の過不足を示すキルヒホッフの保存残差（`System Conservation Residual`）は、全期間を通じて完全に **`0.000000`（完全なゼロ）** を維持しています。これは、車両が突然湧き出したり消失したりする質量漏洩が1台もなく、厳密に車両保存が満たされた閉鎖系であることを証明しています。
 
 * **マクロフォレンジックダッシュボード:**
-  ![Macro Forensics](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_1__macro_forensics_dashboard.png)
+  ![Macro Forensics](readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 * **ネットワークトポロジーの変化:**
   * **2020-01 (t=0 - バランスのとれた健全な初期循環):**
-    ![Network Topology t0](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00000.png)
+    ![Network Topology t0](readme_plots/002_1_2__network_topology.t.00000.png)
   * **2020-07 (t=6 - ボトルネック注入前の安定した定常期):**
-    ![Network Topology t6](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00006.png)
+    ![Network Topology t6](readme_plots/002_1_2__network_topology.t.00006.png)
   * **2021-01 (t=12 - 四条烏丸の容量制限により、遷移確率分布に不連続な相転移が発生):**
-    ![Network Topology t12](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00012.png)
+    ![Network Topology t12](readme_plots/002_1_2__network_topology.t.00012.png)
   * **2021-07 (t=18 - 渋滞バックアップが波及し、確率流が局所的にロックイン):**
-    ![Network Topology t18](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00018.png)
+    ![Network Topology t18](readme_plots/002_1_2__network_topology.t.00018.png)
   * **2021-12 (t=23 - 流動が極限まで低下し、偏ったトポロジー接続が慢性固定化):**
-    ![Network Topology t23](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_1_2__network_topology.t.00023.png)
+    ![Network Topology t23](readme_plots/002_1_2__network_topology.t.00023.png)
 
 ### 4.2. 剛性接続 & 主成分分析 (Stiffness & PCA)
 
 剛性行列（Stiffness Matrix）の時系列シーケンスは、時間の経過に伴いネットワーク全体が致命的に硬直化していく様子を告発しています。
-PCA分析において、アノマリー注入前（t=6）は PC1 寄与率 `54.65%` であったのに対し、アノマリーの慢性化に伴って上昇し、最終月（t=23）には **`82.04%`** に達しています。主軸負荷は `11_NijoKarasuma` (二条烏丸) (`-0.4238`) や `16_SanjoKarasuma` (三条烏丸) (`0.3434`) に完全にロックされており、システム全体の柔軟性が全失した慢性的なデッドロック状態を示しています。
+PCA分析において、アノマリー注入前（t=6）は PC1 寄与率 `54.65%` であったのに対し、アノマリーの慢性化に伴って上昇し、最終月（t=23）には **`64.70%`** に達しています。主軸負荷は `14_NijoShinmachi` (二条新町) (`0.5034`) や `11_NijoKarasuma` (二条烏丸) (`-0.4200`) にロックされており、システム全体の柔軟性が低下した病的状態を示しています。
 
 * **構造剛性行列の推移:**
   * **2020-01 (t=0 - 全域的に柔軟で低剛性な流動状態):**
-    ![Stiffness t0](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+    ![Stiffness t0](readme_plots/000_2_1__structural_stiffness.t.00000.png)
   * **2020-07 (t=6 - ボトルネック発生前の安定した剛性分布):**
-    ![Stiffness t6](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00006.png)
+    ![Stiffness t6](readme_plots/000_2_1__structural_stiffness.t.00006.png)
   * **2021-01 (t=12 - アノマリー発生。四条烏丸の閉塞により局所歪みが導入される):**
-    ![Stiffness t12](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00012.png)
+    ![Stiffness t12](readme_plots/000_2_1__structural_stiffness.t.00012.png)
   * **2021-07 (t=18 - 渋滞バックアップが慢性化し、剛性負荷が他の交差点へ大きくシフト):**
-    ![Stiffness t18](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00018.png)
+    ![Stiffness t18](readme_plots/000_2_1__structural_stiffness.t.00018.png)
   * **2021-12 (t=23 - 最終月。柔軟性を全失した「慢性硬直 (Stiffness Lock)」状態に固定):**
-    ![Stiffness t23](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_1__structural_stiffness.t.00023.png)
+    ![Stiffness t23](readme_plots/000_2_1__structural_stiffness.t.00023.png)
 
 * **主要軸比率 & 固有ベクトル推移:**
-  ![PCA Ratio](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_2__principal_axes_ratio.png)
-  ![PCA PC1 Evolution](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_3__eigenvector_evolution.png)
-  ![PCA PC2 Evolution](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_3__eigenvector_evolution_pc2.png)
-  ![PCA PC3 Evolution](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_3__eigenvector_evolution_pc3.png)
+  ![PCA Ratio](readme_plots/000_2_2__principal_axes_ratio.png)
+  ![PCA PC1 Evolution](readme_plots/000_2_3__eigenvector_evolution.png)
+  ![PCA PC2 Evolution](readme_plots/000_2_3__eigenvector_evolution_pc2.png)
+  ![PCA PC3 Evolution](readme_plots/000_2_3__eigenvector_evolution_pc3.png)
 
 ### 4.3. 循環トポロジーの検証 (Spectral Radius)
 
 最大スペクトル半径は、全期間を通じて完全に **`1.0000`** でフラットな直線を描いています。これは、交差点網全体が双方向の流れを持ち、外部への消失がない「閉じた強連結ネットワーク」であることによる数学的帰結です。したがって、このアノマリーの発生は接続構造ではなく、配分比率の歪みを示す **`kl_divergence_drift` のスパイク（t=12 に `1.7572`）** によってのみ検出されます。
 
 * **システム安定性指標:**
-  ![System Stability](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_2__system_stability.png)
+  ![System Stability](readme_plots/004_1_2__system_stability.png)
 
 ### 4.4. 熱力学指標と3D位相幾何
 
@@ -116,23 +116,23 @@ PCA分析において、アノマリー注入前（t=6）は PC1 寄与率 `54.6
 T-S ダイアグラムは、2021年1月を境界として、エントロピーと温度が同時に縮小する**「閉じたフリーズ異常ループ」**を描いています。システム全体の流動のゆとりが失われ、デッドロックにロックインされた決定的な物理的証拠です。
 
 * **熱力学特性 & 3D軌跡:**
-  ![Thermodynamics Energy Stack](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-  ![T-S Diagram](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
-  ![3D Phase Portrait](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_1_8__phase_portrait_3d.png)
+  ![Thermodynamics Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
+  ![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+  ![3D Phase Portrait](readme_plots/000_1_8__phase_portrait_3d.png)
 
 **【3D局所熱ストレスの可視化】**
 * **3D Local Entropy & Temperature:**
-  ![3D Local Entropy](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2_1__3d_local_entropy.png)
-  ![3D Local Temperature](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2_2__3d_local_temperature.png)
+  ![3D Local Entropy](readme_plots/001_1_2_1__3d_local_entropy.png)
+  ![3D Local Temperature](readme_plots/001_1_2_2__3d_local_temperature.png)
   四条烏丸の流入が絞られたことで、四条室町（`23_ShijoMuromachi`）のエントロピーが `1.6596` に低下（空間自由度の喪失）。さらに、四条烏丸のローカル温度が t=13 に `24.25` へと急落したことで、周囲の活発な交差点との間に巨大な「局所温度勾配（`local_grad_t`）」の黄色い尖塔が出現し、熱ストレスが一部の交差点へ強烈に局在化していることを示しています。
-  ![3D Local Gradient](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2_3__3d_local_gradient.png)
+  ![3D Local Gradient](readme_plots/001_1_2_3__3d_local_gradient.png)
 
 **【3D Micro KL Drift による構造変化の特定】**
 * **3D Micro KL Drift:**
-  ![3D Micro KL Drift](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+  ![3D Micro KL Drift](readme_plots/002_2_2_1__3d_micro_kl_drift.png)
   容量制限が開始された **2021-01 (t=12)** において、四条烏丸の座標周辺に天を突く KL Drift の壁（`1.7572`）が出現。統計モデルが初期構築で沈黙している中で、構造的な相転移の瞬間を物理的に捉えました。
 * **3D Micro Z-Score (統計平滑化の確認):**
-  ![3D Micro Z-Score](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+  ![3D Micro Z-Score](readme_plots/002_2_2_2__3d_micro_z_score_X.png)
   質量保存を適用しモデルを健全化した結果、Z-Score の最大値は `103.00` 付近に抑制され、数値バグによる異常発散（かつての数十万スケール）は完全に解消されています。
 
 ---
@@ -148,7 +148,7 @@ T-S ダイアグラムは、2021年1月を境界として、エントロピー�
   現在硬直している **`21_ShijoKarasuma` (四条烏丸: ひずみ `0.0665`)** に直接制御をかけようとすると、高いひずみ（摩擦エネルギー）を消費してしまいます。
 
 * **LQR 制御空間:**
-  ![LQR Control Space](../../../../samples/Sample_5_Kyoto_Traffic/readme_plots/004_1_3__control_lqr_performance_space.png)
+  ![LQR Control Space](readme_plots/004_1_3__control_lqr_performance_space.png)
 
 * **具体的な治療介入計画:**
   1. **信号位相オフセットの動的調律（ツボへの鍼）:**

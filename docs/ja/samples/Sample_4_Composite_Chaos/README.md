@@ -21,19 +21,19 @@
 ### 貸借対照表（B/S）の比較
 
 * **B/S 資産・資本の累積推移 & ブロック図 (累積値):**
-  ![B/S Cumulative Trend](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_0_1__BS_Trend.png)
-  ![B/S Block Total](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_0_1__BS_Block_Total.png)
+  ![B/S Cumulative Trend](readme_plots/000_0_1__BS_Trend.png)
+  ![B/S Block Total](readme_plots/000_0_1__BS_Block_Total.png)
 
 * **B/S 資産・資本の期間推移 (単月非累積値):**
-  ![B/S Periodic Trend](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_0_1__BS_Trend_Periodic.png)
+  ![B/S Periodic Trend](readme_plots/000_0_1__BS_Trend_Periodic.png)
 
 ### 損益計算書（P/L）の比較
 
 * **P/L 売上・費用の累積推移:**
-  ![P/L Cumulative Trend](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_0_1__PL_Trend.png)
+  ![P/L Cumulative Trend](readme_plots/000_0_1__PL_Trend.png)
 
 * **P/L 売上・費用の期間推移 (単月非累積値):**
-  ![P/L Periodic Trend](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_0_1__PL_Trend_Periodic.png)
+  ![P/L Periodic Trend](readme_plots/000_0_1__PL_Trend_Periodic.png)
 
 * **観察:** 累積グラフでは営業活動が極めて順調に見えますが、期間別（Periodic）グラフを観察すると、循環取引のあった 1月〜2月、および質量欠損（横領）が発生した 6月〜9月において、取引フローに巨大な流動性スパイクや構造的な歪みが生じていることが確認されます。
 
@@ -68,19 +68,19 @@
 質量保存の残差（`System Conservation Residual`）は、6月以降に断続的な破れ（非ゼロ）を示し、横領の絶頂期である 9月に最大 **`$4,773.57`** に達しています（累計 `$6,255.99`）。またトポロジー図上において、6月以降 `UNKNOWN_LEAK` ノードが接続され、資金をシステム外へと一方的に吸い出す極太のドレインエッジが可視化されます。
 
 * **マクロフォレンジックダッシュボード:**
-  ![Macro Forensics](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_1__macro_forensics_dashboard.png)
+  ![Macro Forensics](readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 * **ネットワークトポロジーの変化:**
   * **2020-01 (t=0 - 開始直後、Cash ⇄ AR 間の還流閉回路が形成):**
-    ![Network Topology t0](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00000.png)
+    ![Network Topology t0](readme_plots/002_1_2__network_topology.t.00000.png)
   * **2020-05 (t=4 - 横領発生直前、還流経路の太脈化が持続):**
-    ![Network Topology t4](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00004.png)
+    ![Network Topology t4](readme_plots/002_1_2__network_topology.t.00004.png)
   * **2020-06 (t=5 - 最初の質量欠損が発生、`UNKNOWN_LEAK` ノードへのバイパスが顕在化):**
-    ![Network Topology t5](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00005.png)
+    ![Network Topology t5](readme_plots/002_1_2__network_topology.t.00005.png)
   * **2020-09 (t=8 - 最大横領期、`UNKNOWN_LEAK` への極太のドレインエッジが開通):**
-    ![Network Topology t8](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00008.png)
+    ![Network Topology t8](readme_plots/002_1_2__network_topology.t.00008.png)
   * **2020-12 (t=11 - 最終期、接続関係が歪んだまま固定された最終壊死トポロジー):**
-    ![Network Topology t11](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00011.png)
+    ![Network Topology t11](readme_plots/002_1_2__network_topology.t.00011.png)
 
 ### 4.2. 剛性接続 & 主成分分析 (Stiffness & PCA)
 
@@ -90,31 +90,31 @@
 
 * **構造剛性行列の推移:**
   * **2020-01 (t=0 - 均等に分散した健全な初期剛性分布):**
-    ![Stiffness t0](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+    ![Stiffness t0](readme_plots/000_2_1__structural_stiffness.t.00000.png)
   * **2020-05 (t=4 - 横領直前。循環取引による局所ストレスの伝播が薄い結合熱として検出):**
-    ![Stiffness t4](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_1__structural_stiffness.t.00004.png)
+    ![Stiffness t4](readme_plots/000_2_1__structural_stiffness.t.00004.png)
   * **2020-06 (t=5 - 最初の質量欠損が発生した変曲点。剛性行列上にクラックが生じる):**
-    ![Stiffness t5](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_1__structural_stiffness.t.00005.png)
+    ![Stiffness t5](readme_plots/000_2_1__structural_stiffness.t.00005.png)
   * **2020-09 (t=8 - 最大横領スパイクの瞬間。剛性バランスが全壊):**
-    ![Stiffness t8](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_1__structural_stiffness.t.00008.png)
+    ![Stiffness t8](readme_plots/000_2_1__structural_stiffness.t.00008.png)
   * **2020-12 (t=11 - 最終期。破壊された剛性構造は復元できず、一部ノードが極端に硬化固着):**
-    ![Stiffness t11](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_1__structural_stiffness.t.00011.png)
+    ![Stiffness t11](readme_plots/000_2_1__structural_stiffness.t.00011.png)
 
 * **主要軸比率 & 固有ベクトル推移 (PC1, PC2, PC3):**
-  ![PCA Ratio](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_2__principal_axes_ratio.png)
-  ![PCA PC1 Evolution](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_3__eigenvector_evolution.png)
-  ![PCA PC2 Evolution](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_3__eigenvector_evolution_pc2.png)
-  ![PCA PC3 Evolution](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_3__eigenvector_evolution_pc3.png)
+  ![PCA Ratio](readme_plots/000_2_2__principal_axes_ratio.png)
+  ![PCA PC1 Evolution](readme_plots/000_2_3__eigenvector_evolution.png)
+  ![PCA PC2 Evolution](readme_plots/000_2_3__eigenvector_evolution_pc2.png)
+  ![PCA PC3 Evolution](readme_plots/000_2_3__eigenvector_evolution_pc3.png)
 
 * **3D動的外部力共振マップ (3D Dynamics External Force):**
-  ![External Force 3D](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_1_6__3d_dynamics_external_force.png)
+  ![External Force 3D](readme_plots/000_1_6__3d_dynamics_external_force.png)
 
 ### 4.3. 循環取引の判定 (Spectral Radius)
 
 最大スペクトル半径は、**2020-01 (t=0) に `0.7861`**、**2020-02 (t=1) に `0.7058`** を記録し、危険境界（`0.6`）を大きく突破しています。これは開始時点で強固な循環取引（架空取引閉回路）が成立していたトポロジー的証拠です。その後、横領スキームへの移行（片面消込の発生）に伴うトポロジー断裂で一旦低下しますが、収束期の **2020-11 (t=10) に再び `0.5951`** の還流共鳴が立ち上がっています。
 
 * **システム安定性指標:**
-  ![System Stability](../../../../samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
+  ![System Stability](readme_plots/004_1_2__system_stability.png)
 
 ### 4.4. 熱力学指標と3D位相幾何
 
@@ -122,12 +122,12 @@
 また、T-S ダイアグラムは、前半に循環取引（空転サイクル）特有の「閉じた時計回りの閉路」を描きつつ、後半に横領特有の「戻らない右側への開放軌跡（散逸曲線）」が結合した、極めて不自然な**「ねじれ軌道」**を描いています。還流による過同期と、流出によるエネルギー散逸が重ね合わされた「複合的破局」の物理的証明です。
 
 * **熱力学特性 & 3D軌跡:**
-  ![Thermodynamics Energy Stack](../../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-  ![T-S Diagram](../../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
-  ![3D Phase Portrait](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_1_8__phase_portrait_3d.png)
-  ![3D Local Entropy](../../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2_1__3d_local_entropy.png)
-  ![3D Local Temperature](../../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2_2__3d_local_temperature.png)
-  ![3D Micro KL Drift](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+  ![Thermodynamics Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
+  ![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+  ![3D Phase Portrait](readme_plots/000_1_8__phase_portrait_3d.png)
+  ![3D Local Entropy](readme_plots/001_1_2_1__3d_local_entropy.png)
+  ![3D Local Temperature](readme_plots/001_1_2_2__3d_local_temperature.png)
+  ![3D Micro KL Drift](readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 **【情報幾何学的「相転移」検知と Z-Score の限界（モデル汚染）】**
 * **3D Micro KL Drift:**
@@ -149,7 +149,7 @@
      最大漏洩を記録した **2020-09 (t=8)** において、現金を直接引き出した取引 ID **`E_002432`**（流出額 `$4,534.35`）の決済承認履歴および送金先口座の徹底追跡を実施します。
 
 * **LQR 制御空間:**
-  ![LQR Control Space](../../../../samples/Sample_4_Composite_Chaos/readme_plots/004_1_3__control_lqr_performance_space.png)
+  ![LQR Control Space](readme_plots/004_1_3__control_lqr_performance_space.png)
 
 ### 💡 経営改善における「レバレッジ・ポイント（経費削減のツボ）」の定量的評価
 

@@ -27,12 +27,12 @@
 ### 取引残高（B/S相当）の比較
 
 * **B/S 資産・資本の累積推移 (累積値):**
-  ![B/S Cumulative Trend](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_0_1__BS_Trend.png)
+  ![B/S Cumulative Trend](readme_plots/000_0_1__BS_Trend.png)
 
 ### 取引流量（P/L相当）の比較
 
 * **P/L 取引高の累積推移:**
-  ![P/L Cumulative Trend](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_0_1__PL_Trend.png)
+  ![P/L Cumulative Trend](readme_plots/000_0_1__PL_Trend.png)
 
 #### 🔍 伝統的監視の死角
 伝統的なデータ管理手法では、システム全体の活動レベル（Total Volume）が維持されている限り、特定の流路が閉塞していることを見落とします。
@@ -57,39 +57,39 @@
 システム全体の流入・流出の不整合を示す `System Conservation Residual`（相対漏洩率）は、全期間において **`0.0`** を維持しています。これは、システム境界の外側への「物質的な漏洩」はないものの、内部トポロジーにおける運動野ノードのみが血流不足に陥っていることを示します。
 
 * **マクロ・フォレンジック・ダッシュボード (Macro Forensics):**
-  ![Macro Forensics](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_1__macro_forensics_dashboard.png)
+  ![Macro Forensics](readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 ### 4.2. 結合剛性の急激な変動（剛性ロック）と主成分ベクトルの極端な偏在
 
 異常発生の瞬間、システムの固有構造に劇的な地殻変動（Regime Shift）が発生しています。
 
 * **PCA 主要軸比率:**
-  ![PCA Ratio](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_2__principal_axes_ratio.png)
+  ![PCA Ratio](readme_plots/000_2_2__principal_axes_ratio.png)
 
 * **PC1 主要固有ベクトル成分比率推移 (Eigenvector Evolution):**
-  ![PC1 Eigenvector](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_3__eigenvector_evolution.png)
+  ![PC1 Eigenvector](readme_plots/000_2_3__eigenvector_evolution.png)
 
 #### 📊 剛性行列のシネマティック5定点シーケンスによる解析
 * **① 正常期 (t=0 / 10:00:00):**
-  ![Stiffness t0](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+  ![Stiffness t0](readme_plots/000_2_1__structural_stiffness.t.00000.png)
   脳全体の機能的結合は均一で、動的な結合剛性（しなやかさ）を維持しています。
 * **② 閉塞前夜 (t=29 / 10:04:50):**
-  ![Stiffness t29](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00029.png)
+  ![Stiffness t29](readme_plots/000_2_1__structural_stiffness.t.00029.png)
   閉塞直前。PC1説明比率は **`37.60%`**、固有値は **`6296.66`** であり、脳全体にエネルギーが分散しています。
 * **③ 急性梗塞発症 (t=30 / 10:05:00):**
-  ![Stiffness t30](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00030.png)
+  ![Stiffness t30](readme_plots/000_2_1__structural_stiffness.t.00030.png)
   運動野への流入路が閉塞。PC1説明比率が **`94.72%`** （固有値 **`201,402.52`**）へ爆発的に跳ね上がり、主成分ベクトルは `00_Motor_Cortex` に **`-0.8942`** という圧倒的な負の負荷で極偏在しました。
 * **④ 閉塞直後 (t=31 / 10:05:10):**
-  ![Stiffness t31](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00031.png)
+  ![Stiffness t31](readme_plots/000_2_1__structural_stiffness.t.00031.png)
   PC1比率は **`94.71%`**、運動野負荷は **`-0.8943`** に固着し、運動野がシステム全体の動的変動を支配（剛性ロック）し続けています。
 * **⑤ 最終状態 (t=59 / 10:09:50):**
-  ![Stiffness t59](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00059.png)
+  ![Stiffness t59](readme_plots/000_2_1__structural_stiffness.t.00059.png)
   PC1比率は **`92.33%`** と依然として極めて高い値を維持しており、運動野の「不可逆的な機能喪失（脳梗塞の固定化）」を裏付けています。
 
 ### 4.3. ネットワーク・トポロジーと接続性の虚脱
 
 * **システム安定性指標 (System Stability / Spectral Radius):**
-  ![System Stability](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)
+  ![System Stability](readme_plots/004_1_2__system_stability.png)
 
 #### 確率遷移マトリクスによるスペクトル半径「1.00」の制約
 fMRIの脳ネットワークは流出ゼロの孤立ノードが存在しない「クローズドな動的結合系」であるため、確率遷移マトリクスの数学的性質（各行の和が1.0）により、スペクトル半径は異常の有無にかかわらず常に `1.0000` に固定されます。
@@ -97,26 +97,26 @@ fMRIの脳ネットワークは流出ゼロの孤立ノードが存在しない�
 
 * **ネットワーク・トポロジー時系列の5定点シーケンス:**
   * **① 初期状態 (t=0 / 10:00:00):**
-    ![Topology t0](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00000.png)
+    ![Topology t0](readme_plots/002_1_2__network_topology.t.00000.png)
   * **② 閉塞前夜 (t=29 / 10:04:50):**
-    ![Topology t29](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00029.png)
+    ![Topology t29](readme_plots/002_1_2__network_topology.t.00029.png)
   * **③ 急性梗塞発症 (t=30 / 10:05:00):**
-    ![Topology t30](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00030.png)
+    ![Topology t30](readme_plots/002_1_2__network_topology.t.00030.png)
     運動野（`00_Motor_Cortex`）へ向かう流入エッジが極端に細く消退し、トポロジー的な結合が断裂した様子が鮮明に現れています。
   * **④ 閉塞直後 (t=31 / 10:05:10):**
-    ![Topology t31](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00031.png)
+    ![Topology t31](readme_plots/002_1_2__network_topology.t.00031.png)
   * **⑤ 最終状態 (t=59 / 10:09:50):**
-    ![Topology t59](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00059.png)
+    ![Topology t59](readme_plots/002_1_2__network_topology.t.00059.png)
 
 ### 4.4. 代謝エントロピーと自由エネルギーの圧迫崩壊
 
 システム全体の統計物理指標は、深刻な「脳代謝能力の崩壊」を告げています。
 
 * **熱力学エネルギースタック:**
-  ![Thermodynamics Energy Stack](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+  ![Thermodynamics Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 * **T-S ダイアグラム:**
-  ![T-S Diagram](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+  ![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 全期間を通じたエントロピー $S$ の平均は **`9.36`** (標準偏差 `0.65`)、自由エネルギー $F$ の平均は **`413,922.35`** (標準偏差 `107,638.13`) ですが、t=30 の閉塞以降、自由エネルギー $F$ は急激に低下し続け、最終ステップ（t=59）では最小値 **`167,265.39`** にまで引きずり降ろされています。これは、活動を維持するための活動電位ポテンシャルが完全に枯渇（熱死・代謝停止）したことを意味します。
 T-Sダイアグラムは、アノマリーの瞬間から急激に温度とエントロピーが退行し、システム全体のエネルギーポテンシャルが収縮していく様子を克明に描いています。
@@ -126,9 +126,9 @@ T-Sダイアグラムは、アノマリーの瞬間から急激に温度とエ�
 時間（Time Step）× 空間（ノード）の3次元情報幾何学・統計プロットは、閉塞の発生箇所をピンポイントで抉り出しています。
 
 * **3D Micro Z-Score (Position):**
-  ![3D Micro Z-Score](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+  ![3D Micro Z-Score](readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 * **3D Micro KL Drift:**
-  ![3D Micro KL Drift](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+  ![3D Micro KL Drift](readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 3D Micro Z-Score プロットにおいて、t=30 の瞬間に `00_Motor_Cortex` の座標上に **`51.04`** という天を突く「超高圧の警告スパイク」が聳え立っています。
 また、周囲の他ノード（`01_Parietal_Lobe` `17.12`、`02_Prefrontal_Cortex` `12.36` 等）も同期して異常圧力を示しており、運動野の閉塞（虚血）がもたらした強烈な機能的ひずみが脳全体に津波のように波及した動的プロセスが記録されています。
@@ -153,7 +153,7 @@ T-Sダイアグラムは、アノマリーの瞬間から急激に温度とエ�
      閉塞発生から数分以内（シミュレーション上の t=30〜33）に、`Motor_Cortex` への流入経路の結合剛性を強制的に引き下げる（血管再開通）介入を行い、流入量を `540` 前後の正常ベースラインへ復帰させます。これにより、PC1寄与率を正常範囲（約37%）に引き下げ、運動野の壊死を未然に防ぎます。
   2. **経頭蓋磁気刺激 (TMS) による位相補助 (LQR Feedback):**
      LQR感度行列に基づき、前頭前野（`02_Prefrontal_Cortex`）および頂頭葉（`01_Parietal_Lobe`）に対して「逆位相の刺激パルス」を動的に印加します。これにより、運動野の虚血領域の機能的負担を側副路経由で一時的に代償・サポートし、自由エネルギーの致命的崩壊を防ぎます。
-     ![Control LQR](../../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_3__control_lqr_performance_space.png)
+     ![Control LQR](readme_plots/004_1_3__control_lqr_performance_space.png)
 
 ---
 

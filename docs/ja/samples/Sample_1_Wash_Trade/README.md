@@ -24,27 +24,27 @@
 
 ### B/S 資産・資本推移の比較（累積 vs 期間別）
 * **累積 B/S Trend:**
-  ![B/S Trend](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__BS_Trend.png)
+  ![B/S Trend](readme_plots/000_0_1__BS_Trend.png)
 * **期間別（単月） B/S Trend (Periodic):**
-  ![B/S Trend Periodic](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__BS_Trend_Periodic.png)
+  ![B/S Trend Periodic](readme_plots/000_0_1__BS_Trend_Periodic.png)
 
 ### B/S ブロック合計の比較（累積 vs 期間別）
 * **累積 B/S Block Total:**
-  ![B/S Block Total](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__BS_Block_Total.png)
+  ![B/S Block Total](readme_plots/000_0_1__BS_Block_Total.png)
 * **期間別（単月） B/S Block Total (Periodic):**
-  ![B/S Block Total Periodic](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__BS_Block_Total_Periodic.png)
+  ![B/S Block Total Periodic](readme_plots/000_0_1__BS_Block_Total_Periodic.png)
 
 ### P/L 売上・費用推移の比較（累積 vs 期間別）
 * **累積 P/L Trend:**
-  ![P/L Trend](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Trend.png)
+  ![P/L Trend](readme_plots/000_0_1__PL_Trend.png)
 * **期間別（単月） P/L Trend (Periodic):**
-  ![P/L Trend Periodic](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Trend_Periodic.png)
+  ![P/L Trend Periodic](readme_plots/000_0_1__PL_Trend_Periodic.png)
 
 ### P/L ウォーターフォール図の比較（累積 vs 期間別）
 * **累積 P/L Waterfall:**
-  ![P/L Waterfall Total](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Waterfall_Total.png)
+  ![P/L Waterfall Total](readme_plots/000_0_1__PL_Waterfall_Total.png)
 * **期間別（単月） P/L Waterfall (Periodic):**
-  ![P/L Waterfall Total Periodic](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Waterfall_Total_Periodic.png)
+  ![P/L Waterfall Total Periodic](readme_plots/000_0_1__PL_Waterfall_Total_Periodic.png)
 
 **【対比分析】**
 累積グラフでは緩やかに右肩上がりで成長しているように見えますが、期間別（Periodic）グラフを見ると、**1月 (t=0)**、**2月 (t=1)**、**5月 (t=4)** において、現預金（Cash）と売掛金（AR）のトランザクションが異常なスパイク（数万ドル規模の往復）を発生させていることが浮き彫りになります。
@@ -59,48 +59,48 @@
 循環取引が発生した月には、現預金（`ACC_Cash`）と売掛金（`ACC_Accounts_Receivable`）の間の結合が極端に硬直化します。
 
 * **① 2020-01 (t=0: 還流開始時):**
-  ![Stiffness t0](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+  ![Stiffness t0](readme_plots/000_2_1__structural_stiffness.t.00000.png)
 * **② 2020-04 (t=3: 一時沈静期):**
-  ![Stiffness t3](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00003.png)
+  ![Stiffness t3](readme_plots/000_2_1__structural_stiffness.t.00003.png)
 * **③ 2020-05 (t=4: 還流再発時):**
-  ![Stiffness t4](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00004.png)
+  ![Stiffness t4](readme_plots/000_2_1__structural_stiffness.t.00004.png)
 * **④ 2020-06 (t=5: 還流終了直後):**
-  ![Stiffness t5](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00005.png)
+  ![Stiffness t5](readme_plots/000_2_1__structural_stiffness.t.00005.png)
 * **⑤ 2020-12 (t=11: 最終観測期):**
-  ![Stiffness t11](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_1__structural_stiffness.t.00011.png)
+  ![Stiffness t11](readme_plots/000_2_1__structural_stiffness.t.00011.png)
 
 ### 主成分分析（PCA）と固有ベクトル推移
 主成分分析におけるエネルギー寄与率は、アノマリーの発生期（t=4）に第1主成分（PC1）が **`95.28%`** に達し、流動性が完全に支配されていることを示します。
 
 * **PCA 主要軸比率 (PCA Principal Axes Ratio):**
-  ![PCA Ratio](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_2__principal_axes_ratio.png)
+  ![PCA Ratio](readme_plots/000_2_2__principal_axes_ratio.png)
 
 PC1, PC2, PC3 の固有ベクトルを分析すると、異常取引を主導した勘定科目の影響度が明確になります。
 * **PC1 固有ベクトル推移:**
-  ![PC1 Eigenvector](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_3__eigenvector_evolution.png)
+  ![PC1 Eigenvector](readme_plots/000_2_3__eigenvector_evolution.png)
   第1主成分では `01_ACC_Accounts_Receivable` (`-0.7162`) と `03_ACC_Cash` (`0.3524`)、`07_ACC_Sales_Revenue` (`0.5183`) に成分が異常集中し、特定の還流ペアが全社の流動性をハイジャックしていることを示します。
 * **PC2 固有ベクトル推移:**
-  ![PC2 Eigenvector](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_3__eigenvector_evolution_pc2.png)
+  ![PC2 Eigenvector](readme_plots/000_2_3__eigenvector_evolution_pc2.png)
 * **PC3 固有ベクトル推移:**
-  ![PC3 Eigenvector](../../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_3__eigenvector_evolution_pc3.png)
+  ![PC3 Eigenvector](readme_plots/000_2_3__eigenvector_evolution_pc3.png)
 
 ### 最大スペクトル半径 $\rho$ （システム安定性）
 隣接結合行列から算出される最大スペクトル半径は、還流の発生月（1月, 2月, 5月）に跳ね上がっており、トポロジー的に強固な資金還流閉路が構築されていた数学的証拠となります。
 
 * **システム安定性指標 (Spectral Radius):**
-  ![System Stability](../../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_2__system_stability.png)
+  ![System Stability](readme_plots/004_1_2__system_stability.png)
 
 ### ネットワーク・トポロジー時系列シーケンス
 * **① 2020-01 (t=0: 現預金 ⇄ 売掛金の強固な双方向エッジが形成):**
-  ![Topology t0](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00000.png)
+  ![Topology t0](readme_plots/002_1_2__network_topology.t.00000.png)
 * **② 2020-04 (t=3: 通常の流路へ一時的に分散):**
-  ![Topology t3](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00003.png)
+  ![Topology t3](readme_plots/002_1_2__network_topology.t.00003.png)
 * **③ 2020-05 (t=4: 再び極太の自己還流ループが再接続):**
-  ![Topology t4](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00004.png)
+  ![Topology t4](readme_plots/002_1_2__network_topology.t.00004.png)
 * **④ 2020-06 (t=5: 還流チャネルが細り、通常化へ移行):**
-  ![Topology t5](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00005.png)
+  ![Topology t5](readme_plots/002_1_2__network_topology.t.00005.png)
 * **⑤ 2020-12 (t=11: 正常な業務フローへ復帰):**
-  ![Topology t11](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00011.png)
+  ![Topology t11](readme_plots/002_1_2__network_topology.t.00011.png)
 
 ---
 
@@ -110,9 +110,9 @@ PC1, PC2, PC3 の固有ベクトルを分析すると、異常取引を主導し
 
 ### 熱力学エネルギー構造の可視化
 * **熱力学エネルギースタック:**
-  ![Thermodynamics Energy Stack](../../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+  ![Thermodynamics Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
 * **T-S ダイアグラム (T-S Diagram):**
-  ![T-S Diagram](../../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+  ![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 1. **摩擦熱（エントロピー損失 $TS$）の膨張:**
    還流が発生する月（1月, 2月, 5月）に、残高の激しい往復移動によってボラティリティ（システム温度 $T$）が異常スパイクし、エントロピー損失（赤色の $-TS$ 領域）が極大化します。このため、見かけの総活動量（内部エネルギー $U$）が増大しているにもかかわらず、真の余力である自由エネルギー $F = U - TS$（白色の境界線）が押し潰されています。
@@ -121,17 +121,17 @@ PC1, PC2, PC3 の固有ベクトルを分析すると、異常取引を主導し
 
 ### 3D 空間での局所熱力学的異常
 * **3D 局所エントロピー ($s_i$):**
-  ![3D Local Entropy](../../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2_1__3d_local_entropy.png)
+  ![3D Local Entropy](readme_plots/001_1_2_1__3d_local_entropy.png)
   `ACC_Cash` が `ACC_Accounts_Receivable` への異常な迂回流路（Wash Funding）を形成したことで、流出確率の偏りが生じ、還流月に局所エントロピーの盛り上がりが検知されます。
 * **3D 局所温度 ($T_i$):**
-  ![3D Local Temperature](../../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2_2__3d_local_temperature.png)
+  ![3D Local Temperature](readme_plots/001_1_2_2__3d_local_temperature.png)
   還流に関与する3ノード（現預金、売掛金、売上）において、残高ボラティリティの急増を示す局所温度の巨大な過熱スパイクが同時に発生しています。
 
 ### 3D ミクロ情報幾何学と「茹でガエル現象」（モデル汚染）
 * **3D Micro KL Drift (情報幾何学的変化量):**
-  ![3D Micro KL Drift](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+  ![3D Micro KL Drift](readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 * **3D Micro Z-Score (残高の位置偏差):**
-  ![3D Micro Z-Score](../../../../samples/Sample_1_Wash_Trade/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+  ![3D Micro Z-Score](readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 
 **【茹でガエル現象 (Model Pollution) の数学的証明】**
 3D Micro KL Drift プロットを観察すると、2020-01〜02の「最初の還流」では、`ACC_Cash` ノードに巨大な検出スパイク（尖塔）が立ち上がっています。しかし、2020-05の「3回目の還流」では、同規模の循環取引であるにもかかわらず、検出される KL Drift スパイクが著しく減少（平坦化）しています。
@@ -144,7 +144,7 @@ PC1, PC2, PC3 の固有ベクトルを分析すると、異常取引を主導し
 * **治療方針: 還流トポロジーの切断とピンポイント介入**
 * **LQR 感度介入効果:**
   流動性制御理論（LQR）による感度解析において、本ネットワークでは `ACC_Accounts_Receivable` (売掛金) ノードへの制御介入が最大の効果を発揮することが算出されています。
-  ![LQR Control](../../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_3__control_lqr_performance_space.png)
+  ![LQR Control](readme_plots/004_1_3__control_lqr_performance_space.png)
 
 * **具体的な介入計画:**
   1. **トポロジー的インターロックの導入:**

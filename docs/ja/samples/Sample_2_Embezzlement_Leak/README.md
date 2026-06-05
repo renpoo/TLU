@@ -21,19 +21,19 @@
 ### 貸借対照表（B/S）の比較
 
 * **B/S 資産・資本の累積推移 & ブロック図 (累積値):**
-  ![B/S Cumulative Trend](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__BS_Trend.png)
-  ![B/S Block Total](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__BS_Block_Total.png)
+  ![B/S Cumulative Trend](readme_plots/000_0_1__BS_Trend.png)
+  ![B/S Block Total](readme_plots/000_0_1__BS_Block_Total.png)
 
 * **B/S 資産・資本の期間推移 (単月非累積値):**
-  ![B/S Periodic Trend](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__BS_Trend_Periodic.png)
+  ![B/S Periodic Trend](readme_plots/000_0_1__BS_Trend_Periodic.png)
 
 ### 損益計算書（P/L）の比較
 
 * **P/L 売上・費用の累積推移:**
-  ![P/L Cumulative Trend](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__PL_Trend.png)
+  ![P/L Cumulative Trend](readme_plots/000_0_1__PL_Trend.png)
 
 * **P/L 売上・費用の期間推移 (単月非累積値):**
-  ![P/L Periodic Trend](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__PL_Trend_Periodic.png)
+  ![P/L Periodic Trend](readme_plots/000_0_1__PL_Trend_Periodic.png)
 
 * **観察:** 累積グラフでは営業活動が極めて順調に見えますが、期間別（Periodic）グラフを見ると、質量欠損が発生した月（2月, 3月, 8月, 9月, 11月）において、取引の不自然な歪みや、後述する `UNKNOWN_LEAK` ノードに向けた簿外流出が発生しています。
 
@@ -65,19 +65,19 @@
 また、トポロジー空間上に `UNKNOWN_LEAK` ノードが接続され、そこに向けて簿外流出を示す太いエッジが形成されていることが視覚化されます。
 
 * **マクロフォレンジックダッシュボード:**
-  ![Macro Forensics](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
+  ![Macro Forensics](readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 * **ネットワークトポロジーの変化:**
   * **2020-01 (t=0 - 健全な初期トポロジー。`UNKNOWN_LEAK` は未出現):**
-    ![Network Topology t0](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00000.png)
+    ![Network Topology t0](readme_plots/002_1_2__network_topology.t.00000.png)
   * **2020-02 (t=1 - 最初の流出が発生し、`UNKNOWN_LEAK` ノードが接続される):**
-    ![Network Topology t1](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00001.png)
+    ![Network Topology t1](readme_plots/002_1_2__network_topology.t.00001.png)
   * **2020-03 (t=2 - `UNKNOWN_LEAK` への流出ベクトルが太くなり、構造が破壊される):**
-    ![Network Topology t2](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00002.png)
+    ![Network Topology t2](readme_plots/002_1_2__network_topology.t.00002.png)
   * **2020-04 (t=3 - 流出は一時停止するが、構造的歪みは残存):**
-    ![Network Topology t3](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00003.png)
+    ![Network Topology t3](readme_plots/002_1_2__network_topology.t.00003.png)
   * **2020-12 (t=11 - 最終期になっても、システム外への漏洩管が常態化):**
-    ![Network Topology t11](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00011.png)
+    ![Network Topology t11](readme_plots/002_1_2__network_topology.t.00011.png)
 
 ### 4.2. 剛性接続 & 主成分分析 (Stiffness & PCA)
 
@@ -86,31 +86,31 @@
 
 * **構造剛性行列の推移:**
   * **2020-01 (t=0 - 柔軟で健全な剛性分布):**
-    ![Stiffness t0](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00000.png)
+    ![Stiffness t0](readme_plots/000_2_1__structural_stiffness.t.00000.png)
   * **2020-02 (t=1 - 流出の開始により、剛性分布がわずかに歪み始める):**
-    ![Stiffness t1](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00001.png)
+    ![Stiffness t1](readme_plots/000_2_1__structural_stiffness.t.00001.png)
   * **2020-03 (t=2 - 流出が継続し、周辺剛性が赤色に固着する剛性ロックが顕著化):**
-    ![Stiffness t2](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00002.png)
+    ![Stiffness t2](readme_plots/000_2_1__structural_stiffness.t.00002.png)
   * **2020-04 (t=3 - 流出は停止するが、硬直はシステム全体に波及):**
-    ![Stiffness t3](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00003.png)
+    ![Stiffness t3](readme_plots/000_2_1__structural_stiffness.t.00003.png)
   * **2020-12 (t=11 - 最終観測期においても、しなやかさを失った「慢性硬直」状態が残存):**
-    ![Stiffness t11](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00011.png)
+    ![Stiffness t11](readme_plots/000_2_1__structural_stiffness.t.00011.png)
 
 * **主要軸比率 & 固有ベクトル推移 (PC1, PC2, PC3):**
-  ![PCA Ratio](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_2__principal_axes_ratio.png)
-  ![PCA PC1 Evolution](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_3__eigenvector_evolution.png)
-  ![PCA PC2 Evolution](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_3__eigenvector_evolution_pc2.png)
-  ![PCA PC3 Evolution](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_3__eigenvector_evolution_pc3.png)
+  ![PCA Ratio](readme_plots/000_2_2__principal_axes_ratio.png)
+  ![PCA PC1 Evolution](readme_plots/000_2_3__eigenvector_evolution.png)
+  ![PCA PC2 Evolution](readme_plots/000_2_3__eigenvector_evolution_pc2.png)
+  ![PCA PC3 Evolution](readme_plots/000_2_3__eigenvector_evolution_pc3.png)
 
 * **3D動的外部力共振マップ (3D Dynamics External Force):**
-  ![External Force 3D](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_6__3d_dynamics_external_force.png)
+  ![External Force 3D](readme_plots/000_1_6__3d_dynamics_external_force.png)
 
 ### 4.3. 循環取引の排除 (Spectral Radius)
 
 最大スペクトル半径は、全期間を通じて完全に **`0.00`** であり、架空の売上自己還流閉路（循環取引）は本システムには存在しないことがトポロジー的に証明されています。
 
 * **システム安定性指標:**
-  ![System Stability](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/004_1_2__system_stability.png)
+  ![System Stability](readme_plots/004_1_2__system_stability.png)
 
 ### 4.4. 熱力学指標と3D位相幾何
 
@@ -118,11 +118,11 @@
 また、T-S 線図は循環取引のような閉じた還流ループを描くことはなく、**「永久に戻らない右側への開放軌跡（散逸曲線）」**を描いており、エネルギーがシステム外へと一方的に失われている（熱力学的散逸）動かぬ証拠となっています。
 
 * **熱力学特性 & 3D軌跡:**
-  ![Thermodynamics Energy Stack](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-  ![T-S Diagram](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
-  ![3D Phase Portrait](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_8__phase_portrait_3d.png)
-  ![3D Local Entropy](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2_1__3d_local_entropy.png)
-  ![3D Micro KL Drift](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+  ![Thermodynamics Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
+  ![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+  ![3D Phase Portrait](readme_plots/000_1_8__phase_portrait_3d.png)
+  ![3D Local Entropy](readme_plots/001_1_2_1__3d_local_entropy.png)
+  ![3D Micro KL Drift](readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 **【ゼロ・トゥ・ワン異常の検知】**
 3D Micro KL Drift（情報幾何学的変化量）において、最初の資金流出が発生した 2020-02〜03 に、現預金（`ACC_Cash`）と売掛金（`ACC_Accounts_Receivable`）のノード空間上に **天を突き刺すような巨大な尖塔（KL Drift の壁）** が出現しています。これは、従来の統計的しきい値（Z-Score）が「過去に存在しない未知のノード（`UNKNOWN_LEAK`）への資金移動」という、学習されていない接続に対して偽陰性（スルー）を示す死角を持っていたのに対し、情報幾何学エンジンが確率分布の急変を確実に捉え、フォレンジック特定したことを証明しています。
@@ -139,7 +139,7 @@
      LQR感度解析および逆運動学感度において、本システムでも `ACC_Accounts_Receivable` ノードへの介入効果が最大と算出されています。流出ハブとなっている特定の取引先をピンポイントで一時取引停止にすることで、健全な他の営業取引を阻害することなく大出血を止めます。
 
 * **LQR 制御空間:**
-  ![LQR Control Space](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/004_1_3__control_lqr_performance_space.png)
+  ![LQR Control Space](readme_plots/004_1_3__control_lqr_performance_space.png)
 
 ### 💡 経営改善における「レバレッジ・ポイント（経費削減のツボ）」の定量的評価
 
@@ -148,9 +148,9 @@
 1. **第1位：人件費 (`ACC_Payroll_Exp`)**
    * **定量的特徴:** 調整に伴う組織摩擦を示す `ik_strain_energy` が、初期ステップ（t=0）において **`40.9540`** と、経費3種の中で最も低く抑えられています。これは高い調整弾力性を意味し、また調整幅の絶対スケールも最大であるため、**「最も組織摩擦（ストレス）が少なく、かつ効果の絶対額が大きい最大のツボ」**です。
 2. **第2位：旅費交通費 (`ACC_Travel_Exp`)**
-   * **定量的特徴:** 初期ステップにおける `ik_strain_energy` は **`48.5984`**。地代家賃に比べて調整時の摩擦が低く、短期的な変動費としての調整レバーとして機能します。
+   * **定量的特徴:** 初期ステップにおける `ik_strain_energy` は **`47.7865`**。地代家賃に比べて調整時の摩擦が低く、短期的な変動費としての調整レバーとして機能します。
 3. **第3位：地代家賃 (`ACC_Rent_Exp`)**
-   * **定量的特徴:** 初期ステップにおける `ik_strain_energy` が **`49.2394`** と最も高く、システム内で最も「硬直的（剛性が高い）」な固定費ノードです。契約変更や移転に伴う組織的負荷（摩擦）が最大であるため、短期的な経営改善レバーとしての優先度は最も低くなります。
+   * **定量的特徴:** 初期ステップにおける `ik_strain_energy` が **`48.6579`** と最も高く、システム内で最も「硬直的（剛性が高い）」な固定費ノードです。契約変更や移転に伴う組織的負荷（摩擦）が最大であるため、短期的な経営改善レバーとしての優先度は最も低くなります。
 
 ---
 
@@ -159,9 +159,9 @@
 ### 6.1. 統計的偽陰性アラートの判定
 
 * **Z-Score (残高の位置偏差):**
-  ![Z-Score (Position)](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+  ![Z-Score (Position)](readme_plots/002_2_2_2__3d_micro_z_score_X.png)
 * **Z-Score (流動性の速度偏差):**
-  ![Z-Score (Velocity)](../../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_3__3d_micro_z_score_v.png)
+  ![Z-Score (Velocity)](readme_plots/002_2_2_3__3d_micro_z_score_v.png)
 
 * **アラート内容:** 資金流出が実行された 2020-02〜03 において、確率統計モデル（`z_score_X`）がしきい値 `3.0` を超えず、アラートが発生しませんでした（偽陰性）。
 * **判定結果:** 統計モデルの「ゼロ・トゥ・ワン死角」による偽陰性。過去に履歴のない `UNKNOWN_LEAK` との新規接続に対して、共分散学習が正常判定を下したためです。トリアージにおいては、物理保存残差（`System Conservation Residual` が最大 `364.53`）という的真実を最優先し、偽陰性を棄却して不正流出病態であると判定します。
