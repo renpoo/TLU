@@ -1,4 +1,4 @@
-# 003. 逆運動学と目標到達性 (Inverse Kinematics & Reachability)
+# 003_1. 逆運動学と目標到達性 (Inverse Kinematics & Reachability)
 
 本ガイドは、Tensor-Link Utility (TLU) におけるロボット運動学・目標到達性分析モジュール（`003_1`）について、グラフの種類ごとに各検証サンプルの出力と数値に基づく臨床解説を縦列に整理したものです。
 
