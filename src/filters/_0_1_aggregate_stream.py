@@ -41,6 +41,15 @@ def main():
     if df.empty:
         sys.exit(0)
 
+    src_cols = [c.strip() for c in args.col_src.split(',')]
+    tgt_cols = [c.strip() for c in args.col_tgt.split(',')]
+
+    # Validate columns
+    for c in [args.col_time, args.col_val] + src_cols + tgt_cols:
+        if c not in df.columns:
+            print(f"CRITICAL: Column '{c}' not found in the input stream. Available columns: {list(df.columns)}", file=sys.stderr)
+            sys.exit(1)
+
     # Convert time
     df['parsed_time'] = pd.to_datetime(df[args.col_time], errors='coerce')
     df = df.dropna(subset=['parsed_time'])
@@ -48,9 +57,24 @@ def main():
     
     df[args.col_time] = df['parsed_time'].apply(lambda x: get_period_str(x, args.interval))
 
-    # We will just sum the col_val.
-    grouped = df.groupby([args.col_time, args.col_src, args.col_tgt], sort=False)
-    summary = grouped[args.col_val].sum().reset_index()
+    is_multi = len(src_cols) > 1 or len(tgt_cols) > 1
+
+    if is_multi:
+        expanded_dfs = []
+        for s_col in src_cols:
+            for t_col in tgt_cols:
+                sub_df = df[[args.col_time, s_col, t_col, args.col_val]].copy()
+                sub_df = sub_df.rename(columns={s_col: 'Src', t_col: 'Tgt'})
+                expanded_dfs.append(sub_df)
+        expanded_df = pd.concat(expanded_dfs, ignore_index=True)
+        
+        # Aggregate expanded stream
+        grouped = expanded_df.groupby([args.col_time, 'Src', 'Tgt'], sort=False)
+        summary = grouped[args.col_val].sum().reset_index()
+    else:
+        # Backward compatibility for single-column
+        grouped = df.groupby([args.col_time, args.col_src, args.col_tgt], sort=False)
+        summary = grouped[args.col_val].sum().reset_index()
 
     summary.to_csv(sys.stdout, index=False)
 

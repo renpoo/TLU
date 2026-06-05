@@ -46,7 +46,8 @@ def main():
     active_nodes = active_nodes_series[active_nodes_series > 0].index.tolist()
     
     df_active = df[df['node_idx'].isin(active_nodes)]
-    pivot_u = df_active.pivot(index='t_idx', columns='node_idx', values='optimal_input_u').fillna(0)
+    df_active_unique = df_active.groupby(['t_idx', 'node_idx']).first().reset_index()
+    pivot_u = df_active_unique.pivot(index='t_idx', columns='node_idx', values='optimal_input_u').fillna(0)
 
     fig, ax = plt.subplots(figsize=(12, 7))
     

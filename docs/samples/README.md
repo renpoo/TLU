@@ -30,10 +30,10 @@ Below is the diagnostic catalog for all 10 samples included in the TLU environme
 * **[🔴 Sample 5: Kyoto Traffic / Kyoto Intersection Network](./Sample_5_Kyoto_Traffic/README.md)**
   * **Domain:** Urban Traffic | **Eastern Medicine Diagnosis:** Meridian Obstruction, Qi Stagnation & Blood Stasis
   * **Overview:** Intersection deadlock caused by vehicle inflow overload. Cars move but do not progress (a type of thermal death identical to wash trading).
-* **[🟡 Sample 6: Market Bipartite / Bipartite Graph](./Sample_6_Market_Bipartite_Weekly/README.md)**
+* **[🟡 Sample 6: Market Bipartite / Bipartite Graph](./Sample_6_Market_Stock_Flow/README.md)**
   * **Domain:** Stock Market | **Eastern Medicine Diagnosis:** Market Meridian Recirculation, Recirculation Lock
   * **Overview:** Circular trading between a specific bot cluster and a specific ticker. Edge stress vanishes, hijacking the market via hyper-synchronization.
-* **[🟡 Sample 7: Market Users / Fund Transfer Topology](./Sample_7_Market_Users_Weekly/README.md)**
+* **[🟡 Sample 7: Market Users / Fund Transfer Topology](./Sample_7_Market_Cash_Flow/README.md)**
   * **Domain:** Stock Market | **Eastern Medicine Diagnosis:** Collusive Syndicate, Dark Undercurrent Recirculation
   * **Overview:** Collusive syndicate using direct transfers between multiple accounts. Renders abnormal towers on the 3D KL Drift plot.
 * **[🔴 Sample 8: fMRI Stroke / Cerebral Infarction](./Sample_8_fMRI_Stroke/README.md)**
@@ -57,8 +57,8 @@ Below is a summary of the main mathematical and physical metrics obtained from t
 | **3** | **[Unbalanced Mistake / Journal Input Error](./Sample_3_Unbalanced_Mistake/README.md)** | Financial | 🟡 **WARNING** | `0.00` | `906.29` | `5.29` | `5.29` | `+$41,368.85` | Local Qi-Blood Imbalance, Meridian Sprain |
 | **4** | **[Composite Chaos / Composite Anomalies](./Sample_4_Composite_Chaos/README.md)** | Financial | 🔴 **CRITICAL** | `0.79` | `4,773.57` | `3.42` | `1.52` | `+$200,478.42` | Depletion of Qi & Blood, Hyper-recirculation Collapse |
 | **5** | **[Kyoto Traffic / Kyoto Intersection Network](./Sample_5_Kyoto_Traffic/README.md)** | Traffic | 🔴 **CRITICAL** | `1.00` | `0.00` | `1.40` | `0.00` | `-$2,500,000.00` | Meridian Obstruction, Qi Stagnation & Blood Stasis |
-| **6** | **[Market Bipartite / Bipartite Graph](./Sample_6_Market_Bipartite_Weekly/README.md)** | Market | 🟡 **HIGH** | `1.00` | `0.00` | `80.53` | `3.39` | `$0.00` | Market Meridian Recirculation, Recirculation Lock |
-| **7** | **[Market Users / Fund Transfer Topology](./Sample_7_Market_Users_Weekly/README.md)** | Market | 🟡 **HIGH** | `1.00` | `0.00` | `80.53` | `3.39` | `$0.00` | Collusive Syndicate, Dark Undercurrent Recirculation |
+| **6** | **[Market Bipartite / Bipartite Graph](./Sample_6_Market_Stock_Flow/README.md)** | Market | 🟡 **HIGH** | `1.00` | `0.00` | `80.53` | `3.39` | `$0.00` | Market Meridian Recirculation, Recirculation Lock |
+| **7** | **[Market Users / Fund Transfer Topology](./Sample_7_Market_Cash_Flow/README.md)** | Market | 🟡 **HIGH** | `1.00` | `0.00` | `80.53` | `3.39` | `$0.00` | Collusive Syndicate, Dark Undercurrent Recirculation |
 | **8** | **[fMRI Stroke / Cerebral Infarction](./Sample_8_fMRI_Stroke/README.md)** | Biological | 🔴 **CRITICAL** | `1.00` | `0.00` | `51.44` | `0.07` | `-$500,000.00` | Brain Meridian Obstruction, Local Qi-Blood Depletion |
 | **9** | **[fMRI Seizure / Epileptic Seizure](./Sample_9_fMRI_Seizure/README.md)** | Biological | 🔴 **CRITICAL** | `1.00` | `0.00` | `24.04` | `0.00` | `-$500,000.00` | Brain Meridian Hyper-synchronization, Qi-Blood Runaway |
 
@@ -85,7 +85,7 @@ TLU's primary mathematical breakthrough is proving that **"seemingly completely 
 
 ### ⚖️ 2. Hyper-synchronization & Recirculation Pathologies (Hyper-synchronization / Recirculation)
 
-* **Targets:** [Sample 1 (Circular Ledger)](./Sample_1_Wash_Trade/README.md), [Sample 5 (Kyoto Traffic Deadlock)](./Sample_5_Kyoto_Traffic/README.md), [Sample 6 (Market Bipartite)](./Sample_6_Market_Bipartite_Weekly/README.md), [Sample 7 (Market Users)](./Sample_7_Market_Users_Weekly/README.md), [Sample 9 (Epileptic Seizure)](./Sample_9_fMRI_Seizure/README.md)
+* **Targets:** [Sample 1 (Circular Ledger)](./Sample_1_Wash_Trade/README.md), [Sample 5 (Kyoto Traffic Deadlock)](./Sample_5_Kyoto_Traffic/README.md), [Sample 6 (Market Bipartite)](./Sample_6_Market_Stock_Flow/README.md), [Sample 7 (Market Users)](./Sample_7_Market_Cash_Flow/README.md), [Sample 9 (Epileptic Seizure)](./Sample_9_fMRI_Seizure/README.md)
 * **Common Physical Signature:** **Spectral radius ($\rho$) saturation at its boundary limit, and friction-driven energy depletion (entropy loss)**
 * **Cross-Verification of Mechanism:**
   * **Circular Ledger (Sample 1):** Fast round-trip journal entries without substance cause the spectral radius to surge to the warning level of **`0.75`**. Although the apparent activity level (internal energy $U$) grows steadily, the energy is wasted as round-trip frictional heat (entropy $T \times S$), depleting the system's actual stamina—free energy $F = U - TS$.

@@ -34,7 +34,7 @@ def main():
     # We only need the ratio per component per t_idx
     # The output has multiple rows per component (one for each node)
     # We can just drop duplicates based on t_idx and component_idx
-    df_unique = df[['t_idx', 'component_idx', 'explained_variance_ratio']].drop_duplicates()
+    df_unique = df[['t_idx', 'component_idx', 'explained_variance_ratio']].groupby(['t_idx', 'component_idx']).first().reset_index()
     df_unique['explained_variance_ratio'] = df_unique['explained_variance_ratio'].astype(float)
     
     # Load time dictionary

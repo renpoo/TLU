@@ -46,7 +46,8 @@ def main():
     df_pc['magnitude'] = df_pc['vector_value'].astype(float).abs()
 
     # Pivot: Rows = node_idx, Cols = t_idx
-    pivot_data = df_pc.pivot(index='node_idx', columns='t_idx', values='magnitude').fillna(0)
+    df_pc_unique = df_pc.groupby(['node_idx', 't_idx']).first().reset_index()
+    pivot_data = df_pc_unique.pivot(index='node_idx', columns='t_idx', values='magnitude').fillna(0)
 
     # Load node labels
     N = int(df_pc['node_idx'].max()) + 1
