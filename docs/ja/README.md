@@ -22,7 +22,7 @@ TLUは、複式簿記、都市交通の流れ、株式市場の取引、およ�
 
 | # | ドキュメントタイトル（英語版） | 対応する日本語版（日本語推奨） | コアコンテンツと見どころ |
 | :---: | :--- | :--- | :--- |
-| **1** | **[📂 01. Physics-Mathematics Engine Theory & Interpretation Guide](../01_Physics_Engine_Theory_and_Interpretation.md)** | 000〜005番系数理解析ガイドの再整備：<br>・**[000. 統計・剛性・運動学](000_Basic_Statistics_Stiffness_Kinematics.md)**<br>・**[001. 熱力学とエントロピー](001_Thermodynamics_Entropy.md)**<br>・**[002. 情報幾何と相対保存則](002_Information_Geometry_Forensics.md)**<br>・**[003. 逆運動学と目標到達性](003_Inverse_Kinematics_Reachability.md)**<br>・**[004. 安定性と制御理論(LQR)](004_Control_Theory_Stability.md)**<br>・**[005. 信号処理と波動力学](005_Wave_Mechanics_Coherence.md)** | TLUの主要8コアモジュール（000〜005番系）の数理的・物理的基礎理論と、全10個の検証サンプルに対応する実機可視化グラフを縦積み配列し、元データまで遡って精査した診断解釈ガイド。 |
+| **1** | **[📂 01. Physics-Mathematics Engine Theory & Interpretation Guide](../01_Physics_Engine_Theory_and_Interpretation.md)** | 000〜005番系数理解析ガイドの再整備：<br>・**[000_0. 財務基礎状態と基本統計量](000_0_Basic_Statistics.md)**<br>・**[000_1. 運動学と動的状態空間](000_1_Dynamics_Kinematics.md)**<br>・**[000_2. 構造剛性と主成分分析](000_2_Stiffness_PCA.md)**<br>・**[001_1. 熱力学とエントロピー](001_1_Thermodynamics.md)**<br>・**[002_1. 情報幾何とトポロジー](002_1_Information_Geometry.md)**<br>・**[002_2. 相対保存則とフォレンジック](002_2_Forensics.md)**<br>・**[003_1. 逆運動学と目標到達性](003_1_Inverse_Kinematics.md)**<br>・**[004_1. システム安定性とLQR制御](004_1_Control_Theory.md)**<br>・**[004_2. 介入感度行列](004_2_Stability.md)**<br>・**[005_1. 信号処理と波動力学](005_1_Wave_Mechanics.md)**<br>・**[005_2. フラクタルノイズ（1/f ゆらぎ）](005_2_Coherence.md)** | TLUの主要8コアモジュール（000〜005番系）の数理的・物理的基礎理論と、全10個の検証サンプルに対応する実機可視化グラフを縦積み配列し、元データまで遡って精査した診断解釈ガイド。 |
 | **2** | **[📂 02. System Architecture & Operations Guide](../02_System_Architecture_and_Operations.md)** | **[02. システム構造定義とパイプライン運用ガイド](02_System_Architecture_and_Operations.md)** | パイプライン・コンテナ運用、デザインテーマ管理（JSON）、障害込みダミー・データ生成スクリプト、および線形最適制御（LQR）シミュレーションモデル。 |
 | **3** | **[📂 03. Market Forensics & Compliance Rules](../03_Market_Forensics_Rules.md)** | **[03. 市場フォレンジック・監査ルール定義](03_Market_Forensics_Rules.md)** | ミリ秒単位の注文簿（オーダーブック）力学、ボット循環取引、二部グラフ投影 vs ユーザー間直接送金トポロジーによる共謀ネットワーク監査。 |
 | **4** | **[📂 LLM Diagnostic Manual (Supreme prompt)](../LLM_Diagnostic_Manual.md)** | **[LLM臨床検査マニュアル (Supreme Prompt)](LLM_Diagnostic_Manual.md)** | 物理数学エンジンの数値からAIが客観的なカルテを自動生成するためのプロトコル。統計的偽陽性判定と、原本データへのファクトチェック義務化。 |
@@ -121,16 +121,16 @@ TLUには、物理数学エンジンのクロスドメインな検査精度を�
 
 | ID | 検証サンプル事例名（個別レポートリンク） | ドメイン | 検査判定 | 数理パラメータ特性 | 東洋医学メタファー |
 | :---: | :--- | :---: | :---: | :---: | :--- |
-| **0** | **[🟢 会計上の正常な定常的代謝 (Healthy)](samples/Sample_0_Healthy/README.md)** | 金融 | **NORMAL (正常)** | $\rho = 0.00$, 残差 = $0.00$ | 気血が滞っていない |
-| **1** | **[🟡 会計上の循環取引（架空還流） (Wash Trade)](samples/Sample_1_Wash_Trade/README.md)** | 金融 | **HIGH (架空還流)** | $\rho = 0.75$, 自由エネルギーの枯渇 | 気血が空転、還流が閉路を為している |
-| **2** | **[🔴 会計上の資金横領（漏出） (Embezzlement Leak)](samples/Sample_2_Embezzlement_Leak/README.md)** | 金融 | **CRITICAL (横領)** | 最大残差 = $364.53$, 終期共鳴 | 経絡上の出血、質量の欠損、気血の漏洩 |
-| **3** | **[🟡 会計上の単純な記帳ミス (Unbalanced Mistake)](samples/Sample_3_Unbalanced_Mistake/README.md)** | 金融 | **WARNING (記帳ミス)** | 一時的な残差およびKL幾何タワー | 気血の局部不均衡、自己治癒の余地 |
-| **4** | **[🔴 会計上の複合的な崩壊 (Composite Chaos)](samples/Sample_4_Composite_Chaos/README.md)** | 金融 | **CRITICAL (複合崩壊)** | $\rho = 0.79$, 最大残差 = $4,773.57$ | 気血の空転と出血 |
-| **5** | **[🔴 仮想京都の都市交通（デッド・ロック） (Kyoto Traffic)](samples/Sample_5_Kyoto_Traffic/README.md)** | 交通 | **CRITICAL (デッドロック)** | $\rho = 1.00$, 局所温度 $T = 547.06$ | 経絡の閉塞、滞血、対流の停止 |
-| **6** | **[🟡 相場操縦における銘柄と株主の相互関係の二部グラフ (Market Bipartite)](samples/Sample_6_Market_Bipartite_Weekly/README.md)** | 株式市場 | **HIGH (仮装約定)** | $\rho = 1.00$, PC1説明比率 = $99.67\%$ | 市場経絡の還流、虚偽の共鳴 |
-| **7** | **[🟡 相場操縦における株主間関係のみの一部グラフ (Market Users)](samples/Sample_7_Market_Users_Weekly/README.md)** | 株式市場 | **HIGH (共謀集団)** | 自由エネルギー偏歪度 = $-2.72$ | 共謀や結託、結節、暗流での還流 |
-| **8** | **[🔴 脳梗塞発症時を模した fMRI (fMRI Stroke)](samples/Sample_8_fMRI_Stroke/README.md)** | 脳機能 | **CRITICAL (血流途絶)** | 流入経路95%遮断、結合剛性固着 | 脳経絡の閉塞、局所の気血の枯渇、組織の壊死 |
-| **9** | **[🔴 てんかん発症時を模した fMRI (fMRI Seizure)](samples/Sample_9_fMRI_Seizure/README.md)** | 脳機能 | **CRITICAL (異常共振)** | $\rho = 1.00$, エントロピー垂直落下 | 脳経絡の過剰な同期、気血の暴走 |
+| **0** | **[🟢 会計上の正常な定常的代謝 (Healthy)](samples/Sample_0_Healthy/README.md)** | 金融 | **NORMAL (正常)** | $\rho = 0.00$, 残差 = $0.00$ | 気血和平・正常対流 |
+| **1** | **[🟡 会計上の循環取引（架空還流） (Wash Trade)](samples/Sample_1_Wash_Trade/README.md)** | 金融 | **HIGH (循環取引)** | $\rho = 0.75$, 自由エネルギーの枯渇 | 気血空転・還流ロック |
+| **2** | **[🔴 会計上の資金横領（漏出） (Embezzlement Leak)](samples/Sample_2_Embezzlement_Leak/README.md)** | 金融 | **CRITICAL (横領)** | 最大残差 = $364.53$, 終期共鳴 | 経絡大出血・質量欠損 |
+| **3** | **[🟡 会計上の単純な記帳ミス (Unbalanced Mistake)](samples/Sample_3_Unbalanced_Mistake/README.md)** | 金融 | **WARNING (記帳ミス)** | 一時的な残差およびKL幾何タワー | 局所気血失調・経絡捻挫 |
+| **4** | **[🔴 会計上の複合的な崩壊 (Composite Chaos)](samples/Sample_4_Composite_Chaos/README.md)** | 金融 | **CRITICAL (複合崩壊)** | $\rho = 0.79$, 最大残差 = $4,773.57$ | 気血枯渇・過還流虚脱 |
+| **5** | **[🔴 仮想京都の都市交通（デッド・ロック） (Kyoto Traffic)](samples/Sample_5_Kyoto_Traffic/README.md)** | 交通 | **CRITICAL (デッドロック)** | $\rho = 1.00$, マクロ温度 $T = 16,264.61$ | 経絡閉塞・気滞血瘀 |
+| **6** | **[🟢 株券流体平衡（定常対流） (Market Stock Flow)](samples/Sample_6_Market_Stock_Flow/README.md)** | 株式市場 | **NORMAL (正常)** | $\rho = 1.00$, 残差 = $0.00$ | 株式流体平衡・定常対流 |
+| **7** | **[🟢 現金流体平衡（定常対流） (Market Cash Flow)](samples/Sample_7_Market_Cash_Flow/README.md)** | 株式市場 | **NORMAL (正常)** | $\rho = 1.00$, 残差 = $0.00$ | 現金流体平衡・定常対流 |
+| **8** | **[🔴 脳梗塞発症時を模した fMRI (fMRI Stroke)](samples/Sample_8_fMRI_Stroke/README.md)** | 脳機能 | **CRITICAL (血流途絶)** | 流入経路95%遮断、結合剛性固着 | 脳経絡閉塞・局所気血枯渇 |
+| **9** | **[🔴 てんかん発症時を模した fMRI (fMRI Seizure)](samples/Sample_9_fMRI_Seizure/README.md)** | 脳機能 | **CRITICAL (異常共振)** | $\rho = 1.00$, エントロピー垂直落下 | 脳経絡過同期・気血暴走 |
 
 ---
 
@@ -140,8 +140,8 @@ TLUは、対象システムの異常を検知するだけでなく、ネット�
 
 | 金融市場 (Sample 7) | 脳神経科学 (Sample 9) |
 | :---: | :---: |
-| ![相場操縦のハブを特定](../../samples/Sample_7_Market_Users_Weekly/readme_plots/004_1_3__control_lqr_performance_space.png) | ![てんかんの震源である側頭葉を特定](../../samples/Sample_9_fMRI_Seizure/readme_plots/004_1_3__control_lqr_performance_space.png) |
-| 図6a：相場操縦のハブである `USR_004` や `USR_005` を特定 | 図6b：てんかんの病的同期の震源である、側頭葉（`Temporal_Lobe`）を特定 |
+| ![決済流動性のハブを特定](../../samples/Sample_7_Market_Cash_Flow/readme_plots/support/004_1_3__control_lqr_performance_space.png) | ![てんかんの震源である側頭葉を特定](../../samples/Sample_9_fMRI_Seizure/readme_plots/support/004_1_3__control_lqr_performance_space.png) |
+| 図6a：決済流動性のハブである `USR_010` 等を特定 | 図6b：てんかんの病的同期の震源である、側頭葉（`Temporal_Lobe`）を特定 |
 
 ---
 
