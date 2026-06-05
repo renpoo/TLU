@@ -33,7 +33,7 @@ To guarantee reproducibility and prevent AI hallucination or human bias, TLU mai
 
 TLU models transaction networks not as static ledgers, but as **continuous elastic media (networks of masses, springs, and dampers)**.
 
-![Mass-Spring-Damper Model](docs/readme_plots/Mass-Spring-Damper-Model.jpg)
+![Mass-Spring-Damper Model](docs/output_plots/Mass-Spring-Damper-Model.jpg)
 *Figure 1: Conceptual mapping of transaction flows onto a Mass-Spring-Damper physical system.*
 
 ### The Eastern Medicine Metaphor (SME Physician)
@@ -67,7 +67,7 @@ Monitors whether funds or resources have "unnaturally vanished or spawned" from 
 
 | Healthy Normal State (Sample 0) | Pathological Mass Leakage (Sample 2) |
 | :---: | :---: |
-| ![Macro Forensics Normal](samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png) | ![Macro Forensics Abnormal](samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png) |
+| ![Macro Forensics Normal](samples/Sample_0_Healthy/output_plots/002_2_1__macro_forensics_dashboard.png) | ![Macro Forensics Abnormal](samples/Sample_2_Embezzlement_Leak/output_plots/002_2_1__macro_forensics_dashboard.png) |
 | *Figure 2a: Perfect mass conservation (residual = 0).* | *Figure 2b: Severe negative spike proving siphoned embezzlement.* |
 
 ---
@@ -81,7 +81,7 @@ Monitors whether a closed loop (such as circular wash trades or traffic deadlock
 
 | Healthy Normal State (Sample 0) | Pathological Recirculation Loop (Sample 4) |
 | :---: | :---: |
-| ![System Stability Normal](samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png) | ![System Stability Abnormal](samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png) |
+| ![System Stability Normal](samples/Sample_0_Healthy/output_plots/004_1_2__system_stability.png) | ![System Stability Abnormal](samples/Sample_4_Composite_Chaos/output_plots/004_1_2__system_stability.png) |
 | *Figure 3a: Spectral radius converging in the safe zone.* | *Figure 3b: Spectral radius locked at the Perron-Frobenius limit.* |
 
 ---
@@ -95,7 +95,7 @@ Monitors the system's useful potential—Free Energy ($F = U - TS$). If Free Ene
 
 | Healthy Normal State (Sample 0) | Pathological Heat Death (Sample 6) |
 | :---: | :---: |
-| ![Thermodynamics Normal](samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png) | ![Thermodynamics Abnormal](samples/Sample_6_Market_Bipartite_Weekly/readme_plots/001_1_2__thermodynamics_energy_stack.png) |
+| ![Thermodynamics Normal](samples/Sample_0_Healthy/output_plots/001_1_2__thermodynamics_energy_stack.png) | ![Thermodynamics Abnormal](samples/Sample_6_Market_Stock_Flow/output_plots/001_1_2__thermodynamics_energy_stack.png) |
 | *Figure 4a: Healthy accumulation of Free Energy.* | *Figure 4b: Free Energy collapsing into the negative zone.* |
 
 ---
@@ -109,7 +109,7 @@ Models the spatiotemporal probability distribution of transaction networks as a 
 
 | Healthy Normal State (Sample 0) | Pathological Manifold Mutation (Sample 5) |
 | :---: | :---: |
-| ![3D Space Normal](samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png) | ![3D Space Abnormal](samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__3d_micro_z_score_X.png) |
+| ![3D Space Normal](samples/Sample_0_Healthy/output_plots/002_2_2_2__3d_micro_z_score_X.png) | ![3D Space Abnormal](samples/Sample_5_Kyoto_Traffic/output_plots/002_2_2_2__3d_micro_z_score_X.png) |
 | *Figure 5a: Smooth, stable spatiotemporal manifold.* | *Figure 5b: Towering local anomaly spike piercing the space.* |
 
 ---
@@ -126,8 +126,8 @@ TLU includes **10 pre-configured sample datasets** simulating both socioeconomic
 | **3** | **[🟡 Unbalanced Mistake (Input Error)](samples/Sample_3_Unbalanced_Mistake/README.md)** | Financial | **WARNING** | Transient residual & KL spike | Local Qi-Blood Imbalance, Meridian Sprain |
 | **4** | **[🔴 Composite Chaos (Combined Anomalies)](samples/Sample_4_Composite_Chaos/README.md)** | Financial | **CRITICAL** | $\rho = 0.79$, Residual = $4,773.57$ | Depletion of Qi & Blood, Recirculation Collapse |
 | **5** | **[🔴 Kyoto Traffic (Deadlocked Intersections)](samples/Sample_5_Kyoto_Traffic/README.md)** | Traffic | **CRITICAL** | $\rho = 1.00$, Temp $T = 547.06$ | Meridian Obstruction, Qi Stagnation & Blood Stasis |
-| **6** | **[🟡 Market Bipartite (Matched Trades)](samples/Sample_6_Market_Bipartite_Weekly/README.md)** | Stock Market | **HIGH** | $\rho = 1.00$, PC1 = $99.67\%$ | Market Meridian Recirculation, Recirculation Lock |
-| **7** | **[🟡 Market Users (Collusion Syndicate)](samples/Sample_7_Market_Users_Weekly/README.md)** | Stock Market | **HIGH** | Free Energy Skew = $-2.72$ | Collusive Syndicate, Dark Undercurrent Recirculation |
+| **6** | **[🟡 Market Bipartite (Matched Trades)](samples/Sample_6_Market_Stock_Flow/README.md)** | Stock Market | **HIGH** | $\rho = 1.00$, PC1 = $99.67\%$ | Market Meridian Recirculation, Recirculation Lock |
+| **7** | **[🟡 Market Users (Collusion Syndicate)](samples/Sample_7_Market_Cash_Flow/README.md)** | Stock Market | **HIGH** | Free Energy Skew = $-2.72$ | Collusive Syndicate, Dark Undercurrent Recirculation |
 | **8** | **[🔴 fMRI Stroke (Cerebral Infarction)](samples/Sample_8_fMRI_Stroke/README.md)** | Brain fMRI | **CRITICAL** | Inflow cut 95%, local Rigid Lock | Brain Meridian Obstruction, Local Qi-Blood Depletion |
 | **9** | **[🔴 fMRI Seizure (Epileptic Seizure)](samples/Sample_9_fMRI_Seizure/README.md)** | Brain fMRI | **CRITICAL** | $\rho = 1.00$, Entropy collapse | Brain Meridian Hypersynchrony, Qi-Blood Runaway |
 
