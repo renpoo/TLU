@@ -17,7 +17,7 @@ The TLU documentation has been reorganized and consolidated into 5 core files di
 * **Contents:** Mathematical and physical theories behind TLU's 8 core analytical modules (Stiffness, Thermodynamics, Information Geometry, Kinematics, Control Theory, Wave Mechanics, etc.), and a guide to interpreting their 3D plots.
 * **Highlights:** Side-by-side comparative analyses using actual empirical charts from healthy growth (Sample 0), traffic gridlocks (Sample 5), and collusion (Sample 7).
 
-### 2. [02. System Architecture & Operations Guide](02_System_Architecture_and_Operations.md)
+### 2. [02. System Architecture & Operations Guide](System_Architecture_and_Operations.md)
 
 * **Contents:** System-wide design, multi-dimensional graph projection pipeline, color themes, visualizer engines, dummy data generation algorithms, and the LQR (Linear Quadratic Regulator) dynamic treatment simulation model.
 * **Highlights:** Detailed mechanics of projecting high-dimensional graph data onto physical metric spaces.

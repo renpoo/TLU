@@ -23,7 +23,7 @@ The overall data and diagnostic processing flow of TLU is defined as the followi
 ```mermaid
 graph TD
     A[Raw Data Source: Journal logs, Traffic GPS, fMRI BOLD, Market order books] -->|Data Extraction| B[Data Projection Layer]
-    B -->|Graph/Matrix Formulation| C[Physics-Mathematics-Mathematics Engine Layer]
+    B -->|Graph/Matrix Formulation| C[Physics-Mathematics Engine Layer]
     C -->|Apply 6 Physics-Mathematics Filters| D[Forensic Filter Layer]
     D -->|Compute Physical/Mathematical Invariants| E[Visualization Layer: 3D Plots, Stiffness Matrix, T-S Diagrams]
     E -->|Output Images & CSVs| F[LLM Meta-Diagnosis Layer]
@@ -33,9 +33,9 @@ graph TD
 ### Roles of Each Pipeline Layer
 
 1. **Data Projection Layer:** Projects heterogeneous domain data into a generic graph structure of "nodes" and "edges (flow volume)."
-2. **Physics-Mathematics-Mathematics Engine Layer:** Computes metrics across six physical cores: Classical Stiffness, Thermodynamic Potentials, Information Manifolds, LQR Feedback, and Wave Coherence.
+2. **Physics-Mathematics Engine Layer:** Computes metrics across six physical cores: Classical Stiffness, Thermodynamic Potentials, Information Manifolds, LQR Feedback, and Wave Coherence.
 3. **Visualization Layer:** Renders generated spatiotemporal data as intuitive PNG images such as 3D space ribbons, matrices, and T-S graphs.
-4. **LLM Meta-Diagnosis Layer:** An integrated LLM complies with the supreme meta-level prompt (`LLM_Diagnostic_Manual.md`) to automatically generate objective clinical charts in English backed by the Physics-Mathematics-Mathematics Engine's output.
+4. **LLM Meta-Diagnosis Layer:** An integrated LLM complies with the supreme meta-level prompt (`LLM_Diagnostic_Manual.md`) to automatically generate objective clinical charts in English backed by the Physics-Mathematics Engine's output.
 
 ---
 
@@ -79,13 +79,13 @@ To verify development and test robustness, the TLU environment includes "Anomaly
 
 ### Representative Injection Algorithms & Timesteps
 
-#### 1. Urban Traffic Deadlock Generator (`_0_0_generate_dummy_traffic.py`)
+#### 1. Urban Traffic Deadlock Generator (`src/filters/_0_0_generate_dummy_traffic.py`)
 
 * **Normal State (t=0 to 50):** Vehicles circulate randomly among 25 intersections based on routing probability (spectral radius $\rho = 1.00$, macro residual `0.00`, temperature remains stable).
 * **Anomaly Injection (t=51 / W52):** The outflow capacity of the intersection `23_四条烏丸` (Shijo-Karasuma) is suddenly forced to **5%** (simulating road construction or an accident).
 * **Physical Consequences (t=52 to 70):** Traffic backflow occurs, causing entropy to drop at the upstream intersection `21_四条室町` (Shijo-Muromachi). The flow volatility at `23_四条烏丸` (Shijo-Karasuma) vanishes, freezing its local temperature to `1.87`. A temperature gradient of `+65.31` is formed, and the system's total free energy decreases.
 
-#### 2. Financial Market Collusion & Price Manipulation Generator (`_0_0_generate_dummy_market.py`)
+#### 2. Financial Market Collusion & Price Manipulation Generator (`src/filters/_0_0_generate_dummy_market.py`)
 
 * **Normal State (t=0 to 38):** Time-series fluctuations caused by a whale (`USR_002`) selling off or retail investors (`USR_010`) panic selling.
 * **Anomaly Injection (t=39 / W40 and t=45 / W46):** High-speed matched orders (wash trading) between `USR_003` and `USR_004` at identical prices and volumes are forced 40 times consecutively at millisecond intervals.

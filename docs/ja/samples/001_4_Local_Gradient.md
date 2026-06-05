@@ -1,78 +1,127 @@
-# 001_4. 局所熱力学勾配分析 (Local Temperature Gradient)
+# 001_4. 局所エネルギー・勾配分析 (Local Energy & Gradient)
 
-本ガイドは、Tensor-Link Utility (TLU) における「局所熱力学勾配・温度勾配（`001_1_2_3__3d_local_gradient.png` 等）」について、各検証サンプルの出力と数値に基づく臨床解説を整理したものです。
+本ガイドは、Tensor-Link Utility (TLU) における「3次元局所内部エネルギー（`001_1_2_7__3d_local_internal_energy.png`）」、「3次元局所温度勾配（`001_1_2_3__3d_local_gradient.png`）」、および「局所熱勾配散布図（`001_1_2_6__local_thermo_gradient.png`）」を説明します。各検証サンプルの出力と数値に基づく解説を記載します。
 
 ---
 
-## 🔬 物理数学理論：局所温度勾配 $\nabla T_i$
-TLUは、システム内の隣接ノード間における温度差（ボラティリティ差）の空間的な傾きを「局所温度勾配 $\nabla T_i$」と定義します。
+## 🔬 物理数学理論：規模（エネルギー）と摩擦（勾配）
 
+TLUの局所熱力学ポートフォリオ分析は、各ノードの「活動規模」と「隣接部との不均衡（摩擦）」の相関を評価します。
+
+### 1. 局所内部エネルギー $u_i$ (活動規模：Scale & Volume)
+各ノード $i$ を通過する有向流量の絶対値和として定義されます。この値はノードの取引規模や活動量を表します。
+$$u_i(t) = \sum_{j \in \text{neighbors}(i)} ( |F_{ji}(t)| + |F_{ij}(t)| )$$
+
+### 2. 局所温度勾配 $\nabla T_i$ (熱摩擦：Friction & Force)
+隣接するノード間における温度（活動ボラティリティ $T_i$）の空間的な傾き（空間差分）として定義されます。
 $$\nabla T_i = \sum_{j \in \text{neighbors}(i)} W_{ij} (T_i - T_j)$$
+この値が大きいほど、隣接領域との活動バランスが崩れています。流動インピーダンスの高い「境界」や「ボトルネック」の存在を示します。
 
-急峻な温度勾配が存在する領域は、流動の不均衡、ボトルネックの発生位置、または熱的な障壁（流動インピーダンスの高い境界）を意味します。
+### 3. 相関散布図 `local_thermo_gradient.png` (リスクとポートフォリオ)
+横軸に局所内部エネルギー $u_i$ 、縦軸に局所温度勾配 $\nabla T_i$ をとります。各ノードの「規模」に対する「摩擦」をマッピングします。
+* **健全なノード群**: 流量規模にかかわらず、温度勾配が低い領域（グラフの下部）にクラスタリングされます。
+* **病的特異点 (星印でハイライト)**: 「高エネルギーかつ高勾配」の右上領域へと乖離します。システムの偏在や阻害要因を表します。
 
 ---
 
-## 📊 局所熱力学勾配・温度勾配と個別サンプルの所見
-
-システム内のノード間における温度差の空間的傾きを示すグラフです。流動の不均衡やボトルの位置を特定します。
+## 📊 個別サンプルの 3D リボン・散布図所見と臨床解説
 
 #### 🟢 Sample 0 (正常代謝)
 **臨床解説:**
-全体が均一に活性化しており、特定のエリアへの流動の偏りや抵抗が生じていないため、局所熱力学勾配は終始平坦です。流動インピーダンスや「熱の壁」は存在しません。
-- ![Sample 0 Local Grad](Sample_0_Healthy/readme_plots/001_1_2_3__3d_local_gradient.png)
-- ![Sample 0 Thermo Gradient](Sample_0_Healthy/readme_plots/001_1_2_6__local_thermo_gradient.png)
+全体が均一に活性化しています。特定のノードへの流量集中（エネルギー偏在）や活動差（温度勾配）は生じていません。散布図上ではすべてのノードが「低勾配」領域にクラスタリングされます。異常な特異点は検出されません。
+- **3D 局所内部エネルギー:**
+  - ![Sample 0 Local Internal Energy](Sample_0_Healthy/readme_plots/001_1_2_7__3d_local_internal_energy.png)
+- **3D 局所温度勾配:**
+  - ![Sample 0 Local Grad](Sample_0_Healthy/readme_plots/001_1_2_3__3d_local_gradient.png)
+- **局所熱勾配散布図:**
+  - ![Sample 0 Thermo Gradient](Sample_0_Healthy/readme_plots/001_1_2_6__local_thermo_gradient.png)
 
 #### 🟡 Sample 1 (循環取引)
 **臨床解説:**
-還流取引の軸である `ACC_Cash` 等の過熱部と、それ以外の低活性な一般費用・負債口座との境界において、非常に急峻な温度勾配が局所的に生じ、還流の「熱的孤立」を物語っています。
-- ![Sample 1 Local Grad](Sample_1_Wash_Trade/readme_plots/001_1_2_3__3d_local_gradient.png)
-- ![Sample 1 Thermo Gradient](Sample_1_Wash_Trade/readme_plots/001_1_2_6__local_thermo_gradient.png)
+循環取引が発生します。還流の主軸となる3つのノード (`ACC_Cash`, `ACC_Accounts_Receivable`, `ACC_Sales_Revenue`) の流量（内部エネルギー）が増加して山を形成します。それ以外の低活性な費用・負債口座との境界において温度勾配が発生します。散布図では、これら3ノードが「高エネルギー・高勾配」の右上領域へ隔離プロットされます。
+- **3D 局所内部エネルギー:**
+  - ![Sample 1 Local Internal Energy](Sample_1_Wash_Trade/readme_plots/001_1_2_7__3d_local_internal_energy.png)
+- **3D 局所温度勾配:**
+  - ![Sample 1 Local Grad](Sample_1_Wash_Trade/readme_plots/001_1_2_3__3d_local_gradient.png)
+- **局所熱勾配散布図:**
+  - ![Sample 1 Thermo Gradient](Sample_1_Wash_Trade/readme_plots/001_1_2_6__local_thermo_gradient.png)
 
 #### 🔴 Sample 2 (資金横領)
 **臨床解説:**
-過熱している現金口座から、一方向に資金が抜けていく `UNKNOWN_LEAK` への接続部において、不連続で急激な温度勾配が立ち上がり、隠れたバイパス流出の物理的境界を捉えています。
-- ![Sample 2 Local Grad](Sample_2_Embezzlement_Leak/readme_plots/001_1_2_3__3d_local_gradient.png)
-- ![Sample 2 Thermo Gradient](Sample_2_Embezzlement_Leak/readme_plots/001_1_2_6__local_thermo_gradient.png)
+横領期間中、預金口座およびバイパス流出先 (`UNKNOWN_LEAK`) の活動ボリューム（内部エネルギー）が上昇します。正常な回収流路から外れたバイパス接続部との間で不連続な温度勾配が発生します。散布図上では、横領に関与するノード群が外れ値として特定されます。
+- **3D 局所内部エネルギー:**
+  - ![Sample 2 Local Internal Energy](Sample_2_Embezzlement_Leak/readme_plots/001_1_2_7__3d_local_internal_energy.png)
+- **3D 局所温度勾配:**
+  - ![Sample 2 Local Grad](Sample_2_Embezzlement_Leak/readme_plots/001_1_2_3__3d_local_gradient.png)
+- **局所熱勾配散布図:**
+  - ![Sample 2 Thermo Gradient](Sample_2_Embezzlement_Leak/readme_plots/001_1_2_6__local_thermo_gradient.png)
 
 #### 🟡 Sample 3 (入力ミス)
 **臨床解説:**
-片面入力エラーが生じた $t=1$ にのみ、貸借不一致となったノードのローカルボラティリティが一時的に爆発するため、その瞬間に鋭い温度勾配の局所スパイクが生じますが、エラー修正とともに翌ステップには平坦化します。
-- ![Sample 3 Local Grad](Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_3__3d_local_gradient.png)
-- ![Sample 3 Thermo Gradient](Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_6__local_thermo_gradient.png)
+片面入力エラーが $t=1$ に発生します。貸借不一致を調整するための仮流量によって、該当勘定ノードに内部エネルギーと温度勾配のスパイクが発生します。翌ステップで修正されます。影響は局所的です。散布図では平均化されて平穏な位置に留まります。
+- **3D 局所内部エネルギー:**
+  - ![Sample 3 Local Internal Energy](Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_7__3d_local_internal_energy.png)
+- **3D 局所温度勾配:**
+  - ![Sample 3 Local Grad](Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_3__3d_local_gradient.png)
+- **局所熱勾配散布図:**
+  - ![Sample 3 Thermo Gradient](Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_6__local_thermo_gradient.png)
 
 #### 🔴 Sample 4 (複合アノマリー)
 **臨床解説:**
-往復還流による強烈な過熱と、横領による漏洩流出、およびその他の無活動領域（冷温部）がモザイク状に混在しています。これにより、ネットワーク各所で複数の急峻な局所熱力学勾配が競合するように発生し、構造の著しい破綻を示します。
-- ![Sample 4 Local Grad](Sample_4_Composite_Chaos/readme_plots/001_1_2_3__3d_local_gradient.png)
-- ![Sample 4 Thermo Gradient](Sample_4_Composite_Chaos/readme_plots/001_1_2_6__local_thermo_gradient.png)
+循環還流によるエネルギー増加と、横領による漏洩流出が別々の領域で並行します。複数の箇所でエネルギーと温度勾配のピークが発生します。散布図では複数のノード群が異なる方向へ外れ値として分裂プロットされます。多重アノマリーを示します。
+- **3D 局所内部エネルギー:**
+  - ![Sample 4 Local Internal Energy](Sample_4_Composite_Chaos/readme_plots/001_1_2_7__3d_local_internal_energy.png)
+- **3D 局所温度勾配:**
+  - ![Sample 4 Local Grad](Sample_4_Composite_Chaos/readme_plots/001_1_2_3__3d_local_gradient.png)
+- **局所熱勾配散布図:**
+  - ![Sample 4 Thermo Gradient](Sample_4_Composite_Chaos/readme_plots/001_1_2_6__local_thermo_gradient.png)
 
 #### 🔴 Sample 5 (京都交差点網)
 **臨床解説:**
-デッドロックでフリーズした `23_四条烏丸`（コールドスポット）と、その上流で車列が動けず滞留する交差点（ホットスポット）との間で、強烈な温度差（熱力学勾配）が発生している様子を捉えています。
-- ![Sample 5 Local Grad](Sample_5_Kyoto_Traffic/readme_plots/001_1_2_3__3d_local_gradient.png)
-- ![Sample 5 Thermo Gradient](Sample_5_Kyoto_Traffic/readme_plots/001_1_2_6__local_thermo_gradient.png)
+`23_四条烏丸` 周辺がデッドロックでフリーズ（コールドスポット）します。その上流で車列が滞留する交差点（ホットスポット）との間で温度差（温度勾配）が発生します。散布図では、このボトルネック交差点が「高エネルギーかつ高勾配」の星印（アノマリーノード）としてプロットされます。
+- **3D 局所内部エネルギー:**
+  - ![Sample 5 Local Internal Energy](Sample_5_Kyoto_Traffic/readme_plots/001_1_2_7__3d_local_internal_energy.png)
+- **3D 局所温度勾配:**
+  - ![Sample 5 Local Grad](Sample_5_Kyoto_Traffic/readme_plots/001_1_2_3__3d_local_gradient.png)
+- **局所熱勾配散布図:**
+  - ![Sample 5 Thermo Gradient](Sample_5_Kyoto_Traffic/readme_plots/001_1_2_6__local_thermo_gradient.png)
 
 #### 🟢 Sample 6 (株券流体)
 **臨床解説:**
-ボット間取引は超高速ですが、保存則に基づき出来高と保有量は空間的に均等に対流しています。局所温度が全体として適正値で均一であるため、急峻な温度勾配は発生せず、滑らかな平坦面を維持しています。
-- ![Sample 6 Local Grad](Sample_6_Market_Stock_Flow/readme_plots/001_1_2_3__3d_local_gradient.png)
-- ![Sample 6 Thermo Gradient](Sample_6_Market_Stock_Flow/readme_plots/001_1_2_6__local_thermo_gradient.png)
+USR間で対称的な循環取引が発生します。全体の内部エネルギーは高いレベルになります。USR口座群へ均一に分散されるため、空間的な温度差（勾配）は生じません。散布図上では、すべてのノードが「右下（高エネルギー・低勾配）」の領域に並びます。
+- **3D 局所内部エネルギー:**
+  - ![Sample 6 Local Internal Energy](Sample_6_Market_Stock_Flow/readme_plots/001_1_2_7__3d_local_internal_energy.png)
+- **3D 局所温度勾配:**
+  - ![Sample 6 Local Grad](Sample_6_Market_Stock_Flow/readme_plots/001_1_2_3__3d_local_gradient.png)
+- **局所熱勾配散布図:**
+  - ![Sample 6 Thermo Gradient](Sample_6_Market_Stock_Flow/readme_plots/001_1_2_6__local_thermo_gradient.png)
 
 #### 🟢 Sample 7 (現金流体)
 **臨床解説:**
-決済流動性が多様な口座間で健全に循環しており、ボラティリティの急激な断絶や偏在は見られません。ノード間の温度変化が穏やかであるため、急峻な局所勾配は発生せず、健全な熱的拡散状態が維持されています。
-- ![Sample 7 Local Grad](Sample_7_Market_Cash_Flow/readme_plots/001_1_2_3__3d_local_gradient.png)
-- ![Sample 7 Thermo Gradient](Sample_7_Market_Cash_Flow/readme_plots/001_1_2_6__local_thermo_gradient.png)
+一般ユーザー間の送金・決済網です。エネルギーは全体に拡散しています。ボラティリティの偏りや断絶がないため、温度勾配は発生しません。散布図では、ノード群が低勾配かつ中程度のエネルギーの領域にクラスタを形成します。
+- **3D 局所内部エネルギー:**
+  - ![Sample 7 Local Internal Energy](Sample_7_Market_Cash_Flow/readme_plots/001_1_2_7__3d_local_internal_energy.png)
+- **3D 局所温度勾配:**
+  - ![Sample 7 Local Grad](Sample_7_Market_Cash_Flow/readme_plots/001_1_2_3__3d_local_gradient.png)
+- **局所熱勾配散布図:**
+  - ![Sample 7 Thermo Gradient](Sample_7_Market_Cash_Flow/readme_plots/001_1_2_6__local_thermo_gradient.png)
 
 #### 🔴 Sample 8 (fMRI 脳梗塞)
 **臨床解説:**
-梗塞が発生した壊死野（極低温）と、その周囲で血流低下を補うために代償的に過活動となっている半影帯（ペナンブラ：高温）との境界で、非常に急峻な局所熱力学勾配（温度勾配）が発生します。
-- ![Sample 8 Local Grad](Sample_8_fMRI_Stroke/readme_plots/001_1_2_3__3d_local_gradient.png)
-- ![Sample 8 Thermo Gradient](Sample_8_fMRI_Stroke/readme_plots/001_1_2_6__local_thermo_gradient.png)
+運動野領域が血流を失います。その活動ボリューム（内部エネルギー）が低下して消失します。周辺の半影帯（ペナンブラ）では血流低下を代償するための過活動が生じます。壊死野と半影帯との境界において温度勾配の壁が形成されます。散布図では、壊死野のノード群が低エネルギー方向へ配置されます。半影帯の境界ノード群は高勾配方向へ配置されます。
+- **3D 局所内部エネルギー:**
+  - ![Sample 8 Local Internal Energy](Sample_8_fMRI_Stroke/readme_plots/001_1_2_7__3d_local_internal_energy.png)
+- **3D 局所温度勾配:**
+  - ![Sample 8 Local Grad](Sample_8_fMRI_Stroke/readme_plots/001_1_2_3__3d_local_gradient.png)
+- **局所熱勾配散布図:**
+  - ![Sample 8 Thermo Gradient](Sample_8_fMRI_Stroke/readme_plots/001_1_2_6__local_thermo_gradient.png)
 
 #### 🔴 Sample 9 (fMRI てんかん発作)
 **臨床解説:**
-てんかん同調（過同期）によって、脳の全領域が一様に最高温度まで沸騰（過熱）します。全脳が同じパターンで均一に過熱してしまうため、領域間の温度差（勾配）は逆に完全に平坦化（消失）し、熱的な還流駆動力そのものが機能停止している様子を示します。
-- ![Sample 9 Local Grad](Sample_9_fMRI_Seizure/readme_plots/001_1_2_3__3d_local_gradient.png)
-- ![Sample 9 Thermo Gradient](Sample_9_fMRI_Seizure/readme_plots/001_1_2_6__local_thermo_gradient.png)
+発作時に全脳過同期（過活動）が発生します。脳の全領域の活動流量（内部エネルギー）が上昇します。全脳が同じパターンで同期して過熱するため、領域間の温度差（勾配）は消失します。散布図上では、すべてのノードが「高いエネルギーかつ低い勾配」の右下領域へフリーズ（同期束縛）されます。
+- **3D 局所内部エネルギー:**
+  - ![Sample 9 Local Internal Energy](Sample_9_fMRI_Seizure/readme_plots/001_1_2_7__3d_local_internal_energy.png)
+- **3D 局所温度勾配:**
+  - ![Sample 9 Local Grad](Sample_9_fMRI_Seizure/readme_plots/001_1_2_3__3d_local_gradient.png)
+- **局所熱勾配散布図:**
+  - ![Sample 9 Thermo Gradient](Sample_9_fMRI_Seizure/readme_plots/001_1_2_6__local_thermo_gradient.png)
