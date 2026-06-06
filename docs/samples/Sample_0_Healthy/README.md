@@ -1,116 +1,143 @@
-# 🔬 Anomaly Detection & Financial Health Report (Sample 0)
+# 🔬 Anomaly Detection & Financial Health Report (Sample 0 - Healthy/Normal System)
 
 ## 1. Executive Summary
 
-* **Overall Judgment:** **Healthy / Normal**
-* **Severity:** 🟢 **NORMAL (No anomalies)**
-* **Summary:**
-    This system maintains a healthy state with no discrepancies in either asset balance trends (B/S) or transaction flows (P/L). No signs of wash trading (fictitious recirculation), fund outflow (off-book transactions), or bookkeeping errors were detected.
-
-    In the time-series estimation process, the liquidity Z-Score temporarily exceeded the threshold of `3.0` in April, June, July, and December, **reaching a maximum of `4.90` in July**. However, this is judged to be a **"Statistical False Positive"** caused by statistical covariance instability due to lack of initial data (cold start problem) or seasonal concentration of business transactions at the end of fiscal periods.
-
-    The **"System Conservation Residual (Kirchhoff Residual)" based on physical conservation laws remains at `0.00`** throughout the period, mathematically proving that no off-book fund outflows have occurred.
+* **Overall Status:** 🟢 **Healthy / Normal**
+* **Severity:** 🟢 **NORMAL (No Anomaly)**
+* **Summary:** The system is in a normal state for both balance sheets (B/S) and transaction flows (P/L). No discrepancies exist. The conservation residual (Kirchhoff residual) is `0.00`. There are no signs of illicit leaks or wash trades.
 
 ---
 
-## 2. Limitations of Traditional Audits
+## 2. Comparison of Financial Statements and Transaction Flows
 
-Traditional accounting audits that monitor only upward trends in revenue or equity struggle to detect potential cash stagnation or minor leakages to off-book accounts. The traditional B/S and P/L trends of this system are shown below:
+We compare the financial statements and transaction flows.
 
-* **B/S Assets/Capital Trends & Block Diagrams:**
-    ![B/S Trend](../../samples/Sample_0_Healthy/readme_plots/000_0_1__BS_Trend.png)
-    ![B/S Block Total](../../samples/Sample_0_Healthy/readme_plots/000_0_1__BS_Block_Total.png)
-* **P/L Revenue/Expenses Trends & Waterfall Diagrams:**
-    ![P/L Trend](../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Trend.png)
-    ![P/L Waterfall Total](../../samples/Sample_0_Healthy/readme_plots/000_0_1__PL_Waterfall_Total.png)
+### Balance Sheet (B/S) Comparison
 
-While these appear healthy at first glance because cash is increasing and SG&A expenses are expanding in proportion to revenue, proving true security requires multi-dimensional validation using the trade network topology and thermodynamic parameters.
+* **B/S Asset & Equity Cumulative Trend & Block Chart (Cumulative):**
+  ![B/S Cumulative Trend](readme_plots/000_0_1__BS_Trend.png)
+  ![B/S Block Total](readme_plots/000_0_1__BS_Block_Total.png)
+
+* **B/S Asset & Equity Periodic Trend (Monthly Non-Cumulative):**
+  ![B/S Periodic Trend](readme_plots/000_0_1__BS_Trend_Periodic.png)
+
+### Income Statement (P/L) Comparison
+
+* **P/L Revenue & Expense Cumulative Trend:**
+  ![P/L Cumulative Trend](readme_plots/000_0_1__PL_Trend.png)
+
+* **P/L Revenue & Expense Periodic Trend (Monthly Non-Cumulative):**
+  ![P/L Periodic Trend](readme_plots/000_0_1__PL_Trend_Periodic.png)
+
+* **Observation:** Flows remain stable in both cumulative and periodic views. No sudden drops or blocks (flattening) exist.
 
 ---
 
-## 3. Fundamental Pathophysiology
+## 3. Pathophysiology
 
-In this sample, **no anomalies (pathologies) were detected.**
-
-All transaction flows between the management, sales, manufacturing, and other departments satisfy the conservation laws. There are no redundant recirculation loops or abnormal concentrations on specific transaction relationships, indicating normal business activities.
+* **Diagnosis:** **Normal Circulation**
+* Transaction flows between departments satisfy physical conservation laws. There is no accumulation of funds or bias toward specific routes.
 
 ---
 
-## 4. Quantitative Data from the Mathematical Analysis Engine
+## 4. Summary of Mathematical Analysis Results
 
-### 4.1. Verification of Mass Conservation (Kirchhoff Residual)
+### 4.1. Mass Conservation and Network Topology
 
-The `System Conservation Residual`, which shows the difference between cash inflows and outflows for the entire system, is **`0.00` (no error)** throughout the period, proving there are no fraudulent off-book fund transfers.
+The Kirchhoff residual is **`0.00`**. No leaks exist to off-book unregistered accounts.
 
 * **Macro Forensics Dashboard:**
-    ![Macro Forensics](../../samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png)
+  ![Macro Forensics](readme_plots/002_2_1__macro_forensics_dashboard.png)
 
-### 4.2. Connection Stiffness & Principal Component Analysis (Stiffness & PCA)
+* **Network Topology Evolution:**
+  ![Network Topology (t=1)](readme_plots/002_1_2__network_topology.t.00001.png)
+  ![Network Topology (t=2)](readme_plots/002_1_2__network_topology.t.00002.png)
+  ![Network Topology (t=3)](readme_plots/002_1_2__network_topology.t.00003.png)
 
-In the Stiffness Matrix analysis, a flexible, unbiased connection is built between account titles after the start of transactions. No cash stagnation (stiffness lock) has occurred between specific accounts. In addition, the Eigenvalue Ratio in the Principal Component Analysis (PCA) is smoothly distributed, showing no extreme transaction synchronization between specific pairs.
+### 4.2. Stiffness Connection & PCA (Stiffness & PCA)
 
-* **Structural Stiffness Matrix (t=6):**
-    ![Stiffness Month 7](../../samples/Sample_0_Healthy/readme_plots/000_2_1__structural_stiffness.t.00006.png)
-* **PCA Principal Axes Ratio:**
-    ![PCA Ratio](../../samples/Sample_0_Healthy/readme_plots/000_2_2__principal_axes_ratio.png)
+The stiffness matrix shows a normal joint state. No transaction block exists. The eigenvalue ratios and time transitions of the principal eigenvectors (PC1, PC2, PC3) remain stable.
 
-### 4.3. Topological Analysis & Wash Trade Elimination (Spectral Radius)
+* **Evolution of Structural Stiffness Matrix:**
+  ![Stiffness (t=5)](readme_plots/000_2_1__structural_stiffness.t.00005.png)
+  ![Stiffness (t=6)](readme_plots/000_2_1__structural_stiffness.t.00006.png)
+  ![Stiffness (t=7)](readme_plots/000_2_1__structural_stiffness.t.00007.png)
 
-The "Spectral Radius," which is the maximum eigenvalue of the adjacency connection matrix, remains at **`0.00`** throughout the period. This proves that no cash recirculation loops (such as fake revenue) exist.
+* **Principal Axis Ratios & Eigenvector Evolution (PC1, PC2, PC3):**
+  ![PCA Ratio](readme_plots/000_2_2__principal_axes_ratio.png)
+  ![PCA PC1 Evolution](readme_plots/000_2_3__eigenvector_evolution.png)
+  ![PCA PC2 Evolution](readme_plots/000_2_3__eigenvector_evolution_pc2.png)
+  ![PCA PC3 Evolution](readme_plots/000_2_3__eigenvector_evolution_pc3.png)
 
-* **System Stability Index (Spectral Radius):**
-    ![System Stability](../../samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png)
+### 4.3. Exclusion of Wash Trades (Spectral Radius)
 
-### 4.4. Thermodynamic Indicators & Entropy (Entropy & Free Energy)
+The spectral radius remains **`0.00`** throughout the period. No wash trade loops exist.
 
-Internal Energy (Gross Activity $U$) increased from `2,303,842.32` in January to `4,132,519.04` in December. Parallel to this, Free Energy (Free Energy $F$), which shows the effective potential, steadily increased from `2,303,842.32` to `3,869,999.47`.
+* **System Stability Indicator:**
+  ![System Stability](readme_plots/004_1_2__system_stability.png)
 
-There is no abnormal increase in frictional heat (entropy $T \times S$) due to useless round-trip transactions, resulting in a gentle dissipation consistent with commercial payment cycles (approximately 30 to 90 days).
+### 4.4. Thermodynamic Indicators and 3D Topology
 
-* **Thermodynamics Energy Stack:**
-    ![Thermodynamics Energy Stack](../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-* **T-S Diagram:**
-    ![T-S Diagram](../../samples/Sample_0_Healthy/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+Effective energy increases. Frictional loss (entropy) is regulated based on the payment cycle.
 
-### 4.5. Multi-Angle Analysis via 3D Plots
-
-The 3D plots visualize the stability of the system across all directions of time and space.
-
-* **① 3D Kinetic Phase Space Trajectory:**
-    ![3D Phase Portrait](../../samples/Sample_0_Healthy/readme_plots/000_1_8__phase_portrait_3d.png)
-    The trajectory smoothly converges to a stable attractor, with no distortion or burst due to recirculation.
-* **② 3D Local Thermodynamics Plots:**
-    ![3D Local Entropy](../../samples/Sample_0_Healthy/readme_plots/001_1_2_1__3d_local_entropy.png)
-    ![3D Local Temperature](../../samples/Sample_0_Healthy/readme_plots/001_1_2_2__3d_local_temperature.png)
-  * **Local Entropy ($s_i$):** Accounts with only a single outflow destination are mathematically `0.00`. Only the cash node (`ACC_Cash`), which has multiple outflow destinations (expense payments and purchases), transitions at low entropy within the normal range (1.18 to 1.86 bits, average of approximately 1.51 bits).
-  * **Local Temperature ($T_i$):** Indicates the time-series volatility of account balances. Since there are no rapid round-trips of cash or discrepancies, the temperature distribution is low and stable across all periods.
-* **③ 3D Micro Information Geometry Plot:**
-    ![3D Micro KL Drift](../../samples/Sample_0_Healthy/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
-    The KL Drift is close to zero for all nodes, and no spikes indicating the onset of fraud were detected.
+* **Thermodynamic Characteristics & 3D Trajectory:**
+  ![Thermodynamics Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
+  ![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+  ![3D Phase Portrait](readme_plots/000_1_8__phase_portrait_3d.png)
+  ![3D Local Entropy](readme_plots/001_1_2_1__3d_local_entropy.png)
+  ![3D Micro KL Drift](readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 ---
 
-## 5. LQR & Operations
+## 5. Control Interventions and Recommended Actions (LQR & Operations)
 
-* **Treatment Plan:** **No Treatment Required**
-* **LQR Intervention:** Since the system is in an optimal balance state, no feedback control intervention is needed.
-    ![Sample 0 LQR Control](../../samples/Sample_0_Healthy/readme_plots/004_1_3__control_lqr_performance_space.png)
-* **Recommended Action:**
-    Structural health has been fully proven in the data. We recommend that the audit and management teams focus resources on verifying physical existence outside the system—such as checking the original bank balance certificates directly—rather than investigating data integrity.
+* **Treatment Status:** **No Treatment Required**
+* The system is self-stable. Optimal correction using LQR control feedback is unnecessary.
+
+![LQR Control Space](readme_plots/004_1_3__control_lqr_performance_space.png)
+
+### 💡 Quantitative Evaluation of Leverage Points for Cost Reduction
+
+Based on the data, the leverage effect of reducing the three expense types (payroll, travel, rent) is ranked as follows:
+
+1. **Rank 1: Payroll Expense (`ACC_Payroll_Exp`)**
+   * **Quantitative Feature:** The joint strain energy (`ik_strain_energy`), which indicates organizational load and friction, is **`6.5682`** (lowest). The LQR controller demands the largest optimal control inputs (absolute adjustments). This adjustment item has the lowest organizational friction and the largest effect.
+2. **Rank 2: Travel Expense (`ACC_Travel_Exp`)**
+   * **Quantitative Feature:** The joint strain energy (`ik_strain_energy`) is **`8.0020`**. Adjusting this expense causes lower friction than rent. It serves as a short-term variable cost adjustment.
+3. **Rank 3: Rent Expense (`ACC_Rent_Exp`)**
+   * **Quantitative Feature:** The joint strain energy (`ik_strain_energy`) is **`8.1039`** (highest). This node is the stiffest fixed cost node, causing maximum organizational load (friction). It has the lowest priority as a cost reduction lever.
+
+#### 📊 3D Ribbon Evolution Graph and Scale Discrepancies
+
+The 3D ribbon graphs of Forward Kinematics (FK) and Inverse Kinematics (IK) visualize the flow propagation across the system.
+
+* **Forward Kinematics (FK Impact):**
+  Expenses are transaction sinks (absorbing nodes). The impact does not propagate. The ribbon height remains near zero.
+  ![3D Kinematics FK](readme_plots/003_1_1__3d_kinematics_fk.png)
+
+* **Inverse Kinematics (IK Impact):**
+  This shows the adjustments required to achieve the target sales revenue (`ACC_Sales_Revenue`).
+  ![3D Kinematics IK](readme_plots/003_1_2__3d_kinematics_ik.png)
+
+> [!NOTE]
+> **Scale Limits in Visualization:**
+> The three expense lanes appear flat on the 3D ribbon graphs. This occurs because mainstream adjustments (e.g., accounts receivable, sales revenue) are extremely large (magnitude of 100k). The Z-axis scale of the graph is dominated by these large flows, compressing the smaller expense fluctuations (magnitude of 1k to 10k). Mathematically, the three expenses synchronize with the phase of the cash flows, displaying fluctuations monthly.
 
 ---
 
-## 6. 🚨 Alert Triage & Falsifiability
+## 6. Alerts & Falsifiability
 
-### 6.1. False Positive Assessment
+### 6.1. Evaluation of False Positive Alerts
 
-* **Alert Details:** Z-Score exceeded the warning threshold of `3.0` in April (`4.7943`), June (`3.3940`), July (`4.90`), and December (`3.8833`).
-* **Reason for Judgment:**
-    This is a transient false positive of the statistical model. It is judged that incomplete covariance estimation in the initial steps and temporary concentration of funds transfers (due to seasonal factors) were exaggerated. Since the conservation law residual remains perfectly at `0.00` and no recirculation topology is formed, these alerts can be safely dismissed as normal fluctuations.
+![Z-Score (Position)](readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+![Z-Score (Velocity)](readme_plots/002_2_2_3__3d_micro_z_score_v.png)
 
-### 6.2. Falsifiability
+* **Alert Details:** The Z-Score temporarily exceeded the threshold of `3.0` at the end of quarters and fiscal periods (March, April, June, July, August, October, November, and December).
+* **Evaluation:** False positive (no issue). This is a normal seasonal fluctuation caused by concentrated entries at closing periods. Since the conservation law holds, these alerts can be safely ignored.
 
-To overturn this diagnosis (healthy), either of the following objective evidences is required:
+### 6.2. Falsification Conditions
 
-1. **Discrepancy in Bank Account Balances:** A discrepancy between the ledger cash balance and the original bank passbook/statement obtained directly from the financial institution.
-2. **Existence of Off-Book Accounts:** The existence of unregistered accounts or external entities outside the known transaction network designed to receive funds leaked from the system.
+To reject the diagnosis in this report, one of the following pieces of evidence is required:
+
+1. **Physical Discrepancy:** A mismatch between the bank balance and the ledger balance.
+2. **Off-Book Entities:** Money transfers to hidden accounts or shell companies not included in the model.

@@ -1,104 +1,178 @@
-# Sample 8: Application to Biological Networks (fMRI Stroke - Thermodynamics of Stroke/Ischemia)
+# 🔬 Localized Cerebral Blood Flow Occlusion Report (Sample 8 - Brain Stroke fMRI Simulation)
 
 > [!NOTE]
-> **[IMPORTANT] Relationship Between Sample 8 and Sample 9 and Target Domain**
-> This sample (Sample 8) and the next sample (Sample 9) are not financial or traffic data, but biological data simulating the **"Effective Connectivity of BOLD signals"** in the human brain (fMRI).
-> This is the grand finale test case proving that TLU's "Universal Physics-Mathematics-Mathematics Engine" can seamlessly diagnose across disciplines, from social sciences (finance/traffic) to life sciences (biological network pathologies).
+> **【Important】 Comparison between Sample 8 (Stroke) and Sample 9 (Seizure):**
 >
-> * **Sample 8 (This Report):** Simulates a **"Stroke/Ischemia"** where blood flow/signals to a specific part of the brain network (Motor Cortex) are physically blocked. It verifies the process where part of the network "depletes and necrotizes."
-> * **Sample 9 (Next Report):** Simulates an **"Epileptic Seizure"** where abnormal synchronous signals radiate from a specific region (Temporal Lobe). It verifies the process of excessive "runaway resonance" of energy.
+> * **Sample 8 (This Report):** Models an ischemic pathology (stroke) where blood flow to a specific brain region (motor cortex) is blocked, causing local flow depletion.
+> * **Sample 9 (Next Report):** Models a hyper-synchronous pathology (seizure) where blood flow synchronizes globally across the brain, starting from the temporal lobe.
+> * For healthy brain activity, refer to the [Healthy Clinical Reference](../Sample_0_Healthy/README.md).
 
 ---
 
-# 🔬 Meta-Analysis Synthesis Report / Laboratory Findings
-
 ## 1. Executive Summary
 
-This system (biological brain domain) is diagnosed as being in an extremely critical state (HIGH Severity) where a **"fatal blockage of energy supply to a specific node (Motor Cortex) (Stroke/Infarction)"** occurs mid-way through the timeline, resulting in the entire network falling into **"Thermodynamic Energy Depletion."** Only the inflow path to the motor cortex is blocked, and the process of isolation and necrosis progresses: "It outputs noise to other regions, but receives absolutely no input."
+* **Overall Status:** 🟡 **Acute Local Flow Deficiency Detected (Localized Brain Ischemia / Stroke)**
+* **Severity:** 🟡 **HIGH (Ischemic Local Impairment)**
+* **Summary:** 
+  The system (fMRI brain activity network) exhibits localized circulatory failure (ischemia) in the BOLD signal flow. Inflow to the motor cortex (`00_Motor_Cortex`) was blocked by approximately 95% at time step **`t=30` (10:05:00)**.
+  The explanation variance ratio of the first principal component (PC1) in Principal Component Analysis (PCA) rose from **`37.60%`** ($t=29$) to **`94.72%`** ($t=30$). The principal component vector concentrated in the negative direction of the motor cortex (**`-0.8942`**), indicating stiffness locking. The motor cortex Z-Score reached **`51.04`** at $t=30$. Based on these metrics, we diagnose acute occlusion of the middle cerebral artery (MCA) branch supplying the motor cortex, causing local ischemia and metabolic collapse.
 
-## 2. Limitations of Traditional Perspective
+---
 
-**[Cumulative Flow for the Entire Period (P/L Waterfall) & Balance Sheet (B/S)]**
-![Sample 8 PL Waterfall](../../samples/Sample_8_fMRI_Stroke/readme_plots/000_0_1__PL_Waterfall_Total.png)
-![Sample 8 BS Block](../../samples/Sample_8_fMRI_Stroke/readme_plots/000_0_1__BS_Block_Total.png)
+## 2. Limits of Traditional Analysis (Limitations of Traditional Snapshots)
 
-Looking at the P/L summary, only the Motor Cortex is showing an extreme negative (-$60,191). This is a physical sign of an arterial blockage: "It is sending signals to other parts, but receiving no input." However, traditional static aggregation tools cannot depict the "dynamic process of death" regarding how this mere "balance anomaly" places a thermodynamic load on the entire network (increasing entropy = wasteful frictional heat and energy squandering) and undermines overall biological activity.
+Early identification of acute localized stroke is impossible using standard average-value monitoring or simple snapshot aggregations of total flow (P/L equivalent) and stock (B/S equivalent).
 
-## 3. Fundamental Pathophysiology
+The following graphs show the cumulative flow and residuals:
 
-The root cause of this sample lies in an "Arterial Blockage Script" intentionally embedded in the generator code `_0_0_generate_dummy_fmri.py`.
+### Balance Sheet Comparison (B/S Equivalent)
 
-* **Identified Evidence:**
-  `if tgt == "Motor_Cortex": base_flux = base_flux * 0.05`
-  From time step `TR >= 150` onward, all blood flow (edges) heading to the motor cortex (`Motor_Cortex`) was artificially cut by 95% (ischemic state). The macroscopic collapse detected by TLU is triggered by this localized failure of mass conservation.
+* **B/S Asset & Equity Cumulative Trend (Cumulative):**
+  ![B/S Cumulative Trend](readme_plots/000_0_1__BS_Trend.png)
 
-## 4. Physical and Mathematical Proof
+### Income Statement Comparison (P/L Equivalent)
 
-### 4.1. Macro Forensics & Structural Stiffness
+* **P/L Volume Cumulative Trend:**
+  ![P/L Cumulative Trend](readme_plots/000_0_1__PL_Trend.png)
 
-Due to the localized blockage of blood flow, an imbalance arises in the mass conservation of the entire system. Furthermore, as the asymmetrical state of the motor cortex ("zero input, only output") prolongs, the system's stiffness matrix (internal structure) gradually proceeds toward a Rigid Lock (a state where the elasticity of the entire brain is lost, rejecting healthy signal processing), causing the brain as a whole to lose its elasticity.
+#### 🔍 Blind Spot of Traditional Monitoring
+When the overall activity level (total volume) is maintained, conventional methods miss local flow blockages.
+At the final step, the cumulative balance of the motor cortex is `40,052.43`. This does not show a significant difference from other regions (prefrontal cortex: `115,078.12`, temporal lobe: `115,335.59`). This occurs because pre-occlusion data mixes with cumulative values, diluting the acute occlusion signal after $t=30$. Static average-value analysis cannot identify the occlusion node or the inflection point.
 
-![Sample 8 Macro Forensics](../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_1__macro_forensics_dashboard.png)
-![Sample 8 External Force 3D](../../samples/Sample_8_fMRI_Stroke/readme_plots/000_1_6__3d_dynamics_external_force.png)
+---
 
-* **1st Image [Start]**: `t.00000` (Normal stiffness)
-* **2nd Image [Just Before Change]**: `t.00029` (TR=145)
-* **3rd Image [At the Time of Change]**: `t.00030` (TR=150: Infarction occurs)
-* **4th Image [Just After Change]**: `t.00031` (TR=155)
-* **5th Image [End]**: `t.00059` (TR=295: Complete rigid lock)
+## 3. Pathophysiology
 
-![Sample 8 Structural Stiffness 0](../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00000.png)
-![Sample 8 Structural Stiffness 29](../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00029.png)
-![Sample 8 Structural Stiffness 30](../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00030.png)
-![Sample 8 Structural Stiffness 31](../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00031.png)
-![Sample 8 Structural Stiffness 59](../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_1__structural_stiffness.t.00059.png)
+The physics engine analyzed joint connection stiffness to identify the mechanism of the acute stroke.
 
-### 4.2. Mathematical Constraints of Spectral Radius & Physical Topology Disruption
+* **Mechanism of Stroke:**
+  At time step **`t=30` (10:05:00)**, the blood inflow from other regions to the motor cortex (`00_Motor_Cortex`) dropped by approximately 95% (from an average of ~`540` to ~`29`).
+  However, blood outflow from the motor cortex to other regions remained at `570` to `590`. Blood within the motor cortex was depleted instantly. This flow imbalance is evidence of middle cerebral artery occlusion.
 
-* **System Stability (Spectral Radius):**
-    ![Sample 8 System Stability](../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)
+---
 
-* **Mathematical Background of Spectral Radius "1.00" (Stochastic Constraints):**
-    The TLU System Stability Filter (`_004_1_2_filter_system_stability.py`) calculates the **"transition probability matrix (Markov stochastic matrix)"** by normalizing the flow data by the total outflow of each brain region (node). According to the Perron-Frobenius theorem, the maximum eigenvalue (spectral radius) of any row-stochastic matrix is **mathematically guaranteed to be strictly and consistently `1.00`**, regardless of whether the brain is healthy or suffers from a localized stroke. Therefore, the spectral radius itself does not serve as a diagnostic indicator for detecting pathophysical state transitions.
+## 4. Summary of Mathematical Analysis Results
 
-* **Flickering of `is_stable` (Numerical Noise Mimicking State Change):**
-    The stability flag (`is_stable`) flickers rapidly between `1` (stable) and `0` (unstable) in the log. This is not a physical fluctuation of brain connectivity. Rather, it is a **numerical artifact caused by microscopic floating-point rounding errors** when calculating eigenvalues of exactly `1.0` in complex space.
-  * **False Positives (t < 30):** During the healthy baseline period, rounding errors occasionally cause the computed spectral radius to be slightly larger than `1.0` (e.g., `1.0000000000000002`), triggering a false unstable alarm (`is_stable = 0`).
-  * **False Negatives (t >= 30):** During the ischemic stroke period when the network is severely compromised, numerical rounding yields values slightly below or equal to `1.0`, resulting in a false stable classification (`is_stable = 1`).
-    Since this metric produces uninformative false alarms and false normals indiscriminately, it should be excluded from forensic clinical reasoning.
+### 4.1. Local Brain Flow Blockage and Kirchhoff Conservation Law Verification
 
-* **Physical Topology Disruption (Loss of Inflow Edges):**
-    In contrast, the actual physical collapse of connectivity due to the input blockage to the `Motor_Cortex` is clearly exposed in the temporal network graphs. After the stroke onset at `t=30` (TR=150), the inflow edge directed toward the `Motor_Cortex` completely vanishes, visualizing the structural disruption of active blood/information circulation.
+The `System Conservation Residual` remains exactly **`0.0`** throughout the period, indicating no leaks outside the system. Only the motor cortex node in the internal topology suffers from flow deficiency.
 
-* **Network Topology 5-Point Sequence:**
-  * **① Start (t=0 / 10:00:00):**
-        ![Sample 8 Network Topology 0](../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00000.png)
-  * **② Just Before Change (t=29 / 10:04:50):**
-        ![Sample 8 Network Topology 29](../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00029.png)
-  * **③ The Exact Point of Change (t=30 / 10:05:00):**
-        ![Sample 8 Network Topology 30](../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00030.png)
-        The inflow edge directed toward the `Motor_Cortex` vanishes, indicating that the path for active blood/information flow has been severed.
-  * **④ Immediately After Change (t=31 / 10:05:10):**
-        ![Sample 8 Network Topology 31](../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00031.png)
-  * **⑤ End (t=59 / 10:09:50):**
-        ![Sample 8 Network Topology 59](../../samples/Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00059.png)
+* **Macro Forensics Dashboard:**
+  ![Macro Forensics](readme_plots/002_2_1__macro_forensics_dashboard.png)
 
-### 4.3. Thermodynamic Energy Stack
+### 4.2. Connection Stiffness Shifts (Stiffness Lock) and Principal Vector Bias
 
-In Sample 8, from the middle phase when the lesion occurs (around TR=150), entropy loss ($T \Delta S$: red layer) suddenly surges rapidly, and free energy sinks deeply into the negative zone. This is a perfect proof indicating that the blockage of blood flow to a specific region created an intense imbalance within the network, fatally impairing the system's overall potential to conduct meaningful information processing. This means Thermodynamic Death (Heat Death = the fatal loss of the brain's potential for meaningful information processing; complete homogenization and disorder of energy akin to the silence the universe eventually reaches).
+The intrinsic structure of the system shifted at the moment of the anomaly.
 
-*(Top: Sample 0 Healthy Economic Growth / Bottom: Sample 8 Thermodynamic Death of the Brain)*
-![Sample 0 Thermodynamics](../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-![Sample 8 Thermodynamics](../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+* **PCA Axis Ratio:**
+  ![PCA Ratio](readme_plots/000_2_2__principal_axes_ratio.png)
 
-### 4.4. 3D Micro Z-Score & KL Drift
+* **PC1 Principal Eigenvector Component Ratio Evolution:**
+  ![PC1 Eigenvector](readme_plots/000_2_3__eigenvector_evolution.png)
 
-In the 3D surface of Z-Score (degree of protrusion from past averages), bounding at TR=150, the inflow component to the motor cortex suddenly sinks into the abyss (negative spike), detecting localized "ischemia/necrosis." Furthermore, in the Information Geometric Mutation (KL Drift = localized collapse of the network's probability distribution due to loss of blood flow), the probability distribution of the network locally collapses because the information flow path to the motor cortex is cut, causing a massive spike to pierce the space. The lack of blood flow (mass) is directly visualized as "Information Geometric Death."
+#### 📊 Five-Point Stiffness Matrix Sequence Analysis
+* **① Normal Period (t=0 / 10:00:00):**
+  ![Stiffness t0](readme_plots/000_2_1__structural_stiffness.t.00000.png)
+  Functional connectivity is uniform, maintaining joint stiffness.
+* **② Before Occlusion (t=29 / 10:04:50):**
+  ![Stiffness t29](readme_plots/000_2_1__structural_stiffness.t.00029.png)
+  The PC1 explanation ratio is **`37.60%`** (eigenvalue: **`6296.66`**), showing distributed energy.
+* **③ Acute Stroke Onset (t=30 / 10:05:00):**
+  ![Stiffness t30](readme_plots/000_2_1__structural_stiffness.t.00030.png)
+  The inflow path is blocked. The PC1 explanation ratio rose to **`94.72%`** (eigenvalue: **`201,402.52`**). The principal component vector concentrated at `00_Motor_Cortex` with a weight of **`-0.8942`**.
+* **④ Post-Occlusion (t=31 / 10:05:10):**
+  ![Stiffness t31](readme_plots/000_2_1__structural_stiffness.t.00031.png)
+  The PC1 ratio remains locked at **`94.71%`** with the motor cortex load at **`-0.8943`**. The motor cortex dominates the dynamics (stiffness lock).
+* **⑤ Final State (t=59 / 10:09:50):**
+  ![Stiffness t59](readme_plots/000_2_1__structural_stiffness.t.00059.png)
+  The PC1 ratio is **`92.33%`**, showing permanent functional loss.
 
-![Sample 8 3D Z-Score](../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
-![Sample 8 3D KL Drift](../../samples/Sample_8_fMRI_Stroke/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+### 4.3. Network Topology and Connectivity Collapse
 
-## 5. ⚠️ Falsification Analytics
+* **System Stability Indicator (Spectral Radius):**
+  ![System Stability](readme_plots/004_1_2__system_stability.png)
 
-* **Possibility of False Positives:** If this were actual fMRI data, given that only the inflow of the BOLD signal to a specific gyrus vanishes by 95% and is accompanied by abnormal resonance, there is an extremely high probability that it is a clear "organic lesion (ischemia/infarction)" rather than mere measurement noise.
-* **Additional Verification Requirements:** TLU has proven itself to be a "Universal Physics-Mathematics-Mathematics Engine." It has been confirmed that "embezzlement" in finance, "deadlock" in traffic networks, and "stroke" in the brain can all be seamlessly diagnosed with the same physical equation: "Mass deficit and thermodynamic collapse in a network."
+#### Spectral Radius "1.00" Constraint of Probability Transition Matrix
+The brain network is a connected system without isolated nodes. Due to mathematical properties of the probability transition matrix, the spectral radius remains locked at `1.0000`.
+Therefore, the spectral radius alone cannot detect this pathology. Local topological destruction is indicated by the "reduction of connection edges (inflow cutoff)" and the "stiffness lock of the PC1 eigenvector."
+
+* **Five-Point Network Topology Sequence:**
+  * **① Initial State (t=0 / 10:00:00):**
+    ![Topology t0](readme_plots/002_1_2__network_topology.t.00000.png)
+  * **② Before Occlusion (t=29 / 10:04:50):**
+    ![Topology t29](readme_plots/002_1_2__network_topology.t.00029.png)
+  * **③ Acute Stroke Onset (t=30 / 10:05:00):**
+    ![Topology t30](readme_plots/002_1_2__network_topology.t.00030.png)
+    Inflow edges to the motor cortex (`00_Motor_Cortex`) decrease, disrupting the topological connection.
+  * **④ Post-Occlusion (t=31 / 10:05:10):**
+    ![Topology t31](readme_plots/002_1_2__network_topology.t.00031.png)
+  * **⑤ Final State (t=59 / 10:09:50):**
+    ![Topology t59](readme_plots/002_1_2__network_topology.t.00059.png)
+
+### 4.4. Metabolic Entropy and Free Energy Collapse
+
+Statistical physics metrics show the collapse of brain metabolism.
+
+* **Thermodynamics Energy Stack:**
+  ![Thermodynamics Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
+
+* **T-S Diagram:**
+  ![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+
+The average entropy $S$ is **`9.36`** and average free energy $F$ is **`413,922.35`** across the period. Following the block at $t=30$, free energy $F$ decreased, reaching a minimum of **`167,265.39`** at the final step ($t=59$). The potential energy to maintain activity is depleted.
+The T-S diagram shows temperature and entropy decreasing after the occlusion, contracting the potential energy.
+
+### 4.5. Identifying the Ischemic Lesion via 3D Spatio-Temporal Plots
+
+The 3D information geometry and statistical plots show where the occlusion occurs.
+
+* **3D Micro Z-Score (Position):**
+  ![3D Micro Z-Score](readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+* **3D Micro KL Drift:**
+  ![3D Micro KL Drift](readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+
+In the 3D Micro Z-Score plot, a warning spike of **`51.04`** appears at the `00_Motor_Cortex` coordinates at $t=30$.
+Adjacent nodes (prefrontal cortex: `12.36`, parietal lobe: `17.12`) also show synchronized shifts. This records how the strain from the motor cortex block propagates across the brain.
+
+---
+
+## 5. Local Treatment Plan (Optimal Treatment / LQR Control)
+
+* **Treatment Protocol: Re-open Occluded Path (Thrombolysis) and Support Perfusion via LQR Feedback**
+* **LQR Sensitivity Intervention (Identifying Control Nodes):**
+  LQR sensitivity analysis designates `Motor_Cortex` as the target node. The sensitivity index (`fk_total_ripple`) is **`41.5234`**.
+
+  > **【Mathematical Proof of `41.5234`】**
+  > Parameters are: damping rate $\gamma = 0.85$, maximum steps $k_{max} = 5$, and input displacement $\Delta q = 10.0$.
+  > Under the ischemia stiffness lock state where connection leaks approach zero, input signals propagate synchronously. The total ripple effect is:
+  > $$fk\_total\_ripple = \Delta q \times \sum_{k=0}^{5} \gamma^k = 10.0 \times \left(1.0 + 0.85 + 0.85^2 + 0.85^3 + 0.85^4 + 0.85^5\right) = 41.5234$$
+
+  At $t=30$, external force changes at `00_Motor_Cortex` have the maximum impact on `02_Prefrontal_Cortex` (`fk_max_impact = 7.8304`), which acts as the control point.
+
+* **Specific Intervention Plan:**
+  1. **Thrombolytic Therapy (tPA Infusion):**
+     Immediately after occlusion ($t=30$ to $33$), reduce the connection stiffness of the inflow path to the motor cortex (revascularization). This restores inflow to the normal level (~`540`) and pulls the PC1 ratio back to the normal range (~37%).
+  2. **Phase Support via Transcranial Magnetic Stimulation (TMS LQR Feedback):**
+     Apply anti-phase stimulation pulses to the prefrontal cortex (`02_Prefrontal_Cortex`) and parietal lobe (`01_Parietal_Lobe`) based on the LQR sensitivity matrix. This offsets the load on the motor cortex via collateral pathways, preventing free energy collapse.
+     ![Control LQR](readme_plots/004_1_3__control_lqr_performance_space.png)
+
+---
+
+## 6. Forensic Alert & Falsifiability (Falsification Analytics)
+
+### 6.1. Triaging Model Pollution and Artifacts
+
+* **Limits of Statistical Models and Triage:**
+  The Z-Score triggered a warning of $Z=51.04$ at $t=30$. Later, the warning level fell to **`6.31`** at $t=31$ and **`4.54`** at $t=32$. This occurs because the statistical model learns the ischemic state as the new baseline (model pollution).
+  However, physical indicators—the free energy drop (`167,265.39`) and the PC1 bias (~92.3%)—continue to indicate the anomaly. In triaging, we reject the silent Z-Scores and confirm the ischemic stroke state.
+* **Distinguishing Artifacts:**
+  Head movement or scanner vibrations cause uniform variations across all nodes. In contrast, the local PC1 concentration of 94.72% on the motor cortex cannot be replicated by noise. We confirm this as stroke pathology.
+
+### 6.2. Falsification Conditions
+
+To reject the stroke diagnosis and prove that the flow reduction is normal or noise, the following evidence is required:
+
+1. **DWI and T2-weighted MRI Data:**
+   MRI scans at $t=30$ showing no high signal (white intensity change) in the motor cortex (`Motor_Cortex`) and no decrease in water diffusion (ADC map).
+2. **Angiography Data (MRA / CTA):**
+   MRA or CTA logs showing that the middle cerebral artery (MCA) branches supplying the motor cortex are open, with no organic occlusion (thrombus or embolus).
