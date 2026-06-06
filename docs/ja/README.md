@@ -22,11 +22,10 @@ TLUは、複式簿記、都市交通の流れ、株式市場の取引、およ�
 
 | # | ドキュメントタイトル（英語版） | 対応する日本語版（日本語推奨） | コアコンテンツと見どころ |
 | :---: | :--- | :--- | :--- |
-| **1** | **[📂 01. Physics-Mathematics Engine Theory & Interpretation Guide](../01_Physics_Engine_Theory_and_Interpretation.md)** | 000〜005番系数理解析ガイドの再整備：<br>・**[000_0. 財務基礎状態と基本統計量](000_0_Basic_Statistics.md)**<br>・**[000_1. 運動学と動的状態空間](000_1_Dynamics_Kinematics.md)**<br>・**[000_2. 構造剛性と主成分分析](000_2_Stiffness_PCA.md)**<br>・**[001_1. 熱力学とエントロピー](001_1_Thermodynamics.md)**<br>・**[002_1. 情報幾何とトポロジー](002_1_Information_Geometry.md)**<br>・**[002_2. 相対保存則とフォレンジック](002_2_Forensics.md)**<br>・**[003_1. 逆運動学と目標到達性](003_1_Inverse_Kinematics.md)**<br>・**[004_1. システム安定性とLQR制御](004_1_Control_Theory.md)**<br>・**[004_2. 介入感度行列](004_2_Stability.md)**<br>・**[005_1. 信号処理と波動力学](005_1_Wave_Mechanics.md)**<br>・**[005_2. フラクタルノイズ（1/f ゆらぎ）](005_2_Coherence.md)** | TLUの主要8コアモジュール（000〜005番系）の数理的・物理的基礎理論と、全10個の検証サンプルに対応する実機可視化グラフを縦積み配列し、元データまで遡って精査した診断解釈ガイド。 |
-| **2** | **[📂 02. System Architecture & Operations Guide](../02_System_Architecture_and_Operations.md)** | **[02. システム構造定義とパイプライン運用ガイド](02_System_Architecture_and_Operations.md)** | パイプライン・コンテナ運用、デザインテーマ管理（JSON）、障害込みダミー・データ生成スクリプト、および線形最適制御（LQR）シミュレーションモデル。 |
-| **3** | **[📂 03. Market Forensics & Compliance Rules](../03_Market_Forensics_Rules.md)** | **[03. 市場フォレンジック・監査ルール定義](03_Market_Forensics_Rules.md)** | ミリ秒単位の注文簿（オーダーブック）力学、ボット循環取引、二部グラフ投影 vs ユーザー間直接送金トポロジーによる共謀ネットワーク監査。 |
-| **4** | **[📂 LLM Diagnostic Manual (Supreme prompt)](../LLM_Diagnostic_Manual.md)** | **[LLM臨床検査マニュアル (Supreme Prompt)](LLM_Diagnostic_Manual.md)** | 物理数学エンジンの数値からAIが客観的なカルテを自動生成するためのプロトコル。統計的偽陽性判定と、原本データへのファクトチェック義務化。 |
-| **5** | **[📂 Verified Sample Registry & Catalog](../samples/README.md)** | **[検証サンプル比較・メタ検査総合カタログ](samples/README.md)** | TLUに実装されている全10種類の検証サンプルの判定判定、物理数学パラメータ限界値、および線形最適制御（LQR）介入ポイント・ガイド。 |
+| **1** | **[000_0: Statistics](../samples/000_0_Basic_Statistics.md)** / **[000_1: Kinematics](../samples/000_1_Dynamics_Kinematics.md)** / **[000_2: Stiffness & PCA](../samples/000_2_Stiffness_PCA.md)**<br>- **[001_1: Thermodynamics](../samples/001_1_Thermodynamics.md)** / **[001_2: Local Entropy](../samples/001_2_Local_Entropy.md)** / **[001_3: Local Temperature](../samples/001_3_Local_Temperature.md)** / **[001_4: Local Energy Gradient](../samples/001_4_Local_Gradient.md)**<br>- **[002_1: Information Geometry](../samples/002_1_Information_Geometry.md)** / **[002_2: Conservation & Auditing](../samples/002_2_Forensics.md)**<br>- **[003_1: Kinematics](../samples/003_1_Kinematics.md)**<br>- **[004_1: LQR Control](../samples/004_1_Control_Theory.md)** / **[004_2: Intervention Sensitivity](../samples/004_2_Stability.md)**<br>- **[005_1: Wave Mechanics](../samples/005_1_Wave_Mechanics.md)** / **[005_2: 1/f Fluctuation](../samples/005_2_Coherence.md)** | **[000_0. 財務基礎状態と基本統計量](000_0_Basic_Statistics.md)**<br>・**[000_1. 運動学と動的状態空間](000_1_Dynamics_Kinematics.md)**<br>・**[000_2. 構造剛性と主成分分析](000_2_Stiffness_PCA.md)**<br>・**[001_1. 熱力学とエントロピー](001_1_Thermodynamics.md)**<br>・**[002_1. 情報幾何とトポロジー](002_1_Information_Geometry.md)**<br>・**[002_2. 相対保存則とフォレンジック](002_2_Forensics.md)**<br>・**[003_1. 逆運動学と目標到達性](003_1_Inverse_Kinematics.md)**<br>・**[004_1. システム安定性とLQR制御](004_1_Control_Theory.md)**<br>・**[004_2. 介入感度行列](004_2_Stability.md)**<br>・**[005_1. 信号処理と波動力学](005_1_Wave_Mechanics.md)**<br>・**[005_2. フラクタルノイズ（1/f ゆらぎ）](005_2_Coherence.md)** | TLUの主要8コアモジュール（000〜005番系）の数理的・物理的基礎理論と、全10個の検証サンプルに対応する実機可視化グラフを縦積み配列し、元データまで遡って精査した診断解釈ガイド。 |
+| **2** | **[📂 System Architecture & Operations Guide](../System_Architecture_and_Operations.md)** | **[02. システム構造定義とパイプライン運用ガイド](System_Architecture_and_Operations.md)** | パイプライン・コンテナ運用、デザインテーマ管理（JSON）、障害込みダミー・データ生成スクリプト、および線形最適制御（LQR）シミュレーションモデル。 |
+| **3** | **[📂 LLM Diagnostic Manual (Supreme prompt)](../LLM_Diagnostic_Manual.md)** | **[LLM臨床検査マニュアル (Supreme Prompt)](LLM_Diagnostic_Manual.md)** | 物理数学エンジンの数値からAIが客観的なカルテを自動生成するためのプロトコル。統計的偽陽性判定と、原本データへのファクトチェック義務化。 |
+| **4** | **[📂 Verified Sample Registry & Catalog](../samples/README.md)** | **[検証サンプル比較・メタ検査総合カタログ](samples/README.md)** | TLUに実装されている全10種類の検証サンプルの判定判定、物理数学パラメータ限界値、および線形最適制御（LQR）介入ポイント・ガイド。 |
 
 ---
 
@@ -171,8 +170,6 @@ docker compose up -d
 bash bin/batch_processing.sh --target_env "samples/Sample_1_Wash_Trade"
 bash bin/batch_visualize_graphs.sh --target_env "samples/Sample_1_Wash_Trade"
 
-# 4. 生成された AI 自動カルテ（検査レポート）を確認
-cat workspace/output_data/_99_diagnosis_report.md
 ```
 
 ---
@@ -186,4 +183,4 @@ TLUは、「この時空間ノードでキルヒホッフの質量保存則が $
 ---
 
 **ライセンス**: AGPL-3.0  
-**開発者**: Renpoo & Google DeepMind Agent (Antigravity)
+**開発者**: Renpoo & Google Gemini Agent (Antigravity)
