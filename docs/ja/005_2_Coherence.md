@@ -15,6 +15,7 @@ $$S(f) \propto \frac{1}{f^\beta} \quad (\beta \approx 1.0)$$
 ---
 
 ## 🧭 目次
+
 - [フラクタルノイズ（1/f ゆらぎ）スペクトル](#1-フラクタルノイズ1f-ゆらぎスペクトル-005_2_1_fractal_noise_spectrumpng)
 
 ---
@@ -22,9 +23,11 @@ $$S(f) \propto \frac{1}{f^\beta} \quad (\beta \approx 1.0)$$
 ## 📊 フラクタルノイズ・ゆらぎグラフと個別サンプルの所見
 
 ### 1. フラクタルノイズ（1/f ゆらぎ）スペクトル (`005_2_1_fractal_noise_spectrum.png`)
+
 システムの合成信号におけるパワースペクトル密度の対数プロットです。べき乗則指数 $\beta$ の値を求め、システムに多様な自律性が維持されているかを判定します。
 
 #### 🟢 Sample 0 (正常代謝)
+
 **臨床解説:**
 スペクトルが対数グラフ上で綺麗な右下がりの直線を描いており、べき乗則指数 $\beta \approx 1.0$ の「フラクタル（1/f）ゆらぎ」が成立している、健全な新陳代謝の証拠です。
-![Sample 0 Fractal Noise](../../samples/Sample_0_Healthy/output_plots/005_2_1_fractal_noise_spectrum.png)
+![Sample 0 Fractal Noise](../../samples/Sample_0_Healthy/readme_plots/005_2_1_fractal_noise_spectrum.png)

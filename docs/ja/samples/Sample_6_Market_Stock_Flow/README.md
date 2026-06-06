@@ -15,21 +15,21 @@
 ### 貸借対照表（B/S）の比較
 
 * **B/S 資産・資本の累積推移 & ブロック図 (累積値):**
-  ![B/S Cumulative Trend](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_0_1__BS_Trend.png)
-  ![B/S Block Total](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_0_1__BS_Block_Total.png)
+  ![B/S Cumulative Trend](../../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_0_1__BS_Trend.png)
+  ![B/S Block Total](../../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_0_1__BS_Block_Total.png)
 
 * **B/S 資産・資本の期間推移 (単月非累積値):**
-  ![B/S Periodic Trend](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_0_1__BS_Trend_Periodic.png)
+  ![B/S Periodic Trend](../../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_0_1__BS_Trend_Periodic.png)
 
 ### 損益計算書（P/L）の比較
 
 * **P/L 累積推移:**
-  ![P/L Cumulative Trend](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_0_1__PL_Trend.png)
+  ![P/L Cumulative Trend](../../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_0_1__PL_Trend.png)
 
 * **P/L 期間推移 (単月非累積値):**
-  ![P/L Periodic Trend](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_0_1__PL_Trend_Periodic.png)
+  ![P/L Periodic Trend](../../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_0_1__PL_Trend_Periodic.png)
 
-* **観察:** 
+* **観察:**
   株価の変動に応じてユーザー保有株の時価評価総額（資産）および各発行体の株式総額（負債）が常に同期して増減しており、無から株式価値が消滅したり湧き出したりする不整合はありません。
 
 ---
@@ -48,30 +48,30 @@
 キルヒホッフ残差は全期間を通じて **`0.00`** であり、簿外の未登録アカウント等への株券流出はありません。
 
 * **ネットワークトポロジーの変化:**
-  ![Network Topology (t=0)](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/002_1_2__network_topology.t.00000.png)
+  ![Network Topology (t=0)](../../../../samples/Sample_6_Market_Stock_Flow/readme_plots/002_1_2__network_topology.t.00000.png)
 
 ### 4.2. 剛性接続 & 主成分分析 (Stiffness & PCA)
 
 構造剛性行列および主成分分析は、株券の流動性分布を示します。パニック売り（Panic Dump）のような急激な投げ売りイベントが発生した局面では、株式の所有権が一部のHFT（ハブ）に一時的に急激に集中するため、エントロピーが低下し、構造剛性が上昇する挙動が捉えられます。
 
 * **主要軸比率 & 固有ベクトル推移 (PC1, PC2, PC3):**
-  ![PCA Ratio](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_2_2__principal_axes_ratio.png)
-  ![PCA PC1 Evolution](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_2_3__eigenvector_evolution.png)
+  ![PCA Ratio](../../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_2_2__principal_axes_ratio.png)
+  ![PCA PC1 Evolution](../../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_2_3__eigenvector_evolution.png)
 
 ### 4.3. 循環取引の検知 (Spectral Radius)
 
 架空還流取引（Wash Trading）が意図的に仕掛けられた瞬間、ネットワーク上のスペクトル半径（Spectral Radius）が一時的に跳ね上がり、システム全体の「虚偽の熱（活性化）」として検知されます。
 
 * **システム安定性指標:**
-  ![System Stability](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/004_1_2__system_stability.png)
+  ![System Stability](../../../../samples/Sample_6_Market_Stock_Flow/readme_plots/004_1_2__system_stability.png)
 
 ### 4.4. 熱力学指標と3D位相幾何
 
 * **熱力学特性 & 3D軌跡:**
-  ![Thermodynamics Energy Stack](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/001_1_2__thermodynamics_energy_stack.png)
-  ![T-S Diagram](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/001_1_3__thermodynamics_ts_diagram.png)
-  ![3D Micro Z-Score](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/002_2_2_2__3d_micro_z_score_X.png)
-  ![3D Micro KL Drift](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/002_2_2_1__3d_micro_kl_drift.png)
+  ![Thermodynamics Energy Stack](../../../../samples/Sample_6_Market_Stock_Flow/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+  ![T-S Diagram](../../../../samples/Sample_6_Market_Stock_Flow/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+  ![3D Micro Z-Score](../../../../samples/Sample_6_Market_Stock_Flow/readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+  ![3D Micro KL Drift](../../../../samples/Sample_6_Market_Stock_Flow/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 ---
 
@@ -80,7 +80,7 @@
 * **介入要否:** **対応不要 (No Treatment Required)**
 * システムは流体的に自己安定状態にあります。流動性供給ポリシーとしてのLQR制御は、HFTハブを対象とした最適制御入力経路を提示し、万が一のパニック時の価格急落に伴う「剛性ロック」を効率的に和らげるレバーとして機能します。
 
-![LQR Control Space](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/004_1_3__control_lqr_performance_space.png)
+![LQR Control Space](../../../../samples/Sample_6_Market_Stock_Flow/readme_plots/004_1_3__control_lqr_performance_space.png)
 
 ---
 

@@ -12,6 +12,7 @@
 ---
 
 ## 🧭 目次
+
 - [介入感度行列](#1-介入感度行列-004_2_1__sensitivity_matrixpng)
 
 ---
@@ -19,9 +20,11 @@
 ## 📊 介入感度グラフと個別サンプルの所見
 
 ### 1. 介入感度行列 (`004_2_1__sensitivity_matrix.png`)
+
 すべてのノードペア間における、LQR制御ゲインの介入に対する感度の相互伝播強さを示した偏微分行列グラフです。
 
 #### 🟢 Sample 0 (正常代謝)
+
 **臨床解説:**
 全ノード間にわたって偏りのない極めて淡いブルーの分布を維持しており、特定の結合パスに偏った制御脆弱性が存在しない安定したトポロジーを証明しています。
-![Sample 0 Sensitivity](../../samples/Sample_0_Healthy/output_plots/004_2_1__sensitivity_matrix.png)
+![Sample 0 Sensitivity](../../samples/Sample_0_Healthy/readme_plots/004_2_1__sensitivity_matrix.png)
