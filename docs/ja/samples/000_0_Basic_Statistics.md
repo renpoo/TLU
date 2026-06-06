@@ -13,7 +13,7 @@
 #### 🟢 Sample 0 (正常代謝)
 
 **臨床解説:**
-資産と負債・自己資本が対称にバランスよく並びます。売上から費用が差し引かれて純利益が残ります。健全な基礎構造です。
+資産と負債・自己資本が対称にバランスよく並びます。売上から費用が差し引かれます。純利益が残ります。健全な基礎構造です。
 
 - ![Sample 0 BS Block Total](Sample_0_Healthy/readme_plots/000_0_1__BS_Block_Total.png)
 - ![Sample 0 PL Waterfall](Sample_0_Healthy/readme_plots/000_0_1__PL_Waterfall_Total.png)
@@ -21,7 +21,7 @@
 #### 🟡 Sample 1 (循環取引)
 
 **臨床解説:**
-売掛金が肥大化しています。P/Lでは売上高が大きい一方、費用が極小です。循環取引による架空の利益創出を示します。
+売掛金が肥大化しています。P/Lでは売上高が大きいです。一方、費用は極小です。循環取引による架空の利益創出を示します。
 
 - ![Sample 1 BS Block Total](Sample_1_Wash_Trade/readme_plots/000_0_1__BS_Block_Total.png)
 - ![Sample 1 PL Waterfall](Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Waterfall_Total.png)
@@ -29,7 +29,7 @@
 #### 🔴 Sample 2 (資金横領)
 
 **臨床解説:**
-売上金は計上されています。回収された資金が簿外に漏洩しているため、手元現預金が圧縮されます。ダミーの `UNKNOWN_LEAK` ノードが資産を構成しています。
+売上金は計上されています。回収された資金が簿外に漏洩しています。そのため、手元現預金が圧縮されます。ダミーの `UNKNOWN_LEAK` ノードが資産を構成しています。
 
 - ![Sample 2 BS Block Total](Sample_2_Embezzlement_Leak/readme_plots/000_0_1__BS_Block_Total.png)
 - ![Sample 2 PL Waterfall](Sample_2_Embezzlement_Leak/readme_plots/000_0_1__PL_Waterfall_Total.png)
@@ -37,7 +37,7 @@
 #### 🟡 Sample 3 (入力ミス)
 
 **臨床解説:**
-仕訳の貸借一方のみを入力した一時的エラーです。B/Sの左右バランスが崩れて残差が生じています。P/Lの営業収支は比較的正常に保たれています。
+仕訳の貸借一方のみを入力した一時的エラーです。B/Sの左右バランスが崩れます。残差が生じています。P/Lの営業収支は比較的正常に保たれています。
 
 - ![Sample 3 BS Block Total](Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__BS_Block_Total.png)
 - ![Sample 3 PL Waterfall](Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__PL_Waterfall_Total.png)
@@ -45,7 +45,7 @@
 #### 🔴 Sample 4 (複合アノマリー)
 
 **臨床解説:**
-架空売上の水増しによる売掛金膨張と、横領による資金流出が同居しています。粉飾による肥大化と出血が同時に発生しています。
+架空売上の水増しによる売掛金膨張が発生しています。また、横領による資金流出が同居しています。粉飾による肥大化と出血が同時に発生しています。
 
 - ![Sample 4 BS Block Total](Sample_4_Composite_Chaos/readme_plots/000_0_1__BS_Block_Total.png)
 - ![Sample 4 PL Waterfall](Sample_4_Composite_Chaos/readme_plots/000_0_1__PL_Waterfall_Total.png)
@@ -61,7 +61,7 @@
 #### 🟢 Sample 6 (株券流体)
 
 **臨床解説:**
-株券保有バランスと出来高です。出来高は大きいですが、実需を伴う株式のやり取りはゼロに近いです。USR間での安定的な対流を示します。
+株券保有バランスと出来高です。出来高は大きいです。しかし、実需を伴う株式のやり取りはゼロに近いです。USR間での安定的な対流を示します。
 
 - ![Sample 6 BS Block Total](Sample_6_Market_Stock_Flow/readme_plots/000_0_1__BS_Block_Total.png)
 - ![Sample 6 PL Waterfall](Sample_6_Market_Stock_Flow/readme_plots/000_0_1__PL_Waterfall_Total.png)
@@ -77,7 +77,7 @@
 #### 🔴 Sample 8 (fMRI 脳梗塞)
 
 **臨床解説:**
-脳葉別の酸素BOLD信号量と機能活動の収支バランスです。運動野の信号が激減しています。機能損失エリアが脳全体の活動収支をマイナスに引き下げています。
+脳葉別の酸素BOLD信号量と機能活動の収支バランスです。運動野の信号が激減しています。機能損失エリアがあります。これにより、脳全体の活動収支をマイナスに引き下げています。
 
 - ![Sample 8 BS Block Total](Sample_8_fMRI_Stroke/readme_plots/000_0_1__BS_Block_Total.png)
 - ![Sample 8 PL Waterfall](Sample_8_fMRI_Stroke/readme_plots/000_0_1__PL_Waterfall_Total.png)
@@ -85,7 +85,7 @@
 #### 🔴 Sample 9 (fMRI てんかん発作)
 
 **臨床解説:**
-脳活動強度と活動収支です。側頭葉の活動が全体の酸素資源を独占しています。異常同調によって全体の認知機能ポテンシャルが損失しています。
+脳活動強度と活動収支です。側頭葉の活動が全体の酸素資源を独占しています。異常同調が発生しています。これにより、全体の認知機能ポテンシャルが損失しています。
 
 - ![Sample 9 BS Block Total](Sample_9_fMRI_Seizure/readme_plots/000_0_1__BS_Block_Total.png)
 - ![Sample 9 PL Waterfall](Sample_9_fMRI_Seizure/readme_plots/000_0_1__PL_Waterfall_Total.png)
@@ -129,7 +129,7 @@
 #### 🟡 Sample 3 (入力ミス)
 
 **臨床解説:**
-$t=1$ (2020-02) において、貸借が不一致の一時的仕訳ミスが発生しました。単期のトレンドにおいてB/SおよびP/Lに急激なノイズが発生しています。次期には修正され、累積的にも一過性の変動として吸収されています。
+$t=1$ (2020-02) において、貸借が不一致の一時的仕訳ミスが発生しました。単期のトレンドにおいてB/SおよびP/Lに急激なノイズが発生しています。次期には修正されます。累積的にも一過性の変動として吸収されています。
 
 - ![Sample 3 BS Trend](Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__BS_Trend.png)
 - ![Sample 3 PL Trend](Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__PL_Trend.png)
@@ -149,7 +149,7 @@ $t=1$ (2020-02) において、貸借が不一致の一時的仕訳ミスが発�
 #### 🔴 Sample 5 (京都交差点網)
 
 **臨床解説:**
-流入車両数と通過損失の推移です。アノマリーが発生した期において、車両数の急増（BS Trend）と同時に、単期（Periodic）の滞留損失が拡大します。システム全体の流動ポテンシャルが一気に低下します。
+流入車両数と通過損失の推移です。アノマリーが発生した期において、車両数が急増（BS Trend）します。同時に、単期（Periodic）の滞留損失が拡大します。システム全体の流動ポテンシャルが一気に低下します。
 
 - ![Sample 5 BS Trend](Sample_5_Kyoto_Traffic/readme_plots/000_0_1__BS_Trend.png)
 - ![Sample 5 PL Trend](Sample_5_Kyoto_Traffic/readme_plots/000_0_1__PL_Trend.png)
@@ -179,7 +179,7 @@ $t=1$ (2020-02) において、貸借が不一致の一時的仕訳ミスが発�
 #### 🔴 Sample 8 (fMRI 脳梗塞)
 
 **臨床解説:**
-脳梗塞が発生した TR=150 ($t=30$) の前後で、累積BOLD信号と機能収支がマイナスへ相転移します。単期の変動では、梗塞期に血流ポテンシャルが大暴落し、その後低レベルで平坦に推移します。
+脳梗塞が発生します。TR=150 (t=30) の前後で、累積BOLD信号と機能収支がマイナスへ相転移します。単期の変動では、梗塞期に血流ポテンシャルが大暴落します。その後、低レベルで平坦に推移します。
 
 - ![Sample 8 BS Trend](Sample_8_fMRI_Stroke/readme_plots/000_0_1__BS_Trend.png)
 - ![Sample 8 PL Trend](Sample_8_fMRI_Stroke/readme_plots/000_0_1__PL_Trend.png)

@@ -9,18 +9,18 @@ TLUは、経営目標（KPI）やネットワークの制御ターゲットを�
 $$Target\_KPI = FK(Joint\_Angles)$$
 $$Joint\_Angles_{required} = IK(Target\_KPI)$$
 
-アームの幾何学的限界（特異点や可動域限界）によりIKが解けない場合があります。または到達誤差（Reachability Error）が上昇する場合があります。この場合、現在の構造を変更しない限り、目標は到達不可能です。
+アームの幾何学的限界（特異点や可動域限界）があります。これによりIKが解けない場合があります。または、到達誤差（Reachability Error）が上昇する場合があります。この場合、現在の構造を変更しない限り、目標は到達不可能です。
 
 ---
 
 ## 📊 各検証サンプルの運動学シミュレーション結果
 
-本セクションでは、全10の検証サンプルについて、順運動学（FK）の到達ポテンシャル空間（`003_1_1__3d_kinematics_fk.png`）および逆運動学（IK）の軌道リボン（`003_1_2__3d_kinematics_ik.png`）の解析結果を併記します。物理数学特性を解説します。
+本セクションでは、全10の検証サンプルを扱います。順運動学（FK）の到達ポテンシャル空間（`003_1_1__3d_kinematics_fk.png`）の解析結果を示します。また、逆運動学（IK）の軌道リボン（`003_1_2__3d_kinematics_ik.png`）の解析結果を併記します。それぞれの物理数学特性を解説します。
 
 ### 🟢 Sample 0 (正常代謝: Healthy)
 
 * **順運動学 (FK) 到達ポテンシャル空間 (`003_1_1__3d_kinematics_fk.png`)**
-  * **臨床解説:** 到達ポテンシャル空間は広く対称的です。なだらかに球状に広がっています。目標変更に対しても十分な可動マージンを確保しています。
+  * **臨床解説:** 到達ポテンシャル空間は広く対称的です。なだらかに球状に広がっています。目標変更に対しても十分な可動域マージンを確保しています。
   * ![Sample 0 Kinematics FK](Sample_0_Healthy/readme_plots/003_1_1__3d_kinematics_fk.png)
 
 * **逆運動学 (IK) 軌道リボン (`003_1_2__3d_kinematics_ik.png`)**
@@ -56,7 +56,7 @@ $$Joint\_Angles_{required} = IK(Target\_KPI)$$
 ### 🟡 Sample 3 (入力ミス: Unbalanced Mistake)
 
 * **順運動学 (FK) 到達ポテンシャル空間 (`003_1_1__3d_kinematics_fk.png`)**
-  * **臨床解説:** 片面記帳ミスが発生します。一時的にアーム関節の不連続が生じています。到達空間に幾何学的歪みが発生しています。この歪みは修正により翌期には解消します。
+  * **臨床解説:** 片面記帳ミスが発生します。一時的にアーム関節の不連続が生じています。到達空間に幾何学的歪みが発生しています。この歪みは修正されます。翌期には解消します。
   * ![Sample 3 Kinematics FK](Sample_3_Unbalanced_Mistake/readme_plots/003_1_1__3d_kinematics_fk.png)
 
 * **逆運動学 (IK) 軌道リボン (`003_1_2__3d_kinematics_ik.png`)**
@@ -84,7 +84,7 @@ $$Joint\_Angles_{required} = IK(Target\_KPI)$$
   * ![Sample 5 Kinematics FK](Sample_5_Kyoto_Traffic/readme_plots/003_1_1__3d_kinematics_fk.png)
 
 * **逆運動学 (IK) 軌道リボン (`003_1_2__3d_kinematics_ik.png`)**
-  * **臨床解説:** 主要交差点の容量飽和（特異点）により、軌道リボンが平坦に潰れます。関節の自由度を完全に喪失しています。歪みエネルギーが高騰し続け、目標不達を証明します。
+  * **臨床解説:** 主要交差点の容量飽和（特異点）が発生します。これにより、軌道リボンが平坦に潰れます。関節の自由度を完全に喪失しています。歪みエネルギーが高騰し続けます。目標不達を証明します。
   * ![Sample 5 Kinematics IK](Sample_5_Kyoto_Traffic/readme_plots/003_1_2__3d_kinematics_ik.png)
 
 ---
@@ -96,7 +96,7 @@ $$Joint\_Angles_{required} = IK(Target\_KPI)$$
   * ![Sample 6 Kinematics FK](Sample_6_Market_Stock_Flow/readme_plots/003_1_1__3d_kinematics_fk.png)
 
 * **逆運動学 (IK) 軌道リボン (`003_1_2__3d_kinematics_ik.png`)**
-  * **臨床解説:** 共謀取引による流動性の不自然な固定化が発生しています。初期に歪みエネルギーが天文学的数値にスパイクします。これにより、市場の自由な流量配分が著しく阻害されています。
+  * **臨床解説:** 共謀取引による流動性の不自然な固定化が発生しています。初期に歪みエネルギーが天文学的数値にスパイクします。これにより、市場の自由な流量配分が阻害されています。
   * ![Sample 6 Kinematics IK](Sample_6_Market_Stock_Flow/readme_plots/003_1_2__3d_kinematics_ik.png)
 
 ---
@@ -108,7 +108,7 @@ $$Joint\_Angles_{required} = IK(Target\_KPI)$$
   * ![Sample 7 Kinematics FK](Sample_7_Market_Cash_Flow/readme_plots/003_1_1__3d_kinematics_fk.png)
 
 * **逆運動学 (IK) 軌道リボン (`003_1_2__3d_kinematics_ik.png`)**
-  * **臨床解説:** 口座間取引による流動性の抱え込みが発生しています。特定期間に歪みエネルギーが上昇します。関節剛性が歪み、決済網全体の効率的な目標配分が妨げられています。
+  * **臨床解説:** 口座間取引による流動性の抱え込みが発生しています。特定期間に歪みエネルギーが上昇します。関節剛性が歪みます。決済網全体の効率的な目標配分が妨げられています。
   * ![Sample 7 Kinematics IK](Sample_7_Market_Cash_Flow/readme_plots/003_1_2__3d_kinematics_ik.png)
 
 ---
@@ -132,5 +132,5 @@ $$Joint\_Angles_{required} = IK(Target\_KPI)$$
   * ![Sample 9 Kinematics FK](Sample_9_fMRI_Seizure/readme_plots/003_1_1__3d_kinematics_fk.png)
 
 * **逆運動学 (IK) 軌道リボン (`003_1_2__3d_kinematics_ik.png`)**
-  * **臨床解説:** 全脳が病的同期パターンにハックされています。アームは外部入力を受け付けないロック状態です。軌道への到達が不能になり、幾何学的フリーズ状態に陥っています。
+  * **臨床解説:** 全脳が病的同期パターンにハックされています。アームは外部入力を受け付けないロック状態です。軌道への到達が不能になります。幾何学的フリーズ状態に陥っています。
   * ![Sample 9 Kinematics IK](Sample_9_fMRI_Seizure/readme_plots/003_1_2__3d_kinematics_ik.png)

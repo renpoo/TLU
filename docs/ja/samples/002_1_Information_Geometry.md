@@ -26,27 +26,30 @@ $$Residual_i = \sum Flux_{in} - \sum Flux_{out}$$
 
 **臨床解説:**
 取引流量（エッジ）は各期を通して分散・循環しています。特定の閉路が太く固定化されるようなトポロジーの偏りはありません。
-![Sample 0 Topology t0](Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 0 Topology t3](Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00003.png)
+
+- ![Sample 0 Topology t0](Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00000.png)
+- ![Sample 0 Topology t3](Sample_0_Healthy/readme_plots/002_1_2__network_topology.t.00003.png)
 
 #### 🟡 Sample 1 (循環取引)
 
 **臨床解説:**
 アノマリー開始の $t=0$ および $t=4$ において、`ACC_Cash` と `ACC_Accounts_Receivable` の間に双方向還流エッジが接続されます。
-![Sample 1 Topology t0](Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 1 Topology t3](Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00003.png)
-![Sample 1 Topology t4](Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00004.png)
-![Sample 1 Topology t5](Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00005.png)
-![Sample 1 Topology t11](Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00011.png)
+
+- ![Sample 1 Topology t0](Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00000.png)
+- ![Sample 1 Topology t3](Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00003.png)
+- ![Sample 1 Topology t4](Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00004.png)
+- ![Sample 1 Topology t5](Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00005.png)
+- ![Sample 1 Topology t11](Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00011.png)
 
 #### 🔴 Sample 2 (資金横領)
 
 **臨床解説:**
 アノマリーが進行します。`Accounts_Receivable` から `UNKNOWN_LEAK` というノードへ資金がバイパス流出します。一方向のエッジが常態化します。
-![Sample 2 Topology t0](Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 2 Topology t1](Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00001.png)
-![Sample 2 Topology t2](Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00002.png)
-![Sample 2 Topology t3](Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00003.png)
+
+- ![Sample 2 Topology t0](Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00000.png)
+- ![Sample 2 Topology t1](Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00001.png)
+- ![Sample 2 Topology t2](Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00002.png)
+- ![Sample 2 Topology t3](Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00003.png)
 
 #### 🟡 Sample 3 (入力ミス)
 
@@ -63,12 +66,13 @@ $t=1$（2020-02）に片面入力エラーが発生します。売掛金ノー�
 
 **臨床解説:**
 循環取引による双方向の還流エッジと、資金横領による `UNKNOWN_LEAK` へのバイパス流出エッジが同時に現れます。トポロジーの二極化を示します。
-![Sample 4 Topology t0](Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 4 Topology t3](Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00003.png)
-![Sample 4 Topology t4](Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00004.png)
-![Sample 4 Topology t5](Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00005.png)
-![Sample 4 Topology t8](Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00008.png)
-![Sample 4 Topology t11](Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00011.png)
+
+- ![Sample 4 Topology t0](Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00000.png)
+- ![Sample 4 Topology t3](Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00003.png)
+- ![Sample 4 Topology t4](Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00004.png)
+- ![Sample 4 Topology t5](Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00005.png)
+- ![Sample 4 Topology t8](Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00008.png)
+- ![Sample 4 Topology t11](Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00011.png)
 
 #### 🔴 Sample 5 (京都交差点網)
 
@@ -95,7 +99,7 @@ $t=1$（2020-02）に片面入力エラーが発生します。売掛金ノー�
 #### 🟢 Sample 7 (現金流体)
 
 **臨床解説:**
-決済流動性の対流が発生します。`USR_003` と `USR_004` の間に往復エッジが直結します。長期間にわたってこの間だけで流動性が拘束されます。
+決済流動性の対流が発生します。`USR_003` と `USR_004` の間に往復エッジが直結します。この領域だけで流動性が拘束されます。これが長期間にわたって続きます。
 
 - ![Sample 7 Topology t0](Sample_7_Market_Cash_Flow/readme_plots/002_1_2__network_topology.t.00000.png)
 - ![Sample 7 Topology t6](Sample_7_Market_Cash_Flow/readme_plots/002_1_2__network_topology.t.00006.png)
@@ -106,57 +110,22 @@ $t=1$（2020-02）に片面入力エラーが発生します。売掛金ノー�
 
 **臨床解説:**
 脳梗塞が $t=30$ に発生します。梗塞野（運動野）へ流入・流出する機能的結合エッジが消失します。梗塞によるトポロジー断裂が視覚化されます。
-![Sample 8 Topology t0](Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 8 Topology t29](Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00029.png)
-![Sample 8 Topology t30](Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00030.png)
-![Sample 8 Topology t31](Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00031.png)
-![Sample 8 Topology t59](Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00059.png)
+
+- ![Sample 8 Topology t0](Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00000.png)
+- ![Sample 8 Topology t29](Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00029.png)
+- ![Sample 8 Topology t30](Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00030.png)
+- ![Sample 8 Topology t31](Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00031.png)
+- ![Sample 8 Topology t59](Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00059.png)
 
 #### 🔴 Sample 9 (fMRI てんかん発作)
 
 **臨床解説:**
 てんかん同調バーストが発生します。脳領野全体のBOLD活動エッジが過同期パターンへと変質します。全脳が同一の振動パターンにハックされます。
-![Sample 9 Topology t0](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 9 Topology t29](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00029.png)
-![Sample 9 Topology t30](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00030.png)
-![Sample 9 Topology t31](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00031.png)
-![Sample 9 Topology t32](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00032.png)
-![Sample 9 Topology t33](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00033.png)
-![Sample 9 Topology t34](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00034.png)。
 
-- ![Sample 6 Topology t0](Sample_6_Market_Stock_Flow/readme_plots/002_1_2__network_topology.t.00000.png)
-- ![Sample 6 Topology t6](Sample_6_Market_Stock_Flow/readme_plots/002_1_2__network_topology.t.00006.png)
-- ![Sample 6 Topology t12](Sample_6_Market_Stock_Flow/readme_plots/002_1_2__network_topology.t.00012.png)
-- ![Sample 6 Topology t18](Sample_6_Market_Stock_Flow/readme_plots/002_1_2__network_topology.t.00018.png)
-
-#### 🟢 Sample 7 (現金流体)
-
-**臨床解説:**
-決済流動性の対流中、`USR_003` と `USR_004` の間に資金がキャッチボールされる極太の往復エッジが突然直結し、長期間にわたってこの間だけで流動性が拘束されている様子を示します。
-
-- ![Sample 7 Topology t0](Sample_7_Market_Cash_Flow/readme_plots/002_1_2__network_topology.t.00000.png)
-- ![Sample 7 Topology t6](Sample_7_Market_Cash_Flow/readme_plots/002_1_2__network_topology.t.00006.png)
-- ![Sample 7 Topology t12](Sample_7_Market_Cash_Flow/readme_plots/002_1_2__network_topology.t.00012.png)
-- ![Sample 7 Topology t18](Sample_7_Market_Cash_Flow/readme_plots/002_1_2__network_topology.t.00018.png)
-
-#### 🔴 Sample 8 (fMRI 脳梗塞)
-
-**臨床解説:**
-梗塞（$t=30$）が起きた瞬間から、梗塞野（運動野）へ流入・流出するすべての機能的結合エッジがブラックアウト（消失）し、梗塞によるトポロジー断裂が視覚化されています。
-![Sample 8 Topology t0](Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 8 Topology t29](Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00029.png)
-![Sample 8 Topology t30](Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00030.png)
-![Sample 8 Topology t31](Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00031.png)
-![Sample 8 Topology t59](Sample_8_fMRI_Stroke/readme_plots/002_1_2__network_topology.t.00059.png)
-
-#### 🔴 Sample 9 (fMRI てんかん発作)
-
-**臨床解説:**
-てんかん同調バーストの発生に伴い、脳領野全体のBOLD活動エッジが極太の「過同期パターン」へと変質し、全脳が同一の振動キャッチボールにハックされています。
-![Sample 9 Topology t0](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00000.png)
-![Sample 9 Topology t29](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00029.png)
-![Sample 9 Topology t30](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00030.png)
-![Sample 9 Topology t31](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00031.png)
-![Sample 9 Topology t32](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00032.png)
-![Sample 9 Topology t33](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00033.png)
-![Sample 9 Topology t34](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00034.png)
+- ![Sample 9 Topology t0](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00000.png)
+- ![Sample 9 Topology t29](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00029.png)
+- ![Sample 9 Topology t30](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00030.png)
+- ![Sample 9 Topology t31](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00031.png)
+- ![Sample 9 Topology t32](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00032.png)
+- ![Sample 9 Topology t33](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00033.png)
+- ![Sample 9 Topology t34](Sample_9_fMRI_Seizure/readme_plots/002_1_2__network_topology.t.00034.png)

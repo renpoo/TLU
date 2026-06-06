@@ -13,7 +13,7 @@
 #### 🟢 Sample 0 (正常代謝)
 
 **臨床解説:**
-軌道リボンが特定の安定アトラクター（リミットサイクル）へ収束します。外部のショックを弾性的にいなして定常軌道を維持します。位置、速度、加速度の時系列変化、および3次元の位相空間軌道は規則的です。
+軌道リボンが特定の安定アトラクター（リミットサイクル）へ収束します。外部のショックを弾性的にいなします。定常軌道を維持します。位置、速度、加速度の時系列変化、および3次元の位相空間軌道は規則的です。
 
 - ![Sample 0 Dynamics Position](Sample_0_Healthy/readme_plots/000_1_1__3d_dynamics_position.png)
 - ![Sample 0 Dynamics Velocity](Sample_0_Healthy/readme_plots/000_1_2__3d_dynamics_velocity.png)
@@ -24,7 +24,7 @@
 #### 🟡 Sample 1 (循環取引)
 
 **臨床解説:**
-軌道リボンが多次元的な広がりを失い、完全に平坦な二次元平面に押し潰された往復運動を繰り返します。自由度の大幅な喪失（還流ロック）を示します。
+軌道リボンが多次元的な広がりを失います。完全に平坦な二次元平面に押し潰されます。往復運動を繰り返します。自由度の大幅な喪失（還流ロック）を示します。
 
 - ![Sample 1 Dynamics Position](Sample_1_Wash_Trade/readme_plots/000_1_1__3d_dynamics_position.png)
 - ![Sample 1 Dynamics Velocity](Sample_1_Wash_Trade/readme_plots/000_1_2__3d_dynamics_velocity.png)
@@ -35,7 +35,7 @@
 #### 🔴 Sample 2 (資金横領)
 
 **臨床解説:**
-資金流出により系内の活動質量が失われます。結合バネ剛性が破綻します。外部加振に対して病的共振を起こします。位相空間ではアトラクターの滑らかさが失われ、特異な軌跡として歪みます。
+資金が流出します。系内の活動質量が失われます。結合バネ剛性が破綻します。外部加振に対して病的共振を起こします。位相空間ではアトラクターの滑らかさが失われます。特異な軌跡として歪みます。
 
 - ![Sample 2 Dynamics Position](Sample_2_Embezzlement_Leak/readme_plots/000_1_1__3d_dynamics_position.png)
 - ![Sample 2 Dynamics Velocity](Sample_2_Embezzlement_Leak/readme_plots/000_1_2__3d_dynamics_velocity.png)
@@ -46,7 +46,7 @@
 #### 🟡 Sample 3 (入力ミス)
 
 **臨床解説:**
-仕訳入力ミスが発生した瞬間に軌道が平衡点から弾き飛ばされます。病的構造はないため、翌期に正常アトラクターへ自律復元します。過渡応答は位置、速度、加速度のすべてに鋭い変動として現れます。位相空間では一時的なループとして記録されます。
+仕訳入力ミスが発生します。その瞬間に軌道が平衡点から弾き飛ばされます。病的構造はありません。翌期に正常アトラクターへ自律復元します。過渡応答は位置、速度、加速度のすべてに鋭い変動として現れます。位相空間では一時的なループとして記録されます。
 
 - ![Sample 3 Dynamics Position](Sample_3_Unbalanced_Mistake/readme_plots/000_1_1__3d_dynamics_position.png)
 - ![Sample 3 Dynamics Velocity](Sample_3_Unbalanced_Mistake/readme_plots/000_1_2__3d_dynamics_velocity.png)
@@ -57,7 +57,7 @@
 #### 🔴 Sample 4 (複合アノマリー)
 
 **臨床解説:**
-循環取引の強制同期と横領による質量散逸が同時に発生します。アトラクターが崩壊し、軌道はカオス的無限発散へ突入します。位置・速度・加速度は期を追うごとに発散します。位相空間軌道は閉じない螺旋を描きます。
+循環取引の強制同期と横領による質量散逸が同時に発生します。アトラクターが崩壊します。軌道はカオス的無限発散へ突入します。位置・速度・加速度は期を追うごとに発散します。位相空間軌道は閉じない螺旋を描きます。
 
 - ![Sample 4 Dynamics Position](Sample_4_Composite_Chaos/readme_plots/000_1_1__3d_dynamics_position.png)
 - ![Sample 4 Dynamics Velocity](Sample_4_Composite_Chaos/readme_plots/000_1_2__3d_dynamics_velocity.png)
@@ -68,7 +68,7 @@
 #### 🔴 Sample 5 (京都交差点網)
 
 **臨床解説:**
-主要交差点の容量飽和（粘性ダンピングの無限大化）が発生します。状態の動的軌道が「特異平面」に固定化され、渋滞デッドロックを示します。位置、速度、加速度は一定値（フリーズ）に収束します。位相空間でも単一の不働点へ吸い込まれるように停止します。
+主要交差点の容量飽和（粘性ダンピングの無限大化）が発生します。状態の動的軌道が「特異平面」に固定化されます。渋滞デッドロックを示します。位置、速度、加速度は一定値（フリーズ）に収束します。位相空間でも単一の不働点へ吸い込まれるように停止します。
 
 - ![Sample 5 Dynamics Position](Sample_5_Kyoto_Traffic/readme_plots/000_1_1__3d_dynamics_position.png)
 - ![Sample 5 Dynamics Velocity](Sample_5_Kyoto_Traffic/readme_plots/000_1_2__3d_dynamics_velocity.png)
@@ -79,7 +79,7 @@
 #### 🟢 Sample 6 (株券流体)
 
 **臨床解説:**
-株式市場における株券対流状態です。粘性と慣性が市場全体でバランスし、位置・速度・加速度は滑らかに連動します。位相空間では閉じられた3次元リミットサイクルが安定して維持されます。
+株式市場における株券対流状態です。粘性と慣性が市場全体でバランスします。位置・速度・加速度は滑らかに連動します。位相空間では閉じられた3次元リミットサイクルが安定して維持されます。
 
 - ![Sample 6 Dynamics Position](Sample_6_Market_Stock_Flow/readme_plots/000_1_1__3d_dynamics_position.png)
 - ![Sample 6 Dynamics Velocity](Sample_6_Market_Stock_Flow/readme_plots/000_1_2__3d_dynamics_velocity.png)
@@ -101,7 +101,7 @@
 #### 🔴 Sample 8 (fMRI 脳梗塞)
 
 **臨床解説:**
-梗塞発生（$t=30$）の瞬間、運動野の活動質量が消滅します。軌道は別の低機能状態アトラクターへと不連続にジャンプ（相転移）して固定化されます。位置、速度、加速度、および3次元位相空間プロットでアトラクターの縮退と形状変化が描かれています。
+$t=30$ に梗塞が発生します。その瞬間、運動野の活動質量が消滅します。軌道は別の低機能状態アトラクターへと不連続にジャンプ（相転移）します。そこで固定化されます。位置、速度、加速度、および3次元位相空間プロットでアトラクターの縮退と形状変化が描かれています。
 
 - ![Sample 8 Dynamics Position](Sample_8_fMRI_Stroke/readme_plots/000_1_1__3d_dynamics_position.png)
 - ![Sample 8 Dynamics Velocity](Sample_8_fMRI_Stroke/readme_plots/000_1_2__3d_dynamics_velocity.png)
@@ -112,7 +112,7 @@
 #### 🔴 Sample 9 (fMRI てんかん発作)
 
 **臨床解説:**
-全脳領域が異常周波数にハックされます。3次元軌道リボンは複雑性をすべて失い、単一サイン波の単調な円軌道へと完全にフリーズ（過同期）します。位置、速度、加速度、および3次元位相空間プロットで異常な規則性と複雑性の欠如が確認できます。
+全脳領域が異常周波数にハックされます。3次元軌道リボンは複雑性をすべて失います。単一サイン波の単調な円軌道へと完全にフリーズ（過同期）します。位置、速度、加速度、および3次元位相空間プロットで異常な規則性と複雑性の欠如が確認できます。
 
 - ![Sample 9 Dynamics Position](Sample_9_fMRI_Seizure/readme_plots/000_1_1__3d_dynamics_position.png)
 - ![Sample 9 Dynamics Velocity](Sample_9_fMRI_Seizure/readme_plots/000_1_2__3d_dynamics_velocity.png)

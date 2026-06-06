@@ -45,7 +45,7 @@ $$u(t) = -K_{lqr} \cdot X(t)$$
 ### 🟡 Sample 1 (循環取引: Wash Trade)
 
 * **システム安定性 (スペクトル半径) (`004_1_2__system_stability.png`)**
-  * **臨床解説:** 循環取引の発生時に、スペクトル半径 $\rho$ が上昇します。$t=0$ に `0.7488`、$t=4$ に `0.5501` を記録します。還流閉路の形成を示します。
+  * **臨床解説:** 循環取引の発生時に、スペクトル半径 $\rho$ が上昇します。$t=0$ に `0.7488` を記録します。$t=4$ に `0.5501` を記録します。還流閉路の形成を示します。
   * ![Sample 1 System Stability](Sample_1_Wash_Trade/readme_plots/004_1_2__system_stability.png)
 
 * **最適制御 (LQR) パフォーマンス空間 (`004_1_3__control_lqr_performance_space.png`)**
@@ -69,7 +69,7 @@ $$u(t) = -K_{lqr} \cdot X(t)$$
   * ![Sample 2 LQR Space](Sample_2_Embezzlement_Leak/readme_plots/004_1_3__control_lqr_performance_space.png)
 
 * **LQR制御誤差収束 (`004_1_2__control_error_convergence.png`)**
-  * **臨床解説:** 流出経路が存在するため、誤差の収束には時間がかかります。最適入力により、誤差はゼロへ収束します。
+  * **臨床解説:** 流出経路が存在します。そのため、誤差の収束には時間がかかります。最適入力により、誤差はゼロへ収束します。
   * ![Sample 2 Error Convergence](Sample_2_Embezzlement_Leak/readme_plots/004_1_2__control_error_convergence.png)
 
 ---
@@ -85,7 +85,7 @@ $$u(t) = -K_{lqr} \cdot X(t)$$
   * ![Sample 3 LQR Space](Sample_3_Unbalanced_Mistake/readme_plots/004_1_3__control_lqr_performance_space.png)
 
 * **LQR制御誤差収束 (`004_1_2__control_error_convergence.png`)**
-  * **臨床解説:** ミスが発生したステップで一時的に誤差が発生します。自己修正と制御入力により、誤差はゼロへ収束します。
+  * **臨床解説:** ミスが発生したステップで一時的に誤差が発生します。自己修正と制御入力が機能します。誤差はゼロへ収束します。
   * ![Sample 3 Error Convergence](Sample_3_Unbalanced_Mistake/readme_plots/004_1_2__control_error_convergence.png)
 
 ---
@@ -93,7 +93,7 @@ $$u(t) = -K_{lqr} \cdot X(t)$$
 ### 🔴 Sample 4 (複合アノマリー: Composite Chaos)
 
 * **システム安定性 (スペクトル半径) (`004_1_2__system_stability.png`)**
-  * **臨床解説:** 循環取引により、スペクトル半径 $\rho$ が最大 `0.79` まで上昇します。システムが不安定状態であることを示します。
+  * **臨床解説:** 循環取引が発生します。それによりスペクトル半径 $\rho$ が最大 `0.79` まで上昇します。システムが不安定状態であることを示します。
   * ![Sample 4 System Stability](Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
 
 * **最適制御 (LQR) パフォーマンス空間 (`004_1_3__control_lqr_performance_space.png`)**
@@ -101,7 +101,7 @@ $$u(t) = -K_{lqr} \cdot X(t)$$
   * ![Sample 4 LQR Space](Sample_4_Composite_Chaos/readme_plots/004_1_3__control_lqr_performance_space.png)
 
 * **LQR制御誤差収束 (`004_1_2__control_error_convergence.png`)**
-  * **臨床解説:** 還流の維持と簿外流出の負荷のため、誤差は振動します。最適制御の介入により、収束へと向かいます。
+  * **臨床解説:** 還流の維持と簿外流出の負荷がかかります。そのため、誤差は振動します。最適制御の介入により、収束へと向かっています。
   * ![Sample 4 Error Convergence](Sample_4_Composite_Chaos/readme_plots/004_1_2__control_error_convergence.png)
 
 ---
@@ -109,7 +109,7 @@ $$u(t) = -K_{lqr} \cdot X(t)$$
 ### 🔴 Sample 5 (京都交差点網: Kyoto Traffic)
 
 * **システム安定性 (スペクトル半径) (`004_1_2__system_stability.png`)**
-  * **臨床解説:** デッドロックが発生した $t=50$ 以降、スペクトル半径 $\rho$ は `1.00` に張り付きます。交通網の自己復元力が消失した状態です。
+  * **臨床解説:** デッドロックが発生します（$t=50$ 以降）。スペクトル半径 $\rho$ は `1.00` に張り付きます。交通網の自己復元力が消失した状態です。
   * ![Sample 5 System Stability](Sample_5_Kyoto_Traffic/readme_plots/004_1_2__system_stability.png)
 
 * **最適制御 (LQR) パフォーマンス空間 (`004_1_3__control_lqr_performance_space.png`)**
@@ -117,7 +117,7 @@ $$u(t) = -K_{lqr} \cdot X(t)$$
   * ![Sample 5 LQR Space](Sample_5_Kyoto_Traffic/readme_plots/004_1_3__control_lqr_performance_space.png)
 
 * **LQR制御誤差収束 (`004_1_2__control_error_convergence.png`)**
-  * **臨床解説:** デッドロック状態から、信号制御の介入により渋滞が緩和されます。誤差は遅延を伴いながら収束します。
+  * **臨床解説:** デッドロック状態に陥ります。信号制御の介入により渋滞が緩和されます。誤差は遅延を伴いながら収束します。
   * ![Sample 5 Error Convergence](Sample_5_Kyoto_Traffic/readme_plots/004_1_2__control_error_convergence.png)
 
 ---
@@ -149,7 +149,7 @@ $$u(t) = -K_{lqr} \cdot X(t)$$
   * ![Sample 7 LQR Space](Sample_7_Market_Cash_Flow/readme_plots/004_1_3__control_lqr_performance_space.png)
 
 * **LQR制御誤差収束 (`004_1_2__control_error_convergence.png`)**
-  * **臨床解説:** 偏在がないため、状態誤差は初期から低水準となります。速やかに収束します。
+  * **臨床解説:** 偏在はありません。状態誤差は初期から低水準となります。速やかに収束します。
   * ![Sample 7 Error Convergence](Sample_7_Market_Cash_Flow/readme_plots/004_1_2__control_error_convergence.png)
 
 ---
@@ -157,15 +157,15 @@ $$u(t) = -K_{lqr} \cdot X(t)$$
 ### 🔴 Sample 8 (fMRI 脳梗塞: fMRI Stroke)
 
 * **システム安定性 (スペクトル半径) (`004_1_2__system_stability.png`)**
-  * **臨床解説:** 脳梗塞（$t=30$）によるトポロジー断裂後、スペクトル半径 $\rho$ が `1.00` に飽和します。脳の流動制御が破綻した状態を示します。
+  * **臨床解説:** $t=30$ に脳梗塞が起きます。それによりトポロジーが断裂します。その後、スペクトル半径 $\rho$ が `1.00` に飽和します。脳の流動制御が破綻した状態を示します。
   * ![Sample 8 System Stability](Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)
 
 * **最適制御 (LQR) パフォーマンス空間 (`004_1_3__control_lqr_performance_space.png`)**
-  * **臨床解説:** 虚血が発生した `00_Motor_Cortex` および周辺の `01_Parietal_Lobe` で感度が最大値 `48.7492` となります。この部位への刺激介入が有効です。
+  * **臨床解説:** 虚血が発生した `00_Motor_Cortex` および周辺の `01_Parietal_Lobe` で感度が最大値 `41.5234` となります。この部位への刺激介入が有効です。
   * ![Sample 8 LQR Space](Sample_8_fMRI_Stroke/readme_plots/004_1_3__control_lqr_performance_space.png)
 
 * **LQR制御誤差収束 (`004_1_2__control_error_convergence.png`)**
-  * **臨床解説:** 梗塞部周辺の制御が困難なため、誤差の収束には遅延が発生します。最終的には新たな定常状態へ収束します。
+  * **臨床解説:** 梗塞部周辺の制御が困難です。そのため、誤差の収束には遅延が発生します。最終的には新たな定常状態へ収束します。
   * ![Sample 8 Error Convergence](Sample_8_fMRI_Stroke/readme_plots/004_1_2__control_error_convergence.png)
 
 ---
@@ -173,11 +173,11 @@ $$u(t) = -K_{lqr} \cdot X(t)$$
 ### 🔴 Sample 9 (fMRI てんかん発作: fMRI Seizure)
 
 * **システム安定性 (スペクトル半径) (`004_1_2__system_stability.png`)**
-  * **臨床解説:** 同期バーストの開始と同時に、スペクトル半径 $\rho$ が `1.00` に飽和します。情報調整機能が崩壊します。
+  * **臨床解説:** 同期バーストが発生します。開始と同時にスペクトル半径 $\rho$ が `1.00` に飽和します。情報調整機能が崩壊します。
   * ![Sample 9 System Stability](Sample_9_fMRI_Seizure/readme_plots/004_1_2__system_stability.png)
 
 * **最適制御 (LQR) パフォーマンス空間 (`004_1_3__control_lqr_performance_space.png`)**
-  * **臨床解説:** 過同期放電の焦点である側頭葉（`03_Temporal_Lobe`）で介入感度が最大値 `48.7492` となります。この部位への刺激介入が有効です。
+  * **臨床解説:** 過同期放電の焦点である側頭葉（`03_Temporal_Lobe`）で介入感度が最大値 `41.5234` となります。この部位への刺激介入が有効です。
   * ![Sample 9 LQR Space](Sample_9_fMRI_Seizure/readme_plots/004_1_3__control_lqr_performance_space.png)
 
 * **LQR制御誤差収束 (`004_1_2__control_error_convergence.png`)**
