@@ -79,9 +79,9 @@ This matrix lists the peak metrics calculated by the physics engine and forensic
 | **2** | **[Embezzlement Leak](./Sample_2_Embezzlement_Leak/README.md)** | Finance | 🔴 **CRITICAL** | `0.00` | `364.53` | `3.71` | `3.82` | `+$64,795.44` | Meridian hemorrhage, mass deficit |
 | **3** | **[Unbalanced Bookkeeping Mistake](./Sample_3_Unbalanced_Mistake/README.md)** | Finance | 🟡 **WARNING** | `0.00` | `906.29` | `5.29` | `5.29` | `+$41,368.85` | Local imbalance, meridian sprain |
 | **4** | **[Composite Chaos](./Sample_4_Composite_Chaos/README.md)** | Finance | 🔴 **CRITICAL** | `0.79` | `4,773.57` | `3.42` | `1.52` | `+$200,478.42` | Qi depletion, collapse |
-| **5** | **[Kyoto Traffic Deadlock](./Sample_5_Kyoto_Traffic/README.md)** | Traffic | 🔴 **CRITICAL** | `1.00` | `0.00` | `1.40` | `0.00` | `-$2,500,000.00` | Meridian obstruction, stasis |
-| **6** | **[Market Stock Flow](./Sample_6_Market_Stock_Flow/README.md)** | Market | 🟡 **HIGH** | `1.00` | `0.00` | `80.53` | `3.39` | `$0.00` | Market recirculation, loop lock |
-| **7** | **[Market Cash Flow](./Sample_7_Market_Cash_Flow/README.md)** | Market | 🟡 **HIGH** | `1.00` | `0.00` | `80.53` | `3.39` | `$0.00` | Collusive syndicate, dark undercurrent |
+| **5** | **[Kyoto Traffic Deadlock](./Sample_5_Kyoto_Traffic/README.md)** | Traffic | 🔴 **CRITICAL** | `1.00` | `0.00` | `9.86` | `7.25` | `-$159,659.00` | Blocked meridian, blood stasis |
+| **6** | **[Market Stock Flow](./Sample_6_Market_Stock_Flow/README.md)** | Market | 🟢 **NORMAL** | `1.00` | `0.00` | `240.93` | `4.46` | `$0.00` | Stock fluid equilibrium |
+| **7** | **[Market Cash Flow](./Sample_7_Market_Cash_Flow/README.md)** | Market | 🟢 **NORMAL** | `1.00` | `0.00` | `19.97` | `399.76` | `-$15,315,870.03` | Cash fluid equilibrium |
 | **8** | **[fMRI Stroke](./Sample_8_fMRI_Stroke/README.md)** | Brain | 🔴 **CRITICAL** | `1.00` | `0.00` | `51.44` | `0.07` | `-$500,000.00` | Brain meridian block, local depletion |
 | **9** | **[fMRI Seizure](./Sample_9_fMRI_Seizure/README.md)** | Brain | 🔴 **CRITICAL** | `1.00` | `0.00` | `24.04` | `0.00` | `-$500,000.00` | Brain hyper-synchrony, runaway Qi |
 
