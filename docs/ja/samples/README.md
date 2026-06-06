@@ -54,7 +54,7 @@ TLU環境に収録されている全10サンプルの検査カタログです。
 * **[🟢 Sample 6: Market Stock Flow / 株券流体](./Sample_6_Market_Stock_Flow/README.md)**
   * **ドメイン:** 株式市場 | **東洋医学検査:** 株式流体平衡・定常対流
   * **概要:** 株券流量が保存された閉鎖系です。境界との流出入が維持された定常状態です。
-* **[🟢 Sample 7: Market Cash Flow / 現金流体](./Sample_7_Market_Market_Cash_Flow/README.md)**
+* **[🟢 Sample 7: Market Cash Flow / 現金流体](./Sample_7_Market_Cash_Flow/README.md)**
   * **ドメイン:** 株式市場 | **東洋医学検査:** 現金流体平衡・定常対流
   * **概要:** 現金流量が保存された閉鎖系です。取引ボラティリティに対し安定します。
 * **[🔴 Sample 8: fMRI Stroke / 脳梗塞](./Sample_8_fMRI_Stroke/README.md)**
