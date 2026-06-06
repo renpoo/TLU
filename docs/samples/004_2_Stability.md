@@ -1,4 +1,4 @@
-# 004. System Stability and Feedback Control (Control Theory & Stability)
+# 004_2. Intervention Sensitivity Matrices
 
 This guide describes the optimal linear quadratic regulator (LQR) and system stability analysis module (`004_2`) in the Tensor-Link Utility (TLU). It includes the intervention sensitivity matrix for each validation sample. It organizes the explanations based on outputs and values for all 10 samples.
 

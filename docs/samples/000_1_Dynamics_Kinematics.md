@@ -1,6 +1,6 @@
-# 000. Basic Statistics, Stiffness & Kinematics
+# 000_1. Dynamics & State-Space
 
-This guide explains basic statistics, kinematics, structural stiffness, and PCA in Tensor-Link Utility (TLU).
+This guide explains kinematics in Tensor-Link Utility (TLU).
 
 ---
 

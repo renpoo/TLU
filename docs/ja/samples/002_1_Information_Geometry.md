@@ -1,4 +1,4 @@
-# 002. 情報幾何学と相対保存則 (Information Geometry & Forensics)
+# 002_1. 情報幾何学・トポロジー分析 (Information Geometry & Topology)
 
 本ガイドは、Tensor-Link Utility (TLU) における情報幾何学分析モジュール（`002_1`）を説明します。グラフの種類ごとに、各サンプルの出力と数値に基づく解説を記載します。
 

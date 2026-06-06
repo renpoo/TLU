@@ -1,4 +1,4 @@
-# 004. システム安定性とフィードバック制御 (Control Theory & Stability)
+# 004_2. 介入感度行列分析 (Intervention Sensitivity Matrices)
 
 本ガイドは、Tensor-Link Utility (TLU) における最適線形制御（LQR）およびシステム安定性分析モジュール（`004_2`）を説明します。各検証サンプルの介入感度行列を併記します。全10サンプルの出力と数値に基づく解説を整理します。
 

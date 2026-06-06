@@ -1,4 +1,4 @@
-# 002. Information Geometry and Relative Conservation Laws (Information Geometry & Forensics)
+# 002_2. Forensic Auditing
 
 This guide describes the accounting and logistics forensics monitoring module (`002_2`) in the Tensor-Link Utility (TLU). It provides explanations based on the outputs and values of each validation sample.
 

@@ -1,4 +1,4 @@
-# 001_5. Local Internal Energy Analysis (Local Internal Energy)
+# 001_5. Local Internal Energy
 
 This guide organizes the clinical commentary based on outputs and numbers for each validation sample. It explains the "3D local internal energy" (`001_1_2_7__3d_local_internal_energy.png`) in the Tensor-Link Utility (TLU).
 

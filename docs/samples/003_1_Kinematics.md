@@ -1,4 +1,4 @@
-# 📊 Robot Kinematics and Target Reachability (Kinematics & Reachability)
+# 003_1. Robot Kinematics & Reachability
 
 ## 🔬 Physico-Mathematical Theory of the Robot Kinematics Model
 

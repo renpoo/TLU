@@ -1,4 +1,4 @@
-# 002. Information Geometry and Relative Conservation Laws (Information Geometry & Forensics)
+# 002_1. Information Geometry & Topology
 
 This guide describes the information geometry analysis module (`002_1`) in the Tensor-Link Utility (TLU). It provides explanations based on the outputs and values of each sample for each chart type.
 

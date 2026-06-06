@@ -1,6 +1,6 @@
-# 000. Basic Statistics, Stiffness & Kinematics
+# 000_2. Stiffness & PCA
 
-This guide explains basic statistics, kinematics, structural stiffness, and PCA in Tensor-Link Utility (TLU).
+This guide explains structural stiffness and PCA in Tensor-Link Utility (TLU).
 
 ---
 

@@ -1,6 +1,6 @@
-# 000. 財務基礎状態、構造剛性、および運動学 (Basic Statistics, Stiffness & Kinematics)
+# 000_0. 財務基礎状態と基本統計量 (Basic Statistics & Foundations)
 
-本ガイドは、Tensor-Link Utility (TLU) における統計分析、運動学、および構造剛性・PCAについて解説します。
+本ガイドは、Tensor-Link Utility (TLU) における統計分析について解説します。
 
 ---
 

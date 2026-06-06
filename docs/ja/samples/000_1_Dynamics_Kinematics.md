@@ -1,6 +1,6 @@
-# 000. 財務基礎状態、構造剛性、および運動学 (Basic Statistics, Stiffness & Kinematics)
+# 000_1. 運動学と動的状態空間 (Dynamics & State-Space)
 
-本ガイドは、Tensor-Link Utility (TLU) における統計分析、運動学、および構造剛性・PCAについて解説します。
+本ガイドは、Tensor-Link Utility (TLU) における運動学について解説します。
 
 ---
 

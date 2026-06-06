@@ -1,4 +1,4 @@
-# 004. System Stability and Feedback Control (Control Theory & Stability)
+# 004_1. System Stability & LQR Control
 
 This guide describes the optimal linear quadratic regulator (LQR) and system stability analysis module (`004_1`) in the Tensor-Link Utility (TLU). It includes the spectral radius, LQR control performance space, and LQR control error convergence for each validation sample. It organizes the explanations based on outputs and values for all 10 samples.
 

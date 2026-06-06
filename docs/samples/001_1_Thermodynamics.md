@@ -1,4 +1,4 @@
-# 001. Thermodynamics & Entropy
+# 001_1. Macro Thermodynamics
 
 This guide explains thermodynamics and entropy analysis modules (`001_1`, `001_2`) in Tensor-Link Utility (TLU).
 

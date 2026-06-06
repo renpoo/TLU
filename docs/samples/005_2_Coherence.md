@@ -1,4 +1,4 @@
-# 005. Signal Processing and Wave Mechanics (Wave Mechanics & Coherence)
+# 005_2. Fractal Noise
 
 This guide describes the signal processing in the Tensor-Link Utility (TLU). It also explains the fractal noise (1/f noise) analysis module (`005_2`). It presents the fractal noise spectrum for each validation sample. We organize the explanations based on outputs and values for all 10 samples.
 

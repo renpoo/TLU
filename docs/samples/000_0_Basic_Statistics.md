@@ -1,6 +1,6 @@
-# 000. Basic Statistics
+# 000_0. Basic Statistics & Foundations
 
-This guide explains basic statistics, kinematics, structural stiffness, and PCA in Tensor-Link Utility (TLU).
+This guide explains basic statistics in Tensor-Link Utility (TLU).
 
 ---
 

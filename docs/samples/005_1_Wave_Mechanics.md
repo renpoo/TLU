@@ -1,4 +1,4 @@
-# 005. Signal Processing and Wave Mechanics (Wave Mechanics & Coherence)
+# 005_1. Wave Mechanics & Signal Processing
 
 This guide describes the signal processing in the Tensor-Link Utility (TLU). It also explains the wave mechanics and phase coherence analysis module (`005_1`). It presents the resonant frequency spectrum of each validation sample. It also provides the phase drift heatmap. We organize the explanations based on outputs and numerical values for all 10 samples.
 

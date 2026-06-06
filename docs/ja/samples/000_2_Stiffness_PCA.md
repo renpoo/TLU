@@ -1,6 +1,6 @@
-# 000. 財務基礎状態、構造剛性、および運動学 (Basic Statistics, Stiffness & Kinematics)
+# 000_2. 構造剛性と主成分分析 (Stiffness & PCA)
 
-本ガイドは、Tensor-Link Utility (TLU) における統計分析、運動学、および構造剛性・PCAについて解説します。
+本ガイドは、Tensor-Link Utility (TLU) における構造剛性・PCAについて解説します。
 
 ---
 

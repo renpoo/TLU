@@ -1,4 +1,4 @@
-# 📊 ロボット運動学と目標到達性 (Kinematics & Reachability)
+# 003_1. ロボット運動学と目標到達性 (Robot Kinematics & Reachability)
 
 ## 🔬 ロボット運動学モデルの物理数学理論
 

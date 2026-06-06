@@ -1,4 +1,4 @@
-# 001. 熱力学とエントロピー (Thermodynamics & Entropy)
+# 001_1. マクロ熱力学分析 (Macro Thermodynamics)
 
 本ガイドは、Tensor-Link Utility (TLU) における熱力学・エントロピー分析モジュール（`001_1`、`001_2`）について解説します。
 

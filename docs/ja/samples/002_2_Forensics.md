@@ -1,4 +1,4 @@
-# 002. 情報幾何学と相対保存則 (Information Geometry & Forensics)
+# 002_2. 会計・物流フォレンジック監視 (Forensic Auditing)
 
 本ガイドは、Tensor-Link Utility (TLU) における会計・物流フォレンジック監視モジュール（`002_2`）を説明します。各検証サンプルの出力と数値に基づく解説を記載します。
 
