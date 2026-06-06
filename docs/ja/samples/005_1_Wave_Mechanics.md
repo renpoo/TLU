@@ -197,3 +197,4 @@ TLUは、ノード間の位相差の時系列変化を測定する「位相ド�
 * **位相ドリフトヒートマップ (`005_1_2__phase_drift_heatmap.png`)**
   * **臨床解説:** 脳全体（特に側頭葉周辺）にわたって位相差が完全に同一化します。強力な位相同調（全脳コヒーレンス）が形成されます。個別領域の独立した電気的活動が失われた状態を示します。
   * ![Sample 9 Phase Drift](Sample_9_fMRI_Seizure/readme_plots/005_1_2__phase_drift_heatmap.png)
+  

@@ -103,3 +103,4 @@ $$u(t) = -K_{lqr} \cdot X(t)$$
 * **介入感度行列 (`004_2_1__sensitivity_matrix.png`)**
   * **臨床解説:** 同期の発信源である側頭葉を起点として、脳全体に広がる均一な過同期感度ブロックが形成されます。全脳が単一の制御入力に反応しています。個別領域の独立した調整が失われたロック状態を示します。
   * ![Sample 9 Sensitivity](Sample_9_fMRI_Seizure/readme_plots/004_2_1__sensitivity_matrix.png)
+  
