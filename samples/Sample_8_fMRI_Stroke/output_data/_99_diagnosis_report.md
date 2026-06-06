@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Statistical Upgrade V2)
 
 **Target Environment:** `samples/Sample_8_fMRI_Stroke`
-**Date Analyzed:** 2026-06-06 06:43:39
+**Date Analyzed:** 2026-06-05 11:54:24
 
 ## 1. Final Diagnosis
 

@@ -74,16 +74,16 @@ This matrix lists the peak metrics calculated by the physics engine and forensic
 
 | ID | Case Study (Link) | Domain | Status | Max Spectral Radius ($\rho$) | Max Residual | Max Velocity Z-Score ($Z_v$) | Max State Z-Score ($Z_X$) | Net Income / Potential | Eastern Metaphor |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- | :--- |
-| **0** | **[Healthy Metabolism](./Sample_0_Healthy/README.md)** | Finance | 🟢 **NORMAL** | `0.00` | `0.00` | `4.90` | `4.14` | `+$46,432.59` | Harmonized Qi and Blood |
-| **1** | **[Wash Trade](./Sample_1_Wash_Trade/README.md)** | Finance | 🟡 **HIGH** | `0.75` | `0.00` | `3.87` | `1.97` | `+$201,321.16` | Qi stasis, loop locking |
-| **2** | **[Embezzlement Leak](./Sample_2_Embezzlement_Leak/README.md)** | Finance | 🔴 **CRITICAL** | `0.00` | `364.53` | `3.71` | `3.82` | `+$64,795.44` | Meridian bleeding, mass leak |
+| **0** | **[Healthy Metabolism](./Sample_0_Healthy/README.md)** | Finance | 🟢 **NORMAL** | `0.00` | `0.00` | `4.90` | `4.14` | `+$46,432.59` | Peace of Qi and Blood |
+| **1** | **[Wash Trade](./Sample_1_Wash_Trade/README.md)** | Finance | 🟡 **HIGH** | `0.75` | `0.00` | `3.87` | `1.97` | `+$201,321.16` | Empty recirculation, loop lock |
+| **2** | **[Embezzlement Leak](./Sample_2_Embezzlement_Leak/README.md)** | Finance | 🔴 **CRITICAL** | `0.00` | `364.53` | `3.71` | `3.82` | `+$64,795.44` | Meridian hemorrhage, mass deficit |
 | **3** | **[Unbalanced Bookkeeping Mistake](./Sample_3_Unbalanced_Mistake/README.md)** | Finance | 🟡 **WARNING** | `0.00` | `906.29` | `5.29` | `5.29` | `+$41,368.85` | Local imbalance, meridian sprain |
-| **4** | **[Composite Chaos](./Sample_4_Composite_Chaos/README.md)** | Finance | 🔴 **CRITICAL** | `0.79` | `4,773.57` | `3.42` | `1.52` | `+$200,478.42` | Qi exhaustion, collapse |
-| **5** | **[Kyoto Traffic Deadlock](./Sample_5_Kyoto_Traffic/README.md)** | Traffic | 🔴 **CRITICAL** | `1.00` | `0.00` | `9.86` | `7.25` | `-$159,659.00` | Blocked meridian, blood stasis |
-| **6** | **[Market Stock Flow](./Sample_6_Market_Stock_Flow/README.md)** | Market | 🟢 **NORMAL** | `1.00` | `0.00` | `240.93` | `4.46` | `$0.00` | Stock fluid equilibrium |
-| **7** | **[Market Cash Flow](./Sample_7_Market_Cash_Flow/README.md)** | Market | 🟢 **NORMAL** | `1.00` | `0.00` | `19.97` | `399.76` | `-$15,315,870.03` | Cash fluid equilibrium |
-| **8** | **[fMRI Stroke](./Sample_8_fMRI_Stroke/README.md)** | Brain | 🔴 **CRITICAL** | `1.00` | `0.00` | `51.44` | `0.07` | `-$500,000.00` | Blocked meridian, local necrosis |
-| **9** | **[fMRI Seizure](./Sample_9_fMRI_Seizure/README.md)** | Brain | 🔴 **CRITICAL** | `1.00` | `0.00` | `24.04` | `0.00` | `-$500,000.00` | Neural hyper-synchrony, runaway Qi |
+| **4** | **[Composite Chaos](./Sample_4_Composite_Chaos/README.md)** | Finance | 🔴 **CRITICAL** | `0.79` | `4,773.57` | `3.42` | `1.52` | `+$200,478.42` | Qi depletion, collapse |
+| **5** | **[Kyoto Traffic Deadlock](./Sample_5_Kyoto_Traffic/README.md)** | Traffic | 🔴 **CRITICAL** | `1.00` | `0.00` | `1.40` | `0.00` | `-$2,500,000.00` | Meridian obstruction, stasis |
+| **6** | **[Market Stock Flow](./Sample_6_Market_Stock_Flow/README.md)** | Market | 🟡 **HIGH** | `1.00` | `0.00` | `80.53` | `3.39` | `$0.00` | Market recirculation, loop lock |
+| **7** | **[Market Cash Flow](./Sample_7_Market_Cash_Flow/README.md)** | Market | 🟡 **HIGH** | `1.00` | `0.00` | `80.53` | `3.39` | `$0.00` | Collusive syndicate, dark undercurrent |
+| **8** | **[fMRI Stroke](./Sample_8_fMRI_Stroke/README.md)** | Brain | 🔴 **CRITICAL** | `1.00` | `0.00` | `51.44` | `0.07` | `-$500,000.00` | Brain meridian block, local depletion |
+| **9** | **[fMRI Seizure](./Sample_9_fMRI_Seizure/README.md)** | Brain | 🔴 **CRITICAL** | `1.00` | `0.00` | `24.04` | `0.00` | `-$500,000.00` | Brain hyper-synchrony, runaway Qi |
 
 > [!NOTE]
 > * **Conservation Residual:** Indicates mismatch between inflows and outflows based on Kirchhoff's current law. Positive values occur only during embezzlement or ledger mistakes in the financial domain.
@@ -107,13 +107,14 @@ TLU proves that different anomalies across distinct domains show identical physi
 
 ### ⚖️ 2. Hyper-synchronization / Recirculation
 
-* **Targets:** [Sample 1 (Wash Trade)](./Sample_1_Wash_Trade/README.md), [Sample 5 (Traffic Deadlock)](./Sample_5_Kyoto_Traffic/README.md), [Sample 9 (Seizure)](./Sample_9_fMRI_Seizure/README.md)
-* **Common Physical Signature:** **Spectral radius saturation and free energy depletion (entropy loss).**
-* **Cross-Verification:**
-  * **Finance (Sample 1):** Circular wash trades push the spectral radius to **`0.75`**. Internal energy ($U$) appears to grow. However, it is wasted as frictional heat (entropy $TS$). This reduces the net free energy ($F = U - TS$).
-  * **Traffic (Sample 5):** Bottle-necks at `Shijo_Karasuma` saturate the spectral radius at **`1.00`**. Macro entropy ($S$) falls from `40.69` to **`39.18`**. Blocked vehicles generate severe friction. Macro temperature ($T$) spikes from `2897.05` to **`16264.61`**. Free energy ($F$) collapses from `132117.82` to **`-387283.36`**.
-  * **Brain fMRI (Sample 9):** Abnormal sine waves from the `Temporal_Lobe` force phase-locking across the brain. The spectral radius saturates at **`1.00`**. The PC1 loading remains frozen near `37.5%`. Physical metrics expose this hyper-synchronization.
-  * **Conclusion:** Ledger circular loops, road deadlocks, matched orders, and epileptic seizures share the identical pathology. Energy is trapped inside local loops. This blocks external exchange and paralyzes the system.
+* **Targets:** [Sample 1 (Circular Ledger)](./Sample_1_Wash_Trade/README.md), [Sample 5 (Kyoto Traffic Deadlock)](./Sample_5_Kyoto_Traffic/README.md), [Sample 6 (Market Bipartite)](./Sample_6_Market_Stock_Flow/README.md), [Sample 7 (Market Users)](./Sample_7_Market_Cash_Flow/README.md), [Sample 9 (Epileptic Seizure)](./Sample_9_fMRI_Seizure/README.md)
+* **Common Physical Signature:** **Spectral radius ($\rho$) saturation at its boundary limit, and friction-driven energy depletion (entropy loss)**
+* **Cross-Verification of Mechanism:**
+  * **Circular Ledger (Sample 1):** Fast round-trip journal entries without substance cause the spectral radius to surge to the warning level of **`0.75`**. Although the apparent activity level (internal energy $U$) grows steadily, the energy is wasted as round-trip frictional heat (entropy $T \times S$), depleting the system's actual stamina—free energy $F = U - TS$.
+  * **Urban Traffic (Sample 5):** When inflow vehicles exceed road capacity, the bottleneck around `23_四条烏丸` (Shijo-Karasuma) saturates the spectral radius to its boundary limit of **`1.00`** (deadlock). Macro entropy decreases slightly to `38.70`, but local friction (velocity variance) spikes, driving the macro temperature $T$ up from `457.24` to **`547.06`**. Free energy drops from `2,481,482` to **`2,478,826`**.
+  * **Market Manipulation (Sample 6, 7):** High-speed matched orders between bot clusters or collusive accounts (`USR_003` ⇄ `USR_004`) saturate the spectral radius to the limit of **`1.00`**. In Sample 7, the free energy skewness collapses to **`-2.72`**, capturing the highly biased distribution of liquidity.
+  * **Epilepsy (Sample 9):** Abnormal sine waves originating from the temporal lobe (`03_Temporal_Lobe`) force the entire brain into phase-locking, saturating the spectral radius to **`1.00`**. Physical metrics expose this hyper-synchronization in a statistical blind spot where the PCA explanation ratio (PC1) remains frozen at `37.5%`.
+  * **Conclusion:** "Circular fictitious transactions," "vehicle deadlocks at intersections," "matched orders of stocks," and "epileptic seizure waves" are all variations of the same recirculation pathology: **"energy is trapped within closed circuits, blocking meaningful value transmission or external metabolism, and driving the system to thermal death."**
 
 ### 🟡 3. Localized Transient Mismatch
 

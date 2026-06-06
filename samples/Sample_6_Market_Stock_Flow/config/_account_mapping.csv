@@ -14,4 +14,6 @@ STK_002,Liability
 STK_003,Liability
 STK_004,Liability
 STK_005,Liability
-ACC_Equity_Capital,Equity
+ACC_Input_From_Outside,Equity
+ACC_Output_To_Outside,Revenue
+UNKNOWN_LEAK,Expense

@@ -39,8 +39,9 @@ def main():
     N = int(max(df['src_idx'].max(), df['tgt_idx'].max())) + 1
     idx_to_label = load_node_labels(args.node_map, N)
 
-    pivot_corr = df.pivot(index='src_idx', columns='tgt_idx', values='max_correlation').fillna(0)
-    pivot_lag = df.pivot(index='src_idx', columns='tgt_idx', values='optimal_lag').fillna(0)
+    df_unique = df.groupby(['src_idx', 'tgt_idx']).first().reset_index()
+    pivot_corr = df_unique.pivot(index='src_idx', columns='tgt_idx', values='max_correlation').fillna(0)
+    pivot_lag = df_unique.pivot(index='src_idx', columns='tgt_idx', values='optimal_lag').fillna(0)
 
     mask = np.abs(pivot_corr) < args.corr_thresh
     axis_labels = [f"{i:02d}: {idx_to_label.get(i, f'N_{i}')}" for i in range(N)]

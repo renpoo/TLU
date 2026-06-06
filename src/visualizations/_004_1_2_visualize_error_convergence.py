@@ -45,7 +45,8 @@ def main():
     target_nodes = target_nodes[target_nodes > 0].index.tolist()
     
     df_target = df[df['node_idx'].isin(target_nodes)]
-    pivot_gap = df_target.pivot(index='t_idx', columns='node_idx', values='state_error_x').fillna(0)
+    df_target_unique = df_target.groupby(['t_idx', 'node_idx']).first().reset_index()
+    pivot_gap = df_target_unique.pivot(index='t_idx', columns='node_idx', values='state_error_x').fillna(0)
 
     fig, ax = plt.subplots(figsize=(12, 7))
     

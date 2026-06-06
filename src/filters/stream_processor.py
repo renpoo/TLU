@@ -92,13 +92,32 @@ def process_csv_stream(in_stream, out_stream, mapping_config, node_registry, tim
     tgt_col  = mapping_config.get("col_tgt")
     val_col  = mapping_config.get("col_val")
 
-    for col_name in [time_col, src_col, tgt_col, val_col]:
+    src_cols = [c.strip() for c in str(src_col).split(',')] if src_col is not None else []
+    tgt_cols = [c.strip() for c in str(tgt_col).split(',')] if tgt_col is not None else []
+
+    for col_name in [time_col, val_col]:
+        if col_name not in df.columns:
+            raise KeyError(f"CRITICAL: Column '{col_name}' not found in the input CSV. "
+                           f"Available columns are: {list(df.columns)}")
+    for col_name in src_cols + tgt_cols:
         if col_name not in df.columns:
             raise KeyError(f"CRITICAL: Column '{col_name}' not found in the input CSV. "
                            f"Available columns are: {list(df.columns)}")
 
+    # 0. Sort the DataFrame chronologically by the time column
+    try:
+        temp_time = pd.to_datetime(df[time_col], errors='coerce')
+        if not temp_time.isna().all():
+            df = df.iloc[temp_time.argsort()].copy()
+        else:
+            df = df.sort_values(by=time_col).copy()
+    except Exception:
+        df = df.sort_values(by=time_col).copy()
+
     # 1. Alphabetical sorting of unique nodes to ensure deterministic mapping
-    unique_nodes = set(df[src_col].dropna().unique()).union(set(df[tgt_col].dropna().unique()))
+    unique_nodes = set()
+    for col in src_cols + tgt_cols:
+        unique_nodes.update(df[col].dropna().astype(str).unique())
     sorted_nodes = sorted(list(unique_nodes))
     for node in sorted_nodes:
         node_registry.assign_new_id(node)
@@ -114,9 +133,20 @@ def process_csv_stream(in_stream, out_stream, mapping_config, node_registry, tim
     writer.writerow(["t_idx", "src_idx", "tgt_idx", "value"])
     
     # Fast iteration over records
-    records = df[[time_col, src_col, tgt_col, val_col]].to_dict('records')
+    all_cols = list(set([time_col, val_col] + src_cols + tgt_cols))
+    records = df[all_cols].to_dict('records')
     for record in records:
-        writer.writerow(project_record(record, mapping_config, node_registry, time_registry))
+        t_idx = time_registry.assign_new_id(record[time_col])
+        try:
+            val = float(record[val_col])
+        except (ValueError, TypeError):
+            val = 0.0
+
+        for s in src_cols:
+            for t in tgt_cols:
+                src_idx = node_registry.assign_new_id(record[s])
+                tgt_idx = node_registry.assign_new_id(record[t])
+                writer.writerow([t_idx, src_idx, tgt_idx, val])
     
     out_stream.flush()
 

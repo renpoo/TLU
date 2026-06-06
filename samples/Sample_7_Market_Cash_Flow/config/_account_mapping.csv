@@ -9,4 +9,11 @@ USR_007,Asset
 USR_008,Asset
 USR_009,Asset
 USR_010,Asset
-ACC_Equity_Capital,Equity
+STK_001,Liability
+STK_002,Liability
+STK_003,Liability
+STK_004,Liability
+STK_005,Liability
+ACC_Input_From_Outside,Equity
+ACC_Output_To_Outside,Expense
+UNKNOWN_LEAK,Expense

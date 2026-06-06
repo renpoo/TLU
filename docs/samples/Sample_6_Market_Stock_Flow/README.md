@@ -15,19 +15,19 @@ We compare the total stock of shares (B/S equivalent) with the periodic (single-
 ### Share Balance Comparison (B/S Equivalent)
 
 * **B/S Asset & Equity Cumulative Trend & Block Chart (Cumulative):**
-  ![B/S Cumulative Trend](readme_plots/000_0_1__BS_Trend.png)
-  ![B/S Block Total](readme_plots/000_0_1__BS_Block_Total.png)
+  ![B/S Cumulative Trend](../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_0_1__BS_Trend.png)
+  ![B/S Block Total](../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_0_1__BS_Block_Total.png)
 
 * **B/S Share Balance Periodic Trend (Monthly Non-Cumulative):**
-  ![B/S Periodic Trend](readme_plots/000_0_1__BS_Trend_Periodic.png)
+  ![B/S Periodic Trend](../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_0_1__BS_Trend_Periodic.png)
 
 ### Share Volume Comparison (P/L Equivalent)
 
 * **P/L Volume Cumulative Trend:**
-  ![P/L Cumulative Trend](readme_plots/000_0_1__PL_Trend.png)
+  ![P/L Cumulative Trend](../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_0_1__PL_Trend.png)
 
 * **P/L Volume Periodic Trend (Monthly Non-Cumulative):**
-  ![P/L Periodic Trend](readme_plots/000_0_1__PL_Trend_Periodic.png)
+  ![P/L Periodic Trend](../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_0_1__PL_Trend_Periodic.png)
 
 * **Observation:** Volume (transaction flow) evolves stably in line with the market cycle. No hyper-synchronization by USRs or flow flattening (deadlock) from liquidity exhaustion is observed.
 
@@ -47,7 +47,7 @@ We compare the total stock of shares (B/S equivalent) with the periodic (single-
 The Kirchhoff residual is exactly **`0.00`**. No shares disappear.
 
 * **Macro Forensics Dashboard:**
-  ![Macro Forensics](readme_plots/002_2_1__macro_forensics_dashboard.png)
+  ![Macro Forensics](../../../samples/Sample_6_Market_Stock_Flow/output_plots/002_2_1__macro_forensics_dashboard.png)
 
 * **Network Topology Evolution:**
   During steady convection, the network topology does not form structural distortions or connection edges where flow concentrates on specific accounts.
@@ -58,14 +58,14 @@ The stiffness matrix shows elastic coupling. No rigid locks (stiffness concentra
 In PCA, the PC1 contribution ratio does not become dominant, staying stable in response to normal supply and demand shifts.
 
 * **PCA Axis Ratio:**
-  ![PCA Ratio](readme_plots/000_2_2__principal_axes_ratio.png)
+  ![PCA Ratio](../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_2_2__principal_axes_ratio.png)
 
 ### 4.3. Verification of Circular Topology (Spectral Radius)
 
 The maximum spectral radius is exactly **`1.0000`** throughout the period. This is a mathematical consequence of the stock market being a closed, strongly connected network (the saturation point of the Perron-Frobenius theorem). It indicates healthy connectivity.
 
 * **System Stability Indicator:**
-  ![System Stability](readme_plots/004_1_2__system_stability.png)
+  ![System Stability](../../../samples/Sample_6_Market_Stock_Flow/output_plots/004_1_2__system_stability.png)
 
 ### 4.4. Thermodynamic Indicators and 3D Topology
 
@@ -73,8 +73,8 @@ Internal energy $U$ is conserved steadily. Free energy $F = U - TS$ also evolves
 The T-S diagram maintains the limit cycle of steady convection without drawing pathological loops.
 
 * **Thermodynamic Characteristics & T-S Diagram:**
-  ![Thermodynamics Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
-  ![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+  ![Thermodynamics Energy Stack](../../../samples/Sample_6_Market_Stock_Flow/output_plots/001_1_2__thermodynamics_energy_stack.png)
+  ![T-S Diagram](../../../samples/Sample_6_Market_Stock_Flow/output_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 ---
 

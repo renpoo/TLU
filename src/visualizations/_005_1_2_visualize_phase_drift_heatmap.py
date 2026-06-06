@@ -56,7 +56,8 @@ def main():
         sys.exit(0)
 
     # Pivot to get t_idx as columns, tgt_idx as rows, phase_shift as values
-    pivot_df = master_df.pivot(index='tgt_idx', columns='t_idx', values='phase_shift').fillna(0)
+    master_df_unique = master_df.groupby(['tgt_idx', 't_idx']).first().reset_index()
+    pivot_df = master_df_unique.pivot(index='tgt_idx', columns='t_idx', values='phase_shift').fillna(0)
     
     # Optional: We could weight or filter by coherence, but let's just plot phase shift for now.
     

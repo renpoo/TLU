@@ -15,19 +15,19 @@ We compare the total cash balance (B/S equivalent) with the periodic (single-mon
 ### Cash Balance Comparison (B/S Equivalent)
 
 * **B/S Asset & Equity Cumulative Trend & Block Chart (Cumulative):**
-  ![B/S Cumulative Trend](readme_plots/000_0_1__BS_Trend.png)
-  ![B/S Block Total](readme_plots/000_0_1__BS_Block_Total.png)
+  ![B/S Cumulative Trend](../../../samples/Sample_7_Market_Cash_Flow/output_plots/000_0_1__BS_Trend.png)
+  ![B/S Block Total](../../../samples/Sample_7_Market_Cash_Flow/output_plots/000_0_1__BS_Block_Total.png)
 
 * **B/S Cash Balance Periodic Trend (Monthly Non-Cumulative):**
-  ![B/S Periodic Trend](readme_plots/000_0_1__BS_Trend_Periodic.png)
+  ![B/S Periodic Trend](../../../samples/Sample_7_Market_Cash_Flow/output_plots/000_0_1__BS_Trend_Periodic.png)
 
 ### Cash Volume Comparison (P/L Equivalent)
 
 * **P/L Volume Cumulative Trend:**
-  ![P/L Cumulative Trend](readme_plots/000_0_1__PL_Trend.png)
+  ![P/L Volume Cumulative Trend](../../../samples/Sample_7_Market_Cash_Flow/output_plots/000_0_1__PL_Trend.png)
 
 * **P/L Volume Periodic Trend (Monthly Non-Cumulative):**
-  ![P/L Periodic Trend](readme_plots/000_0_1__PL_Trend_Periodic.png)
+  ![P/L Periodic Trend](../../../samples/Sample_7_Market_Cash_Flow/output_plots/000_0_1__PL_Trend_Periodic.png)
 
 * **Observation:** Payment liquidity (volume) remains stable against volatility. No monopolization by collusive groups or flow blocks (deadlock) exist.
 
@@ -47,7 +47,7 @@ We compare the total cash balance (B/S equivalent) with the periodic (single-mon
 The Kirchhoff residual is exactly **`0.00`**. No cash leaks exist.
 
 * **Macro Forensics Dashboard:**
-  ![Macro Forensics](readme_plots/002_2_1__macro_forensics_dashboard.png)
+  ![Macro Forensics](../../../samples/Sample_7_Market_Cash_Flow/output_plots/002_2_1__macro_forensics_dashboard.png)
 
 * **Network Topology Evolution:**
   Connections with external boundaries via regular nodes, such as `ACC_Input_From_Outside`, are maintained.
@@ -57,22 +57,22 @@ The Kirchhoff residual is exactly **`0.00`**. No cash leaks exist.
 The stiffness matrix shows flexible coupling characteristics. No transaction blocks (Rigid Lock) occur. The eigenvalue ratios in PCA remain stable.
 
 * **PCA Axis Ratio:**
-  ![PCA Ratio](readme_plots/000_2_2__principal_axes_ratio.png)
+  ![PCA Ratio](../../../samples/Sample_7_Market_Cash_Flow/output_plots/000_2_2__principal_axes_ratio.png)
 
 ### 4.3. Verification of Circular Topology (Spectral Radius)
 
 The maximum spectral radius is exactly **`1.0000`** throughout the period. This is a mathematical consequence of the user accounts being a closed, strongly connected network of payment paths (the saturation point of the Perron-Frobenius theorem). This proves that fluid connection is maintained.
 
 * **System Stability Indicator:**
-  ![System Stability](readme_plots/004_1_2__system_stability.png)
+  ![System Stability](../../../samples/Sample_7_Market_Cash_Flow/output_plots/004_1_2__system_stability.png)
 
 ### 4.4. Thermodynamic Indicators and 3D Topology
 
 Internal energy $U$ and free energy $F$ evolve along the thermodynamic limit cycle.
 
 * **Thermodynamic Characteristics & T-S Diagram:**
-  ![Thermodynamics Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
-  ![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+  ![Thermodynamics Energy Stack](../../../samples/Sample_7_Market_Cash_Flow/output_plots/001_1_2__thermodynamics_energy_stack.png)
+  ![T-S Diagram](../../../samples/Sample_7_Market_Cash_Flow/output_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 ---
 

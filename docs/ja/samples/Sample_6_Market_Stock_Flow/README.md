@@ -1,42 +1,43 @@
-# 🔬 異常検知・市場健全性判定レポート (Sample 6 - 正常・株券価値保存システム)
+# 🔬 異常検知・株券価値保存判定レポート (Sample 6 - 株券流体システム)
 
 ## 1. 検査結論 (Executive Summary)
 
-* **総合判定:** 🟢 **正常・株券流体平衡 (Healthy Stock Flow)**
+* **総合判定:** 🟢 **正常・株券価値保存 (Healthy / Stock Value Conservation)**
 * **重症度:** 🟢 **NORMAL (異常なし)**
-* **概要:** 本システムは、株式市場において株券の総残高（質量）が保存され、市場全体で定常対流が行われている状態を示します。保存残差は全期間を通じて `0.00` です。架空の株券の生成や簿外流出はありません。
+* **概要:** 本システムは、株式市場ネットワークにおける「株券の所有権移動およびその時価評価額の変動」を抽出し、貸借（B/S）が完璧に一致した閉じた物理・数理システムとしてモデル化したものです。初期状態の丸め調整を経て、全期間を通じてキルヒホッフ残差および財務諸表不一致は `0.00`（**`✅ BALANCED`**）の極めて健全な状態を維持しています。
 
 ---
 
 ## 2. 財務諸表と取引流量の比較
 
-株式市場における株券（ストック）の総量および期間別（単月非累積）の取引流量を比較します。
+累積的な財務諸表と、期間別（単月非累積）の取引流量を比較します。
 
-### 株式残高（B/S相当）の比較
+### 貸借対照表（B/S）の比較
 
-* **B/S 累積株式残高の推移 & ブロック図 (累積値):**
-  ![B/S Cumulative Trend](readme_plots/000_0_1__BS_Trend.png)
-  ![B/S Block Total](readme_plots/000_0_1__BS_Block_Total.png)
+* **B/S 資産・資本の累積推移 & ブロック図 (累積値):**
+  ![B/S Cumulative Trend](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_0_1__BS_Trend.png)
+  ![B/S Block Total](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_0_1__BS_Block_Total.png)
 
-* **B/S 株式残高の期間推移 (単月非累積値):**
-  ![B/S Periodic Trend](readme_plots/000_0_1__BS_Trend_Periodic.png)
+* **B/S 資産・資本の期間推移 (単月非累積値):**
+  ![B/S Periodic Trend](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_0_1__BS_Trend_Periodic.png)
 
-### 株式流量（P/L相当）の比較
+### 損益計算書（P/L）の比較
 
-* **P/L 取引高の累積推移:**
-  ![P/L Cumulative Trend](readme_plots/000_0_1__PL_Trend.png)
+* **P/L 累積推移:**
+  ![P/L Cumulative Trend](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_0_1__PL_Trend.png)
 
-* **P/L 取引高の期間推移 (単月非累積値):**
-  ![P/L Periodic Trend](readme_plots/000_0_1__PL_Trend_Periodic.png)
+* **P/L 期間推移 (単月非累積値):**
+  ![P/L Periodic Trend](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_0_1__PL_Trend_Periodic.png)
 
-* **観察:** 出来高（取引流量）はサイクルに沿って安定して推移しています。USRによる過同期や、流動性の枯渇による平坦化（デッドロック）は見られません。
+* **観察:** 
+  株価の変動に応じてユーザー保有株の時価評価総額（資産）および各発行体の株式総額（負債）が常に同期して増減しており、無から株式価値が消滅したり湧き出したりする不整合はありません。
 
 ---
 
 ## 3. 根本的な病態生理解説 (Pathophysiology)
 
-* **病態判定:** **正常・定常対流 (Normal Stock Circulation)**
-* 各種プレイヤーおよび各銘柄間の株券フローは、保存力学に則って流通しています。還流やパニック連鎖はありません。
+* **病態判定:** **アセット価値循環 (Asset Value Circulation)**
+* システム内の株式取引ネットワークは、HFT（マーケットメーカー）をハブとして、機関投資家（巨大質量・低速）と個人投資家（小質量・高速）の間で株券（アセット）が有機的に循環しています。アセットの移動および約定評価額の総和は、物理的な質量保存則を満たしており、健康的な循環パターンを示しています。
 
 ---
 
@@ -44,57 +45,55 @@
 
 ### 4.1. 質量保存則とネットワークトポロジー
 
-キルヒホッフ残差は完全に **`0.00`** です。株券の消失はありません。
-
-* **マクロフォレンジックダッシュボード:**
-  ![Macro Forensics](readme_plots/002_2_1__macro_forensics_dashboard.png)
+キルヒホッフ残差は全期間を通じて **`0.00`** であり、簿外の未登録アカウント等への株券流出はありません。
 
 * **ネットワークトポロジーの変化:**
-  定常対流状態において、トポロジー構造の歪みや、特定のアカウントにのみフローが集中する結合エッジは形成されません。
+  ![Network Topology (t=0)](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/002_1_2__network_topology.t.00000.png)
 
 ### 4.2. 剛性接続 & 主成分分析 (Stiffness & PCA)
 
-剛性行列（Stiffness Matrix）は弾性結合を示します。特定の銘柄や口座に剛性が集中する Rigid Lock はありません。
-主成分分析（PCA）において、PC1寄与率は極端に支配的になることなく、正常な需給変化に連動して安定的に推移しています。
+構造剛性行列および主成分分析は、株券の流動性分布を示します。パニック売り（Panic Dump）のような急激な投げ売りイベントが発生した局面では、株式の所有権が一部のHFT（ハブ）に一時的に急激に集中するため、エントロピーが低下し、構造剛性が上昇する挙動が捉えられます。
 
-* **PCA 主要軸比率:**
-  ![PCA Ratio](readme_plots/000_2_2__principal_axes_ratio.png)
+* **主要軸比率 & 固有ベクトル推移 (PC1, PC2, PC3):**
+  ![PCA Ratio](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_2_2__principal_axes_ratio.png)
+  ![PCA PC1 Evolution](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/000_2_3__eigenvector_evolution.png)
 
-### 4.3. 循環トポロジーの検証 (Spectral Radius)
+### 4.3. 循環取引の検知 (Spectral Radius)
 
-最大スペクトル半径は、全期間を通じて完全に **`1.0000`** です。これは、株式市場全体が相互接続された「閉じた強連結ネットワーク」であることによる数学的帰結（ペロン＝フロベニウスの定理の飽和点）です。健全な接続を示します。
+架空還流取引（Wash Trading）が意図的に仕掛けられた瞬間、ネットワーク上のスペクトル半径（Spectral Radius）が一時的に跳ね上がり、システム全体の「虚偽の熱（活性化）」として検知されます。
 
 * **システム安定性指標:**
-  ![System Stability](readme_plots/004_1_2__system_stability.png)
+  ![System Stability](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/004_1_2__system_stability.png)
 
 ### 4.4. 熱力学指標と3D位相幾何
 
-内部エネルギー $U$ は定常的に保存されます。自由エネルギー $F = U - TS$ も安定して推移しています。
-T-Sダイアグラムにおいて、本システムは病的ループを描くことなく、定常対流のリミットサイクルを維持しています。
-
-* **熱力学特性 & T-S図:**
-  ![Thermodynamics Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
-  ![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+* **熱力学特性 & 3D軌跡:**
+  ![Thermodynamics Energy Stack](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/001_1_2__thermodynamics_energy_stack.png)
+  ![T-S Diagram](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/001_1_3__thermodynamics_ts_diagram.png)
+  ![3D Micro Z-Score](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/002_2_2_2__3d_micro_z_score_X.png)
+  ![3D Micro KL Drift](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 ---
 
 ## 5. 制御介入と推奨アクション (LQR & Operations)
 
-* **治療方針: 定常流動性維持のためのモニタリング**
-* 本システムは正常状態（NORMAL）です。線形最適制御（LQR）による介入や取引停止等の措置は不要です。流動性を維持するため、取引手数料と価格スプレッドの弾力性を監視します。
+* **介入要否:** **対応不要 (No Treatment Required)**
+* システムは流体的に自己安定状態にあります。流動性供給ポリシーとしてのLQR制御は、HFTハブを対象とした最適制御入力経路を提示し、万が一のパニック時の価格急落に伴う「剛性ロック」を効率的に和らげるレバーとして機能します。
+
+![LQR Control Space](../../../../samples/Sample_6_Market_Stock_Flow/output_plots/004_1_3__control_lqr_performance_space.png)
 
 ---
 
 ## 6. アラート & 反証可能性
 
-### 6.1. 偽陽性のトリアージ
+### 6.1. 統計的偽陽性アラートの判定
 
-* **季節性ボラティリティの検知:**
-  ポートフォリオ調整や市場イベントによる一時的な出来高の急増により、Z-Score がしきい値 `3.0` を超える場合があります。しかし、保存残差が `0.00` であり、Rigid Lock もないため、これらは「正常な市場代謝（偽陽性）」として棄却されます。
+* **アラート内容:** 取引のピーク時および株価ボラティリティ急増時に、一時的に Z-Score が警告しきい値 `3.0` を超過しました。
+* **判定結果:** 偽陽性（問題なし）。約定価格の激しいゆらぎによる正常な統計的アウトライヤーであり、保存則（B/S不一致）が完全にゼロであるため無視して差し支えありません。
 
-### 6.2. 本判定に対する反証条件 (Falsifiability)
+### 6.2. 本判定に対する反証条件
 
-正常判定を覆し、アノマリーが発生していると反証するには、以下の証拠が必要です：
+本レポートの「正常健全」判定を覆すには、以下のいずれかの証拠が必要です。
 
-1. **注文簿の未整合ログ:** 取引所における取引の不整合（約定と対価移動の不一致など）を示す生注文約定ログの原本。
-2. **監査済みウォレット・残高証明書:** 該当銘柄に関して、特定のアカウント間で所有権の移転を伴わない取引が行われたことを証明するウォレット生データおよび関係書類。
+1. **実地保管残高不一致:** 証券保管振替機構（ほふり）等から入手した株券の実数残高と、システム上の総和の間のズレ。
+2. **隠し株式の発行:** システムの枠外で事前定義されていない「ダミー銘柄」が不正に流通・取引されること。

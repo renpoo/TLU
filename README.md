@@ -72,7 +72,7 @@ TLU verifies the balance of inflows and outflows. Embezzlement violates the law 
 
 | Healthy steady-state (Sample 0) | Pathological Mass Leak (Sample 2) |
 | :---: | :---: |
-| ![Macro Forensics Normal](samples/Sample_0_Healthy/readme_plots/002_2_1__macro_forensics_dashboard.png) | ![Macro Forensics Abnormal](samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png) |
+| ![Macro Forensics Normal](samples/Sample_0_Healthy/output_plots/002_2_1__macro_forensics_dashboard.png) | ![Macro Forensics Abnormal](samples/Sample_2_Embezzlement_Leak/output_plots/002_2_1__macro_forensics_dashboard.png) |
 | *Figure 2a: Conservation is maintained (residual = 0)* | *Figure 2b: Residual spike detected during embezzlement* |
 
 ---
@@ -86,7 +86,7 @@ TLU calculates the spectral radius. This is the maximum eigenvalue of the connec
 
 | Healthy steady-state (Sample 0) | Locked Loop (Sample 4) |
 | :---: | :---: |
-| ![System Stability Normal](samples/Sample_0_Healthy/readme_plots/004_1_2__system_stability.png) | ![System Stability Abnormal](samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png) |
+| ![System Stability Normal](samples/Sample_0_Healthy/output_plots/004_1_2__system_stability.png) | ![System Stability Abnormal](samples/Sample_4_Composite_Chaos/output_plots/004_1_2__system_stability.png) |
 | *Figure 3a: Spectral radius converges in a safe zone* | *Figure 3b: Spectral radius rises towards the critical boundary* |
 
 ---
@@ -100,7 +100,7 @@ TLU calculates the free energy ($F = U - TS$). This represents the work capacity
 
 | Healthy steady-state (Sample 0) | Pathological Thermal Death (Sample 8) |
 | :---: | :---: |
-| ![Thermodynamics Normal](samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png) | ![Thermodynamics Abnormal](samples/Sample_8_fMRI_Stroke/readme_plots/001_1_2__thermodynamics_energy_stack.png) |
+| ![Thermodynamics Normal](samples/Sample_0_Healthy/output_plots/001_1_2__thermodynamics_energy_stack.png) | ![Thermodynamics Abnormal](samples/Sample_8_fMRI_Stroke/output_plots/001_1_2__thermodynamics_energy_stack.png) |
 | *Figure 4a: Healthy accumulation of free energy* | *Figure 4b: Plunging free energy indicating thermal death* |
 
 ---
@@ -114,7 +114,7 @@ TLU models probability distributions as a 3D geometric manifold. Systemic anomal
 
 | Healthy steady-state (Sample 0) | Spatiotemporal Manifold Distortion (Sample 5) |
 | :---: | :---: |
-| ![3D Space Normal](samples/Sample_0_Healthy/readme_plots/002_2_2_2__3d_micro_z_score_X.png) | ![3D Space Abnormal](samples/Sample_5_Kyoto_Traffic/readme_plots/002_2_2_2__3d_micro_z_score_X.png) |
+| ![3D Space Normal](samples/Sample_0_Healthy/output_plots/002_2_2_2__3d_micro_z_score_X.png) | ![3D Space Abnormal](samples/Sample_5_Kyoto_Traffic/output_plots/002_2_2_2__3d_micro_z_score_X.png) |
 | *Figure 5a: Flat and calm geometric manifold* | *Figure 5b: Manifold distortion pointing to the anomaly origin* |
 
 ---
