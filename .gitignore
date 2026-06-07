@@ -29,7 +29,7 @@ samples/**/output_plots
 rulesets
 
 scratch
-scratch2
+scratch/**
 comparison
 
 TLU-SDLs
