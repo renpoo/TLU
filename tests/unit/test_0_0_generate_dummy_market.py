@@ -15,6 +15,9 @@ class TestGenerateDummyMarket(unittest.TestCase):
         self.parser.add_argument("--wash-trade-prob", type=float, default=0.0)
         self.parser.add_argument("--panic-dump-prob", type=float, default=0.0)
         self.parser.add_argument("--out-initial-state", type=str, default="")
+        self.parser.add_argument("--external-flow-prob", type=float, default=0.2)
+        self.parser.add_argument("--external-flow-mean", type=float, default=20000000.0)
+        self.parser.add_argument("--external-flow-std", type=float, default=40000000.0)
 
     def test_basic_invariants(self):
         """Test that basic market rules are upheld (no self-trading, positive values)."""
@@ -31,19 +34,19 @@ class TestGenerateDummyMarket(unittest.TestCase):
         header = output[0].strip()
         data = [line.strip() for line in output[1:]]
         
-        self.assertEqual(header, "Transaction_ID,Timestamp,Stock_ID,Buyer_ID,Seller_ID,Price,Volume,Transaction_Amount,Memo")
+        self.assertEqual(header, "Transaction_ID,Timestamp,Debit_Account,Credit_Account,Asset_Type,Amount,Price,Memo")
         self.assertGreater(len(data), 0, "No transactions were generated.")
         
         for line in data:
             parts = line.split(',')
-            buyer = parts[3]
-            seller = parts[4]
-            price = float(parts[5])
-            volume = int(parts[6])
+            debit = parts[2]
+            credit = parts[3]
+            amount = float(parts[5])
+            price = float(parts[6])
             
-            self.assertNotEqual(buyer, seller, f"Self-trading detected in transaction: {line}")
+            self.assertNotEqual(debit, credit, f"Self-trading/matching accounts detected in transaction: {line}")
+            self.assertGreater(amount, 0.0, f"Non-positive amount detected: {line}")
             self.assertGreater(price, 0.0, f"Non-positive price detected: {line}")
-            self.assertGreater(volume, 0, f"Non-positive volume detected: {line}")
 
     def test_determinism_with_seed(self):
         """Test that the exact same output is generated given the same seed."""
