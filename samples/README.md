@@ -65,7 +65,7 @@ Below is a summary of the main mathematical and physical metrics obtained from t
 > [!NOTE]
 >
 > * **Conservation Residual:** Measures the discrepancy between inflow and outflow in the system based on Kirchhoff's current law (mass conservation) (maximum absolute value per step). It takes positive values only for off-book embezzlement or journal entry errors in the financial domain.
-> * **Spectral Radius ( $\rho$ ):** The maximum eigenvalue of the adjacency probability matrix. Recirculation loops reach warning levels at $\rho \ge 0.75$, and saturate at `1.00` in closed recirculation systems (traffic, markets, biological networks) as a mathematical consequence (Perron-Frobenius theorem).
+> * **Spectral Radius ( $\rho$ ):** The maximum eigenvalue of the adjacency probability matrix. Recirculation loops reach warning levels at $\rho \ge 0.75, and saturate at `1.00` in closed recirculation systems (traffic, markets, biological networks) as a mathematical consequence (Perron-Frobenius theorem).
 > * **Net Income / Equivalent:** Accounting net income at the final step, or the domain equivalent (e.g., cumulative change in potential energy relative to the initial state for traffic and biological networks).
 
 ---
@@ -108,7 +108,7 @@ TLU's primary mathematical breakthrough is proving that **"seemingly completely 
 * **Targets:** [Sample 0 (Normal Convection)](./Sample_0_Healthy/README.md)
 * **Common Physical Signature:** **Perfect zero conservation residuals, spectral radius of `0.00`, and healthy steady growth of free energy**
 * **Mechanism Verification:**
-  * No recirculation loops ( $\rho = 0.00$ ) or mass leaks (residuals = `0.00`) occur; all sectors are connected organically. Free energy $F$ grows healthily from `2.30 × 10^6` to `3.87 × 10^6`.
+  * No recirculation loops ( $\rho$ = 0.00$ ) or mass leaks (residuals = `0.00`) occur; all sectors are connected organically. Free energy $F$ grows healthily from `2.30 × 10^6` to `3.87 × 10^6`.
   * The Z-score peaks in July at **`4.90`** due to seasonal business variations, but since topology and conservation laws remain sound, it is correctly triaged as a seasonal false positive.
 
 ---

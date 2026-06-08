@@ -77,7 +77,7 @@ The `System Conservation Residual` spikes only during the mismatch months (Febru
 
 ### 4.2. Stiffness Connection & PCA (Stiffness & PCA)
 
-The stiffness matrix evolution shows that this error is a temporary strain. By $t=5$, immediately after the error passes, the stiffness matrix self-heals back to the healthy state.
+The stiffness matrix evolution shows that this error is a temporary strain. By $t=5, immediately after the error passes, the stiffness matrix self-heals back to the healthy state.
 PCA shows a temporary rise in the PC0 eigenvalue ratio, but the dominant axes do not lock onto `UNKNOWN_LEAK`.
 
 * **Evolution of Structural Stiffness Matrix:**

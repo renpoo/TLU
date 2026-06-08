@@ -6,7 +6,7 @@ This guide explains thermodynamics and entropy analysis modules (`001_1`, `001_2
 
 ## 🔬 Mathematical Physics of Thermodynamics
 
-TLU defines system activity as "internal energy $U$," disorder as "entropy $S$," and volatility as "temperature $T$." We use these variables to calculate the remaining available potential of the system, "free energy $F$":
+TLU defines system activity as "internal energy $U," disorder as "entropy $S," and volatility as "temperature $T$." We use these variables to calculate the remaining available potential of the system, "free energy $F$":
 
 $$F = U - T \cdot S$$
 
@@ -18,7 +18,7 @@ In a healthy system, activity generates moderate frictional heat loss ( $T \time
 
 ### 1. Thermodynamic Energy Stack (`001_1_2__thermodynamics_energy_stack.png`)
 
-This stack graph shows the cumulative composition of internal energy $U$, frictional heat loss $TS$, and free energy $F$.
+This stack graph shows the cumulative composition of internal energy $U, frictional heat loss $TS, and free energy $F$.
 
 #### 🟢 Sample 0 (Healthy Metabolism)
 

@@ -130,8 +130,8 @@ TLU proves that different anomalies across distinct domains show identical physi
 * **Targets:** [Sample 0 (Healthy)](./Sample_0_Healthy/README.md), [Sample 6 (Stock Convection)](./Sample_6_Market_Stock_Flow/README.md), [Sample 7 (Cash Convection)](./Sample_7_Market_Cash_Flow/README.md)
 * **Common Physical Signature:** **Zero residuals and stable flow (steady convection).**
 * **Cross-Verification:**
-  * **Healthy Circulation (Sample 0):** No circular loops ( $\rho = 0.00$ ) or mass leaks (residual = `0.00`) occur. Accounts connect organically. Free energy grows steadily. Transient Z-score peaks up to **`4.90`** are rejected as false positives since the conservation law holds.
-  * **Market Flow (Sample 6 & 7):** Stock and cash volumes remain conserved. Convection is stable. Circulation occurs due to the closed graph structure ( $\rho = 1.00$ ). However, friction stays within limits, and residuals remain strictly `0.00`.
+  * **Healthy Circulation (Sample 0):** No circular loops ( $\rho$ = 0.00$ ) or mass leaks (residual = `0.00`) occur. Accounts connect organically. Free energy grows steadily. Transient Z-score peaks up to **`4.90`** are rejected as false positives since the conservation law holds.
+  * **Market Flow (Sample 6 & 7):** Stock and cash volumes remain conserved. Convection is stable. Circulation occurs due to the closed graph structure ( $\rho$ = 1.00$ ). However, friction stays within limits, and residuals remain strictly `0.00`.
 
 ---
 

@@ -9,7 +9,7 @@
   * **2020-02-01 (t=1)**: Amount **`$53,282.77`** (Journal IDs: `E_000257` to `E_000259`)
   * **2020-05-22 (t=4)**: Amount **`$44,939.48`** (Journal IDs: `E_001327` to `E_001329`)
 * **Clinical Summary:**
-  Circular trades (inflated sales) occur through funds passing between cash and accounts receivable. The double-entry bookkeeping principle (conservation law) is maintained, making this anomaly undetectable with traditional auditing (such as static trial balances). The physics analysis engine identified the rise of the maximum spectral radius $\rho = 0.7488$ (the maximum eigenvalue of the adjacency matrix) and the formation of a loop that circulates internal energy.
+  Circular trades (inflated sales) occur through funds passing between cash and accounts receivable. The double-entry bookkeeping principle (conservation law) is maintained, making this anomaly undetectable with traditional auditing (such as static trial balances). The physics analysis engine identified the rise of the maximum spectral radius $\rho$ = 0.7488$ (the maximum eigenvalue of the adjacency matrix) and the formation of a loop that circulates internal energy.
   These wash trades cause cash balance volatility, increasing system temperature $T$ and entropy loss $TS$. Consequently, the system's net free energy ( $F = U - TS$ ) decreases. This condition leads to liquidity failures (profitable bankruptcy).
 
 ---

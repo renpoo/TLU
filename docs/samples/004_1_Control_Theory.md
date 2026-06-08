@@ -6,15 +6,15 @@ This guide describes the optimal linear quadratic regulator (LQR) and system sta
 
 ## 🔬 Physico-Mathematical Theory of LQR Control and System Stability
 
-We describe the state transitions of the network as a discrete state equation based on the adjacency connection probability matrix $A$, control input $u(t)$, and input path $B$:
+We describe the state transitions of the network as a discrete state equation based on the adjacency connection probability matrix $A, control input $u(t), and input path $B$:
 
 $$X(t+1) = A \cdot X(t) + B \cdot u(t)$$
 
 We monitor the "spectral radius ( $\rho$ )", which is the maximum eigenvalue of the connection matrix $A$:
 
-$$\rho = \max_{i} |\lambda_i|$$
+$$\rho$ = \max_{i} |\lambda_i|$$
 
-If $\rho < 1.0$, the system possesses self-damping capability (stability). When wash trade loops or traffic deadlocks form, the spectral radius approaches `1.0`. The energy of the entire system is trapped in closed circuits, making it uncontrollable (unstable).
+If $\rho < 1.0, the system possesses self-damping capability (stability). When wash trade loops or traffic deadlocks form, the spectral radius approaches `1.0`. The energy of the entire system is trapped in closed circuits, making it uncontrollable (unstable).
 
 TLU uses Linear Quadratic Regulator (LQR) control theory. It calculates the feedback gain $K_{lqr}$ to pull the system back to a steady state. TLU identifies the node with the highest intervention effect in the system using the sensitivity matrix:
 
@@ -45,7 +45,7 @@ This section presents the analysis of system stability (`004_1_2__system_stabili
 ### 🟡 Sample 1 (Wash Trade: Wash Trade)
 
 * **System Stability (Spectral Radius) (`004_1_2__system_stability.png`)**
-  * **Clinical Commentary:** The spectral radius $\rho$ rises during wash trades. It reaches `0.7488` at $t=0$ and `0.5501` at $t=4$, indicating the formation of wash trade cycles.
+  * **Clinical Commentary:** The spectral radius $\rho$ rises during wash trades. It reaches `0.7488` at $t=0$ and `0.5501` at $t=4, indicating the formation of wash trade cycles.
   * ![Sample 1 System Stability](Sample_1_Wash_Trade/readme_plots/004_1_2__system_stability.png)
 
 * **Optimal Control (LQR) Performance Space (`004_1_3__control_lqr_performance_space.png`)**
@@ -109,7 +109,7 @@ This section presents the analysis of system stability (`004_1_2__system_stabili
 ### 🔴 Sample 5 (Kyoto Traffic: Kyoto Traffic)
 
 * **System Stability (Spectral Radius) (`004_1_2__system_stability.png`)**
-  * **Clinical Commentary:** After deadlock occurs at $t \ge 50$, the spectral radius $\rho$ stays locked at `1.00`. The traffic network has lost its self-recovery capacity.
+  * **Clinical Commentary:** After deadlock occurs at $t \ge 50, the spectral radius $\rho$ stays locked at `1.00`. The traffic network has lost its self-recovery capacity.
   * ![Sample 5 System Stability](Sample_5_Kyoto_Traffic/readme_plots/004_1_2__system_stability.png)
 
 * **Optimal Control (LQR) Performance Space (`004_1_3__control_lqr_performance_space.png`)**

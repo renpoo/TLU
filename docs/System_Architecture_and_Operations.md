@@ -80,7 +80,7 @@ The TLU environment includes anomalous data generators. They create test dataset
 
 #### 1. Urban Traffic Deadlock Generator (`src/filters/_0_0_generate_dummy_traffic.py`)
 
-* **Normal State (t = 0 to 50):** Vehicles circulate through 25 intersections. The spectral radius $\rho = 1.00$ and the macro residual is `0.00`. Local temperature remains stable.
+* **Normal State (t = 0 to 50):** Vehicles circulate through 25 intersections. The spectral radius $\rho$ = 1.00$ and the macro residual is `0.00`. Local temperature remains stable.
 * **Anomaly Injection (t = 51 / W52):** The outflow capacity at `23_Shijo_Karasuma` is restricted to **5%**.
 * **Physical Result (t = 52 to 70):** Traffic backflow begins. Entropy drops at the upstream `Shijo_Muromachi`. Flow volatility vanishes at `Shijo_Karasuma`. Its local temperature locks at `1.87`. A temperature gradient of `+65.31` forms. Total free energy decreases.
 

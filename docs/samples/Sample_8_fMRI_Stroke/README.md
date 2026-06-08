@@ -122,7 +122,7 @@ Statistical physics metrics show the collapse of brain metabolism.
 * **T-S Diagram:**
   ![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
-The average entropy $S$ is **`9.36`** and average free energy $F$ is **`413,922.35`** across the period. Following the block at $t=30$, free energy $F$ decreased, reaching a minimum of **`167,265.39`** at the final step ( $t=59$ ). The potential energy to maintain activity is depleted.
+The average entropy $S$ is **`9.36`** and average free energy $F$ is **`413,922.35`** across the period. Following the block at $t=30, free energy $F$ decreased, reaching a minimum of **`167,265.39`** at the final step ( $t=59$ ). The potential energy to maintain activity is depleted.
 The T-S diagram shows temperature and entropy decreasing after the occlusion, contracting the potential energy.
 
 ### 4.5. Identifying the Ischemic Lesion via 3D Spatio-Temporal Plots
@@ -146,11 +146,11 @@ Adjacent nodes (prefrontal cortex: `12.36`, parietal lobe: `17.12`) also show sy
   LQR sensitivity analysis designates `Motor_Cortex` as the target node. The sensitivity index (`fk_total_ripple`) is **`41.5234`**.
 
   > **【Mathematical Proof of `41.5234`】**
-  > Parameters are: damping rate $\gamma = 0.85$, maximum steps $k_{max} = 5$, and input displacement $\Delta q = 10.0$.
+  > Parameters are: damping rate $\gamma = 0.85, maximum steps $k_{max} = 5, and input displacement $\Delta q = 10.0$.
   > Under the ischemia stiffness lock state where connection leaks approach zero, input signals propagate synchronously. The total ripple effect is:
   > $$fk\_total\_ripple = \Delta q \times \sum_{k=0}^{5} \gamma^k = 10.0 \times \left(1.0 + 0.85 + 0.85^2 + 0.85^3 + 0.85^4 + 0.85^5\right) = 41.5234$$
 
-  At $t=30$, external force changes at `00_Motor_Cortex` have the maximum impact on `02_Prefrontal_Cortex` (`fk_max_impact = 7.8304`), which acts as the control point.
+  At $t=30, external force changes at `00_Motor_Cortex` have the maximum impact on `02_Prefrontal_Cortex` (`fk_max_impact = 7.8304`), which acts as the control point.
 
 * **Specific Intervention Plan:**
   1. **Thrombolytic Therapy (tPA Infusion):**

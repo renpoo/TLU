@@ -33,7 +33,7 @@ During wash trades ( $t=0, t=4$ ), stiffness cells between `Cash` and `Accounts_
 #### 🔴 Sample 2 (Embezzlement Leak)
 
 **Clinical Interpretation:**
-As embezzlement progresses from $t=4$, a stiffness lock forms between `Cash` and `UNKNOWN_LEAK`. The leak anomaly remains silent at $t=11$.
+As embezzlement progresses from $t=4, a stiffness lock forms between `Cash` and `UNKNOWN_LEAK`. The leak anomaly remains silent at $t=11$.
 
 - ![Sample 2 Stiffness t0](Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00000.png)
 - ![Sample 2 Stiffness t1](Sample_2_Embezzlement_Leak/readme_plots/000_2_1__structural_stiffness.t.00001.png)
@@ -45,7 +45,7 @@ As embezzlement progresses from $t=4$, a stiffness lock forms between `Cash` and
 #### 🟡 Sample 3 (Unbalanced Bookkeeping Mistake)
 
 **Clinical Interpretation:**
-A transient stiffness distortion occurs at $t=1$ due to the one-sided entry mistake. After self-correction at $t=2$, the matrix returns to normal.
+A transient stiffness distortion occurs at $t=1$ due to the one-sided entry mistake. After self-correction at $t=2, the matrix returns to normal.
 
 - ![Sample 3 Stiffness t0](Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00000.png)
 - ![Sample 3 Stiffness t3](Sample_3_Unbalanced_Mistake/readme_plots/000_2_1__structural_stiffness.t.00003.png)

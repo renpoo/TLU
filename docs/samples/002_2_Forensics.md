@@ -49,13 +49,13 @@ Conservation residuals spike during single-sided errors at $t=1, 2$ (max `340.01
 #### 🔴 Sample 4 (Composite Chaos)
 
 **Clinical Commentary:**
-Wash trade synchronization and off-book embezzlement progress together. The conservation residual appears at $t=5$ and spikes to `4,773.57` at $t=8$, indicating funds are leaving the system. Structural drift (KL) reaches `1.59` at $t=2$ and remains high. The velocity Z-Score ( $Z_v$ ) reaches `3.42` at $t=6$ but falls below `1.52` at $t \ge 8$ due to baseline learning pollution. Both conservation residuals and KL drift expose the full scale of this composite failure.
+Wash trade synchronization and off-book embezzlement progress together. The conservation residual appears at $t=5$ and spikes to `4,773.57` at $t=8, indicating funds are leaving the system. Structural drift (KL) reaches `1.59` at $t=2$ and remains high. The velocity Z-Score ( $Z_v$ ) reaches `3.42` at $t=6$ but falls below `1.52` at $t \ge 8$ due to baseline learning pollution. Both conservation residuals and KL drift expose the full scale of this composite failure.
 ![Sample 4 Forensics Dashboard](Sample_4_Composite_Chaos/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 #### 🔴 Sample 5 (Kyoto Traffic)
 
 **Clinical Commentary:**
-Vehicles stay stuck in intersections, so the conservation residual remains `0.00`. At the deadlock transition ( $t=12$ ), structural drift (KL) reaches `1.76` and Z-Scores peak at $Z_X$=`7.25` and $Z_v$=`9.86`. At $t=23$, movement stops, volatility becomes zero, and Z-Scores drop ( $Z_X$=`0.62`, $Z_v$=`0.43`). Only structural drift (KL) detects the frozen topology of congested and dry streets.
+Vehicles stay stuck in intersections, so the conservation residual remains `0.00`. At the deadlock transition ( $t=12$ ), structural drift (KL) reaches `1.76` and Z-Scores peak at $Z_X$=`7.25` and $Z_v$=`9.86`. At $t=23, movement stops, volatility becomes zero, and Z-Scores drop ( $Z_X$=`0.62`, $Z_v$=`0.43`). Only structural drift (KL) detects the frozen topology of congested and dry streets.
 ![Sample 5 Forensics Dashboard](Sample_5_Kyoto_Traffic/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 ### 3. 3D Micro KL Drift (`002_2_2_1__3d_micro_kl_drift.png`)
@@ -189,13 +189,13 @@ Z-Scores remain low during seizures because regular sine wave BOLD signals reduc
 #### 🔴 Sample 8 (fMRI Stroke)
 
 **Clinical Commentary:**
-Ischemia cuts off blood flow to the motor area, but blood does not leave the brain, so the conservation residual is `0.00`. At $t=30$, blood flow changes cause a velocity Z-Score ( $Z_v$ ) spike of `51.44`. The state Z-Score ( $Z_X$ ) remains flat at `0.06`. At $t \ge 30$, the motor area stops changing, and $Z_v$ drops back into normal thresholds. Structural drift (KL) rises to `1.29` at $t=30$ and stays above `0.54` until $t=59$, indicating necrosis and permanent functional disconnection.
+Ischemia cuts off blood flow to the motor area, but blood does not leave the brain, so the conservation residual is `0.00`. At $t=30, blood flow changes cause a velocity Z-Score ( $Z_v$ ) spike of `51.44`. The state Z-Score ( $Z_X$ ) remains flat at `0.06`. At $t \ge 30, the motor area stops changing, and $Z_v$ drops back into normal thresholds. Structural drift (KL) rises to `1.29` at $t=30$ and stays above `0.54` until $t=59, indicating necrosis and permanent functional disconnection.
 ![Sample 8 Forensics Dashboard](Sample_8_fMRI_Stroke/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 #### 🔴 Sample 9 (fMRI Seizure)
 
 **Clinical Commentary:**
-Epileptic discharge causes self-sustained oscillation, but signal mass stays in the brain, so the residual is `0.00`. At $t=30$, structural drift (KL) rises to `1.33` and peaks at `1.77` at $t=38$, detecting global topological changes. In contrast, the state Z-Score ( $Z_X$ ) remains flat at `0.0001` and velocity Z-Score ( $Z_v$ ) stays around `1.3` at $t \ge 30$. BOLD signals become regular sine waves, causing statistical models to falsely assume a stable state. Structural drift detects the hyper-synchronous burst that standard Z-Scores miss.
+Epileptic discharge causes self-sustained oscillation, but signal mass stays in the brain, so the residual is `0.00`. At $t=30, structural drift (KL) rises to `1.33` and peaks at `1.77` at $t=38, detecting global topological changes. In contrast, the state Z-Score ( $Z_X$ ) remains flat at `0.0001` and velocity Z-Score ( $Z_v$ ) stays around `1.3` at $t \ge 30$. BOLD signals become regular sine waves, causing statistical models to falsely assume a stable state. Structural drift detects the hyper-synchronous burst that standard Z-Scores miss.
 ![Sample 9 Forensics Dashboard](Sample_9_fMRI_Seizure/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
 ### 3. 3D Micro KL Drift (`002_2_2_1__3d_micro_kl_drift.png`)

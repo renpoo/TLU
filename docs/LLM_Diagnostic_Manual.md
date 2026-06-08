@@ -84,7 +84,7 @@ Listing individual findings is not enough. You must synthesize them. Weigh all m
 
 ### 2.5 Statistical False Positive Triaging
 
-* **Rule:** Z-scores may exceed the threshold of `3.0` due to small sample sizes or seasonal congestion. If conservation residuals and spectral radius are normal (residual `0.00`, $\rho = 0.00$ ), reject the alert as a false positive.
+* **Rule:** Z-scores may exceed the threshold of `3.0` due to small sample sizes or seasonal congestion. If conservation residuals and spectral radius are normal (residual `0.00`, $\rho$ = 0.00$ ), reject the alert as a false positive.
 
 ### 2.6 Connecting to External Proof
 

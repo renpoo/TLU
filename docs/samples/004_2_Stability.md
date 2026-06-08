@@ -6,15 +6,15 @@ This guide describes the optimal linear quadratic regulator (LQR) and system sta
 
 ## 🔬 Physico-Mathematical Theory of LQR Control and System Stability
 
-We describe the state transitions of the network as a discrete state equation based on the adjacency connection probability matrix $A$, control input $u(t)$, and input path $B$:
+We describe the state transitions of the network as a discrete state equation based on the adjacency connection probability matrix $A, control input $u(t), and input path $B$:
 
 $$X(t+1) = A \cdot X(t) + B \cdot u(t)$$
 
 We monitor the "spectral radius ( $\rho$ )", which is the maximum eigenvalue of the connection matrix $A$:
 
-$$\rho = \max_{i} |\lambda_i|$$
+$$\rho$ = \max_{i} |\lambda_i|$$
 
-If $\rho < 1.0$, the system possesses self-damping capability (stability). When wash trade loops or traffic deadlocks form, the spectral radius approaches `1.0`. The energy of the entire system is trapped in closed circuits, making it uncontrollable (unstable).
+If $\rho < 1.0, the system possesses self-damping capability (stability). When wash trade loops or traffic deadlocks form, the spectral radius approaches `1.0`. The energy of the entire system is trapped in closed circuits, making it uncontrollable (unstable).
 
 TLU uses Linear Quadratic Regulator (LQR) control theory. It calculates the feedback gain $K_{lqr}$ to pull the system back to a steady state. TLU identifies the node with the highest intervention effect in the system using the sensitivity matrix:
 

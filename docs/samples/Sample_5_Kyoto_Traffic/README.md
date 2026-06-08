@@ -125,7 +125,7 @@ The T-S diagram displays a closed freezing loop after January 2021, where both e
 * **3D Local Entropy & Temperature:**
   ![3D Local Entropy](readme_plots/001_1_2_1__3d_local_entropy.png)
   ![3D Local Temperature](readme_plots/001_1_2_2__3d_local_temperature.png)
-  The restriction at Shijo-Karasuma reduced the entropy at Shijo-Muromachi (`23_ShijoMuromachi`) to `1.6596`. The local temperature at Shijo-Karasuma fell to `24.25` at $t=13$, forming a yellow temperature gradient (`local_grad_t`) spire with adjacent nodes, showing localized thermal stress.
+  The restriction at Shijo-Karasuma reduced the entropy at Shijo-Muromachi (`23_ShijoMuromachi`) to `1.6596`. The local temperature at Shijo-Karasuma fell to `24.25` at $t=13, forming a yellow temperature gradient (`local_grad_t`) spire with adjacent nodes, showing localized thermal stress.
   ![3D Local Gradient](readme_plots/001_1_2_3__3d_local_gradient.png)
 
 **【Identifying Structural Changes via 3D Micro KL Drift】**

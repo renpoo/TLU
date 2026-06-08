@@ -8,7 +8,7 @@ This guide explains kinematics in Tensor-Link Utility (TLU).
 
 ### 5. 3D Trajectory Ribbon & Phase Portrait Plots (e.g., `000_1_8__phase_portrait_3d.png`)
 
-These plots display 3D phase-space trajectories constructed from position $X$, velocity $\dot{X}$, and acceleration $\ddot{X}$, or 3D dynamic properties under external force (`000_1_6__3d_dynamics_external_force.png`). We use them to determine dynamic stability and chaos.
+These plots display 3D phase-space trajectories constructed from position $X, velocity $\dot{X}, and acceleration $\ddot{X}, or 3D dynamic properties under external force (`000_1_6__3d_dynamics_external_force.png`). We use them to determine dynamic stability and chaos.
 
 #### 🟢 Sample 0 (Healthy Metabolism)
 

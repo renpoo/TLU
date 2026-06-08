@@ -155,8 +155,8 @@ This shows that while the temporal lobe's own behavior pattern does not drift, t
   LQR sensitivity analysis designates the temporal lobe (`03_Temporal_Lobe`) as the intervention hub. The sensitivity index (`fk_total_ripple`) is **`41.5234`**.
 
   > **【Mathematical Proof of `41.5234`】**
-  > Parameters are: damping rate $\gamma = 0.85$, maximum steps $k_{max} = 5$, and input displacement $\Delta q = 10.0$.
-  > Under the saturation state ( $\rho = 1.0000$ ) where connection leaks approach zero, input signals propagate synchronously. The total ripple effect is:
+  > Parameters are: damping rate $\gamma = 0.85, maximum steps $k_{max} = 5, and input displacement $\Delta q = 10.0$.
+  > Under the saturation state ( $\rho$ = 1.0000$ ) where connection leaks approach zero, input signals propagate synchronously. The total ripple effect is:
   > $$fk\_total\_ripple = \Delta q \times \sum_{k=0}^{5} \gamma^k = 10.0 \times \left(1.0 + 0.85 + 0.85^2 + 0.85^3 + 0.85^4 + 0.85^5\right) = 41.5234$$
   > This confirms the target node acts as the hub of the synchronization loop.
 
