@@ -4,7 +4,7 @@
 
 * **Overall Status:** 🔴 **Composite System Failure (Coexistence of Wash Trade Loop and Embezzlement Leak / Composite Pathology)**
 * **Severity:** 🔴 **CRITICAL (Dysfunctional State)**
-* **Summary:** 
+* **Summary:**
   The system is in a "Composite Chaos" state. Circular wash trades inflate sales, and systematic embezzlement causes mass defects (leaks of cash).
   During the simulation, the maximum spectral radius indicating wash trades reached **`0.7861` at 2020-01 (t=0)** and **`0.7058` at 2020-02 (t=1)**, proving that the circular loop was active.
   Additionally, a mass conservation residual (Kirchhoff residual) appeared from 2020-06 (t=5) to 2020-09 (t=8). A **cumulative total of `$6,255.99`** in cash leaked out of the system and was directed to the `UNKNOWN_LEAK` node. In particular, a mass defect of **`$4,773.57`** occurred in **2020-09 (t=8)**.
@@ -84,7 +84,7 @@ The `System Conservation Residual` is non-zero after June, peaking at **`$4,773.
 
 ### 4.2. Stiffness Connection & PCA (Stiffness & PCA)
 
-After embezzlement begins in June 2020 (`t=5`), the stiffness balance collapses, and stiffness between major nodes disappears. In the final step ($t=11$), key hubs lock completely (**Stiffness Lock**), indicating permanent structural damage.
+After embezzlement begins in June 2020 (`t=5`), the stiffness balance collapses, and stiffness between major nodes disappears. In the final step ( $t=11$ ), key hubs lock completely (**Stiffness Lock**), indicating permanent structural damage.
 Because the system loses elasticity, it cannot damp external energy inputs, causing **abnormal resonance (knocking exceeding `1e9`)** in later steps.
 In PCA, the PC0 eigenvalue reaches `1.59e10` (100% variance) in March (`t=2`), dominated by AR, Sales, and Cash. In September (`t=8`), the eigenvector contribution of the `UNKNOWN_LEAK` node appears, indicating that the leak channel has settled as part of the structure.
 
@@ -130,6 +130,7 @@ The T-S diagram displays a closed loop in the first half (wash trade signature) 
   ![3D Micro KL Drift](readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 **【Information Geometry Phase Transition and Z-Score Model Pollution】**
+
 * **3D Micro KL Drift:**
   In **2020-02 (t=1)**, the cash node triggers a KL Drift spike of **`4.2076`** (start of the loop). In the recovery period of **2020-11 (t=10)**, it reaches a peak of **`6.7072`** (structure returning to normal).
 * **3D Micro Z-Score:**

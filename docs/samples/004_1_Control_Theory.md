@@ -10,7 +10,7 @@ We describe the state transitions of the network as a discrete state equation ba
 
 $$X(t+1) = A \cdot X(t) + B \cdot u(t)$$
 
-We monitor the "spectral radius ($\rho$)", which is the maximum eigenvalue of the connection matrix $A$:
+We monitor the "spectral radius ( $\rho$ )", which is the maximum eigenvalue of the connection matrix $A$:
 
 $$\rho = \max_{i} |\lambda_i|$$
 
@@ -157,7 +157,7 @@ This section presents the analysis of system stability (`004_1_2__system_stabili
 ### 🔴 Sample 8 (fMRI Stroke: fMRI Stroke)
 
 * **System Stability (Spectral Radius) (`004_1_2__system_stability.png`)**
-  * **Clinical Commentary:** Following topological disruption from the stroke ($t=30$), the spectral radius $\rho$ saturates at `1.00`. This indicates a breakdown of brain flow control.
+  * **Clinical Commentary:** Following topological disruption from the stroke ( $t=30$ ), the spectral radius $\rho$ saturates at `1.00`. This indicates a breakdown of brain flow control.
   * ![Sample 8 System Stability](Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)
 
 * **Optimal Control (LQR) Performance Space (`004_1_3__control_lqr_performance_space.png`)**

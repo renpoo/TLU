@@ -4,7 +4,7 @@
 
 * **Overall Status:** 🟡 **Transient Data Inconsistency / Bookkeeping Human Error (Transient Mismatch / Human Error)**
 * **Severity:** 🟡 **WARNING (Monitor Closely)**
-* **Summary:** 
+* **Summary:**
   The system exhibits a "local data inconsistency (mass defect)" where debit and credit amounts do not match in accounts receivable collection journals.
   During the simulation, a **cumulative total of `$1,412.88`** in mass temporarily leaked out of the system. This difference was directed to the virtual sink node `UNKNOWN_LEAK`.
   Mathematical analysis reveals that this is not a persistent leak but a "single input mismatch (elastic strain)." The maximum spectral radius remains **`0.00`** throughout the period. No wash trade topologies exist. Immediately after the mismatch occurs, the stiffness matrix returns to its healthy state, showing that the system's self-healing elasticity functions.
@@ -107,7 +107,7 @@ The spectral radius remains **`0.00`** throughout the period. This proves topolo
 
 ### 4.4. Thermodynamic Indicators and 3D Topology
 
-The thermodynamic energy stack and the T-S trajectory follow paths similar to [Sample 0](../Sample_0_Healthy/README.md). There is no abnormal expansion of entropy loss ($-TS$). Free energy $F$ accumulates steadily, showing no signs of thermal death.
+The thermodynamic energy stack and the T-S trajectory follow paths similar to [Sample 0](../Sample_0_Healthy/README.md). There is no abnormal expansion of entropy loss ( $-TS$ ). Free energy $F$ accumulates steadily, showing no signs of thermal death.
 
 * **Thermodynamic Characteristics & 3D Trajectory:**
   ![Thermodynamics Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
@@ -117,13 +117,15 @@ The thermodynamic energy stack and the T-S trajectory follow paths similar to [S
   ![3D Micro KL Drift](readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 **【3D Local Temperature and Transient Bruising】**
+
 * **3D Local Temperature:**
   ![3D Local Temperature](readme_plots/001_1_2_2__3d_local_temperature.png)
   During mismatch months (February, March, and November), the mismatch balance remains temporarily in `UNKNOWN_LEAK`. This causes a temporary rise in the local temperatures of the accounts receivable and `UNKNOWN_LEAK` nodes. This differs from embezzlement (Sample 2) where heat accumulates continuously.
 
 **【Limits of Statistical Z-Scores and Zero-to-One Anomalies】**
+
 * **3D Micro KL Drift (Information Geometry Change):**
-  In February 2020 ($t=1$), a KL Drift spire of **`20.6829`** rises on the accounts receivable node. This captures the discontinuous shift (zero-to-one) in probability distributions caused by the mismatch.
+  In February 2020 ( $t=1$ ), a KL Drift spire of **`20.6829`** rises on the accounts receivable node. This captures the discontinuous shift (zero-to-one) in probability distributions caused by the mismatch.
 * **3D Micro Z-Score (Statistical Baseline Blind Spot):**
   Z-Scores remain silent (Z-Score < 1.5) during the mismatch months of February, March, and November. However, they trigger warnings during seasonal sales surges in July (AR: `8.2579`) and normal rent expansions in August (Rent: `10.4443`), showing false positives. Z-Scores evaluated the November mismatch as normal, showing a false negative blind spot.
 

@@ -32,7 +32,7 @@ Transaction flows (edges) are distributed and circulate throughout all periods. 
 #### 🟡 Sample 1 (Wash Trade)
 
 **Clinical Commentary:**
-At the start of the anomalies ($t=0$ and $t=4$), bidirectional edges connect `ACC_Cash` and `ACC_Accounts_Receivable`.
+At the start of the anomalies ( $t=0$ and $t=4$ ), bidirectional edges connect `ACC_Cash` and `ACC_Accounts_Receivable`.
 ![Sample 1 Topology t0](Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00000.png)
 ![Sample 1 Topology t3](Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00003.png)
 ![Sample 1 Topology t4](Sample_1_Wash_Trade/readme_plots/002_1_2__network_topology.t.00004.png)
@@ -51,7 +51,7 @@ The anomaly progresses. Funds leak from `Accounts_Receivable` to a node named `U
 #### 🟡 Sample 3 (Unbalanced Mistake)
 
 **Clinical Commentary:**
-A single-sided input error occurs at $t=1$ (2020-02). Only one side of the accounts receivable node connects, indicating an unbalanced state. The mistake is corrected in the next period ($t \ge 2$). The topology returns to the normal distributed connection state.
+A single-sided input error occurs at $t=1$ (2020-02). Only one side of the accounts receivable node connects, indicating an unbalanced state. The mistake is corrected in the next period ( $t \ge 2$ ). The topology returns to the normal distributed connection state.
 
 - ![Sample 3 Topology t0 (Normal)](Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00000.png)
 - ![Sample 3 Topology t1 (Error Occurs)](Sample_3_Unbalanced_Mistake/readme_plots/002_1_2__network_topology.t.00001.png)

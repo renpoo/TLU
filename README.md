@@ -42,12 +42,12 @@ TLU identifies path blocks (stiffness and deadlocks) and active bleeding (capita
 
 | Physical Variable | Definition in Classical Mechanics & Thermodynamics | Financial Accounting Domain | Urban Traffic Domain | Financial Market Domain | Biological Brain fMRI Domain |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Mass ($m_i$)** | Inertia / Energy storage tank | Account balance | Vehicles at intersection | Account assets | BOLD signal change |
-| **Flux ($f_{ij}$)** | Velocity / Mass transport | Transaction amount | Vehicles per second | Trade value | Effective connectivity |
-| **Stiffness ($k_{ij}$)** | Elasticity / Spring constant | Account connection strength | Road capacity limit | Synchronization level | Functional coherence |
-| **Viscosity ($c_{ij}$)** | Friction / Damper damping | Payment terms (30-90 days) | Traffic drag / Delay | Execution delay (latency) | Signal propagation latency |
-| **Entropy ($S$)** | Disorder / Frictional heat loss | Sham circular trading | Frictional heat from congestion | Wash trading between USRs | Neural hyper-synchrony (seizure) |
-| **Free Energy ($F$)** | Available work potential | Net operating profit after tax | Vehicle flow potential | Market allocation efficiency | Brain cognitive capacity |
+| **Mass ( $m_i$ )** | Inertia / Energy storage tank | Account balance | Vehicles at intersection | Account assets | BOLD signal change |
+| **Flux ( $f_{ij}$ )** | Velocity / Mass transport | Transaction amount | Vehicles per second | Trade value | Effective connectivity |
+| **Stiffness ( $k_{ij}$ )** | Elasticity / Spring constant | Account connection strength | Road capacity limit | Synchronization level | Functional coherence |
+| **Viscosity ( $c_{ij}$ )** | Friction / Damper damping | Payment terms (30-90 days) | Traffic drag / Delay | Execution delay (latency) | Signal propagation latency |
+| **Entropy ( $S$ )** | Disorder / Frictional heat loss | Sham circular trading | Frictional heat from congestion | Wash trading between USRs | Neural hyper-synchrony (seizure) |
+| **Free Energy ( $F$ )** | Available work potential | Net operating profit after tax | Vehicle flow potential | Market allocation efficiency | Brain cognitive capacity |
 | **Acupuncture Point (LQR)** | Control input vector | Key audit accounts | Traffic light timing adjustment | Specific USR trade restriction | Target TMS stimulation point |
 
 ---
@@ -70,7 +70,7 @@ Verifies whether inflow and outflow balance. When funds leak outside the system,
 
 ---
 
-### 2. Topology & System Stability (Spectral Radius $\rho$)
+### 2. Topology & System Stability (Spectral Radius $\rho$ )
 
 Calculates the spectral radius (the maximum eigenvalue of the transition matrix) to detect circular loops. A spectral radius locked at the warning boundary of `1.00` indicates that the network is trapped in a closed loop.
 
@@ -86,10 +86,10 @@ Calculates the spectral radius (the maximum eigenvalue of the transition matrix)
 
 ### 3. Thermodynamic Energy Stack (System Fatigue & Thermal Death)
 
-Calculates free energy ($F = U - TS$), representing the work capacity of the system. If $F$ drops below zero, the system falls into thermal death. High activity ($U$) without useful output generates friction (entropy $TS$), exhausting the system.
+Calculates free energy ( $F = U - TS$ ), representing the work capacity of the system. If $F$ drops below zero, the system falls into thermal death. High activity ( $U$ ) without useful output generates friction (entropy $TS$ ), exhausting the system.
 
 * **🟢 Healthy (Sample 0):** The free energy stays positive. It grows proportionally with system activity.
-* **🚨 Thermal Death (Sample 8 / fMRI Stroke):** Blocked flow freezes connections. Entropy ($S$) drops while macro temperature ($T$) spikes. Free energy ($F$) plummets to zero, causing thermal death.
+* **🚨 Thermal Death (Sample 8 / fMRI Stroke):** Blocked flow freezes connections. Entropy ( $S$ ) drops while macro temperature ( $T$ ) spikes. Free energy ( $F$ ) plummets to zero, causing thermal death.
 
 | Healthy steady-state (Sample 0) | Pathological Thermal Death (Sample 8) |
 | :---: | :---: |

@@ -49,7 +49,7 @@ Below is the diagnostic catalog for all 10 samples included in the TLU environme
 
 Below is a summary of the main mathematical and physical metrics obtained from the Physics-Mathematics-Mathematics Engine and forensic filters for all 10 validation samples.
 
-| ID | Sample Name (Report Link) | Domain | Judgment | Max Spectral Radius ($\rho$) | Max Conservation Residual (Max Residual) | Max Flow Z-Score ($Z_v$) | Max State Z-Score ($Z_X$) | Net Income / Equivalent | Eastern Medicine Metaphor |
+| ID | Sample Name (Report Link) | Domain | Judgment | Max Spectral Radius ( $\rho$ ) | Max Conservation Residual (Max Residual) | Max Flow Z-Score ( $Z_v$ ) | Max State Z-Score ( $Z_X$ ) | Net Income / Equivalent | Eastern Medicine Metaphor |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- | :--- |
 | **0** | **[Healthy / Healthy Metabolism](./Sample_0_Healthy/README.md)** | Financial | 🟢 **NORMAL** | `0.00` | `0.00` | `4.90` | `4.14` | `+$46,432.59` | Peace of Qi & Blood, Normal Convection |
 | **1** | **[Wash Trade / Circular Ledger](./Sample_1_Wash_Trade/README.md)** | Financial | 🟡 **HIGH** | `0.75` | `0.00` | `3.87` | `1.97` | `+$201,321.16` | Empty Recirculation of Qi & Blood, Recirculation Lock |
@@ -65,7 +65,7 @@ Below is a summary of the main mathematical and physical metrics obtained from t
 > [!NOTE]
 >
 > * **Conservation Residual:** Measures the discrepancy between inflow and outflow in the system based on Kirchhoff's current law (mass conservation) (maximum absolute value per step). It takes positive values only for off-book embezzlement or journal entry errors in the financial domain.
-> * **Spectral Radius ($\rho$):** The maximum eigenvalue of the adjacency probability matrix. Recirculation loops reach warning levels at $\rho \ge 0.75$, and saturate at `1.00` in closed recirculation systems (traffic, markets, biological networks) as a mathematical consequence (Perron-Frobenius theorem).
+> * **Spectral Radius ( $\rho$ ):** The maximum eigenvalue of the adjacency probability matrix. Recirculation loops reach warning levels at $\rho \ge 0.75$, and saturate at `1.00` in closed recirculation systems (traffic, markets, biological networks) as a mathematical consequence (Perron-Frobenius theorem).
 > * **Net Income / Equivalent:** Accounting net income at the final step, or the domain equivalent (e.g., cumulative change in potential energy relative to the initial state for traffic and biological networks).
 
 ---
@@ -86,9 +86,9 @@ TLU's primary mathematical breakthrough is proving that **"seemingly completely 
 ### ⚖️ 2. Hyper-synchronization & Recirculation Pathologies (Hyper-synchronization / Recirculation)
 
 * **Targets:** [Sample 1 (Circular Ledger)](./Sample_1_Wash_Trade/README.md), [Sample 5 (Kyoto Traffic Deadlock)](./Sample_5_Kyoto_Traffic/README.md), [Sample 6 (Market Bipartite)](./Sample_6_Market_Stock_Flow/README.md), [Sample 7 (Market Users)](./Sample_7_Market_Cash_Flow/README.md), [Sample 9 (Epileptic Seizure)](./Sample_9_fMRI_Seizure/README.md)
-* **Common Physical Signature:** **Spectral radius ($\rho$) saturation at its boundary limit, and friction-driven energy depletion (entropy loss)**
+* **Common Physical Signature:** **Spectral radius ( $\rho$ ) saturation at its boundary limit, and friction-driven energy depletion (entropy loss)**
 * **Cross-Verification of Mechanism:**
-  * **Circular Ledger (Sample 1):** Fast round-trip journal entries without substance cause the spectral radius to surge to the warning level of **`0.75`**. Although the apparent activity level (internal energy $U$) grows steadily, the energy is wasted as round-trip frictional heat (entropy $T \times S$), depleting the system's actual stamina—free energy $F = U - TS$.
+  * **Circular Ledger (Sample 1):** Fast round-trip journal entries without substance cause the spectral radius to surge to the warning level of **`0.75`**. Although the apparent activity level (internal energy $U$ ) grows steadily, the energy is wasted as round-trip frictional heat (entropy $T \times S$ ), depleting the system's actual stamina—free energy $F = U - TS$.
   * **Urban Traffic (Sample 5):** When inflow vehicles exceed road capacity, the bottleneck around `23_四条烏丸` (Shijo-Karasuma) saturates the spectral radius to its boundary limit of **`1.00`** (deadlock). Macro entropy decreases slightly to `38.70`, but local friction (velocity variance) spikes, driving the macro temperature $T$ up from `457.24` to **`547.06`**. Free energy drops from `2,481,482` to **`2,478,826`**.
   * **Market Manipulation (Sample 6, 7):** High-speed matched orders between bot clusters or collusive accounts (`USR_003` ⇄ `USR_004`) saturate the spectral radius to the limit of **`1.00`**. In Sample 7, the free energy skewness collapses to **`-2.72`**, capturing the highly biased distribution of liquidity.
   * **Epilepsy (Sample 9):** Abnormal sine waves originating from the temporal lobe (`03_Temporal_Lobe`) force the entire brain into phase-locking, saturating the spectral radius to **`1.00`**. Physical metrics expose this hyper-synchronization in a statistical blind spot where the PCA explanation ratio (PC1) remains frozen at `37.5%`.
@@ -108,7 +108,7 @@ TLU's primary mathematical breakthrough is proving that **"seemingly completely 
 * **Targets:** [Sample 0 (Normal Convection)](./Sample_0_Healthy/README.md)
 * **Common Physical Signature:** **Perfect zero conservation residuals, spectral radius of `0.00`, and healthy steady growth of free energy**
 * **Mechanism Verification:**
-  * No recirculation loops ($\rho = 0.00$) or mass leaks (residuals = `0.00`) occur; all sectors are connected organically. Free energy $F$ grows healthily from `2.30 × 10^6` to `3.87 × 10^6`.
+  * No recirculation loops ( $\rho = 0.00$ ) or mass leaks (residuals = `0.00`) occur; all sectors are connected organically. Free energy $F$ grows healthily from `2.30 × 10^6` to `3.87 × 10^6`.
   * The Z-score peaks in July at **`4.90`** due to seasonal business variations, but since topology and conservation laws remain sound, it is correctly triaged as a seasonal false positive.
 
 ---

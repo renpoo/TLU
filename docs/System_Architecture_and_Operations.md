@@ -103,5 +103,5 @@ $$u(t) = -K_{lqr} \cdot X(t)$$
 The effect of this control is visualized. It shows attractor convergence speed and error reduction rates (`control_error_convergence.png`).
 
 * **Intervention Examples:**
-  * **Ledger Validation:** Dampens dynamic loadings on loop hubs. This pulls the spectral radius back into a safe zone ($\rho < 0.75$).
+  * **Ledger Validation:** Dampens dynamic loadings on loop hubs. This pulls the spectral radius back into a safe zone ( $\rho < 0.75$ ).
   * **Signal Phase Offset:** Adjusts traffic light offsets near bottlenecks. This cancels out deadlocked circulation waves.

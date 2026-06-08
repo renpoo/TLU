@@ -13,9 +13,9 @@
 
 * **Overall Status:** 🟡 **Acute Local Flow Deficiency Detected (Localized Brain Ischemia / Stroke)**
 * **Severity:** 🟡 **HIGH (Ischemic Local Impairment)**
-* **Summary:** 
+* **Summary:**
   The system (fMRI brain activity network) exhibits localized circulatory failure (ischemia) in the BOLD signal flow. Inflow to the motor cortex (`00_Motor_Cortex`) was blocked by approximately 95% at time step **`t=30` (10:05:00)**.
-  The explanation variance ratio of the first principal component (PC1) in Principal Component Analysis (PCA) rose from **`37.60%`** ($t=29$) to **`94.72%`** ($t=30$). The principal component vector concentrated in the negative direction of the motor cortex (**`-0.8942`**), indicating stiffness locking. The motor cortex Z-Score reached **`51.04`** at $t=30$. Based on these metrics, we diagnose acute occlusion of the middle cerebral artery (MCA) branch supplying the motor cortex, causing local ischemia and metabolic collapse.
+  The explanation variance ratio of the first principal component (PC1) in Principal Component Analysis (PCA) rose from **`37.60%`** ( $t=29$ ) to **`94.72%`** ( $t=30$ ). The principal component vector concentrated in the negative direction of the motor cortex (**`-0.8942`**), indicating stiffness locking. The motor cortex Z-Score reached **`51.04`** at $t=30$. Based on these metrics, we diagnose acute occlusion of the middle cerebral artery (MCA) branch supplying the motor cortex, causing local ischemia and metabolic collapse.
 
 ---
 
@@ -36,6 +36,7 @@ The following graphs show the cumulative flow and residuals:
   ![P/L Cumulative Trend](readme_plots/000_0_1__PL_Trend.png)
 
 #### 🔍 Blind Spot of Traditional Monitoring
+
 When the overall activity level (total volume) is maintained, conventional methods miss local flow blockages.
 At the final step, the cumulative balance of the motor cortex is `40,052.43`. This does not show a significant difference from other regions (prefrontal cortex: `115,078.12`, temporal lobe: `115,335.59`). This occurs because pre-occlusion data mixes with cumulative values, diluting the acute occlusion signal after $t=30$. Static average-value analysis cannot identify the occlusion node or the inflection point.
 
@@ -71,6 +72,7 @@ The intrinsic structure of the system shifted at the moment of the anomaly.
   ![PC1 Eigenvector](readme_plots/000_2_3__eigenvector_evolution.png)
 
 #### 📊 Five-Point Stiffness Matrix Sequence Analysis
+
 * **① Normal Period (t=0 / 10:00:00):**
   ![Stiffness t0](readme_plots/000_2_1__structural_stiffness.t.00000.png)
   Functional connectivity is uniform, maintaining joint stiffness.
@@ -93,6 +95,7 @@ The intrinsic structure of the system shifted at the moment of the anomaly.
   ![System Stability](readme_plots/004_1_2__system_stability.png)
 
 #### Spectral Radius "1.00" Constraint of Probability Transition Matrix
+
 The brain network is a connected system without isolated nodes. Due to mathematical properties of the probability transition matrix, the spectral radius remains locked at `1.0000`.
 Therefore, the spectral radius alone cannot detect this pathology. Local topological destruction is indicated by the "reduction of connection edges (inflow cutoff)" and the "stiffness lock of the PC1 eigenvector."
 
@@ -119,7 +122,7 @@ Statistical physics metrics show the collapse of brain metabolism.
 * **T-S Diagram:**
   ![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
-The average entropy $S$ is **`9.36`** and average free energy $F$ is **`413,922.35`** across the period. Following the block at $t=30$, free energy $F$ decreased, reaching a minimum of **`167,265.39`** at the final step ($t=59$). The potential energy to maintain activity is depleted.
+The average entropy $S$ is **`9.36`** and average free energy $F$ is **`413,922.35`** across the period. Following the block at $t=30$, free energy $F$ decreased, reaching a minimum of **`167,265.39`** at the final step ( $t=59$ ). The potential energy to maintain activity is depleted.
 The T-S diagram shows temperature and entropy decreasing after the occlusion, contracting the potential energy.
 
 ### 4.5. Identifying the Ischemic Lesion via 3D Spatio-Temporal Plots
@@ -151,7 +154,7 @@ Adjacent nodes (prefrontal cortex: `12.36`, parietal lobe: `17.12`) also show sy
 
 * **Specific Intervention Plan:**
   1. **Thrombolytic Therapy (tPA Infusion):**
-     Immediately after occlusion ($t=30$ to $33$), reduce the connection stiffness of the inflow path to the motor cortex (revascularization). This restores inflow to the normal level (~`540`) and pulls the PC1 ratio back to the normal range (~37%).
+     Immediately after occlusion ( $t=30$ to $33$ ), reduce the connection stiffness of the inflow path to the motor cortex (revascularization). This restores inflow to the normal level (~`540`) and pulls the PC1 ratio back to the normal range (~37%).
   2. **Phase Support via Transcranial Magnetic Stimulation (TMS LQR Feedback):**
      Apply anti-phase stimulation pulses to the prefrontal cortex (`02_Prefrontal_Cortex`) and parietal lobe (`01_Parietal_Lobe`) based on the LQR sensitivity matrix. This offsets the load on the motor cortex via collateral pathways, preventing free energy collapse.
      ![Control LQR](readme_plots/004_1_3__control_lqr_performance_space.png)

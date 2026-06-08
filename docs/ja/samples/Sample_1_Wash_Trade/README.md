@@ -23,24 +23,28 @@
 累積（Cumulative）と期間別（Periodic / 単月）の財務諸表プロットを並べて比較します。異常値のスパイクが特定月（1月, 2月, 5月）に集中して発生しています。
 
 ### B/S 資産・資本推移の比較（累積 vs 期間別）
+
 * **累積 B/S Trend:**
   ![B/S Trend](readme_plots/000_0_1__BS_Trend.png)
 * **期間別（単月） B/S Trend (Periodic):**
   ![B/S Trend Periodic](readme_plots/000_0_1__BS_Trend_Periodic.png)
 
 ### B/S ブロック合計の比較（累積 vs 期間別）
+
 * **累積 B/S Block Total:**
   ![B/S Block Total](readme_plots/000_0_1__BS_Block_Total.png)
 * **期間別（単月） B/S Block Total (Periodic):**
   ![B/S Block Total Periodic](readme_plots/000_0_1__BS_Block_Total_Periodic.png)
 
 ### P/L 売上・費用推移の比較（累積 vs 期間別）
+
 * **累積 P/L Trend:**
   ![P/L Trend](readme_plots/000_0_1__PL_Trend.png)
 * **期間別（単月） P/L Trend (Periodic):**
   ![P/L Trend Periodic](readme_plots/000_0_1__PL_Trend_Periodic.png)
 
 ### P/L ウォーターフォール図の比較（累積 vs 期間別）
+
 * **累積 P/L Waterfall:**
   ![P/L Waterfall Total](readme_plots/000_0_1__PL_Waterfall_Total.png)
 * **期間別（単月） P/L Waterfall (Periodic):**
@@ -56,6 +60,7 @@
 循環取引の発生は、ネットワークトポロジーの構造的な歪みと、特定の勘定科目間における「剛性（Stiffness）のロック」として現れます。
 
 ### 剛性行列（Stiffness Matrix）の時系列シーケンス
+
 循環取引が発生した月には、現預金（`ACC_Cash`）と売掛金（`ACC_Accounts_Receivable`）の間の結合が硬直化します。
 
 * **① 2020-01 (t=0: 還流開始時):**
@@ -70,12 +75,14 @@
   ![Stiffness t11](readme_plots/000_2_1__structural_stiffness.t.00011.png)
 
 ### 主成分分析（PCA）と固有ベクトル推移
+
 主成分分析におけるエネルギー寄与率は、アノマリーの発生期（t=4）に第1主成分（PC1）が **`95.28%`** に達します。流動性が支配されていることを示します。
 
 * **PCA 主要軸比率 (PCA Principal Axes Ratio):**
   ![PCA Ratio](readme_plots/000_2_2__principal_axes_ratio.png)
 
 PC1, PC2, PC3 の固有ベクトルを分析します。異常取引を主導した勘定科目の影響度がわかります。
+
 * **PC1 固有ベクトル推移:**
   ![PC1 Eigenvector](readme_plots/000_2_3__eigenvector_evolution.png)
   第1主成分では `01_ACC_Accounts_Receivable` (`-0.7162`) と `03_ACC_Cash` (`0.3524`)、`07_ACC_Sales_Revenue` (`0.5183`) に成分が集中します。特定の還流ペアが全社の流動性を支配していることを示します。
@@ -85,12 +92,14 @@ PC1, PC2, PC3 の固有ベクトルを分析します。異常取引を主導し
   ![PC3 Eigenvector](readme_plots/000_2_3__eigenvector_evolution_pc3.png)
 
 ### 最大スペクトル半径 $\rho$ （システム安定性）
+
 最大スペクトル半径は、還流の発生月（1月, 2月, 5月）に上昇します。トポロジー的に資金還流閉路が構築されていた証拠を示します。
 
 * **システム安定性指標 (Spectral Radius):**
   ![System Stability](readme_plots/004_1_2__system_stability.png)
 
 ### ネットワーク・トポロジー時系列シーケンス
+
 * **① 2020-01 (t=0: 現預金 ⇄ 売掛金の双方向エッジが形成):**
   ![Topology t0](readme_plots/002_1_2__network_topology.t.00000.png)
 * **② 2020-04 (t=3: 通常の流路へ分散):**
@@ -109,6 +118,7 @@ PC1, PC2, PC3 の固有ベクトルを分析します。異常取引を主導し
 本サンプルの熱力学的挙動は、エネルギー浪費（摩擦熱）の存在と、AI統計モデルの死角を示します。
 
 ### 熱力学エネルギー構造の可視化
+
 * **熱力学エネルギースタック:**
   ![Thermodynamics Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
 * **T-S ダイアグラム (T-S Diagram):**
@@ -120,14 +130,16 @@ PC1, PC2, PC3 の固有ベクトルを分析します。異常取引を主導し
    T-Sダイアグラムは、閉じた卵型サイクルを描します。この閉路が囲む面積は、外部に仕事をせずシステム内部で放出された摩擦熱の総量です。還流による空転を示します。
 
 ### 3D 空間での局所熱力学的異常
-* **3D 局所エントロピー ($s_i$):**
+
+* **3D 局所エントロピー ( $s_i$ ):**
   ![3D Local Entropy](readme_plots/001_1_2_1__3d_local_entropy.png)
   `ACC_Cash` が `ACC_Accounts_Receivable` への迂回流路（Wash Funding）を形成します。流出確率の偏りが生じます。還流月に局所エントロピーの上昇が検知されます。
-* **3D 局所温度 ($T_i$):**
+* **3D 局所温度 ( $T_i$ ):**
   ![3D Local Temperature](readme_plots/001_1_2_2__3d_local_temperature.png)
   還流に関与する3ノード（現預金、売掛金、売上）において、残高ボラティリティの急増を示す局所温度のスパイクが発生しています。
 
 ### 3D ミクロ情報幾何学と「茹でガエル現象」（モデル汚染）
+
 * **3D Micro KL Drift (情報幾何学的変化量):**
   ![3D Micro KL Drift](readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 * **3D Micro Z-Score (残高の位置偏差):**

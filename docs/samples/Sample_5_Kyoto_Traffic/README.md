@@ -11,10 +11,10 @@
 
 * **Overall Status:** 🟡 **Local Thermodynamic Freezing of Urban Traffic Network (Kyoto Gridlock / Localized Freeze)**
 * **Severity:** 🟡 **HIGH (Dysfunctional)**
-* **Summary:** 
-  The system is a closed flow system where the total number of vehicles (internal energy $U = 250,000.0$) is conserved. In January 2021 ($t=12$), inflow capacity restrictions (simulating road construction or accidents) began at the main intersection **`21_ShijoKarasuma`** (Shijo-Karasuma). This triggered flow stoppage.
-  This anomaly is characterized by local thermodynamic freezing (solidification) rather than mass leakage. The local temperature (flow volatility) at Shijo-Karasuma fell from `97.15` ($t=11$) to **`24.25`** at $t=13$ (2021-02), entering a frozen state. This formed a steep temperature gradient (local thermal stress / cold-island effect) with adjacent intersections.
-  At the upstream intersection **`23_ShijoMuromachi`** (Shijo-Muromachi), the blocked outflow route reduced local entropy (spatial flow path dispersion $s_i$) from its normal level (~`1.99`) to **`1.6596`** ($t=23$). The traffic is locked in a deadlock.
+* **Summary:**
+  The system is a closed flow system where the total number of vehicles (internal energy $U = 250,000.0$ ) is conserved. In January 2021 ( $t=12$ ), inflow capacity restrictions (simulating road construction or accidents) began at the main intersection **`21_ShijoKarasuma`** (Shijo-Karasuma). This triggered flow stoppage.
+  This anomaly is characterized by local thermodynamic freezing (solidification) rather than mass leakage. The local temperature (flow volatility) at Shijo-Karasuma fell from `97.15` ( $t=11$ ) to **`24.25`** at $t=13$ (2021-02), entering a frozen state. This formed a steep temperature gradient (local thermal stress / cold-island effect) with adjacent intersections.
+  At the upstream intersection **`23_ShijoMuromachi`** (Shijo-Muromachi), the blocked outflow route reduced local entropy (spatial flow path dispersion $s_i$ ) from its normal level (~`1.99`) to **`1.6596`** ( $t=23$ ). The traffic is locked in a deadlock.
 
 ---
 
@@ -41,7 +41,7 @@ In traffic networks, the cumulative residual vehicle stock (B/S equivalent) even
 * **P/L Flow Periodic Trend:**
   ![P/L Periodic Trend](readme_plots/000_0_1__PL_Trend_Periodic.png)
 
-* **Observation and Blind Spots:** 
+* **Observation and Blind Spots:**
   Examine the bottom half of the P/L periodic trend graph. The color band for Shijo-Karasuma (`ShijoKarasuma`) shrinks and disappears after **January 2021 (t=12)** when the capacity limit began.
   Standard static metrics can misinterpret this as "cost reduction (reduced intersection load)." In reality, the key intersection is frozen, destroying system balance. Conventional aggregation cannot detect this congestion. (The starting mass is managed at `GojoHorikawa`, which is mapped to `Equity`).
 
@@ -51,7 +51,7 @@ In traffic networks, the cumulative residual vehicle stock (B/S equivalent) even
 
 * **Diagnosis:** **Localized Traffic Gridlock**
 * **Mechanism of Bottleneck (Original Traffic Stream Verified):**
-  After January 2021 ($t=12$), the inflow capacity of the Shijo-Karasuma intersection was restricted.
+  After January 2021 ( $t=12$ ), the inflow capacity of the Shijo-Karasuma intersection was restricted.
   1. **Upstream Accumulation and Phase Transition:**
      Vehicles accumulated at the upstream intersection `23_ShijoMuromachi` (Shijo-Muromachi). The outflow route was blocked, raising KL Drift to **`1.7572`** in 2021-01.
   2. **Loss of Route Options:**
@@ -83,7 +83,7 @@ The conservation residual (`System Conservation Residual`) remains exactly **`0.
 ### 4.2. Stiffness Connection & PCA (Stiffness & PCA)
 
 The stiffness matrix evolution reveals that the entire network hardens over time.
-In PCA, the PC1 contribution ratio rose from `54.65%` before the anomaly ($t=6$) to **`64.70%`** in the final month ($t=23$). Principal weights lock onto `14_NijoShinmachi` (`0.5034`) and `11_NijoKarasuma` (`-0.4200`), showing that the system's flexibility has degraded.
+In PCA, the PC1 contribution ratio rose from `54.65%` before the anomaly ( $t=6$ ) to **`64.70%`** in the final month ( $t=23$ ). Principal weights lock onto `14_NijoShinmachi` (`0.5034`) and `11_NijoKarasuma` (`-0.4200`), showing that the system's flexibility has degraded.
 
 * **Evolution of Structural Stiffness Matrix:**
   * **2020-01 (t=0 - Low-stiffness flowing state):**
@@ -112,7 +112,7 @@ The maximum spectral radius is exactly **`1.0000`** throughout. This is a mathem
 
 ### 4.4. Thermodynamic Indicators and 3D Topology
 
-The total vehicle count (internal energy $U = 250,000.0$) remains conserved. However, the macro entropy $S$ fell from `40.69` ($t=11$) to **`39.18`** ($t=12$) after the flow limits began.
+The total vehicle count (internal energy $U = 250,000.0$ ) remains conserved. However, the macro entropy $S$ fell from `40.69` ( $t=11$ ) to **`39.18`** ( $t=12$ ) after the flow limits began.
 The T-S diagram displays a closed freezing loop after January 2021, where both entropy and temperature shrink together. This is physical evidence that the system has lost flow and is locked in deadlock.
 
 * **Thermodynamic Characteristics & 3D Trajectory:**
@@ -121,6 +121,7 @@ The T-S diagram displays a closed freezing loop after January 2021, where both e
   ![3D Phase Portrait](readme_plots/000_1_8__phase_portrait_3d.png)
 
 **【Visualization of 3D Local Thermal Stress】**
+
 * **3D Local Entropy & Temperature:**
   ![3D Local Entropy](readme_plots/001_1_2_1__3d_local_entropy.png)
   ![3D Local Temperature](readme_plots/001_1_2_2__3d_local_temperature.png)
@@ -128,6 +129,7 @@ The T-S diagram displays a closed freezing loop after January 2021, where both e
   ![3D Local Gradient](readme_plots/001_1_2_3__3d_local_gradient.png)
 
 **【Identifying Structural Changes via 3D Micro KL Drift】**
+
 * **3D Micro KL Drift:**
   ![3D Micro KL Drift](readme_plots/002_2_2_1__3d_micro_kl_drift.png)
   When capacity limits began in **2021-01 (t=12)**, a KL Drift wall (`1.7572`) appeared around the Shijo-Karasuma coordinates, capturing the structural phase transition.
@@ -142,7 +144,7 @@ The T-S diagram displays a closed freezing loop after January 2021, where both e
 * **Intervention Protocol: Signal Phase Offset Intervention**
 * **LQR Intervention Strain Energy (Identifying Leverage Points):**
   Because the system is closed, targets are selected to minimize the overall strain energy (`ik_strain_energy`) caused by the intervention.
-  At the start of the anomaly ($t=12$), the intersections with the lowest strain energy are:
+  At the start of the anomaly ( $t=12$ ), the intersections with the lowest strain energy are:
   1. **`24_ShijoShinmachi` (Shijo-Shinmachi: strain `0.0376`)**
   2. **`16_SanjoKarasuma` (Sanjo-Karasuma: strain `0.0392`)**
   Directly controlling the congested **`21_ShijoKarasuma` (Shijo-Karasuma: strain `0.0665`)** consumes high strain energy.

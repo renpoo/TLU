@@ -10,7 +10,7 @@ We describe the state transitions of the network as a discrete state equation ba
 
 $$X(t+1) = A \cdot X(t) + B \cdot u(t)$$
 
-We monitor the "spectral radius ($\rho$)", which is the maximum eigenvalue of the connection matrix $A$:
+We monitor the "spectral radius ( $\rho$ )", which is the maximum eigenvalue of the connection matrix $A$:
 
 $$\rho = \max_{i} |\lambda_i|$$
 

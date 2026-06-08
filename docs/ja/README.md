@@ -23,7 +23,7 @@ TLUは、時系列データを「力の流れ」として再定義します。�
 | # | ドキュメントタイトル（英語版） | 対応する日本語版 | コアコンテンツ |
 | :---: | :--- | :--- | :--- |
 | **1** | **000-005 Mathematical Analysis Guides** (placed in `samples/`):<br>・**[000_0: Statistics](../samples/000_0_Basic_Statistics.md)** / **[000_1: Kinematics](../samples/000_1_Dynamics_Kinematics.md)** / **[000_2: Stiffness & PCA](../samples/000_2_Stiffness_PCA.md)**<br>・**[001_1: Thermodynamics](../samples/001_1_Thermodynamics.md)** / **[001_2: Local Entropy](../samples/001_2_Local_Entropy.md)** / **[001_3: Local Temperature](../samples/001_3_Local_Temperature.md)** / **[001_4: Local Energy Gradient](../samples/001_4_Local_Gradient.md)** / **[001_5: Local Internal Energy](../samples/001_5_Local_Internal_Energy.md)**<br>・**[002_1: Information Geometry](../samples/002_1_Information_Geometry.md)** / **[002_2: Conservation & Auditing](../samples/002_2_Forensics.md)**<br>・**[003_1: Kinematics](../samples/003_1_Kinematics.md)**<br>・**[004_1: LQR Control](../samples/004_1_Control_Theory.md)** / **[004_2: Intervention Sensitivity](../samples/004_2_Stability.md)**<br>・**[005_1: Wave Mechanics](../samples/005_1_Wave_Mechanics.md)** / **[005_2: 1/f Fluctuation](../samples/005_2_Coherence.md)** | 000〜005番系 数理解析ガイド（`samples/` 以下に配置）：<br>・**[000_0: 統計](samples/000_0_Basic_Statistics.md)** / **[000_1: 運動学](samples/000_1_Dynamics_Kinematics.md)** / **[000_2: 剛性・PCA](samples/000_2_Stiffness_PCA.md)**<br>・**[001_1: 熱力学](samples/001_1_Thermodynamics.md)** / **[001_2: 局所エントロピー](samples/001_2_Local_Entropy.md)** / **[001_3: 局所温度](samples/001_3_Local_Temperature.md)** / **[001_4: 局所エネルギー・勾配](samples/001_4_Local_Gradient.md)** / **[001_5: 局所内部エネルギー](samples/001_5_Local_Internal_Energy.md)**<br>・**[002_1: 情報幾何](samples/002_1_Information_Geometry.md)** / **[002_2: 保存則・監査](samples/002_2_Forensics.md)**<br>・**[003_1: 逆運動学](samples/003_1_Kinematics.md)**<br>・**[004_1: LQR制御](samples/004_1_Control_Theory.md)** / **[004_2: 介入感度](samples/004_2_Stability.md)**<br>・**[005_1: 波動力学](samples/005_1_Wave_Mechanics.md)** / **[005_2: 1/fゆらぎ](samples/005_2_Coherence.md)** | TLUの主要8コアモジュール（000〜005番系）の数理的・物理的基礎理論と、全10個の検証サンプルに対応する実機可視化グラフをモジュールごとに分割し、診断解釈ガイド群として再編したものです。 |
-| **2** | **[02. System Architecture & Simulation Operations Guide](../System_Architecture_and_Operations.md)** | **[02. システムアーキテクチャとシミュレーション運用ガイド](System_Architecture_and_Operations.md)** | パイプライン・コンテナ運用、デザインテーマ管理（JSON）、障害込みダミー・データ生成スクリプト、および線形最適制御（LQR）シミュレーションモデル。 |
+| **2** | **[System Architecture & Simulation Operations Guide](../System_Architecture_and_Operations.md)** | **[システムアーキテクチャとシミュレーション運用ガイド](System_Architecture_and_Operations.md)** | パイプライン・コンテナ運用、デザインテーマ管理（JSON）、障害込みダミー・データ生成スクリプト、および線形最適制御（LQR）シミュレーションモデル。 |
 | **3** | **[LLM Diagnostic Manual (Supreme prompt & Operations)](../LLM_Diagnostic_Manual.md)** | **[LLM メタ検査マニュアル（最高メタレベルシステムプロンプト＆運用手順）](LLM_Diagnostic_Manual.md)** | 物理数学エンジンの数値からAIが客観的なカルテを自動生成するためのプロトコル。統計的偽陽性判定と、原本データへのファクトチェック義務化。 |
 | **4** | **[Universal Forensic Cross-Verification Registry](../samples/README.md)** | **[数理解析ガイド＆検証サンプル総合目次](samples/README.md)** | TLUに実装されている全10種類の検証サンプルの判定判定、物理数学パラメータ限界値、および線形最適制御（LQR）介入ポイント・ガイド。 |
 
@@ -44,12 +44,12 @@ TLUは、東洋医学 of 語彙を用います。システムを「経絡」（�
 
 | 物理変数 | 古典力学・熱力学の定義 | 財務会計ドメイン | 都市交通ドメイン | 株式市場ドメイン | 生体脳神経 (fMRI) ドメイン |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **質量 ($m_i$)** | 慣性 / エネルギー貯蔵タンク | 勘定残高 | 交差点内の滞留車両数 | 口座保有の資本金 | BOLD信号の変化量 |
-| **流量 ($f_{ij}$)** | 速度 / 質量移動 | 仕訳の金額 | 通過車両数（台/秒） | 約定資金や株式の移動 | 神経間の信号流量 |
-| **剛性 ($k_{ij}$)** | 弾性 / ばね定数 | 取引関係の固着度 | 交差点の流出入の許容量 | 注文対当の同期度 | 活動の同調度 |
-| **粘性 ($c_{ij}$)** | 摩擦 / ダンパー制動 | 決済までのタイムラグ（30〜90日） | 渋滞の抵抗度 | 約定遅延、注文・成立価格のズレ | 信号伝播の伝達遅延 |
-| **エントロピー ($S$)** | 無秩序度 / 摩擦熱損失 | 架空循環取引（売上水増し） | 渋滞による摩擦熱の発生 | USR間の仮装対当取引 | 脳神経の過同期 (てんかんなど) |
-| **自由エネルギー ($F$)** | 有効仕事ポテンシャル | 税引前純営業利益 | 航空車両の流動ポテンシャル | 市場の真の配分効率 | 脳の認知・情報処理キャパシティ |
+| **質量 ( $m_i$ )** | 慣性 / エネルギー貯蔵タンク | 勘定残高 | 交差点内の滞留車両数 | 口座保有の資本金 | BOLD信号の変化量 |
+| **流量 ( $f_{ij}$ )** | 速度 / 質量移動 | 仕訳の金額 | 通過車両数（台/秒） | 約定資金や株式の移動 | 神経間の信号流量 |
+| **剛性 ( $k_{ij}$ )** | 弾性 / ばね定数 | 取引関係の固着度 | 交差点の流出入の許容量 | 注文対当の同期度 | 活動の同調度 |
+| **粘性 ( $c_{ij}$ )** | 摩擦 / ダンパー制動 | 決済までのタイムラグ（30〜90日） | 渋滞の抵抗度 | 約定遅延、注文・成立価格のズレ | 信号伝播の伝達遅延 |
+| **エントロピー ( $S$ )** | 無秩序度 / 摩擦熱損失 | 架空循環取引（売上水増し） | 渋滞による摩擦熱の発生 | USR間の仮装対当取引 | 脳神経の過同期 (てんかんなど) |
+| **自由エネルギー ( $F$ )** | 有効仕事ポテンシャル | 税引前純営業利益 | 航空車両の流動ポテンシャル | 市場の真の配分効率 | 脳の認知・情報処理キャパシティ |
 | **治療点 (LQR)** | 制御入力ベクトル | 重点勘定科目の絞り込み | 道路信号周期の調整 | 相場操縦口座の特定 | 経頭蓋磁気刺激 (TMS) の焦点 |
 
 ---
@@ -72,7 +72,7 @@ TLUは、システム内に発生した異常を検出するために4つの物�
 
 ---
 
-### 2. トポロジーとシステム安定度 (スペクトル半径 $\rho$)
+### 2. トポロジーとシステム安定度 (スペクトル半径 $\rho$ )
 
 接続行列の最大固有値である「スペクトル半径」を計算します。ネットワーク内に還流閉路（自己循環）が形成されているかを検証します。スペクトル半径が警報ライン `1.00` に達したとします。この場合、システムは自己循環にロックされて暴走します。これを数学的に実証します。
 

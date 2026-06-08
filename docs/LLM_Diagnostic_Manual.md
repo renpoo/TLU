@@ -52,7 +52,7 @@ Each analytical module maps to specific physical contexts:
     * **Analysis:** Forward Kinematics (FK) reachability space and Inverse Kinematics (IK) optimization to minimize tracking errors and identify singular configurations.
 7. **Control Theory & LQR (Prefix: `004_1`, `004_2`):**
     * **Eastern Medicine Metaphor:** Pulse runaway, meridian adjustments, acupuncture points.
-    * **Analysis:** Loop detection (e.g., circular trades, gridlocks, neural synchrony) via spectral radius ($\rho \ge 1.0$). LQR sensitivity analysis to locate key intervention nodes and design dynamic pulses.
+    * **Analysis:** Loop detection (e.g., circular trades, gridlocks, neural synchrony) via spectral radius ( $\rho \ge 1.0$ ). LQR sensitivity analysis to locate key intervention nodes and design dynamic pulses.
 8. **Signal Processing & Wave Mechanics (Prefix: `005_1`, `005_2`):**
     * **Eastern Medicine Metaphor:** Arrhythmia, silence of death, artificial pacemakers.
     * **Analysis:** Loss of fractal pink noise (1/f fluctuation). Evaluation of phase coherence and phase drift to identify artificial transaction synchronization.
@@ -66,7 +66,7 @@ Listing individual findings is not enough. You must synthesize them. Weigh all m
 ### 2.1 Discarding Superficial Positives
 
 * **Rule:** Prioritize deep physical metrics (thermodynamics, viscosity, topology) over surface-level metrics.
-* **Example:** If revenues spike but free energy depletes ($F < -0.10$) and the conservation residual is non-zero. The growth is not healthy metabolism. Diagnose it as "pathological bleeding (disguised embezzlement)." Set the final status to **Critical**.
+* **Example:** If revenues spike but free energy depletes ( $F < -0.10$ ) and the conservation residual is non-zero. The growth is not healthy metabolism. Diagnose it as "pathological bleeding (disguised embezzlement)." Set the final status to **Critical**.
 
 ### 2.2 Synthesizing Contradictions
 
@@ -80,11 +80,11 @@ Listing individual findings is not enough. You must synthesize them. Weigh all m
 ### 2.4 Overcoming Model Pollution (Boiled Frog Effect)
 
 * **Rule:** Statistical models (Z-scores) adapt to prolonged anomalies. They treat anomalies as the baseline. This causes Z-score warnings to flatten. Overcome this blind spot by prioritizing structural metrics: conservation residuals, spectral radius, and stiffness locks.
-* **Example:** In circular trading, Z-scores fall back to normal levels after months. However, the spectral radius remains high ($\rho \ge 0.75$). The T-S diagram displays a closed cycle. Conclude that the locked circulation persists.
+* **Example:** In circular trading, Z-scores fall back to normal levels after months. However, the spectral radius remains high ( $\rho \ge 0.75$ ). The T-S diagram displays a closed cycle. Conclude that the locked circulation persists.
 
 ### 2.5 Statistical False Positive Triaging
 
-* **Rule:** Z-scores may exceed the threshold of `3.0` due to small sample sizes or seasonal congestion. If conservation residuals and spectral radius are normal (residual `0.00`, $\rho = 0.00$), reject the alert as a false positive.
+* **Rule:** Z-scores may exceed the threshold of `3.0` due to small sample sizes or seasonal congestion. If conservation residuals and spectral radius are normal (residual `0.00`, $\rho = 0.00$ ), reject the alert as a false positive.
 
 ### 2.6 Connecting to External Proof
 
@@ -102,7 +102,7 @@ Translate pure physical and mathematical data into domain-specific terms. Apply 
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Mass** | **Qi / Blood** | Account balance | Vehicles on road | Account assets | Metabolic blood flow |
 | **Flux** | **Circulation** | Transaction amount | Vehicles per second | Trade value | Connectivity strength |
-| **Spectral Radius ($\rho \ge 1.0$)** | **Qi Runaway / Stasis** | Circular wash trades | Traffic gridlock | USR collusion loop | Neural hyper-synchrony |
+| **Spectral Radius ( $\rho \ge 1.0$ )** | **Qi Runaway / Stasis** | Circular wash trades | Traffic gridlock | USR collusion loop | Neural hyper-synchrony |
 | **Mass Leak** | **Bleeding** | Embezzlement | Ghost vehicles | Off-book cash leak | Vascular rupture |
 | **Stiffness Lock** | **Blood Clot** | Account synchronization | Road system paralysis | Volume hijacking | Vascular occlusion |
 | **Viscosity** | **Qi Stagnation** | Payment delay (30-90 days) | Traffic drag / Delay | Execution latency | Propagation delay |

@@ -47,7 +47,7 @@ This section presents the analysis of the fractal noise (1/f noise) spectrum (`0
 ### 🟡 Sample 3 (Unbalanced Mistake: Unbalanced Mistake)
 
 * **Fractal Noise (1/f Noise) Spectrum (`005_2_1_fractal_noise_spectrum.png`)**
-  * **Clinical Commentary:** Impulse noise overlays only during the temporary mistake step. This distorts the fractal slope. It returns to "1/f noise" ($\beta \approx 1.0$) in the next step. Self-correction occurs.
+  * **Clinical Commentary:** Impulse noise overlays only during the temporary mistake step. This distorts the fractal slope. It returns to "1/f noise" ( $\beta \approx 1.0$ ) in the next step. Self-correction occurs.
   * ![Sample 3 Fractal Noise](Sample_3_Unbalanced_Mistake/readme_plots/005_2_1_fractal_noise_spectrum.png)
 
 ---

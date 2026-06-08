@@ -72,7 +72,7 @@ Below is the catalog of 10 verification samples. Click the titles to read the de
 
 This matrix lists the peak metrics calculated by the physics engine and forensic filters:
 
-| ID | Case Study (Link) | Domain | Status | Max Spectral Radius ($\rho$) | Max Residual | Max Velocity Z-Score ($Z_v$) | Max State Z-Score ($Z_X$) | Net Income / Potential | Eastern Metaphor |
+| ID | Case Study (Link) | Domain | Status | Max Spectral Radius ( $\rho$ ) | Max Residual | Max Velocity Z-Score ( $Z_v$ ) | Max State Z-Score ( $Z_X$ ) | Net Income / Potential | Eastern Metaphor |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- | :--- |
 | **0** | **[Healthy Metabolism](./Sample_0_Healthy/README.md)** | Finance | 🟢 **NORMAL** | `0.00` | `0.00` | `4.90` | `4.14` | `+$46,432.59` | Peace of Qi and Blood |
 | **1** | **[Wash Trade](./Sample_1_Wash_Trade/README.md)** | Finance | 🟡 **HIGH** | `0.75` | `0.00` | `3.87` | `1.97` | `+$201,321.16` | Empty recirculation, loop lock |
@@ -86,8 +86,9 @@ This matrix lists the peak metrics calculated by the physics engine and forensic
 | **9** | **[fMRI Seizure](./Sample_9_fMRI_Seizure/README.md)** | Brain | 🔴 **CRITICAL** | `1.00` | `0.00` | `24.04` | `0.00` | `-$500,000.00` | Brain hyper-synchrony, runaway Qi |
 
 > [!NOTE]
+>
 > * **Conservation Residual:** Indicates mismatch between inflows and outflows based on Kirchhoff's current law. Positive values occur only during embezzlement or ledger mistakes in the financial domain.
-> * **Spectral Radius ($\rho$):** Maximum eigenvalue of the transition probability matrix. Values $\rho \ge 0.75$ trigger warnings. Saturation at `1.00` is mathematically expected in closed circulation systems (traffic, market, brain) due to the Perron-Frobenius theorem.
+> * **Spectral Radius ( $\rho$ ):** Maximum eigenvalue of the transition probability matrix. Values $\rho \ge 0.75$ trigger warnings. Saturation at `1.00` is mathematically expected in closed circulation systems (traffic, market, brain) due to the Perron-Frobenius theorem.
 > * **Net Income / Potential:** Accountants' net income at the final step, or the equivalent potential value (cumulative potential change in traffic and brain networks).
 
 ---
@@ -108,9 +109,9 @@ TLU proves that different anomalies across distinct domains show identical physi
 ### ⚖️ 2. Hyper-synchronization / Recirculation
 
 * **Targets:** [Sample 1 (Circular Ledger)](./Sample_1_Wash_Trade/README.md), [Sample 5 (Kyoto Traffic Deadlock)](./Sample_5_Kyoto_Traffic/README.md), [Sample 9 (Epileptic Seizure)](./Sample_9_fMRI_Seizure/README.md)
-* **Common Physical Signature:** **Spectral radius ($\rho$) saturation at its boundary limit, and friction-driven energy depletion (entropy loss)**
+* **Common Physical Signature:** **Spectral radius ( $\rho$ ) saturation at its boundary limit, and friction-driven energy depletion (entropy loss)**
 * **Cross-Verification of Mechanism:**
-  * **Circular Ledger (Sample 1):** Fast round-trip journal entries without substance cause the spectral radius to surge to the warning level of **`0.75`**. Although the apparent activity level (internal energy $U$) grows steadily, the energy is wasted as round-trip frictional heat (entropy $T \times S$), depleting the system's actual stamina—free energy $F = U - TS$.
+  * **Circular Ledger (Sample 1):** Fast round-trip journal entries without substance cause the spectral radius to surge to the warning level of **`0.75`**. Although the apparent activity level (internal energy $U$ ) grows steadily, the energy is wasted as round-trip frictional heat (entropy $T \times S$ ), depleting the system's actual stamina—free energy $F = U - TS$.
   * **Urban Traffic (Sample 5):** When inflow vehicles exceed road capacity, the bottleneck around `21_ShijoKarasuma` saturates the spectral radius to its boundary limit of **`1.00`** (deadlock). Macro entropy $S$ fell from `40.69` to **`39.18`**, and macro temperature $T$ spiked from `2,897.05` to **`16,264.61`**. Free energy $F$ plunged from `132,117.82` to **`-387,283.36`**.
   * **Epilepsy (Sample 9):** Abnormal sine waves originating from the temporal lobe (`03_Temporal_Lobe`) force the entire brain into phase-locking, saturating the spectral radius to **`1.00`**. Physical metrics expose this hyper-synchronization in a statistical blind spot where the PCA explanation ratio (PC1) remains frozen at `37.5%`.
   * **Conclusion:** "Circular fictitious transactions," "vehicle deadlocks at intersections," and "epileptic seizure waves" are all variations of the same recirculation pathology: **"energy is trapped within closed circuits, blocking meaningful value transmission or external metabolism, and driving the system to thermal death."**
@@ -129,8 +130,8 @@ TLU proves that different anomalies across distinct domains show identical physi
 * **Targets:** [Sample 0 (Healthy)](./Sample_0_Healthy/README.md), [Sample 6 (Stock Convection)](./Sample_6_Market_Stock_Flow/README.md), [Sample 7 (Cash Convection)](./Sample_7_Market_Cash_Flow/README.md)
 * **Common Physical Signature:** **Zero residuals and stable flow (steady convection).**
 * **Cross-Verification:**
-  * **Healthy Circulation (Sample 0):** No circular loops ($\rho = 0.00$) or mass leaks (residual = `0.00`) occur. Accounts connect organically. Free energy grows steadily. Transient Z-score peaks up to **`4.90`** are rejected as false positives since the conservation law holds.
-  * **Market Flow (Sample 6 & 7):** Stock and cash volumes remain conserved. Convection is stable. Circulation occurs due to the closed graph structure ($\rho = 1.00$). However, friction stays within limits, and residuals remain strictly `0.00`.
+  * **Healthy Circulation (Sample 0):** No circular loops ( $\rho = 0.00$ ) or mass leaks (residual = `0.00`) occur. Accounts connect organically. Free energy grows steadily. Transient Z-score peaks up to **`4.90`** are rejected as false positives since the conservation law holds.
+  * **Market Flow (Sample 6 & 7):** Stock and cash volumes remain conserved. Convection is stable. Circulation occurs due to the closed graph structure ( $\rho = 1.00$ ). However, friction stays within limits, and residuals remain strictly `0.00`.
 
 ---
 
