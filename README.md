@@ -120,16 +120,16 @@ TLU includes 10 sample datasets to verify the accuracy of the mathematical physi
 
 | ID | Case Study (Report Link) | Domain | Status | Key Metrics | Clinical Metaphor |
 | :---: | :--- | :---: | :---: | :---: | :--- |
-| **0** | **[🟢 Healthy Metabolism (Healthy)](samples/Sample_0_Healthy/README.md)** | Finance | **NORMAL** | $\rho$ = 0.00, Residual = 0.00 | Qi and Blood running smoothly |
-| **1** | **[🟡 Circular Trade / Wash Trade](samples/Sample_1_Wash_Trade/README.md)** | Finance | **HIGH** | $\rho$ = 0.75, Depleted Free Energy | Qi and Blood idling in a closed loop |
-| **2** | **[🔴 Embezzlement Leak](samples/Sample_2_Embezzlement_Leak/README.md)** | Finance | **CRITICAL** | Max Residual = 364.53, Terminal resonance | Bleeding from meridian, mass leak |
-| **3** | **[🟡 Simple Bookkeeping Mistake (Unbalanced Mistake)](samples/Sample_3_Unbalanced_Mistake/README.md)** | Finance | **WARNING** | Transient residual and KL tower | Temporary imbalance, self-healing |
-| **4** | **[🔴 Composite Chaos](samples/Sample_4_Composite_Chaos/README.md)** | Finance | **CRITICAL** | $\rho$ = 0.79, Max Residual = 4,773.57 | Bleeding and looping of Qi and Blood |
-| **5** | **[🔴 Urban Traffic Deadlock (Kyoto Traffic)](samples/Sample_5_Kyoto_Traffic/README.md)** | Traffic | **CRITICAL** | $\rho$ = 1.00, Macro Temp $T$ = 16,264.61 | Blocked meridian, stasis, static convection |
-| **6** | **[🟢 Market Stock Flow (Market Bipartite)](samples/Sample_6_Market_Stock_Flow/README.md)** | Market | **NORMAL** | $\rho$ = 1.00, Residual = 0.00 | Stock fluid equilibrium, steady convection |
-| **7** | **[🟢 Market Cash Flow](samples/Sample_7_Market_Cash_Flow/README.md)** | Market | **NORMAL** | $\rho$ = 1.00, Residual = 0.00 | Cash fluid equilibrium, steady convection |
-| **8** | **[🔴 Brain stroke model fMRI (fMRI Stroke)](samples/Sample_8_fMRI_Stroke/README.md)** | Brain | **CRITICAL** | 95% path block, Stiffness Lock | Blocked brain meridian, local necrosis |
-| **9** | **[🔴 Seizure model fMRI (fMRI Seizure)](samples/Sample_9_fMRI_Seizure/README.md)** | Brain | **CRITICAL** | $\rho$ = 1.00, falling entropy | Neural hyper-synchrony, runaway Qi |
+| **0** | **[🟢 Healthy Metabolism (Healthy)](./samples/Sample_0_Healthy/README.md)** | Finance | **NORMAL** | $\rho$ = 0.00, Residual = 0.00 | Qi and Blood running smoothly |
+| **1** | **[🟡 Circular Trade / Wash Trade](./samples/Sample_1_Wash_Trade/README.md)** | Finance | **HIGH** | $\rho$ = 0.75, Depleted Free Energy | Qi and Blood idling in a closed loop |
+| **2** | **[🔴 Embezzlement Leak](./samples/Sample_2_Embezzlement_Leak/README.md)** | Finance | **CRITICAL** | Max Residual = 364.53, Terminal resonance | Bleeding from meridian, mass leak |
+| **3** | **[🟡 Simple Bookkeeping Mistake (Unbalanced Mistake)](./samples/Sample_3_Unbalanced_Mistake/README.md)** | Finance | **WARNING** | Transient residual and KL tower | Temporary imbalance, self-healing |
+| **4** | **[🔴 Composite Chaos](./samples/Sample_4_Composite_Chaos/README.md)** | Finance | **CRITICAL** | $\rho$ = 0.79, Max Residual = 4,773.57 | Bleeding and looping of Qi and Blood |
+| **5** | **[🔴 Urban Traffic Deadlock (Kyoto Traffic)](./samples/Sample_5_Kyoto_Traffic/README.md)** | Traffic | **CRITICAL** | $\rho$ = 1.00, Macro Temp $T$ = 16,264.61 | Blocked meridian, stasis, static convection |
+| **6** | **[🟢 Market Stock Flow (Market Bipartite)](./samples/Sample_6_Market_Stock_Flow/README.md)** | Market | **NORMAL** | $\rho$ = 1.00, Residual = 0.00 | Stock fluid equilibrium, steady convection |
+| **7** | **[🟢 Market Cash Flow](./samples/Sample_7_Market_Cash_Flow/README.md)** | Market | **NORMAL** | $\rho$ = 1.00, Residual = 0.00 | Cash fluid equilibrium, steady convection |
+| **8** | **[🔴 Brain stroke model fMRI (fMRI Stroke)](./samples/Sample_8_fMRI_Stroke/README.md)** | Brain | **CRITICAL** | 95% path block, Stiffness Lock | Blocked brain meridian, local necrosis |
+| **9** | **[🔴 Seizure model fMRI (fMRI Seizure)](./samples/Sample_9_fMRI_Seizure/README.md)** | Brain | **CRITICAL** | $\rho$ = 1.00, falling entropy | Neural hyper-synchrony, runaway Qi |
 
 ---
 
