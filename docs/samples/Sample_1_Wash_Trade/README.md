@@ -1,174 +1,92 @@
-# 🔬 Clinical Forensic Report: Wash Trade (Circular Self-Reflux Loop) (Sample 1)
+# Wash Trade Report (Case 1)
 
-## 1. Executive Summary
+> [!NOTE]
+> A more detailed analysis report is available in [clinical_report.md](clinical_report.md).
 
-* **Diagnosis:** **Topological Circulation Failure (Wash Trade / Self-Reflux Loop)**
-* **Severity:** 🟠 **HIGH (Severe Capital Circulation Failure)**
-* **Anomaly Period and Amount (Journal Ledger Verified):**
-  * **2020-01-03 (t=0)**: Amount **`$40,433.60`** (Journal IDs: `E_000020` to `E_000022`)
-  * **2020-02-01 (t=1)**: Amount **`$53,282.77`** (Journal IDs: `E_000257` to `E_000259`)
-  * **2020-05-22 (t=4)**: Amount **`$44,939.48`** (Journal IDs: `E_001327` to `E_001329`)
-* **Clinical Summary:**
-  Circular trades (inflated sales) occur through funds passing between cash and accounts receivable. The double-entry bookkeeping principle (conservation law) is maintained, making this anomaly undetectable with traditional auditing (such as static trial balances). The physics analysis engine identified the rise of the maximum spectral radius $\rho$ = 0.7488$ (the maximum eigenvalue of the adjacency matrix) and the formation of a loop that circulates internal energy.
-  These wash trades cause cash balance volatility, increasing system temperature $T$ and entropy loss $TS$. Consequently, the system's net free energy ( $F = U - TS$ ) decreases. This condition leads to liquidity failures (profitable bankruptcy).
+## Target Entity: Sample 1
 
 ---
 
-## 2. Limits of Traditional Analysis: Cumulative vs Periodic (Single-Month) Comparison
+## 0. Executive Summary
 
-Traditional audits and cumulative snapshots (B/S, P/L) cannot detect this loop because the records balance. The B/S balances, and the P/L shows expanding sales revenue. An operating profit appears to be achieved (cumulative sales of `$1,094,143.89` with a net income of `$201,321.16`).
-
-We compare the cumulative and periodic (single-month) financial plots side-by-side. Anomaly spikes concentrate in specific months (January, February, and May).
-
-### B/S Asset & Equity Comparison (Cumulative vs Periodic)
-
-* **Cumulative B/S Trend:**
-  ![B/S Trend](readme_plots/000_0_1__BS_Trend.png)
-* **Periodic B/S Trend:**
-  ![B/S Trend Periodic](readme_plots/000_0_1__BS_Trend_Periodic.png)
-
-### B/S Block Comparison (Cumulative vs Periodic)
-
-* **Cumulative B/S Block Total:**
-  ![B/S Block Total](readme_plots/000_0_1__BS_Block_Total.png)
-* **Periodic B/S Block Total:**
-  ![B/S Block Total Periodic](readme_plots/000_0_1__BS_Block_Total_Periodic.png)
-
-### P/L Revenue & Expense Comparison (Cumulative vs Periodic)
-
-* **Cumulative P/L Trend:**
-  ![P/L Trend](readme_plots/000_0_1__PL_Trend.png)
-* **Periodic P/L Trend:**
-  ![P/L Trend Periodic](readme_plots/000_0_1__PL_Trend_Periodic.png)
-
-### P/L Waterfall Comparison (Cumulative vs Periodic)
-
-* **Cumulative P/L Waterfall:**
-  ![P/L Waterfall Total](readme_plots/000_0_1__PL_Waterfall_Total.png)
-* **Periodic P/L Waterfall:**
-  ![P/L Waterfall Total Periodic](readme_plots/000_0_1__PL_Waterfall_Total_Periodic.png)
-
-**【Comparative Analysis】**
-The cumulative graphs show a gentle rise. However, the periodic graphs show that transactions between cash and accounts receivable spike in January ( $t=0$ ), February ( $t=1$ ), and May ( $t=4$ ).
+* **Overall Diagnosis:** 【Warning / Needs Improvement】 Fictitious capital circulation (**"circular wash trading"**) has been detected between specific accounts (Cash and Accounts Receivable), artificially inflating sales revenue.
+* **Overall Constitution (Physical State):** 
+  The organization appears to have a large **"physique"** (stock volume) and healthy **"immunity and basic stamina"** (cumulative profit on P/L). However, this is merely a **"fever"** (artificial temperature rise) caused by non-substantial circulation, and the actual cash recovery capability is depleted. Frictional loss in circulation has disrupted the system's balance (**"autonomic nervous system"**), and the settlement routes are completely locked during wash-trading months, resulting in structural rigidity (**"arteriosclerosis / stiffness lock"**).
+* **Areas for Improvement (Viscosity & Treatment Points):**
+  - **Stagnation (Viscosity / "Stiff Shoulder") Range:** Severe settlement lags are observed in **"07_ACC_Sales_Revenue"**, **"04_ACC_Inventory"**, and **"03_ACC_Cash"** (top 25% viscosity range), with a peak of year-end stagnation around **2020-12**.
+  - **Treatment Points ("Tsubo") Range:** The minimum intervention stress range (bottom 25% strain energy range), comprising **"03_ACC_Cash"**, **"01_ACC_Accounts_Receivable"**, and **"02_ACC_COGS"**, represents the highest priority treatment points to restore the system.
+  - **Contraindications (Avoid Intervention) Range:** Conversely, aggressive reductions or interventions in **"07_ACC_Sales_Revenue"**, **"06_ACC_Rent_Exp"**, and **"09_ACC_Equity_Capital"** (top 25% strain energy range) must be strictly avoided, as they will trigger intense system backlash and functional paralysis.
 
 ---
 
-## 3. Characteristic Topology and Stiffness Locking
+## 1. Overall Diagnosis (Warning / Needs Improvement)
 
-The wash trade causes structural distortion in the network topology and "stiffness locking" between specific accounts.
+### 【Diagnosis】: Needs Improvement (Prevalence of Circular Wash Trading)
+![System Stability](../../../samples/Sample_1_Wash_Trade/readme_plots/004_1_2__system_stability.png)
 
-### Time-Series Sequence of Stiffness Matrix
-
-During wash trade months, the connection between cash (`ACC_Cash`) and accounts receivable (`ACC_Accounts_Receivable`) hardens.
-
-* **① 2020-01 (t=0: Start of Loop):**
-  ![Stiffness t0](readme_plots/000_2_1__structural_stiffness.t.00000.png)
-* **② 2020-04 (t=3: Temporary Calm):**
-  ![Stiffness t3](readme_plots/000_2_1__structural_stiffness.t.00003.png)
-* **③ 2020-05 (t=4: Recurrence of Loop):**
-  ![Stiffness t4](readme_plots/000_2_1__structural_stiffness.t.00004.png)
-* **④ 2020-06 (t=5: Post-Loop):**
-  ![Stiffness t5](readme_plots/000_2_1__structural_stiffness.t.00005.png)
-* **⑤ 2020-12 (t=11: Final Observation):**
-  ![Stiffness t11](readme_plots/000_2_1__structural_stiffness.t.00011.png)
-
-### Principal Component Analysis (PCA) and Eigenvector Evolution
-
-The energy contribution ratio of the first principal component (PC1) reaches **`95.28%`** during the anomaly period ( $t=4$ ), showing that liquidity is dominated by the anomaly.
-
-* **PCA Axis Ratio:**
-  ![PCA Ratio](readme_plots/000_2_2__principal_axes_ratio.png)
-
-We analyze the eigenvectors of PC1, PC2, and PC3 to identify the accounts driving the anomalous transactions.
-
-* **PC1 Eigenvector Evolution:**
-  ![PC1 Eigenvector](readme_plots/000_2_3__eigenvector_evolution.png)
-  In PC1, component weights concentrate on `01_ACC_Accounts_Receivable` (`-0.7162`), `03_ACC_Cash` (`0.3524`), and `07_ACC_Sales_Revenue` (`0.5183`). This shows the circular pair dominates corporate liquidity.
-* **PC2 Eigenvector Evolution:**
-  ![PC2 Eigenvector](readme_plots/000_2_3__eigenvector_evolution_pc2.png)
-* **PC3 Eigenvector Evolution:**
-  ![PC3 Eigenvector](readme_plots/000_2_3__eigenvector_evolution_pc3.png)
-
-### Maximum Spectral Radius $\rho$ (System Stability)
-
-The maximum spectral radius rises during wash trade months (January, February, and May). This proves the topological construction of a capital circulation loop.
-
-* **System Stability Indicator (Spectral Radius):**
-  ![System Stability](readme_plots/004_1_2__system_stability.png)
-
-### Network Topology Time-Series Sequence
-
-* **① 2020-01 (t=0: Bidirectional edge forms between cash and accounts receivable):**
-  ![Topology t0](readme_plots/002_1_2__network_topology.t.00000.png)
-* **② 2020-04 (t=3: Normal flow distribution):**
-  ![Topology t3](readme_plots/002_1_2__network_topology.t.00003.png)
-* **③ 2020-05 (t=4: Reconnection of the loop):**
-  ![Topology t4](readme_plots/002_1_2__network_topology.t.00004.png)
-* **④ 2020-06 (t=5: Return to normal flow):**
-  ![Topology t5](readme_plots/002_1_2__network_topology.t.00005.png)
-* **⑤ 2020-12 (t=11: Normal business flow):**
-  ![Topology t11](readme_plots/002_1_2__network_topology.t.00011.png)
+At first glance, the organization appears to maintain profitable operations. However, analyzing dynamic stability (maximum spectral radius $\rho$) over time reveals that during wash-trading months (January, February, and May), stability metrics surge near the warning threshold (`0.75`), peaking at **`0.7488`**. This is caused by a closed circular loop where Cash and Accounts Receivable are bounced back and forth while balancing the books. This non-substantial trading damages cash flow and increases bankruptcy risk. Immediate termination of these circular trades is required.
 
 ---
 
-## 4. Perpetual Frictionless Thermodynamic Cycle and Model Pollution
+## 2. Overall Constitution (Health State) Analysis
 
-The thermodynamic behavior reveals energy waste (frictional heat) and the blind spots of statistical AI models.
+Mapping the organization's "financial stamina" to a medical checkup template reveals the following structural distortions:
 
-### Visualization of Thermodynamic Energy Structure
+### ① Physique & Weight (Cumulative Trend of Capital Scale)
+![B/S Cumulative Trend](../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__BS_Trend.png)
 
-* **Thermodynamics Energy Stack:**
-  ![Thermodynamics Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
-* **T-S Diagram:**
-  ![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+Due to the circular bounce between Cash and Accounts Receivable, the Balance Sheet (B/S) asset scale is artificially inflated and does not reflect actual operational size.
 
-1. **Expansion of Frictional Heat (Entropy Loss $TS$ ):**
-   During wash trade months (January, February, and May), round-trip balance transfers spike the volatility (system temperature $T$ ). Entropy loss (red $-TS$ area) increases. Although the apparent activity (internal energy $U$ ) grows, the net free energy $F = U - TS$ (white boundary line) decreases.
-2. **Counter-clockwise Carnot Cycle (Closed T-S Loop):**
-   The T-S diagram displays a closed egg-shaped loop. The area enclosed by this loop represents the total frictional heat dissipated within the system instead of doing external work. This indicates circular idle running.
+### ② Immunity & Basic Stamina (Resilience to External Shocks)
+![P/L Cumulative Trend](../../../samples/Sample_1_Wash_Trade/readme_plots/000_0_1__PL_Trend.png)
 
-### Local Thermodynamic Anomalies in 3D Space
+Although the Profit and Loss Statement (P/L) reports cumulative sales of `$1,094,143.89` and a net profit of `$201,321.16`, this basic stamina is merely a "fever" inflated by wash trades. There is no real buffer to absorb external economic shocks.
 
-* **3D Local Entropy ( $s_i$ ):**
-  ![3D Local Entropy](readme_plots/001_1_2_1__3d_local_entropy.png)
-  `ACC_Cash` forms a bypass path (`Wash Funding`) to `ACC_Accounts_Receivable`, causing an asymmetric exit probability. Local entropy rises during wash trade months.
-* **3D Local Temperature ( $T_i$ ):**
-  ![3D Local Temperature](readme_plots/001_1_2_2__3d_local_temperature.png)
-  Local temperature spikes at the three nodes involved in the loop (cash, accounts receivable, sales revenue), indicating a surge in balance volatility.
+### ③ Autonomic Nervous System & Metabolic Efficiency (Regularity of Frictional Loss)
+![T-S Diagram](../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
-### 3D Micro Information Geometry and "Boiled Frog Phenomenon" (Model Pollution)
+In the T-S diagram mapping volatility ($T$) to frictional entropy ($S$), the system exhibits extreme overheating (thermal stress) and entropy surges during wash-trading months. The diagram plots a counter-clockwise, closed egg-shaped loop (representing a "reverse Carnot idle cycle"), proving that energy is wasted on internal friction without producing external work.
 
-* **3D Micro KL Drift (Information Geometry Change):**
-  ![3D Micro KL Drift](readme_plots/002_2_2_1__3d_micro_kl_drift.png)
-* **3D Micro Z-Score (Balance Position Deviation):**
-  ![3D Micro Z-Score](readme_plots/002_2_2_2__3d_micro_z_score_X.png)
+### ④ Arteriosclerosis (PCA Principal Axes Evaluation)
+![PCA Ratio](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_2__principal_axes_ratio.png)
 
-**【Mathematical Proof of Model Pollution (Boiled Frog Phenomenon)】**
-In the 3D Micro KL Drift plot, the first loop in January and February 2020 triggers a detection spike at the `ACC_Cash` node. However, in the May 2020 loop, the detected KL Drift spike decreases despite the identical wash trade scale.
-This occurs because the statistical model learns the past anomalous transactions as part of the normal baseline. Relying only on statistical thresholds can lead to missing recurring anomalies. This system combines physical conservation laws and topological spectral radius to avoid the blind spots of statistical models.
+Principal Component Analysis (PCA) of the coupling stiffness matrix reveals that during wash-trading periods, the dominant axes between Cash and Accounts Receivable become completely frozen. The first principal component (PC1) explainability ratio spikes, demonstrating a "stiffness lock" (structural hardening) equivalent to rigid arteries.
 
 ---
 
-## 5. Local Treatment Plan (LQR Control Treatment)
+## 3. Key Areas for Improvement (Viscosity & Treatment Points)
 
-* **Treatment Protocol: Cut Reflux Topology and Apply Target Interventions**
-* **LQR Sensitivity Intervention Effect:**
-  LQR sensitivity analysis reveals that control interventions on the `ACC_Accounts_Receivable` (accounts receivable) node produce the maximum effect in this network.
-  ![LQR Control](readme_plots/004_1_3__control_lqr_performance_space.png)
+Specific areas for improvement identified by the system and recommended action plans are detailed below:
 
-* **Specific Interventions:**
-  1. **Topological Interlock:**
-     Introduce a time delay (e.g., more than one minute) or double-payment warnings for transactions between `ACC_Cash` and `ACC_Accounts_Receivable` to physically sever the loop.
-  2. **LQR Targeted Restrictions:**
-     Limit the transaction capacity or trigger automated individual approvals for accounts receivable balances linked to specific counterparties that act as hubs in the loop. This neutralizes the anomaly sources without disrupting healthy business operations.
+### ⚠️ Stagnation (Viscosity) Identification (Local Viscosity Temporal Heatmap Analysis)
+![Local Viscosity Trend](../../../samples/Sample_1_Wash_Trade/readme_plots/000_1_7_1__viscosity_trend.png)
+
+* **Stagnation Range:** 
+  The temporal heatmap mapping log local viscosity ($viscosity\_C$) shows that the sales revenue node (**`07_ACC_Sales_Revenue`**) maintains high frictional resistance throughout, peaking sharply in December.
+  This viscosity surge (damping/delay) causes state trajectories to lock into localized regions of phase space (attractor confinement). Refer to the 3D Phase Portrait ([000_1_8__phase_portrait_3d.png](../../../samples/Sample_1_Wash_Trade/readme_plots/000_1_8__phase_portrait_3d.png)) for trajectory clustering.
+  The top 25% viscosity group—**"07_ACC_Sales_Revenue"**, **"04_ACC_Inventory"**, and **"03_ACC_Cash"**—contains severe settlement delays.
+  - **`07_ACC_Sales_Revenue`**: Mean viscosity `56302.40`, peaking at **`2020-12`** (peak value `101329.39`).
+  - **`04_ACC_Inventory`**: Mean viscosity `52112.45`, peaking at **`2020-12`**.
+  - **`03_ACC_Cash`**: Mean viscosity `30953.51`, peaking in **`2020-01`**.
+
+### 🎯 Treatment Points ("Tsubo") & Contraindications
+![Sensitivity Matrix](../../../samples/Sample_1_Wash_Trade/readme_plots/004_2_1__sensitivity_matrix.png)
+
+* **Treatment Points Range:** Accounts in the bottom 25% of intervention strain energy—**"03_ACC_Cash"**, **"01_ACC_Accounts_Receivable"**, and **"02_ACC_COGS"**—can be adjusted with minimal frictional resistance.
+  - **Advice:** These nodes represent the most effective points to restore natural flow and liquidity with the lowest structural backlash.
+* **Contraindications Range:** Conversely, the top 25% strain energy group—**"07_ACC_Sales_Revenue"**, **"06_ACC_Rent_Exp"**, and **"09_ACC_Equity_Capital"**—must be avoided.
+  - **Advice:** Forcing adjustments on these nodes will disrupt core connections and trigger massive system backlash.
 
 ---
 
-## 6. 🚨 Falsifiability
+## 4. Diagnostic Limitations and Falsifiability
 
-To reject the diagnosis of circular trading in this report, the following evidence must be provided:
+To overturn (falsify) the diagnosis of "Circular Wash Trading," the following external, primary physical evidence must be presented:
 
-1. **Original Delivery Records:**
-   Original shipping bills with tracking numbers and delivery confirmations (signed receipt) matching the transaction amount (totaling `$138,655.85`) for the target dates (January 3, February 1, and May 22). This proves physical goods moved.
-2. **Proof of Legal Independence:**
-   Original registration documents and shareholder lists proving that the sending and receiving entities are not under common ownership or control.
+1. **Physical Delivery Proof of Goods:**
+   For the specific transaction dates and amounts (totaling `$138,655.85`), the presentation of original shipping waybills, courier receipts, or signed delivery logs proving that physical goods were actually moved.
+2. **Legal Independence of Counterparts:**
+   The presentation of share registers and corporate registration papers proving that the trading counterparties are completely independent third parties, with no capital, management, or beneficial ownership ties.
+
+---
+*Published by: TLU Financial Mathematical Diagnostics Engine (General Reader Edition)*

@@ -1,6 +1,6 @@
 {
   "env_dir": "samples/Sample_6_Market_Stock_Flow",
-  "date_analyzed": "2026-06-26 10:02:14",
+  "date_analyzed": "2026-06-29 10:29:04",
   "diagnoses": [
     {
       "pathology": "Topological Feedback Loop (Wash Trade / Resonance)",

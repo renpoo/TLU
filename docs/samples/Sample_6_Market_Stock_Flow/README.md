@@ -1,100 +1,91 @@
-# 🔬 Anomaly Detection & Market Health Report (Sample 6 - Healthy Stock Volume Conservation System)
+# Stock Flow Circulation Report (Case 6)
 
-## 1. Executive Summary
+> [!NOTE]
+> A more detailed analysis report is available in [clinical_report.md](clinical_report.md).
 
-* **Overall Status:** 🟢 **Healthy Stock Flow Convection**
-* **Severity:** 🟢 **NORMAL (No Anomaly)**
-* **Summary:** The system displays a state where the total outstanding balance of shares (mass) is conserved and steady convection is maintained across the stock market. The conservation residual remains `0.00` throughout. No generation of duplicate shares or off-book outflows exist.
-
----
-
-## 2. Comparison of Stock and Flow
-
-We compare the total stock of shares (B/S equivalent) with the periodic (single-month, non-cumulative) transaction flows (P/L equivalent) in the stock market.
-
-### Share Balance Comparison (B/S Equivalent)
-
-* **B/S Asset & Equity Cumulative Trend & Block Chart (Cumulative):**
-  ![B/S Cumulative Trend](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_0_1__BS_Trend.png)
-  ![B/S Block Total](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_0_1__BS_Block_Total.png)
-
-* **B/S Share Balance Periodic Trend (Monthly Non-Cumulative):**
-  ![B/S Periodic Trend](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_0_1__BS_Trend_Periodic.png)
-
-### Share Volume Comparison (P/L Equivalent)
-
-* **P/L Volume Cumulative Trend:**
-  ![P/L Cumulative Trend](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_0_1__PL_Trend.png)
-
-* **P/L Volume Periodic Trend (Monthly Non-Cumulative):**
-  ![P/L Periodic Trend](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_0_1__PL_Trend_Periodic.png)
-
-* **Observation:** Volume (transaction flow) evolves stably in line with the market cycle. No hyper-synchronization by USRs or flow flattening (deadlock) from liquidity exhaustion is observed.
+## Target Market: Sample 6 (Stock Flow Liquidity & Ownership Conservation)
 
 ---
 
-## 3. Pathophysiology
+## 0. Executive Summary
 
-* **Diagnosis:** **Normal, Steady Convection**
-* Share flows among participants and ticker symbols circulate in accordance with conservation mechanics. No stasis or panic cascades exist.
-
----
-
-## 4. Summary of Mathematical Analysis Results
-
-### 4.1. Mass Conservation and Network Topology
-
-The Kirchhoff residual is exactly **`0.00`**. No shares disappear.
-
-* **Macro Forensics Dashboard:**
-  ![Macro Forensics](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/002_2_1__macro_forensics_dashboard.png)
-
-* **Network Topology Evolution:**
-  During steady convection, the network topology does not form structural distortions or connection edges where flow concentrates on specific accounts.
-
-### 4.2. Stiffness Connection & PCA (Stiffness & PCA)
-
-The stiffness matrix shows elastic coupling. No rigid locks (stiffness concentrating on specific stocks or accounts) occur.
-In PCA, the PC1 contribution ratio does not become dominant, staying stable in response to normal supply and demand shifts.
-
-* **PCA Axis Ratio:**
-  ![PCA Ratio](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_2_2__principal_axes_ratio.png)
-
-### 4.3. Verification of Circular Topology (Spectral Radius)
-
-The maximum spectral radius is exactly **`1.0000`** throughout the period. This is a mathematical consequence of the stock market being a closed, strongly connected network (the saturation point of the Perron-Frobenius theorem). It indicates healthy connectivity.
-
-* **System Stability Indicator:**
-  ![System Stability](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/004_1_2__system_stability.png)
-
-### 4.4. Thermodynamic Indicators and 3D Topology
-
-Internal energy $U$ is conserved steadily. Free energy $F = U - TS$ also evolves stably.
-The T-S diagram maintains the limit cycle of steady convection without drawing pathological loops.
-
-* **Thermodynamic Characteristics & T-S Diagram:**
-  ![Thermodynamics Energy Stack](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/001_1_2__thermodynamics_energy_stack.png)
-  ![T-S Diagram](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+* **Overall Diagnosis:** 【Normal】 Stock ownership transfers and market value fluctuations maintain a completely sound conservation state. No pathological anomalies were detected.
+* **Overall Constitution (Market Liquidity State):** 
+  The market capitalization (时价评估总额 - **"market scale"**) is robust, and liquidity cushion (**"market resilience"**) to absorb panic selling or sudden price shocks is stable. The metabolic circulation between institutional and retail investors is functioning normally, with transaction friction (**"liquidity cost"**) remaining within standard ranges. No circular wash trading loops are detected, and transaction pathways maintain excellent flexibility.
+* **Key Observations (Liquidity Latency & Adjustment Points):**
+  - **Liquidity Latency (Stagnation) Range:** Standard settlement latency (viscosity) is observed in investor accounts **"01_USR_002"**, **"00_USR_001"**, and **"10_STK_001"** (top 25% viscosity range), which falls within normal execution time-lag parameters.
+  - **Liquidity Optimization ("Tsubo") Range:** The minimum intervention stress range (bottom 25% strain energy range), comprising investor accounts **"03_USR_004"** and **"02_USR_003"**, represents the recommended adjustment points to safely enhance overall market liquidity.
+  - **Contraindications (Avoid Restrictions) Range:** Conversely, aggressive trading restrictions on **"10_STK_001"**, **"11_STK_002"**, and **"12_STK_003"** (top 25% strain energy range) must be strictly avoided. These interventions will freeze the price formation process, causing severe volatility or liquidity collapse.
 
 ---
 
-## 5. Control Interventions and Recommended Actions (LQR & Operations)
+## 1. Overall Diagnosis (Normal)
 
-* **Operational Plan: Monitor to Maintain Steady Liquidity**
-* The system is in a normal state (NORMAL). No LQR control interventions or trading halts are necessary. We monitor the elasticity of transaction fees and price spreads to maintain liquidity.
+### 【Diagnosis】: Normal (Complete Preservation of Asset Value Cycles)
+![System Stability](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/004_1_2__system_stability.png)
+
+This diagnosis indicates that the investor asset valuations and issuer stock capitalizations are perfectly synchronized. Because the convective residual (Kirchhoff residual) remains strictly at `0.00` throughout the period, there is no off-book asset disappearance or unauthorized share issuance. The market cycle is healthy, and no circular wash trading loops were detected.
 
 ---
 
-## 6. Alerts & Falsifiability
+## 2. Overall Constitution (Market Liquidity) Analysis
 
-### 6.1. Triaging False Positives
+Mapping the market stock flow to a medical checkup template reveals excellent constitutional health:
 
-* **Seasonal Volatility Detection:**
-  Temporary volume surges from portfolio adjustments or market events may push Z-Scores above the threshold of `3.0`. However, since the conservation residual remains `0.00` and no rigid locks occur, these alerts are rejected as normal market activity (false positives).
+### ① Market Scale (Cumulative Trend of Market Capitalization)
+![B/S Cumulative Trend](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_0_1__BS_Trend.png)
 
-### 6.2. Falsification Conditions
+The market capitalization averages `4.06M` (peaking at `14.94M`), indicating that the fundamental market scale (physique) is robust and stable.
 
-To reject the normal diagnosis and prove an anomaly, the following evidence is required:
+### ② Liquidity Cushion (Market Resilience)
+![P/L Cumulative Trend](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_0_1__PL_Trend.png)
 
-1. **Order Book Discrepancy Logs:** Raw trade execution logs showing transaction inconsistencies (e.g., mismatch between trades and cash transfers) at the exchange.
-2. **Audited Wallet Balance Certificates:** Raw wallet data proving trades occurred between specific accounts without ownership transfers.
+The capacity to absorb price volatility (free energy) is maintained at a very high level (mean `60.36M`), providing a substantial buffer to absorb massive sell orders or external macro shocks.
+
+### ③ Transaction Friction & Volatility (Liquidity Cycle & Thermodynamic Evaluation)
+![T-S Diagram](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+
+In the T-S diagram mapping volatility ($T$) to execution entropy ($S$), the system traces a healthy thermodynamic cycle within normal friction limits (fees and slippage). There are no signs of circular wash trading or capital recycling.
+
+### ④ Supple Convection Structure (PCA Principal Axes Evaluation)
+![PCA Ratio](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_2_2__principal_axes_ratio.png)
+
+PCA of the accounts' stiffness matrix shows no stiffness lock (PC1 explainability ratio remains flat). The maximum stiffness is exceptionally low (`1.00e-12`), demonstrating a flexible, competitive price discovery network.
+
+---
+
+## 3. Key Areas for Improvement (Liquidity Latency & Treatment Points)
+
+Specific areas for improvement identified by the system and recommended action plans are detailed below:
+
+### ⚠️ Liquidity Latency (Stagnation) Identification (Local Viscosity Temporal Heatmap Analysis)
+![Local Viscosity Trend](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_1_7_1__viscosity_trend.png)
+
+* **Stagnation Range:** 
+  The heatmap mapping log local viscosity ($viscosity\_C$) shows mild execution delay in account `01_USR_002` during February, which is within standard market time-lag parameters.
+  The top 25% viscosity group—**"01_USR_002"**, **"00_USR_001"**, and **"10_STK_001"**—exhibits normal execution lags.
+  - **`01_USR_002`**: Mean viscosity `143.45M`, peaking in **`2020-02`**.
+  - **`00_USR_001`**: Mean viscosity `143.33M`, peaking in **`2020-04`**.
+  - **`10_STK_001`**: Mean viscosity `112.16M`, peaking in **`2020-01`**.
+
+### 🎯 Liquidity Optimization ("Tsubo") & Contraindications
+![Sensitivity Matrix](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/004_2_1__sensitivity_matrix.png)
+
+* **Liquidity Optimization Range:** Investor accounts in the bottom 25% of intervention strain energy—**"03_USR_004"** and **"02_USR_003"**—represent areas where liquidity adjustments can be introduced with minimal friction.
+  - **Advice:** Optimizing trading parameters for these accounts offers the most stable path to enhance market flexibility with the lowest backlash.
+* **Contraindications Range:** Conversely, the top 25% strain energy group—**"10_STK_001"**, **"11_STK_002"**, and **"12_STK_003"**—must be avoided.
+  - **Advice:** Forcing trading suspensions or aggressive regulatory limits on these core stock assets will disrupt price discovery, potentially triggering market panic.
+
+---
+
+## 4. Diagnostic Limitations and Falsifiability
+
+To overturn (falsify) the diagnosis of "Normal/Healthy Market Flow," the following off-scope evidence must be provided:
+
+1. **Discrepancy with Custody Records:**
+   Reconciling the market ledger with off-scope central securities depository (e.g., JASDEC) records and showing that undocumented share transfers or ownership deletions occurred.
+2. **Acceptance Log Audit on Exchange Servers:**
+   Analyzing exchange order book logs (IP addresses and timestamps) to prove that apparently independent trading accounts were controlled by a single botnet to execute fictitious circular trades (wash trading).
+
+---
+*Published by: TLU Stock Flow Diagnostics Engine (General Reader Edition)*

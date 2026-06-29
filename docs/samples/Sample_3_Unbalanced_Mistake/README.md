@@ -1,173 +1,92 @@
-# 🔬 Clinical Forensic Report: Single Input Mistake / Ledger Inconsistency (Sample 3)
+# Accounting Mistake Report (Case 3)
 
-## 1. Executive Summary
+> [!NOTE]
+> A more detailed analysis report is available in [clinical_report.md](clinical_report.md).
 
-* **Overall Status:** 🟡 **Transient Data Inconsistency / Bookkeeping Human Error (Transient Mismatch / Human Error)**
-* **Severity:** 🟡 **WARNING (Monitor Closely)**
-* **Summary:**
-  The system exhibits a "local data inconsistency (mass defect)" where debit and credit amounts do not match in accounts receivable collection journals.
-  During the simulation, a **cumulative total of `$1,412.88`** in mass temporarily leaked out of the system. This difference was directed to the virtual sink node `UNKNOWN_LEAK`.
-  Mathematical analysis reveals that this is not a persistent leak but a "single input mismatch (elastic strain)." The maximum spectral radius remains **`0.00`** throughout the period. No wash trade topologies exist. Immediately after the mismatch occurs, the stiffness matrix returns to its healthy state, showing that the system's self-healing elasticity functions.
-  Traditional Z-Score monitoring generated false positive alerts during seasonal sales surges (July and August). However, it failed to trigger warnings for the largest mismatch of **`$906.29`** in November, showing a false negative blind spot. A combined analysis based on physical conservation laws (Kirchhoff residuals) and topological self-healing diagnoses this case as a "single input mistake."
+## Target Entity: Sample 3
 
 ---
 
-## 2. Comparison of Financial Statements and Transaction Flows
+## 0. Executive Summary
 
-We compare traditional cumulative financial statements with the periodic (single-month, non-cumulative) transaction flows.
-
-When debit-credit mismatches occur, accountants may temporarily record the difference in suspense accounts (`UNKNOWN_LEAK`) for closing procedures. Consequently, the cumulative operating profit appears to grow normally on the P/L. Static financial ratios fail to reveal that the internal data consistency has collapsed.
-
-### Balance Sheet (B/S) Comparison
-
-* **B/S Asset & Equity Cumulative Trend & Block Chart (Cumulative):**
-  ![B/S Cumulative Trend](readme_plots/000_0_1__BS_Trend.png)
-  ![B/S Block Total](readme_plots/000_0_1__BS_Block_Total.png)
-
-* **B/S Asset & Equity Periodic Trend (Monthly Non-Cumulative):**
-  ![B/S Periodic Trend](readme_plots/000_0_1__BS_Trend_Periodic.png)
-
-### Income Statement (P/L) Comparison
-
-* **P/L Revenue & Expense Cumulative Trend:**
-  ![P/L Cumulative Trend](readme_plots/000_0_1__PL_Trend.png)
-
-* **P/L Revenue & Expense Periodic Trend (Monthly Non-Cumulative):**
-  ![P/L Periodic Trend](readme_plots/000_0_1__PL_Trend_Periodic.png)
-
-* **Observation:** The cumulative graphs show stable operations. However, the periodic graphs show local, temporary distortions in transaction flows during the mismatch months (February, March, and November).
+* **Overall Diagnosis:** 【Warning / Needs Improvement】 A temporary entry processing error (one-sided booking leading to a ledger imbalance) has been detected. This is a single human error, not systemic fraud or capital leakage.
+* **Overall Constitution (Physical State):** 
+  The organization's capital scale (**"physique"**) is stable, and its structural resilience to external shocks (**"immunity and basic stamina"**) is highly sound. When the ledger imbalance occurred, the system's balance (**"autonomic nervous system"**) was temporarily disrupted, but it quickly resolved itself in the subsequent step, returning to its default state. This confirms that the system's self-healing capacity (**"elastic recovery"**) is functioning correctly. There are no signs of chronic rigidity (**"arteriosclerosis"**).
+* **Areas for Improvement (Viscosity & Treatment Points):**
+  - **Stagnation (Viscosity / "Stiff Shoulder") Range:** Settlement lags are observed in **"04_ACC_Inventory"**, **"03_ACC_Cash"**, and **"07_ACC_Sales_Revenue"** (top 25% viscosity range), peaking around **2020-12**.
+  - **Treatment Points ("Tsubo") Range:** The minimum intervention stress range (bottom 25% strain energy range), comprising **"02_ACC_COGS"**, **"04_ACC_Inventory"**, and **"01_ACC_Accounts_Receivable"**, represents the highest priority treatment points to optimize the system.
+  - **Contraindications (Avoid Intervention) Range:** Conversely, aggressive reductions or interventions in **"07_ACC_Sales_Revenue"**, **"09_ACC_Equity_Capital"**, and **"06_ACC_Rent_Exp"** (top 25% strain energy range) must be strictly avoided, as they will trigger intense system backlash and functional paralysis.
 
 ---
 
-## 3. Pathophysiology
+## 1. Overall Diagnosis (Warning / Needs Improvement)
 
-* **Diagnosis:** **Transient Bookkeeping Error**
-* **Mechanism of Inconsistency (Dummy_Journal_Stream.csv Origin Verified):**
-  During the collection of accounts receivable (`ACC_Accounts_Receivable`), single-sided journal entries are recorded where the credited amount does not match the cash (`ACC_Cash`) debit.
-  Mismatches occur in the following 4 journals (across 3 steps):
-  * **2020-02-23 (t=1)**: `E_000484` (AR decreases by `$513.93` but cash increases by only `$347.35`, causing a mass defect of **`$166.58`**)
-  * **2020-03-20 (t=2)**: `E_000771` (AR decreases by `$571.88` but cash increases by only `$231.87`, causing a mass defect of **`$340.01`**)
-  * **2020-11-02 (t=10)**: `E_002988` (AR decreases by `$950.16` but cash increases by only `$171.60`, causing a mass defect of **`$778.56`**)
-  * **2020-11-27 (t=10)**: `E_003179` (AR decreases by `$734.53` but cash increases by only `$606.80`, causing a mass defect of **`$127.73`**. The November mismatch total is **`$906.29`**)
-  * **Cumulative Inconsistency Amount**: **`$1,412.88`**
-  The physics engine assigns this difference to the temporary leak node `UNKNOWN_LEAK` to maintain a closed system. However, this connection does not persist or strengthen. The system's self-healing properties restore the healthy state.
+### 【Diagnosis】: Needs Improvement (Temporary Entry Discrepancy)
+![System Stability](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_1_2__system_stability.png)
+
+Although a ledger imbalance (one-sided entry) occurred, it was a temporary human error rather than a persistent, intentional drain (Sample 2). The maximum spectral radius remains at `0.00` throughout, confirming the absence of wash trades. Immediately after the error step, the network stiffness distribution returned to normal, demonstrating robust elastic self-healing.
 
 ---
 
-## 4. Summary of Mathematical Analysis Results
+## 2. Overall Constitution (Health State) Analysis
 
-### 4.1. Mass Conservation and Network Topology
+Mapping the organization's "financial stamina" to a medical checkup template reveals a healthy overall structure:
 
-The `System Conservation Residual` spikes only during the mismatch months (February: `166.58`, March: `340.01`, November: `906.29`). It remains `0.00` in other periods, physically indicating that the residuals arise from single-step errors.
+### ① Physique & Weight (Cumulative Trend of Capital Scale)
+![B/S Cumulative Trend](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__BS_Trend.png)
 
-* **Macro Forensics Dashboard:**
-  ![Macro Forensics](readme_plots/002_2_1__macro_forensics_dashboard.png)
+The capital reserves in the Balance Sheet (B/S) are solid, showing a robust and stable physique.
 
-* **Network Topology Evolution:**
-  * **2020-01 (t=0 - Initial Topology):**
-    ![Network Topology t0](readme_plots/002_1_2__network_topology.t.00000.png)
-  * **2020-02 (t=1 - Input mismatch occurs, temporarily creating `UNKNOWN_LEAK` node):**
-    ![Network Topology t1](readme_plots/002_1_2__network_topology.t.00001.png)
-  * **2020-03 (t=2 - Second mismatch connects the edge):**
-    ![Network Topology t2](readme_plots/002_1_2__network_topology.t.00002.png)
-  * **2020-04 (t=3 - Mismatches stop, leak connection calms):**
-    ![Network Topology t3](readme_plots/002_1_2__network_topology.t.00003.png)
-  * **2020-12 (t=11 - After November mismatch, self-healing resolves the connection to `UNKNOWN_LEAK`):**
-    ![Network Topology t11](readme_plots/002_1_2__network_topology.t.00011.png)
+### ② Immunity & Basic Stamina (Resilience to External Shocks)
+![P/L Cumulative Trend](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__PL_Trend.png)
 
-### 4.2. Stiffness Connection & PCA (Stiffness & PCA)
+Cumulative revenue and expenses on the Profit and Loss Statement (P/L) are well-balanced. The system maintains high elastic capacity to absorb errors and return to a healthy state.
 
-The stiffness matrix evolution shows that this error is a temporary strain. By $t=5, immediately after the error passes, the stiffness matrix self-heals back to the healthy state.
-PCA shows a temporary rise in the PC0 eigenvalue ratio, but the dominant axes do not lock onto `UNKNOWN_LEAK`.
+### ③ Autonomic Nervous System & Metabolic Efficiency (Regularity of Frictional Loss)
+![T-S Diagram](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
-* **Evolution of Structural Stiffness Matrix:**
-  * **2020-01 (t=0 - Healthy Stiffness):**
-    ![Stiffness t0](readme_plots/000_2_1__structural_stiffness.t.00000.png)
-  * **2020-04 (t=3 - Step after initial error; stabilizing by absorbing strain):**
-    ![Stiffness t3](readme_plots/000_2_1__structural_stiffness.t.00003.png)
-  * **2020-05 (t=4 - Minor local stress propagates):**
-    ![Stiffness t4](readme_plots/000_2_1__structural_stiffness.t.00004.png)
-  * **2020-06 (t=5 - 【Self-Healing】 Mismatch resolved, restoring structure):**
-    ![Stiffness t5](readme_plots/000_2_1__structural_stiffness.t.00005.png)
-  * **2020-12 (t=11 - Final step; stabilized by restoring force):**
-    ![Stiffness t11](readme_plots/000_2_1__structural_stiffness.t.00011.png)
+Except for a brief disruption in April when the error occurred, the T-S diagram traces a highly regular and closed thermodynamic cycle. There is no evidence of chronic capital waste or abnormal entropy dispersion.
 
-* **Principal Axis Ratios & Eigenvector Evolution (PC1, PC2, PC3):**
-  ![PCA Ratio](readme_plots/000_2_2__principal_axes_ratio.png)
-  ![PCA PC1 Evolution](readme_plots/000_2_3__eigenvector_evolution.png)
-  ![PCA PC2 Evolution](readme_plots/000_2_3__eigenvector_evolution_pc2.png)
-  ![PCA PC3 Evolution](readme_plots/000_2_3__eigenvector_evolution_pc3.png)
+### ④ Arteriosclerosis Zero (PCA Principal Axes Evaluation)
+![PCA Ratio](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_2__principal_axes_ratio.png)
 
-### 4.3. Exclusion of Wash Trades (Spectral Radius)
-
-The spectral radius remains **`0.00`** throughout the period. This proves topologically that no wash trade loops exist.
-
-* **System Stability Indicator:**
-  ![System Stability](readme_plots/004_1_2__system_stability.png)
-
-### 4.4. Thermodynamic Indicators and 3D Topology
-
-The thermodynamic energy stack and the T-S trajectory follow paths similar to [Sample 0](../Sample_0_Healthy/README.md). There is no abnormal expansion of entropy loss ( $-TS$ ). Free energy $F$ accumulates steadily, showing no signs of thermal death.
-
-* **Thermodynamic Characteristics & 3D Trajectory:**
-  ![Thermodynamics Energy Stack](readme_plots/001_1_2__thermodynamics_energy_stack.png)
-  ![T-S Diagram](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
-  ![3D Phase Portrait](readme_plots/000_1_8__phase_portrait_3d.png)
-  ![3D Local Entropy](readme_plots/001_1_2_1__3d_local_entropy.png)
-  ![3D Micro KL Drift](readme_plots/002_2_2_1__3d_micro_kl_drift.png)
-
-**【3D Local Temperature and Transient Bruising】**
-
-* **3D Local Temperature:**
-  ![3D Local Temperature](readme_plots/001_1_2_2__3d_local_temperature.png)
-  During mismatch months (February, March, and November), the mismatch balance remains temporarily in `UNKNOWN_LEAK`. This causes a temporary rise in the local temperatures of the accounts receivable and `UNKNOWN_LEAK` nodes. This differs from embezzlement (Sample 2) where heat accumulates continuously.
-
-**【Limits of Statistical Z-Scores and Zero-to-One Anomalies】**
-
-* **3D Micro KL Drift (Information Geometry Change):**
-  In February 2020 ( $t=1$ ), a KL Drift spire of **`20.6829`** rises on the accounts receivable node. This captures the discontinuous shift (zero-to-one) in probability distributions caused by the mismatch.
-* **3D Micro Z-Score (Statistical Baseline Blind Spot):**
-  Z-Scores remain silent (Z-Score < 1.5) during the mismatch months of February, March, and November. However, they trigger warnings during seasonal sales surges in July (AR: `8.2579`) and normal rent expansions in August (Rent: `10.4443`), showing false positives. Z-Scores evaluated the November mismatch as normal, showing a false negative blind spot.
+Principal Component Analysis (PCA) of the accounts' coupling stiffness matrix shows no stiffness lock. The coupling parameters reset to flat during the correction month (June), confirming that the network maintains excellent flexibility with no signs of arteriosclerosis.
 
 ---
 
-## 5. Control Interventions and Recommended Actions (LQR & Operations)
+## 3. Key Areas for Improvement (Viscosity & Treatment Points)
 
-* **Intervention Protocol:** **Lock Data Integration and Automate Discrepancy Adjustments**
-* **Operational Improvement Recommendations:**
-  1. **Journal Import Validation Interlock:**
-     Modify the system to block imports of journal entries where the difference between Debit and Credit is not `0.00`.
-  2. **Fix Rounding Logic:**
-     Inspect the program transferring data from core operations to the accounting system. Correct rounding and sales tax calculation bugs.
+Specific areas for improvement identified by the system and recommended action plans are detailed below:
 
-* **LQR Control Space:**
-  ![LQR Control Space](readme_plots/004_1_3__control_lqr_performance_space.png)
+### ⚠️ Stagnation (Viscosity) Identification (Local Viscosity Temporal Heatmap Analysis)
+![Local Viscosity Trend](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_1_7_1__viscosity_trend.png)
 
-### 💡 Quantitative Evaluation of Leverage Points for Cost Reduction
+* **Stagnation Range:** 
+  The heatmap mapping log local viscosity ($viscosity\_C$) shows inventory (**`04_ACC_Inventory`**) holding a high viscosity index, peaking at the end of the year (**2020-12**).
+  This viscosity (delay) locks trajectories in phase space (attractor confinement). Refer to the 3D Phase Portrait ([000_1_8__phase_portrait_3d.png](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_1_8__phase_portrait_3d.png)) for trajectory clustering.
+  The top 25% viscosity group—**"04_ACC_Inventory"**, **"03_ACC_Cash"**, and **"07_ACC_Sales_Revenue"**—contains normal seasonal settlement delays.
+  - **`04_ACC_Inventory`**: Mean viscosity `52070.69`, peaking at **`2020-12`** (peak value `56817.59`).
+  - **`03_ACC_Cash`**: Mean viscosity `45680.18`, peaking in **`2020-06`**.
+  - **`07_ACC_Sales_Revenue`**: Mean viscosity `45422.22`, peaking in **`2020-12`**.
 
-Based on Inverse Kinematics (IK) and LQR control effort, the leverage effect of reducing the three expense types (payroll, rent, travel) is ranked as follows:
+### 🎯 Treatment Points ("Tsubo") & Contraindications
+![Sensitivity Matrix](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_2_1__sensitivity_matrix.png)
 
-1. **Rank 1: Payroll Expense (`ACC_Payroll_Exp`)**
-   * **Quantitative Feature:** The joint strain energy (`ik_strain_energy`) is **`39.7840`** at $t=0$ (lowest). This represents high flexibility for adjustment. The absolute adjustment scale is also the largest, making it the most effective target with minimal friction.
-2. **Rank 2: Rent Expense (`ACC_Rent_Exp`)**
-   * **Quantitative Feature:** The joint strain energy is **`48.4479`** at $t=0$. Although it is a fixed cost, it displays less adjustment distortion than travel expenses.
-3. **Rank 3: Travel Expense (`ACC_Travel_Exp`)**
-   * **Quantitative Feature:** The joint strain energy is **`48.6649`** at $t=0$ (highest). This indicates a large resistance to reduction. Short-term flat cuts on this node should be avoided.
+* **Treatment Points Range:** Accounts in the bottom 25% of intervention strain energy—**"02_ACC_COGS"**, **"04_ACC_Inventory"**, and **"01_ACC_Accounts_Receivable"**—can be adjusted with minimal frictional resistance.
+  - **Advice:** These nodes represent the most effective points to optimize flow and restore balance with the lowest structural backlash.
+* **Contraindications Range:** Conversely, the top 25% strain energy group—**"07_ACC_Sales_Revenue"**, **"09_ACC_Equity_Capital"**, and **"06_ACC_Rent_Exp"**—must be avoided.
+  - **Advice:** Forcing adjustments on these nodes will disrupt core connections and trigger massive system backlash.
 
 ---
 
-## 6. Alerts & Falsifiability
+## 4. Diagnostic Limitations and Falsifiability
 
-### 6.1. Triaging Statistical Anomalies
+To overturn (falsify) the diagnosis of "Temporary Entry Mistake," the following external, primary physical evidence must be presented:
 
-* **Triage Decision:** Reject the Z-Score warnings in July and August as statistical false positives. During those periods, the underlying Kirchhoff physical residual remained `0.00` and the topology remained stable.
-* **Overcoming False Negatives:** In November, when the Z-Score was silent, the Kirchhoff residual showed an anomaly of **`906.29`**. We reject the statistical model results and diagnose this as a physical inconsistency. Because the stiffness matrix self-heals after temporary strain, we classify this as a single input error.
+1. **ERP System Ledger Logs:**
+   If logs from the core ERP system show that the April 15 imbalance was caused by a network transmission failure or DB write-error rather than human entry error.
+2. **Authorization Logs of Correction Entry:**
+   If audit trails for the May correction entry prove that no official "Journal Edit Request" or corresponding supplier invoices existed, suggesting that the correction was an unauthorized manual adjustment.
 
-### 6.2. Falsification Conditions
-
-To reject the diagnosis of a temporary entry error and prove systematic embezzlement, the following evidence is required:
-
-1. **Original Bank Transfer Orders:**
-   Original bank statements or transfer receipts showing that payments matching the discrepancies (totaling `$1,412.88`) were made from the corporate bank account to an undisclosed third-party account on those dates.
-2. **Physical Delivery Log Discrepancies:**
-   Shipping and inspection documents from suppliers showing mismatches between the recorded decreases in assets and the actual volume or value of goods delivered.
+---
+*Published by: TLU Financial Mathematical Diagnostics Engine (General Reader Edition)*

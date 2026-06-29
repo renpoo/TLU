@@ -14,7 +14,3 @@ This table compares the maximum (or minimum) physical anomaly signatures across 
 | Sample_7_Market_Cash_Flow | 0.00 | 1.0000 | 799866295.44 | 0.00 |
 | Sample_8_fMRI_Stroke | 0.00 | 1.0000 | 167265.39 | 0.00 |
 | Sample_9_fMRI_Seizure | 0.00 | 1.0000 | 496087.79 | 0.00 |
-| Sample_OpenNeuro_Test | 0.00 | 0.0000 | 1496460.81 | 0.00 |
-| Sample_OpenNeuro_Test_2 | 0.00 | 0.0000 | 1496158.99 | 0.00 |
-| Sample_OpenNeuro_Test_3 | 0.00 | 1.0000 | -839338.70 | 0.00 |
-| Sample_OpenNeuro_Test_4 | 0.00 | 1.0000 | -609213.35 | 0.00 |

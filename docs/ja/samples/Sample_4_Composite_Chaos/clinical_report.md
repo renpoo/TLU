@@ -20,14 +20,19 @@
 ## 1. 総合体質診断および判定
 
 ### ① CRITICAL: 還流ロックと横領漏洩の合併症
-本システムは、期首の架空取引による「還流（スペクトル半径 $0.7861$）」と、期中の「資金流出（残差 $4,773.57$）」の双方が同時に肺に穴を開けて出血し、かつ心臓が空回りしているような危機的病態です。見かけ上の利益剰余金（当期純利益 `$200,478.42`）やバランスした累積諸表にカモフラージュされた「死角」を突き、力学構造を内側から完全に破壊しています。
+B/S（資産・資本）およびP/L（収益・費用）の見かけ上の当期純利益は `$200,478.42` と黒字を報告していますが、本システムは期首の架空取引による「還流（スペクトル半径 $0.7861$）」と、期中の「資金流出（残差最大 $4,773.57$）」の双方が同時に発生している合併不全を検知しました。これは肺に穴を開けて出血し、かつ心臓が空回りしているような危機的病態です。
 
-### ② 総合健康・体質評価（身体測定）
-* **体格・体重（質量 `state_X`）:** 平均 `181818.18`。資金流出により基礎体力（体重）が減少。
-* **免疫力・基礎体力（自由エネルギー `free_energy_F`）:** 平均 `3126535.00`。還流による数値の増幅（虚熱）があり、実質的な防御力は完全に崩壊しています。
-* **自律神経・代謝効率（エントロピー `entropy_S`）:** 平均 `1.5804`。還流による空回りコストの蓄積と、不整合記帳により、自律神経（エントロピー）は最大級に混乱しています。
-* **体温（温度 `temperature_T`）:** 平均 `245043.44`。還流に伴う異常発熱が続いています。
-* **動脈硬化（結合剛性 `stiffness_k`）:** 最大 `1.02e-09`。6月以降、構造剛性のバランスが崩れ、最終ステップではハブ接続が極端に固定化（動脈硬化）し、弾性を失っています。
+### ② 総合健康・体質評価（身体測定と数理ブリッジ）
+* **体格・体重（質量 `state_X`）:** 平均 `181818.18`、最大 `1000000.00`。
+  - **数理的解釈:** 簿外流出によって正味の質量（資本）は激しく侵食され減少しています。
+* **免疫力・基礎体力（自由エネルギー `free_energy_F`）:** 平均 `3126535.00`。
+  - **数理的解釈:** 還流「虚熱（$TS$）」による増幅があるため、表面上は高く見えますが、実質的な自己防御力（自由エネルギー）は崩壊しています。
+* **自律神経・代謝効率（エントロピー `entropy_S`）:** 平均 `1.5804`。
+  - **数理的解釈:** 架空取引の摩擦と、簿外隠蔽処理のノイズによって自律神経は最大級に混乱しています。
+* **体温（温度 `temperature_T`）:** 平均 `245043.44`。
+  - **数理的解釈:** 還流バブルによる過熱（発熱）状態が持続しています。
+* **動脈硬化（結合剛性 `stiffness_k`）:** 最大 `1.02e-09`。
+  - **数理的解釈:** 後半ステップではハブ接続が極端に固定化（動脈硬化）し、弾性を失っています。
 * **肩こり（粘性 `viscosity_C`）:** 売上高（`07_ACC_Sales_Revenue`）が平均粘性 `55323.23`、ピーク期 12月に `100328.50` と、極めて激しい資金遅延（気の滞り）が発生しています。
 
 ---
@@ -35,7 +40,7 @@
 ## 2. 物理・数理指標の詳細解析
 
 ### ① 3D Dynamics 記述統計（運動学）
-本システムにおける対流動的データ（状態 `state_X`, 速度 `velocity_v`, 加速度 `acceleration_a`, 局所粘性 `viscosity_C`）の記述統計量を以下に示します。データソースは [result.000_1_1_filter_dynamics.analysis.csv](../../samples/Sample_4_Composite_Chaos/output_data/result.000_1_1_filter_dynamics.analysis.csv) です。
+本システムにおける対流動的データ（状態 `state_X`, 速度 `velocity_v`, 加速度 `acceleration_a`, 局所粘性 `viscosity_C`）の記述統計量を以下に示します。データソースは [result.000_1_1_filter_dynamics.analysis.csv](../../../../samples/Sample_4_Composite_Chaos/output_data/result.000_1_1_filter_dynamics.analysis.csv) です。
 
 | 尺度 (Scale) | 平均値 (Mean) | 中央値 (Median) | 最頻値 (Mode: 値 (頻度/全数, %)) | 最小値 (Min) | 最大値 (Max) | 範囲 (Range) | IQR | 標準偏差 (Std Dev) | 歪度 (Skewness) | 尖度 (Kurtosis) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -48,85 +53,111 @@
 
 ## 3. 熱力学およびトポロジーの解析
 
-### ① マクロ熱力学的分析（エネルギースタックおよびT-S図）
+### ① マクロ熱力学的分析（エネルギースタックおよびT-S図：複合不全と熱的死）
 
-![Thermodynamics Energy Stack](../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Thermodynamics Energy Stack](../../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
-![T-S Diagram](../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+![T-S Diagram](../../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+
+* **複合不全に伴う「熱的死（Thermal Death）」のメカニズム:**
+  還流取引の継続（スペクトル半径 $\rho \ge 0.75$）により、システム内に無駄な循環摩擦熱（エントロピー損失 $TS$）が持続的に発生します。これと同時に、期中（6月〜9月）にかけて質量（資金）が系外へ漏れ出る「大出血」が発生しました。
+  一般にシステムの保有エネルギー $U$ から、摩擦によって失われる不可逆熱 $TS$ を引いた残りが有効エネルギー（自由エネルギー $F = U - TS$）ですが、質量消失による $U$ の減少と、還流摩擦による $TS$ の増大がダブルで作用した結果、自由エネルギー $F$ は通常の健全状態と比較して、後半ステップでマイナス以下へと劇的に減退します。T-S図においては、還流の過熱軌道を描きながら質量が抜け落ちていく軌道が記録されており、これはシステムが不可逆な機能停止（熱的死）へ陥るプロセスの数理的証拠です。
 
 ### ② 3D局所熱力学（エントロピー・温度・内部エネルギー）分布
 
-![3D Local Entropy](../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2_1__3d_local_entropy.png)
+![3D Local Entropy](../../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2_1__3d_local_entropy.png)
 
-![3D Local Temperature](../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2_2__3d_local_temperature.png)
+![3D Local Temperature](../../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2_2__3d_local_temperature.png)
 
-![3D Local Internal Energy](../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2_7__3d_local_internal_energy.png)
+![3D Local Internal Energy](../../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2_7__3d_local_internal_energy.png)
 
-### ネットワークトポロジーの変化 (時系列進化)
+### ③ ネットワークトポロジーの変化 (時系列進化)
 
-* **ネットワークトポロジーの変化**:
-  
-* **2020-05 (t=4 - 横領発生直前、還流経路が持続)**:
-  
-* **t=5**:
-  
-* **t=8**:
-  
-* **t=11**:
-  
+* **2020-05 (t=4: 横領発生直前、還流経路が持続)**:
+  ![Topology t4](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00004.png)
+* **t=5 (2020-06: `UNKNOWN_LEAK` への質量漏洩が開始)**:
+  ![Topology t5](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00005.png)
+* **t=8 (2020-09: 還流と漏洩の同時発生によるトポロジー崩壊)**:
+  ![Topology t8](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00008.png)
+* **t=11 (2020-12: キャッシュ枯渇と還流ロックによる終末状態)**:
+  ![Topology t11](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_1_2__network_topology.t.00011.png)
 
-### ③ 情報幾何学・キルヒホッフ監査残差および3DミクロKLドリフト
+### ④ 情報幾何学・キルヒホッフ監査残差および3DミクロKLドリフト
 
-![Macro Forensics](../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Macro Forensics](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
-![3D Micro KL Drift](../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+![3D Micro KL Drift](../../../../samples/Sample_4_Composite_Chaos/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+
+---
 
 ## 4. ネットワークの幾何・構造的解析
 
-### ② 結合剛性PCA（主成分分析）および固有ベクトル進化
+### ① 結合剛性PCA（主成分分析）および固有ベクトル進化
 
-![PCA Ratio](../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_2__principal_axes_ratio.png)
+![PCA Ratio](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_2__principal_axes_ratio.png)
 
-![PCA PC1 Evolution](../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_3__eigenvector_evolution.png)
+![PCA PC1 Evolution](../../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_3__eigenvector_evolution.png)
 
-![PCA PC2 Evolution](../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_3__eigenvector_evolution_pc2.png)
+---
 
-![PCA PC3 Evolution](../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_3__eigenvector_evolution_pc3.png)
+## 5. 監査およびアノマリーの精査
 
-## 5. 総合健康診断：肩こりとツボの特定
+### ① 質量保存残差の発生と監査証跡
+* **漏洩仕訳ID・日付のトレース:**
+  - 2020-06-05 (t=5): 金額 **`$280.50`** (仕訳ID: `E_001654`  付近 / 現金・売掛金の不整合流出)
+  - 2020-07-29 (t=6): 金額 **`$320.10`**
+  - 2020-08-09 (t=7): 金額 **`$440.35`**
+  - 2020-08-10 (t=7): 金額 **`$120.40`**
+  - 2020-08-30 (t=7): 金額 **`$321.07`**
+  - 2020-09-29 (t=8): 金額 **`$4,773.57`**（最大流出スパイク）
+  - **横領流出累計総額:** **`$6,255.99`**
+
+---
+
+## 6. 制御安定性および介入制御分析
+
+### ① 最大スペクトル半径（安定性評価）
+![System Stability](../../../../samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
+
+---
+
+## 7. 総合健康診断：肩こりとツボの特定
 
 ### ① 慢性的な「肩こり（滞り）」の分析と時期の特定
-
-本システムにおける各実質ノードの平均粘性分布から、第3四分位数 Q3 しきい値（**`40879.0952`** 以上）の範囲にある高粘性（滞り）ノード群を複数特定しました。
+本システムにおける各実質ノードの平均粘性分布から、第3四分位数 Q3 しきい値（**`40879.0952`** 以上）の範囲にある高粘性（滞り）ノード群を複数特定しました。データソースは [result.000_1_1_filter_dynamics.analysis.csv](../../../../samples/Sample_4_Composite_Chaos/output_data/result.000_1_1_filter_dynamics.analysis.csv) です。
 
 * **`07_ACC_Sales_Revenue`**:
   - 平均粘性値: **`55323.2336`**
   - 最も滞る時期: **`2020-12`**（ピーク粘性値: **`100328.4958`**）
-  - 数理的解釈: 横領と還流が混在したシステミックな機能低下が発生し、局所的な気の滞り（還流や硬直）を慢性的に誘発する原因となっています。
+  - 数理的解釈: 局所粘性時系列トレンドのヒートマップ（`000_1_7_1__viscosity_trend.png`）において、売上高が期末に最大粘性を蓄積して著しい決済遅延を引き起こしている様子が視覚的に実証されています。
 * **`04_ACC_Inventory`**:
   - 平均粘性値: **`52088.2541`**
   - 最も滞る時期: **`2020-12`**（ピーク粘性値: **`56874.8048`**）
-  - 数理的解釈: 横領と還流が混在したシステミックな機能低下が発生し、局所的な気の滞り（還流や硬直）を慢性的に誘発する原因となっています。
 * **`03_ACC_Cash`**:
   - 平均粘性値: **`46085.3025`**
   - 最も滞る時期: **`2020-06`**（ピーク粘性値: **`48161.8708`**）
-  - 数理的解釈: 横領と還流が混在したシステミックな機能低下が発生し、局所的な気の滞り（還流や硬直）を慢性的に誘発する原因となっています。
 
 ### ② 特効穴（ツボ）および禁忌（避けるべき介入）の特定
-
 介入歪みエネルギー（`ik_strain_energy`）の平均分布から、第1四分位数 Q1 しきい値（**`4.1848`** 以下）および第3四分位数 Q3 しきい値（**`8.2768`** 以上）の範囲に基づいて、ツボと禁忌のノード群をそれぞれ抽出・序列化しました。
 
 #### 🎯 特効穴（ツボ）の範囲 (歪みエネルギー $\le$ Q1)
 介入による反発（痛み・摩擦）が最小でありながら調整ゲインが高いため、システム本来の免疫力を復元するための最優先のツボ群です。
-
 1. **`03_ACC_Cash`** (平均歪みエネルギー: **`1.5982`**)
 2. **`01_ACC_Accounts_Receivable`** (平均歪みエネルギー: **`1.7655`**)
 3. **`02_ACC_COGS`** (平均歪みエネルギー: **`3.6643`**)
 
-#### 🚫 避けるべき介入（禁忌）の範囲 (歪みエネルギー $\ge$ Q3 または調整不能)
+#### 🚫 避けるべき介入（禁忌）の範囲 (歪みエネルギー $\ge$ Q3)
 介入時の反発歪み（痛み）が極めて高いため、強引な調整を施すとシステムに致命的な破壊や反発ストレスを引き起こす危険な禁忌領域です。
-
 1. **`07_ACC_Sales_Revenue`** (平均歪みエネルギー: **`8.3693`**)
 2. **`09_UNKNOWN_LEAK`** (平均歪みエネルギー: **`8.3422`**)
 3. **`10_ACC_Equity_Capital`** (平均歪みエネルギー: **`8.3317`**)
 
+---
+
+## 8. 反証可能性および限界 (Falsifiability & Limits)
+
+本診断（還流および不正資金流出の複合病態）を覆すために実査で必要な境界外の客観的証拠は以下の通りです。
+1. **実体取引および移動の完全な証明:**
+   循環が指摘されている期間の売上高（計 `$138,655.85`）に対し、取引先が発行した「検収書原本」および物品配送の「運送状原本」が揃っており、法的に完全な独立取引であることが証明された場合。
+2. **簿外資金の正規口座着金立証:**
+   質量欠損とされた計 `$6,255.99` の現金の消失について、監査範囲外の銀行取引ログ原本、あるいはSWIFT送金ログ原本との突合により、実際には関連子会社や正当な投資口座へ送金され、会社の資産範囲内に留まっていることが立証された場合。

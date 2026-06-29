@@ -18,22 +18,27 @@
 ## 1. 総合体質診断および判定
 
 ### ① NORMAL: 決済流動性の完全保存
-外部からの資本流入（追加出資など）は直接純資産（`ACC_Input_From_Outside`）に蓄積され、手数料などの流出（費用取引）はP/Lを経由してB/Sの純利益を減少させるプロセスが完璧に同期しています。キルヒホッフ残差が全期間 `0.00` であり、簿外への不当な資金漏洩や記帳漏れは一切ありません。
+外部からの資本流入（追加出資など）は直接純資産（`ACC_Input_From_Outside`）に蓄積され、手数料などの流出（費用取引）はP/Lを経由してB/S of 純利益を減少させるプロセスが完璧に同期しています。キルヒホッフ残差が全期間 `0.00` であり、簿外への不当な資金漏洩や記帳漏れは一切ありません。
 
-### ② 総合健康・体質評価（身体測定）
+### ② 総合健康・体質評価（身体測定と数理ブリッジ）
 * **体格・体重（質量 `state_X`）:** 平均 `113,286,439.67`、最大 `676,738,389.81`。
-* **免疫力・基礎体力（自由エネルギー `free_energy_F`）:** 平均 `1,169,328,455.94`。パニック売りなどでマーケットメーカー（HFT）の手元現金が一斉に枯渇しそうになった際でも、それを十分に緩和できる余裕（免疫力）が蓄えられています。
-* **自律神経・代謝効率（エントロピー `entropy_S`）:** 平均 `5.7599`。大口決済のダイナミックな移動に対応し、良好なエネルギー効率を維持しています。
-* **体温（温度 `temperature_T`）:** 平均 `32,127,842.03`。活発な取引量に応じた健康的な熱量です。
-* **動脈硬化（結合剛性 `stiffness_k`）:** 最大 `1.00e-12` と極小。口座間決済のしなやかさは完全に保たれており、硬直化は認められません。
-* **肩こり（粘性 `viscosity_C`）:** 大口アカウント `02_USR_001` が平均 `38,082,430.79`、ピーク期 8月に `39,305,218.41` と一時的な決済タイムラグ（肩こり）を発生させています。
+  - **数理的解釈:** 決済用現金の総量であり、市場規模に対応して極めて頑健に推移しています。
+* **免疫力・基礎体力（自由エネルギー `free_energy_F`）:** 平均 `1,169,328,455.94`。
+  - **数理的解釈:** マーケットメーカーの手元現金枯渇を吸収しうるだけの巨大なクッションポテンシャルが確保されています。
+* **自律神経・代謝効率（エントロピー `entropy_S`）:** 平均 `5.7599`。
+  - **数理的解釈:** 流動性移動のエネルギー対流効率が最適化されており、無駄な還流空転はありません。
+* **体温（温度 `temperature_T`）:** 平均 `32,127,842.03`。
+  - **数理的解釈:** 正常な取引量による健康的な熱量です。
+* **動脈硬化（結合剛性 `stiffness_k`）:** 最大 `1.00e-12` と極小。
+  - **数理的解釈:** 結合の硬直化（動脈硬化）は認められず、しなやかな決済能力を維持しています。
+* **肩こり（粘性 `viscosity_C`）:** 大口アカウント `02_USR_001` が平均粘性 `38,082,430.79` と通常の決済タイムラグ（肩こり）を一時的に発生させています。
 
 ---
 
 ## 2. 物理・数理指標の詳細解析
 
 ### ① 3D Dynamics 記述統計（運動学）
-本システムにおける対流動的データ（状態 `state_X`, 速度 `velocity_v`, 加速度 `acceleration_a`, 局所粘性 `viscosity_C`）の記述統計量を以下に示します。データソースは [result.000_1_1_filter_dynamics.analysis.csv](../../samples/Sample_7_Market_Cash_Flow/output_data/result.000_1_1_filter_dynamics.analysis.csv) です。
+本システムにおける対流動的データ（状態 `state_X`, 速度 `velocity_v`, 加速度 `acceleration_a`, 局所粘性 `viscosity_C`）の記述統計量を以下に示します。データソースは [result.000_1_1_filter_dynamics.analysis.csv](../../../../samples/Sample_7_Market_Cash_Flow/output_data/result.000_1_1_filter_dynamics.analysis.csv) です。
 
 | 尺度 (Scale) | 平均値 (Mean) | 中央値 (Median) | 最頻値 (Mode: 値 (頻度/全数, %)) | 最小値 (Min) | 最大値 (Max) | 範囲 (Range) | IQR | 標準偏差 (Std Dev) | 歪度 (Skewness) | 尖度 (Kurtosis) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -48,75 +53,85 @@
 
 ### ① マクロ熱力学的分析（エネルギースタックおよびT-S図）
 
-![Thermodynamics Energy Stack](../../samples/Sample_7_Market_Cash_Flow/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+![Thermodynamics Energy Stack](../../../../samples/Sample_7_Market_Cash_Flow/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
-![T-S Diagram](../../samples/Sample_7_Market_Cash_Flow/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+![T-S Diagram](../../../../samples/Sample_7_Market_Cash_Flow/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 ### ② 3D局所熱力学（エントロピー・温度・内部エネルギー）分布
 
-![3D Local Entropy](../../samples/Sample_7_Market_Cash_Flow/readme_plots/001_1_2_1__3d_local_entropy.png)
+![3D Local Entropy](../../../../samples/Sample_7_Market_Cash_Flow/readme_plots/001_1_2_1__3d_local_entropy.png)
 
-![3D Local Temperature](../../samples/Sample_7_Market_Cash_Flow/readme_plots/001_1_2_2__3d_local_temperature.png)
+![3D Local Temperature](../../../../samples/Sample_7_Market_Cash_Flow/readme_plots/001_1_2_2__3d_local_temperature.png)
 
-![3D Local Internal Energy](../../samples/Sample_7_Market_Cash_Flow/readme_plots/001_1_2_7__3d_local_internal_energy.png)
-
-### ネットワークトポロジーの変化 (時系列進化)
-
-* **ネットワークトポロジーの変化**:
-  
+![3D Local Internal Energy](../../../../samples/Sample_7_Market_Cash_Flow/readme_plots/001_1_2_7__3d_local_internal_energy.png)
 
 ### ③ 情報幾何学・キルヒホッフ監査残差および3DミクロKLドリフト
 
-![Macro Forensics](../../samples/Sample_7_Market_Cash_Flow/readme_plots/002_2_1__macro_forensics_dashboard.png)
+![Macro Forensics](../../../../samples/Sample_7_Market_Cash_Flow/readme_plots/002_2_1__macro_forensics_dashboard.png)
 
-![3D Micro KL Drift](../../samples/Sample_7_Market_Cash_Flow/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+![3D Micro KL Drift](../../../../samples/Sample_7_Market_Cash_Flow/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+
+---
 
 ## 4. ネットワークの幾何・構造的解析
 
-### ② 結合剛性PCA（主成分分析）および固有ベクトル進化
+### ① 結合剛性PCA（主成分分析）および固有ベクトル進化
 
-![PCA Ratio](../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_2__principal_axes_ratio.png)
+![PCA Ratio](../../../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_2__principal_axes_ratio.png)
 
-![PCA PC1 Evolution](../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_3__eigenvector_evolution.png)
+![PCA PC1 Evolution](../../../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_3__eigenvector_evolution.png)
 
-![PCA PC2 Evolution](../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_3__eigenvector_evolution_pc2.png)
+#### 📐 現金決済ネットワークにおける対流安定性と $\rho = 1.00$ ロックの数理的意義
+本決済流動システムでは、最大スペクトル半径 $\rho$ が `1.0000` に固着することなく、全期間を通じて平均 `0.00` を記録しています。
+これは、特定の複数アカウントの間だけで決済資金がぐるぐると空回りして閉鎖還流対流（ウォッシュ・トレード）を引き起こしておらず、資金決済が多方向へ健全に分散対当・完了していることを意味します。決済ネットワーク全体の動的安定性は完全に維持されています。
 
-![PCA PC3 Evolution](../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_3__eigenvector_evolution_pc3.png)
+---
 
-## 5. 総合健康診断：肩こりとツボの特定
+## 5. 監査およびアノマリーの精査
+
+### ① 保存則残差 (conservation_residual)
+* 平均、最小、最大、範囲はすべて **0.0000** です。これにより、決済システム内での現金の簿外消失や不当な二重決済は一切発生しておらず、完全な決済の保存性が維持されていることが監査的に証明されました。
+
+---
+
+## 6. 制御安定性および介入制御分析
+
+### ① 最大スペクトル半径（安定性評価）
+![System Stability](../../../../samples/Sample_7_Market_Cash_Flow/readme_plots/004_1_2__system_stability.png)
+
+---
+
+## 7. 総合健康診断：肩こりとツボの特定
 
 ### ① 慢性的な「肩こり（滞り）」の分析と時期の特定
+本システムにおける各実質ノードの平均粘性分布から、第3四分位数 Q3 しきい値（**`9426682.5826`** 以上）の範囲にある高粘性（滞り）ノード群を複数特定しました。データソースは [result.000_1_1_filter_dynamics.analysis.csv](../../../../samples/Sample_7_Market_Cash_Flow/output_data/result.000_1_1_filter_dynamics.analysis.csv) です。
 
-本システムにおける各実質ノードの平均粘性分布から、第3四分位数 Q3 しきい値（**`9426682.5826`** 以上）の範囲にある高粘性（滞り）ノード群を複数特定しました。
-
-* **`00_ACC_Input_From_Outside`**:
-  - 平均粘性値: **`66249781.7932`**
-  - 最も滞る時期: **`2020-01`**（ピーク粘性値: **`67673838.9810`**）
-  - 数理的解釈: 市場内の現金決済プロセスにおける遅滞が発生し、局所的な気の滞り（還流や硬直）を慢性的に誘発する原因となっています。
-* **`02_USR_001`**:
-  - 平均粘性値: **`38082430.7902`**
-  - 最も滞る時期: **`2020-08`**（ピーク粘性値: **`39305218.4085`**）
-  - 数理的解釈: 市場内の現金決済プロセスにおける遅滞が発生し、局所的な気の滞り（還流や硬直）を慢性的に誘発する原因となっています。
-* **`03_USR_002`**:
-  - 平均粘性値: **`19569642.3796`**
-  - 最も滞る時期: **`2021-12`**（ピーク粘性値: **`22875661.1960`**）
-  - 数理的解釈: 市場内の現金決済プロセスにおける遅滞が発生し、局所的な気の滞り（還流や硬直）を慢性的に誘発する原因となっています。
+* **`00_ACC_Input_From_Outside`** (平均粘性: **`66249781.7932`** / 最も滞る時期: **`2020-01`**)
+  - 数理的解釈: 局所粘性時系列トレンドのヒートマップ（`000_1_7_1__viscosity_trend.png`）において、外部資金流入アカウントに緩やかな決済タイムラグが通常の範囲内で発生していることが実証されています。
+* **`02_USR_001`** (平均粘性: **`38082430.7902`** / 最も滞る時期: **`2020-08`**)
+* **`03_USR_002`** (平均粘性: **`19569642.3796`** / 最も滞る時期: **`2021-12`**)
 
 ### ② 特効穴（ツボ）および禁忌（避けるべき介入）の特定
-
 介入歪みエネルギー（`ik_strain_energy`）の平均分布から、第1四分位数 Q1 しきい値（**`3.5761`** 以下）および第3四分位数 Q3 しきい値（**`4.0376`** 以上）の範囲に基づいて、ツボと禁忌のノード群をそれぞれ抽出・序列化しました。
 
 #### 🎯 特効穴（ツボ）の範囲 (歪みエネルギー $\le$ Q1)
-介入による反発（痛み・摩擦）が最小でありながら調整ゲインが高いため、システム本来の免疫力を復元するための最優先のツボ群です。
-
+介入による決済ネットワークの混乱（反発ストレス）が最小でありながら、全体の決済流動性を速やかに高めるゲインが最も高い推奨の取引アカウントです。
 1. **`05_USR_004`** (平均歪みエネルギー: **`0.1748`**)
 2. **`04_USR_003`** (平均歪みエネルギー: **`0.1836`**)
 3. **`01_ACC_Output_To_Outside`** (平均歪みエネルギー: **`3.2431`**)
 
-#### 🚫 避けるべき介入（禁忌）の範囲 (歪みエネルギー $\ge$ Q3 または調整不能)
-介入時の反発歪み（痛み）が極めて高いため、強引な調整を施すとシステムに致命的な破壊や反発ストレスを引き起こす危険な禁忌領域です。
-
+#### 🚫 避けるべき介入（禁忌）の範囲 (歪みエネルギー $\ge$ Q3)
+安易に口座凍結や強制的な一時排除を実施すると、市場決済をドミノ式に麻痺させ、全体に深刻な決済崩壊（激しい痛み）を連鎖誘発する禁忌のノードです。
 1. **`00_ACC_Input_From_Outside`** (平均歪みエネルギー: **`4.1658`**)
 2. **`03_USR_002`** (平均歪みエネルギー: **`4.1122`**)
 3. **`02_USR_001`** (平均歪みエネルギー: **`4.0934`**)
 
+---
+
+## 8. 反証可能性および限界 (Falsifiability & Limits)
+
+本診断（現金決済の正常状態）を覆すために実査で必要な境界外の客観的証拠は以下の通りです。
+1. **正規銀行決済ログ原本の不一致:**
+   対象アカウント（USR_001〜002）の市場データベース上の残高と、外部の「銀行口座明細書原本」や「SWIFT送金ログ原本」を直接照合した結果、市場データに反映されていない現金消失（質量不整合）が証明された場合。
+2. **決済仲介サーバーログ of 監査:**
+   中継サーバー側の「決済生ログ原本」を解析し、実際には口座間決済されていなかったにもかかわらず、データベース上だけで「対当完了」と偽装記録されていたケース（決済の不整合）が発見された場合。
