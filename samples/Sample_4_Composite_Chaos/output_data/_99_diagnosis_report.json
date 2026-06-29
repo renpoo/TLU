@@ -1,0 +1,79 @@
+{
+  "env_dir": "samples/Sample_4_Composite_Chaos",
+  "date_analyzed": "2026-06-26 10:01:19",
+  "diagnoses": [
+    {
+      "pathology": "Mass Conservation Violation (Leakage)",
+      "severity": "CRITICAL",
+      "evidence": "Relative Leak Ratio: 0.001358.",
+      "interpretation": "Systemic flux is disappearing or materializing from nowhere."
+    },
+    {
+      "pathology": "Topological Feedback Loop (Wash Trade / Resonance)",
+      "severity": "HIGH",
+      "evidence": "Max Spectral Radius: 0.7861.",
+      "interpretation": "An artificial loop of funds or extreme resonance has formed in the network."
+    }
+  ],
+  "metrics": {
+    "mean_gross_activity": 3516126.483333334,
+    "relative_leak_ratio": 0.0013576218098600916,
+    "max_spectral": 0.786143,
+    "min_stress": 5.5944,
+    "max_viscosity": 423217.5944,
+    "min_viscosity": 240677.304
+  },
+  "quartiles": {
+    "viscosity_q3": 40879.095199999996,
+    "strain_q1": 4.1848,
+    "strain_q3": 8.276783333333334,
+    "stiff_candidates": [
+      {
+        "node": "07_ACC_Sales_Revenue",
+        "avg_viscosity": 55323.233608333336,
+        "peak_time": "2020-12",
+        "peak_val": 100328.4958
+      },
+      {
+        "node": "04_ACC_Inventory",
+        "avg_viscosity": 52088.25405833334,
+        "peak_time": "2020-12",
+        "peak_val": 56874.8048
+      },
+      {
+        "node": "03_ACC_Cash",
+        "avg_viscosity": 46085.30250833333,
+        "peak_time": "2020-06",
+        "peak_val": 48161.8708
+      }
+    ],
+    "tsubo_candidates": [
+      {
+        "node": "03_ACC_Cash",
+        "avg_strain": 1.5981583333333331
+      },
+      {
+        "node": "01_ACC_Accounts_Receivable",
+        "avg_strain": 1.7655333333333332
+      },
+      {
+        "node": "02_ACC_COGS",
+        "avg_strain": 3.6642500000000005
+      }
+    ],
+    "kinki_candidates": [
+      {
+        "node": "07_ACC_Sales_Revenue",
+        "avg_strain": 8.369291666666667
+      },
+      {
+        "node": "09_UNKNOWN_LEAK",
+        "avg_strain": 8.342158333333334
+      },
+      {
+        "node": "10_ACC_Equity_Capital",
+        "avg_strain": 8.331666666666667
+      }
+    ]
+  }
+}

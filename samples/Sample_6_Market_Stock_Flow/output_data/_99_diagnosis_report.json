@@ -1,0 +1,91 @@
+{
+  "env_dir": "samples/Sample_6_Market_Stock_Flow",
+  "date_analyzed": "2026-06-26 10:02:14",
+  "diagnoses": [
+    {
+      "pathology": "Topological Feedback Loop (Wash Trade / Resonance)",
+      "severity": "HIGH",
+      "evidence": "Max Spectral Radius: 1.0000.",
+      "interpretation": "An artificial loop of funds or extreme resonance has formed in the network."
+    }
+  ],
+  "metrics": {
+    "mean_gross_activity": 6091974341.756667,
+    "relative_leak_ratio": 0.0,
+    "max_spectral": 1.0,
+    "min_stress": 14.1132,
+    "max_viscosity": 609221357.63,
+    "min_viscosity": 609189362.1798
+  },
+  "quartiles": {
+    "viscosity_q3": 58239516.020500004,
+    "strain_q1": 3.8237583333333336,
+    "strain_q3": 4.1658333333333335,
+    "stiff_candidates": [
+      {
+        "node": "01_USR_002",
+        "avg_viscosity": 143448843.0911875,
+        "peak_time": "2020-02",
+        "peak_val": 149263929.907
+      },
+      {
+        "node": "00_USR_001",
+        "avg_viscosity": 143329389.41535416,
+        "peak_time": "2020-04",
+        "peak_val": 144794366.99
+      },
+      {
+        "node": "10_STK_001",
+        "avg_viscosity": 112157075.056,
+        "peak_time": "2020-01",
+        "peak_val": 112157075.056
+      },
+      {
+        "node": "14_STK_005",
+        "avg_viscosity": 66346897.157,
+        "peak_time": "2020-01",
+        "peak_val": 66346897.157
+      }
+    ],
+    "tsubo_candidates": [
+      {
+        "node": "03_USR_004",
+        "avg_strain": 0.25299166666666667
+      },
+      {
+        "node": "02_USR_003",
+        "avg_strain": 0.2891625
+      },
+      {
+        "node": "09_USR_010",
+        "avg_strain": 3.7814124999999996
+      },
+      {
+        "node": "04_USR_005",
+        "avg_strain": 3.788933333333334
+      }
+    ],
+    "kinki_candidates": [
+      {
+        "node": "10_STK_001",
+        "avg_strain": 4.1658333333333335
+      },
+      {
+        "node": "11_STK_002",
+        "avg_strain": 4.1658333333333335
+      },
+      {
+        "node": "12_STK_003",
+        "avg_strain": 4.1658333333333335
+      },
+      {
+        "node": "13_STK_004",
+        "avg_strain": 4.1658333333333335
+      },
+      {
+        "node": "14_STK_005",
+        "avg_strain": 4.1658333333333335
+      }
+    ]
+  }
+}

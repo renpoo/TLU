@@ -1,0 +1,73 @@
+{
+  "env_dir": "samples/Sample_7_Market_Cash_Flow",
+  "date_analyzed": "2026-06-26 10:02:40",
+  "diagnoses": [
+    {
+      "pathology": "Topological Feedback Loop (Wash Trade / Resonance)",
+      "severity": "HIGH",
+      "evidence": "Max Spectral Radius: 1.0000.",
+      "interpretation": "An artificial loop of funds or extreme resonance has formed in the network."
+    }
+  ],
+  "metrics": {
+    "mean_gross_activity": 1359453095.1216667,
+    "relative_leak_ratio": 0.0,
+    "max_spectral": 1.0,
+    "min_stress": 41.3478,
+    "max_viscosity": 135953219.04320002,
+    "min_viscosity": 135943727.6059
+  },
+  "quartiles": {
+    "viscosity_q3": 9426682.582564583,
+    "strain_q1": 3.5760927083333334,
+    "strain_q3": 4.037617708333333,
+    "stiff_candidates": [
+      {
+        "node": "00_ACC_Input_From_Outside",
+        "avg_viscosity": 66249781.7931625,
+        "peak_time": "2020-01",
+        "peak_val": 67673838.981
+      },
+      {
+        "node": "02_USR_001",
+        "avg_viscosity": 38082430.79019167,
+        "peak_time": "2020-08",
+        "peak_val": 39305218.4085
+      },
+      {
+        "node": "03_USR_002",
+        "avg_viscosity": 19569642.37962083,
+        "peak_time": "2021-12",
+        "peak_val": 22875661.196
+      }
+    ],
+    "tsubo_candidates": [
+      {
+        "node": "05_USR_004",
+        "avg_strain": 0.17479583333333334
+      },
+      {
+        "node": "04_USR_003",
+        "avg_strain": 0.18361666666666668
+      },
+      {
+        "node": "01_ACC_Output_To_Outside",
+        "avg_strain": 3.243133333333333
+      }
+    ],
+    "kinki_candidates": [
+      {
+        "node": "00_ACC_Input_From_Outside",
+        "avg_strain": 4.1658333333333335
+      },
+      {
+        "node": "03_USR_002",
+        "avg_strain": 4.112212499999999
+      },
+      {
+        "node": "02_USR_001",
+        "avg_strain": 4.093420833333333
+      }
+    ]
+  }
+}

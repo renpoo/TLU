@@ -1,0 +1,73 @@
+{
+  "env_dir": "samples/Sample_3_Unbalanced_Mistake",
+  "date_analyzed": "2026-06-26 10:00:55",
+  "diagnoses": [
+    {
+      "pathology": "Mass Conservation Violation (Leakage)",
+      "severity": "CRITICAL",
+      "evidence": "Relative Leak Ratio: 0.000275.",
+      "interpretation": "Systemic flux is disappearing or materializing from nowhere."
+    }
+  ],
+  "metrics": {
+    "mean_gross_activity": 3300434.6766666663,
+    "relative_leak_ratio": 0.0002745971633395041,
+    "max_spectral": 0.0,
+    "min_stress": 7.2017,
+    "max_viscosity": 395402.5171,
+    "min_viscosity": 230384.23200000002
+  },
+  "quartiles": {
+    "viscosity_q3": 40371.14403541667,
+    "strain_q1": 5.444683333333334,
+    "strain_q3": 8.218612499999999,
+    "stiff_candidates": [
+      {
+        "node": "04_ACC_Inventory",
+        "avg_viscosity": 52070.69150833334,
+        "peak_time": "2020-12",
+        "peak_val": 56817.5903
+      },
+      {
+        "node": "03_ACC_Cash",
+        "avg_viscosity": 45606.015649999994,
+        "peak_time": "2020-06",
+        "peak_val": 47469.7562
+      },
+      {
+        "node": "07_ACC_Sales_Revenue",
+        "avg_viscosity": 45422.227008333335,
+        "peak_time": "2020-12",
+        "peak_val": 87430.7585
+      }
+    ],
+    "tsubo_candidates": [
+      {
+        "node": "02_ACC_COGS",
+        "avg_strain": 3.664816666666667
+      },
+      {
+        "node": "04_ACC_Inventory",
+        "avg_strain": 4.7277
+      },
+      {
+        "node": "01_ACC_Accounts_Receivable",
+        "avg_strain": 4.8484
+      }
+    ],
+    "kinki_candidates": [
+      {
+        "node": "09_UNKNOWN_LEAK",
+        "avg_strain": 8.36305
+      },
+      {
+        "node": "07_ACC_Sales_Revenue",
+        "avg_strain": 8.33845
+      },
+      {
+        "node": "10_ACC_Equity_Capital",
+        "avg_strain": 8.331666666666667
+      }
+    ]
+  }
+}

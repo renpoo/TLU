@@ -1,0 +1,141 @@
+{
+  "env_dir": "samples/Sample_5_Kyoto_Traffic",
+  "date_analyzed": "2026-06-26 10:01:49",
+  "diagnoses": [
+    {
+      "pathology": "Chronic High Friction (Baseline Tearing)",
+      "severity": "HIGH",
+      "evidence": "Mean Entropy: 39.91.",
+      "interpretation": "The system's baseline is inherently chaotic and highly viscous. Long-term structural integrity is doubtful due to constant energy dissipation."
+    },
+    {
+      "pathology": "Thermal Death (Absolute Energy Depletion)",
+      "severity": "CRITICAL",
+      "evidence": "Min Free Energy: -876907.64.",
+      "interpretation": "The system has exhausted its resilience. External intervention is required."
+    },
+    {
+      "pathology": "Topological Feedback Loop (Wash Trade / Resonance)",
+      "severity": "HIGH",
+      "evidence": "Max Spectral Radius: 1.0000.",
+      "interpretation": "An artificial loop of funds or extreme resonance has formed in the network."
+    }
+  ],
+  "metrics": {
+    "mean_gross_activity": 250000.0,
+    "relative_leak_ratio": 0.0,
+    "max_spectral": 1.0,
+    "min_stress": 34.0742,
+    "max_viscosity": 25000.0,
+    "min_viscosity": 24999.9999
+  },
+  "quartiles": {
+    "viscosity_q3": 1026.6548625,
+    "strain_q1": 1.4564041666666665,
+    "strain_q3": 1.8468208333333334,
+    "stiff_candidates": [
+      {
+        "node": "02_GojoKurumayacho",
+        "avg_viscosity": 1387.5309041666667,
+        "peak_time": "2021-06",
+        "peak_val": 1966.25
+      },
+      {
+        "node": "03_GojoMuromachi",
+        "avg_viscosity": 1369.8809041666666,
+        "peak_time": "2021-12",
+        "peak_val": 1901.35
+      },
+      {
+        "node": "17_SanjoKurumayacho",
+        "avg_viscosity": 1339.3506958333335,
+        "peak_time": "2021-12",
+        "peak_val": 1867.55
+      },
+      {
+        "node": "18_SanjoMuromachi",
+        "avg_viscosity": 1288.2649291666667,
+        "peak_time": "2021-12",
+        "peak_val": 1771.25
+      },
+      {
+        "node": "24_ShijoShinmachi",
+        "avg_viscosity": 1119.8388875,
+        "peak_time": "2021-12",
+        "peak_val": 1355.0
+      },
+      {
+        "node": "11_NijoKarasuma",
+        "avg_viscosity": 1118.8447916666667,
+        "peak_time": "2021-12",
+        "peak_val": 1347.575
+      },
+      {
+        "node": "15_SanjoHorikawa",
+        "avg_viscosity": 1026.6548625,
+        "peak_time": "2021-12",
+        "peak_val": 1037.5
+      }
+    ],
+    "tsubo_candidates": [
+      {
+        "node": "21_ShijoKarasuma",
+        "avg_strain": 1.285275
+      },
+      {
+        "node": "24_ShijoShinmachi",
+        "avg_strain": 1.3054333333333332
+      },
+      {
+        "node": "11_NijoKarasuma",
+        "avg_strain": 1.3883124999999998
+      },
+      {
+        "node": "06_IchijoKarasuma",
+        "avg_strain": 1.4007583333333333
+      },
+      {
+        "node": "22_ShijoKurumayacho",
+        "avg_strain": 1.4052166666666668
+      },
+      {
+        "node": "20_ShijoHorikawa",
+        "avg_strain": 1.4127958333333333
+      },
+      {
+        "node": "01_GojoKarasuma",
+        "avg_strain": 1.4564041666666665
+      }
+    ],
+    "kinki_candidates": [
+      {
+        "node": "05_IchijoHorikawa",
+        "avg_strain": 2.5928708333333335
+      },
+      {
+        "node": "07_IchijoKurumayacho",
+        "avg_strain": 2.0524
+      },
+      {
+        "node": "00_GojoHorikawa",
+        "avg_strain": 2.009520833333333
+      },
+      {
+        "node": "09_IchijoShinmachi",
+        "avg_strain": 1.92405
+      },
+      {
+        "node": "15_SanjoHorikawa",
+        "avg_strain": 1.8855458333333333
+      },
+      {
+        "node": "18_SanjoMuromachi",
+        "avg_strain": 1.8688291666666668
+      },
+      {
+        "node": "08_IchijoMuromachi",
+        "avg_strain": 1.8468208333333334
+      }
+    ]
+  }
+}

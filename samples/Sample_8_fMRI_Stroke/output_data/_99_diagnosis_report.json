@@ -1,0 +1,59 @@
+{
+  "env_dir": "samples/Sample_8_fMRI_Stroke",
+  "date_analyzed": "2026-06-26 10:03:05",
+  "diagnoses": [
+    {
+      "pathology": "Topological Feedback Loop (Wash Trade / Resonance)",
+      "severity": "HIGH",
+      "evidence": "Max Spectral Radius: 1.0000.",
+      "interpretation": "An artificial loop of funds or extreme resonance has formed in the network."
+    }
+  ],
+  "metrics": {
+    "mean_gross_activity": 500000.0,
+    "relative_leak_ratio": 0.0,
+    "max_spectral": 1.0,
+    "min_stress": 1.7878,
+    "max_viscosity": 50000.000100000005,
+    "min_viscosity": 49999.999800000005
+  },
+  "quartiles": {
+    "viscosity_q3": 10085.897438333333,
+    "strain_q1": 0.44384833333333334,
+    "strain_q3": 0.45335333333333333,
+    "stiff_candidates": [
+      {
+        "node": "02_Prefrontal_Cortex",
+        "avg_viscosity": 10098.998598333334,
+        "peak_time": "2024-01-01 10:09:50",
+        "peak_val": 10408.2263
+      },
+      {
+        "node": "03_Temporal_Lobe",
+        "avg_viscosity": 10085.897438333333,
+        "peak_time": "2024-01-01 10:09:50",
+        "peak_val": 10398.611
+      }
+    ],
+    "tsubo_candidates": [
+      {
+        "node": "00_Motor_Cortex",
+        "avg_strain": 0.43494000000000005
+      },
+      {
+        "node": "02_Prefrontal_Cortex",
+        "avg_strain": 0.44384833333333334
+      }
+    ],
+    "kinki_candidates": [
+      {
+        "node": "01_Parietal_Lobe",
+        "avg_strain": 0.46806000000000003
+      },
+      {
+        "node": "03_Temporal_Lobe",
+        "avg_strain": 0.45335333333333333
+      }
+    ]
+  }
+}

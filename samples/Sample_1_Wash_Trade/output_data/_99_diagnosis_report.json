@@ -1,0 +1,73 @@
+{
+  "env_dir": "samples/Sample_1_Wash_Trade",
+  "date_analyzed": "2026-06-26 10:00:06",
+  "diagnoses": [
+    {
+      "pathology": "Healthy System (Statistically Stable)",
+      "severity": "NORMAL",
+      "evidence": "All statistical moments (Mean, Variance, Skew, Kurtosis) remain within stable thresholds.",
+      "interpretation": "The system is functioning efficiently with normal random-walk volatility."
+    }
+  ],
+  "metrics": {
+    "mean_gross_activity": 3524568.2450000006,
+    "relative_leak_ratio": 0.0,
+    "max_spectral": 0.748786,
+    "min_stress": 6.5144,
+    "max_viscosity": 423147.2195,
+    "min_viscosity": 238457.34600000002
+  },
+  "quartiles": {
+    "viscosity_q3": 44861.695625,
+    "strain_q1": 4.51953125,
+    "strain_q3": 8.297564583333333,
+    "stiff_candidates": [
+      {
+        "node": "07_ACC_Sales_Revenue",
+        "avg_viscosity": 56302.397033333335,
+        "peak_time": "2020-12",
+        "peak_val": 101329.3915
+      },
+      {
+        "node": "04_ACC_Inventory",
+        "avg_viscosity": 52231.034966666666,
+        "peak_time": "2020-12",
+        "peak_val": 56957.7977
+      },
+      {
+        "node": "03_ACC_Cash",
+        "avg_viscosity": 44861.695625,
+        "peak_time": "2020-01",
+        "peak_val": 46831.829
+      }
+    ],
+    "tsubo_candidates": [
+      {
+        "node": "03_ACC_Cash",
+        "avg_strain": 2.1412833333333334
+      },
+      {
+        "node": "01_ACC_Accounts_Receivable",
+        "avg_strain": 2.2150000000000003
+      },
+      {
+        "node": "02_ACC_COGS",
+        "avg_strain": 4.343616666666667
+      }
+    ],
+    "kinki_candidates": [
+      {
+        "node": "07_ACC_Sales_Revenue",
+        "avg_strain": 8.786316666666666
+      },
+      {
+        "node": "06_ACC_Rent_Exp",
+        "avg_strain": 8.455241666666668
+      },
+      {
+        "node": "09_ACC_Equity_Capital",
+        "avg_strain": 8.331666666666667
+      }
+    ]
+  }
+}
