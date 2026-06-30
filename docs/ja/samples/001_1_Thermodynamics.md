@@ -25,70 +25,70 @@ $$F = U - T \cdot S$$
 **臨床解説:**
 自由エネルギー $F$（白い実線）が安定成長しています。摩擦熱損失 $TS$（エンジ色）による圧縮はありません。
 
-- ![Sample 0 Energy Stack](Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+- ![Sample 0 Energy Stack](../../../samples/Sample_0_Healthy/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 #### 🟡 Sample 1 (循環取引)
 
 **臨床解説:**
 循環取引の実行月（1月、2月、5月）に、残高ボラティリティにより局所温度がスパイクします。摩擦熱損失 $TS$ が急激に拡張します。それにより、自由エネルギー $F$ を押し潰しています。
 
-- ![Sample 1 Energy Stack](Sample_1_Wash_Trade/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+- ![Sample 1 Energy Stack](../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 #### 🔴 Sample 2 (資金横領)
 
 **臨床解説:**
 資金が系外へ流出します。それにより活動の源泉である現金（質量）が失われます。内部エネルギー $U$ 自体が右肩下がりで衰退しています。
 
-- ![Sample 2 Energy Stack](Sample_2_Embezzlement_Leak/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+- ![Sample 2 Energy Stack](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 #### 🟡 Sample 3 (入力ミス)
 
 **臨床解説:**
 $t=1$（2月）の瞬間に片面入力エラーが発生します。一時的なノイズとして温度とエントロピーが跳ね上がります。スタック上に摩擦が記録されています。
 
-- ![Sample 3 Energy Stack](Sample_3_Unbalanced_Mistake/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+- ![Sample 3 Energy Stack](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 #### 🔴 Sample 4 (複合アノマリー)
 
 **臨床解説:**
 還流による温度上昇が発生します。また、横領による資産の系外流出が同時進行します。摩擦熱エリアが拡大します。自由エネルギー $F$ が底へ押し潰されています。
 
-- ![Sample 4 Energy Stack](Sample_4_Composite_Chaos/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+- ![Sample 4 Energy Stack](../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 #### 🔴 Sample 5 (京都交差点網)
 
 **臨床解説:**
 デッドロックが発生します。車両の身動きが取れなくなります。一方で流入は続きます。速度ボラティリティによる摩擦熱損失が急増します。マクロ自由エネルギー（流動ポテンシャル）が損失されています。
 
-- ![Sample 5 Energy Stack](Sample_5_Kyoto_Traffic/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+- ![Sample 5 Energy Stack](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 #### 🟢 Sample 6 (株券流体)
 
 **臨床解説:**
 内部エネルギー $U$ は適正水準で安定します。摩擦熱損失 $TS$ も低く抑えられ、自由エネルギー $F$ はプラスの活動余力を維持しています。
 
-- ![Sample 6 Energy Stack](Sample_6_Market_Stock_Flow/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+- ![Sample 6 Energy Stack](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 #### 🟢 Sample 7 (現金流体)
 
 **臨床解説:**
 対流に伴い、摩擦熱損失 $TS$ は穏やかに推移します。自由エネルギー $F$ が健全に確保され、システム全体の資金効率が維持されています。
 
-- ![Sample 7 Energy Stack](Sample_7_Market_Cash_Flow/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+- ![Sample 7 Energy Stack](../../../samples/Sample_7_Market_Cash_Flow/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 #### 🔴 Sample 8 (fMRI 脳梗塞)
 
 **臨床解説:**
 脳梗塞が発生します（$t=30$）。その直後、運動野への血液供給が断たれます。エネルギー生産が急降下します。自由エネルギーが落下しています。
 
-- ![Sample 8 Energy Stack](Sample_8_fMRI_Stroke/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+- ![Sample 8 Energy Stack](../../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 #### 🔴 Sample 9 (fMRI てんかん発作)
 
 **臨床解説:**
 過同期バーストが発生します。これによりボラティリティ（温度）は極大化します。しかし、情報探索の自由度が失われます。自由エネルギーは壊滅的に低下しています。
 
-- ![Sample 9 Energy Stack](Sample_9_fMRI_Seizure/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+- ![Sample 9 Energy Stack](../../../samples/Sample_9_fMRI_Seizure/readme_plots/001_1_2__thermodynamics_energy_stack.png)
 
 ---
 
@@ -101,67 +101,67 @@ $t=1$（2月）の瞬間に片面入力エラーが発生します。一時的�
 **臨床解説:**
 T-S曲線は閉じていません。開放経路を描いています。外部環境と接続しながらエントロピーを放出します。
 
-- ![Sample 0 TS Diagram](Sample_0_Healthy/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+- ![Sample 0 TS Diagram](../../../samples/Sample_0_Healthy/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 #### 🟡 Sample 1 (循環取引)
 
 **臨床解説:**
 T-S線図は閉じた卵型の軌跡（還流サイクル）を描きます。内部だけで無駄に熱量（摩擦）を放出しています。その存在を数理的に証明しています。
 
-- ![Sample 1 TS Diagram](Sample_1_Wash_Trade/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+- ![Sample 1 TS Diagram](../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 #### 🔴 Sample 2 (資金横領)
 
 **臨床解説:**
 質量（資金）が系外へ流出します。これに伴い、温度・エントロピーの活動スケール自体が縮小します。T-S曲線は原点方向へと不可主に縮退していきます。
 
-- ![Sample 2 TS Diagram](Sample_2_Embezzlement_Leak/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+- ![Sample 2 TS Diagram](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 #### 🟡 Sample 3 (入力ミス)
 
 **臨床解説:**
 入力ミスがあったステップで異常突出を見せます。しかし、翌ステップに修正されます。開放型T-S軌道へと復帰します。病的還流は定着していません。
 
-- ![Sample 3 TS Diagram](Sample_3_Unbalanced_Mistake/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+- ![Sample 3 TS Diagram](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 #### 🔴 Sample 4 (複合アノマリー)
 
 **臨床解説:**
 還流アノマリーと横領による質量衰退が重なります。T-S曲線は正常軌道から離脱します。のたうち回りながら無限縮退へと向かっています。
 
-- ![Sample 4 TS Diagram](Sample_4_Composite_Chaos/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+- ![Sample 4 TS Diagram](../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 #### 🔴 Sample 5 (京都交差点網)
 
 **臨床解説:**
 アノマリー期にボトルネックが発生します。これにより、T-S曲線は閉じた時計回りの病的ループへ転移します。流動能力が局所に閉じ込められます。機能停止した状態を示します。
 
-- ![Sample 5 TS Diagram](Sample_5_Kyoto_Traffic/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+- ![Sample 5 TS Diagram](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 #### 🟢 Sample 6 (株券流体)
 
 **臨床解説:**
 T-Sダイアグラムは閉じた病的ループを形成しません。外部環境と接続した開放型対流プロセスを描いています。
 
-- ![Sample 6 TS Diagram](Sample_6_Market_Stock_Flow/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+- ![Sample 6 TS Diagram](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 #### 🟢 Sample 7 (現金流体)
 
 **臨床解説:**
 T-Sダイアグラムは穏やかに揺らぎながら開放的な軌道を描きます。還流ロックや送金ループの同調歪みは検出されません。
 
-- ![Sample 7 TS Diagram](Sample_7_Market_Cash_Flow/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+- ![Sample 7 TS Diagram](../../../samples/Sample_7_Market_Cash_Flow/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 #### 🔴 Sample 8 (fMRI 脳梗塞)
 
 **臨床解説:**
 虚血が発生します（$t=30$）。その後、T-S曲線は以前の軌道空間から完全に切り離されます。活動ゼロに近い極小の平衡点へと不可逆にフリーズしています。
 
-- ![Sample 8 TS Diagram](Sample_8_fMRI_Stroke/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+- ![Sample 8 TS Diagram](../../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
 #### 🔴 Sample 9 (fMRI てんかん発作)
 
 **臨床解説:**
 脳全体が異常同期放電に支配されます。その結果、多様な状態探索能力が失われます。T-S曲線は単一振動を往復するだけの閉じた直線へフリーズしています。
 
-- ![Sample 9 TS Diagram](Sample_9_fMRI_Seizure/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+- ![Sample 9 TS Diagram](../../../samples/Sample_9_fMRI_Seizure/readme_plots/001_1_3__thermodynamics_ts_diagram.png)

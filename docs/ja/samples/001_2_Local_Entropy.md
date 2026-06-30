@@ -23,67 +23,67 @@ $$s_i = -\sum_{j} P_{ij} \log P_{ij}$$
 **臨床解説:**
 各領域の空間的エントロピーは均一に分布しています。局所的な流路の遮断や偏在は生じていません。
 
-- ![Sample 0 Local Entropy](Sample_0_Healthy/readme_plots/001_1_2_1__3d_local_entropy.png)
+- ![Sample 0 Local Entropy](../../../samples/Sample_0_Healthy/readme_plots/001_1_2_1__3d_local_entropy.png)
 
 #### 🟡 Sample 1 (循環取引)
 
 **臨床解説:**
 循環取引が発生します（1月、2月、5月）。このとき `ACC_Cash` が売掛金への還流流路を形成します。局所エントロピーに盛り上がりが検出されます。
 
-- ![Sample 1 Local Entropy](Sample_1_Wash_Trade/readme_plots/001_1_2_1__3d_local_entropy.png)
+- ![Sample 1 Local Entropy](../../../samples/Sample_1_Wash_Trade/readme_plots/001_1_2_1__3d_local_entropy.png)
 
 #### 🔴 Sample 2 (資金横領)
 
 **臨床解説:**
 `UNKNOWN_LEAK` という一方向の流出先ノードへ資金流路が固定されます。該当部位の局所エントロピーが盛り上がります。漏洩経路の存在を示します。
 
-- ![Sample 2 Local Entropy](Sample_2_Embezzlement_Leak/readme_plots/001_1_2_1__3d_local_entropy.png)
+- ![Sample 2 Local Entropy](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2_1__3d_local_entropy.png)
 
 #### 🟡 Sample 3 (入力ミス)
 
 **臨床解説:**
 $t=1$ に入力ミスがありました。売掛金ノード周辺の局所エントロピーに鋭い単一のスパイクが生じます。翌ステップには消滅して平坦に戻ります。
 
-- ![Sample 3 Local Entropy](Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_1__3d_local_entropy.png)
+- ![Sample 3 Local Entropy](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_1__3d_local_entropy.png)
 
 #### 🔴 Sample 4 (複合アノマリー)
 
 **臨床解説:**
 還流ループによる局所エントロピーが盛り上がります。また、横領による漏洩先ノード周辺の局所エントロピーが盛り上がります。これらが並行しています。重層的な流路歪みが発生しています。
 
-- ![Sample 4 Local Entropy](Sample_4_Composite_Chaos/readme_plots/001_1_2_1__3d_local_entropy.png)
+- ![Sample 4 Local Entropy](../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_2_1__3d_local_entropy.png)
 
 #### 🔴 Sample 5 (京都交差点網)
 
 **臨床解説:**
 ボトルネックである `21_四条室町` 周辺を分析します。車両の滞留を示すエントロピー降下（$s_i=1.674$）が記録されています。
 
-- ![Sample 5 Local Entropy](Sample_5_Kyoto_Traffic/readme_plots/001_1_2_1__3d_local_entropy.png)
+- ![Sample 5 Local Entropy](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/001_1_2_1__3d_local_entropy.png)
 
 #### 🟢 Sample 6 (株券流体)
 
 **臨床解説:**
 取引は対称的かつ安定して循環しています。局所エントロピーは時間・空間を通して均一です。高い水準（約 $s_i=2.0$ 前後）で滑らかに維持されています。
 
-- ![Sample 6 Local Entropy](Sample_6_Market_Stock_Flow/readme_plots/001_1_2_1__3d_local_entropy.png)
+- ![Sample 6 Local Entropy](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/001_1_2_1__3d_local_entropy.png)
 
 #### 🟢 Sample 7 (現金流体)
 
 **臨床解説:**
 特定の口座や還流ループに資金が滞留することはありません。多様な接続先へ流動性が分散されています。そのため、局所エントロピーは高水準で安定しています。
 
-- ![Sample 7 Local Entropy](Sample_7_Market_Cash_Flow/readme_plots/001_1_2_1__3d_local_entropy.png)
+- ![Sample 7 Local Entropy](../../../samples/Sample_7_Market_Cash_Flow/readme_plots/001_1_2_1__3d_local_entropy.png)
 
 #### 🔴 Sample 8 (fMRI 脳梗塞)
 
 **臨床解説:**
 $t=30$ 以降に脳梗塞が発生します。虚血壊死した運動野領域のBOLD信号活動ポテンシャルがほぼ完全に消失します。該当部位周辺の局所エントロピーが平坦化（空間的崩壊）します。
 
-- ![Sample 8 Local Entropy](Sample_8_fMRI_Stroke/readme_plots/001_1_2_1__3d_local_entropy.png)
+- ![Sample 8 Local Entropy](../../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_2_1__3d_local_entropy.png)
 
 #### 🔴 Sample 9 (fMRI てんかん発作)
 
 **臨床解説:**
 てんかんの過同期バースト期において、全脳の領域が極限まで同調します。すべての領域が同じパターンで強制同期されます。そのため、エントロピーは極限まで低下します。グラフ全体が低いレベルで平坦化（フリーズ）します。
 
-- ![Sample 9 Local Entropy](Sample_9_fMRI_Seizure/readme_plots/001_1_2_1__3d_local_entropy.png)
+- ![Sample 9 Local Entropy](../../../samples/Sample_9_fMRI_Seizure/readme_plots/001_1_2_1__3d_local_entropy.png)
