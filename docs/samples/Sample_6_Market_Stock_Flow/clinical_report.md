@@ -134,6 +134,13 @@ Nodes exceeding the Q3 threshold (**`58239516.0205`**) are listed below. Source:
 
 ---
 
+
+
+
+
+#### Jing-Well (Boundary) Node Externalities & Symbiotic Control Points (Chapter 10 Application)
+Sudden trading freezes or liquidity squeezes (sedation/泻) at Jing-Well nodes such as external funding inputs or clearing nodes trigger retail investor panic and macro credit anxiety (External Backlash), resulting in a negative feedback loop of severe volatility spikes and a complete freeze on new capital inflows. Therefore, policy prescriptions at these nodes must be integrated with symbiotic packages, such as clearing guarantees or real-time data transparency, to pacify market sentiment and stabilize market homeostasis.
+
 ## 8. Falsifiability & Limits
 
 To falsify this normal market flow diagnosis, the following off-scope evidence must be provided:

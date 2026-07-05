@@ -178,6 +178,13 @@ Nodes exceeding the Q3 threshold (**`44861.6956`**) are listed below. Source: [r
 
 ---
 
+
+
+
+
+#### Jing-Well (Boundary) Node Externalities & Symbiotic Control Points (Chapter 10 Application)
+When prescribing interventions for boundary terminal nodes (Jing-Well points) interfacing with the external environment, such as `01_ACC_Accounts_Receivable` or `05_ACC_Accounts_Payable`, local optimization relying purely on internal liquidity enhancement is strictly prohibited. Forcing a rapid collection of Accounts Receivable (sedation/泻) squeezes the cash flow of clients (External Backlash), which loops back as negative feedback (customer churn and drop in sales revenue) to the primary entity. Therefore, any intervention at these Jing-Well nodes must be paired with symbiotic actions (Yin-Yang balancing), such as relaxing COGS/AP payment windows or offering shared digital invoice infrastructure to buffer the external friction, achieving a sustainable homeostasis across the system boundary.
+
 ## 8. Falsifiability & Limits
 
 To falsify the circular wash trade diagnosis, the following external physical evidence must be presented:

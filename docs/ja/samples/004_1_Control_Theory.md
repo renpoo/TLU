@@ -161,7 +161,7 @@ $$u(t) = -K_{lqr} \cdot X(t)$$
   * ![Sample 8 System Stability](../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)
 
 * **最適制御 (LQR) パフォーマンス空間 (`004_1_3__control_lqr_performance_space.png`)**
-  * **臨床解説:** 虚血が発生した `00_Motor_Cortex` および周辺の `01_Parietal_Lobe` で感度が最大値 `41.5234` となります。この部位への刺激介入が有効です。
+  * **臨床解説:** 虚血が発生した `00_Motor_Cortex（運動野）` および周辺の `01_Parietal_Lobe（頂頭葉）` で感度が最大値 `41.5234` となります。この部位への刺激介入が有効です。
   * ![Sample 8 LQR Space](../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_3__control_lqr_performance_space.png)
 
 * **LQR制御誤差収束 (`004_1_2__control_error_convergence.png`)**
@@ -177,7 +177,7 @@ $$u(t) = -K_{lqr} \cdot X(t)$$
   * ![Sample 9 System Stability](../../../samples/Sample_9_fMRI_Seizure/readme_plots/004_1_2__system_stability.png)
 
 * **最適制御 (LQR) パフォーマンス空間 (`004_1_3__control_lqr_performance_space.png`)**
-  * **臨床解説:** 過同期放電の焦点である側頭葉（`03_Temporal_Lobe`）で介入感度が最大値 `41.5234` となります。この部位への刺激介入が有効です。
+  * **臨床解説:** 過同期放電の焦点である側頭葉（`03_Temporal_Lobe（側頭葉）`）で介入感度が最大値 `41.5234` となります。この部位への刺激介入が有効です。
   * ![Sample 9 LQR Space](../../../samples/Sample_9_fMRI_Seizure/readme_plots/004_1_3__control_lqr_performance_space.png)
 
 * **LQR制御誤差収束 (`004_1_2__control_error_convergence.png`)**

@@ -142,6 +142,13 @@ Brain regions exceeding the Q3 threshold (**`44861.6956`**) are listed below. So
 
 ---
 
+
+
+
+
+#### Jing-Well (Boundary) Node Externalities & Symbiotic Control Points (Chapter 10 Application)
+Sensory deprivation or rapid inhibition (sedation/泻) at sensory input nodes (Jing-Well points) triggers compensatory hyper-sensitivity and neural hallucinations (External Backlash), looping back as run-away epileptic synchrony. Clinical prescriptions must pair sensory suppression with symbiotic motor-sensory integration training to restore stable fluid homeostasis across neural networks.
+
 ## 8. Falsifiability & Limits
 
 To falsify this hyper-synchronization seizure diagnosis, the following off-scope evidence must be provided:

@@ -80,7 +80,7 @@ Specific areas for improvement identified by the system and recommended action p
 ![Sensitivity Matrix](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_2_1__sensitivity_matrix.png)
 
 * **Treatment Points Range:** Accounts in the bottom 25% of intervention strain energy—**"02_ACC_COGS"**, **"04_ACC_Inventory"**, and **"01_ACC_Accounts_Receivable"**—can be adjusted with minimal frictional resistance.
-  * **Advice:** These nodes represent the most effective points to optimize flow and restore balance with the lowest structural backlash.
+  * **Advice:** These sectors (such as Cost of Goods Sold) can be adjusted to optimize liquidity with the least effort, without damaging the capital structure. In particular, when intervening in boundary terminal nodes that directly interface with the external world (e.g., Accounts Receivable representing external clients' cash flows), you must carefully assess the cash squeeze (External Backlash) forced on external partners. Aggressive local collection speedups (sedation/泻) carry a high risk of triggering negative feedback loops, such as subsequent sales drops due to customer churn. Thus, instead of a localized push for faster collections, a symbiotic package of interventions (Yin-Yang balancing) must be proposed—such as easing Accounts Payable terms or providing digital process tools to reduce operational frictions—to maintain overall system homeostasis.
 * **Contraindications Range:** Conversely, the top 25% strain energy group—**"07_ACC_Sales_Revenue"**, **"09_ACC_Equity_Capital"**, and **"06_ACC_Rent_Exp"**—must be avoided.
   * **Advice:** Forcing adjustments on these nodes will disrupt core connections and trigger massive system backlash.
 

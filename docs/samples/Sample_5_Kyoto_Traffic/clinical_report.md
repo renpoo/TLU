@@ -158,6 +158,13 @@ Intersections exceeding the Q3 threshold (**`1026.6549`**) are listed below. Sou
 
 ---
 
+
+
+
+
+#### Jing-Well (Boundary) Node Externalities & Symbiotic Control Points (Chapter 10 Application)
+Restricting inflow (sedation/泻) at boundary terminal nodes (Jing-Well points) representing edge intersections temporarily relieves internal traffic congestion but shifts the bottleneck outward as suburban vehicle stasis (External Backlash). This inevitably bounces back as a negative feedback loop, degrading logistics efficiency and overall urban economic activity. Therefore, interventions at these boundary nodes must be integrated with complementary measures, such as public transit synchronization and suburban parking capacity support, to balance the traffic homeostasis both inside and outside the boundaries.
+
 ## 8. Falsifiability & Limits
 
 To falsify this gridlock diagnosis, the following off-scope evidence must be provided:
