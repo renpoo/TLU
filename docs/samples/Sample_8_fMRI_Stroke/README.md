@@ -80,7 +80,7 @@ Specific areas for improvement identified by the system and recommended action p
 ![Sensitivity Matrix](../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_2_1__sensitivity_matrix.png)
 
 * **Synaptic Tuning Range:** Brain regions in the bottom 25% of intervention strain energy—**"02_ROI_Motor"**, **"04_ROI_Broca"**, and **"01_ROI_Visual"**—allow adjustments with minimal secondary stress.
-  * **Advice:** Tuning the synaptic gain at the Motor Cortex offers the most stable path to restore neural flexibility with the lowest stress to adjacent healthy regions.
+  * **Advice:** ROIs with the lowest propagation of structural distortion to neighboring tissues are prioritized. In particular, when applying stimulations/inhibitions to boundary sensory areas (Jing-Well nodes) interfacing with external physical receptors (e.g., visual or auditory cortex), the sensory deprivation (External Backlash) forced on peripheral receptors must be evaluated. Aggressively shutting down sensory inputs (sedation/泻) causes compensatory neural hyper-excitability and hallucinations, triggering a negative feedback loop of abnormal seizure synchrony. Instead of plain sensory suppression, symbiotic therapies—such as biofeedback-guided sensory relearning or multimodal rehabilitation—must be proposed to restore homeostatic neural plasticity.
 * **Contraindications Range:** Conversely, the top 25% strain energy group—**"07_ROI_Auditory"**, **"09_ROI_Prefrontal"**, and **"06_ROI_Somatosensory"**—must be avoided.
   * **Advice:** Forcing excitation on these nodes will disrupt core synaptic connections and trigger massive system backlash, expanding the ischemic lesion.
 

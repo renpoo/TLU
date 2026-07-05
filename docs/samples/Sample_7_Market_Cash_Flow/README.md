@@ -79,7 +79,7 @@ Specific areas for improvement identified by the system and recommended action p
 ![Sensitivity Matrix](../../../samples/Sample_7_Market_Cash_Flow/readme_plots/004_2_1__sensitivity_matrix.png)
 
 * **Liquidity Optimization Range:** Investor accounts in the bottom 25% of intervention strain energy—**"05_USR_004"** and **"04_USR_003"**—represent areas where liquidity adjustments can be introduced with minimal friction.
-  * **Advice:** Optimizing trading parameters for these accounts offers the most stable path to enhance market flexibility with the lowest backlash.
+  * **Advice:** Areas with high control gains and minimum secondary distress to surrounding networks are prioritized. Specifically, when adjusting boundary terminal nodes (Jing-Well nodes) directly interfacing with general retail investors and macro liquidity pools (such as clearing channels or external funding inputs), the severe financial and psychological stress (External Backlash) forced onto investors must be carefully evaluated. Squeezing transactions or locking up liquidity abruptly (sedation/泻) triggers investor panic, causing an irreversible freeze in capital inflow (reflow loss). Any control intervention must be coupled with symbiotic mitigations—such as immediate transparent disclosure or temporary margin relief—to stabilize investor sentiment and maintain market homeostasis.
 * **Contraindications Range:** Conversely, the top 25% strain energy group—**"External Capital Inflow (00_ACC_Input_From_Outside)"**, **"03_USR_002"**, and **"02_USR_001"**—must be avoided.
   * **Advice:** Forcing trading suspensions or account blocks on these core stock assets will disrupt price discovery, potentially triggering market panic.
 
