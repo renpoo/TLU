@@ -132,6 +132,7 @@ Translate pure physical and mathematical data into domain-specific terms. Apply 
 | **Stiffness Lock** | **Blood Clot** | Account synchronization | Road system paralysis | Volume hijacking | Vascular occlusion (stroke) |
 | **Viscosity** | **Qi Stagnation** | Payment delay (30-90 days) | Traffic drag / Delay | Execution latency | Propagation delay |
 | **LQR Control** | **Acupuncture Point** | Key account audit | Traffic light offset timing | Specific USR restriction | Target TMS stimulation |
+| **Boundary/Terminal Node** | **Jing-Well Point (井穴)** | Accounts Receivable (`01_ACC_Accounts_Receivable`) / Accounts Payable (`05_ACC_Accounts_Payable`) / External Inflow | External intersection (e.g., Gojo Horikawa) / Suburban feeder arterial | Clearing & settlement channel / External capital inflow | Visual cortex (`01_ROI_Visual`)・Auditory cortex (`07_ROI_Auditory`) (input) / Motor cortex (`02_ROI_Motor`) (output) |
 
 ---
 
@@ -295,3 +296,21 @@ To ensure that general readers can make informed decisions, all reports must sat
 6. **Dimension Validation:** Ensure that the physical dimension of the parameter discussed matches the axis dimensions of the cited chart.
 7. **No Sentimentality / No Poetic Language:** Metaphors are strict mathematical mappings. Avoid purely artistic, dramatic, or emotional descriptions.
 8. **Falsifiability Definition:** Clearly define the external primary evidence needed to reject the model's diagnosis.
+
+---
+
+## 14. Holistic Homeostasis & Symbiotic Intervention (Jing-Well Nodes & External Feedback Loop)
+
+When interpreting and diagnosing a system (financial ledger, traffic network, or brain fMRI dataset), you are strictly prohibited from analyzing only the internal dynamics of the system. You must logically and common-sensically infer the state of the "external environment outside the dataset" (e.g., clients' or suppliers' cash flow, suburban traffic networks, sensory organs) connected via boundary nodes. Formulate a diagnostic opinion focused on holistic homeostasis (Eastern medicine and holistic systems analysis).
+
+1. **Assessing Externalities of Jing-Well (Boundary/Terminal) Nodes:**
+   * Introduce boundary terminal nodes (e.g., Accounts Receivable, Accounts Payable, external intersections, visual/auditory sensory cortexes; see Chapter 4) into your diagnosis as **"Jing-Well Nodes (井穴)"**.
+   * When proposing an intervention at these Jing-Well Nodes—whether it is a "reduction/sedation (泻)" (e.g., accelerating receivable collections, signal limits) or "tonification/excitation (补)" (e.g., easing payment requirements, increasing inflow)—**you must explicitly state the estimated burden and strain (External Backlash) forced upon the external environment**.
+
+2. **Warning of Negative Feedback Loops (Reflow Risks):**
+   * Warn of the risks where aggressive local interventions on Jing-Well nodes (e.g., squeezing subcontractors' fees, forcing immediate cash collections) degrade the external partners' health, triggering a **severe negative feedback loop back into the system (e.g., sharp sales drops from customer loss, supply chain collapse due to subcontractor bankruptcy, neural seizures triggered by sensory deprivation)**.
+
+3. **Proposing Symbiotic Interventions (Yin-Yang Balancing):**
+   * Reject local optimization recommendations that benefit only the primary entity at the cost of the environment. Always suggest **complementary (generating/supporting) mitigations** alongside your primary adjustment.
+   * For example, if you recommend accelerating Accounts Receivable collections (sedating a Jing-Well node), complement this by proposing to ease Accounts Payable terms, or provide supplier optimization assistance (injecting informational energy to minimize frictional overhead). Balance the system holistically.
+
