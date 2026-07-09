@@ -54,9 +54,9 @@
 PCA分析の結果、還流と流出の重複接続によって特定の支配軸が慢性的にカチカチに「剛性ロック」されており、組織の決済しなやかさが完全に失われる「動脈硬化」状態にあります。
 
 ### ⑤ 脈の乱れと初期波の検知（高階動的ショックの評価）
-![3D Jerk](000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   資金移動の「加減速ショック（Jerk）」および「過渡的ゆらぎ（Snap）」を可視化しました。還流月（1月, 2月）および最大の流出が発生した月（9月）において巨大なショックパルスが検出されたほか、後半のキャッシュ枯渇ステップでは、組織全体の流動が不連続にのたうち回る「激烈なノッキング共振（発振現象）」が発生していることが証明されています。
@@ -87,9 +87,9 @@ PCA分析の結果、還流と流出の重複接続によって特定の支配�
 
 ### ⚡ 決済血管の時間的急変（剛性時間差分）の評価
 - **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
-  - **還流 (t=1)**: ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
-  - **流出 (t=5)**: ![Stiffness Diff t=5](stiffness_diff.t.00005.png)
-  - **破綻 (t=8)**: ![Stiffness Diff t=8](stiffness_diff.t.00008.png)
+  - **還流 (t=1)**: ![Stiffness Diff t=1](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **流出 (t=5)**: ![Stiffness Diff t=5](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_4__stiffness_diff.t.00005.png)
+  - **破綻 (t=8)**: ![Stiffness Diff t=8](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_4__stiffness_diff.t.00008.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   剛性差分 $\Delta K_t$ により、t=1 の還流接続で血管が硬直（赤）した後、t=5 以降は流出バイパスが追加でロックされ、さらに最大流出を記録した t=8 においては血管の慢性閉塞が極めて深刻なレベルに達している痕跡を特定しました。血管が恒常的にカチカチに硬化し、流動性が二重の閉塞を起こしている生命の危機を証明しています。

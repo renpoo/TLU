@@ -75,9 +75,9 @@ Descriptive statistics from [result.000_1_1_filter_dynamics.analysis.csv](../../
 
 ### ② Stiffness Temporal Difference ($\Delta K_t = K_t - K_{t-1}$) Analysis
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=30 (10:05:00):** ![Stiffness Diff t=30](stiffness_diff.t.00030.png)
-  - **t=45 (10:07:30):** ![Stiffness Diff t=45](stiffness_diff.t.00045.png)
-  - **t=59 (10:09:50):** ![Stiffness Diff t=59](stiffness_diff.t.00059.png)
+  - **t=30 (10:05:00):** ![Stiffness Diff t=30](../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_4__stiffness_diff.t.00030.png)
+  - **t=45 (10:07:30):** ![Stiffness Diff t=45](../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_4__stiffness_diff.t.00045.png)
+  - **t=59 (10:09:50):** ![Stiffness Diff t=59](../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_4__stiffness_diff.t.00059.png)
 * **Interpretation:**
   Red stiffness differences at t=30 capture the vascular occlusion at the motor cortex, stabilizing into a static stiffness lock (white) by t=45 and t=59.
 
@@ -95,9 +95,9 @@ The spectral radius spikes to **`1.0000`** post-t=30, indicating abnormal functi
 
 ### ② Multi-Order Jacobian Trajectory Analysis
 * **Order-wise Jacobian Heatmaps (t=30 / 10:05:00):**
-  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](jacobian_order_1st.t.00030.png)
-  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](jacobian_order_2nd.t.00030.png)
-  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](jacobian_order_3rd.t.00030.png)
+  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](../../samples/Sample_8_fMRI_Stroke/readme_plots/jacobian_order_1st.t.00030.png)
+  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](../../samples/Sample_8_fMRI_Stroke/readme_plots/jacobian_order_2nd.t.00030.png)
+  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](../../samples/Sample_8_fMRI_Stroke/readme_plots/jacobian_order_3rd.t.00030.png)
 * **Interpretation:**
   1st-order Jacobian captures the motor cortex connectivity drop. High-order Jacobian sensitivity fails to propagate, validating localized signal block (sink).
 

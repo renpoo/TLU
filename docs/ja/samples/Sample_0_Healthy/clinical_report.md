@@ -114,11 +114,11 @@
 
 * **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
   - **初期状態 (t=1 / 2020-02)**:
-    ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
+    ![Stiffness Diff t=1](../../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00001.png)
   - **中間状態 (t=6 / 2020-07)**:
-    ![Stiffness Diff t=6](stiffness_diff.t.00006.png)
+    ![Stiffness Diff t=6](../../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00006.png)
   - **最終状態 (t=11 / 2020-12)**:
-    ![Stiffness Diff t=11](stiffness_diff.t.00011.png)
+    ![Stiffness Diff t=11](../../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 
 * **数理および臨床解釈:**
   すべてのステップにおける剛性時間差分 $\Delta K_t$ は、青（マイナス：軟化・決済解放）および赤（プラス：硬化・決済集中）の極性がいずれも微小な範囲（最大値で `1e-6` 以下）に抑制されています。これは特定の支払ルートにおいて、強制的・急激な債務ブロック（Stiffness Lock）が全く発生していないこと、すなわち血管にしなやかな弾力性が保たれている状態であることを物理的に実証しています。
@@ -143,13 +143,13 @@
 
 * **次数別ヤコビアンヒートマップ (時系列定点シーケンス - 縦一列表示)**:
   - **直接接続感度 (1st-Order: $J^{(1)} = \gamma P$)**:
-    ![Jacobian 1st](jacobian_order_1st.t.00001.png)
+    ![Jacobian 1st](../../../samples/Sample_0_Healthy/readme_plots/jacobian_order_1st.t.00001.png)
     *解説: $t=1$ において `07_ACC_Sales_Revenue` (売上) $\to$ `01_ACC_Accounts_Receivable` (売掛金) への直接送金影響 (0.85) を検出。*
   - **1ホップ中継感度 (2nd-Order: $J^{(2)} = \gamma^2 P^2$)**:
-    ![Jacobian 2nd](jacobian_order_2nd.t.00001.png)
+    ![Jacobian 2nd](../../../samples/Sample_0_Healthy/readme_plots/jacobian_order_2nd.t.00001.png)
     *解説: $t=1$ において `07_ACC_Sales_Revenue` (売上) $\to$ `03_ACC_Cash` (現金) への1中継先影響 (0.7225) を検出。*
   - **2ホップ遠隔感度 (3rd-Order: $J^{(3)} = \gamma^3 P^3$)**:
-    ![Jacobian 3rd](jacobian_order_3rd.t.00001.png)
+    ![Jacobian 3rd](../../../samples/Sample_0_Healthy/readme_plots/jacobian_order_3rd.t.00001.png)
     *解説: $t=1$ において、流動が `05_ACC_Payroll_Exp` (人件費: 0.257) や `00_ACC_Accounts_Payable` (買掛金: 0.164) へと正常に拡散し、自己還流なく外部境界へと抜けていく状態を検出。*
 
 * **数理的解釈:** 

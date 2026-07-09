@@ -53,9 +53,9 @@
 アカウント間の結合剛性（Stiffness）行列に対して主成分分析（PCA）を実行した結果、第1主成分（PC1）の寄与率が急激に跳ね上がるような「剛性ロック」は検出されていません。結合剛性はエラー通過月（6月）には完全にフラットにリセットされており、慢性的な「動脈硬化（血管の硬化）」は発生していません。
 
 ### ⑤ 脈の乱れと初期波の検知（高階動的ショックの評価）
-![3D Jerk](000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   仕訳入力エラーが発生した t=3 およびその補修仕訳が投入された t=4 の二時点において、一時的に急激な「脈の乱れ（Jerk）」と「初期振動（Snap）」の孤立スパイクが発生していますが、その前後の期間は完全にフラットに抑え込まれています。これは、システムに定常的な異常（横領や還流など）が定着していない一過性のショックであることを数学的に証明しています。
@@ -87,9 +87,9 @@
 
 ### ⚡ 決済血管の時間的急変（剛性時間差分）の評価
 - **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
-  - **エラー発生 (t=3)**: ![Stiffness Diff t=3](stiffness_diff.t.00003.png)
-  - **補正修復 (t=4)**: ![Stiffness Diff t=4](stiffness_diff.t.00004.png)
-  - **定常収束 (t=11)**: ![Stiffness Diff t=11](stiffness_diff.t.00011.png)
+  - **エラー発生 (t=3)**: ![Stiffness Diff t=3](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00003.png)
+  - **補正修復 (t=4)**: ![Stiffness Diff t=4](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00004.png)
+  - **定常収束 (t=11)**: ![Stiffness Diff t=11](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   剛性差分 $\Delta K_t$ によって、仕訳エラーが発生した t=3 において一時的に決済経路が硬化（赤）したものの、補修仕訳が投入された t=4 には、逆向きのマイナス剛性変化（青：血管軟化による解放）が発生し、その後のステップでは完全に正常に戻っていることを可視化しました。これは、エラーが定着せず、組織が弾性的に自己復元したことを直接証明しています。

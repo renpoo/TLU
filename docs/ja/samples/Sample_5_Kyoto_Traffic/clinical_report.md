@@ -106,11 +106,11 @@
 
 * **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
   - **規制開始月 (t=12 / 2021-01)**:
-    ![Stiffness Diff t=12](stiffness_diff.t.00012.png)
+    ![Stiffness Diff t=12](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00012.png)
   - **渋滞飽和月 (t=18 / 2021-07)**:
-    ![Stiffness Diff t=18](stiffness_diff.t.00018.png)
+    ![Stiffness Diff t=18](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00018.png)
   - **終末閉塞月 (t=23 / 2021-12)**:
-    ![Stiffness Diff t=23](stiffness_diff.t.00023.png)
+    ![Stiffness Diff t=23](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00023.png)
 
 * **数理および臨床解釈:**
   四条烏丸の規制が始まった t=12 において、上流交差点（四条室町）から四条烏丸へ向かう接続に強烈な剛性プラス変化（赤：渋滞発生による流路の硬化）が発生。t=18 には周辺の五条烏丸や三条烏丸など隣接交差点のバイパス路まで赤く硬化が広がり、最終状態（t=23）には全経路の差分が飽和しています。血管全体がデッドロック渋滞によって「カチカチに硬化（Stiffness Lock）」した深刻なグリッドロックプロセスが数学的に可視化されました。
@@ -134,13 +134,13 @@
 
 * **次数別ヤコビアンヒートマップ (t=12 / 2021-01 - 縦一列表示)**:
   - **1st-Order ($J^{(1)}$)**:
-    ![Jacobian 1st](jacobian_order_1st.t.00012.png)
+    ![Jacobian 1st](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/jacobian_order_1st.t.00012.png)
     *解説: 直接接続感度。四条室町 $\to$ 四条烏丸の直接的な流入詰まりの結合を検出。*
   - **2nd-Order ($J^{(2)}$)**:
-    ![Jacobian 2nd](jacobian_order_2nd.t.00012.png)
+    ![Jacobian 2nd](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/jacobian_order_2nd.t.00012.png)
     *解説: 1ホップ中継感度。四条烏丸の目詰まりが、四条新町 $\to$ 五条烏丸へと迂回車両を通じて波及していく伝播を特定。*
   - **3rd-Order ($J^{(3)}$)**:
-    ![Jacobian 3rd](jacobian_order_3rd.t.00012.png)
+    ![Jacobian 3rd](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/jacobian_order_3rd.t.00012.png)
 
 * **数理的解釈:** 
   スペクトル半径 $\rho = 1.0$ の飽和状態では、高次のべき乗 $P^k$ が減衰せず、3階ヤコビアンにおいても感度マトリクスが白く消滅せずに高い値を維持しています。これは、四条烏丸で発生したたった1箇所の流入規制（局所的ショック）が、拡散せずに全域へ定常的な渋滞波（グリッドロック波）として永久に還流し続ける不安定状態であることを証明しています。

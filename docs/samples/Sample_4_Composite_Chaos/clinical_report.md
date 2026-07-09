@@ -75,9 +75,9 @@ Descriptive statistics from [result.000_1_1_filter_dynamics.analysis.csv](../../
 
 ### ② Stiffness Temporal Difference ($\Delta K_t = K_t - K_{t-1}$) Analysis
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=1 (2020-02):** ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
-  - **t=5 (2020-06):** ![Stiffness Diff t=5](stiffness_diff.t.00005.png)
-  - **t=8 (2020-09):** ![Stiffness Diff t=8](stiffness_diff.t.00008.png)
+  - **t=1 (2020-02):** ![Stiffness Diff t=1](../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **t=5 (2020-06):** ![Stiffness Diff t=5](../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_4__stiffness_diff.t.00005.png)
+  - **t=8 (2020-09):** ![Stiffness Diff t=8](../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_4__stiffness_diff.t.00008.png)
 * **Interpretation:**
   Stiffness differences show sequential red spikes at t=1 (wash trade start), t=5 (embezzlement start), and t=8 (maximum leak), indicating progressive vascular hardening.
 
@@ -102,9 +102,9 @@ The maximum spectral radius $\rho$ remains **`0.7861`** for all periods, indicat
 
 ### ② Multi-Order Jacobian Trajectory Analysis
 * **Order-wise Jacobian Heatmaps (t=8 / 2020-09):**
-  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](jacobian_order_1st.t.00008.png)
-  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](jacobian_order_2nd.t.00008.png)
-  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](jacobian_order_3rd.t.00008.png)
+  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](../../samples/Sample_4_Composite_Chaos/readme_plots/jacobian_order_1st.t.00008.png)
+  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](../../samples/Sample_4_Composite_Chaos/readme_plots/jacobian_order_2nd.t.00008.png)
+  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](../../samples/Sample_4_Composite_Chaos/readme_plots/jacobian_order_3rd.t.00008.png)
 * **Interpretation:**
   2nd-order Jacobian shows wash trade coherence ($J^{(2)}[i,i] \ge 0.35$), while 3rd-order Jacobian maps siphoned flow to the `UNKNOWN_LEAK` terminal sink, mathematically confirming the composite abuse.
 
