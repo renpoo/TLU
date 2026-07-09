@@ -119,3 +119,37 @@ $t=30$ に梗塞が発生します。その瞬間、運動野の活動質量が�
 - ![Sample 9 Dynamics Acceleration](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_1_3__3d_dynamics_acceleration.png)
 - ![Sample 9 Phase Portrait](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_1_8__phase_portrait_3d.png)
 - ![Sample 9 Dynamics External Force](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_1_6__3d_dynamics_external_force.png)
+
+---
+
+### 6. 加加速度 (Jerk) および 加加加速度 (Snap) の時系列変化 (`000_1_9__3d_dynamics_jerk.png` / `000_1_10__3d_dynamics_snap.png`)
+
+加加速度（Jerk: 加速度の時間変化率 $\dddot{X}$）および加加加速度（Snap: Jerk の時間変化率 $\ddddot{X}$）は、システムの急激な状態変化（ショック）や、過渡的な高周波ノッキング発振を捉えるための高階微分メトリクスです。
+
+#### 🟢 Sample 0 (正常代謝: Healthy)
+* **臨床解説:** 時系列を通じて Jerk および Snap はほぼ完全に平坦（ゼロ平均定常）であり、不連続な取引ショックや急激な物理的加減速は存在しない健康状態を示します。
+
+#### 🟡 Sample 1 (循環取引: Wash Trade)
+* **臨床解説:** 架空取引の往復運動の切り替えしポイント（同期時点）において、Jerk と Snap が局所的な細いスパイクを形成します。流体の無理な方向転換ショックを検出しています。
+
+#### 🔴 Sample 2 (資金横領: Embezzlement Leak)
+* **臨床解説:** 資金の流出開始時（t=4）、およびシステム全体のキャッシュが底をつき始める後半のステップにおいて、流動性が不連続に破綻するため、巨大な Jerk / Snap のインパルス（急減速ショック波）が発生します。
+
+#### 🟡 Sample 3 (入力ミス: Unbalanced Mistake)
+* **臨床解説:** 片面入力ミスが発生したステップ（t=1）と、それが自己修正されたステップ（t=2）のピンポイントにおいてのみ、巨大な鋭いインパルス（Jerk / Snap の極値）が立ち上がります。
+
+#### 🔴 Sample 4 (複合アノマリー: Composite Chaos)
+* **臨床解説:** 循環取引の還流と横領の漏洩が重なるため、中盤から後半にかけて Jerk / Snap が激しく発振（ノッキング共振）します。システム崩壊前の末期的な自励振動を示します。
+
+#### 🔴 Sample 5 (京都交差点網: Kyoto Traffic)
+* **臨床解説:** 主要交差点の容量規制が始まった t=12 以降、車両の急ブレーキ・急発進（Jerk）およびそれに連鎖する渋滞の伝播伝達（Snap）が周辺交差点へ異常高騰・発振し、流れが完全にフリーズします。
+
+#### 🟢 Sample 6 (株券流体: Market Stock Flow) & 🟢 Sample 7 (現金流体: Market Cash Flow)
+* **臨床解説:** 正常な約定・決済流体運動であるため、Jerk / Snap ともに低位で安定して推移しており、突発的な市場パニックやシステムノッキングは発生していません。
+
+#### 🔴 Sample 8 (fMRI 脳梗塞: fMRI Stroke)
+* **臨床解説:** 脳血流の閉塞が発生した t=30 において、運動野の血流信号に急激な遮断（Jerk ショック）が発生。その後、周囲領域への伝達信号が不連続にのたうち回る Snap スパイクが観測されます。
+
+#### 🔴 Sample 9 (fMRI てんかん発作: fMRI Seizure)
+* **臨床解説:** 発作発症（t=30）以降、全脳がサイン波で異常同期するため、Jerk / Snap もサイン波の同期的な急変（自励的な機能的ノッキング振動）として高頻度かつ規則的なパターンで固定化されます。
+
