@@ -54,9 +54,9 @@
 アカウント間の結合剛性行列に対して主成分分析（PCA）を実行した結果、還流が発生する期間（1月、5月）、現預金と売掛金のアカウント間の支配軸が完全に固定化し、第一主成分（PC1）の説明寄与率が急上昇する「剛性ロック」状態が検出されています。外部取引に対する柔軟性を失った「カチカチの血管（動脈硬化）」のような構造硬直が発生しています。
 
 ### ⑤ 脈の乱れと初期波の検知（高階動的ショックの評価）
-![3D Jerk](000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../samples/Sample_1_Wash_Trade/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../samples/Sample_1_Wash_Trade/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   資金移動の「急激な加減速ショック（Jerk/加加速度）」および「過渡的な初期振動（Snap/加加加速度）」を3Dリボン図として可視化しました。還流月（月末等の決済タイミング）において、規則的な高次インパルスの巨大な鋭いスパイクが同期して検出され、システムを激しく揺さぶる人工的な「脈の乱れ」が実証されています。
@@ -87,9 +87,9 @@
 
 ### ⚡ 決済血管の時間的急変（剛性時間差分）の評価
 - **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
-  - **還流 (t=1)**: ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
-  - **緩和 (t=3)**: ![Stiffness Diff t=3](stiffness_diff.t.00003.png)
-  - **再発 (t=4)**: ![Stiffness Diff t=4](stiffness_diff.t.00004.png)
+  - **還流 (t=1)**: ![Stiffness Diff t=1](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **緩和 (t=3)**: ![Stiffness Diff t=3](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_4__stiffness_diff.t.00003.png)
+  - **再発 (t=4)**: ![Stiffness Diff t=4](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_4__stiffness_diff.t.00004.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   剛性（Stiffness）の月次差分 $\Delta K_t$ を算出し、特定の勘定科目に資金が強制還流するタイムステップ（t=1, t=4）において、売掛金 $\leftrightarrow$ 現金 間の経路上で急激な剛性のプラス変化（赤：動脈硬化ロック）が発生し、決済直後の通常月（t=3）にはマイナス変化（青：解放）として鋭く揺り戻る挙動を検出しました。決済を実行する瞬間に一時的に血管が「カチカチにロック」される、極めて不自然な同期処理の痕跡を立証しています。

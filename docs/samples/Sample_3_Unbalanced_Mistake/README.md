@@ -53,9 +53,9 @@ The thermodynamic T-S diagram shows a normal open subsystem with optimal entropy
 PC1 EVR spikes temporarily at t=1 but returns to normal at t=2. No chronic connection locks exist (Arteriosclerosis).
 
 ### ⑤ Shockwaves (Jerk and Snap Trends)
-![3D Jerk](000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **Mathematical Bridge:**
   Jerk and Snap exhibit sharp isolated spikes at t=1 and t=2. This mathematically proves that the system suffers from sudden transaction shocks only at the moment of entry mismatch and its subsequent correction.
@@ -82,9 +82,9 @@ PC1 EVR spikes temporarily at t=1 but returns to normal at t=2. No chronic conne
 
 ### ⚡ Stiffness Temporal Difference ($\Delta K_t$)
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=1**: ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
-  - **t=2**: ![Stiffness Diff t=2](stiffness_diff.t.00002.png)
-  - **t=11**: ![Stiffness Diff t=11](stiffness_diff.t.00011.png)
+  - **t=1**: ![Stiffness Diff t=1](../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **t=2**: ![Stiffness Diff t=2](../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00002.png)
+  - **t=11**: ![Stiffness Diff t=11](../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 
 * **Mathematical Bridge:**
   The difference $\Delta K_t$ spikes red at t=1 (entry mismatch) and blue at t=2 (error correction), capturing the elastic release of structural stress post-correction.

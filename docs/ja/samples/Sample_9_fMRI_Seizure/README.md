@@ -50,9 +50,9 @@
 主成分分析（PCA）においては、全領域が全く同一のサイン波を共有したため共分散比率が変化せず、PC1説明寄与率が全期間 `37%` 台でほぼ不変に推移する「統計・分散判定の死角」に相当しています。しかし、偏相関による最大剛性は `0.0037` に固着し、エッジ接続が完璧に位相同期ロック（動脈硬化）されていることが本システムによって暴かれています。
 
 ### ⑤ 脈の乱れと初期波の検知（高階動的ショックの評価）
-![3D Jerk](000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   血流信号変化の「加減速ショック（Jerk）」および「過渡的な初期ゆらぎ（Snap）」を可視化しました。発作Onsetの t=30 以降、規則的な周期自励振動（過同期共振）として急峻なノッキングスパイクが高頻度に発生していることが実証され、本来のしなやかなカオス的揺らぎが消失していることが証明されています。
@@ -82,9 +82,9 @@
 
 ### ⚡ 決済血管の時間的急変（剛性時間差分）の評価
 - **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
-  - **発作開始 (t=30)**: ![Stiffness Diff t=30](stiffness_diff.t.00030.png)
-  - **発作持続 (t=45)**: ![Stiffness Diff t=45](stiffness_diff.t.00045.png)
-  - **発作終末 (t=59)**: ![Stiffness Diff t=59](stiffness_diff.t.00059.png)
+  - **発作開始 (t=30)**: ![Stiffness Diff t=30](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00030.png)
+  - **発作持続 (t=45)**: ![Stiffness Diff t=45](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00045.png)
+  - **発作終末 (t=59)**: ![Stiffness Diff t=59](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00059.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   月次剛性差分 $\Delta K_t$ により、発作のOnsetである t=30 において全接続経路が一斉に硬直化（赤）し、その後（t=45, t=59）は差分が消失（完全に硬化固定）するプロセスを可視化しました。全脳レベルで位相同期ロックが発生したまま機能停止に陥っている病的動態を証明しています。

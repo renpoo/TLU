@@ -73,9 +73,9 @@ Descriptive statistics from [result.000_1_1_filter_dynamics.analysis.csv](../../
 
 ### ② Stiffness Temporal Difference ($\Delta K_t = K_t - K_{t-1}$) Analysis
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=1 (2020-02):** ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
-  - **t=6 (2020-07):** ![Stiffness Diff t=6](stiffness_diff.t.00006.png)
-  - **t=11 (2020-12):** ![Stiffness Diff t=11](stiffness_diff.t.00011.png)
+  - **t=1 (2020-02):** ![Stiffness Diff t=1](../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **t=6 (2020-07):** ![Stiffness Diff t=6](../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_4__stiffness_diff.t.00006.png)
+  - **t=11 (2020-12):** ![Stiffness Diff t=11](../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 * **Interpretation:**
   $\Delta K_t$ remains flat at white throughout, showing that the transaction network retains complete dynamic elasticity.
 
@@ -93,9 +93,9 @@ The maximum spectral radius remains near zero, indicating no wash trade loops.
 
 ### ② Multi-Order Jacobian Trajectory Analysis
 * **Order-wise Jacobian Heatmaps (t=1 / 2020-02):**
-  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](jacobian_order_1st.t.00001.png)
-  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](jacobian_order_2nd.t.00001.png)
-  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](jacobian_order_3rd.t.00001.png)
+  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](../../samples/Sample_7_Market_Cash_Flow/readme_plots/jacobian_order_1st.t.00001.png)
+  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](../../samples/Sample_7_Market_Cash_Flow/readme_plots/jacobian_order_2nd.t.00001.png)
+  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](../../samples/Sample_7_Market_Cash_Flow/readme_plots/jacobian_order_3rd.t.00001.png)
 * **Interpretation:**
   Sensitivities decay rapidly as the order increases, confirming a decentralized flow topology.
 

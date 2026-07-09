@@ -53,9 +53,9 @@
 四条烏丸の車線規制により、車両流動のルートが不自然に固定化され、第一主成分（PC1）の累積説明比率が規制開始以降に急上昇。交通網全体にしなやかさが失われ、完全に硬直した血管（動脈硬化）と化しています。
 
 ### ⑤ 脈の乱れと初期波の検知（高階動的ショックの評価）
-![3D Jerk](000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   道路網内での車両の「急ブレーキ・急加速（Jerk）」および「ブレーキランプの伝播ゆらぎ（Snap）」を可視化しました。規制開始の 2021-01 以降、主要交差点の周辺においてこれらの急激な脈の乱れのインパルス（高次のショック波）が異常に増幅・発振しており、車列が滑らかに流れず、ストップ・アンド・ゴーを激しく繰り返す「交通ノッキング共振」が発生していることを物理的に証明しています。
@@ -84,9 +84,9 @@
 
 ### ⚡ 決済血管の時間的急変（剛性時間差分）の評価
 - **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
-  - **規制開始 (t=12)**: ![Stiffness Diff t=12](stiffness_diff.t.00012.png)
-  - **渋滞飽和 (t=18)**: ![Stiffness Diff t=18](stiffness_diff.t.00018.png)
-  - **終末閉塞 (t=23)**: ![Stiffness Diff t=23](stiffness_diff.t.00023.png)
+  - **規制開始 (t=12)**: ![Stiffness Diff t=12](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00012.png)
+  - **渋滞飽和 (t=18)**: ![Stiffness Diff t=18](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00018.png)
+  - **終末閉塞 (t=23)**: ![Stiffness Diff t=23](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00023.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   月次の道路結合剛性の変化差分 $\Delta K_t$ によって、規制開始の t=12 に四条烏丸 $\to$ 四条室町間が硬直（赤：渋滞発生）し、その後時間の経過（t=18, t=23）とともに、周辺の主要バイパス路や並行道路にまで真っ赤な結合硬化（Stiffness Lock）がクモの巣のように波及・恒常化していくプロセスを可視化しました。道路という「血管」が渋滞によってカチカチに硬化し、完全に閉塞していくグリッドロックの推移を証明しています。

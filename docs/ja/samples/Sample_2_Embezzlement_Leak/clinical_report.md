@@ -99,11 +99,11 @@
 
 * **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
   - **流出開始月 (t=1 / 2020-02)**:
-    ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
+    ![Stiffness Diff t=1](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00001.png)
   - **流出安定月 (t=2 / 2020-03)**:
-    ![Stiffness Diff t=2](stiffness_diff.t.00002.png)
+    ![Stiffness Diff t=2](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00002.png)
   - **キャッシュ枯渇月 (t=11 / 2020-12)**:
-    ![Stiffness Diff t=11](stiffness_diff.t.00011.png)
+    ![Stiffness Diff t=11](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 
 * **数理および臨床解釈:**
   流出が最初に発生した t=1 において、 `01_ACC_Accounts_Receivable` (売掛金) $\to$ `09_UNKNOWN_LEAK` のバイパスルートが突然確立され、剛性のプラス変化（赤：動脈硬化ロック）が発生していることが確認されました。一度バイパスが確立された後は、t=2, t=11 にかけて硬化状態がそのまま恒常化しており、決済のしなやかさが回復せず、慢性的な組織機能不全（血管閉塞）に陥っていることがビジュアルで特定されました。
@@ -140,12 +140,12 @@
 
 * **次数別ヤコビアンヒートマップ (t=1 / 2020-02 - 縦一列表示)**:
   - **1st-Order ($J^{(1)}$)**:
-    ![Jacobian 1st](jacobian_order_1st.t.00001.png)
+    ![Jacobian 1st](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/jacobian_order_1st.t.00001.png)
     *解説: `01_ACC_Accounts_Receivable` (売掛金) $\to$ `09_UNKNOWN_LEAK` (流出先) への直接リーク接続を特定。*
   - **2nd-Order ($J^{(2)}$)**:
-    ![Jacobian 2nd](jacobian_order_2nd.t.00001.png)
+    ![Jacobian 2nd](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/jacobian_order_2nd.t.00001.png)
   - **3rd-Order ($J^{(3)}$)**:
-    ![Jacobian 3rd](jacobian_order_3rd.t.00001.png)
+    ![Jacobian 3rd](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/jacobian_order_3rd.t.00001.png)
 
 * **数理的解釈:** 
   ヤコビアン軌跡において、 `09_UNKNOWN_LEAK` がトポロジー上の「Terminal Sink (エネルギーの吸い込み口)」として機能している状態が数学的に完璧に特定されました。高次ヤコビアンになるほどこの Sink へと流動が吸引される一方向の感度プロフィールが捕捉され、システムからエネルギーが抜ける「穴（井穴）」が存在することが客観的に立証されました。

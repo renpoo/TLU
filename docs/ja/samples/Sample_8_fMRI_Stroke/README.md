@@ -52,9 +52,9 @@
 結合剛性行列に対するPCA評価の結果、梗塞が発生した t=30 以降、PC1説明比率が `94.72%` に急騰・固定される「剛性ロック（動脈硬化）」が発生しています。脳神経ネットワーク全体のしなやかさが完全に失われ、構造硬直が発生したまま慢性化しています。
 
 ### ⑤ 脈の乱れと初期波の検知（高階動的ショックの評価）
-![3D Jerk](000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   アセット価値（血流量）移動の「急激な加減速ショック（Jerk）」および「過渡的な初期ゆらぎ（Snap）」を可視化しました。正常代謝から梗塞が始まった t=30 において巨大な急ブレーキショックが発生し、それに連鎖する形で周辺領域へノッキング発振（初期震動の連鎖）が伝播している様子が証明されています。
@@ -84,9 +84,9 @@
 
 ### ⚡ 決済血管の時間的急変（剛性時間差分）の評価
 - **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
-  - **閉塞開始 (t=30)**: ![Stiffness Diff t=30](stiffness_diff.t.00030.png)
-  - **閉塞進行 (t=45)**: ![Stiffness Diff t=45](stiffness_diff.t.00045.png)
-  - **最終梗塞 (t=59)**: ![Stiffness Diff t=59](stiffness_diff.t.00059.png)
+  - **閉塞開始 (t=30)**: ![Stiffness Diff t=30](../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_4__stiffness_diff.t.00030.png)
+  - **閉塞進行 (t=45)**: ![Stiffness Diff t=45](../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_4__stiffness_diff.t.00045.png)
+  - **最終梗塞 (t=59)**: ![Stiffness Diff t=59](../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_4__stiffness_diff.t.00059.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   月次剛性差分 $\Delta K_t$ によって、血流閉塞が発生した t=30 に運動野周囲の血管（接続）が強烈に硬直化（赤）し、時間の経過とともに周辺の迂回経路も硬化（剛性ロック）され、脳組織が慢性的な機能停止（梗塞）へと陥る動的プロセスを証明しています。

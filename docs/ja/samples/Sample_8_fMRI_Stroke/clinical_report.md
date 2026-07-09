@@ -107,11 +107,11 @@
 
 * **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
   - **閉塞開始 (t=30 / 10:05:00)**:
-    ![Stiffness Diff t=30](stiffness_diff.t.00030.png)
+    ![Stiffness Diff t=30](../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_4__stiffness_diff.t.00030.png)
   - **閉塞進行 (t=45 / 10:07:30)**:
-    ![Stiffness Diff t=45](stiffness_diff.t.00045.png)
+    ![Stiffness Diff t=45](../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_4__stiffness_diff.t.00045.png)
   - **最終梗塞 (t=59 / 10:09:50)**:
-    ![Stiffness Diff t=59](stiffness_diff.t.00059.png)
+    ![Stiffness Diff t=59](../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_4__stiffness_diff.t.00059.png)
 
 * **数理および臨床解釈:**
   血流閉塞が発生した t=30 において、運動野と他領域を結ぶ主要エッジ接続に強烈なプラスの剛性変化（赤：血流低下に伴う血管の弾性喪失）を検出。t=45 以降は周辺の頭頂葉へ向かうバックアップ流路も不全となり、慢性期（t=59）には全エッジがカチカチに「剛性ロック」され、脳神経機能のしなやかさが局所的に完全凝固した痕跡を証明しています。
@@ -139,13 +139,13 @@
 
 * **次数別ヤコビアンヒートマップ (t=30 / 10:05:00 - 縦一列表示)**:
   - **1st-Order ($J^{(1)}$)**:
-    ![Jacobian 1st](jacobian_order_1st.t.00030.png)
+    ![Jacobian 1st](../../../samples/Sample_8_fMRI_Stroke/readme_plots/jacobian_order_1st.t.00030.png)
     *解説: 直接的な隣接接続感度。中大脳動脈の流入遮断に伴う、運動野へ向かう直接的な結合感度消失を検出。*
   - **2nd-Order ($J^{(2)}$)**:
-    ![Jacobian 2nd](jacobian_order_2nd.t.00030.png)
+    ![Jacobian 2nd](../../../samples/Sample_8_fMRI_Stroke/readme_plots/jacobian_order_2nd.t.00030.png)
     *解説: 1ホップ先の側頭葉 $\to$ 前頭前皮質を介した間接迂回感度を検出。*
   - **3rd-Order ($J^{(3)}$)**:
-    ![Jacobian 3rd](jacobian_order_3rd.t.00030.png)
+    ![Jacobian 3rd](../../../samples/Sample_8_fMRI_Stroke/readme_plots/jacobian_order_3rd.t.00030.png)
 
 * **数理的解釈:** 
   1次ヤコビアンにおける運動野の感度脱落に対し、高次のヤコビアン（2次、3次）でも感度の還流が起こらず、情報伝達波が外部に拡散せず運動野周辺で完全に遮断・停滞（Sink）している挙動を数学的に完璧に特定しました。

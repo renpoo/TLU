@@ -54,9 +54,9 @@
 アカウント間の結合剛性（Stiffness）行列に対して主成分分析（PCA）を実行した結果、流出開始月である 2月 (`t=1`) 以降、第一主成分（PC1）の説明寄与率が急激に跳ね上がり、特定の取引ルートが完全に固定化して柔軟性を失う「剛性ロック」状態（動脈硬化）が検出されています。この状態で後半ステップに正常な取引圧力が加わると、エネルギーを分散できなくなり、システム全体が激しい振動（ノッキング共振）を引き起こすという危険な硬化が発生しています。
 
 ### ⑤ 脈の乱れと初期波の検知（高階動的ショックの評価）
-![3D Jerk](000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   資金の簿外への不連続な漏出が実行されるタイミングで、高次微分成分の Jerk (脈の乱れ) および Snap (過渡振動) に鋭利なインパルススパイクが発生しています。特に後半ステップでのキャッシュ枯渇期には、組織全体のしなやかさが失われ、少量の取引負荷に対しても異常発振（ノッキング）を引き起こしている破壊的状態が証明されています。
@@ -87,9 +87,9 @@
 
 ### ⚡ 決済血管の時間的急変（剛性時間差分）の評価
 - **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
-  - **流出開始 (t=1)**: ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
-  - **流出安定 (t=2)**: ![Stiffness Diff t=2](stiffness_diff.t.00002.png)
-  - **キャッシュ枯渇 (t=11)**: ![Stiffness Diff t=11](stiffness_diff.t.00011.png)
+  - **流出開始 (t=1)**: ![Stiffness Diff t=1](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **流出安定 (t=2)**: ![Stiffness Diff t=2](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00002.png)
+  - **キャッシュ枯渇 (t=11)**: ![Stiffness Diff t=11](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   月次剛性差分 $\Delta K_t$ により、不正流出ルートが接続された瞬間（t=1）に売掛金 $\to$ UNKNOWN_LEAK 間の決済経路が急激に硬化（赤）し、その後も一切軟化せず硬直ロックした状態のまま恒常化していることを可視化しました。流出ルートの物理的固定化（慢性的な血管閉塞）を直接証明しています。

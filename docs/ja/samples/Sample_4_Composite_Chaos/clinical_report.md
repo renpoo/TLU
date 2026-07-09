@@ -108,11 +108,11 @@ B/S（資産・資本）およびP/L（収益・費用）の見かけ上の当�
 
 * **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
   - **還流発生月 (t=1 / 2020-02)**:
-    ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
+    ![Stiffness Diff t=1](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_4__stiffness_diff.t.00001.png)
   - **横領発生月 (t=5 / 2020-06)**:
-    ![Stiffness Diff t=5](stiffness_diff.t.00005.png)
+    ![Stiffness Diff t=5](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_4__stiffness_diff.t.00005.png)
   - **最大流出月 (t=8 / 2020-09)**:
-    ![Stiffness Diff t=8](stiffness_diff.t.00008.png)
+    ![Stiffness Diff t=8](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_4__stiffness_diff.t.00008.png)
 
 * **数理および臨床解釈:**
   初期の t=1 では還流による強烈な決済同期硬化（赤）が現れ、t=5 以降は `UNKNOWN_LEAK` へのバイパスルート確立に伴う硬直化が上書きされ、血管全体の閉塞が慢性化しています。特に最大流出を記録した t=8 においては、流出に伴う血管硬直（プラス剛性）が極端にピークを形成しており、システム破綻直前の末期的な「動脈硬化ロック」が視覚的に特定されました。
@@ -143,12 +143,12 @@ B/S（資産・資本）およびP/L（収益・費用）の見かけ上の当�
 
 * **次数別ヤコビアンヒートマップ (t=8 / 2020-09 - 縦一列表示)**:
   - **1st-Order ($J^{(1)}$)**:
-    ![Jacobian 1st](jacobian_order_1st.t.00008.png)
+    ![Jacobian 1st](../../../samples/Sample_4_Composite_Chaos/readme_plots/jacobian_order_1st.t.00008.png)
   - **2nd-Order ($J^{(2)}$)**:
-    ![Jacobian 2nd](jacobian_order_2nd.t.00008.png)
+    ![Jacobian 2nd](../../../samples/Sample_4_Composite_Chaos/readme_plots/jacobian_order_2nd.t.00008.png)
     *解説: 売掛金 $\leftrightarrow$ 現金の2ステップ還流の指紋（Even-Odd 交互コヒーレンス）が深く刻まれていることを特定。*
   - **3rd-Order ($J^{(3)}$)**:
-    ![Jacobian 3rd](jacobian_order_3rd.t.00008.png)
+    ![Jacobian 3rd](../../../samples/Sample_4_Composite_Chaos/readme_plots/jacobian_order_3rd.t.00008.png)
     *解説: 流動が外部に拡散せず、 `09_UNKNOWN_LEAK` (Terminal Sink) への一方向の吸引が支配軸を形成している挙動を特定。*
 
 * **数理的解釈:** 

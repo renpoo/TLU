@@ -53,9 +53,9 @@ The thermodynamic T-S diagram shows a closed cyclic trajectory, representing tra
 PCA EVR PC1 climbs to 95.28%. This mathematically proves that all transaction pathways are locked in the wash trade route (Arteriosclerosis).
 
 ### ⑤ Shockwaves (Jerk and Snap Trends)
-![3D Jerk](000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../samples/Sample_1_Wash_Trade/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../samples/Sample_1_Wash_Trade/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **Mathematical Bridge:**
   Jerk and Snap exhibit narrow spike impulses at t=1 and t=4. This mathematically proves that the system suffers from sudden transaction shocks when the cyclic loop starts and stops.
@@ -82,9 +82,9 @@ PCA EVR PC1 climbs to 95.28%. This mathematically proves that all transaction pa
 
 ### ⚡ Stiffness Temporal Difference ($\Delta K_t$)
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=1**: ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
-  - **t=4**: ![Stiffness Diff t=4](stiffness_diff.t.00004.png)
-  - **t=11**: ![Stiffness Diff t=11](stiffness_diff.t.00011.png)
+  - **t=1**: ![Stiffness Diff t=1](../../samples/Sample_1_Wash_Trade/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **t=4**: ![Stiffness Diff t=4](../../samples/Sample_1_Wash_Trade/readme_plots/000_2_4__stiffness_diff.t.00004.png)
+  - **t=11**: ![Stiffness Diff t=11](../../samples/Sample_1_Wash_Trade/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 
 * **Mathematical Bridge:**
   The difference $\Delta K_t$ is flat at white throughout, showing that the transaction pathways retain complete elasticity and no blockages form over time.

@@ -54,9 +54,9 @@
 アカウント間の結合剛性（Stiffness）行列に対して主成分分析（PCA）を実行した結果、特定の流路へ情報や資金が固着して第一主成分（PC1）の累積説明比率が跳ね上がる「剛性ロック」は検出されていません。特定の部門間や取引先とだけで決済が固定化したり、資金のパイプが硬直化（ブロック）したりするような動脈硬化の兆候は一切なく、流動ネットワーク全体に高いしなやかさが維持されています。
 
 ### ⑤ 脈の乱れと初期波の検知（高階動的ショックの評価）
-![3D Jerk](000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../samples/Sample_0_Healthy/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../samples/Sample_0_Healthy/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   資金の流れにおける急激な「脈の乱れ（Jerk/加加速度）」や「過渡的な初期ゆらぎ（Snap/加加加速度）」を3Dリボン図として可視化しました。正常ベースラインでは、これらの高次変動成分は全期間を通じて完全にフラットであり、突発的な大口決済ショックや、還流に伴う異常な自励的共振が皆無であることを証明しています。
@@ -87,9 +87,9 @@
 
 ### ⚡ 決済血管の時間的急変（剛性時間差分）の評価
 - **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
-  - **初期 (t=1)**: ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
-  - **中間 (t=6)**: ![Stiffness Diff t=6](stiffness_diff.t.00006.png)
-  - **最終 (t=11)**: ![Stiffness Diff t=11](stiffness_diff.t.00011.png)
+  - **初期 (t=1)**: ![Stiffness Diff t=1](../../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **中間 (t=6)**: ![Stiffness Diff t=6](../../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00006.png)
+  - **最終 (t=11)**: ![Stiffness Diff t=11](../../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   月ごとの剛性（Stiffness）の差分 $\Delta K_t$ を算出し、決済血管の「一時的な硬直（赤：急激な滞留の発生）」および「一時的な緩和（青：ストレス解放）」を可視化しました。正常代謝では、すべての期間において差分がほぼ白（ゼロ）であり、急激な支払遅延ブロックが発生していないしなやかな血管状態であることが証明されています。

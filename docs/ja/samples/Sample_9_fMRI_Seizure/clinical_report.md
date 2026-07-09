@@ -109,11 +109,11 @@
 
 * **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
   - **発作開始 (t=30 / 10:05:00)**:
-    ![Stiffness Diff t=30](stiffness_diff.t.00030.png)
+    ![Stiffness Diff t=30](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00030.png)
   - **発作持続 (t=45 / 10:07:30)**:
-    ![Stiffness Diff t=45](stiffness_diff.t.00045.png)
+    ![Stiffness Diff t=45](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00045.png)
   - **発作終末 (t=59 / 10:09:50)**:
-    ![Stiffness Diff t=59](stiffness_diff.t.00059.png)
+    ![Stiffness Diff t=59](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00059.png)
 
 * **数理および臨床解釈:**
   発作Onsetである t=30 を境に、脳領域を結ぶ全経路（血管網）が突発的かつ一斉に真っ赤に硬化（差分の極大化）。その後（t=45, t=59）は差分が完全に白（剛性の静的ロック状態）となり、しなやかな機能的接続が失われ、全脳レベルで硬直化（同期動脈硬化）されたまま機能停止している病的プロセスを視覚的に特定しました。
@@ -137,13 +137,13 @@
 
 * **次数別ヤコビアンヒートマップ (t=30 / 10:05:00 - 縦一列表示)**:
   - **1st-Order ($J^{(1)}$)**:
-    ![Jacobian 1st](jacobian_order_1st.t.00030.png)
+    ![Jacobian 1st](../../../samples/Sample_9_fMRI_Seizure/readme_plots/jacobian_order_1st.t.00030.png)
     *解説: 直接的な隣接接続感度。側頭葉発作波が直接接続された頭頂葉や前頭前皮質へ流入する感度を検出。*
   - **2nd-Order ($J^{(2)}$)**:
-    ![Jacobian 2nd](jacobian_order_2nd.t.00030.png)
+    ![Jacobian 2nd](../../../samples/Sample_9_fMRI_Seizure/readme_plots/jacobian_order_2nd.t.00030.png)
     *解説: 1ホップ先の視覚野へ迂回する伝播波の感度。*
   - **3rd-Order ($J^{(3)}$)**:
-    ![Jacobian 3rd](jacobian_order_3rd.t.00030.png)
+    ![Jacobian 3rd](../../../samples/Sample_9_fMRI_Seizure/readme_plots/jacobian_order_3rd.t.00030.png)
 
 * **数理的解釈:** 
   位相同期状態（スペクトル半径 $\rho = 1.0$）のもとでは、高次ヤコビアン（2次、3次）においても感度が全く減衰せず、全脳レベルでサイン波が等価に還流し合っている病的挙動を数学的に完璧に特定しました。

@@ -95,11 +95,11 @@
 
 * **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
   - **エラー発生月 (t=3 / 2020-04)**:
-    ![Stiffness Diff t=3](stiffness_diff.t.00003.png)
+    ![Stiffness Diff t=3](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00003.png)
   - **補正修復月 (t=4 / 2020-05)**:
-    ![Stiffness Diff t=4](stiffness_diff.t.00004.png)
+    ![Stiffness Diff t=4](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00004.png)
   - **定常収束月 (t=11 / 2020-12)**:
-    ![Stiffness Diff t=11](stiffness_diff.t.00011.png)
+    ![Stiffness Diff t=11](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 
 * **数理および臨床解釈:**
   仕訳エラーが発生した t=3 において、買掛金 $\to$ 仮想流出先ノードの間に一時的な剛性の高まり（赤）が発生しましたが、補正仕訳が入った直後の t=4 において急峻な剛性のマイナス変化（青：血管軟化によるストレス解放）が発生し、それ以降のステップでは完全に白（差分ゼロ）にフラット化しています。これにより、アノマリーが一過性のエラーであり、組織の柔軟性を損ねていないことが視覚的に実証されます。
@@ -129,11 +129,11 @@
 
 * **次数別ヤコビアンヒートマップ (t=3 / 2020-04 - 縦一列表示)**:
   - **1st-Order ($J^{(1)}$)**:
-    ![Jacobian 1st](jacobian_order_1st.t.00003.png)
+    ![Jacobian 1st](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/jacobian_order_1st.t.00003.png)
   - **2nd-Order ($J^{(2)}$)**:
-    ![Jacobian 2nd](jacobian_order_2nd.t.00003.png)
+    ![Jacobian 2nd](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/jacobian_order_2nd.t.00003.png)
   - **3rd-Order ($J^{(3)}$)**:
-    ![Jacobian 3rd](jacobian_order_3rd.t.00003.png)
+    ![Jacobian 3rd](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/jacobian_order_3rd.t.00003.png)
 
 * **数理的解釈:**
   エラー発生ステップ（t=3）においては一時的な漏洩ノードへの感度波及が検出されますが、翌月（t=4）以降のヤコビアン軌跡では、これらの異常接続感度は完全に消失しており、経理ネットワークが正常トポロジーに復帰していることを示しています。

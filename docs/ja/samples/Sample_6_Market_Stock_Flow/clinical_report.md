@@ -95,11 +95,11 @@
 
 * **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
   - **初期 (t=1 / 2020-02)**:
-    ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
+    ![Stiffness Diff t=1](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_2_4__stiffness_diff.t.00001.png)
   - **中間 (t=6 / 2020-07)**:
-    ![Stiffness Diff t=6](stiffness_diff.t.00006.png)
+    ![Stiffness Diff t=6](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_2_4__stiffness_diff.t.00006.png)
   - **最終 (t=11 / 2020-12)**:
-    ![Stiffness Diff t=11](stiffness_diff.t.00011.png)
+    ![Stiffness Diff t=11](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 
 * **数理および臨床解釈:**
   全ステップにおける剛性時間差分 $\Delta K_t$ は常に極小値（`1e-10` 以下）で安定しており、特定のユーザー・銘柄間において一時的かつ急激な取引閉塞・固定化（剛性ロック）は一切発生していないことがビジュアル的にも証明されました。
@@ -123,11 +123,11 @@
 
 * **次数別ヤコビアンヒートマップ (t=1 / 2020-02 - 縦一列表示)**:
   - **1st-Order ($J^{(1)}$)**:
-    ![Jacobian 1st](jacobian_order_1st.t.00001.png)
+    ![Jacobian 1st](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/jacobian_order_1st.t.00001.png)
   - **2nd-Order ($J^{(2)}$)**:
-    ![Jacobian 2nd](jacobian_order_2nd.t.00001.png)
+    ![Jacobian 2nd](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/jacobian_order_2nd.t.00001.png)
   - **3rd-Order ($J^{(3)}$)**:
-    ![Jacobian 3rd](jacobian_order_3rd.t.00001.png)
+    ![Jacobian 3rd](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/jacobian_order_3rd.t.00001.png)
 
 * **数理的解釈:** 
   次数が進むにつれて感度が極めて速やかに減衰し、かつ対角成分（自己感度）は完全にゼロです。 Even-Odd コヒーレンスや Sink 等の病的トポロジーは非存在であり、健全な約定拡散が実証されました。

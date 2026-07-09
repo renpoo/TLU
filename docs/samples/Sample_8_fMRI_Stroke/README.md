@@ -51,9 +51,9 @@ The T-S diagram shows a locked trajectory post-stroke, representing a loss of lo
 PCA PC1 EVR spikes to 94.72% and eigenvector weights freeze on the motor cortex, proving localized functional connectivity lock (Arteriosclerosis).
 
 ### ⑤ Shockwaves (Jerk and Snap Trends)
-![3D Jerk](000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../samples/Sample_8_fMRI_Stroke/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../samples/Sample_8_fMRI_Stroke/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **Mathematical Bridge:**
   Jerk and Snap exhibit sharp spikes at t=30. This mathematically proves that the motor cortex suffers from a sudden blood flow deceleration shock and subsequent neuronal ripples at the stroke onset.
@@ -80,9 +80,9 @@ PCA PC1 EVR spikes to 94.72% and eigenvector weights freeze on the motor cortex,
 
 ### ⚡ Stiffness Temporal Difference ($\Delta K_t$)
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=30**: ![Stiffness Diff t=30](stiffness_diff.t.00030.png)
-  - **t=45**: ![Stiffness Diff t=45](stiffness_diff.t.00045.png)
-  - **t=59**: ![Stiffness Diff t=59](stiffness_diff.t.00059.png)
+  - **t=30**: ![Stiffness Diff t=30](../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_4__stiffness_diff.t.00030.png)
+  - **t=45**: ![Stiffness Diff t=45](../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_4__stiffness_diff.t.00045.png)
+  - **t=59**: ![Stiffness Diff t=59](../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_4__stiffness_diff.t.00059.png)
 
 * **Mathematical Bridge:**
   The difference $\Delta K_t$ spikes red at t=30 on the motor cortex, marking the active establishment of the ischemia block, which then freezes into a static lock.

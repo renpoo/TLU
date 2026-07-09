@@ -54,9 +54,9 @@
 アカウント間の結合剛性に対して主成分分析を実行した結果、特定の注文ルートや銘柄間に流動性が固定化して血管がカチカチにロックされる「剛性ロック（動脈硬化）」は一切検出されていません。市場網全体に高い弾力性が保たれています。
 
 ### ⑤ 脈の乱れと初期波の検知（高階動的ショックの評価）
-![3D Jerk](000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   アセット価値移動の「急激な変動ショック（Jerk）」および「過渡的な初期ゆらぎ（Snap）」を可視化しました。正常代謝では、これらの変動成分は全期間を通じて完全にフラットであり、突発的な大口注文ショックや、還流に伴う異常な自励振動が皆無であることを証明しています。
@@ -84,9 +84,9 @@
 
 ### ⚡ 決済血管の時間的急変（剛性時間差分）の評価
 - **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
-  - **初期 (t=1)**: ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
-  - **中間 (t=6)**: ![Stiffness Diff t=6](stiffness_diff.t.00006.png)
-  - **最終 (t=11)**: ![Stiffness Diff t=11](stiffness_diff.t.00011.png)
+  - **初期 (t=1)**: ![Stiffness Diff t=1](../../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **中間 (t=6)**: ![Stiffness Diff t=6](../../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_4__stiffness_diff.t.00006.png)
+  - **最終 (t=11)**: ![Stiffness Diff t=11](../../../samples/Sample_7_Market_Cash_Flow/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 
 * **数学的架け橋 (Mathematical Bridge):**
   月次剛性差分 $\Delta K_t$ によって、全期間において差分がほぼ白（ゼロ）を推移しており、突発的な流路ブロックが発生していないしなやかな市場環境であることを証明しています。

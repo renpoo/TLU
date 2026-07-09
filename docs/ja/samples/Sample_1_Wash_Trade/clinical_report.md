@@ -110,11 +110,11 @@ B/S（資産・資本）およびP/L（収益・費用）の静的な累積値�
 
 * **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
   - **還流開始月 (t=1 / 2020-02)**:
-    ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
+    ![Stiffness Diff t=1](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_4__stiffness_diff.t.00001.png)
   - **定常緩和月 (t=3 / 2020-04)**:
-    ![Stiffness Diff t=3](stiffness_diff.t.00003.png)
+    ![Stiffness Diff t=3](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_4__stiffness_diff.t.00003.png)
   - **還流再発月 (t=4 / 2020-05)**:
-    ![Stiffness Diff t=4](stiffness_diff.t.00004.png)
+    ![Stiffness Diff t=4](../../../samples/Sample_1_Wash_Trade/readme_plots/000_2_4__stiffness_diff.t.00004.png)
 
 * **数理および臨床解釈:**
   還流取引が実行される t=1, t=4 において、 `01_ACC_Accounts_Receivable` (売掛金) $\leftrightarrow$ `03_ACC_Cash` (現金) 間の決済経路上で、極めて強い動的結合剛性のプラス変化（赤：動脈硬化ロック）が発生し、その直後の非還流月（t=3）にはマイナス（青：解放）へと反転する鋭い振動スパイクを検出しました。これは、還流決済を強制通電させるために血管を急激に硬直させる、不自然な人工的同期処理が行われている決定的な証拠です。
@@ -150,13 +150,13 @@ B/S（資産・資本）およびP/L（収益・費用）の静的な累積値�
 
 * **次数別ヤコビアン自己感度挙動 (t=1 / 2020-02 - 縦一列表示)**:
   - **直接自己取引感度 (1st-Order: $J^{(1)}$)**:
-    ![Jacobian 1st](jacobian_order_1st.t.00001.png)
+    ![Jacobian 1st](../../../samples/Sample_1_Wash_Trade/readme_plots/jacobian_order_1st.t.00001.png)
     *解説: $J^{(1)}[1,1] = 0.0$ (売掛金から自分自身への直接取引はなし。偽装のためワンバッファ挟むため。)*
   - **2社間還流感度 (2nd-Order: $J^{(2)}$)**:
-    ![Jacobian 2nd](jacobian_order_2nd.t.00001.png)
+    ![Jacobian 2nd](../../../samples/Sample_1_Wash_Trade/readme_plots/jacobian_order_2nd.t.00001.png)
     *解説: $J^{(2)}[1,1] = \mathbf{0.405091}$ (売掛金 $\to$ 現金 $\to$ 売掛金の2ステップ還流ルートが急峻に高騰。)*
   - **3ステップ還流感度 (3rd-Order: $J^{(3)}$)**:
-    ![Jacobian 3rd](jacobian_order_3rd.t.00001.png)
+    ![Jacobian 3rd](../../../samples/Sample_1_Wash_Trade/readme_plots/jacobian_order_3rd.t.00001.png)
     *解説: $J^{(3)}[1,1] = 0.0$。*
 
 * **数理的解釈 (Even-Odd 交互コヒーレンス):**
