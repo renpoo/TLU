@@ -1,98 +1,104 @@
-# Stock Flow Circulation Report (Case 6)
+# Stock Market Health Final Report (Case 6)
 
 > [!NOTE]
-> A more detailed analysis report is available in [clinical_report.md](clinical_report.md).
+> A more detailed technical clinical report is available in [clinical_report.md](clinical_report.md).
 
-## Target Market: Sample 6 (Stock Flow Liquidity & Ownership Conservation)
+## Target System: Sample 6 (Stock Market)
 
 ---
 
 ## 0. Executive Summary
 
-* **Overall Diagnosis:** 【Normal】 Stock ownership transfers and market value fluctuations maintain a completely sound conservation state. No pathological anomalies were detected.
-* **Overall Constitution (Market Liquidity State):**
-  The market capitalization (时价评估总额 - **"market scale"**) is robust, and liquidity cushion (**"market resilience"**) to absorb panic selling or sudden price shocks is stable. The metabolic circulation between institutional and retail investors is functioning normally, with transaction friction (**"liquidity cost"**) remaining within standard ranges. No circular wash trading loops are detected, and transaction pathways maintain excellent flexibility.
-* **Key Observations (Liquidity Latency & Adjustment Points):**
-  * **Liquidity Latency (Stagnation) Range:** Standard settlement latency (viscosity) is observed in investor accounts **"01_USR_002"**, **"00_USR_001"**, and **"10_STK_001"** (top 25% viscosity range), which falls within normal execution time-lag parameters.
-  * **Liquidity Optimization ("Tsubo") Range:** The minimum intervention stress range (bottom 25% strain energy range), comprising investor accounts **"03_USR_004"** and **"02_USR_003"**, represents the recommended adjustment points to safely enhance overall market liquidity.
-  * **Contraindications (Avoid Restrictions) Range:** Conversely, aggressive trading restrictions on **"10_STK_001"**, **"11_STK_002"**, and **"12_STK_003"** (top 25% strain energy range) must be strictly avoided. These interventions will freeze the price formation process, causing severe volatility or liquidity collapse.
+* **Final Diagnosis:** 【Healthy / Normal】 Stock ownership transfers and issuer balances are in a completely healthy state. No fraudulent transactions or asset leakages were detected; no external intervention is needed.
+* **Holistic Health Constitution:** 
+  Total market capitalization (**"Physique"**) stays robust at `406.13M` with zero transaction leakage. The transaction friction (**"Autonomic System"**) is optimal, and there is no sign of connection lock (**"Arteriosclerosis"**). Jerk and Snap are flat at zero, proving smooth, quiet market operations.
+* **Key Stagnations & Interventions:**
+  - **Stiff Shoulder (Stagnation):** **`01_USR_002`** (viscosity upper 25% boundary) shows execution latency, peaking at **2020-02**.
+  - **Acupuncture Points (Treatment Nodes):** **`03_USR_004`** (strain energy lower 25%) is the optimal node for smooth trade adjustments.
+  - **Contraindications (Avoid Direct Intervention):** Directly restricting **`10_STK_001`** (issuer) will cause severe market panic and must be avoided.
 
 ---
 
-## 1. Overall Diagnosis (Normal)
+## 1. Final Diagnosis (Normal)
 
-### 【Diagnosis】: Normal (Complete Preservation of Asset Value Cycles)
+### 【Diagnosis】: Normal (Integrity of Share Circulation)
+![System Stability (Maximum Spectral Radius)](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/004_1_2__system_stability.png)
 
-![System Stability](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/004_1_2__system_stability.png)
-
-This diagnosis indicates that the investor asset valuations and issuer stock capitalizations are perfectly synchronized. Because the convective residual (Kirchhoff residual) remains strictly at `0.00` throughout the period, there is no off-book asset disappearance or unauthorized share issuance. The market cycle is healthy, and no circular wash trading loops were detected.
+The discrete system stability shows a maximum spectral radius $\rho = 0.0000$ for all periods, proving the absence of circular wash trades or structural locks.
 
 ---
 
-## 2. Overall Constitution (Market Liquidity) Analysis
+## 2. Holistic Health Constitution Analysis
 
-Mapping the market stock flow to a medical checkup template reveals excellent constitutional health:
+The market's flow capacity maps to the following constitutional parameters:
 
-### ① Market Scale (Cumulative Trend of Market Capitalization)
-
+### ① Physique (Market Cap Scale)
 ![B/S Cumulative Trend](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_0_1__BS_Trend.png)
 
-The market capitalization averages `4.06M` (peaking at `14.94M`), indicating that the fundamental market scale (physique) is robust and stable.
+Total market cap (Physique) stays robust at `406.13M` with zero conservation residual, proving complete ledger integrity.
 
-### ② Liquidity Cushion (Market Resilience)
-
+### ② Immunity (Shock Absorption Capacity)
 ![P/L Cumulative Trend](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_0_1__PL_Trend.png)
 
-The capacity to absorb price volatility (free energy) is maintained at a very high level (mean `60.36M`), providing a substantial buffer to absorb massive sell orders or external macro shocks.
+Market buffer capacity (Free Energy) remains stable at `6036.40M`, validating that the market has high shock absorption capacity.
 
-### ③ Transaction Friction & Volatility (Liquidity Cycle & Thermodynamic Evaluation)
-
+### ③ Autonomic System (Trading Entropy & Efficiency)
 ![T-S Diagram](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
-In the T-S diagram mapping volatility ($T$) to execution entropy ($S$), the system traces a healthy thermodynamic cycle within normal friction limits (fees and slippage). There are no signs of circular wash trading or capital recycling.
+The thermodynamic T-S diagram shows a normal open subsystem with optimal entropy, representing decentralized, efficient market transactions.
 
-### ④ Supple Convection Structure (PCA Principal Axes Evaluation)
-
+### ④ Arteriosclerosis (PCA Stiffness Evaluation)
 ![PCA Ratio](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_2_2__principal_axes_ratio.png)
 
-PCA of the accounts' stiffness matrix shows no stiffness lock (PC1 explainability ratio remains flat). The maximum stiffness is exceptionally low (`1.00e-12`), demonstrating a flexible, competitive price discovery network.
+PCA EVR PC1 is low and loadings are highly dispersed. No specific channels freeze or lock (Arteriosclerosis).
+
+### ⑤ Shockwaves (Jerk and Snap Trends)
+![3D Jerk](000_1_9__3d_dynamics_jerk.png)
+
+![3D Snap](000_1_10__3d_dynamics_snap.png)
+
+* **Mathematical Bridge:**
+  Jerk and Snap remain completely flat at zero. This mathematically proves that the system does not suffer from sudden, erratic volume spikes or execution knocks.
 
 ---
 
-## 3. Key Areas for Improvement (Liquidity Latency & Treatment Points)
+## 3. Key Stagnations & Interventions
 
-Specific areas for improvement identified by the system and recommended action plans are detailed below:
+### ⚠️ Stiff Shoulder (Chronic Delays)
+![3D Phase Portrait](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_1_8__phase_portrait_3d.png)
 
-### ⚠️ Liquidity Latency (Stagnation) Identification (Local Viscosity Temporal Heatmap Analysis)
+* **Stagnation Nodes:** Upper 25% viscosity includes **`01_USR_002`** and **`00_USR_001`**.
+  - **`01_USR_002`**: Peaked at **`2020-02`** due to normal execution latency.
 
-![Local Viscosity Trend](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_1_7_1__viscosity_trend.png)
-
-* **Stagnation Range:**
-  The heatmap mapping log local viscosity ($viscosity\_C$) shows mild execution delay in account `01_USR_002` during February, which is within standard market time-lag parameters.
-  The top 25% viscosity group—**"01_USR_002"**, **"00_USR_001"**, and **"10_STK_001"**—exhibits normal execution lags.
-  * **`01_USR_002`**: Mean viscosity `143.45M`, peaking in **`2020-02`**.
-  * **`00_USR_001`**: Mean viscosity `143.33M`, peaking in **`2020-04`**.
-  * **`10_STK_001`**: Mean viscosity `112.16M`, peaking in **`2020-01`**.
-
-### 🎯 Liquidity Optimization ("Tsubo") & Contraindications
-
+### 🎯 Acupuncture Points (Optimal Treatment Nodes)
 ![Sensitivity Matrix](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/004_2_1__sensitivity_matrix.png)
 
-* **Liquidity Optimization Range:** Investor accounts in the bottom 25% of intervention strain energy—**"03_USR_004"** and **"02_USR_003"**—represent areas where liquidity adjustments can be introduced with minimal friction.
-  * **Advice:** Areas with high control gains and minimum secondary distress to surrounding networks are prioritized. Specifically, when adjusting boundary terminal nodes (Jing-Well nodes) directly interfacing with general retail investors and macro liquidity pools (such as clearing channels or external funding inputs), the severe financial and psychological stress (External Backlash) forced onto investors must be carefully evaluated. Squeezing transactions or locking up liquidity abruptly (sedation/泻) triggers investor panic, causing an irreversible freeze in capital inflow (reflow loss). Any control intervention must be coupled with symbiotic mitigations—such as immediate transparent disclosure or temporary margin relief—to stabilize investor sentiment and maintain market homeostasis.
-* **Contraindications Range:** Conversely, the top 25% strain energy group—**"10_STK_001"**, **"11_STK_002"**, and **"12_STK_003"**—must be avoided.
-  * **Advice:** Forcing trading suspensions or aggressive regulatory limits on these core stock assets will disrupt price discovery, potentially triggering market panic.
+* **Treatment Nodes:** Strain energy lower 25% includes **`03_USR_004`** and **`02_USR_003`**.
+  - **Intervention Advice:** Modifying these nodes allows smooth trade volume adjustments.
+
+### 🚫 Contraindications
+* **Avoid Direct Intervention:** High strain energy (upper 25%) nodes include **`10_STK_001`** and **`11_STK_002`**.
+  - **Intervention Advice:** Modifying these nodes directly will distort the ledger topology, triggering high backlash stress.
+
+### ⚡ Stiffness Temporal Difference ($\Delta K_t$)
+* **Stiffness Difference Heatmap Sequence:**
+  - **t=1**: ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
+  - **t=6**: ![Stiffness Diff t=6](stiffness_diff.t.00006.png)
+  - **t=11**: ![Stiffness Diff t=11](stiffness_diff.t.00011.png)
+
+* **Mathematical Bridge:**
+  The difference $\Delta K_t$ is flat at white throughout, showing that the transaction pathways retain complete elasticity and no blockages form over time.
 
 ---
 
-## 4. Diagnostic Limitations and Falsifiability
+## 4. Falsifiability Conditions
 
-To overturn (falsify) the diagnosis of "Normal/Healthy Market Flow," the following off-scope evidence must be provided:
+To falsify this "Normal" diagnosis, one must present:
 
-1. **Discrepancy with Custody Records:**
-   Reconciling the market ledger with off-scope central securities depository (e.g., JASDEC) records and showing that undocumented share transfers or ownership deletions occurred.
-2. **Acceptance Log Audit on Exchange Servers:**
-   Analyzing exchange order book logs (IP addresses and timestamps) to prove that apparently independent trading accounts were controlled by a single botnet to execute fictitious circular trades (wash trading).
+1. **Exchange Matching Engine Raw Logs:**
+   Primary matching engine logs showing transactions that bypass the audited ledger system entirely.
+2. **Third-Party Custodian Records:**
+   Independent depository records proving that actual share ownership deviates from the ledger logs.
 
 ---
-*Published by: TLU Stock Flow Diagnostics Engine (General Reader Edition)*
+*Published by: TLU Stock Market Diagnostics Engine*

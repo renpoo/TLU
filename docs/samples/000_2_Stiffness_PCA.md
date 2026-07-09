@@ -233,3 +233,41 @@ At the stroke onset ( $t=30$ ), PC1 loadings freeze on the motor cortex (`Motor_
 During a seizure, all nodes synch. Loadings freeze into flat, uniform lines across all regions. The brain loses its informational capacity.
 
 - ![Sample 9 Eigenvector Evolution](../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_3__eigenvector_evolution.png)
+
+---
+
+### 9. Stiffness Temporal Difference ($\Delta K_t = K_t - K_{t-1}$) Heatmap Sequence (`stiffness_diff.t.XXXXX.png`)
+
+Stiffness Temporal Difference $\Delta K_t$ extracts the dynamic, step-by-step changes in coupling stiffness (partial correlation weight) between nodes.
+
+* **Positive difference ($\Delta K_t > 0.0$ / Red):** Dynamic hardening (Stiffness Lock). It indicates that structural bottlenecks, payment delays, traffic congestion, or vascular spasms are **actively forming** on those specific routes.
+* **Negative difference ($\Delta K_t < 0.0$ / Blue):** Dynamic softening (Stress Release). It indicates that congestion is dissolving, blockages are cleared, or blood vessels are dilated.
+* **No difference ($\Delta K_t \approx 0.0$ / White):** No structural change. The coupling relationship remains stable or completely frozen.
+
+#### 🟢 Sample 0 (Healthy)
+* **Clinical Interpretation:** The stiffness difference is almost completely white (zero) across all steps, reflecting a highly flexible, healthy metabolic circulation.
+
+#### 🟡 Sample 1 (Wash Trade)
+* **Clinical Interpretation:** Intense red spikes appear on the `Cash` ↔ `Accounts_Receivable` edge at t=1 (wash trade commencement) and t=4 (termination), capturing the sudden locking of transaction loops.
+
+#### 🔴 Sample 2 (Embezzlement Leak)
+* **Clinical Interpretation:** A red spike appears at t=4 on the edge connecting Cash to `UNKNOWN_LEAK`, marking the active establishment of the leak bypass, which then stabilizes into a static lock (white).
+
+#### 🟡 Sample 3 (Unbalanced Mistake)
+* **Clinical Interpretation:** A red spike at t=1 on the affected transaction edges signals sudden imbalance (hardening), followed immediately at t=2 by a blue spike, capturing the elastic release of stress post-correction.
+
+#### 🔴 Sample 4 (Composite Chaos)
+* **Clinical Interpretation:** Distinct red spikes appear sequentially at t=1 (wash trade start), t=5 (embezzlement start), and t=8 (maximum leak), showing the multi-stage structural hardening of the network.
+
+#### 🔴 Sample 5 (Kyoto Traffic)
+* **Clinical Interpretation:** A sharp red spike forms at t=12 on the Shijo-Karasuma intersection edges (congestion onset). From t=18 to t=23, red stiffness differences expand like a spiderweb across adjacent arterial routes, visualising the gridlock propagation.
+
+#### 🟢 Sample 6 (Market Stock Flow) & 🟢 Sample 7 (Market Cash Flow)
+* **Clinical Interpretation:** The difference maps remain entirely white (near-zero) throughout, indicating that order execution and cash clearing run with high flexibility and no dynamic blocks.
+
+#### 🔴 Sample 8 (fMRI Stroke)
+* **Clinical Interpretation:** A cluster of red spikes forms at t=30 in the motor cortex (`Motor_Cortex`) and adjacent parietal areas (active ischemia block). In subsequent steps, the map returns to white, signifying persistent tissue deactivation.
+
+#### 🔴 Sample 9 (fMRI Seizure)
+* **Clinical Interpretation:** A system-wide red spike covers almost all connections at t=30 (seizure onset). Afterward, the difference drops to zero (white), signifying that the brain is locked into a rigid, non-responsive synchronous state.
+

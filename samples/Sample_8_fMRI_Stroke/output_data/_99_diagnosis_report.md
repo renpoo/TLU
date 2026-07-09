@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Descriptive Statistics V3)
 
 **Target Environment:** `samples/Sample_8_fMRI_Stroke`
-**Date Analyzed:** 2026-07-06 07:18:28
+**Date Analyzed:** 2026-07-09 11:12:50
 
 ## 1. Final Diagnosis
 
@@ -18,6 +18,8 @@ The table below details the descriptive statistics computed individually for all
 | Measure / Scale | Mean | Median | Mode (count / total, %) | Min | Max | Range | IQR | Std Dev | Skewness | Kurtosis | Z-Exceed |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Dynamics: acceleration_a | 0.0000 | 1.6700 | 0.0000 (6/300, 2.0%) | -2174.6500 | 570.2400 | 2744.8900 | 93.9150 | 165.3958 | -7.1097 | 99.3646 | 5 |
+| Dynamics: jerk_j | 0.0000 | 0.0000 | 0.0000 (10/300, 3.3%) | -2076.7100 | 1890.3600 | 3967.0700 | 140.4875 | 205.5789 | -0.7932 | 57.0344 | 2 |
+| Dynamics: snap_s | -0.0000 | 0.0000 | 0.0000 (15/300, 5.0%) | -1987.9600 | 3967.0700 | 5955.0300 | 218.4500 | 350.0430 | 3.6015 | 59.1670 | 4 |
 | Dynamics: state_X | 100000.0000 | 100103.4500 | 99890.1000 (2/300, 0.7%) | 40052.4300 | 115335.5900 | 75283.1600 | 6139.4325 | 12305.1357 | -2.6938 | 8.3169 | 11 |
 | Dynamics: velocity_v | 0.0000 | 33.3600 | -26.9000 (2/300, 0.7%) | -2793.2000 | 755.9400 | 3549.1400 | 442.6975 | 731.3105 | -2.3075 | 5.0750 | 12 |
 | Dynamics: viscosity_C | 10000.0000 | 10005.7325 | 9988.5900 (3/300, 1.0%) | 8453.3436 | 10408.2263 | 1954.8827 | 109.5951 | 288.4300 | -2.9853 | 10.9328 | 11 |

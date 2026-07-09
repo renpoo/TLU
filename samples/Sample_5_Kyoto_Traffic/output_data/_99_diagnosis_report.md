@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Descriptive Statistics V3)
 
 **Target Environment:** `samples/Sample_5_Kyoto_Traffic`
-**Date Analyzed:** 2026-07-06 07:17:08
+**Date Analyzed:** 2026-07-09 11:11:29
 
 ## 1. Final Diagnosis
 
@@ -31,6 +31,8 @@ The table below details the descriptive statistics computed individually for all
 | Measure / Scale | Mean | Median | Mode (count / total, %) | Min | Max | Range | IQR | Std Dev | Skewness | Kurtosis | Z-Exceed |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Dynamics: acceleration_a | 0.0000 | 0.0000 | 0.0000 (28/600, 4.7%) | -3665.0000 | 3618.0000 | 7283.0000 | 125.5000 | 477.3676 | -0.5423 | 30.0186 | 14 |
+| Dynamics: jerk_j | 0.0000 | 0.0000 | 0.0000 (51/600, 8.5%) | -4310.0000 | 4334.0000 | 8644.0000 | 201.2500 | 607.8188 | 0.4206 | 23.3304 | 18 |
+| Dynamics: snap_s | 0.0000 | 0.0000 | 0.0000 (76/600, 12.7%) | -7226.0000 | 7290.0000 | 14516.0000 | 384.7500 | 944.2555 | 0.6424 | 27.3294 | 12 |
 | Dynamics: state_X | 10000.0000 | 10008.0000 | 10033.0000 (4/600, 0.7%) | 91.0000 | 19789.0000 | 19698.0000 | 372.2500 | 3571.5943 | -0.5041 | 3.4006 | 0 |
 | Dynamics: velocity_v | 0.0000 | 1.0000 | 53.0000 (8/600, 1.3%) | -4323.0000 | 4333.0000 | 8656.0000 | 100.2500 | 616.0416 | -1.1071 | 28.2775 | 18 |
 | Dynamics: viscosity_C | 1000.0000 | 999.9000 | 995.3000 (3/600, 0.5%) | 13.0250 | 1966.2500 | 1953.2250 | 33.1125 | 325.1747 | -0.5512 | 4.4484 | 28 |

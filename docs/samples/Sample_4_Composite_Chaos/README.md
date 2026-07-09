@@ -1,99 +1,104 @@
-# Composite Chaos Report (Case 4)
+# Composite Abuse Final Report (Case 4)
 
 > [!NOTE]
-> A more detailed analysis report is available in [clinical_report.md](clinical_report.md).
+> A more detailed technical clinical report is available in [clinical_report.md](clinical_report.md).
 
-## Target Entity: Sample 4
+## Target Organization: Sample 4
 
 ---
 
 ## 0. Executive Summary
 
-* **Overall Diagnosis:** 【Warning / Needs Improvement】 A critical **"composite pathology"** (co-occurring complications) has been detected: fictitious wash-trading loops (to inflate revenue) and unauthorized capital leakage (embezzlement) are occurring simultaneously.
-* **Overall Constitution (Physical State):**
-  Due to wash trading, the system exhibits a high superficial **"fever"** (fictitious temperature rise) on the B/S and P/L. However, beneath this, the capital drain (embezzlement) is depleting the core capacity (**"immunity and free energy"**) toward **"thermal death."** The network has lost flexibility, showing structural rigidity (**"arteriosclerosis / stiffness lock"**). In later steps, when normal operational stress is applied, the system fails to distribute energy, triggering severe oscillations (**"knocking/resonance"**) that threaten complete structural collapse.
-* **Areas for Improvement (Viscosity & Treatment Points):**
-  * **Stagnation (Viscosity / "Stiff Shoulder") Range:** Severe settlement delays are observed in **"07_ACC_Sales_Revenue"**, **"04_ACC_Inventory"**, and **"03_ACC_Cash"** (top 25% viscosity range), peaking around **2020-12**.
-  * **Treatment Points ("Tsubo") Range:** The minimum intervention stress range (bottom 25% strain energy range), comprising **"03_ACC_Cash"**, **"01_ACC_Accounts_Receivable"**, and **"02_ACC_COGS"**, represents the highest priority treatment points to optimize the system.
-  * **Contraindications (Avoid Intervention) Range:** Conversely, aggressive reductions or interventions in **"07_ACC_Sales_Revenue"**, **"09_UNKNOWN_LEAK"** (leak channel), and **"10_ACC_Equity_Capital"** (top 25% strain energy range) must be strictly avoided, as they will trigger intense system backlash and functional paralysis.
+* **Final Diagnosis:** 【Critical / Immediate Action】 Fictitious circular transactions (wash trades) and off-book siphoning of capital (embezzlement) are occurring simultaneously.
+* **Holistic Health Constitution:** 
+  Total assets (**"Physique"**) decline over time due to a cumulative leakage of `$6,255.99`. Transaction friction (**"Autonomic System"**) is highly disturbed. Multiple connection locks (**"Arteriosclerosis"**) have developed. Jerk and Snap record sharp oscillations in late steps, indicating final system collapse.
+* **Key Stagnations & Interventions:**
+  - **Stiff Shoulder (Stagnation):** **`07_ACC_Sales_Revenue`** (viscosity upper 25% boundary) shows severe delays, peaking at **2020-12**.
+  - **Acupuncture Points (Treatment Nodes):** **`03_ACC_Cash`** and **`01_ACC_Accounts_Receivable`** (strain energy lower 25%) are the optimal nodes to dissolve the lock.
+  - **Contraindications (Avoid Direct Intervention):** Directly adjusting **`07_ACC_Sales_Revenue`** or **`09_UNKNOWN_LEAK`** will cause severe topological stress and must be avoided.
 
 ---
 
-## 1. Overall Diagnosis (Warning / Needs Improvement)
+## 1. Final Diagnosis (Critical)
 
-### 【Diagnosis】: Needs Improvement (Co-occurring Wash Trade and Embezzlement)
+### 【Diagnosis】: Composite Abuse (Loop & Leak)
+![System Stability (Maximum Spectral Radius)](../../../samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
 
-![System Stability](../../../samples/Sample_4_Composite_Chaos/readme_plots/004_1_2__system_stability.png)
-
-Although net profit is reported as `$200,478.42`, the physical diagnostics engine detected a severe dual complication: a circular wash trade loop (maximum spectral radius $\rho \ge 0.75$, peaking at **`0.7861`**) in early steps, combined with off-book cash leakage (Kirchhoff convective residual peaking at **`$4,773.57`** in September, with a cumulative leak of **`$6,255.99`**). This is equivalent to an organization bleeding out while its heart runs in an empty circular loop.
+Ledger audits reveal a total physical mass leakage of `$6,255.99` (non-zero conservation residual). Simultaneously, spectral radius $\rho$ remains high at `0.7861`, confirming active wash trading. Standard Z-scores fail to flag the chronic anomalies due to model pollution, but topological metrics consistently capture both.
 
 ---
 
-## 2. Overall Constitution (Health State) Analysis
+## 2. Holistic Health Constitution Analysis
 
-Mapping the organization's "financial stamina" to a medical checkup template reveals the following distortions:
+The organization's flow capacity maps to the following constitutional parameters:
 
-### ① Physique & Weight (Cumulative Trend of Capital Scale)
-
+### ① Physique (Capital Scale)
 ![B/S Cumulative Trend](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_0_1__BS_Trend.png)
 
-While the cash and receivables bounce inflates the balance sheet, the persistent embezzlement drain causes actual capital scale (physique) to decline steadily.
+Total B/S assets (Physique) exhibit a steady downward trend, proving that cash reserves are being siphoned off-book.
 
-### ② Immunity & Basic Stamina (Resilience to External Shocks)
-
+### ② Immunity (Shock Absorption Capacity)
 ![P/L Cumulative Trend](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_0_1__PL_Trend.png)
 
-The combination of circular friction ($TS$) and mass depletion ($U$) drives the system's free energy ($F = U - TS$) below zero in later steps. The system's capacity to absorb shocks is depleted, pushing it toward structural shutdown (thermal death).
+Immune buffer capacity (Free Energy) is severely depleted, leaving the organization vulnerable to minor operational shocks.
 
-### ③ Autonomic Nervous System & Metabolic Efficiency (Regularity of Frictional Loss)
-
+### ③ Autonomic System (Entropy & Flow Efficiency)
 ![T-S Diagram](../../../samples/Sample_4_Composite_Chaos/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
-The T-S diagram illustrates a highly unstable loop. Extreme friction heat (entropy loss) is generated by wash trading, while the cash drain causes capital to vanish, leaving the autonomic nervous system completely destabilized.
+The T-S diagram depicts transaction diversity loss and abnormal friction heat (Entropy), showing systemic disruption.
 
-### ④ Arteriosclerosis & Resonance (PCA Principal Axes Evaluation)
-
+### ④ Arteriosclerosis (PCA Stiffness Evaluation)
 ![PCA Ratio](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_2__principal_axes_ratio.png)
 
-PCA reveals a long-term stiffness lock (arteriosclerosis) where PC1 explainability spikes. In later steps, when normal operational load is applied to this hardened network, the lack of a fluid cash buffer causes the entire system to experience violent oscillations ("resonance / knocking").
+PCA EVR PC1 climbs to 95.28% and loadings freeze, proving that the flow pathways have lost elasticity and are locked onto the siphoning bypass and circular trading loops (Arteriosclerosis).
+
+### ⑤ Shockwaves (Jerk and Snap Trends)
+![3D Jerk](000_1_9__3d_dynamics_jerk.png)
+
+![3D Snap](000_1_10__3d_dynamics_snap.png)
+
+* **Mathematical Bridge:**
+  Jerk and Snap exhibit sharp spikes at t=1 and t=8, followed by severe high-frequency oscillations in late steps. This mathematically proves that the system suffers from sudden transaction shocks and final system knocking.
 
 ---
 
-## 3. Key Areas for Improvement (Viscosity & Treatment Points)
+## 3. Key Stagnations & Interventions
 
-Specific areas for improvement identified by the system and recommended action plans are detailed below:
+### ⚠️ Stiff Shoulder (Chronic Delays)
+![3D Phase Portrait](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_1_8__phase_portrait_3d.png)
 
-### ⚠️ Stagnation (Viscosity) Identification (Local Viscosity Temporal Heatmap Analysis)
+* **Stagnation Nodes:** Upper 25% viscosity includes **`07_ACC_Sales_Revenue`** and **`04_ACC_Inventory`**.
+  - **`07_ACC_Sales_Revenue`**: Peaked at **`2020-12`** due to fictitious year-end transaction delays.
 
-![Local Viscosity Trend](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_1_7_1__viscosity_trend.png)
-
-* **Stagnation Range:**
-  The temporal heatmap mapping log local viscosity ($viscosity\_C$) shows that the sales revenue account (**`07_ACC_Sales_Revenue`**) maintains a high viscosity index, peaking sharply in December.
-  This viscosity surge (delay) locks state trajectories into localized regions of phase space (attractor confinement). Refer to the 3D Phase Portrait ([000_1_8__phase_portrait_3d.png](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_1_8__phase_portrait_3d.png)) for trajectory clustering.
-  The top 25% viscosity group—**"07_ACC_Sales_Revenue"**, **"04_ACC_Inventory"**, and **"03_ACC_Cash"**—contains severe settlement delays.
-  * **`07_ACC_Sales_Revenue`**: Mean viscosity `55323.23`, peaking at **`2020-12`** (peak value `100328.49`).
-  * **`04_ACC_Inventory`**: Mean viscosity `52088.25`, peaking at **`2020-12`**.
-  * **`03_ACC_Cash`**: Mean viscosity `46085.30`, peaking in **`2020-06`**.
-
-### 🎯 Treatment Points ("Tsubo") & Contraindications
-
+### 🎯 Acupuncture Points (Optimal Treatment Nodes)
 ![Sensitivity Matrix](../../../samples/Sample_4_Composite_Chaos/readme_plots/004_2_1__sensitivity_matrix.png)
 
-* **Treatment Points Range:** Accounts in the bottom 25% of intervention strain energy—**"03_ACC_Cash"**, **"01_ACC_Accounts_Receivable"**, and **"02_ACC_COGS"**—can be adjusted with minimal frictional resistance.
-  * **Advice:** These sectors (such as Cost of Goods Sold) can be adjusted to optimize liquidity with the least effort, without damaging the capital structure. In particular, when intervening in boundary terminal nodes that directly interface with the external world (e.g., Accounts Receivable representing external clients' cash flows), you must carefully assess the cash squeeze (External Backlash) forced on external partners. Aggressive local collection speedups (sedation/泻) carry a high risk of triggering negative feedback loops, such as subsequent sales drops due to customer churn. Thus, instead of a localized push for faster collections, a symbiotic package of interventions (Yin-Yang balancing) must be proposed—such as easing Accounts Payable terms or providing digital process tools to reduce operational frictions—to maintain overall system homeostasis.
-* **Contraindications Range:** Conversely, the top 25% strain energy group—**"07_ACC_Sales_Revenue"**, **"09_UNKNOWN_LEAK"**, and **"10_ACC_Equity_Capital"**—must be avoided.
-  * **Advice:** Forcing adjustments on these nodes will disrupt core connections and trigger massive system backlash.
+* **Treatment Nodes:** Strain energy lower 25% includes **`03_ACC_Cash`** and **`01_ACC_Accounts_Receivable`**.
+  - **Intervention Advice:** Modifying these nodes allows smooth cash flow adjustments to dissolve the lock.
+
+### 🚫 Contraindications
+* **Avoid Direct Intervention:** High strain energy (upper 25%) nodes include **`09_UNKNOWN_LEAK`** and **`07_ACC_Sales_Revenue`**.
+  - **Intervention Advice:** Modifying these nodes directly will distort the ledger topology, triggering high backlash stress.
+
+### ⚡ Stiffness Temporal Difference ($\Delta K_t$)
+* **Stiffness Difference Heatmap Sequence:**
+  - **t=1**: ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
+  - **t=5**: ![Stiffness Diff t=5](stiffness_diff.t.00005.png)
+  - **t=8**: ![Stiffness Diff t=8](stiffness_diff.t.00008.png)
+
+* **Mathematical Bridge:**
+  The difference $\Delta K_t$ spikes red at t=1, t=5, and t=8, capturing the dynamic formation of both circular loops and siphoning bypass paths.
 
 ---
 
-## 4. Diagnostic Limitations and Falsifiability
+## 4. Falsifiability Conditions
 
-To overturn (falsify) the diagnosis of "Composite Wash Trade and Embezzlement," the following external, primary physical evidence must be presented:
+To falsify this "Composite Abuse" diagnosis, one must present:
 
-1. **Physical Delivery Proof of Goods:**
-   For the wash-trading period (totaling `$138,655.85`), the presentation of original shipping waybills, courier receipts, or signed delivery logs proving that physical goods were actually moved.
-2. **Proof of Off-Book Funds in Bank Records:**
-   For the missing `$6,255.99`, presenting official SWIFT logs or bank transaction records proving that the matching amounts were transferred to a valid subsidiary or corporate investment account within the group.
+1. **Undisclosed Sales Shipping Waybills:**
+   Physical waybills proving that the circular trade values ($138,655.85) correspond to legitimate shipping costs.
+2. **Third-Party Bank Remittance Logs:**
+   Independent SWIFT logs showing that all external transfers were routed to registered partners.
 
 ---
-*Published by: TLU Financial Mathematical Diagnostics Engine (General Reader Edition)*
+*Published by: TLU Mathematical Diagnostics Engine*

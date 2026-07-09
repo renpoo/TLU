@@ -107,6 +107,8 @@ def main():
         all_stats["Dynamics: state_X"] = analyze_timeseries(df_dynamics, "state_X", decimals=1)
         all_stats["Dynamics: velocity_v"] = analyze_timeseries(df_dynamics, "velocity_v", decimals=1)
         all_stats["Dynamics: acceleration_a"] = analyze_timeseries(df_dynamics, "acceleration_a", decimals=1)
+        all_stats["Dynamics: jerk_j"] = analyze_timeseries(df_dynamics, "jerk_j", decimals=1)
+        all_stats["Dynamics: snap_s"] = analyze_timeseries(df_dynamics, "snap_s", decimals=1)
         all_stats["Dynamics: viscosity_C"] = analyze_timeseries(df_dynamics, "viscosity_C", decimals=2)
         
     # 2.2 Stiffness Metrics (prefix: 000_2)

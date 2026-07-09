@@ -43,6 +43,8 @@ def resolve_colormap(target_col: str, theme_cfg: dict) -> str:
         cmap_name = 'viridis'
     elif 'z_score' in target_col or 'stress' in target_col:
         cmap_name = 'plasma'
+    elif 'jerk' in target_col or 'snap' in target_col:
+        cmap_name = 'plasma'
 
     return cmap_name
 

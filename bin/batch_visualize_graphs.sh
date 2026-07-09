@@ -62,6 +62,7 @@ SUPPORT_SCRIPTS=(
     "vis_000_1_7_visualize_inertia_viscosity.sh"
     "vis_000_1_7_1_visualize_viscosity_trend.sh"
     "vis_000_2_1_visualize_structural_stiffness.sh"
+    "vis_000_2_4_visualize_stiffness_difference.sh"
     "vis_000_2_3_visualize_eigenvector_evolution.sh"
     "vis_001_2_1_visualize_local_thermodynamics.sh"
     "vis_001_2_2_visualize_lag_matrix.sh"
@@ -71,6 +72,8 @@ SUPPORT_SCRIPTS=(
     "vis_002_2_2_visualize_micro_forensics.sh"
     "vis_003_1_1_visualize_fk_simulation.sh"
     "vis_003_1_2_visualize_ik_optimization.sh"
+    "vis_003_1_3_visualize_jacobian_trajectory.sh"
+
     "vis_004_1_1_visualize_control_theory.sh"
     "vis_004_2_1_visualize_sensitivity_matrix.sh"
     "vis_004_2_2_visualize_sensitivity_analysis_heatmaps.sh"

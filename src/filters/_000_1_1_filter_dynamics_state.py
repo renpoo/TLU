@@ -12,7 +12,7 @@ from typing import List, Tuple
 from src.filters.cli_parser import get_base_parser
 from src.filters.stream_processor import setup_pipeline, yield_time_slices
 from src.core.core_tensor_ops import compute_net_flux
-from src.core.core_kinematics import compute_derivatives
+from src.core.core_kinematics import compute_derivatives, compute_higher_order_derivatives
 from src.core.core_dynamics import estimate_virtual_mass_and_viscosity, compute_external_force_residual
 
 def run_dynamics_state_analysis(
@@ -54,8 +54,9 @@ def run_dynamics_state_analysis(
         
     temp_X_hist = np.array(X_history + [X_current])
     
-    # 2. Acceleration a
+    # 2. Acceleration a, Jerk j, Snap s
     v_latest, a_current = compute_derivatives(temp_v_hist)
+    jerk_current, snap_current = compute_higher_order_derivatives(temp_v_hist)
     
     # 3. Virtual mass M and Viscosity C
     M, C = estimate_virtual_mass_and_viscosity(temp_X_hist, damping_ratio=0.1)
@@ -73,6 +74,8 @@ def run_dynamics_state_analysis(
             f"{X_current[i]:.4f}",  # Absolute coordinates (position) in phase space
             f"{v_current[i]:.4f}",  # This is the net flux q
             f"{a_current[i]:.4f}", 
+            f"{jerk_current[i]:.4f}",
+            f"{snap_current[i]:.4f}",
             f"{M[i]:.4f}", 
             f"{C[i]:.4f}", 
             f"{F_ext[i]:.4f}"
@@ -85,7 +88,7 @@ def main():
     parser.add_argument("--history_window", type=int, default=100)
     
     # Added to header as well
-    output_header = ["t_idx", "node_idx", "state_X", "velocity_v", "acceleration_a", "inertia_M", "viscosity_C", "external_force_F"]
+    output_header = ["t_idx", "node_idx", "state_X", "velocity_v", "acceleration_a", "jerk_j", "snap_s", "inertia_M", "viscosity_C", "external_force_F"]
     args, N, reader, writer = setup_pipeline(parser, output_header)
 
     from src.filters.stream_processor import load_initial_state
