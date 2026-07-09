@@ -88,7 +88,8 @@
         "colormaps": {
             "network_net_flux": "coolwarm_r",
             "network_edge_stress": "YlOrRd",
-            "lag_matrix_map": "RdBu_r"
+            "lag_matrix_map": "RdBu_r",
+            "jacobian_map": "plasma"
         }
     }
 }

@@ -116,6 +116,44 @@ def solve_ik_with_safe_stiffness(J: np.ndarray, K_safe: np.ndarray, target_dr: f
     
     return dq_opt.flatten()
 
+def compute_higher_order_derivatives(v_history: np.ndarray):
+    """!
+    @brief Calculate the latest physical Jerk (j) and Snap (s) using discrete difference.
+    @details Derives Jerk (3rd order time derivative of position) and Snap (4th order time derivative of position)
+             from chronologically ordered velocity vector history.
+
+    @param v_history Velocity (Flux) vector history (Time_steps x Nodes). Oldest first.
+
+    @return Tuple of jerk (Nodes,) and snap (Nodes,).
+    
+    @pre
+        - `v_history` must be a valid 2D array ordered chronologically.
+    """
+    T = v_history.shape[0]
+    # Handle both 2D array (T x N) and 1D list of 1D arrays
+    if isinstance(v_history, list):
+        N = v_history[0].shape[0] if len(v_history) > 0 else 0
+    else:
+        N = v_history.shape[1] if v_history.ndim == 2 else 0
+
+    jerk = np.zeros(N, dtype=float)
+    snap = np.zeros(N, dtype=float)
+    
+    if T < 1:
+        return jerk, snap
+
+    # Convert to array for ease of multi-step indexing if it's a list
+    v_arr = np.array(v_history)
+
+    if T >= 3:
+        # j(t) = v(t) - 2*v(t-1) + v(t-2)
+        jerk = v_arr[-1] - 2 * v_arr[-2] + v_arr[-3]
+    if T >= 4:
+        # s(t) = v(t) - 3*v(t-1) + 3*v(t-2) - v(t-3)
+        snap = v_arr[-1] - 3 * v_arr[-2] + 3 * v_arr[-3] - v_arr[-4]
+        
+    return jerk, snap
+
 def compute_derivatives(v_history):
     """!
     @brief Calculate the latest physical velocity (v) and acceleration (a).
