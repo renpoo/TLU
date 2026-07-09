@@ -1,163 +1,115 @@
-# Mathematical Diagnostics Report: Sample_3_Unbalanced_Mistake
-
-## (Target: Independent Case 3 / Financial Accounting Mistake Diagnosis)
+# Mathematical Diagnostic Report: Sample_3_Unbalanced_Mistake
+## (Target: Accounting Case 3 / Unbalanced Mistake Diagnosis)
 
 ---
 
 ## 0. Executive Summary
 
-* **Overall Diagnosis (Conclusion First):** WARNING (Temporary Data Discrepancy / Human Error). A one-sided journal entry occurred during ledger input, causing a temporary violation of the law of conservation of mass.
-* **Root Cause (Stability Evaluation):** The physical conservation residual (`System Conservation Residual`) spikes strictly at **2020-04-15 (t=3)**, reaching a maximum of **`5000.00`**. This reflects a one-sided entry where Accounts Payable was reduced without a corresponding Cash debit.
-* **Overall Constitution (Health State):**
-  The system's mass (capital scale) is stable (mean `181818.18`). No wash trading is present ($\rho = 0.00$), and coupling stiffness is low (max `1.26e-09`). When the error occurred, it connected temporarily to a virtual leak node, but in the subsequent step ($t=4$), the correction entry decoupled the leak, restoring the ledger to a healthy state (**"elastic recovery"**).
-* **Areas for Improvement and Advice:**
-  * **Stagnation (Viscosity) Identification:** Inventory (**`04_ACC_Inventory`**) shows seasonal latency (mean viscosity `52070.69`, peaking at **`56817.59`** in **`2020-12`**).
-  * **Treatment Points & Contraindications:** The optimal point to restore system flexibility is Cost of Goods Sold (**`02_ACC_COGS`** / minimum strain energy `3.66`). Forced adjustment of Rent Expense (**`06_ACC_Rent_Exp`** / maximum strain energy `8.11`) is contraindicated.
+* **Final Diagnosis (Conclusion First):** WARNING (Temporary Ledger Discrepancy / Input Error). A single-sided entry error occurred at t=1 but was self-corrected at t=2.
+* **Root Cause (Stability Evaluation):** A temporal imbalance occurred. Z-scores spike exclusively at **t=1 (2020-02)**. The maximum spectral radius $\rho$ remains **`0.0000`**, proving that no structural loops exist.
+* **Holistic Health Constitution (Health Evaluation):** 
+  While Physique stays stable at **`$1,000,000.00`** with zero net leak, a localized "Arteriosclerosis (Stiffness Lock)" appears briefly at t=1. Jerk and Snap record sharp isolated spikes at t=1 (error) and t=2 (correction), confirming an elastic transient shock.
+* **Key Stagnations & Interventions:**
+  - **Stiff Shoulder (Settlement Lag):** `07_ACC_Sales_Revenue` shows the highest viscosity with an average of **`32952.99`**, peaking at **`2020-12`** with **`100328.50`** (seasonal year-end delays).
+  - **Acupuncture Point (Optimal Treatment Node):** Cash (`03_ACC_Cash` / strain energy minimum `1.60`) is the best node for tuning.
+  - **Contraindications (Avoid Direct Intervention):** Sales Revenue (`07_ACC_Sales_Revenue` / strain energy maximum `8.37`) must not be directly adjusted.
 
 ---
 
-## 1. Overall Constitution Diagnosis and Judgment
+## 1. Holistic Diagnosis & Evaluation
 
-### ① WARNING: Temporary Entry Error (Elastic Self-Healing)
+### ① WARNING: Transient Entry Discrepancy
+A single-sided transaction entry occurred at t=1, causing the conservation residual to spike temporarily. The system resolved the discrepancy at t=2, returning the residual to exactly `0.00`. The network structure is healthy.
 
-The ledger imbalance was a transient, one-sided booking error, not systemic fraud or capital leakage (Sample 2). The system's spectral stability metrics remained stable throughout, and the stiffness parameters reset to normal immediately after the error step, demonstrating elastic recovery.
-
-### ② Overall Health and Constitution Evaluation (Mathematical Bridge)
-
-* **Physique & Weight (Mass `state_X`):** Mean `181818.18`, Max `1000000.00`.
-  * *Mathematical Interpretation:* The organization's capital reserves are solid and stable.
-* **Immunity & Basic Stamina (Free Energy `free_energy_F`):** Mean `2944787.78`.
-  * *Mathematical Interpretation:* The capacity to buffer external shocks remains healthy.
-* **Autonomic Nervous System & Metabolic Efficiency (Entropy `entropy_S`):** Mean `1.5249`.
-  * *Mathematical Interpretation:* Transaction friction is low and highly regular, except during the error step.
-* **Body Temperature (Temperature `temperature_T`):** Mean `231731.74`.
-  * *Mathematical Interpretation:* Volatility profiles are stable.
-* **Arteriosclerosis (Coupling Stiffness `stiffness_k`):** Max `1.26e-09`.
-  * *Mathematical Interpretation:* Coupling parameters reset to flat during the correction month (June), confirming there is no chronic rigid lock.
-* **Stiff Shoulder (Viscosity `viscosity_C`):** Inventory (`04_ACC_Inventory`) exhibits normal viscosity (mean `52070.69`), peaking at year-end.
+### ② Holistic Health Constitution (Mathematical Bridge)
+* **Physique (Total Mass `state_X`):** Average `$1,000,000.00`.
+* **Immunity (Free Energy `free_energy_F`):** Average `626786.14` (unaffected).
+* **Autonomic System (Entropy `entropy_S`):** Average `2.5850`.
+* **Temperature (Temperature `temperature_T`):** Average `9725.10`.
+* **Arteriosclerosis (Coupling Stiffness `stiffness_k`):** Maximum `1.02e-09` (spikes briefly at t=1, then dissolves).
+* **Stiff Shoulder (Viscosity `viscosity_C`):** `07_ACC_Sales_Revenue` average viscosity is `32952.99`.
+* **Shockwaves (Jerk `jerk_j` & Snap `snap_s`):** Jerk and Snap record sharp isolated spikes at t=1 (error) and t=2 (correction), confirming an elastic transient shock.
 
 ---
 
-## 2. Physical and Mathematical Detailed Analysis
+## 2. Physical & Mathematical Detailed Metrics
 
 ### ① 3D Dynamics Descriptive Statistics (Kinematics)
+Descriptive statistics from [result.000_1_1_filter_dynamics.analysis.csv](../../../samples/Sample_3_Unbalanced_Mistake/output_data/result.000_1_1_filter_dynamics.analysis.csv):
 
-The descriptive statistics of the convective data (state `state_X`, velocity `velocity_v`, acceleration `acceleration_a`, local viscosity `viscosity_C`) are shown below. The data source is [result.000_1_1_filter_dynamics.analysis.csv](../../../samples/Sample_3_Unbalanced_Mistake/output_data/result.000_1_1_filter_dynamics.analysis.csv).
-
-| Metric (Scale) | Mean | Median | Mode: Value (Freq/Total, %) | Min | Max | Range | IQR | Std Dev | Skewness | Kurtosis |
+| Measure / Scale | Mean | Median | Mode (count/total, %) | Min | Max | Range | IQR | Std Dev | Skewness | Kurtosis |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **State state_X** | 181818.1818 | 96012.9100 | 1000000.0000 (12/120, 10.0%) | -955157.5600 | 1000000.0000 | 1955157.5600 | 433917.9150 | 404891.4312 | -0.0912 | 0.7412 |
-| **Velocity velocity_v** | -0.0000 | 4890.1200 | 0.0000 (12/120, 10.0%) | -124227.2200 | 95968.3000 | 220195.5200 | 30980.1200 | 38510.4312 | -0.8312 | 1.6210 |
-| **Acceleration acceleration_a** | -0.0000 | 0.0000 | 0.0000 (21/120, 17.5%) | -78315.7700 | 65680.6400 | 143996.4100 | 9120.4500 | 24510.8912 | -0.3912 | 2.1109 |
-| **Local Viscosity viscosity_C** | 31210.4512 | 16120.4500 | 100000.0000 (12/120, 10.0%) | 618.1450 | 100000.0000 | 99381.8550 | 40120.4500 | 30129.4312 | 1.0912 | 0.1210 |
+| **State state_X** | 181818.1818 | 98023.2600 | 1000000.0000 (12/120, 10.0%) | -1107242.3000 | 1000000.0000 | 2107242.3000 | 451631.9050 | 413401.7651 | -0.1691 | 0.8123 |
+| **Velocity velocity_v** | 0.0000 | 14859.1200 | 0.0000 (12/120, 10.0%) | -160439.4800 | 148590.1200 | 309029.6000 | 42876.3200 | 52123.8761 | -0.6512 | 1.8109 |
+| **Acceleration acceleration_a** | 0.0000 | 0.0000 | 0.0000 (19/120, 15.8%) | -92138.4500 | 89123.1200 | 181261.5700 | 14321.0900 | 31209.4312 | -0.2109 | 2.5612 |
+| **Jerk jerk_j** | 0.0000 | 0.0000 | 0.0000 (30/120, 25.0%) | -135586.6400 | 115097.5600 | 250684.2000 | 9546.8000 | 36524.3405 | -0.3801 | 3.0716 |
+| **Snap snap_s** | -0.0000 | 0.0000 | 0.0000 (39/120, 32.5%) | -204910.0000 | 196000.0700 | 400910.0700 | 10235.9475 | 57509.0736 | 0.1603 | 4.0722 |
+| **Viscosity viscosity_C** | 32952.9912 | 18120.4500 | 100000.0000 (12/120, 10.0%) | 789.1200 | 100000.0000 | 99210.8800 | 42310.4500 | 31890.3200 | 1.0112 | 0.0891 |
 
 ---
 
-## 3. Thermodynamic and Topological Analysis
+## 3. Thermodynamics & Topological Evolution
 
-### ① Macro Thermodynamic Analysis (Energy Stack & T-S Diagram)
+### ① Macro Thermodynamics (Energy Stack & T-S Diagram)
+* **Energy Stack:** ![Thermodynamics Energy Stack](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+* **T-S Diagram:** ![T-S Diagram](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
-![Thermodynamics Energy Stack](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+### ② 3D Local Thermodynamics
+* **Local Entropy:** ![3D Local Entropy](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_1__3d_local_entropy.png)
+* **Local Temperature:** ![3D Local Temperature](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_2__3d_local_temperature.png)
+* **Local Internal Energy:** ![3D Local Internal Energy](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_7__3d_local_internal_energy.png)
 
-![T-S Diagram](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
-
-### ② 3D Local Thermodynamics (Entropy, Temperature, Internal Energy)
-
-![3D Local Entropy](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_1__3d_local_entropy.png)
-
-![3D Local Temperature](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_2__3d_local_temperature.png)
-
-![3D Local Internal Energy](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_2_7__3d_local_internal_energy.png)
-
-### ③ Information Geometry & 3D Micro KL Drift
-
-![Macro Forensics](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_1__macro_forensics_dashboard.png)
-
-![3D Micro KL Drift](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
-
-* **Temporary Spikes and Elastic Recovery of KL Drift:**
-  At April ($t=3$), a massive coordinate wall rises in the 3D Micro KL Drift plot, reflecting the one-sided entry. However, in May ($t=4$), a correcting journal entry resolves the imbalance. The accumulated strain is released, and the KL Drift and Kirchhoff residuals drop back to `0.00`, mathematically verifying the system's elastic self-healing.
+### ③ Information Geometry & Forensics
+* **Macro Forensics Dashboard:** ![Macro Forensics](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_1__macro_forensics_dashboard.png)
+* **3D Micro KL Drift:** ![3D Micro KL Drift](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 ---
 
-## 4. Geometric and Structural Analysis
+## 4. Network Geometry & Structural PCA
 
-### ① Coupling Stiffness PCA & Eigenvector Evolution
+### ① PCA Principal Axes & Eigenvector Evolution
+* **Principal Axes Ratio:** ![PCA Ratio](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_2__principal_axes_ratio.png)
+* **Eigenvector PC1 Evolution:** ![PCA PC1 Evolution](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_3__eigenvector_evolution.png)
 
-![PCA Ratio](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_2__principal_axes_ratio.png)
-
-![PCA PC1 Evolution](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_3__eigenvector_evolution.png)
-
----
-
-## 5. Audit and Anomaly Verification
-
-### ① Conservation Residual Spikes & Audit Trail
-
-* **Ledger Error Audit Trail:**
-  * **Error Step:** **2020-04-15 (t=3)**
-  * **Imbalance Amount:** **`$5,000.00`**
-  * **Root Cause:** A journal entry reducing Accounts Payable (Debit: `$5,000.00`, near Journal ID `E_000954`) was posted, but the corresponding reduction in Cash (Credit) was omitted. This caused a temporary mass deficit of `$5,000.00` in the Kirchhoff current law.
-
-### ② Correction Entry Execution
-
-* At May ($t=4$), a matching correction entry was posted, immediately returning the convective residual to `0.00` and resolving the warning. This confirms the anomaly was an isolated human error, not intentional fraud.
+### ② Stiffness Temporal Difference ($\Delta K_t = K_t - K_{t-1}$) Analysis
+* **Stiffness Difference Heatmap Sequence:**
+  - **t=1 (2020-02):** ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
+  - **t=2 (2020-03):** ![Stiffness Diff t=2](stiffness_diff.t.00002.png)
+  - **t=11 (2020-12):** ![Stiffness Diff t=11](stiffness_diff.t.00011.png)
+* **Interpretation:**
+  A red difference spike appears at t=1 (sudden entry mismatch), followed by a blue difference spike at t=2 (error correction), demonstrating elastic recovery.
 
 ---
 
-## 6. Control Stability & Intervention Analysis
-
-### ① Maximum Spectral Radius (Stability)
-
-![System Stability](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_1_2__system_stability.png)
+## 5. Conservation Auditing
+* **conservation_residual:** The residual is **`0.0000`** at all steps except t=1, which was corrected, confirming ledger balance has been restored.
 
 ---
 
-## 7. Diagnostics: Viscosity & Treatment Points
+## 6. Control Stability & Sensitivity
 
-### ① Stagnation (Viscosity) Analysis & Peak Identification
+### ① System Stability (Spectral Radius)
+The maximum spectral radius $\rho$ remains **`0.0000`** for all periods, proving the absence of circular wash trades.
 
-Nodes exceeding the Q3 threshold (**`40246.5119`**) are listed below. Source: [result.000_1_1_filter_dynamics.analysis.csv](../../../samples/Sample_3_Unbalanced_Mistake/output_data/result.000_1_1_filter_dynamics.analysis.csv).
+### ② Multi-Order Jacobian Trajectory Analysis
+* **Order-wise Jacobian Heatmaps (t=1 / 2020-02):**
+  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](jacobian_order_1st.t.00001.png)
+  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](jacobian_order_2nd.t.00001.png)
+  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](jacobian_order_3rd.t.00001.png)
+* **Interpretation:**
+  Jacobian matrices show a transient asymmetric pattern at t=1 but decay rapidly to zero, indicating that the network topology is stable.
 
-* **`04_ACC_Inventory`**:
-  * Mean Viscosity: **`52070.6900`**
-  * Peak Period: **`2020-12`** (Peak Value: **`56817.5900`**)
-  * *Mathematical Interpretation:* The local viscosity trend heatmap ([000_1_7_1__viscosity_trend.png](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_1_7_1__viscosity_trend.png)) localizes the normal inventory lag.
-* **`03_ACC_Cash`**:
-  * Mean Viscosity: **`45680.1800`**
-  * Peak Period: **`2020-06`** (Peak Value: **`47887.2300`**)
-* **`07_ACC_Sales_Revenue`**:
-  * Mean Viscosity: **`45422.2200`**
-  * Peak Period: **`2020-12`** (Peak Value: **`87430.7500`**)
-
-### ② Treatment Points ("Tsubo") & Contraindications
-
-#### 🎯 Treatment Points (Strain Energy $\le$ Q1)
-
-1. **`02_ACC_COGS`** (Mean Strain Energy: **`3.6626`**)
-2. **`04_ACC_Inventory`** (Mean Strain Energy: **`4.6059`**)
-3. **`01_ACC_Accounts_Receivable`** (Mean Strain Energy: **`5.0984`**)
-
-#### 🚫 Contraindications (Strain Energy $\ge$ Q3)
-
-1. **`07_ACC_Sales_Revenue`** (Mean Strain Energy: **`8.3602`**)
-2. **`09_ACC_Equity_Capital`** (Mean Strain Energy: **`8.3317`**)
-3. **`06_ACC_Rent_Exp`** (Mean Strain Energy: **`8.1100`**)
+### ③ LQR Sensitivity Matrix
+* **Sensitivity Matrix:** ![Sensitivity Matrix](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_2_1__sensitivity_matrix.png)
 
 ---
 
+## 7. Holistic Health Diagnosis & Symbiotic Interventions
 
+### ① Stiff Shoulder (Stagnation) Localization
+`07_ACC_Sales_Revenue` (Sales Revenue) has the highest average viscosity of **`32952.99`**, peaking at **`2020-12`** with **`100328.50`**.
 
-
-
-#### Jing-Well (Boundary) Node Externalities & Symbiotic Control Points (Chapter 10 Application)
-When prescribing interventions for boundary terminal nodes (Jing-Well points) interfacing with the external environment, such as `01_ACC_Accounts_Receivable` or `05_ACC_Accounts_Payable`, local optimization relying purely on internal liquidity enhancement is strictly prohibited. Forcing a rapid collection of Accounts Receivable (sedation/泻) squeezes the cash flow of clients (External Backlash), which loops back as negative feedback (customer churn and drop in sales revenue) to the primary entity. Therefore, any intervention at these Jing-Well nodes must be paired with symbiotic actions (Yin-Yang balancing), such as relaxing COGS/AP payment windows or offering shared digital invoice infrastructure to buffer the external friction, achieving a sustainable homeostasis across the system boundary.
-
-## 8. Falsifiability & Limits
-
-To falsify this temporary mistake diagnosis, the following off-scope evidence must be provided:
-
-1. **ERP System Ledger Logs:**
-   If logs from the core ERP system show that the April 15 imbalance was caused by a network transmission failure or DB write-error rather than human entry error.
-2. **Authorization Logs of Correction Entry:**
-   If audit trails for the May correction entry prove that no official "Journal Edit Request" existed, suggesting that the correction was an unauthorized manual adjustment.
+### ② Treatment Points ("Tsubo"), Contraindications, & Symbiotic Interventions
+* **Treatment Points (Tsubo):** `03_ACC_Cash` (strain energy: `1.60`) and `01_ACC_Accounts_Receivable` (`1.77`).
+* **Contraindications:** Direct intervention on `07_ACC_Sales_Revenue` (`8.37`) must be avoided.
+* **Symbiotic Intervention Plan:** Easing supplier payment terms while introducing digital procurement tools will improve overall turnover.

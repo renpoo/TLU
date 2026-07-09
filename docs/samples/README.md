@@ -1,146 +1,139 @@
-# 🔬 TLU Physics-Mathematics Engine: Universal Forensic Cross-Verification Registry
+# 🔬 TLU Physical Mathematics Engine: Guides & Verification Samples Index (Universal Forensic Cross-Verification Registry)
 
-Tensor-Link Utility (TLU) is a physics-mathematics engine. It inspects transaction streams using physical laws. TLU applies to bookkeeping, urban traffic, financial markets, and brain fMRI.
+Tensor-Link Utility (TLU) is a physical mathematics engine designed to audit double-entry bookkeeping, urban traffic grids, financial markets, and brain fMRI signals under a unified framework of physical laws.
 
-This document acts as the universal registry. It links to detailed mathematical guides and 10 verification samples.
-
-It explains how anomalies waste energy, freeze network structures, violate mass conservation, and cause thermal death. TLU structures these diagnoses using clinical metaphors from Eastern medicine.
+This document serves as the guide directory and comparative verification registry for the 10 validation samples. Pathological anomalies within a system waste energy, trigger structural stiffness, or break conservation principles, eventually driving the network to thermodynamic death. Here we explain these dynamics using clinical metaphors from Eastern medicine.
 
 ---
 
-## 🧭 Mathematical Analysis Guides
+## 🧭 Mathematical Analysis Guides Directory
 
-These detailed guides explain mathematical physics theories and plot interpretation:
+Detailed individual guides covering the physical mathematics and plot interpretations for each analysis module.
 
-| Module ID | Mathematical Analysis Guide (Link) | Key Visualizations & Indicators |
+| Module ID | Analysis Guide (Link) | Key Plots & Metrics Included |
 | :---: | :--- | :--- |
-| **000_0** | **[📊 Basic Statistics & Foundations](./000_0_Basic_Statistics.md)** | B/S and P/L trends, P/L waterfall, total B/S blocks |
-| **000_1** | **[📊 Dynamics & State-Space](./000_1_Dynamics_Kinematics.md)** | 3D state-space trajectory ribbons, 3D mechanical variables |
-| **000_2** | **[📊 Stiffness & PCA](./000_2_Stiffness_PCA.md)** | Time-series stiffness matrices, PC1 explanation ratios, PCA loading vectors |
-| **001_1** | **[📊 Macro Thermodynamics](./001_1_Thermodynamics.md)** | Thermodynamic energy stacks, temperature-entropy (T-S) diagrams |
-| **001_2** | **[📊 Local Entropy](./001_2_Local_Entropy.md)** | 3D local entropy manifolds |
-| **001_3** | **[📊 Local Temperature](./001_3_Local_Temperature.md)** | 3D local temperature manifolds |
-| **001_4** | **[📊 Local Energy & Gradients](./001_4_Local_Gradient.md)** | 3D local internal energy, 3D local temperature gradients, local thermal scatter plots |
-| **002_1** | **[📊 Information Geometry & Topology](./002_1_Information_Geometry.md)** | Time-series network topologies |
-| **002_2** | **[📊 Forensic Auditing](./002_2_Forensics.md)** | Macro forensics dashboards, 3D local KL drift, 3D local Z-scores |
-| **003_1** | **[📊 Robot Kinematics & Reachability](./003_1_Kinematics.md)** | Forward Kinematics (FK) reachability spaces, Inverse Kinematics (IK) trajectory ribbons |
-| **004_1** | **[📊 System Stability & LQR Control](./004_1_Control_Theory.md)** | Spectral radius stability, LQR performance spaces, control error convergence |
-| **004_2** | **[📊 Intervention Sensitivity Matrices](./004_2_Stability.md)** | Intervention sensitivity matrices |
-| **005_1** | **[📊 Wave Mechanics & Signal Processing](./005_1_Wave_Mechanics.md)** | Resonant frequency spectra, phase drift heatmaps |
-| **005_2** | **[📊 Fractal Noise](./005_2_Coherence.md)** | Fractal pink noise (1/f fluctuation) spectra |
+| **000_0** | **[📊 Basic Statistics](./000_0_Basic_Statistics.md)** | B/S Trend / P/L Trend / P/L Waterfall / Cumulative B/S Blocks |
+| **000_1** | **[📊 Dynamics & Kinematics](./000_1_Dynamics_Kinematics.md)** | 3D Trajectory Ribbon & Phase Space / Jerk & Snap / 3D Dynamics Properties |
+| **000_2** | **[📊 Stiffness & PCA](./000_2_Stiffness_PCA.md)** | Structural Stiffness Matrix / Stiffness Difference ($\Delta K_t$) / PCA Principal Axes / PC1 Loading Evolution |
+| **001_1** | **[📊 Macro Thermodynamics](./001_1_Thermodynamics.md)** | Thermodynamics Energy Stack / Temperature-Entropy (T-S) Diagram |
+| **001_2** | **[📊 Local Entropy](./001_2_Local_Entropy.md)** | 3D Local Entropy |
+| **001_3** | **[📊 Local Temperature](./001_3_Local_Temperature.md)** | 3D Local Temperature |
+| **001_4** | **[📊 Local Energy & Gradient](./001_4_Local_Gradient.md)** | 3D Local Internal Energy / 3D Local Temperature Gradient / Local Gradient Scatter |
+| **002_1** | **[📊 Information Geometry](./002_1_Information_Geometry.md)** | Network Topology Time-Series Evolution |
+| **002_2** | **[📊 Forensics & Anomaly Detection](./002_2_Forensics.md)** | Macro Forensics Dashboard / 3D Local KL Drift / 3D Local Z-Score |
+| **003_1** | **[📊 Robot Kinematics & Reachability](./003_1_Kinematics.md)** | Forward Kinematics (FK) Reachable Space / Inverse Kinematics (IK) Trajectory Ribbon |
+| **003_2** | **[📊 Multi-Order Jacobian Trajectory](./003_2_Jacobian_Trajectory.md)** | Hop-wise Jacobian (1st/2nd/3rd) / Even-Odd Alternating Coherence / Terminal Sink Detection |
+| **004_1** | **[📊 Control Theory & Stability](./004_1_Control_Theory.md)** | Spectral Radius / LQR Control Performance Space / Error Convergence |
+| **004_2** | **[📊 Intervention Sensitivity Matrices](./004_2_Stability.md)** | LQR Sensitivity Matrix |
+| **005_1** | **[📊 Wave Mechanics](./005_1_Wave_Mechanics.md)** | Resonance Frequency Spectrum / Phase Drift Heatmap |
+| **005_2** | **[📊 Fractal Noise Analysis](./005_2_Coherence.md)** | Fractal Noise (1/f Fluctuation) Spectrum |
 
 ---
 
-## 📂 Table of Contents
+## 📂 Validation Samples & Diagnostic Reports Registry
 
-Below is the catalog of 10 verification samples. Click the titles to read the detailed reports:
+A directory of the 10 validation samples built into the TLU environment. Click on a sample title to access its technical clinical report.
 
-* **[🟢 Sample 0: Healthy Metabolism](./Sample_0_Healthy/README.md)**
-  * **Domain:** Finance (Bookkeeping) | **Eastern Diagnosis:** Harmonized Qi/Blood, unobstructed meridians
-  * **Summary:** Metabolic growth without stasis or leaks. Transient Z-score warnings are seasonal false positives.
+* **[🟢 Sample 0: Healthy](./Sample_0_Healthy/README.md)**
+  * **Domain:** Accounting | **Clinical Metaphor:** Harmonious Qi & Blood / Smooth Meridians
+  * **Summary:** Normal metabolic growth with zero leak. The transient Z-score rise at year-end is a seasonal false positive, triaged correctly by physical conservation filters.
 * **[🟡 Sample 1: Wash Trade](./Sample_1_Wash_Trade/README.md)**
-  * **Domain:** Finance (Bookkeeping) | **Eastern Diagnosis:** Qi stasis, loop locking
-  * **Summary:** Circular matched orders between accounts. These transactions generate no internal energy but increase entropy.
+  * **Domain:** Accounting | **Clinical Metaphor:** Idle Recirculation / Flow Lock
+  * **Summary:** Circular sham transactions between cash and receivables designed to inflate sales. It generates no internal energy but increases entropy (frictional heat).
 * **[🔴 Sample 2: Embezzlement Leak](./Sample_2_Embezzlement_Leak/README.md)**
-  * **Domain:** Finance (Bookkeeping) | **Eastern Diagnosis:** Meridian bleeding, mass leakage
-  * **Summary:** Recovered cash bypasses assets to a hidden node. This triggers stiffness locking and late-stage resonance.
-* **[🟡 Sample 3: Unbalanced Bookkeeping Mistake](./Sample_3_Unbalanced_Mistake/README.md)**
-  * **Domain:** Finance (Bookkeeping) | **Eastern Diagnosis:** Local Qi imbalance, meridian sprain
-  * **Summary:** One-sided entry mistake in account records. It causes temporary stiffness distortion, but self-healing elasticity corrects it.
+  * **Domain:** Accounting | **Clinical Metaphor:** Meridian Bleeding / Mass Deficit
+  * **Summary:** Cash collections bypass deposits and drain to `UNKNOWN_LEAK` (Terminal Sink). It triggers local stiffness hardening (Rigid Lock) and late-stage resonance.
+* **[🟡 Sample 3: Unbalanced Mistake](./Sample_3_Unbalanced_Mistake/README.md)**
+  * **Domain:** Accounting | **Clinical Metaphor:** Local Qi Stagnation / Sprain
+  * **Summary:** A single-sided journal entry error. It triggers a transient stiffness distortion at t=1 but resolves instantly at t=2 due to system elasticity.
 * **[🔴 Sample 4: Composite Chaos](./Sample_4_Composite_Chaos/README.md)**
-  * **Domain:** Finance (Bookkeeping) | **Eastern Diagnosis:** Qi exhaustion, collapse from hyper-circulation
-  * **Summary:** Concurrent circular trading and embezzlement. Frictional heat and mass leaks collapse the system.
-* **[🔴 Sample 5: Kyoto Traffic Deadlock](./Sample_5_Kyoto_Traffic/README.md)**
-  * **Domain:** Urban Traffic | **Eastern Diagnosis:** Meridian blockage, blood stasis
-  * **Summary:** Intersection deadlock from traffic overload. Vehicles move back and forth but cannot progress.
+  * **Domain:** Accounting | **Clinical Metaphor:** Depleted Qi & Blood / Exhaustion collapse
+  * **Summary:** Coexistence of circular trading and embezzlement. Frictional heat and mass loss occur simultaneously, driving the system to functional collapse.
+* **[🔴 Sample 5: Kyoto Traffic](./Sample_5_Kyoto_Traffic/README.md)**
+  * **Domain:** Urban Traffic | **Clinical Metaphor:** Meridian Blockage / Qi & Blood Stagnation
+  * **Summary:** Local capacity restrictions trigger upstream gridlocks. Vehicles continue to burn fuel (high temperature) but average flow drops to zero.
 * **[🟢 Sample 6: Market Stock Flow](./Sample_6_Market_Stock_Flow/README.md)**
-  * **Domain:** Stock Market | **Eastern Diagnosis:** Stock fluid equilibrium, steady convection
-  * **Summary:** Closed market system conserving stock volume. The system maintains stable boundary flows.
+  * **Domain:** Stock Market | **Clinical Metaphor:** Stock Fluid Equilibrium / Steady Convection
+  * **Summary:** Closed system where total shares are conserved. It exhibits steady convection and remains stable under market volatility.
 * **[🟢 Sample 7: Market Cash Flow](./Sample_7_Market_Cash_Flow/README.md)**
-  * **Domain:** Stock Market | **Eastern Diagnosis:** Cash fluid equilibrium, steady convection
-  * **Summary:** Closed market system conserving cash volume. The network remains stable under trade volatility.
+  * **Domain:** Stock Market | **Clinical Metaphor:** Cash Fluid Equilibrium / Steady Convection
+  * **Summary:** Closed settlement network where total cash is conserved. Stable flow is maintained against transaction fluctuations.
 * **[🔴 Sample 8: fMRI Stroke](./Sample_8_fMRI_Stroke/README.md)**
-  * **Domain:** Brain fMRI | **Eastern Diagnosis:** Brain meridian block, local Qi necrosis
-  * **Summary:** BOLD inflow to the motor cortex drops by 95% at `t=30` (TR=150). The loss of signal mass freezes connectivity stiffness (Stiffness Lock).
+  * **Domain:** Brain fMRI | **Clinical Metaphor:** Cerebral Blockage / Local Qi Depletion
+  * **Summary:** BOLD signal flow to the motor cortex drops by 95% at t=30. The loss of active mass triggers local stiffness lock and paralysis.
 * **[🔴 Sample 9: fMRI Seizure](./Sample_9_fMRI_Seizure/README.md)**
-  * **Domain:** Brain fMRI | **Eastern Diagnosis:** Neural hyper-synchrony, runaway Qi
-  * **Summary:** Forced phase-locking across the brain via temporal lobe signals. Physical metrics detect this synchrony in a statistical blind spot.
+  * **Domain:** Brain fMRI | **Clinical Metaphor:** Global Hyper-synchrony / Qi Runaway
+  * **Summary:** Epileptic burst at the temporal lobe forces the entire brain into phase-locked sinusoidal synchrony, wiping out cognitive informational complexity.
 
 ---
 
-## ⚖️ Cross-Verification Matrix
+## 📂 Cross-Verification Registry Matrix
 
-This matrix lists the peak metrics calculated by the physics engine and forensic filters:
+Maximum metrics computed across all samples by TLU physical filters:
 
-| ID | Case Study (Link) | Domain | Status | Max Spectral Radius ( $\rho$ ) | Max Residual | Max Velocity Z-Score ( $Z_v$ ) | Max State Z-Score ( $Z_X$ ) | Net Income / Potential | Eastern Metaphor |
+| ID | Sample (Report Link) | Domain | Diagnosis | Max Spectral Radius ( $\rho$ ) | Max Residual | Max Volume Z-Score ( $Z_v$ ) | Max State Z-Score ( $Z_X$ ) | Final Net Balance | Eastern Clinical Metaphor |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- | :--- |
-| **0** | **[Healthy Metabolism](./Sample_0_Healthy/README.md)** | Finance | 🟢 **NORMAL** | `0.00` | `0.00` | `4.90` | `4.14` | `+$46,432.59` | Peace of Qi and Blood |
-| **1** | **[Wash Trade](./Sample_1_Wash_Trade/README.md)** | Finance | 🟡 **HIGH** | `0.75` | `0.00` | `3.87` | `1.97` | `+$201,321.16` | Empty recirculation, loop lock |
-| **2** | **[Embezzlement Leak](./Sample_2_Embezzlement_Leak/README.md)** | Finance | 🔴 **CRITICAL** | `0.00` | `364.53` | `3.71` | `3.82` | `+$64,795.44` | Meridian hemorrhage, mass deficit |
-| **3** | **[Unbalanced Bookkeeping Mistake](./Sample_3_Unbalanced_Mistake/README.md)** | Finance | 🟡 **WARNING** | `0.00` | `906.29` | `5.29` | `5.29` | `+$41,368.85` | Local imbalance, meridian sprain |
-| **4** | **[Composite Chaos](./Sample_4_Composite_Chaos/README.md)** | Finance | 🔴 **CRITICAL** | `0.79` | `4,773.57` | `3.42` | `1.52` | `+$200,478.42` | Qi depletion, collapse |
-| **5** | **[Kyoto Traffic Deadlock](./Sample_5_Kyoto_Traffic/README.md)** | Traffic | 🔴 **CRITICAL** | `1.00` | `0.00` | `9.86` | `7.25` | `-$159,659.00` | Blocked meridian, blood stasis |
-| **6** | **[Market Stock Flow](./Sample_6_Market_Stock_Flow/README.md)** | Market | 🟢 **NORMAL** | `1.00` | `0.00` | `240.93` | `4.46` | `$0.00` | Stock fluid equilibrium |
-| **7** | **[Market Cash Flow](./Sample_7_Market_Cash_Flow/README.md)** | Market | 🟢 **NORMAL** | `1.00` | `0.00` | `19.97` | `399.76` | `-$15,315,870.03` | Cash fluid equilibrium |
-| **8** | **[fMRI Stroke](./Sample_8_fMRI_Stroke/README.md)** | Brain | 🔴 **CRITICAL** | `1.00` | `0.00` | `51.44` | `0.07` | `-$500,000.00` | Brain meridian block, local depletion |
-| **9** | **[fMRI Seizure](./Sample_9_fMRI_Seizure/README.md)** | Brain | 🔴 **CRITICAL** | `1.00` | `0.00` | `24.04` | `0.00` | `-$500,000.00` | Brain hyper-synchrony, runaway Qi |
+| **0** | **[Healthy](./Sample_0_Healthy/README.md)** | Finance | 🟢 **NORMAL** | `0.00` | `0.00` | `4.90` | `4.14` | `+$46,432.59` | Harmonious Qi & Blood |
+| **1** | **[Wash Trade](./Sample_1_Wash_Trade/README.md)** | Finance | 🟡 **HIGH** | `0.75` | `0.00` | `3.87` | `1.97` | `+$201,321.16` | Flow Recirculation Lock |
+| **2** | **[Embezzlement Leak](./Sample_2_Embezzlement_Leak/README.md)** | Finance | 🔴 **CRITICAL** | `0.00` | `364.53` | `3.71` | `3.82` | `+$64,795.44` | Meridian Bleeding / Leak |
+| **3** | **[Unbalanced Mistake](./Sample_3_Unbalanced_Mistake/README.md)** | Finance | 🟡 **WARNING** | `0.00` | `906.29` | `5.29` | `5.29` | `+$41,368.85` | Local Sprain / Stagnation |
+| **4** | **[Composite Chaos](./Sample_4_Composite_Chaos/README.md)** | Finance | 🔴 **CRITICAL** | `0.79` | `4,773.57` | `3.42` | `1.52` | `+$200,478.42` | Depleted Qi & Exhaustion |
+| **5** | **[Kyoto Traffic](./Sample_5_Kyoto_Traffic/README.md)** | Traffic | 🔴 **CRITICAL** | `1.00` | `0.00` | `9.86` | `7.25` | `-$159,659.00` | Severe Congestion / Block |
+| **6** | **[Market Stock Flow](./Sample_6_Market_Stock_Flow/README.md)** | Market | 🟢 **NORMAL** | `1.00` | `0.00` | `240.93` | `4.46` | `$0.00` | Steady Stock Convection |
+| **7** | **[Market Cash Flow](./Sample_7_Market_Cash_Flow/README.md)** | Market | 🟢 **NORMAL** | `1.00` | `0.00` | `19.97` | `399.76` | `-$15,315,870.03` | Steady Cash Convection |
+| **8** | **[fMRI Stroke](./Sample_8_fMRI_Stroke/README.md)** | Neural | 🔴 **CRITICAL** | `1.00` | `0.00` | `51.44` | `0.07` | `-$500,000.00` | Cerebral Blockage / Ischemia |
+| **9** | **[fMRI Seizure](./Sample_9_fMRI_Seizure/README.md)** | Neural | 🔴 **CRITICAL** | `1.00` | `0.00` | `24.04` | `0.00` | `-$500,000.00` | Global Hyper-synchrony |
 
 > [!NOTE]
 >
-> * **Conservation Residual:** Indicates mismatch between inflows and outflows based on Kirchhoff's current law. Positive values occur only during embezzlement or ledger mistakes in the financial domain.
-> * **Spectral Radius ( $\rho$ ):** Maximum eigenvalue of the transition probability matrix. Values $\rho \ge 0.75$ trigger warnings. Saturation at `1.00` is mathematically expected in closed circulation systems (traffic, market, brain) due to the Perron-Frobenius theorem.
-> * **Net Income / Potential:** Accountants' net income at the final step, or the equivalent potential value (cumulative potential change in traffic and brain networks).
+> * **Conservation Residual:** Mismatch between inflow and outflow based on Kirchhoff's current law (mass conservation). Positives strictly represent off-book siphoning or journal errors.
+> * **Spectral Radius ( $\rho$ ):** Maximum eigenvalue of the transition matrix. $\rho \ge 0.75$ indicates circular loops. closed networks saturate at `1.0000` (Perron-Frobenius theorem).
+> * **Final Net Balance:** Financial net income at the final step, or cumulative displacement potential for traffic and brain networks.
 
 ---
 
-## 🧠 Pathological Cross-Verification by Disease Category
+## 🧠 Pathological Cross-Verification & Mechanism Analysis
 
-TLU proves that different anomalies across distinct domains show identical physical signatures. We group these diagnoses into 4 categories:
+TLU proves that anomalies across different domains manifest as identical physical signatures under unified state equations.
 
-### 🔴 1. Mass Leak / Ischemia
-
+### 🔴 1. Mass Leak / Ischemia (Leakage and Block)
 * **Targets:** [Sample 2 (Embezzlement)](./Sample_2_Embezzlement_Leak/README.md), [Sample 8 (Stroke)](./Sample_8_fMRI_Stroke/README.md)
-* **Common Physical Signature:** **Conservation residuals and stiffness locks.**
-* **Cross-Verification:**
-  * **Finance (Sample 2):** Recovered cash bypasses bank accounts to a dummy node (`UNKNOWN_LEAK`). A macro residual of **`364.53`** occurs. A total of **`$1,353.48`** in mass (capital) leaves the system. This loss of liquidity freezes stiffness between accounts. The structural lock causes late-stage resonance.
-  * **Brain fMRI (Sample 8):** BOLD signal inflow to the `Motor_Cortex` drops by 95% at `t=30` (TR=150). The loss of signal mass triggers a structural lock (Stiffness Lock) around the region. Its local entropy drops vertically.
-  * **Conclusion:** Embezzlement and strokes share the identical pathology. The loss of active mass paraylzes system elasticity and freezes the network structure.
+* **Unified Physical Signature:** **Bookkeeping Conservation Mismatch & Local Stiffness Rigid Lock**
+* **Mechanism Cross-Verification:**
+  - **Accounting (Sample 2):** Cash siphons to `UNKNOWN_LEAK` at t=4, triggering a non-zero residual of `$6,255.99`. This drains cash reserves, locking the elasticity of transactional pathways and inducing late-stage knocking.
+  - **Neural (Sample 8):** BOLD signal flow (blood mass) to the motor cortex is cut by 95% at t=30. The loss of active mass freezes functional connectivity weights (stiffness lock) and drops local entropy to zero.
+  - **Conclusion:** Embezzlement and stroke are topologically identical. Draining active mass collapses system suspension, locking the structure.
 
-### ⚖️ 2. Hyper-synchronization / Recirculation
+### ⚖️ 2. Hyper-synchronization / Recirculation (Congestion and Feedback)
+* **Targets:** [Sample 1 (Wash Trade)](./Sample_1_Wash_Trade/README.md), [Sample 5 (Traffic Gridlock)](./Sample_5_Kyoto_Traffic/README.md), [Sample 9 (Seizure)](./Sample_9_fMRI_Seizure/README.md)
+* **Unified Physical Signature:** **Spectral Radius ($\rho$) Saturation & Free Energy Frictional Consumption (Entropy Loss)**
+* **Mechanism Cross-Verification:**
+  - **Accounting (Sample 1):** Fictitious loop trading spikes $\rho$ to `0.7861`, consuming energy as circular friction heat (depressed Entropy).
+  - **Traffic (Sample 5):** Local bottleneck at Shijo-Karasuma forces $\rho$ to saturate at `1.0000`. Global entropy drops, temperature spikes from `2897.05` to `16264.61`, and free energy collapses to negative values, freezing traffic.
+  - **Neural (Sample 9):** Epileptic focus at the temporal lobe forces $\rho$ to `1.0000`. Signal entropy drops to zero as all ROIs synchronize to a single sinusoidal wave, freezing information capacity.
+  - **Conclusion:** Circular trading, traffic gridlock, and epileptic seizures share the same pathological mechanism: energy is trapped in a closed loop, blocking external metabolism.
 
-* **Targets:** [Sample 1 (Circular Ledger)](./Sample_1_Wash_Trade/README.md), [Sample 5 (Kyoto Traffic Deadlock)](./Sample_5_Kyoto_Traffic/README.md), [Sample 9 (Epileptic Seizure)](./Sample_9_fMRI_Seizure/README.md)
-* **Common Physical Signature:** **Spectral radius ( $\rho$ ) saturation at its boundary limit, and friction-driven energy depletion (entropy loss)**
-* **Cross-Verification of Mechanism:**
-  * **Circular Ledger (Sample 1):** Fast round-trip journal entries without substance cause the spectral radius to surge to the warning level of **`0.75`**. Although the apparent activity level (internal energy $U$ ) grows steadily, the energy is wasted as round-trip frictional heat (entropy $T \times S$ ), depleting the system's actual stamina—free energy $F = U - TS$.
-  * **Urban Traffic (Sample 5):** When inflow vehicles exceed road capacity, the bottleneck around `21_ShijoKarasuma` saturates the spectral radius to its boundary limit of **`1.00`** (deadlock). Macro entropy $S$ fell from `40.69` to **`39.18`**, and macro temperature $T$ spiked from `2,897.05` to **`16,264.61`**. Free energy $F$ plunged from `132,117.82` to **`-387,283.36`**.
-  * **Epilepsy (Sample 9):** Abnormal sine waves originating from the temporal lobe (`03_Temporal_Lobe`) force the entire brain into phase-locking, saturating the spectral radius to **`1.00`**. Physical metrics expose this hyper-synchronization in a statistical blind spot where the PCA explanation ratio (PC1) remains frozen at `37.5%`.
-  * **Conclusion:** "Circular fictitious transactions," "vehicle deadlocks at intersections," and "epileptic seizure waves" are all variations of the same recirculation pathology: **"energy is trapped within closed circuits, blocking meaningful value transmission or external metabolism, and driving the system to thermal death."**
+### 🟡 3. Localized Transient Mismatch (Error and Correction)
+* **Targets:** [Sample 3 (Input Error)](./Sample_3_Unbalanced_Mistake/README.md)
+* **Unified Physical Signature:** **Transient KL Drift Spike & Systemic Self-Healing (Elasticity)**
+* **Mechanism Cross-Verification:**
+  - **Accounting (Sample 3):** Single-sided entry at t=1 spikes the residual to `$906.29` and triggers a massive KL Drift spike of `20.68`. Correction at t=2 restores the residual to zero and drops KL Drift, proving dynamic elasticity.
+  - **Conclusion:** If systemic elasticity is preserved, localized shocks do not trigger permanent locks and are self-healed.
 
-### 🟡 3. Localized Transient Mismatch
-
-* **Targets:** [Sample 3 (Unbalanced Mistake)](./Sample_3_Unbalanced_Mistake/README.md)
-* **Common Physical Signature:** **Transient KL drift spikes and self-healing elasticity.**
-* **Cross-Verification:**
-  * **Finance (Sample 3):** A one-sided transaction entry triggers a residual of **`906.29`** (cumulative error: **`$1,412.88`**) at `2020-02`. This distorts topological stiffness. It creates a sharp spike of **`20.68`** on the 3D KL drift manifold.
-  * **Recovery Process:** Since the network is open and free of loops, the mistake is corrected in the next step. The KL drift drops back to zero immediately.
-  * **Conclusion:** If the system retains elasticity, transient impacts do not cause permanent damage. The system self-heals back to its normal limit cycle.
-
-### 🟢 4. Healthy Steady-state
-
-* **Targets:** [Sample 0 (Healthy)](./Sample_0_Healthy/README.md), [Sample 6 (Stock Convection)](./Sample_6_Market_Stock_Flow/README.md), [Sample 7 (Cash Convection)](./Sample_7_Market_Cash_Flow/README.md)
-* **Common Physical Signature:** **Zero residuals and stable flow (steady convection).**
-* **Cross-Verification:**
-  * **Healthy Circulation (Sample 0):** No circular loops ( $\rho$ = 0.00$ ) or mass leaks (residual = `0.00`) occur. Accounts connect organically. Free energy grows steadily. Transient Z-score peaks up to **`4.90`** are rejected as false positives since the conservation law holds.
-  * **Market Flow (Sample 6 & 7):** Stock and cash volumes remain conserved. Convection is stable. Circulation occurs due to the closed graph structure ( $\rho$ = 1.00$ ). However, friction stays within limits, and residuals remain strictly `0.00`.
+### 🟢 4. Healthy Steady-State (Optimal Convection)
+* **Targets:** [Sample 0 (Normal Metabolic Flow)](./Sample_0_Healthy/README.md), [Sample 6 (Stock Convection)](./Sample_6_Market_Stock_Flow/README.md), [Sample 7 (Cash Convection)](./Sample_7_Market_Cash_Flow/README.md)
+* **Unified Physical Signature:** **Zero Residual & Stable Convection within Boundary Limits**
+* **Mechanism Verification:**
+  - **Normal Convection:** No loop feedback ($\rho = 0.0000$) or mass leak exists. Seasonal Z-score spikes are correctly flagged as false positives because physical conservation holds. Markets (6, 7) maintain smooth, decentralized convection within boundary limits with zero residual.
 
 ---
 
-## ⚕️ LQR Interventions for Dynamic Treatments
+## ⚕️ Optimal Control Theory (LQR) Dynamic Treatment Protocol
 
-TLU calculates Linear Quadratic Regulator (LQR) control inputs. This stabilizes the system back to its limit cycle. LQR identifies acupuncture nodes and pulses:
+TLU computes targeted "acupuncture points" (optimal control inputs) to drive compromised systems back to healthy limit cycles using Linear Quadratic Regulators (LQR).
 
-| Target Diagnosis | Acupuncture Point (Sensitive Node) | LQR Sensitivity | Treatment Protocol |
+| Target Pathology | Maximum Sensitivity Node (Tsubo) | LQR Sensitivity | Clinical Dynamic Intervention Protocol |
 | :--- | :--- | :---: | :--- |
-| **Sample 5 (Traffic)** | `00_Ichijo_Horikawa` <br> `13_Nijo_Karasuma` <br> `23_Shijo_Karasuma` | **`41.5234`** | **Dynamic light offsets:**<br>Shift signal cycles at key intersections. This splits circulation waves and clears the deadlock. |
-| **Sample 8 (Stroke)** | `00_Motor_Cortex` <br> `01_Parietal_Lobe` | **`41.5234`** | **Unblocking & viscosity tuning:**<br>Apply thrombolytic agents (e.g., tPA) along sensitive pathways. This unblocks mass flow and resolves stiffness locks. |
-| **Sample 9 (Seizure)** | `03_Temporal_Lobe` (Focus) | **`41.5234`** | **Anti-phase interference:**<br>Stimulate the temporal focus with anti-phase signals (e.g., TMS). This cancels pathological sync. |
+| **Sample 5 (Gridlock)** | `21_ShijoKarasuma` <br> `23_ShijoMuromachi` | **`-5.80`** | **Signal Phase Tuning:**<br>Inject phase offsets at Shijo-Karasuma to disrupt the queue resonance waves, dissolving the deadlock. |
+| **Sample 8 (Stroke)** | `00_Motor_Cortex` <br> `01_Parietal_Lobe` | **`41.5234`** | **TMS Stimulation:**<br>Apply targeted TMS pulses to the motor cortex to dissolve the stiffness lock and restore signal transmission. |
+| **Sample 9 (Seizure)** | `05_Temporal_Lobe` (Focus) | **`41.5234`** | **Inverse Phase Interference:**<br>Apply inverse-phase TMS stimulation to the temporal lobe focus, resetting the hyper-synchronous loop. |

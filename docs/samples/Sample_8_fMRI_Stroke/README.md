@@ -1,99 +1,102 @@
-# Cerebral Blood Flow Obstruction Report (Case 8)
+# Neural Stroke Final Report (Case 8)
 
 > [!NOTE]
-> A more detailed analysis report is available in [clinical_report.md](clinical_report.md).
+> A more detailed technical clinical report is available in [clinical_report.md](clinical_report.md).
 
-## Target Neural Circuit: Sample 8 (fMRI Brain Region Convection Network)
+## Target Brain Activity: Sample 8 (fMRI Stroke)
 
 ---
 
 ## 0. Executive Summary
 
-* **Overall Diagnosis:** 【Warning / Needs Improvement】 Localized neural activity shutdown (**"cerebral infarction / ischemia anomaly"**) has been detected, causing oxygenated blood flow to bypass core brain regions.
-* **Overall Constitution (Neural State):**
-  The total oxygenated blood flow within the brain network (**"total mass/volume"**) is strictly conserved. However, due to a localized lesion, the network's capacity to redirect and distribute neural activation (**"neural resilience"**) has collapsed. The complexity of signal path options (**"signal entropy"**) has plummeted, and specific synaptic circuits have locked up, indicating structural rigidity (**"synaptic arteriosclerosis / stiffness lock"**).
-* **Areas for Improvement (Stagnant Brain Regions & Signal Tuning):**
-  * **Chronic Congestion (Viscosity / "Stiff Shoulder") Range:** High signal lag (viscosity) is observed in the brain regions **"04_ROI_Broca"** (Broca's Area), **"03_ROI_Wernicke"** (Wernicke's Area), and **"07_ROI_Auditory"** (Auditory Cortex) (top 25% viscosity range), peaking around **2020-12** (indicating chronic hypoperfusion).
-  * **Synaptic Tuning ("Tsubo") Range:** The minimum strain energy range (bottom 25%), where external magnetic stimulation (e.g., TMS) causes the least harmful stress to surrounding healthy tissues, comprises **"02_ROI_Motor"** (Motor Cortex), **"04_ROI_Broca"**, and **"01_ROI_Visual"** (Visual Cortex). Adjusting synaptic gain here is the highest priority treatment point to restore neural flow.
-  * **Contraindications (Avoid Stimulation) Range:** Conversely, forcing excitation or stimulation at **"07_ROI_Auditory"**, **"09_ROI_Prefrontal"** (Prefrontal Cortex), and **"06_ROI_Somatosensory"** (Somatosensory Cortex) (top 25% strain energy range) must be strictly avoided, as it will trigger intense synaptic backlash and functional paralysis.
+* **Final Diagnosis:** 【Warning / Required Action】 Focal cerebral ischemia (stroke) has occurred in the motor cortex, triggering sudden localized deactivation.
+* **Holistic Health Constitution:** 
+  Total blood flow volume (**"Physique"**) remains conserved. However, the brain's shock absorption capacity (**"Immunity"**) is severely depleted. Local signal flexibility (**"Autonomic System"**) is lost, showing localized cold spots. PCA EVR PC1 climbs to 94.72%, and eigenvector weights freeze (stiffness lock). Sudden deceleration shocks (**"Jerk"**) and neuronal ripples (**"Snap"**) spike at t=30.
+* **Key Stagnations & Interventions:**
+  - **Stiff Shoulder (Signal Stagnation):** **`02_Prefrontal_Cortex`** (viscosity upper 25% boundary) shows severe signal delays, peaking at **10:09:50** (t=59).
+  - **Acupuncture Points (Treatment Areas):** **`00_Motor_Cortex`** (strain energy lower 25% boundary) is the optimal node for Transcranial Magnetic Stimulation (TMS).
+  - **Contraindications (Avoid Direct Stimulation):** Directly stimulating **`01_Parietal_Lobe`** will expand the tissue necrosis area and must be avoided.
 
 ---
 
-## 1. Overall Diagnosis (Warning / Needs Improvement)
+## 1. Final Diagnosis (Warning)
 
-### 【Diagnosis】: Needs Improvement (Ischemic Shutdown in Broca's Area)
+### 【Diagnosis】: Neural Stroke (Focal Ischemia)
+![System Stability (Maximum Spectral Radius)](../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)
 
-![System Stability](../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_1_2__system_stability.png)
-
-An analysis of step-wise neural activation shows that starting from February 2020 ($t=1$), the blood oxygen level-dependent (BOLD) signal in **Broca's Area (04_ROI_Broca)** drops to near zero. Because of this localized ischemic lesion, the neural network fails to circulate activation to Cash-analogous hub regions, bypassing flow off-line (`UNKNOWN_LEAK`) and hollowing out neural function. Immediate neuroprotective signal tuning is required.
+At t=30 (10:05:00), blood flow (BOLD signal) in the motor cortex drops by 95%. Functional connectivity is lost, and the spectral radius $\rho$ spikes, proving neural pathway failure.
 
 ---
 
-## 2. Overall Constitution (Neural State) Analysis
+## 2. Holistic Health Constitution Analysis
 
-Mapping the fMRI neural dynamics to a medical checkup template reveals the following structural distortions:
+The brain network's flow capacity maps to the following constitutional parameters:
 
-### ① Neural Volume (Cumulative BOLD Signal Stock Trend)
+### ① Physique (Total Blood Flow Scale)
+Total BOLD signal volume (Physique) remains strictly conserved at `100000` with zero residual, proving that no cranial bleeding has occurred.
 
-![B/S Cumulative Trend](../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_0_1__BS_Trend.png)
-
-The total sum of oxygenated blood flow (mass) is strictly conserved throughout, confirming that the physical volume of blood within the scanned regions remains constant.
-
-### ② Neural Resilience (Activation Buffer Capacity)
-
+### ② Immunity (Recovery Buffer Capacity)
 ![P/L Cumulative Trend](../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_0_1__PL_Trend.png)
 
-Following the February ischemic event, the neural network's free energy (its capacity to buffer external shocks by redirecting cognitive load) is severely depleted. The brain's self-healing resilience has collapsed.
+Recovery buffer capacity (Free Energy) drops severely post-stroke. The brain lacks the capacity to absorb additional neural shocks.
 
-### ③ Synaptic Friction & Activation Efficiency (Entropy & Thermodynamic Evaluation)
-
+### ③ Autonomic System (Entropy & Choice Diversity)
 ![T-S Diagram](../../../samples/Sample_8_fMRI_Stroke/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
-In the T-S diagram mapping activation volatility ($T$) to routing entropy ($S$), the system exhibits a sharp drop in entropy. Broca's Area temperature (volatility) plummeted, representing a "thermodynamic freezing" where signal path options are eliminated.
+The T-S diagram shows a locked trajectory post-stroke, representing a loss of local signal variety (depressed Entropy).
 
-### ④ Synaptic Arteriosclerosis (PCA Principal Axes Evaluation)
-
+### ④ Arteriosclerosis (PCA Stiffness Evaluation)
 ![PCA Ratio](../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_2_2__principal_axes_ratio.png)
 
-PCA of the synaptic coupling stiffness matrix reveals that after the lesion, the PC1 explanation ratio remains locked at an extremely high level. The network's spatial flexibility has been eliminated, freezing the physical neural routing structure.
+PCA PC1 EVR spikes to 94.72% and eigenvector weights freeze on the motor cortex, proving localized functional connectivity lock (Arteriosclerosis).
+
+### ⑤ Shockwaves (Jerk and Snap Trends)
+![3D Jerk](000_1_9__3d_dynamics_jerk.png)
+
+![3D Snap](000_1_10__3d_dynamics_snap.png)
+
+* **Mathematical Bridge:**
+  Jerk and Snap exhibit sharp spikes at t=30. This mathematically proves that the motor cortex suffers from a sudden blood flow deceleration shock and subsequent neuronal ripples at the stroke onset.
 
 ---
 
-## 3. Key Areas for Improvement (Stagnant Brain Regions & Signal Tuning)
+## 3. Key Stagnations & Interventions
 
-Specific areas for improvement identified by the system and recommended action plans are detailed below:
+### ⚠️ Stiff Shoulder (Chronic Delays)
+![3D Phase Portrait](../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_1_8__phase_portrait_3d.png)
 
-### ⚠️ Congestion (Viscosity) Identification (Local Viscosity Temporal Heatmap Analysis)
+* **Stagnation Nodes:** Upper 25% viscosity includes **`02_Prefrontal_Cortex`** and **`03_Parietal_Lobe`**.
+  - **`02_Prefrontal_Cortex`**: Peaked at **`t=59`** due to ischemic signal transmission delays.
 
-![Local Viscosity Trend](../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_1_7_1__viscosity_trend.png)
-
-* **Congestion Range:**
-  The temporal heatmap mapping log local viscosity ($viscosity\_C$) shows Broca's Area (`04_ROI_Broca`) maintaining high signal lag (viscosity) throughout, peaking in December.
-  This viscosity surge (damping/delay) causes activation trajectories to lock into localized regions of phase space (attractor confinement). Refer to the 3D Phase Portrait ([000_1_8__phase_portrait_3d.png](../../../samples/Sample_8_fMRI_Stroke/readme_plots/000_1_8__phase_portrait_3d.png)) for trajectory clustering.
-  The top 25% viscosity group—**"04_ROI_Broca"**, **"03_ROI_Wernicke"**, and **"07_ROI_Auditory"**—contains severe signal delays.
-  * **`04_ROI_Broca`**: Mean viscosity `52569.22`, peaking at **`2020-12`** (peak value `57275.08`).
-  * **`03_ROI_Wernicke`**: Mean viscosity `45680.18`, peaking in **`2020-06`**.
-  * **`07_ROI_Auditory`**: Mean viscosity `45422.23`, peaking in **`2020-12`**.
-
-### 🎯 Synaptic Tuning ("Tsubo") & Contraindications
-
+### 🎯 Acupuncture Points (Optimal Treatment Areas)
 ![Sensitivity Matrix](../../../samples/Sample_8_fMRI_Stroke/readme_plots/004_2_1__sensitivity_matrix.png)
 
-* **Synaptic Tuning Range:** Brain regions in the bottom 25% of intervention strain energy—**"02_ROI_Motor"**, **"04_ROI_Broca"**, and **"01_ROI_Visual"**—allow adjustments with minimal secondary stress.
-  * **Advice:** ROIs with the lowest propagation of structural distortion to neighboring tissues are prioritized. In particular, when applying stimulations/inhibitions to boundary sensory areas (Jing-Well nodes) interfacing with external physical receptors (e.g., visual or auditory cortex), the sensory deprivation (External Backlash) forced on peripheral receptors must be evaluated. Aggressively shutting down sensory inputs (sedation/泻) causes compensatory neural hyper-excitability and hallucinations, triggering a negative feedback loop of abnormal seizure synchrony. Instead of plain sensory suppression, symbiotic therapies—such as biofeedback-guided sensory relearning or multimodal rehabilitation—must be proposed to restore homeostatic neural plasticity.
-* **Contraindications Range:** Conversely, the top 25% strain energy group—**"07_ROI_Auditory"**, **"09_ROI_Prefrontal"**, and **"06_ROI_Somatosensory"**—must be avoided.
-  * **Advice:** Forcing excitation on these nodes will disrupt core synaptic connections and trigger massive system backlash, expanding the ischemic lesion.
+* **Treatment Nodes:** Strain energy lower 25% includes **`00_Motor_Cortex`** and **`04_Occipital_Lobe`**.
+  - **Intervention Advice:** Targeted TMS pulses applied to the motor cortex (LQR gain: `41.5234`) will help restore signal flexibility with minimal surrounding stress.
+
+### 🚫 Contraindications
+* **Avoid Direct Stimulation:** High strain energy (upper 25%) nodes include **`01_Parietal_Lobe`** and **`05_Temporal_Lobe`**.
+  - **Intervention Advice:** Stimulating these areas directly will trigger neural overload, expanding the tissue necrosis.
+
+### ⚡ Stiffness Temporal Difference ($\Delta K_t$)
+* **Stiffness Difference Heatmap Sequence:**
+  - **t=30**: ![Stiffness Diff t=30](stiffness_diff.t.00030.png)
+  - **t=45**: ![Stiffness Diff t=45](stiffness_diff.t.00045.png)
+  - **t=59**: ![Stiffness Diff t=59](stiffness_diff.t.00059.png)
+
+* **Mathematical Bridge:**
+  The difference $\Delta K_t$ spikes red at t=30 on the motor cortex, marking the active establishment of the ischemia block, which then freezes into a static lock.
 
 ---
 
-## 4. Diagnostic Limitations and Falsifiability
+## 4. Falsifiability Conditions
 
-To overturn (falsify) the diagnosis of "Ischemic Stroke Anomaly," the following external, primary physical evidence must be presented:
+To falsify this "Stroke" diagnosis, one must present:
 
-1. **High-Resolution T2-Weighted Structural MRI:**
-   Presenting structural MRI scans showing complete structural integrity in Broca's Area, proving that the apparent fMRI signal drop was a sensor calibration error.
-2. **Positron Emission Tomography (PET) Calibration:**
-   Presenting $^{15}\text{O}$-water PET scans proving that local cerebral blood flow (rCBF) in the target ROIs remained above `50 ml/100g/min` during the scan period.
+1. **Independent EEG Signal Logs:**
+   Simultaneous EEG logs showing normal alpha and beta waves in the motor cortex during the deactivation window.
+2. **Post-Event CT Angiography Images:**
+   Independent CT imaging showing complete vascular patency (no occlusions) in the middle cerebral artery.
 
 ---
-*Published by: TLU Neural fMRI Diagnostics Engine (General Reader Edition)*
+*Published by: TLU Brain Diagnostics Engine*

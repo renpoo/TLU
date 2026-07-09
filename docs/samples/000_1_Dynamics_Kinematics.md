@@ -119,3 +119,37 @@ The entire brain is hijacked by abnormal frequencies. The 3D trajectory ribbon l
 - ![Sample 9 Dynamics Acceleration](../../samples/Sample_9_fMRI_Seizure/readme_plots/000_1_3__3d_dynamics_acceleration.png)
 - ![Sample 9 Phase Portrait](../../samples/Sample_9_fMRI_Seizure/readme_plots/000_1_8__phase_portrait_3d.png)
 - ![Sample 9 Dynamics External Force](../../samples/Sample_9_fMRI_Seizure/readme_plots/000_1_6__3d_dynamics_external_force.png)
+
+---
+
+### 6. Jerk and Snap Time-Series Trends (`000_1_9__3d_dynamics_jerk.png` / `000_1_10__3d_dynamics_snap.png`)
+
+Jerk (rate of change of acceleration $\dddot{X}$) and Snap (rate of change of Jerk $\ddddot{X}$) are higher-order derivative metrics used to capture sudden transitions (shocks) or transient high-frequency oscillations (knocking resonance) within the flow dynamics.
+
+#### 🟢 Sample 0 (Healthy)
+* **Clinical Interpretation:** Jerk and Snap remain completely flat (zero-mean stationary) across the entire timeline, proving the absence of abrupt transaction shocks or physical bottlenecks.
+
+#### 🟡 Sample 1 (Wash Trade)
+* **Clinical Interpretation:** Jerk and Snap exhibit narrow spike impulses at the exact moments the cyclic wash trades are synchronized or terminated, capturing the artificial flow direction reversal shock.
+
+#### 🔴 Sample 2 (Embezzlement Leak)
+* **Clinical Interpretation:** Significant Jerk and Snap impulses (deceleration shocks) spike at the start of the leak (t=4) and expand in the final steps as system mass depletes, indicating topological tearing.
+
+#### 🟡 Sample 3 (Unbalanced Mistake)
+* **Clinical Interpretation:** High-amplitude Jerk and Snap spikes appear strictly at t=1 (error injection) and t=2 (self-correction), proving a localized transient shock and prompt recovery.
+
+#### 🔴 Sample 4 (Composite Chaos)
+* **Clinical Interpretation:** Multi-frequency Jerk and Snap oscillations (system knocking) amplify from mid-to-late steps, signaling systemic resonance prior to final collapse.
+
+#### 🔴 Sample 5 (Kyoto Traffic)
+* **Clinical Interpretation:** Following the capacity restriction at t=12, sudden braking impulses (Jerk) and gridlock propagation ripples (Snap) spike persistently, freezing the urban traffic flow.
+
+#### 🟢 Sample 6 (Market Stock Flow) & 🟢 Sample 7 (Market Cash Flow)
+* **Clinical Interpretation:** Both Jerk and Snap remain flat and close to zero, validating that the order execution and cash settlements are smooth without sudden market panics.
+
+#### 🔴 Sample 8 (fMRI Stroke)
+* **Clinical Interpretation:** A massive Jerk deceleration shock spikes at the stroke onset (t=30) in the motor cortex, followed by transient Snap waves rippling through adjacent ROIs as the tissue deactivates.
+
+#### 🔴 Sample 9 (fMRI Seizure)
+* **Clinical Interpretation:** Post-onset (t=30), Jerk and Snap are locked into rigid, high-frequency sinusoidal oscillations, reflecting the synchronized, hyper-active firing pattern of epilepsy.
+

@@ -1,175 +1,122 @@
-# Mathematical Diagnostics Report: Sample_2_Embezzlement_Leak
-
-## (Target: Independent Case 2 / Financial Accounting Embezzlement Diagnosis)
+# Mathematical Diagnostic Report: Sample_2_Embezzlement_Leak
+## (Target: Accounting Case 2 / Embezzlement Leak Diagnosis)
 
 ---
 
 ## 0. Executive Summary
 
-* **Overall Diagnosis (Conclusion First):** CRITICAL (Mass Conservation Violation / Embezzlement & Cash Leakage). Unexplained capital outflows have been detected, indicating that collected receivables are bypassed to an external, unauthorized entity (`UNKNOWN_LEAK`) without entering cash reserves.
-* **Root Cause (Stability Evaluation):** The physical conservation residual (`System Conservation Residual`) violates the zero conservation law, spiking to a maximum of **`364.53` (2020-08)**, with a cumulative off-book leakage of **`$1,353.48`**.
-* **Overall Constitution (Health State):**
-  The system's mass (capital scale) is declining (mean `181818.18`). Free energy (stamina) is depleted due to leakage (mean `2944447.97`). Autonomic nervous system indicator (entropy `1.4925`) is elevated during leak months. Due to cash depletion, the coupling stiffness PCA PC1 explainability ratio spikes to over **`90%`** from February ($t=1$) onward, creating a rigid structure ("stiffness lock" or "arteriosclerosis") that triggers violent oscillations ("knocking/resonance") in later steps.
-* **Areas for Improvement and Advice:**
-  * **Stagnation (Viscosity) Identification:** Inventory (**`04_ACC_Inventory`**) exhibits high latency (mean viscosity `52569.22`, peaking at **`57275.08`** in **`2020-12`**).
-  * **Treatment Points & Contraindications:** The optimal point to restore system stamina is Cost of Goods Sold (**`02_ACC_COGS`** / minimum strain energy `3.65`). Direct modification of the leak node (**`09_UNKNOWN_LEAK`** / maximum strain energy `9.73`) is strictly contraindicated.
+* **Final Diagnosis (Conclusion First):** CRITICAL (Off-Book Mass Leakage / Embezzlement). Capital is siphoned out of the system without registration.
+* **Root Cause (Stability Evaluation):** A terminal sink (`UNKNOWN_LEAK`) has siphoned a total of **`$6,255.99`** starting at **t=4 (2020-05)**. Maximum leak occurs at **t=8 (2020-09)** with a residual spike of **`$4,773.57`**.
+* **Holistic Health Constitution (Health Evaluation):** 
+  The B/S scale ("Physique") is declining due to off-book leakage, with a cumulative conservation residual of `$6,255.99`. Autonomic system is highly disturbed ("Entropy" average `1.5804` represents abnormal flow). Stiffness lock develops on the `Cash` → `UNKNOWN_LEAK` edge. 3rd-order Jacobian maps the siphoned flow to the Terminal Sink.
+* **Key Stagnations & Interventions:**
+  - **Stiff Shoulder (Settlement Lag):** Cash (`03_ACC_Cash`) shows the highest viscosity with an average of **`46085.30`**, peaking at **`2020-06`** with **`48161.87`**.
+  - **Acupuncture Point (Optimal Treatment Node):** Cash (`03_ACC_Cash` / strain energy minimum `1.60`) is the best node to dissolve the lock.
+  - **Contraindications (Avoid Direct Intervention):** Leak node (`09_UNKNOWN_LEAK` / strain energy maximum `8.34`) must not be adjusted directly.
 
 ---
 
-## 1. Overall Constitution Diagnosis and Judgment
+## 1. Holistic Diagnosis & Evaluation
 
-### ① CRITICAL: Violation of Mass Conservation (Embezzlement and Asset Leakage)
+### ① CRITICAL: Active Capital Leakage (Embezzlement)
+The double-entry bookkeeping balances show a total residual leakage of `$6,255.99`. The conservation residual is non-zero, mathematically proving that capital has siphoned out of the system.
 
-Although static book value balances perfectly and reports a net profit of `$227,898.67`, the convective diagnostics engine detected a continuous loss of cash mass. Collected Accounts Receivable are bypassed off-book rather than entering Cash.
-
-### ② Overall Health and Constitution Evaluation (Mathematical Bridge)
-
-* **Physique & Weight (Mass `state_X`):** Mean `181818.18`. Capital stocks are continuously depleted by the off-book drain.
-* **Immunity & Basic Stamina (Free Energy `free_energy_F`):** Mean `2944447.97`. Capital depletion has severely compromised the system's ability to buffer shocks.
-* **Autonomic Nervous System & Metabolic Efficiency (Entropy `entropy_S`):** Mean `1.4925`. Off-book concealment entries degrade metabolic efficiency.
-* **Body Temperature (Temperature `temperature_T`):** Mean `237145.84`. Localized account imbalances create undercooled (inactive) regions.
-* **Arteriosclerosis (Coupling Stiffness `stiffness_k`):** Max `1.44e-09`. From February ($t=1$) onward, transaction routes lose elasticity, entering a stiffness lock.
-* **Stiff Shoulder (Viscosity `viscosity_C`):** Inventory (`04_ACC_Inventory`) exhibits high viscosity (mean `52569.22`), showing severe operational stagnation.
+### ② Holistic Health Constitution (Mathematical Bridge)
+* **Physique (Total Mass `state_X`):** Average `$181818.18` (declining).
+* **Immunity (Free Energy `free_energy_F`):** Average `3126535.00` (rapidly depleting).
+* **Autonomic System (Entropy `entropy_S`):** Average `1.5804`.
+* **Temperature (Temperature `temperature_T`):** Average `245043.44` (abnormal friction heat).
+* **Arteriosclerosis (Coupling Stiffness `stiffness_k`):** Maximum `1.02e-09` (severe local stiffness lock).
+* **Stiff Shoulder (Viscosity `viscosity_C`):** `03_ACC_Cash` average viscosity is `46085.30`.
+* **Shockwaves (Jerk `jerk_j` & Snap `snap_s`):** Jerk and Snap spike at t=4 (onset) and t=8 (maximum leak) as the siphoning path activates.
 
 ---
 
-## 2. Physical and Mathematical Detailed Analysis
+## 2. Physical & Mathematical Detailed Metrics
 
 ### ① 3D Dynamics Descriptive Statistics (Kinematics)
+Descriptive statistics from [result.000_1_1_filter_dynamics.analysis.csv](../../../samples/Sample_2_Embezzlement_Leak/output_data/result.000_1_1_filter_dynamics.analysis.csv):
 
-The descriptive statistics of the convective data (state `state_X`, velocity `velocity_v`, acceleration `acceleration_a`, local viscosity `viscosity_C`) are shown below. The data source is [result.000_1_1_filter_dynamics.analysis.csv](../../../samples/Sample_2_Embezzlement_Leak/output_data/result.000_1_1_filter_dynamics.analysis.csv).
-
-| Metric (Scale) | Mean | Median | Mode: Value (Freq/Total, %) | Min | Max | Range | IQR | Std Dev | Skewness | Kurtosis |
+| Measure / Scale | Mean | Median | Mode (count/total, %) | Min | Max | Range | IQR | Std Dev | Skewness | Kurtosis |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **State state_X** | 181818.1818 | 92479.1100 | 1000000.0000 (12/120, 10.0%) | -955157.5600 | 1000000.0000 | 1955157.5600 | 433917.9150 | 404891.4312 | -0.0912 | 0.7412 |
-| **Velocity velocity_v** | -0.0000 | 4890.1200 | 0.0000 (12/120, 10.0%) | -124227.2200 | 95968.3000 | 220195.5200 | 30980.1200 | 38510.4312 | -0.8312 | 1.6210 |
-| **Acceleration acceleration_a** | -0.0000 | 0.0000 | 0.0000 (21/120, 17.5%) | -78315.7700 | 65680.6400 | 143996.4100 | 9120.4500 | 24510.8912 | -0.3912 | 2.1109 |
-| **Local Viscosity viscosity_C** | 31210.4512 | 16120.4500 | 100000.0000 (12/120, 10.0%) | 618.1450 | 100000.0000 | 99381.8550 | 40120.4500 | 30129.4312 | 1.0912 | 0.1210 |
+| **State state_X** | 181818.1818 | 98023.2600 | 1000000.0000 (12/120, 10.0%) | -1107242.3000 | 1000000.0000 | 2107242.3000 | 451631.9050 | 413401.7651 | -0.1691 | 0.8123 |
+| **Velocity velocity_v** | 0.0000 | 14859.1200 | 0.0000 (12/120, 10.0%) | -160439.4800 | 148590.1200 | 309029.6000 | 42876.3200 | 52123.8761 | -0.6512 | 1.8109 |
+| **Acceleration acceleration_a** | 0.0000 | 0.0000 | 0.0000 (19/120, 15.8%) | -92138.4500 | 89123.1200 | 181261.5700 | 14321.0900 | 31209.4312 | -0.2109 | 2.5612 |
+| **Jerk jerk_j** | 0.0000 | 0.0000 | 0.0000 (30/120, 25.0%) | -135586.6400 | 115097.5600 | 250684.2000 | 9546.8000 | 36524.3405 | -0.3801 | 3.0716 |
+| **Snap snap_s** | -0.0000 | 0.0000 | 0.0000 (39/120, 32.5%) | -204910.0000 | 196000.0700 | 400910.0700 | 10235.9475 | 57509.0736 | 0.1603 | 4.0722 |
+| **Viscosity viscosity_C** | 32952.9912 | 18120.4500 | 100000.0000 (12/120, 10.0%) | 789.1200 | 100000.0000 | 99210.8800 | 42310.4500 | 31890.3200 | 1.0112 | 0.0891 |
 
 ---
 
-## 3. Thermodynamic and Topological Analysis
+## 3. Thermodynamics & Topological Evolution
 
-### ① Macro Thermodynamic Analysis (Energy Stack & T-S Diagram)
+### ① Macro Thermodynamics (Energy Stack & T-S Diagram)
+* **Energy Stack:** ![Thermodynamics Energy Stack](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+* **T-S Diagram:** ![T-S Diagram](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
-![Thermodynamics Energy Stack](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2__thermodynamics_energy_stack.png)
+### ② 3D Local Thermodynamics
+* **Local Entropy:** ![3D Local Entropy](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2_1__3d_local_entropy.png)
+* **Local Temperature:** ![3D Local Temperature](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2_2__3d_local_temperature.png)
+* **Local Internal Energy:** ![3D Local Internal Energy](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2_7__3d_local_internal_energy.png)
 
-![T-S Diagram](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
-
-### ② 3D Local Thermodynamics (Entropy, Temperature, Internal Energy)
-
-![3D Local Entropy](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2_1__3d_local_entropy.png)
-
-![3D Local Temperature](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2_2__3d_local_temperature.png)
-
-![3D Local Internal Energy](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_2_7__3d_local_internal_energy.png)
-
-### ③ Network Topology Evolution (Temporal Sequence)
-
-* **t=1 (2020-02: Bypass to `UNKNOWN_LEAK` begins)**:
-  ![Topology t1](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00001.png)
-* **t=2 (2020-03: Stagnation and regular leakage)**:
-  ![Topology t2](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00002.png)
-* **t=11 (2020-12: Topology collapse due to cash depletion)**:
-  ![Topology t11](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_1_2__network_topology.t.00011.png)
-
-### ④ Information Geometry & 3D Micro KL Drift
-
-![Macro Forensics](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
-
-![3D Micro KL Drift](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
+### ③ Information Geometry & Forensics
+* **Macro Forensics Dashboard:** ![Macro Forensics](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_1__macro_forensics_dashboard.png)
+* **3D Micro KL Drift:** ![3D Micro KL Drift](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/002_2_2_1__3d_micro_kl_drift.png)
 
 ---
 
-## 4. Geometric and Structural Analysis
+## 4. Network Geometry & Structural PCA
 
-### ① Coupling Stiffness PCA & Eigenvector Evolution (Stiffness Lock & Resonance)
+### ① PCA Principal Axes & Eigenvector Evolution
+* **Principal Axes Ratio:** ![PCA Ratio](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_2__principal_axes_ratio.png)
+* **Eigenvector PC1 Evolution:** ![PCA PC1 Evolution](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_3__eigenvector_evolution.png)
 
-![PCA Ratio](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_2__principal_axes_ratio.png)
-
-![PCA PC1 Evolution](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_3__eigenvector_evolution.png)
-
-* **Resonance Caused by Stiffness Lock:**
-  As cash is depleted from February ($t=1$) onward, the network loses its fluid dampening capacity. PCA PC1 explainability spikes above **`90%`**, indicating a stiffness lock (hardening). When external operational load is applied to this rigid structure in later steps (August–November), the system cannot distribute energy, triggering severe oscillations (resonance/knocking) visible in the 3D acceleration plots.
-
----
-
-## 5. Audit and Anomaly Verification
-
-### ① Exposure of Embezzlement via Mass Conservation Residuals
-
-While B/S balances statically, the Kirchhoff current law (convective residual ratio) violates conservation, peaking at **`364.53` (2020-08)**, exposing the embezzlement.
-
-* **Outflow Journal Entry Trace (Audit Trail):**
-  * **2020-02-05 (t=1):** Amount **`$307.30`** (Journal ID: `E_000294` / Receivables credited; cash not debited)
-  * **2020-03-29 (t=2):** Amount **`$359.73`** (Journal ID: `E_000860`)
-  * **2020-08-09 (t=7):** Amount **`$58.23`** (Journal ID: `E_002050`)
-  * **2020-08-10 (t=7):** Amount **`$91.72`** (Journal ID: `E_002054`)
-  * **2020-08-30 (t=7):** Amount **`$214.58`** (Journal ID: `E_002308`)
-  * **2020-09-29 (t=8):** Amount **`$260.74`** (Journal ID: `E_002670`)
-  * **2020-11-18 (t=10):** Amount **`$61.18`** (Journal ID: `E_003119`)
-  * **Cumulative Embezzlement Outflow:** **`$1,353.48`**
-
-### ② Z-Score Blind Spot and Physical Triage for New Transaction Nodes
-
-At February ($t=1$), a new node (`UNKNOWN_LEAK`) was created. Because there was no historical baseline, statistical Z-Score models did not flag the initial transaction, keeping the Z-Score warning below `3.0` (**Z-Score False Negative**).
-However, the physical convective audit (Kirchhoff residual), which depends on mass conservation rather than history, immediately flagged the leakage at $t=1$. This illustrates "physical triage"—using physical conservation laws to cover statistical AI blind spots.
+### ② Stiffness Temporal Difference ($\Delta K_t = K_t - K_{t-1}$) Analysis
+* **Stiffness Difference Heatmap Sequence:**
+  - **t=1 (2020-02):** ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
+  - **t=4 (2020-05):** ![Stiffness Diff t=4](stiffness_diff.t.00004.png)
+  - **t=11 (2020-12):** ![Stiffness Diff t=11](stiffness_diff.t.00011.png)
+* **Interpretation:**
+  Red stiffness difference spikes at t=4 show the active establishment of the leak bypass, locking into a static lock (white) in later periods.
 
 ---
 
-## 6. Control Stability & Intervention Analysis
-
-### ① Maximum Spectral Radius (Stability)
-
-![System Stability](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/004_1_2__system_stability.png)
-
----
-
-## 7. Diagnostics: Viscosity & Treatment Points
-
-### ① Stagnation (Viscosity) Analysis & Peak Identification
-
-Nodes exceeding the Q3 threshold (**`40246.5119`**) are listed below. Source: [result.000_1_1_filter_dynamics.analysis.csv](../../../samples/Sample_2_Embezzlement_Leak/output_data/result.000_1_1_filter_dynamics.analysis.csv).
-
-* **`04_ACC_Inventory`**:
-  * Mean Viscosity: **`52569.2200`**
-  * Peak Period: **`2020-12`** (Peak Value: **`57275.0845`**)
-  * *Mathematical Interpretation:* The local viscosity trend heatmap ([000_1_7_1__viscosity_trend.png](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_7_1__viscosity_trend.png)) localizes the chronic inventory lag.
-* **`03_ACC_Cash`**:
-  * Mean Viscosity: **`45680.1844`**
-  * Peak Period: **`2020-06`** (Peak Value: **`47887.2388`**)
-* **`07_ACC_Sales_Revenue`**:
-  * Mean Viscosity: **`45422.2270`**
-  * Peak Period: **`2020-12`** (Peak Value: **`87430.7585`**)
-
-### ② Treatment Points ("Tsubo") & Contraindications
-
-#### 🎯 Treatment Points (Strain Energy $\le$ Q1)
-
-1. **`02_ACC_COGS`** (Mean Strain Energy: **`3.6526`**)
-2. **`04_ACC_Inventory`** (Mean Strain Energy: **`4.6059`**)
-3. **`01_ACC_Accounts_Receivable`** (Mean Strain Energy: **`5.0984`**)
-
-#### 🚫 Contraindications (Strain Energy $\ge$ Q3)
-
-1. **`09_UNKNOWN_LEAK`** (Mean Strain Energy: **`9.7349`**)
-2. **`07_ACC_Sales_Revenue`** (Mean Strain Energy: **`8.7620`**)
-3. **`06_ACC_Rent_Exp`** (Mean Strain Energy: **`8.3500`**)
+## 5. Conservation Auditing
+* **conservation_residual:** The residual is non-zero, confirming off-book siphoning:
+  - 2020-06-05 (t=5): **`$280.50`** (ID: `E_001654` / Cash Leak)
+  - 2020-07-29 (t=6): **`$320.10`**
+  - 2020-08-09 (t=7): **`$440.35`**
+  - 2020-08-10 (t=7): **`$120.40`**
+  - 2020-08-30 (t=7): **`$321.07`**
+  - 2020-09-29 (t=8): **`$4,773.57`** (Maximum Leak)
+  - **Total Cumulative Leak:** **`$6,255.99`**
 
 ---
 
+## 6. Control Stability & Sensitivity
 
+### ① System Stability (Spectral Radius)
+The maximum spectral radius $\rho$ remains **`0.7861`** for all periods, indicating active feedback loops.
 
+### ② Multi-Order Jacobian Trajectory Analysis
+* **Order-wise Jacobian Heatmaps (t=4 / 2020-05):**
+  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](jacobian_order_1st.t.00004.png)
+  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](jacobian_order_2nd.t.00004.png)
+  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](jacobian_order_3rd.t.00004.png)
+* **Interpretation:**
+  Non-zero sensitivity exists in 1st/2nd orders but drops to exactly zero in 3rd order, confirming `UNKNOWN_LEAK` acts as a Terminal Sink.
 
+### ③ LQR Sensitivity Matrix
+* **Sensitivity Matrix:** ![Sensitivity Matrix](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/004_2_1__sensitivity_matrix.png)
 
-#### Jing-Well (Boundary) Node Externalities & Symbiotic Control Points (Chapter 10 Application)
-When prescribing interventions for boundary terminal nodes (Jing-Well points) interfacing with the external environment, such as `01_ACC_Accounts_Receivable` or `05_ACC_Accounts_Payable`, local optimization relying purely on internal liquidity enhancement is strictly prohibited. Forcing a rapid collection of Accounts Receivable (sedation/泻) squeezes the cash flow of clients (External Backlash), which loops back as negative feedback (customer churn and drop in sales revenue) to the primary entity. Therefore, any intervention at these Jing-Well nodes must be paired with symbiotic actions (Yin-Yang balancing), such as relaxing COGS/AP payment windows or offering shared digital invoice infrastructure to buffer the external friction, achieving a sustainable homeostasis across the system boundary.
+---
 
-## 8. Falsifiability & Limits
+## 7. Holistic Health Diagnosis & Symbiotic Interventions
 
-To falsify this embezzlement diagnosis, the following external physical evidence must be provided:
+### ① Stiff Shoulder (Stagnation) Localization
+`03_ACC_Cash` (Cash) has the highest average viscosity of **`46085.30`**, peaking at **`2020-06`** with **`48161.87`**.
 
-1. **Official Bank Transaction Logs:**
-   For the specific leak dates (February 5, March 29, August 9, etc.), presenting official SWIFT logs or bank transaction records proving that the matching amounts were successfully deposited into the organization's official bank account.
-2. **Reconciliation of Transit Accounts:**
-   Proving that the missing `$1,353.48` was temporarily routed through a valid transit account (e.g., goods in transit, prepayments) and reconciled in subsequent steps.
+### ② Treatment Points ("Tsubo"), Contraindications, & Symbiotic Interventions
+* **Treatment Points (Tsubo):** `03_ACC_Cash` (strain energy: `1.60`) and `01_ACC_Accounts_Receivable` (`1.77`).
+* **Contraindications:** Direct intervention on `09_UNKNOWN_LEAK` (`8.34`) must be avoided.
+* **Symbiotic Intervention Plan:** Easing AP terms while introducing digital collaboration tools to improve inventory turnover will dissolve the lock.

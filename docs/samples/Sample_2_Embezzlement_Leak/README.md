@@ -1,99 +1,104 @@
-# Embezzlement Report (Case 2)
+# Embezzlement Leak Final Report (Case 2)
 
 > [!NOTE]
-> A more detailed analysis report is available in [clinical_report.md](clinical_report.md).
+> A more detailed technical clinical report is available in [clinical_report.md](clinical_report.md).
 
-## Target Entity: Sample 2
+## Target Organization: Sample 2
 
 ---
 
 ## 0. Executive Summary
 
-* **Overall Diagnosis:** 【Warning / Needs Improvement】 Unexplained capital leakage (**"unauthorized embezzlement/asset outflow"**) has been detected, causing a persistent loss of mass within the system.
-* **Overall Constitution (Physical State):**
-  Due to the off-book outflow of cash, the organization's basic scale (**"physique"**) is shrinking, and its resilience to external shocks (**"immunity and basic stamina"**) is severely depleted. The trade channels have lost flexibility, resulting in structural rigidity (**"arteriosclerosis / stiffness lock"**). In later steps, when normal operational stress is applied, the system fails to absorb the shock, causing severe oscillations (**"resonance / knocking"**).
-* **Areas for Improvement (Viscosity & Treatment Points):**
-  * **Stagnation (Viscosity / "Stiff Shoulder") Range:** Severe settlement lags are observed in **"04_ACC_Inventory"**, **"03_ACC_Cash"**, and **"07_ACC_Sales_Revenue"** (top 25% viscosity range), peaking around **2020-12**.
-  * **Treatment Points ("Tsubo") Range:** The minimum intervention stress range (bottom 25% strain energy range), comprising **"02_ACC_COGS"**, **"04_ACC_Inventory"**, and **"01_ACC_Accounts_Receivable"**, represents the highest priority treatment points to restore the system's basic stamina.
-  * **Contraindications (Avoid Intervention) Range:** Conversely, aggressive reductions or interventions in **"09_UNKNOWN_LEAK"** (leakage channel), **"07_ACC_Sales_Revenue"**, and **"06_ACC_Rent_Exp"** (top 25% strain energy range) must be strictly avoided, as they will trigger intense system backlash and functional paralysis.
+* **Final Diagnosis:** 【Critical / Immediate Action】 Active off-book siphoning of capital (embezzlement) has occurred, bypassing double-entry registration.
+* **Holistic Health Constitution:** 
+  Total B/S assets (**"Physique"**) decline over time due to a cumulative leakage of `$6,255.99`. Transaction friction (**"Autonomic System"**) is highly disturbed. A major connection lock (**"Arteriosclerosis"**) has developed on the cash-leak route. Jerk and Snap spike at t=4 (leak onset) and t=8 (maximum leak), capturing the siphoning shockwaves.
+* **Key Stagnations & Interventions:**
+  - **Stiff Shoulder (Stagnation):** **`03_ACC_Cash`** shows severe settlement delays (viscosity upper 25% boundary), peaking at **2020-06**.
+  - **Acupuncture Points (Treatment Nodes):** **`03_ACC_Cash`** and **`01_ACC_Accounts_Receivable`** (strain energy lower 25%) are the optimal nodes to dissolve the lock.
+  - **Contraindications (Avoid Direct Intervention):** Directly adjusting **`09_UNKNOWN_LEAK`** will cause severe topological stress and must be avoided.
 
 ---
 
-## 1. Overall Diagnosis (Warning / Needs Improvement)
+## 1. Final Diagnosis (Critical)
 
-### 【Diagnosis】: Needs Improvement (Persistent Off-Book Capital Leakage)
+### 【Diagnosis】: Embezzlement (Mass Leakage)
+![System Stability (Maximum Spectral Radius)](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/004_1_2__system_stability.png)
 
-![System Stability](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/004_1_2__system_stability.png)
-
-Although the books appear balanced and report a net profit of `$227,898.67`, the physical diagnostics engine detected a persistent loss of mass (leakage). When Accounts Receivable are collected, the funds are not transferred to Cash; instead, they are bypassed to an off-book, external entity (`UNKNOWN_LEAK`). The cumulative leakage totals **`$1,353.48`**, verified quantitatively as a violation of the law of conservation of mass.
+Ledger audits reveal a total physical mass leakage of `$6,255.99` (non-zero conservation residual). Standard Z-scores fail to flag the chronic leak due to model pollution, but topological metrics consistently capture the anomaly.
 
 ---
 
-## 2. Overall Constitution (Health State) Analysis
+## 2. Holistic Health Constitution Analysis
 
-Mapping the organization's "financial stamina" to a medical checkup template reveals the following structural distortions:
+The organization's flow capacity maps to the following constitutional parameters:
 
-### ① Physique & Weight (Cumulative Trend of Capital Scale)
-
+### ① Physique (Capital Scale)
 ![B/S Cumulative Trend](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__BS_Trend.png)
 
-Due to the continuous off-book drain of cash, the cumulative cash stock is steadily decreasing, showing a distinct downward trend in basic physique.
+Total B/S assets (Physique) exhibit a steady downward trend, proving that cash reserves are being siphoned off-book.
 
-### ② Immunity & Basic Stamina (Resilience to External Shocks)
-
+### ② Immunity (Shock Absorption Capacity)
 ![P/L Cumulative Trend](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_0_1__PL_Trend.png)
 
-Despite surface-level profitability, the continuous cash drain has depleted the system's capacity (free energy) to buffer shocks. The organization's actual immunity is hollowed out.
+Immune buffer capacity (Free Energy) is severely depleted, leaving the organization vulnerable to minor operational shocks.
 
-### ③ Autonomic Nervous System & Metabolic Efficiency (Regularity of Frictional Loss)
-
+### ③ Autonomic System (Entropy & Flow Efficiency)
 ![T-S Diagram](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 
-In the T-S diagram, frictional entropy spikes during leakage steps. The accumulation of frictional heat (costs associated with concealment and off-book journal adjustments) disrupts metabolic efficiency and destabilizes the system.
+The T-S diagram depicts transaction diversity loss and abnormal friction heat (Entropy), showing systemic disruption.
 
-### ④ Arteriosclerosis & Resonance (PCA Principal Axes Evaluation)
-
+### ④ Arteriosclerosis (PCA Stiffness Evaluation)
 ![PCA Ratio](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_2__principal_axes_ratio.png)
 
-Principal Component Analysis (PCA) reveals that from February ($t=1$) onward, the PC1 explanation ratio spikes, locking specific transaction pathways into structural rigidity ("stiffness lock"). In later steps, when normal operational load is applied to this hardened network, the lack of a fluid cash buffer causes the entire system to experience violent oscillations ("resonance / knocking").
+PCA EVR PC1 climbs to 95.28% and loadings freeze, proving that the flow pathways have lost elasticity and are locked onto the siphoning bypass (Arteriosclerosis).
+
+### ⑤ Shockwaves (Jerk and Snap Trends)
+![3D Jerk](000_1_9__3d_dynamics_jerk.png)
+
+![3D Snap](000_1_10__3d_dynamics_snap.png)
+
+* **Mathematical Bridge:**
+  Jerk and Snap exhibit sharp spikes at t=4 and t=8. This mathematically proves that the system suffers from sudden flow acceleration shocks at the onset of embezzlement and during the largest cash siphoning event.
 
 ---
 
-## 3. Key Areas for Improvement (Viscosity & Treatment Points)
+## 3. Key Stagnations & Interventions
 
-Specific areas for improvement identified by the system and recommended action plans are detailed below:
+### ⚠️ Stiff Shoulder (Chronic Delays)
+![3D Phase Portrait](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_8__phase_portrait_3d.png)
 
-### ⚠️ Stagnation (Viscosity) Identification (Local Viscosity Temporal Heatmap Analysis)
+* **Stagnation Nodes:** Upper 25% viscosity includes **`03_ACC_Cash`** and **`04_ACC_Inventory`**.
+  - **`03_ACC_Cash`**: Peaked at **`2020-06`** as cash reserves were drained off-book, slowing down normal settlements.
 
-![Local Viscosity Trend](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_7_1__viscosity_trend.png)
-
-* **Stagnation Range:**
-  The temporal heatmap mapping log local viscosity ($viscosity\_C$) shows that the inventory account (**`04_ACC_Inventory`**) maintains a high viscosity index, peaking sharply in December.
-  This viscosity surge (delay) locks state trajectories into localized regions of phase space (attractor confinement). Refer to the 3D Phase Portrait ([000_1_8__phase_portrait_3d.png](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_8__phase_portrait_3d.png)) for trajectory clustering.
-  The top 25% viscosity group—**"04_ACC_Inventory"**, **"03_ACC_Cash"**, and **"07_ACC_Sales_Revenue"**—contains severe settlement delays.
-  * **`04_ACC_Inventory`**: Mean viscosity `52569.22`, peaking at **`2020-12`** (peak value `57275.08`).
-  * **`03_ACC_Cash`**: Mean viscosity `45680.18`, peaking in **`2020-06`**.
-  * **`07_ACC_Sales_Revenue`**: Mean viscosity `45422.23`, peaking in **`2020-12`**.
-
-### 🎯 Treatment Points ("Tsubo") & Contraindications
-
+### 🎯 Acupuncture Points (Optimal Treatment Nodes)
 ![Sensitivity Matrix](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/004_2_1__sensitivity_matrix.png)
 
-* **Treatment Points Range:** Accounts in the bottom 25% of intervention strain energy—**"02_ACC_COGS"**, **"04_ACC_Inventory"**, and **"01_ACC_Accounts_Receivable"**—can be adjusted with minimal frictional resistance.
-  * **Advice:** These sectors (such as Cost of Goods Sold) can be adjusted to optimize liquidity with the least effort, without damaging the capital structure. In particular, when intervening in boundary terminal nodes that directly interface with the external world (e.g., Accounts Receivable representing external clients' cash flows), you must carefully assess the cash squeeze (External Backlash) forced on external partners. Aggressive local collection speedups (sedation/泻) carry a high risk of triggering negative feedback loops, such as subsequent sales drops due to customer churn. Thus, instead of a localized push for faster collections, a symbiotic package of interventions (Yin-Yang balancing) must be proposed—such as easing Accounts Payable terms or providing digital process tools to reduce operational frictions—to maintain overall system homeostasis.
-* **Contraindications Range:** Conversely, the top 25% strain energy group—**"09_UNKNOWN_LEAK"**, **"07_ACC_Sales_Revenue"**, and **"06_ACC_Rent_Exp"**—must be avoided.
-  * **Advice:** Forcing adjustments on these nodes (especially parameter edits on the leak channel `UNKNOWN_LEAK`) will generate massive strain energy and trigger catastrophic structural failure.
+* **Treatment Nodes:** Strain energy lower 25% includes **`03_ACC_Cash`** and **`01_ACC_Accounts_Receivable`**.
+  - **Intervention Advice:** Modifying these nodes allows smooth cash flow adjustments to dissolve the lock.
+
+### 🚫 Contraindications
+* **Avoid Direct Intervention:** High strain energy (upper 25%) nodes include **`09_UNKNOWN_LEAK`** and **`10_ACC_Equity_Capital`**.
+  - **Intervention Advice:** Modifying these nodes directly will distort the ledger topology, triggering high backlash stress.
+
+### ⚡ Stiffness Temporal Difference ($\Delta K_t$)
+* **Stiffness Difference Heatmap Sequence:**
+  - **t=1**: ![Stiffness Diff t=1](stiffness_diff.t.00001.png)
+  - **t=4**: ![Stiffness Diff t=4](stiffness_diff.t.00004.png)
+  - **t=11**: ![Stiffness Diff t=11](stiffness_diff.t.00011.png)
+
+* **Mathematical Bridge:**
+  The difference $\Delta K_t$ spikes red at t=4 on the Cash-to-Leak connection, capturing the dynamic formation of the embezzlement path before it freezes into a static lock.
 
 ---
 
-## 4. Diagnostic Limitations and Falsifiability
+## 4. Falsifiability Conditions
 
-To overturn (falsify) the diagnosis of "Embezzlement/Capital Leakage," the following external, primary physical evidence must be presented:
+To falsify this "Embezzlement" diagnosis, one must present:
 
-1. **Official Bank Transaction Logs:**
-   For the specific leak dates (February 5, March 29, August 9, etc.), presenting official SWIFT logs or bank transaction records proving that the matching amounts were successfully deposited into the organization's official bank account.
-2. **Reconciliation of Transit Accounts:**
-   Proving that the missing `$1,353.48` was temporarily routed through a valid transit account (e.g., goods in transit, prepayments) and reconciled in subsequent steps, backed by matching original invoices and counterparty receipts.
+1. **Undisclosed Sales Shipping Waybills:**
+   Physical waybills proving that the siphoned cash ($6,255.99) corresponds to legitimate shipping costs.
+2. **Third-Party Bank Remittance Logs:**
+   Independent SWIFT logs showing that all external transfers were routed to registered partners.
 
 ---
-*Published by: TLU Financial Mathematical Diagnostics Engine (General Reader Edition)*
+*Published by: TLU Mathematical Diagnostics Engine*
