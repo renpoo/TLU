@@ -12,3 +12,6 @@ run_tlu_pipeline "Dynamics State Filter" \
     "${TLU_COL_SRC:?}" "${TLU_COL_TGT:?}" \
     "src.filters._000_1_1_filter_dynamics_state" "result.000_1_1_filter_dynamics.analysis.csv" \
     --history_window="${HISTORY_WINDOW}" --node_map="${TLU_NODE_MAP}"
+
+
+

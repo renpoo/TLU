@@ -34,6 +34,8 @@ TEST_MODULES=(
     "tests.unit.test_core_topology"
     "tests.unit.test_filter_linear_algebra"
     "tests.unit.test_filter_phase_shift"
+    "tests.unit.test_003_1_3_filter_jacobian_trajectory"
+
     
     # --- Integration Tests ---
     "tests.integration.test_000_1_1_filter_dynamics_state"

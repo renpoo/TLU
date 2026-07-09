@@ -14,3 +14,7 @@ run_tlu_visualization "3D Viscosity" "_09_1_visualize_3D_ribbon_master.py" "000_
 run_tlu_visualization "3D External Force" "_09_1_visualize_3D_ribbon_master.py" "000_1_6__3d_dynamics_external_force.png" "result.000_1_1_filter_dynamics.analysis.csv" --target_col "external_force_F"
 run_tlu_visualization "Inertia-Viscosity Scatter" "_000_1_7_visualize_inertia_viscosity.py" "000_1_7__inertia_viscosity_scatter.png" "result.000_1_1_filter_dynamics.analysis.csv" --top_k 3
 run_tlu_visualization "Phase Portrait 3D" "_000_1_8_visualize_phase_portrait.py" "000_1_8__phase_portrait_3d.png" "result.000_1_1_filter_dynamics.analysis.csv" --max_legend 11
+run_tlu_visualization "3D Jerk" "_09_1_visualize_3D_ribbon_master.py" "000_1_9__3d_dynamics_jerk.png" "result.000_1_1_filter_dynamics.analysis.csv" --target_col "jerk_j"
+run_tlu_visualization "3D Snap" "_09_1_visualize_3D_ribbon_master.py" "000_1_10__3d_dynamics_snap.png" "result.000_1_1_filter_dynamics.analysis.csv" --target_col "snap_s"
+
+

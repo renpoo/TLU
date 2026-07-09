@@ -36,8 +36,8 @@ Each analytical module maps to specific physical contexts:
     * *Eastern Medicine Metaphor:* QI/Blood volume, pulse irregularity.
     * *Analysis:* Static balance of B/S and P/L, Z-score trends, and fat-tail risks via KDE skewness/kurtosis.
 2. **Kinematics & State-Space (Prefix: `000_1`):**
-    * *Eastern Medicine Metaphor:* Blood stasis, muscle stiffness, phase dynamics.
-    * *Analysis:* Inertia/viscosity biases and 3D state-space trajectories (3D Ribbon Plots). Twist, focus-locking, or divergence of the ribbon identifies chaotic states.
+    * *Eastern Medicine Metaphor:* Blood stasis, muscle stiffness, phase dynamics, pulse/Qi sudden shock.
+    * *Analysis:* Inertia/viscosity biases, 3D state-space trajectories (3D Ribbon Plots), and higher-order derivatives (Jerk and Snap time-series trends). Twist, focus-locking, or sudden jerk spikes identify structural cracks, transaction shocks, or seizure propagation waves.
 3. **Stiffness & PCA (Prefix: `000_2`):**
     * *Eastern Medicine Metaphor:* Joint stiffness, skeletal hardening, wear and tear.
     * *Analysis:* Stiffness matrix evolution over time, PC1 contribution ratio shifts, and loading concentration mapping via eigenvector evolution.
@@ -49,7 +49,7 @@ Each analytical module maps to specific physical contexts:
     * *Analysis:* Checking conservation residuals based on Kirchhoff's current law, and locating spatiotemporal walls of KL drift and Z-scores on 3D micro manifolds.
 6. **Robot Kinematics & Reachability (Prefix: `003_1`):**
     * *Eastern Medicine Metaphor:* Arm extension, range of motion limits, singularities.
-    * *Analysis:* Forward Kinematics (FK) reachability space and Inverse Kinematics (IK) optimization to minimize tracking errors and identify singular configurations.
+    * *Analysis:* Forward Kinematics (FK) reachability space and Inverse Kinematics (IK) optimization to minimize tracking errors and identify singular configurations. Further evaluates 1st, 2nd, and 3rd-order Jacobian trajectories to diagnose path lengths, circular Even-Odd coherence, and terminal sinks (see Chapter 14).
 7. **Control Theory & LQR (Prefix: `004_1`, `004_2`):**
     * *Eastern Medicine Metaphor:* Pulse runaway, meridian adjustments, acupuncture points.
     * *Analysis:* Loop detection (e.g., circular trades, gridlocks, neural synchrony) via spectral radius ( $\rho \ge 1.0$ ). LQR sensitivity analysis to locate key intervention nodes and design dynamic pulses.
@@ -94,7 +94,7 @@ Listing individual findings is not enough. You must synthesize them. Weigh all m
 
 ## 3. Descriptive Statistics for Multi-Dimensional Data
 
-When analyzing multi-dimensional parameters (state $X$, velocity $v$, acceleration $a$, viscosity $C$, etc.) in any of the diagnostic steps, **you must calculate and incorporate the following set of descriptive statistics** to prevent overlooking statistical bias or physical causal relationships:
+When analyzing multi-dimensional parameters (state $X$, velocity $v$, acceleration $a$, jerk $j$, snap $s$, viscosity $C$, etc.) in any of the diagnostic steps, **you must calculate and incorporate the following set of descriptive statistics** to prevent overlooking statistical bias or physical causal relationships:
 
 ### ① Mandatory Statistics to Calculate & Evaluate
 
@@ -131,8 +131,11 @@ Translate pure physical and mathematical data into domain-specific terms. Apply 
 | **Mass Leak** | **Bleeding** | Embezzlement | Ghost vehicles | Off-book cash leak | Vascular rupture |
 | **Stiffness Lock** | **Blood Clot** | Account synchronization | Road system paralysis | Volume hijacking | Vascular occlusion (stroke) |
 | **Viscosity** | **Qi Stagnation** | Payment delay (30-90 days) | Traffic drag / Delay | Execution latency | Propagation delay |
+| **Jerk** | **Sudden Meridian Distortion (脈の急変)** | Transaction Shock / Settlement Jump | Sudden Braking / Influx Spike | Sudden trade volume swing | Neural Spike Shock |
+| **Snap** | **Transient Qi Fluctuation (気の過渡的ゆらぎ)** | Transient Loop Activation / Propagation Ripple | Gridlock Propagation Wave | Trade acceleration ripple | Seizure Onset Wave |
 | **LQR Control** | **Acupuncture Point** | Key account audit | Traffic light offset timing | Specific USR restriction | Target TMS stimulation |
 | **Boundary/Terminal Node** | **Jing-Well Point (井穴)** | Accounts Receivable (`01_ACC_Accounts_Receivable`) / Accounts Payable (`05_ACC_Accounts_Payable`) / External Inflow | External intersection (e.g., Gojo Horikawa) / Suburban feeder arterial | Clearing & settlement channel / External capital inflow | Visual cortex (`01_ROI_Visual`)・Auditory cortex (`07_ROI_Auditory`) (input) / Motor cortex (`02_ROI_Motor`) (output) |
+
 
 ---
 
@@ -215,6 +218,7 @@ Writing reports without this fact-check is a severe failure.
      - Chronological Stiffness Matrices: `000_2_1__structural_stiffness.t.XXXXX.png` (Vertical Listing Rule applies)
      - PCA Principal Ratio: `000_2_2__principal_axes_ratio.png`
      - Eigenvector Evolution: `000_2_3__eigenvector_evolution.png` / `000_2_3__eigenvector_evolution_pc2.png` / `000_2_3__eigenvector_evolution_pc3.png`
+     - Chronological Stiffness Differences: `stiffness_diff.t.XXXXX.png` (Vertical Listing Rule applies)
    * **③ Thermodynamics & Local Analysis**:
      - Thermodynamics Energy Stack: `001_1_2__thermodynamics_energy_stack.png`
      - T-S Diagram: `001_1_3__thermodynamics_ts_diagram.png`
@@ -307,3 +311,30 @@ To ensure that general readers can make informed decisions, all reports must sat
 8. **Falsifiability Definition:** Clearly define the external primary evidence needed to reject the model's diagnosis.
 
 
+## 14. Multi-Order Jacobian Analysis Protocol (Diagnostic Value & Application)
+
+When analyzing multi-order Jacobian trajectory files (`result.003_1_3_jacobian_1st.analysis.csv`, `2nd.analysis.csv`, `3rd.analysis.csv`), apply the following logic to diagnose structural topologies:
+
+### 14.1 Mathematical and Metaphorical Value (What You Can Discern)
+1. **Direct vs. Indirect Coupling (Hop Count Identification):**
+   * **1st-Order ($J^{(1)} = \gamma P$):** Identifies immediate adjacent flows (direct transactions, neighbor intersections, direct synaptic links).
+   * **2nd-Order ($J^{(2)} = \gamma^2 P^2$):** Identifies 1-hop indirect paths (using 1 intermediate broker/node, e.g., dummy shells, transit intersections).
+   * **3rd-Order ($J^{(3)} = \gamma^3 P^3$):** Identifies 2-hop indirect paths.
+2. **Detection of Circular Trade Cycles (Even-Odd Alternating Coherence):**
+   * If a node $i$ displays a high self-sensitivity $J^{(k)}[i, i]$ only at even orders (e.g., $k=2$) while reverting to zero at odd orders (e.g., $k=1, 3$) where it instead targets a counterpart node, diagnose it as **Even-Odd Alternating Coherence**. This is a mathematical fingerprint of sham circular trading (Wash Trades).
+3. **Identification of Leak Boundaries (Jing-Well Points / Sinks):**
+   * If a target node $dst$ displays non-zero sensitivity from sources in 1st and 2nd orders, but drops to exactly `0.0` in 3rd order, classify the node as a **Terminal Sink (Jing-Well Node)**. It absorbs system mass without re-propagating it (e.g., embezzlement offshore leak).
+4. **Structural Congestion & Hyper-Synchrony Saturation:**
+   * If sensitivities do not decay as order increases (1st $\to$ 2nd $\to$ 3rd) and instead inflate uniformly across all node pairs, diagnose it as **Structural Gridlock** (e.g., traffic deadlocks, seizure hyper-synchrony) where the network spectral radius $\rho \ge 1.0$ makes all nodes act as a single rigid body.
+
+### 14.2 Difference-Based Forensic Protocol (Hop & Temporal Changes)
+
+By performing differential analysis on Jacobian orders and stiffness trajectories, you can track structural changes and flow energy propagation dynamics.
+
+1. **Hop-wise Sensitivity (Jacobian) Difference ($\Delta M_k = M_k - M_{k-1} = \gamma^k P^k$):**
+   * **Wave Propagation Tracking:** Analyzing $\Delta M_k$ maps where the shockwave expands (positive red values / new impact arrived) and recedes (negative blue values / flow passed through and decayed) at each virtual hop $k$.
+   * **Decoupled Hop Broker Audit:** The minimum hop count $k$ where the differential sensitivity between suspect node pairs remains non-zero directly defines the number of intermediate dummy accounts/nodes used to mask circular flows.
+
+2. **Stiffness Temporal Difference ($\Delta K_t = K_t - K_{t-1}$):**
+   * **Positive Stiffness Spikes ($\Delta K_t > 0.0$ / Red):** Represents dynamic hardening (Stiffness Lock). Pathological congestions, payment blockages, or vascular spasm occlusions are actively forming on those specific routes.
+   * **Negative Stiffness Drops ($\Delta K_t < 0.0$ / Blue):** Represents dynamic softening (Stress Release). Congestion is dissolving, blockages are cleared, or blood vessels are dilated.
