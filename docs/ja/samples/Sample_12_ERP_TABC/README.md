@@ -20,7 +20,7 @@
 ## 1. 総合病態診断（動的熱力学散逸モデルによる分離）
 
 ### 動的熱力学配賦（自律的な摩擦熱排出による陰陽平衡）
-![システム安定度](../../../samples/Sample_12_ERP_TABC/readme_plots/004_1_2__system_stability.png)
+![システム安定度](../../../../samples/Sample_12_ERP_TABC/readme_plots/004_1_2__system_stability.png)
 * **数理ブリッジ説明:**
   システム全体の閉路還流度（スペクトル半径）です。全期間で `0.0000` で安定し、不可逆な組織排熱を即座に系外へ排出することで、システム内部の流動が最もクリーンに保たれている様子を証明しています。
 
@@ -31,29 +31,29 @@
 企業の原価循環能力を、東洋医学的メタファーに基づく体質パラメータとして評価します。
 
 ### ① 体格 (総製造資本の規模)
-![B/S累積トレンド](../../../samples/Sample_12_ERP_TABC/readme_plots/000_0_1__BS_Trend.png)
+![B/S累積トレンド](../../../../samples/Sample_12_ERP_TABC/readme_plots/000_0_1__BS_Trend.png)
 * **数理ブリッジ説明:**
   B/S総資産および負債残高トレンドです。摩擦ロスを期間費用として分離抽出しても、全社の総資本・総損益の質量の保存則（質量漏洩ゼロ）が完全に保たれていることを証明しています。
 
 ### ② 免疫力 (純粋実効製造原価の保護)
-![P/L累積トレンド](../../../samples/Sample_12_ERP_TABC/readme_plots/000_0_1__PL_Trend.png)
+![P/L累積トレンド](../../../../samples/Sample_12_ERP_TABC/readme_plots/000_0_1__PL_Trend.png)
 * **数理ブリッジ説明:**
   P/L利益累積トレンドです。製品原価から組織摩擦ロスが除外されたことで、各製品の「真の製造実効原価」と「実質的限界利益」が浮かび上がり、正しい経営意思決定を支える防衛力（免疫力）が最大化されています。
 
 ### ③ 自律神経 (ボラティリティ熱力学エントロピー)
-![T-Sダイアグラム](../../../samples/Sample_12_ERP_TABC/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+![T-Sダイアグラム](../../../../samples/Sample_12_ERP_TABC/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 * **数理ブリッジ説明:**
   熱力学エントロピーと温度の関係図です。エントロピーは **$S = 3.1100$** の高い流動性を保ちつつ、無駄な摩擦熱が期間費用へ連続抽出されることで、系全体が極めて効率的な動的熱力学平衡を維持しています。
 
 ### ④ 動脈硬化 (配賦歪みの完全解消評価)
-![PCA主要軸比率](../../../samples/Sample_12_ERP_TABC/readme_plots/000_2_2__principal_axes_ratio.png)
+![PCA主要軸比率](../../../../samples/Sample_12_ERP_TABC/readme_plots/000_2_2__principal_axes_ratio.png)
 * **数理ブリッジ説明:**
   PCA第1主成分の支配率です。支配率が低く多次元に分散しており、労務時間や特定の固定ルールへの依存（動脈硬化）が完全に解消されていることを示しています。
 
 ### ⑤ 脈の乱れと波及（活動ボラティリティのリアルタイム検出）
-![3D Jerk](../../../samples/Sample_12_ERP_TABC/readme_plots/000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../../samples/Sample_12_ERP_TABC/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](../../../samples/Sample_12_ERP_TABC/readme_plots/000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../../samples/Sample_12_ERP_TABC/readme_plots/000_1_10__3d_dynamics_snap.png)
 * **数理ブリッジ説明:**
   活動加速度の急変（Jerk）および Snap 応答です。現場の日次活動ボラティリティ（$CV$）の高まりに完全同調して摩擦熱 $\alpha(t)$ がリアルタイムに変動・算出されているダイナミクスを証明しています。
 
@@ -62,12 +62,12 @@
 ## 3. 主要な滞留と共生介入
 
 ### ⚠️ 肩こり (可視化された組織摩擦熱)
-![3D相空間軌道](../../../samples/Sample_12_ERP_TABC/readme_plots/000_1_8__phase_portrait_3d.png)
+![3D相空間軌道](../../../../samples/Sample_12_ERP_TABC/readme_plots/000_1_8__phase_portrait_3d.png)
 * **数理ブリッジ説明:**
   3次元相空間リボン図です。**`ACC_Mfg_Overhead_Exp_DPT_Mfg_Support`**（組織摩擦ロス勘定）に排熱（年間 $60.58k）が集約可視化（明確な肩こりとして特定）されています。
 
 ### 🎯 治療点「ツボ」 (最適改善ポイント)
-![制御感度行列](../../../samples/Sample_12_ERP_TABC/readme_plots/004_2_1__sensitivity_matrix.png)
+![制御感度行列](../../../../samples/Sample_12_ERP_TABC/readme_plots/004_2_1__sensitivity_matrix.png)
 * **数理ブリッジ説明:**
   配賦制御における介入感度行列です。**`ACC_Mfg_Overhead_Exp_DPT_Mfg_Support`** が、組織全体のプロセスの平滑化やDX投資の成果を判定するための最大の治療点（ツボ）であることを示しています。
 
@@ -76,9 +76,9 @@
 
 ### ⚡ 決済血管の時間的急変（剛性時間差分）
 - **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
-  - **初期 (t=1)**: ![Stiffness Diff t=1](../../../samples/Sample_12_ERP_TABC/readme_plots/000_2_4__stiffness_diff.t.00001.png)
-  - **中間 (t=6)**: ![Stiffness Diff t=6](../../../samples/Sample_12_ERP_TABC/readme_plots/000_2_4__stiffness_diff.t.00006.png)
-  - **最終 (t=11)**: ![Stiffness Diff t=11](../../../samples/Sample_12_ERP_TABC/readme_plots/000_2_4__stiffness_diff.t.00011.png)
+  - **初期 (t=1)**: ![Stiffness Diff t=1](../../../../samples/Sample_12_ERP_TABC/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **中間 (t=6)**: ![Stiffness Diff t=6](../../../../samples/Sample_12_ERP_TABC/readme_plots/000_2_4__stiffness_diff.t.00006.png)
+  - **最終 (t=11)**: ![Stiffness Diff t=11](../../../../samples/Sample_12_ERP_TABC/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 * **数理ブリッジ説明:**
   配賦剛性の時間変化ヒートマップです。動的散逸モデルにより各月のボラティリティに応じてしなやかに剛性が変化し、無理な固定配賦による局所的な硬化スパイクが発生していない理想的な状態を表しています。
 

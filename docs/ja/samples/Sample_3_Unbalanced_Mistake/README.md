@@ -20,7 +20,7 @@
 ## 1. 総合病態診断（入力ミス）
 
 ### 一過性アノマリー（自己減衰）
-![システム安定度](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_1_2__system_stability.png)
+![システム安定度](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_1_2__system_stability.png)
 * **数理ブリッジ説明:**
   システムの還流の暴走度を示す指標（スペクトル半径）です。全期間を通じて `0.0000` であり、内部に循環取引などの病的ループが一切形成されていないことを示しています。
 
@@ -31,22 +31,22 @@
 組織の資金循環能力を、東洋医学的メタファーに基づく体質パラメータとして評価します。
 
 ### ① 体格 (総資産の規模)
-![B/S累積トレンド](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__BS_Trend.png)
+![B/S累積トレンド](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__BS_Trend.png)
 * **数理ブリッジ説明:**
   総資産の合計トレンドです。2月（t=1）に `$22,000.00` の一時的な貸借のズレ（筋肉の捻挫）が発生しましたが、3月（t=2）に自動補正されて正常に戻っていることを示します。
 
 ### ② 免疫力 (ショック吸収バッファー)
-![P/L累積トレンド](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__PL_Trend.png)
+![P/L累積トレンド](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_0_1__PL_Trend.png)
 * **数理ブリッジ説明:**
   利益の蓄積トレンドです。一時的な不整合により利益の認識が動揺しましたが、翌月には防衛力（自由エネルギー）が元の健康な成長軌道へ復帰しています。
 
 ### ③ 自律神経 (資金の分散多様性)
-![T-Sダイアグラム](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+![T-Sダイアグラム](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 * **数理ブリッジ説明:**
   資金の多様性とボラティリティの関係図です。2月に軌道が一瞬動揺しましたが、すぐに正常な定常軌道（アトラクター）へ引き戻される、高い自己復元力を証明しています。
 
 ### ④ 動脈硬化 (取引の固定ロック評価)
-![PCA主要軸比率](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_2__principal_axes_ratio.png)
+![PCA主要軸比率](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_2__principal_axes_ratio.png)
 * **数理ブリッジ説明:**
   特定の取引の支配率（PCA比率）です。支配率は低水準で安定しており、特定の部門間に取引がフリーズする硬化（動脈硬化）がないことを表しています。
 
@@ -62,12 +62,12 @@
 ## 3. 主要な滞留と共生介入
 
 ### ⚠️ 肩こり (慢性的な遅延)
-![3D相空間軌道](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_1_8__phase_portrait_3d.png)
+![3D相空間軌道](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_1_8__phase_portrait_3d.png)
 * **数理ブリッジ説明:**
   資金状態の3次元ダイナミクスを示すリボン図です。**`02_ACC_COGS`**（売上原価）に一時的な決済遅延（肩こり）が見られましたが、3月には速やかに解消され、正常化しています。
 
 ### 🎯 治療点「ツボ」 (最適改善ポイント)
-![制御感度行列](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_2_1__sensitivity_matrix.png)
+![制御感度行列](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/004_2_1__sensitivity_matrix.png)
 * **数理ブリッジ説明:**
   介入時の感度と反発応力をマッピングした行列です。**`02_ACC_COGS`**（売上原価）への調整が最も低負荷で効果的（ツボ）であることを示しています。
 
@@ -76,9 +76,9 @@
 
 ### ⚡ 決済血管の時間的急変（剛性時間差分）
 - **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
-  - **初期 (t=1)**: ![Stiffness Diff t=1](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00001.png)
-  - **中間 (t=2)**: ![Stiffness Diff t=2](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00002.png)
-  - **最終 (t=11)**: ![Stiffness Diff t=11](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00011.png)
+  - **初期 (t=1)**: ![Stiffness Diff t=1](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **中間 (t=2)**: ![Stiffness Diff t=2](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00002.png)
+  - **最終 (t=11)**: ![Stiffness Diff t=11](../../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 * **数理ブリッジ説明:**
   タイムステップ間における取引剛性の動的な変化（差分 $\Delta K_t$）を示すヒートマップです。入力ミスが発生した2月（t=1）に赤く血管の硬化が発生し、修復された3月（t=2）に青くストレスが解放され、以降は真っ白（変化なし）な健全状態へ戻っています。
 

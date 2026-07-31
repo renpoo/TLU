@@ -79,9 +79,9 @@ The table below details the descriptive statistics computed for state $X$, veloc
 
 ### ② Stiffness Temporal Difference ($\Delta K_t = K_t - K_{t-1}$) Analysis
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=1 (2020-02):** ![Stiffness Diff t=1](../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00001.png)
-  - **t=6 (2020-07):** ![Stiffness Diff t=6](../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00006.png)
-  - **t=11 (2020-12):** ![Stiffness Diff t=11](../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00011.png)
+  - **t=1 (2020-02):** ![Stiffness Diff t=1](../../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **t=6 (2020-07):** ![Stiffness Diff t=6](../../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00006.png)
+  - **t=11 (2020-12):** ![Stiffness Diff t=11](../../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 * **Interpretation:**
   $\Delta K_t$ is flat at white (near-zero) throughout, proving that the ledger retains complete dynamic elasticity and no sudden blockages occur.
 
@@ -99,9 +99,9 @@ The maximum spectral radius $\rho$ remains **`0.0000`** for all periods, indicat
 
 ### ② Multi-Order Jacobian Trajectory Analysis
 * **Order-wise Jacobian Heatmaps (t=6 / 2020-07):**
-  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](../../samples/Sample_0_Healthy/readme_plots/jacobian_order_1st.t.00006.png)
-  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](../../samples/Sample_0_Healthy/readme_plots/jacobian_order_2nd.t.00006.png)
-  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](../../samples/Sample_0_Healthy/readme_plots/jacobian_order_3rd.t.00006.png)
+  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](../../../samples/Sample_0_Healthy/readme_plots/jacobian_order_1st.t.00006.png)
+  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](../../../samples/Sample_0_Healthy/readme_plots/jacobian_order_2nd.t.00006.png)
+  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](../../../samples/Sample_0_Healthy/readme_plots/jacobian_order_3rd.t.00006.png)
 * **Interpretation:**
   Sensitivities decay rapidly to zero as order increases, confirming a decentralized flow topology without circular wash trades or sinks.
 

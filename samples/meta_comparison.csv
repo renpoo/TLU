@@ -1,6 +1,9 @@
 Environment,Max_Conservation_Residual,Max_Spectral_Radius,Min_Free_Energy,Max_Local_Z_Score
 Sample_0_Healthy,0.0,0.0,2247308.5219,0.0
 Sample_1_Wash_Trade,0.0,0.748786,2263565.6164,0.0
+Sample_10_ERP_Traditional,0.0,0.0,4368745.1232,0.0
+Sample_11_ERP_ABC,0.0,0.0,4049318.4363,0.0
+Sample_12_ERP_TABC,0.0,0.0,4043663.1671,0.0
 Sample_2_Embezzlement_Leak,364.53,0.0,2215301.9621,0.0
 Sample_3_Unbalanced_Mistake,906.29,0.0,2238207.8947,0.0
 Sample_4_Composite_Chaos,4773.57,0.786143,2332402.2957,0.0

@@ -73,9 +73,9 @@ Descriptive statistics from [result.000_1_1_filter_dynamics.analysis.csv](../../
 
 ### ② Stiffness Temporal Difference ($\Delta K_t = K_t - K_{t-1}$) Analysis
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=1 (2020-02):** ![Stiffness Diff t=1](../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00001.png)
-  - **t=4 (2020-05):** ![Stiffness Diff t=4](../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00004.png)
-  - **t=11 (2020-12):** ![Stiffness Diff t=11](../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00011.png)
+  - **t=1 (2020-02):** ![Stiffness Diff t=1](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **t=4 (2020-05):** ![Stiffness Diff t=4](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00004.png)
+  - **t=11 (2020-12):** ![Stiffness Diff t=11](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 * **Interpretation:**
   Red stiffness difference spikes at t=4 show the active establishment of the leak bypass, locking into a static lock (white) in later periods.
 
@@ -100,9 +100,9 @@ The maximum spectral radius $\rho$ remains **`0.7861`** for all periods, indicat
 
 ### ② Multi-Order Jacobian Trajectory Analysis
 * **Order-wise Jacobian Heatmaps (t=4 / 2020-05):**
-  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](../../samples/Sample_2_Embezzlement_Leak/readme_plots/jacobian_order_1st.t.00004.png)
-  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](../../samples/Sample_2_Embezzlement_Leak/readme_plots/jacobian_order_2nd.t.00004.png)
-  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](../../samples/Sample_2_Embezzlement_Leak/readme_plots/jacobian_order_3rd.t.00004.png)
+  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/jacobian_order_1st.t.00004.png)
+  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/jacobian_order_2nd.t.00004.png)
+  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/jacobian_order_3rd.t.00004.png)
 * **Interpretation:**
   Non-zero sensitivity exists in 1st/2nd orders but drops to exactly zero in 3rd order, confirming `UNKNOWN_LEAK` acts as a Terminal Sink.
 

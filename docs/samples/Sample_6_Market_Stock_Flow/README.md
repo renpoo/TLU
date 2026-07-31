@@ -53,9 +53,9 @@ The thermodynamic T-S diagram shows a normal open subsystem with optimal entropy
 PCA EVR PC1 is low and loadings are highly dispersed. No specific channels freeze or lock (Arteriosclerosis).
 
 ### ⑤ Shockwaves (Jerk and Snap Trends)
-![3D Jerk](../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **Mathematical Bridge:**
   Jerk and Snap remain completely flat at zero. This mathematically proves that the system does not suffer from sudden, erratic volume spikes or execution knocks.
@@ -82,9 +82,9 @@ PCA EVR PC1 is low and loadings are highly dispersed. No specific channels freez
 
 ### ⚡ Stiffness Temporal Difference ($\Delta K_t$)
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=1**: ![Stiffness Diff t=1](../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_2_4__stiffness_diff.t.00001.png)
-  - **t=6**: ![Stiffness Diff t=6](../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_2_4__stiffness_diff.t.00006.png)
-  - **t=11**: ![Stiffness Diff t=11](../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_2_4__stiffness_diff.t.00011.png)
+  - **t=1**: ![Stiffness Diff t=1](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **t=6**: ![Stiffness Diff t=6](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_2_4__stiffness_diff.t.00006.png)
+  - **t=11**: ![Stiffness Diff t=11](../../../samples/Sample_6_Market_Stock_Flow/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 
 * **Mathematical Bridge:**
   The difference $\Delta K_t$ is flat at white throughout, showing that the transaction pathways retain complete elasticity and no blockages form over time.

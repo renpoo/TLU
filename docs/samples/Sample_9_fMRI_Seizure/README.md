@@ -51,9 +51,9 @@ The T-S diagram collapses into a simple circular trajectory post-t=30, represent
 PCA PC1 EVR remains flat and eigenvector weights freeze uniformly, proving global functional connectivity lock (Arteriosclerosis).
 
 ### ⑤ Shockwaves (Jerk and Snap Trends)
-![3D Jerk](../../samples/Sample_9_fMRI_Seizure/readme_plots/000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](../../samples/Sample_9_fMRI_Seizure/readme_plots/000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **Mathematical Bridge:**
   Jerk and Snap exhibit persistent sinusoidal oscillations post-t=30. This mathematically proves that the neural network suffers from uniform, high-frequency epileptic firing shocks.
@@ -80,9 +80,9 @@ PCA PC1 EVR remains flat and eigenvector weights freeze uniformly, proving globa
 
 ### ⚡ Stiffness Temporal Difference ($\Delta K_t$)
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=30**: ![Stiffness Diff t=30](../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00030.png)
-  - **t=45**: ![Stiffness Diff t=45](../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00045.png)
-  - **t=59**: ![Stiffness Diff t=59](../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00059.png)
+  - **t=30**: ![Stiffness Diff t=30](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00030.png)
+  - **t=45**: ![Stiffness Diff t=45](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00045.png)
+  - **t=59**: ![Stiffness Diff t=59](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00059.png)
 
 * **Mathematical Bridge:**
   The difference $\Delta K_t$ spikes red globally at t=30 (seizure onset). Afterward, the difference drops to zero (white), signifying that the brain is locked into a rigid synchronous state.

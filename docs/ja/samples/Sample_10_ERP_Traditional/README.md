@@ -20,7 +20,7 @@
 ## 1. 総合病態診断（伝統的作業時間配賦の歪み）
 
 ### 伝統的作業時間配賦（一括配賦による偏圧）
-![システム安定度](../../../samples/Sample_10_ERP_Traditional/readme_plots/004_1_2__system_stability.png)
+![システム安定度](../../../../samples/Sample_10_ERP_Traditional/readme_plots/004_1_2__system_stability.png)
 * **数理ブリッジ説明:**
   システム全体の閉路還流度（スペクトル半径）を示す指標です。全期間を通じて `0.0000` を維持しており、循環取引や虚構ループによる暴走はありません。しかし、単一の作業時間比例ルールにより、すべての配賦波形が同一の線形ベクトル上に固着しています。
 
@@ -31,29 +31,29 @@
 企業の原価循環能力を、東洋医学的メタファーに基づく体質パラメータとして評価します。
 
 ### ① 体格 (総製造資本の規模)
-![B/S累積トレンド](../../../samples/Sample_10_ERP_Traditional/readme_plots/000_0_1__BS_Trend.png)
+![B/S累積トレンド](../../../../samples/Sample_10_ERP_Traditional/readme_plots/000_0_1__BS_Trend.png)
 * **数理ブリッジ説明:**
   総資産および負債・資本の残高トレンドです。総資本（体格）は安定しており、貸借不一致による質量の漏洩（不正・粉飾）が一切発生していない健全な物理保存を示しています。
 
 ### ② 免疫力 (ショック吸収バッファー)
-![P/L累積トレンド](../../../samples/Sample_10_ERP_Traditional/readme_plots/000_0_1__PL_Trend.png)
+![P/L累積トレンド](../../../../samples/Sample_10_ERP_Traditional/readme_plots/000_0_1__PL_Trend.png)
 * **数理ブリッジ説明:**
   製造原価および売上高の集積トレンドです。製品Aへの集中配賦により売上原価（COGS）が人工的に肥大化し、製品Aの限界利益バッファー（免疫力）が著しく圧迫されている状況を表しています。
 
 ### ③ 自律神経 (配賦活動の多様性評価)
-![T-Sダイアグラム](../../../samples/Sample_10_ERP_Traditional/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+![T-Sダイアグラム](../../../../samples/Sample_10_ERP_Traditional/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 * **数理ブリッジ説明:**
   配賦ボラティリティと情報エントロピーの関係図です。エントロピーが **$S = 2.6568$** に低下・固着しており、単一の作業時間比例ルールに縛られることでシステムの情報自由度が失われ、構造的な硬化を示しています。
 
 ### ④ 動脈硬化 (労務時間拘束によるPCA比率)
-![PCA主要軸比率](../../../samples/Sample_10_ERP_Traditional/readme_plots/000_2_2__principal_axes_ratio.png)
+![PCA主要軸比率](../../../../samples/Sample_10_ERP_Traditional/readme_plots/000_2_2__principal_axes_ratio.png)
 * **数理ブリッジ説明:**
   主成分分析（PCA）における第1主成分（PC1）の支配率です。PC1の重みが直接労務費（`ACC_Direct_Labor_Exp`）の時系列波形と相関係数 0.95 以上で拘束されており、特定の配賦基準への強固な依存（動脈硬化）を証明しています。
 
 ### ⑤ 脈の乱れと波及（高次決済ショック）
-![3D Jerk](../../../samples/Sample_10_ERP_Traditional/readme_plots/000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../../samples/Sample_10_ERP_Traditional/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](../../../samples/Sample_10_ERP_Traditional/readme_plots/000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../../samples/Sample_10_ERP_Traditional/readme_plots/000_1_10__3d_dynamics_snap.png)
 * **数理ブリッジ説明:**
   原価発生の加速度の急変（Jerk）と立ち上がり衝撃（Snap）です。月次一括配賦のタイミング（毎月末）に規則的な過渡的パルスが発生しており、月次締めによる周期的な原価衝撃波を捉えています。
 
@@ -62,12 +62,12 @@
 ## 3. 主要な滞留と共生介入
 
 ### ⚠️ 肩こり (製品Aへの偏圧滞留)
-![3D相空間軌道](../../../samples/Sample_10_ERP_Traditional/readme_plots/000_1_8__phase_portrait_3d.png)
+![3D相空間軌道](../../../../samples/Sample_10_ERP_Traditional/readme_plots/000_1_8__phase_portrait_3d.png)
 * **数理ブリッジ説明:**
   3次元相空間ダイナミクスを示すリボン図です。**`ACC_Finished_Goods_DPT_Prod_A`**（製品A完成品）の領域に巨大な質量（原価）が偏在して滞留しており、過剰負担による深刻な「肩こり」状態を示しています。
 
 ### 🎯 治療点「ツボ」 (最適改善ポイント)
-![制御感度行列](../../../samples/Sample_10_ERP_Traditional/readme_plots/004_2_1__sensitivity_matrix.png)
+![制御感度行列](../../../../samples/Sample_10_ERP_Traditional/readme_plots/004_2_1__sensitivity_matrix.png)
 * **数理ブリッジ説明:**
   配賦制御における介入感度行列です。**`ACC_COGS_DPT_Prod_A`** および **`ACC_Mfg_Overhead_Allocated_DPT_Prod_A`** への調整が、偏圧を解きほぐす最も効率的なツボであることを示しています。
 
@@ -76,9 +76,9 @@
 
 ### ⚡ 決済血管の時間的急変（剛性時間差分）
 - **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
-  - **初期 (t=1)**: ![Stiffness Diff t=1](../../../samples/Sample_10_ERP_Traditional/readme_plots/000_2_4__stiffness_diff.t.00001.png)
-  - **中間 (t=6)**: ![Stiffness Diff t=6](../../../samples/Sample_10_ERP_Traditional/readme_plots/000_2_4__stiffness_diff.t.00006.png)
-  - **最終 (t=11)**: ![Stiffness Diff t=11](../../../samples/Sample_10_ERP_Traditional/readme_plots/000_2_4__stiffness_diff.t.00011.png)
+  - **初期 (t=1)**: ![Stiffness Diff t=1](../../../../samples/Sample_10_ERP_Traditional/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **中間 (t=6)**: ![Stiffness Diff t=6](../../../../samples/Sample_10_ERP_Traditional/readme_plots/000_2_4__stiffness_diff.t.00006.png)
+  - **最終 (t=11)**: ![Stiffness Diff t=11](../../../../samples/Sample_10_ERP_Traditional/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 * **数理ブリッジ説明:**
   時間経過に伴う配賦結合剛性の変化ヒートマップです。作業時間一括配賦のルールが全期間を通じて硬直的に適用されており、毎月同一のパターンで同一ノードに強烈な剛性スパイクが発生している様子を示しています。
 

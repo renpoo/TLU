@@ -53,9 +53,9 @@ The T-S diagram depicts transaction diversity loss and abnormal friction heat (E
 PCA EVR PC1 climbs to 95.28% and loadings freeze, proving that the flow pathways have lost elasticity and are locked onto the siphoning bypass (Arteriosclerosis).
 
 ### ⑤ Shockwaves (Jerk and Snap Trends)
-![3D Jerk](../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **Mathematical Bridge:**
   Jerk and Snap exhibit sharp spikes at t=4 and t=8. This mathematically proves that the system suffers from sudden flow acceleration shocks at the onset of embezzlement and during the largest cash siphoning event.
@@ -82,9 +82,9 @@ PCA EVR PC1 climbs to 95.28% and loadings freeze, proving that the flow pathways
 
 ### ⚡ Stiffness Temporal Difference ($\Delta K_t$)
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=1**: ![Stiffness Diff t=1](../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00001.png)
-  - **t=4**: ![Stiffness Diff t=4](../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00004.png)
-  - **t=11**: ![Stiffness Diff t=11](../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00011.png)
+  - **t=1**: ![Stiffness Diff t=1](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **t=4**: ![Stiffness Diff t=4](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00004.png)
+  - **t=11**: ![Stiffness Diff t=11](../../../samples/Sample_2_Embezzlement_Leak/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 
 * **Mathematical Bridge:**
   The difference $\Delta K_t$ spikes red at t=4 on the Cash-to-Leak connection, capturing the dynamic formation of the embezzlement path before it freezes into a static lock.

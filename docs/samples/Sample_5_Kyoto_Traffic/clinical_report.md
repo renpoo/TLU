@@ -75,9 +75,9 @@ Descriptive statistics from [result.000_1_1_filter_dynamics.analysis.csv](../../
 
 ### ② Stiffness Temporal Difference ($\Delta K_t = K_t - K_{t-1}$) Analysis
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=12 (2021-01):** ![Stiffness Diff t=12](../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00012.png)
-  - **t=18 (2021-07):** ![Stiffness Diff t=18](../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00018.png)
-  - **t=23 (2021-12):** ![Stiffness Diff t=23](../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00023.png)
+  - **t=12 (2021-01):** ![Stiffness Diff t=12](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00012.png)
+  - **t=18 (2021-07):** ![Stiffness Diff t=18](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00018.png)
+  - **t=23 (2021-12):** ![Stiffness Diff t=23](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00023.png)
 * **Interpretation:**
   Red stiffness differences at t=12 capture the congestion onset at Shijo-Karasuma, spreading to parallel roads by t=18 and t=23 (vascular gridlock).
 
@@ -95,9 +95,9 @@ The maximum spectral radius $\rho$ saturates at **`1.0000`** (Perron-Frobenius b
 
 ### ② Multi-Order Jacobian Trajectory Analysis
 * **Order-wise Jacobian Heatmaps (t=12 / 2021-01):**
-  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](../../samples/Sample_5_Kyoto_Traffic/readme_plots/jacobian_order_1st.t.00012.png)
-  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](../../samples/Sample_5_Kyoto_Traffic/readme_plots/jacobian_order_2nd.t.00012.png)
-  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](../../samples/Sample_5_Kyoto_Traffic/readme_plots/jacobian_order_3rd.t.00012.png)
+  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/jacobian_order_1st.t.00012.png)
+  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/jacobian_order_2nd.t.00012.png)
+  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/jacobian_order_3rd.t.00012.png)
 * **Interpretation:**
   Sensitivity does not decay in higher orders, showing that local bottlenecks act as a global gridlock wave affecting all intersections.
 

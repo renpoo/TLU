@@ -6,6 +6,9 @@ This table compares the maximum (or minimum) physical anomaly signatures across 
 |-------------|----------------------------------------|----------------------------------|------------------------|-----------------------------------|
 | Sample_0_Healthy | 0.00 | 0.0000 | 2247308.52 | 0.00 |
 | Sample_1_Wash_Trade | 0.00 | 0.7488 | 2263565.62 | 0.00 |
+| Sample_10_ERP_Traditional | 0.00 | 0.0000 | 4368745.12 | 0.00 |
+| Sample_11_ERP_ABC | 0.00 | 0.0000 | 4049318.44 | 0.00 |
+| Sample_12_ERP_TABC | 0.00 | 0.0000 | 4043663.17 | 0.00 |
 | Sample_2_Embezzlement_Leak | 364.53 | 0.0000 | 2215301.96 | 0.00 |
 | Sample_3_Unbalanced_Mistake | 906.29 | 0.0000 | 2238207.89 | 0.00 |
 | Sample_4_Composite_Chaos | 4773.57 | 0.7861 | 2332402.30 | 0.00 |

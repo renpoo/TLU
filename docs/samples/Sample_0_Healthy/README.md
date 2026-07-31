@@ -53,9 +53,9 @@ The thermodynamic T-S diagram depicts a healthy open subsystem with optimal entr
 Principal Component Analysis (PCA) shows that the PC1 EVR is low and loadings are highly dispersed. No specific channels freeze or lock (Arteriosclerosis).
 
 ### ⑤ Shockwaves (Jerk and Snap Trends)
-![3D Jerk](../../samples/Sample_0_Healthy/readme_plots/000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../samples/Sample_0_Healthy/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](../../samples/Sample_0_Healthy/readme_plots/000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../samples/Sample_0_Healthy/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **Mathematical Bridge:**
   The higher-order derivatives Jerk (rate of change of acceleration) and Snap (rate of change of Jerk) remain completely flat at zero. This mathematically proves that the system does not suffer from sudden, erratic payment shocks or settlement knocks.
@@ -82,9 +82,9 @@ Principal Component Analysis (PCA) shows that the PC1 EVR is low and loadings ar
 
 ### ⚡ Stiffness Temporal Difference ($\Delta K_t$)
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=1**: ![Stiffness Diff t=1](../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00001.png)
-  - **t=6**: ![Stiffness Diff t=6](../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00006.png)
-  - **t=11**: ![Stiffness Diff t=11](../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00011.png)
+  - **t=1**: ![Stiffness Diff t=1](../../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **t=6**: ![Stiffness Diff t=6](../../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00006.png)
+  - **t=11**: ![Stiffness Diff t=11](../../../samples/Sample_0_Healthy/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 
 * **Mathematical Bridge:**
   The difference $\Delta K_t$ is flat at white throughout, showing that the transaction pathways retain complete elasticity and no blockages form over time.
