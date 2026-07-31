@@ -61,9 +61,18 @@ A directory of the 10 validation samples built into the TLU environment. Click o
 * **[🔴 Sample 8: fMRI Stroke](./Sample_8_fMRI_Stroke/README.md)**
   * **Domain:** Brain fMRI | **Clinical Metaphor:** Cerebral Blockage / Local Qi Depletion
   * **Summary:** BOLD signal flow to the motor cortex drops by 95% at t=30. The loss of active mass triggers local stiffness lock and paralysis.
-* **[🔴 Sample 9: fMRI Seizure](./Sample_9_fMRI_Seizure/README.md)**
-  * **Domain:** Brain fMRI | **Clinical Metaphor:** Global Hyper-synchrony / Qi Runaway
-  * **Summary:** Epileptic burst at the temporal lobe forces the entire brain into phase-locked sinusoidal synchrony, wiping out cognitive informational complexity.
+* **[🔴 Sample 9: fMRI Seizure / Epileptic Burst](./Sample_9_fMRI_Seizure/README.md)**
+  * **Domain:** Neural | **Diagnosis:** Global Hyper-synchrony
+  * **Summary:** Pathological phase-locking across brain regions, leading to severe drop in entropy.
+* **[🟢 Sample 10: ERP Traditional / Labor-Hours Allocation](./Sample_10_ERP_Traditional/README.md)**
+  * **Domain:** ERP Accounting | **Diagnosis:** Congestion & Blood Stasis
+  * **Summary:** Traditional direct labor-hours allocation resulting in 89.0% cost over-concentration on Product A.
+* **[🟢 Sample 11: ERP Standard ABC / Multi-Pool Allocation](./Sample_11_ERP_ABC/README.md)**
+  * **Domain:** ERP Accounting | **Diagnosis:** Harmonious Flow & Pulsation
+  * **Summary:** Standard ABC allocation restoring true 1:1 resource consumption across machine, setup, and inspection activities.
+* **[🟢 Sample 12: ERP Dynamic T-ABC / Thermodynamic Allocation](./Sample_12_ERP_TABC/README.md)**
+  * **Domain:** ERP Accounting | **Diagnosis:** Yin-Yang Balance & Waste Expulsion
+  * **Summary:** Dynamically isolates irreversible process friction loss $\alpha(t)$ computed from daily activity volatility.
 
 ---
 

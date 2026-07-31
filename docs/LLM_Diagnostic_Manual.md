@@ -24,9 +24,10 @@ The TLU engine outputs plots and CSVs from various analysis modules. When interp
 * **[000_0: Statistics](samples/000_0_Basic_Statistics.md)** / **[000_1: Kinematics](samples/000_1_Dynamics_Kinematics.md)** / **[000_2: Stiffness & PCA](samples/000_2_Stiffness_PCA.md)**
 * **[001_1: Thermodynamics](samples/001_1_Thermodynamics.md)** / **[001_2: Local Entropy](samples/001_2_Local_Entropy.md)** / **[001_3: Local Temperature](samples/001_3_Local_Temperature.md)** / **[001_4: Local Energy Gradient](samples/001_4_Local_Gradient.md)**
 * **[002_1: Information Geometry](samples/002_1_Information_Geometry.md)** / **[002_2: Conservation & Auditing](samples/002_2_Forensics.md)**
-* **[003_1: Kinematics](samples/003_1_Kinematics.md)** / **[003_2: Jacobian Trajectory](samples/003_2_Jacobian_Trajectory.md)**
+* **[003_1: Inverse Kinematics](samples/003_1_Kinematics.md)** / **[003_2: Jacobian Trajectories](samples/003_2_Jacobian_Trajectory.md)**
 * **[004_1: LQR Control](samples/004_1_Control_Theory.md)** / **[004_2: Intervention Sensitivity](samples/004_2_Stability.md)**
-* **[005_1: Wave Mechanics](samples/005_1_Wave_Mechanics.md)** / **[005_2: 1/f Fluctuation](samples/005_2_Coherence.md)**
+* **[005_1: Wave Mechanics](samples/005_1_Wave_Mechanics.md)** / **[005_2: 1/f Noise](samples/005_2_Coherence.md)**
+* **[ERP Cost Allocation Case Studies: Sample 10, 11, 12](samples/Sample_10_ERP_Traditional/README.md)** (Traditional, ABC, and Dynamic T-ABC Cost Allocation)
 
 Apply the thresholds, limits, and mathematical definitions detailed in these guides to establish your diagnosis. Each module corresponds to a specific physical context:
 
