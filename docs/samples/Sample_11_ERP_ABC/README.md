@@ -20,7 +20,7 @@
 ## 1. Systemic Pathology Diagnosis (Standard ABC Allocation)
 
 ### Standard Activity-Based Costing (Multi-Pool Harmonization)
-![System Stability](../../../samples/Sample_11_ERP_ABC/readme_plots/004_1_2__system_stability.png)
+![System Stability](../../samples/Sample_11_ERP_ABC/readme_plots/004_1_2__system_stability.png)
 * **Mathematical Bridge Explanation:**
   Spectral radius ($\rho$) trajectory over time. Holds at `0.0000` throughout all periods, confirming smooth multi-pool cost circulation without cyclic lock.
 
@@ -31,29 +31,29 @@
 Evaluates organizational cost flow dynamics using Eastern Medicine parameters.
 
 ### ① Body Size (Total Manufacturing Capital)
-![B/S Trend](../../../samples/Sample_11_ERP_ABC/readme_plots/000_0_1__BS_Trend.png)
+![B/S Trend](../../samples/Sample_11_ERP_ABC/readme_plots/000_0_1__BS_Trend.png)
 * **Mathematical Bridge Explanation:**
   Total assets and liabilities trend. Proves multi-pool driver tracking causes zero physical mass leakage (zero journal imbalance).
 
 ### ② Immunity (Restored Product Margins)
-![P/L Trend](../../../samples/Sample_11_ERP_ABC/readme_plots/000_0_1__PL_Trend.png)
+![P/L Trend](../../samples/Sample_11_ERP_ABC/readme_plots/000_0_1__PL_Trend.png)
 * **Mathematical Bridge Explanation:**
   Cumulative P/L cost trends. COGS between Product A and Product B aligns with true 1:1 effort, strengthening global margin defense (Immunity).
 
 ### ③ Autonomic System (Fluid Thermodynamic Entropy)
-![T-S Diagram](../../../samples/Sample_11_ERP_ABC/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+![T-S Diagram](../../samples/Sample_11_ERP_ABC/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 * **Mathematical Bridge Explanation:**
   Thermodynamic entropy vs temperature. Entropy rises to **$S = 3.1100$**, restoring system degrees of freedom and functional fluidity.
 
 ### ④ Arteriosclerosis (Decoupled PCA Loadings)
-![PCA Principal Axes](../../../samples/Sample_11_ERP_ABC/readme_plots/000_2_2__principal_axes_ratio.png)
+![PCA Principal Axes](../../samples/Sample_11_ERP_ABC/readme_plots/000_2_2__principal_axes_ratio.png)
 * **Mathematical Bridge Explanation:**
   PCA PC1 dominance ratio. PC1 loading unlocks from single-driver dominance, dispersing variance across multiple activity dimensions.
 
 ### ⑤ Pulse Irregularity & Wave Propagation
-![3D Jerk](../../../samples/Sample_11_ERP_ABC/readme_plots/000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../samples/Sample_11_ERP_ABC/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](../../../samples/Sample_11_ERP_ABC/readme_plots/000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../samples/Sample_11_ERP_ABC/readme_plots/000_1_10__3d_dynamics_snap.png)
 * **Mathematical Bridge Explanation:**
   Jerk and Snap dynamic pulse plots. Captures discrete, activity-driven pulses synchronized with actual shop-floor setup and inspection events.
 
@@ -62,12 +62,12 @@ Evaluates organizational cost flow dynamics using Eastern Medicine parameters.
 ## 3. Local Stagnation & Symbiotic Interventions
 
 ### ⚠️ Local Stiffness (Product B Setup Effort)
-![3D Phase Ribbon](../../../samples/Sample_11_ERP_ABC/readme_plots/000_1_8__phase_portrait_3d.png)
+![3D Phase Ribbon](../../samples/Sample_11_ERP_ABC/readme_plots/000_1_8__phase_portrait_3d.png)
 * **Mathematical Bridge Explanation:**
   3D state-space trajectory ribbon. Accurately visualizes Product B's true setup/inspection activity mass within **`ACC_Finished_Goods_DPT_Prod_B`**.
 
 ### 🎯 Target Acupuncture Point (Tsubo)
-![Sensitivity Matrix](../../../samples/Sample_11_ERP_ABC/readme_plots/004_2_1__sensitivity_matrix.png)
+![Sensitivity Matrix](../../samples/Sample_11_ERP_ABC/readme_plots/004_2_1__sensitivity_matrix.png)
 * **Mathematical Bridge Explanation:**
   LQR sensitivity matrix map. Adjustments at **`ACC_Finished_Goods_DPT_Prod_B`** and **`ACC_COGS_DPT_Prod_B`** offer optimal control leverage for process automation.
 
@@ -76,9 +76,9 @@ Evaluates organizational cost flow dynamics using Eastern Medicine parameters.
 
 ### ⚡ Vascular Stiffness Sequence
 - **Stiffness Difference Heatmap Sequence**:
-  - **Initial (t=1)**: ![Stiffness Diff t=1](../../../samples/Sample_11_ERP_ABC/readme_plots/000_2_4__stiffness_diff.t.00001.png)
-  - **Mid (t=6)**: ![Stiffness Diff t=6](../../../samples/Sample_11_ERP_ABC/readme_plots/000_2_4__stiffness_diff.t.00006.png)
-  - **Final (t=11)**: ![Stiffness Diff t=11](../../../samples/Sample_11_ERP_ABC/readme_plots/000_2_4__stiffness_diff.t.00011.png)
+  - **Initial (t=1)**: ![Stiffness Diff t=1](../../samples/Sample_11_ERP_ABC/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **Mid (t=6)**: ![Stiffness Diff t=6](../../samples/Sample_11_ERP_ABC/readme_plots/000_2_4__stiffness_diff.t.00006.png)
+  - **Final (t=11)**: ![Stiffness Diff t=11](../../samples/Sample_11_ERP_ABC/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 * **Mathematical Bridge Explanation:**
   Stiffness difference ($\Delta K_t$) heatmaps over time. Confirms flexible, activity-driven energy transport without rigid structural locking.
 

@@ -20,7 +20,7 @@
 ## 1. 総合病態診断（標準活動基準原価計算による是正）
 
 ### 標準活動基準原価計算（活動プール分散による疎通）
-![システム安定度](../../../samples/Sample_11_ERP_ABC/readme_plots/004_1_2__system_stability.png)
+![システム安定度](readme_plots/004_1_2__system_stability.png)
 * **数理ブリッジ説明:**
   システム全体の閉路還流度（スペクトル半径）の時系列推移です。全期間にわたり `0.0000` で安定し、複数活動プールからの非同期な原価流動がスムーズに循環・自己減衰している健全性を表しています。
 
@@ -31,29 +31,29 @@
 企業の原価循環能力を、東洋医学的メタファーに基づく体質パラメータとして評価します。
 
 ### ① 体格 (総製造資本の規模)
-![B/S累積トレンド](../../../samples/Sample_11_ERP_ABC/readme_plots/000_0_1__BS_Trend.png)
+![B/S累積トレンド](readme_plots/000_0_1__BS_Trend.png)
 * **数理ブリッジ説明:**
   B/S総資産および負債残高の推移です。資本総額は保存されており、活動配賦の細分化によっても物理的な質量漏洩（仕訳ミス・粉飾）が発生しないことを証明しています。
 
 ### ② 免疫力 (製品間バランスの正常化)
-![P/L累積トレンド](../../../samples/Sample_11_ERP_ABC/readme_plots/000_0_1__PL_Trend.png)
+![P/L累積トレンド](readme_plots/000_0_1__PL_Trend.png)
 * **数理ブリッジ説明:**
   損益累積トレンドです。製品Aと製品Bの売上原価（COGS）が適正な実態比率（約 1:1）で計上され、特定製品への不当な赤字押し付けが解消されて組織全体の採算防衛力（免疫力）が向上しています。
 
 ### ③ 自律神経 (活動分散による流動エントロピー)
-![T-Sダイアグラム](../../../samples/Sample_11_ERP_ABC/readme_plots/001_1_3__thermodynamics_ts_diagram.png)
+![T-Sダイアグラム](readme_plots/001_1_3__thermodynamics_ts_diagram.png)
 * **数理ブリッジ説明:**
   配賦の多様性と熱力学エントロピーの関係図です。エントロピーが **$S = 3.1100$** へ上昇しており、多角的な活動プールによりシステムの情報自由度が復活し、高い動的柔軟性を達成しています。
 
 ### ④ 動脈硬化 (特定配賦基準への依存度評価)
-![PCA主要軸比率](../../../samples/Sample_11_ERP_ABC/readme_plots/000_2_2__principal_axes_ratio.png)
+![PCA主要軸比率](readme_plots/000_2_2__principal_axes_ratio.png)
 * **数理ブリッジ説明:**
   PCA第1主成分の支配率です。支配比率が低下して多次元に分散しており、単一の作業時間基準への拘束（動脈硬化）が完全に解かれ、流動的な原価構造が維持されていることを示しています。
 
 ### ⑤ 脈の乱れと波及（動的活動パルス）
-![3D Jerk](../../../samples/Sample_11_ERP_ABC/readme_plots/000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](../../../samples/Sample_11_ERP_ABC/readme_plots/000_1_10__3d_dynamics_snap.png)
+![3D Snap](readme_plots/000_1_10__3d_dynamics_snap.png)
 * **数理ブリッジ説明:**
   原価配賦の加速度急変（Jerk）および Snap 応答です。段取り替えや品質検査の実施タイミングに同期した細かな動的パルスを検出しており、現場の実態活動と原価発生がリアルタイムに運動整合していることを証明しています。
 
@@ -62,12 +62,12 @@
 ## 3. 主要な滞留と共生介入
 
 ### ⚠️ 肩こり (製品Bの段取り・検査負荷)
-![3D相空間軌道](../../../samples/Sample_11_ERP_ABC/readme_plots/000_1_8__phase_portrait_3d.png)
+![3D相空間軌道](readme_plots/000_1_8__phase_portrait_3d.png)
 * **数理ブリッジ説明:**
   3次元相空間の流動リボン図です。**`ACC_Finished_Goods_DPT_Prod_B`**（製品B完成品）領域に、多頻度な段取りと検査に伴う適正な原価質量が可視化（肩こりとして捕捉）されています。
 
 ### 🎯 治療点「ツボ」 (最適改善ポイント)
-![制御感度行列](../../../samples/Sample_11_ERP_ABC/readme_plots/004_2_1__sensitivity_matrix.png)
+![制御感度行列](readme_plots/004_2_1__sensitivity_matrix.png)
 * **数理ブリッジ説明:**
   配賦制御における介入感度行列です。**`ACC_Finished_Goods_DPT_Prod_B`** および **`ACC_COGS_DPT_Prod_B`** への調整が、製品Bの製造効率化とプライシング適正化を推進するためのツボであることを示しています。
 
@@ -76,9 +76,9 @@
 
 ### ⚡ 決済血管の時間的急変（剛性時間差分）
 - **剛性時間差分ヒートマップシーケンス (縦一列表示)**:
-  - **初期 (t=1)**: ![Stiffness Diff t=1](../../../samples/Sample_11_ERP_ABC/readme_plots/000_2_4__stiffness_diff.t.00001.png)
-  - **中間 (t=6)**: ![Stiffness Diff t=6](../../../samples/Sample_11_ERP_ABC/readme_plots/000_2_4__stiffness_diff.t.00006.png)
-  - **最終 (t=11)**: ![Stiffness Diff t=11](../../../samples/Sample_11_ERP_ABC/readme_plots/000_2_4__stiffness_diff.t.00011.png)
+  - **初期 (t=1)**: ![Stiffness Diff t=1](readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **中間 (t=6)**: ![Stiffness Diff t=6](readme_plots/000_2_4__stiffness_diff.t.00006.png)
+  - **最終 (t=11)**: ![Stiffness Diff t=11](readme_plots/000_2_4__stiffness_diff.t.00011.png)
 * **数理ブリッジ説明:**
   配賦剛性の時間変化ヒートマップです。複数プールによる動的配賦が行われており、過度な剛性凝固を伴わずに各タイムステップの活動量に応じた柔軟なエネルギー移動が行われている様子を証明しています。
 
