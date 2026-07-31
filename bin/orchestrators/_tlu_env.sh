@@ -22,6 +22,10 @@ cd "${TLU_PROJECT_ROOT}"
 # Export PYTHONPATH so Python can recognize 'src' folder as a module
 export PYTHONPATH="${TLU_PROJECT_ROOT}:${PYTHONPATH:-}"
 
+# Export MPLCONFIGDIR to project scratch cache to prevent font-cache rebuilding overhead
+export MPLCONFIGDIR="${TLU_PROJECT_ROOT}/scratch/matplotlib_cache"
+mkdir -p "${MPLCONFIGDIR}"
+
 # --- 1. Docker Commands ---
 export TLU_PY="python3"
 # export TLU_PY="docker compose exec -T -e TARGET_ENV=${TARGET_ENV:-workspace} tlu-engine python3"
