@@ -84,9 +84,16 @@ else
 fi
 
 # 3. Sequential execution of each analysis process
+ELAPSED_TIMES=()
+total_start=$(date +%s)
+
 for script in "${SCRIPTS[@]}"; do
     echo -e "\n[EXECUTING] ${script}"
+    start_time=$(date +%s)
     bash "${ORCH_DIR}/${script}"
+    end_time=$(date +%s)
+    elapsed=$((end_time - start_time))
+    ELAPSED_TIMES+=($elapsed)
 done
 
 find . -name "* 2.md" -delete
@@ -94,6 +101,23 @@ find . -name "* 2.csv" -delete
 find . -name "* 2.json" -delete
 
 echo -e "\n[EXECUTING] Meta-Diagnosis Engine"
+start_time=$(date +%s)
 bash "bin/run_meta_diagnosis.sh"
+end_time=$(date +%s)
+diag_elapsed=$((end_time - start_time))
+
+total_end=$(date +%s)
+total_elapsed=$((total_end - total_start))
+
+echo -e "\n=================================================="
+echo "      TLU Batch Processing Execution Summary      "
+echo "=================================================="
+for i in "${!SCRIPTS[@]}"; do
+    printf "%-50s : %d sec\n" "${SCRIPTS[$i]}" "${ELAPSED_TIMES[$i]}"
+done
+printf "%-50s : %d sec\n" "run_meta_diagnosis.sh" "$diag_elapsed"
+echo "--------------------------------------------------"
+echo "Total Calculation Time: $total_elapsed sec"
+echo "=================================================="
 
 echo -e "\nBatch processing completed successfully."

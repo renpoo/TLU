@@ -100,11 +100,18 @@ echo ">>> Generating Primary Macro-Dashboards..."
 mkdir -p "${BASE_PLOT_DIR}"
 export TLU_PLOT_DIR="${BASE_PLOT_DIR}"
 
+PRIMARY_ELAPSED=()
+total_viz_start=$(date +%s)
+
 for script in "${PRIMARY_SCRIPTS[@]}"; do
     if [ -f "${VIZ_ORCH_DIR}/${script}" ]; then
+        start_time=$(date +%s)
         bash "${VIZ_ORCH_DIR}/${script}"
+        end_time=$(date +%s)
+        PRIMARY_ELAPSED+=($((end_time - start_time)))
     else
         echo "[WARN] Script not found: ${script}"
+        PRIMARY_ELAPSED+=(0)
     fi
 done
 
@@ -112,11 +119,16 @@ echo ">>> Generating Support Diagnostics..."
 mkdir -p "${BASE_PLOT_DIR}/support"
 export TLU_PLOT_DIR="${BASE_PLOT_DIR}/support"
 
+SUPPORT_ELAPSED=()
 for script in "${SUPPORT_SCRIPTS[@]}"; do
     if [ -f "${VIZ_ORCH_DIR}/${script}" ]; then
+        start_time=$(date +%s)
         bash "${VIZ_ORCH_DIR}/${script}"
+        end_time=$(date +%s)
+        SUPPORT_ELAPSED+=($((end_time - start_time)))
     else
         echo "[WARN] Script not found: ${script}"
+        SUPPORT_ELAPSED+=(0)
     fi
 done
 
@@ -124,6 +136,23 @@ find . -name "* 2.png" -delete
 
 # Restore the original plot dir just in case
 export TLU_PLOT_DIR="${BASE_PLOT_DIR}"
+
+echo -e "\n=================================================="
+echo "      TLU Visualization Execution Summary         "
+echo "=================================================="
+echo ">>> Primary Macro-Dashboards:"
+for i in "${!PRIMARY_SCRIPTS[@]}"; do
+    printf "  %-50s : %d sec\n" "${PRIMARY_SCRIPTS[$i]}" "${PRIMARY_ELAPSED[$i]}"
+done
+echo ">>> Support Diagnostics:"
+for i in "${!SUPPORT_SCRIPTS[@]}"; do
+    printf "  %-50s : %d sec\n" "${SUPPORT_SCRIPTS[$i]}" "${SUPPORT_ELAPSED[$i]}"
+done
+echo "--------------------------------------------------"
+total_viz_end=$(date +%s)
+total_viz_elapsed=$((total_viz_end - total_viz_start))
+echo "Total Visualization Time: $total_viz_elapsed sec"
+echo "=================================================="
 
 echo "--------------------------------------------------"
 echo "✅ All visualizations completed successfully."
