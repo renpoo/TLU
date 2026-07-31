@@ -1,0 +1,43 @@
+# ==============================================================================
+# TLU System Configuration Parameters (_sys_params.csv) - ACCOUNT x DEPT MODE
+# ==============================================================================
+input_csv,input_stream/Aggregated_Journal_Stream.csv
+col_trans_date,t_idx
+col_src,src_idx
+col_tgt,tgt_idx
+col_amount,value
+
+time_granularity,month
+observation_window_steps,3
+damping_factor,0.85
+tikhonov_lambda,0.0001
+
+thermo_work_labels,ACC_Sales_Revenue_DPT_Sales
+thermo_heat_labels,ACC_Travel_Exp_DPT_Sales,ACC_Rent_Exp_DPT_Admin,ACC_Payroll_Exp_DPT_Admin,ACC_COGS_DPT_Prod_A,ACC_COGS_DPT_Prod_B,ACC_Direct_Labor_Exp_DPT_Prod_A,ACC_Direct_Labor_Exp_DPT_Prod_B,ACC_Mfg_Overhead_Exp_DPT_Mfg_Support
+
+anomaly_z_score_threshold,3.0
+leak_tolerance,1.0
+kl_drift_thresh,2.0
+
+thresh_z_score,3.0
+thresh_spectral_radius,0.95
+thresh_fractal_lower,0.5
+thresh_fractal_upper,1.5
+thresh_manifold_svd,1e-10
+target_phase_frequency,0.25
+
+lqr_controllable_labels,ACC_COGS_DPT_Prod_A,ACC_COGS_DPT_Prod_B,ACC_Rent_Exp_DPT_Admin,ACC_Payroll_Exp_DPT_Admin,ACC_Travel_Exp_DPT_Sales,ACC_Direct_Labor_Exp_DPT_Prod_A,ACC_Direct_Labor_Exp_DPT_Prod_B,ACC_Mfg_Overhead_Exp_DPT_Mfg_Support
+lqr_target_state,ACC_Sales_Revenue_DPT_Sales:10000
+lqr_q_weight,1.0
+lqr_r_weight,0.1
+kinematics_max_k,5
+
+fk_input_mode,actual
+fk_static_dq_labels,ACC_Sales_Revenue_DPT_Sales:10000
+ik_target_labels,ACC_Sales_Revenue_DPT_Sales:10000.0
+sensitivity_delta,10.0
+
+auto_tune_enabled,True
+auto_tune_burn_in_period,12
+phase_window_size,7
+phase_step_size,1

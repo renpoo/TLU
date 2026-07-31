@@ -1,0 +1,17 @@
+node_idx,node_label
+0,ACC_Accounts_Payable_DPT_Admin
+1,ACC_Accounts_Receivable_DPT_Admin
+2,ACC_COGS_DPT_Prod_A
+3,ACC_COGS_DPT_Prod_B
+4,ACC_Cash_DPT_Admin
+5,ACC_Finished_Goods_DPT_Prod_A
+6,ACC_Finished_Goods_DPT_Prod_B
+7,ACC_Mfg_Overhead_Exp_DPT_Mfg_Support
+8,ACC_Raw_Materials_DPT_Ops
+9,ACC_Sales_Revenue_DPT_Sales
+10,ACC_Work_In_Process_DPT_Prod_A
+11,ACC_Work_In_Process_DPT_Prod_B
+12,ACC_Cash
+13,ACC_Raw_Materials
+14,ACC_Finished_Goods
+15,ACC_Equity_Capital
