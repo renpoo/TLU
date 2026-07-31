@@ -125,6 +125,9 @@ TLU includes 10 packaged validation datasets:
 | **7** | **[🟢 Inter-Shareholder Cash Settlement (Market Cash Flow)](samples/Sample_7_Market_Cash_Flow/README.md)** | Market | **NORMAL** | $\rho$ = 1.00, Residual = 0.00 | Balanced Cash Circulation |
 | **8** | **[🔴 Focal Cerebral Ischemia (fMRI Stroke)](samples/Sample_8_fMRI_Stroke/README.md)** | Neural | **CRITICAL** | 95% flow cut, Stiffness Rigid Lock | Cerebral Block / Local Necrosis |
 | **9** | **[🔴 Epileptic Synchrony Burst (fMRI Seizure)](samples/Sample_9_fMRI_Seizure/README.md)** | Neural | **CRITICAL** | $\rho$ = 1.00, Entropy vertical fall | Global Hyper-synchrony |
+| **10** | **[🟢 ERP Traditional Overhead Allocation](samples/Sample_10_ERP_Traditional/README.md)** | ERP | **NORMAL** | Labor hours locked, $S$=2.66 | Congestion & Blood Stasis |
+| **11** | **[🟢 ERP Standard Activity-Based Costing (ABC)](samples/Sample_11_ERP_ABC/README.md)** | ERP | **NORMAL** | Multi-pool ABC, $S$=3.11 | Harmonious Flow & Pulsation |
+| **12** | **[🟢 ERP Dynamic Thermodynamic Costing (T-ABC)](samples/Sample_12_ERP_TABC/README.md)** | ERP | **NORMAL** | Autonomous friction loss $\alpha(t)$, $S$=3.11 | Yin-Yang Balance & Waste Expulsion |
 
 ---
 

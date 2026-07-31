@@ -51,9 +51,9 @@ The T-S diagram shows a locked trajectory post-t=12, representing severe loss of
 PCA PC1 EVR spikes post-restriction, proving that the flow pathways have lost elasticity and are locked onto congested routes (Arteriosclerosis).
 
 ### ⑤ Shockwaves (Jerk and Snap Trends)
-![3D Jerk](../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **Mathematical Bridge:**
   Jerk and Snap exhibit persistent high-frequency spikes post-t=12. This mathematically proves that drivers suffer from continuous stop-and-go braking shocks and queue ripples.
@@ -80,9 +80,9 @@ PCA PC1 EVR spikes post-restriction, proving that the flow pathways have lost el
 
 ### ⚡ Stiffness Temporal Difference ($\Delta K_t$)
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=12**: ![Stiffness Diff t=12](../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00012.png)
-  - **t=18**: ![Stiffness Diff t=18](../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00018.png)
-  - **t=23**: ![Stiffness Diff t=23](../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00023.png)
+  - **t=12**: ![Stiffness Diff t=12](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00012.png)
+  - **t=18**: ![Stiffness Diff t=18](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00018.png)
+  - **t=23**: ![Stiffness Diff t=23](../../../samples/Sample_5_Kyoto_Traffic/readme_plots/000_2_4__stiffness_diff.t.00023.png)
 
 * **Mathematical Bridge:**
   The difference $\Delta K_t$ spikes red at t=12 on Shijo-Karasuma, spreading to parallel and bypass arteries by t=18 and t=23, capturing the expansion of the traffic gridlock.

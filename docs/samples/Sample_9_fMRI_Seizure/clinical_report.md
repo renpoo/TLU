@@ -73,9 +73,9 @@ Descriptive statistics from [result.000_1_1_filter_dynamics.analysis.csv](../../
 
 ### ② Stiffness Temporal Difference ($\Delta K_t = K_t - K_{t-1}$) Analysis
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=30 (10:05:00):** ![Stiffness Diff t=30](../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00030.png)
-  - **t=45 (10:07:30):** ![Stiffness Diff t=45](../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00045.png)
-  - **t=59 (10:09:50):** ![Stiffness Diff t=59](../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00059.png)
+  - **t=30 (10:05:00):** ![Stiffness Diff t=30](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00030.png)
+  - **t=45 (10:07:30):** ![Stiffness Diff t=45](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00045.png)
+  - **t=59 (10:09:50):** ![Stiffness Diff t=59](../../../samples/Sample_9_fMRI_Seizure/readme_plots/000_2_4__stiffness_diff.t.00059.png)
 * **Interpretation:**
   The difference $\Delta K_t$ spikes red globally at t=30 (onset of synchronous burst), and drops to zero (white) afterward, proving dynamic lock.
 
@@ -93,9 +93,9 @@ The spectral radius remains locked at **`1.0000`** post-t=30, indicating patholo
 
 ### ② Multi-Order Jacobian Trajectory Analysis
 * **Order-wise Jacobian Heatmaps (t=30 / 10:05:00):**
-  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](../../samples/Sample_9_fMRI_Seizure/readme_plots/jacobian_order_1st.t.00030.png)
-  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](../../samples/Sample_9_fMRI_Seizure/readme_plots/jacobian_order_2nd.t.00030.png)
-  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](../../samples/Sample_9_fMRI_Seizure/readme_plots/jacobian_order_3rd.t.00030.png)
+  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](../../../samples/Sample_9_fMRI_Seizure/readme_plots/jacobian_order_1st.t.00030.png)
+  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](../../../samples/Sample_9_fMRI_Seizure/readme_plots/jacobian_order_2nd.t.00030.png)
+  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](../../../samples/Sample_9_fMRI_Seizure/readme_plots/jacobian_order_3rd.t.00030.png)
 * **Interpretation:**
   Sensitivities fail to decay as order increases (1st → 2nd → 3rd), demonstrating uniform sensitivity saturation across the entire brain.
 

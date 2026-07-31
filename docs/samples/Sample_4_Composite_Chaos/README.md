@@ -53,9 +53,9 @@ The T-S diagram depicts transaction diversity loss and abnormal friction heat (E
 PCA EVR PC1 climbs to 95.28% and loadings freeze, proving that the flow pathways have lost elasticity and are locked onto the siphoning bypass and circular trading loops (Arteriosclerosis).
 
 ### ⑤ Shockwaves (Jerk and Snap Trends)
-![3D Jerk](../../samples/Sample_4_Composite_Chaos/readme_plots/000_1_9__3d_dynamics_jerk.png)
+![3D Jerk](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_1_9__3d_dynamics_jerk.png)
 
-![3D Snap](../../samples/Sample_4_Composite_Chaos/readme_plots/000_1_10__3d_dynamics_snap.png)
+![3D Snap](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_1_10__3d_dynamics_snap.png)
 
 * **Mathematical Bridge:**
   Jerk and Snap exhibit sharp spikes at t=1 and t=8, followed by severe high-frequency oscillations in late steps. This mathematically proves that the system suffers from sudden transaction shocks and final system knocking.
@@ -82,9 +82,9 @@ PCA EVR PC1 climbs to 95.28% and loadings freeze, proving that the flow pathways
 
 ### ⚡ Stiffness Temporal Difference ($\Delta K_t$)
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=1**: ![Stiffness Diff t=1](../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_4__stiffness_diff.t.00001.png)
-  - **t=5**: ![Stiffness Diff t=5](../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_4__stiffness_diff.t.00005.png)
-  - **t=8**: ![Stiffness Diff t=8](../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_4__stiffness_diff.t.00008.png)
+  - **t=1**: ![Stiffness Diff t=1](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **t=5**: ![Stiffness Diff t=5](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_4__stiffness_diff.t.00005.png)
+  - **t=8**: ![Stiffness Diff t=8](../../../samples/Sample_4_Composite_Chaos/readme_plots/000_2_4__stiffness_diff.t.00008.png)
 
 * **Mathematical Bridge:**
   The difference $\Delta K_t$ spikes red at t=1, t=5, and t=8, capturing the dynamic formation of both circular loops and siphoning bypass paths.

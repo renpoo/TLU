@@ -1,0 +1,97 @@
+{
+  "env_dir": "samples/Sample_12_ERP_TABC",
+  "date_analyzed": "2026-07-31 17:57:40",
+  "diagnoses": [
+    {
+      "pathology": "Fat-Tailed Entropy Spikes (Systemic Flash Crashes)",
+      "severity": "CRITICAL",
+      "evidence": "Kurtosis: 5.21, Anomalies (Z>3): 1 times.",
+      "interpretation": "The system experiences sudden, extreme bursts of friction (Black Swan events). The distribution is heavy-tailed, indicating unpredictable structural tearing rather than steady friction."
+    },
+    {
+      "pathology": "Abnormal Synchronization (Negative Entropy Skew)",
+      "severity": "HIGH",
+      "evidence": "Entropy Skewness: -2.49.",
+      "interpretation": "Entropy occasionally drops far below its median, suggesting periodic forced synchronization (e.g., market manipulation or forced liquidation)."
+    }
+  ],
+  "metrics": {
+    "mean_gross_activity": 6447177.224999999,
+    "relative_leak_ratio": 0.0,
+    "max_spectral": 0.0,
+    "min_stress": 7.616,
+    "max_viscosity": 764783.9986,
+    "min_viscosity": 458680.93200000003
+  },
+  "quartiles": {
+    "viscosity_q3": 41026.722466666666,
+    "strain_q1": 4.1306416666666665,
+    "strain_q3": 8.331666666666667,
+    "stiff_candidates": [
+      {
+        "node": "12_ACC_Cash",
+        "avg_viscosity": 100000.0,
+        "peak_time": "2020-01",
+        "peak_val": 100000.0
+      },
+      {
+        "node": "09_ACC_Sales_Revenue_DPT_Sales",
+        "avg_viscosity": 68738.88283333334,
+        "peak_time": "2020-12",
+        "peak_val": 131996.7315
+      },
+      {
+        "node": "13_ACC_Raw_Materials",
+        "avg_viscosity": 50000.0,
+        "peak_time": "2020-01",
+        "peak_val": 50000.0
+      },
+      {
+        "node": "14_ACC_Finished_Goods",
+        "avg_viscosity": 50000.0,
+        "peak_time": "2020-01",
+        "peak_val": 50000.0
+      }
+    ],
+    "tsubo_candidates": [
+      {
+        "node": "02_ACC_COGS_DPT_Prod_A",
+        "avg_strain": 2.6806750000000004
+      },
+      {
+        "node": "05_ACC_Finished_Goods_DPT_Prod_A",
+        "avg_strain": 2.839983333333333
+      },
+      {
+        "node": "03_ACC_COGS_DPT_Prod_B",
+        "avg_strain": 3.431875
+      },
+      {
+        "node": "10_ACC_Work_In_Process_DPT_Prod_A",
+        "avg_strain": 3.8786416666666668
+      }
+    ],
+    "kinki_candidates": [
+      {
+        "node": "09_ACC_Sales_Revenue_DPT_Sales",
+        "avg_strain": 8.3334
+      },
+      {
+        "node": "12_ACC_Cash",
+        "avg_strain": 8.331666666666667
+      },
+      {
+        "node": "13_ACC_Raw_Materials",
+        "avg_strain": 8.331666666666667
+      },
+      {
+        "node": "14_ACC_Finished_Goods",
+        "avg_strain": 8.331666666666667
+      },
+      {
+        "node": "15_ACC_Equity_Capital",
+        "avg_strain": 8.331666666666667
+      }
+    ]
+  }
+}

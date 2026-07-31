@@ -73,9 +73,9 @@ Descriptive statistics from [result.000_1_1_filter_dynamics.analysis.csv](../../
 
 ### ② Stiffness Temporal Difference ($\Delta K_t = K_t - K_{t-1}$) Analysis
 * **Stiffness Difference Heatmap Sequence:**
-  - **t=1 (2020-02):** ![Stiffness Diff t=1](../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00001.png)
-  - **t=2 (2020-03):** ![Stiffness Diff t=2](../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00002.png)
-  - **t=11 (2020-12):** ![Stiffness Diff t=11](../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00011.png)
+  - **t=1 (2020-02):** ![Stiffness Diff t=1](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00001.png)
+  - **t=2 (2020-03):** ![Stiffness Diff t=2](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00002.png)
+  - **t=11 (2020-12):** ![Stiffness Diff t=11](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/000_2_4__stiffness_diff.t.00011.png)
 * **Interpretation:**
   A red difference spike appears at t=1 (sudden entry mismatch), followed by a blue difference spike at t=2 (error correction), demonstrating elastic recovery.
 
@@ -93,9 +93,9 @@ The maximum spectral radius $\rho$ remains **`0.0000`** for all periods, proving
 
 ### ② Multi-Order Jacobian Trajectory Analysis
 * **Order-wise Jacobian Heatmaps (t=1 / 2020-02):**
-  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](../../samples/Sample_3_Unbalanced_Mistake/readme_plots/jacobian_order_1st.t.00001.png)
-  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](../../samples/Sample_3_Unbalanced_Mistake/readme_plots/jacobian_order_2nd.t.00001.png)
-  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](../../samples/Sample_3_Unbalanced_Mistake/readme_plots/jacobian_order_3rd.t.00001.png)
+  - **1st-Order ($J^{(1)}$):** ![Jacobian 1st](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/jacobian_order_1st.t.00001.png)
+  - **2nd-Order ($J^{(2)}$):** ![Jacobian 2nd](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/jacobian_order_2nd.t.00001.png)
+  - **3rd-Order ($J^{(3)}$):** ![Jacobian 3rd](../../../samples/Sample_3_Unbalanced_Mistake/readme_plots/jacobian_order_3rd.t.00001.png)
 * **Interpretation:**
   Jacobian matrices show a transient asymmetric pattern at t=1 but decay rapidly to zero, indicating that the network topology is stable.
 

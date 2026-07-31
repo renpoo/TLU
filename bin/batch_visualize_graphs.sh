@@ -100,30 +100,44 @@ echo ">>> Generating Primary Macro-Dashboards..."
 mkdir -p "${BASE_PLOT_DIR}"
 export TLU_PLOT_DIR="${BASE_PLOT_DIR}"
 
-for script in "${PRIMARY_SCRIPTS[@]}"; do
+# Detect CPU core count for parallel execution (Approach A)
+NPROC=$(sysctl -n hw.ncpu 2>/dev/null || nproc 2>/dev/null || echo 4)
+
+echo ">>> Generating Primary Macro-Dashboards in Parallel (Jobs: ${NPROC})..."
+mkdir -p "${BASE_PLOT_DIR}"
+export TLU_PLOT_DIR="${BASE_PLOT_DIR}"
+
+total_viz_start=$(date +%s)
+
+export VIZ_ORCH_DIR
+run_script() {
+    local script="$1"
     if [ -f "${VIZ_ORCH_DIR}/${script}" ]; then
         bash "${VIZ_ORCH_DIR}/${script}"
-    else
-        echo "[WARN] Script not found: ${script}"
     fi
-done
+}
+export -f run_script
 
-echo ">>> Generating Support Diagnostics..."
+printf "%s\n" "${PRIMARY_SCRIPTS[@]}" | xargs -P "${NPROC}" -I {} bash -c 'run_script "$@"' _ {}
+
+echo ">>> Generating Support Diagnostics in Parallel (Jobs: ${NPROC})..."
 mkdir -p "${BASE_PLOT_DIR}/support"
 export TLU_PLOT_DIR="${BASE_PLOT_DIR}/support"
 
-for script in "${SUPPORT_SCRIPTS[@]}"; do
-    if [ -f "${VIZ_ORCH_DIR}/${script}" ]; then
-        bash "${VIZ_ORCH_DIR}/${script}"
-    else
-        echo "[WARN] Script not found: ${script}"
-    fi
-done
+printf "%s\n" "${SUPPORT_SCRIPTS[@]}" | xargs -P "${NPROC}" -I {} bash -c 'run_script "$@"' _ {}
 
 find . -name "* 2.png" -delete
 
 # Restore the original plot dir just in case
 export TLU_PLOT_DIR="${BASE_PLOT_DIR}"
+
+echo -e "\n=================================================="
+echo "      TLU Visualization Execution Summary         "
+echo "=================================================="
+total_viz_end=$(date +%s)
+total_viz_elapsed=$((total_viz_end - total_viz_start))
+echo "Total Parallel Visualization Time: $total_viz_elapsed sec"
+echo "=================================================="
 
 echo "--------------------------------------------------"
 echo "✅ All visualizations completed successfully."

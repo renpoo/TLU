@@ -27,6 +27,7 @@ TLU エンジンは、さまざまな解析モジュールからグラフとデ�
 * **[003_1: 逆運動学](samples/003_1_Kinematics.md)** / **[003_2: ヤコビアン軌道](samples/003_2_Jacobian_Trajectory.md)**
 * **[004_1: LQR 制御](samples/004_1_Control_Theory.md)** / **[004_2: 介入感度](samples/004_2_Stability.md)**
 * **[005_1: 波動力学](samples/005_1_Wave_Mechanics.md)** / **[005_2: 1/f ゆらぎ](samples/005_2_Coherence.md)**
+* **[ERP原価配賦事例: Sample 10, 11, 12](samples/Sample_10_ERP_Traditional/README.md)** (伝統的配賦, ABC配賦, 動的T-ABC熱力学配賦)
 
 これらのガイドで定義されている閾値としきい値、および数理理論を適用して、初期の知見を確立してください。各モジュールは、特定の物理的文脈に対応しています。
 

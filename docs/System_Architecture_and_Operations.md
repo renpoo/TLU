@@ -45,9 +45,12 @@ TLU projects arbitrary ledger records onto a closed graph model. This projection
 
 ### Domain-to-Physics Mapping Rules
 
-* **Accounting Ledger Domain:**
-  * **Nodes:** Accounts (Cash, Accounts Receivable, Sales Revenue, COGS, etc.).
-  * **Edges:** Transaction values moving between accounts (moving mass).
+* **Financial Ledger Domain:**
+  * **Nodes:** Account ledgers (Cash, AR, Revenue, AP, etc.).
+  * **Edges:** Double-entry journal transaction amounts (Mass flow).
+* **ERP Cost Allocation & Management Accounting Domain:**
+  * **Nodes:** Fine-grained Account x Department coupled labels (`ACC_Finished_Goods_DPT_Prod_A`, etc.).
+  * **Edges:** Overhead allocation, material issue, and labor assignment entries (Dynamic activity mass).
 * **Urban Traffic Domain:**
   * **Nodes:** Road intersections.
   * **Edges:** Volume of vehicles flowing through road segments (fluid mass).
@@ -87,7 +90,17 @@ The TLU repository packs synthetic generators to inject anomalies into baseline 
 * **Anomaly Injection (t=51 / W52):** The outbound flow capacity of Shijo-Karasuma (`21_ShijoKarasuma`) is throttled by **95%**.
 * **Physical Consequence (t=52 to 70):** Back-up queues form. Entropy drops at upstream Shijo-Muromachi. Flow volatility at Shijo-Karasuma drops to zero, freezing its temperature at `1.87`. A steep temperature gradient of `+65.31` forms, draining global free energy.
 
-#### 2. Stock Market Collusion Generator (`src/filters/_0_0_generate_dummy_market.py`)
+#### 2. Financial Market Manipulation Generator (`src/filters/_0_0_generate_dummy_market.py`)
+
+* **Normal Period:** Whale transactions and retail trader noise.
+* **Anomaly Injection:** Matched wash trades executed repeatedly between specific accounts.
+
+#### 3. ERP Cost Allocation Generator (`src/filters/_0_0_generate_dummy_journal_erp.py`)
+
+* **Allocation Modes (`--allocation-mode`):** `traditional` (labor-hours allocation), `abc` (fixed multi-pool ABC), `tabc` (dynamic thermodynamic cost allocation).
+* **Dynamic Volatility Dissipation ($\alpha(t)$):** Dynamically computes irreversible process friction loss $\alpha(t)$ from daily activity volatility ($CV_{\text{activity}}$), isolating organizational waste from inventory costs.
+
+#### 4. Stock Market Collusion Generator (`src/filters/_0_0_generate_dummy_market.py`)
 
 * **Healthy Steady-State (t=0 to 38):** Regular market volatility driven by whale selling (`USR_002`) and retail trading (`USR_010`).
 * **Anomaly Injection (t=39 / W40 & t=45 / W46):** Colluding traders `USR_003` and `USR_004` execute 40 consecutive matched trades (equal price, equal size).
