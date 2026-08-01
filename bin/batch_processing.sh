@@ -107,6 +107,10 @@ end_time=$(date +%s)
 diag_elapsed=$((end_time - start_time))
 
 total_end=$(date +%s)
+# Step 6: Export unified JSON summary for TLU Studio / TLU-App
+echo ">>> Exporting Unified JSON Summary for TLU Studio..."
+$TLU_PY -m src.utils._99_export_json_summary
+
 total_elapsed=$((total_end - total_start))
 
 echo -e "\n=================================================="
