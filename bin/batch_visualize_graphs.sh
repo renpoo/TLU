@@ -68,6 +68,7 @@ SUPPORT_SCRIPTS=(
     "vis_001_2_2_visualize_lag_matrix.sh"
     "vis_002_1_1_visualize_info_geometry.sh"
     "vis_002_1_2_visualize_network_topology.sh"
+    "vis_002_1_2_1_visualize_network_topology_heatmap.sh"
     "vis_002_1_3_visualize_manifold_dimensionality.sh"
     "vis_002_2_2_visualize_micro_forensics.sh"
     "vis_003_1_1_visualize_fk_simulation.sh"
