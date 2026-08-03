@@ -184,7 +184,7 @@ t_idx,time_label,src_idx,src_label,tgt_idx,tgt_label,coherence,phase_shift
 5,2020-06,3,03_ACC_Cash,3,03_ACC_Cash,1.0,0.0
 6,2020-07,3,03_ACC_Cash,3,03_ACC_Cash,1.0,-0.0
 7,2020-08,3,03_ACC_Cash,3,03_ACC_Cash,1.0,-0.0
-8,2020-09,3,03_ACC_Cash,3,03_ACC_Cash,1.0,-0.0
+8,2020-09,3,03_ACC_Cash,3,03_ACC_Cash,1.0,0.0
 3,2020-04,3,03_ACC_Cash,4,04_ACC_Inventory,1.0,0.4806
 4,2020-05,3,03_ACC_Cash,4,04_ACC_Inventory,1.0,-0.1539
 5,2020-06,3,03_ACC_Cash,4,04_ACC_Inventory,1.0,-0.8598

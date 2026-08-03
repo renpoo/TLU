@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
+# ==========================================
+# _0_2_generate_financial_statements.py
+# TLU System: Utility & Simulation Layer
+# Category: Financial Statement Generator
+# Version: 6.0.0 (Refactored with AccountTaxonomy)
+# ==========================================
 import sys
 import argparse
 import pandas as pd
 import collections
 import json
 import os
+
+from src.core.core_accounting_taxonomy import AccountTaxonomy, AccountCategory
 
 def main():
     parser = argparse.ArgumentParser(description="Generate Financial Statements from TLU Graph Edges")
@@ -14,22 +22,21 @@ def main():
     args, unknown = parser.parse_known_args()
 
     from src.filters.cli_parser import parse_projector_args
-    # Pass unknown args to cli_parser to get column mappings (or it will default to sys_params)
     mapping_config = parse_projector_args(unknown)
     col_time = mapping_config.get("col_time", "Trans_Date")
     col_src = mapping_config.get("col_src", "Src")
     col_tgt = mapping_config.get("col_tgt", "Tgt")
     col_val = mapping_config.get("col_val", "Amount")
 
-    # Read mapping
+    custom_map = {}
     try:
         mapping_df = pd.read_csv(args.mapping)
-        account_map = dict(zip(mapping_df['Account_Name'], mapping_df['Category']))
+        custom_map = dict(zip(mapping_df['Account_Name'], mapping_df['Category']))
     except Exception as e:
-        print(f"Error reading mapping file: {e}", file=sys.stderr)
-        sys.exit(1)
+        print(f"[WARN] Could not read mapping file: {e}. Using default taxonomy.", file=sys.stderr)
 
-    # Read aggregated journal from stdin
+    taxonomy = AccountTaxonomy(custom_map)
+
     try:
         df = pd.read_csv(sys.stdin)
     except Exception as e:
@@ -39,13 +46,8 @@ def main():
     if df.empty:
         sys.exit(0)
 
-    # df has columns: Trans_Date, Src, Tgt, Amount
-    # Src = Credit, Tgt = Debit
-    
-    # Process transactions by week
     weeks = sorted(df[col_time].unique())
     
-    # Track cumulative debits and credits
     cum_debits = collections.defaultdict(float)
     cum_credits = collections.defaultdict(float)
     
@@ -57,8 +59,8 @@ def main():
             for _, row in init_df.iterrows():
                 acc = row.get("node_label", "")
                 val = float(row.get("initial_X", 0.0))
-                cat = account_map.get(acc, 'Expense')
-                if cat in ['Asset', 'Expense']:
+                cat = taxonomy.classify_account(acc)
+                if cat in (AccountCategory.ASSET, AccountCategory.EXPENSE):
                     cum_debits[acc] += val
                 else:
                     cum_credits[acc] += val
@@ -66,8 +68,8 @@ def main():
             print(f"[WARN] Failed to load initial state from {args.initial_state}: {e}", file=sys.stderr)
     
     def get_balance(account, dr, cr):
-        category = account_map.get(account, 'Expense') # Default to Expense if unknown
-        if category in ['Asset', 'Expense']:
+        cat = taxonomy.classify_account(account)
+        if cat in (AccountCategory.ASSET, AccountCategory.EXPENSE):
             return dr - cr
         else:
             return cr - dr
@@ -75,7 +77,6 @@ def main():
     for w in weeks:
         week_df = df[df[col_time] == w]
         
-        # Accumulate period
         for _, row in week_df.iterrows():
             src = row[col_src]
             tgt = row[col_tgt]
@@ -84,7 +85,6 @@ def main():
             cum_credits[src] += amt
             cum_debits[tgt] += amt
             
-        # Calculate balances for this week
         assets = 0.0
         liabilities = 0.0
         equity = 0.0
@@ -93,43 +93,44 @@ def main():
         
         bs_items = []
         pl_items = []
-        tb_items = [] # Trial Balance for Gross Flow
+        tb_items = []
         
         all_accounts = set(cum_debits.keys()) | set(cum_credits.keys())
         for acc in sorted(all_accounts):
             dr = cum_debits[acc]
             cr = cum_credits[acc]
             bal = get_balance(acc, dr, cr)
-            cat = account_map.get(acc, 'Expense')
+            cat_enum = taxonomy.classify_account(acc)
+            cat_str = cat_enum.value
             
-            # Record Gross Flow for Trial Balance
-            tb_items.append((acc, cat, dr, cr, bal))
+            tb_items.append((acc, cat_str, dr, cr, bal))
             
-            if cat == 'Asset':
+            if cat_enum == AccountCategory.ASSET:
                 if bal < 0:
-                    # Reclassify negative Asset to Liability (Overdraft/Short Position)
                     liabilities += -bal
                     bs_items.append((acc, 'Liability (Short/Overdraft)', -bal))
                 else:
                     assets += bal
-                    bs_items.append((acc, cat, bal))
-            elif cat == 'Liability':
+                    bs_items.append((acc, cat_str, bal))
+            elif cat_enum == AccountCategory.LIABILITY:
                 if bal < 0:
-                    # Reclassify negative Liability to Asset (Receivable)
                     assets += -bal
                     bs_items.append((acc, 'Asset (Receivable)', -bal))
                 else:
                     liabilities += bal
-                    bs_items.append((acc, cat, bal))
-            elif cat == 'Equity':
+                    bs_items.append((acc, cat_str, bal))
+            elif cat_enum == AccountCategory.EQUITY:
                 equity += bal
-                bs_items.append((acc, cat, bal))
-            elif cat == 'Revenue':
+                bs_items.append((acc, cat_str, bal))
+            elif cat_enum == AccountCategory.REVENUE:
                 revenue += bal
-                pl_items.append((acc, cat, bal))
-            elif cat == 'Expense':
+                pl_items.append((acc, cat_str, bal))
+            elif cat_enum == AccountCategory.EXPENSE:
                 expense += bal
-                pl_items.append((acc, cat, bal))
+                pl_items.append((acc, cat_str, bal))
+            else:
+                expense += bal
+                pl_items.append((acc, cat_str, bal))
         
         net_income = revenue - expense
         total_equity = equity + net_income
@@ -153,12 +154,10 @@ def main():
         }
         weekly_reports.append(report)
 
-    # Generate Markdown Output
     with open(args.output, 'w') as f:
         f.write("# TLU Financial Statements Report\n\n")
         f.write("> *This report bridges TLU mathematical outputs with traditional accounting frameworks.*\n\n")
         
-        # 1. Total Period Summary (Last Week)
         final = weekly_reports[-1]
         f.write("## 1. Total Period Summary (Cumulative)\n\n")
         f.write(f"**Period End:** {final['week']}\n")
@@ -200,7 +199,6 @@ def main():
             status = '✅' if r['is_balanced'] else '❌'
             f.write(f"| {r['week']} | {r['assets']:,.2f} | {r['liabilities']:,.2f} | {r['equity']:,.2f} | {r['net_income']:,.2f} | {status} |\n")
 
-    # Generate JSON Output for Visualizer
     json_path = args.output.replace('.md', '.json')
     with open(json_path, 'w') as f:
         json.dump(weekly_reports, f, indent=2)

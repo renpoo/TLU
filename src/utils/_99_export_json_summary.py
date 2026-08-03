@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""
-==========================================
-_99_export_json_summary.py
-TLU System: Summary JSON Exporter for TLU Studio / TLU-App
-==========================================
-Combines processed CSV metrics (Thermodynamics, Topology, Jacobian, State)
-into a unified JSON stream for instant WebGL / UI rendering in TLU-App.
+# ==========================================
+# _99_export_json_summary.py
+# TLU System: Summary JSON Exporter for TLU Studio / TLU-App
+# Version: 6.0.0 (Refactored with Dynamic Metric Registry)
+# ==========================================
+"""!
+@file _99_export_json_summary.py
+@brief Combines processed CSV metrics into a unified JSON stream for WebGL / UI rendering.
 """
 
 import os
@@ -14,6 +15,7 @@ import json
 import argparse
 import pandas as pd
 import numpy as np
+from typing import Dict, Any, List, Tuple, Optional
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Export TLU analysis summary to JSON")
@@ -23,7 +25,7 @@ def parse_args():
     parser.add_argument("--output", type=str, default=None, help="Target JSON output file path")
     return parser.parse_args()
 
-def load_mapping(filepath):
+def load_mapping(filepath: str) -> Dict[int, str]:
     if not filepath or not os.path.exists(filepath):
         return {}
     try:
@@ -40,7 +42,7 @@ def load_mapping(filepath):
         print(f"[WARN] Failed to load map {filepath}: {e}", file=sys.stderr)
     return {}
 
-def safe_read_csv(filepath):
+def safe_read_csv(filepath: str) -> Optional[pd.DataFrame]:
     if filepath and os.path.exists(filepath):
         try:
             return pd.read_csv(filepath)
@@ -48,7 +50,33 @@ def safe_read_csv(filepath):
             print(f"[WARN] Failed to read {filepath}: {e}", file=sys.stderr)
     return None
 
-def export_summary_json(out_dir, node_map_path=None, time_map_path=None):
+METRIC_REGISTRY: List[Tuple[str, str, str]] = [
+    ("000_1_1", "thermodynamics", "dynamics"),
+    ("000_2_1", "thermodynamics", "stiffness"),
+    ("000_2_2", "thermodynamics", "principal_axes"),
+    ("000_2_4", "thermodynamics", "stiffness_diff"),
+    ("001_1_1", "thermodynamics", "macro"),
+    ("001_1_2", "thermodynamics", "local"),
+    ("001_2_1", "thermodynamics", "lag_matrix"),
+    ("002_1_1", "forensics", "info_curvature"),
+    ("002_1_2", "topology", "records"),
+    ("002_1_3", "topology", "manifold_dimensionality"),
+    ("002_2_1", "forensics", "macro"),
+    ("002_2_2", "forensics", "records"),
+    ("003_1_1", "kinematics", "fk"),
+    ("003_1_2", "kinematics", "ik"),
+    ("jacobian_1st", "jacobian", "order_1st"),
+    ("jacobian_2nd", "jacobian", "order_2nd"),
+    ("jacobian_3rd", "jacobian", "order_3rd"),
+    ("004_1_1", "control", "lqr_trajectory"),
+    ("004_1_2", "control", "stability"),
+    ("004_2_1", "control", "sensitivity"),
+    ("005_1_1", "wave_fractal", "resonant_frequency"),
+    ("005_1_2", "wave_fractal", "phase_shift_coherence"),
+    ("005_2_1", "wave_fractal", "fractal_noise"),
+]
+
+def export_summary_json(out_dir: str, node_map_path: str = None, time_map_path: str = None) -> Dict[str, Any]:
     target_env = os.environ.get("TARGET_ENV", "workspace")
     if node_map_path is None:
         node_map_path = os.path.join(target_env, "ephemeral", "_node_map.csv")
@@ -58,7 +86,6 @@ def export_summary_json(out_dir, node_map_path=None, time_map_path=None):
     node_map = load_mapping(node_map_path)
     time_map = load_mapping(time_map_path)
     
-    # Load account attributes and system parameters from config directory if available
     config_dir = os.path.join(target_env, "config")
     account_config = []
     sys_params = []
@@ -78,7 +105,7 @@ def export_summary_json(out_dir, node_map_path=None, time_map_path=None):
 
     summary = {
         "metadata": {
-            "target_env": os.environ.get("TARGET_ENV", "workspace"),
+            "target_env": target_env,
             "node_count": len(node_map),
             "time_count": len(time_map),
             "node_labels": node_map,
@@ -98,108 +125,28 @@ def export_summary_json(out_dir, node_map_path=None, time_map_path=None):
         "control": {},
         "wave_fractal": {}
     }
-    
-    # 1. Dynamics & Stiffness (4 CSVs)
-    df_dynamics = safe_read_csv(os.path.join(out_dir, "result.000_1_1_filter_dynamics.analysis.csv"))
-    if df_dynamics is not None and not df_dynamics.empty:
-        summary["thermodynamics"]["dynamics"] = df_dynamics.replace({np.nan: None}).to_dict(orient="records")
 
-    df_stiffness = safe_read_csv(os.path.join(out_dir, "result.000_2_1_filter_structural_stiffness.analysis.csv"))
-    if df_stiffness is not None and not df_stiffness.empty:
-        summary["thermodynamics"]["stiffness"] = df_stiffness.replace({np.nan: None}).to_dict(orient="records")
+    if not os.path.exists(out_dir):
+        return summary
 
-    df_principal = safe_read_csv(os.path.join(out_dir, "result.000_2_2_filter_principal_axes.analysis.csv"))
-    if df_principal is not None and not df_principal.empty:
-        summary["thermodynamics"]["principal_axes"] = df_principal.replace({np.nan: None}).to_dict(orient="records")
+    files_in_dir = os.listdir(out_dir)
 
-    df_stiff_diff = safe_read_csv(os.path.join(out_dir, "result.000_2_4_stiffness_diff.analysis.csv"))
-    if df_stiff_diff is not None and not df_stiff_diff.empty:
-        summary["thermodynamics"]["stiffness_diff"] = df_stiff_diff.replace({np.nan: None}).to_dict(orient="records")
+    for pattern, cat, key in METRIC_REGISTRY:
+        matched_file = next((f for f in files_in_dir if pattern in f and f.endswith('.csv')), None)
+        if matched_file:
+            df = safe_read_csv(os.path.join(out_dir, matched_file))
+            if df is not None and not df.empty:
+                records = df.replace({np.nan: None}).to_dict(orient="records")
+                if cat == "topology" and key == "records":
+                    summary["topology"] = {
+                        "records_count": len(df),
+                        "records": records
+                    }
+                else:
+                    if cat not in summary:
+                        summary[cat] = {}
+                    summary[cat][key] = records
 
-    # 2. Thermodynamics & Lag (3 CSVs)
-    df_macro_thermo = safe_read_csv(os.path.join(out_dir, "result.001_1_1_filter_macro_thermodynamics.analysis.csv"))
-    if df_macro_thermo is not None and not df_macro_thermo.empty:
-        summary["thermodynamics"]["macro"] = df_macro_thermo.replace({np.nan: None}).to_dict(orient="records")
-
-    df_local_thermo = safe_read_csv(os.path.join(out_dir, "result.001_1_2_filter_local_thermodynamics.analysis.csv"))
-    if df_local_thermo is not None and not df_local_thermo.empty:
-        summary["thermodynamics"]["local"] = df_local_thermo.replace({np.nan: None}).to_dict(orient="records")
-
-    df_lag = safe_read_csv(os.path.join(out_dir, "result.001_2_1_filter_lag_matrix.analysis.csv"))
-    if df_lag is not None and not df_lag.empty:
-        summary["thermodynamics"]["lag_matrix"] = df_lag.replace({np.nan: None}).to_dict(orient="records")
-
-    # 3. Information Geometry & Topology & Forensics (5 CSVs)
-    df_info_curv = safe_read_csv(os.path.join(out_dir, "result.002_1_1_filter_info_curvature.analysis.csv"))
-    if df_info_curv is not None and not df_info_curv.empty:
-        summary["forensics"]["info_curvature"] = df_info_curv.replace({np.nan: None}).to_dict(orient="records")
-
-    df_topo = safe_read_csv(os.path.join(out_dir, "result.002_1_2_filter_network_topology.analysis.csv"))
-    if df_topo is not None and not df_topo.empty:
-        summary["topology"] = {
-            "records_count": len(df_topo),
-            "records": df_topo.replace({np.nan: None}).to_dict(orient="records")
-        }
-
-    df_manifold = safe_read_csv(os.path.join(out_dir, "result.002_1_3_filter_manifold_dimensionality.analysis.csv"))
-    if df_manifold is not None and not df_manifold.empty:
-        summary["topology"]["manifold_dimensionality"] = df_manifold.replace({np.nan: None}).to_dict(orient="records")
-
-    df_macro_forensics = safe_read_csv(os.path.join(out_dir, "result.002_2_1_filter_macro_forensics.analysis.csv"))
-    if df_macro_forensics is not None and not df_macro_forensics.empty:
-        summary["forensics"]["macro"] = df_macro_forensics.replace({np.nan: None}).to_dict(orient="records")
-
-    df_micro_forensics = safe_read_csv(os.path.join(out_dir, "result.002_2_2_filter_micro_forensics.analysis.csv"))
-    if df_micro_forensics is not None and not df_micro_forensics.empty:
-        summary["forensics"]["records"] = df_micro_forensics.replace({np.nan: None}).to_dict(orient="records")
-
-    # 4. Kinematics & Jacobian (5 CSVs)
-    df_fk = safe_read_csv(os.path.join(out_dir, "result.003_1_1_filter_fk.analysis.csv"))
-    if df_fk is not None and not df_fk.empty:
-        summary["kinematics"]["fk"] = df_fk.replace({np.nan: None}).to_dict(orient="records")
-
-    df_ik = safe_read_csv(os.path.join(out_dir, "result.003_1_2_filter_ik.analysis.csv"))
-    if df_ik is not None and not df_ik.empty:
-        summary["kinematics"]["ik"] = df_ik.replace({np.nan: None}).to_dict(orient="records")
-
-    df_jac1 = safe_read_csv(os.path.join(out_dir, "result.003_1_3_jacobian_1st.analysis.csv"))
-    if df_jac1 is not None and not df_jac1.empty:
-        summary["jacobian"]["order_1st"] = df_jac1.replace({np.nan: None}).to_dict(orient="records")
-
-    df_jac2 = safe_read_csv(os.path.join(out_dir, "result.003_1_3_jacobian_2nd.analysis.csv"))
-    if df_jac2 is not None and not df_jac2.empty:
-        summary["jacobian"]["order_2nd"] = df_jac2.replace({np.nan: None}).to_dict(orient="records")
-
-    df_jac3 = safe_read_csv(os.path.join(out_dir, "result.003_1_3_jacobian_3rd.analysis.csv"))
-    if df_jac3 is not None and not df_jac3.empty:
-        summary["jacobian"]["order_3rd"] = df_jac3.replace({np.nan: None}).to_dict(orient="records")
-
-    # 5. Control Theory & Stability (3 CSVs)
-    df_ctrl = safe_read_csv(os.path.join(out_dir, "result.004_1_1_filter_control_theory.analysis.csv"))
-    if df_ctrl is not None and not df_ctrl.empty:
-        summary["control"]["lqr_trajectory"] = df_ctrl.replace({np.nan: None}).to_dict(orient="records")
-
-    df_stability = safe_read_csv(os.path.join(out_dir, "result.004_1_2_filter_system_stability.analysis.csv"))
-    if df_stability is not None and not df_stability.empty:
-        summary["control"]["stability"] = df_stability.replace({np.nan: None}).to_dict(orient="records")
-
-    df_sens = safe_read_csv(os.path.join(out_dir, "result.004_2_1_filter_sensitivity.analysis.csv"))
-    if df_sens is not None and not df_sens.empty:
-        summary["control"]["sensitivity"] = df_sens.replace({np.nan: None}).to_dict(orient="records")
-
-    # 6. Wave, Frequency & Fractal (3 CSVs)
-    df_res_freq = safe_read_csv(os.path.join(out_dir, "result.005_1_1_filter_resonant_frequency.analysis.csv"))
-    if df_res_freq is not None and not df_res_freq.empty:
-        summary["wave_fractal"]["resonant_frequency"] = df_res_freq.replace({np.nan: None}).to_dict(orient="records")
-
-    df_phase_shift = safe_read_csv(os.path.join(out_dir, "result.005_1_2_filter_phase_shift_coherence.analysis.csv"))
-    if df_phase_shift is not None and not df_phase_shift.empty:
-        summary["wave_fractal"]["phase_shift_coherence"] = df_phase_shift.replace({np.nan: None}).to_dict(orient="records")
-
-    df_fractal = safe_read_csv(os.path.join(out_dir, "result.005_2_1_filter_fractal_noise.analysis.csv"))
-    if df_fractal is not None and not df_fractal.empty:
-        summary["wave_fractal"]["fractal_noise"] = df_fractal.replace({np.nan: None}).to_dict(orient="records")
-        
     return summary
 
 def main():

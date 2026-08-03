@@ -1,13 +1,13 @@
-node_idx,node_label,spectral_exponent_beta,noise_classification
-0,00_ACC_Accounts_Payable_DPT_Admin,3.1459,Brown Noise
-1,01_ACC_Accounts_Receivable_DPT_Admin,3.388,Brown Noise
-2,02_ACC_COGS_DPT_Prod_A,3.1319,Brown Noise
-3,03_ACC_COGS_DPT_Prod_B,2.209,Brown Noise
-4,04_ACC_Cash_DPT_Admin,0.1923,White Noise
-5,05_ACC_Finished_Goods_DPT_Prod_A,2.3274,Brown Noise
-6,06_ACC_Finished_Goods_DPT_Prod_B,1.7584,Brown Noise
-7,07_ACC_Mfg_Overhead_Exp_DPT_Mfg_Support,3.0938,Brown Noise
-8,08_ACC_Raw_Materials_DPT_Ops,1.2079,Pink Noise
-9,09_ACC_Sales_Revenue_DPT_Sales,2.5048,Brown Noise
-10,10_ACC_Work_In_Process_DPT_Prod_A,0.3863,White Noise
-11,11_ACC_Work_In_Process_DPT_Prod_B,1.3916,Pink Noise
+node_idx,node_label,account_category,spectral_exponent_beta,noise_classification
+0,00_ACC_Accounts_Payable_DPT_Admin,Liability,3.1459,Brown Noise
+1,01_ACC_Accounts_Receivable_DPT_Admin,Asset,3.388,Brown Noise
+2,02_ACC_COGS_DPT_Prod_A,Expense,3.1319,Brown Noise
+3,03_ACC_COGS_DPT_Prod_B,Expense,2.209,Brown Noise
+4,04_ACC_Cash_DPT_Admin,Asset,0.1923,White Noise
+5,05_ACC_Finished_Goods_DPT_Prod_A,Unknown,2.3274,Brown Noise
+6,06_ACC_Finished_Goods_DPT_Prod_B,Unknown,1.7584,Brown Noise
+7,07_ACC_Mfg_Overhead_Exp_DPT_Mfg_Support,Expense,3.0938,Brown Noise
+8,08_ACC_Raw_Materials_DPT_Ops,Unknown,1.2079,Pink Noise
+9,09_ACC_Sales_Revenue_DPT_Sales,Revenue,2.5048,Brown Noise
+10,10_ACC_Work_In_Process_DPT_Prod_A,Unknown,0.3863,White Noise
+11,11_ACC_Work_In_Process_DPT_Prod_B,Unknown,1.3916,Pink Noise
