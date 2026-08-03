@@ -1,14 +1,23 @@
 #!/usr/bin/env python3
 # ==========================================
-# parse_and_aggregate_journal_dept.py
-# TLU System: ERP Preprocessing Filter (Scratch Extension)
-# Action: Combines Account_Name and Dept_Name into fine-grained nodes (Account_Dept)
-#         and aggregates monthly transaction streams into Hodgepodge COO format.
+# 00_1_parse_journal_dept.py
+# TLU System: Pre-processing Phase 0
+# Category: Account+Dept Node Coupling Parser
+# Version: 6.0.0 (Refactored with TemporalBinningEngine)
 # ==========================================
+"""
+@file 00_1_parse_journal_dept.py
+@brief Parses raw journals into fine-grained (Account_Dept) COO streams with temporal binning.
+"""
 
+import os
 import sys
 import argparse
 import pandas as pd
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+
+from src.core.core_temporal_binning import apply_temporal_binning
 
 def parse_args():
     parser = argparse.ArgumentParser(
@@ -30,43 +39,24 @@ def main():
     if df.empty:
         sys.exit(0)
 
-    # Ensure required columns exist
     req_cols = [args.col_time, "Entry_ID", "Account_Name", "Dept_Name", "Debit", "Credit"]
     for col in req_cols:
         if col not in df.columns:
             print(f"[CRITICAL] Column '{col}' missing from input stream. Found: {list(df.columns)}", file=sys.stderr)
             sys.exit(1)
 
-    # Construct combined node label: ACC_{Account_Name}_{Dept_Name}
-    # For UNKNOWN_LEAK or special nodes without Dept_Name, handle gracefully
     df["Dept_Name"] = df["Dept_Name"].fillna("General")
     df["Node_Label"] = "ACC_" + df["Account_Name"].astype(str) + "_" + df["Dept_Name"].astype(str)
     
-    # Parse transaction date and extract period
-    df["parsed_time"] = pd.to_datetime(df[args.col_time], errors="coerce")
-    df = df.dropna(subset=["parsed_time"])
+    df["t_idx"] = apply_temporal_binning(df[args.col_time], args.interval)
     
-    if args.interval == "month":
-        df["t_idx"] = df["parsed_time"].dt.strftime("%Y-%m")
-    elif args.interval == "week":
-        df["t_idx"] = df["parsed_time"].dt.strftime("%G-W%V")
-    elif args.interval == "day":
-        df["t_idx"] = df["parsed_time"].dt.strftime("%Y-%m-%d")
-    else:
-        df["t_idx"] = df["parsed_time"].dt.strftime("%Y-%m")
-
-    # Double-entry pairing by Entry_ID
-    # Group by Entry_ID to pair Credit (Src) and Debit (Tgt)
-    # Credit row has Credit > 0 (Outflow/Src), Debit row has Debit > 0 (Inflow/Tgt)
     entries = []
     grouped = df.groupby("Entry_ID")
 
     for entry_id, group in grouped:
         t_idx = group["t_idx"].iloc[0]
         
-        # Credit rows (Source)
         cr_rows = group[group["Credit"] > 0]
-        # Debit rows (Destination)
         dr_rows = group[group["Debit"] > 0]
 
         for _, cr in cr_rows.iterrows():
@@ -74,7 +64,6 @@ def main():
             amt = cr["Credit"]
             for _, dr in dr_rows.iterrows():
                 tgt_node = dr["Node_Label"]
-                # In double entry, amount transfers from src_node to tgt_node
                 entries.append({
                     "t_idx": t_idx,
                     "src_idx": src_node,
@@ -87,11 +76,7 @@ def main():
         sys.exit(0)
 
     paired_df = pd.DataFrame(entries)
-    
-    # Group by (t_idx, src_idx, tgt_idx) and sum values
     agg_df = paired_df.groupby(["t_idx", "src_idx", "tgt_idx"], as_index=False)["value"].sum()
-    
-    # Output to stdout as CSV
     agg_df.to_csv(sys.stdout, index=False)
 
 if __name__ == "__main__":
