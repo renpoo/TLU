@@ -311,12 +311,12 @@ t_idx,time_label,src_idx,src_label,tgt_idx,tgt_label,coherence,phase_shift
 6,2020-07,4,04_ACC_Cash_DPT_Admin,3,03_ACC_COGS_DPT_Prod_B,1.0,-0.3141
 7,2020-08,4,04_ACC_Cash_DPT_Admin,3,03_ACC_COGS_DPT_Prod_B,1.0,0.2956
 8,2020-09,4,04_ACC_Cash_DPT_Admin,3,03_ACC_COGS_DPT_Prod_B,1.0,1.098
-3,2020-04,4,04_ACC_Cash_DPT_Admin,4,04_ACC_Cash_DPT_Admin,1.0,-0.0
-4,2020-05,4,04_ACC_Cash_DPT_Admin,4,04_ACC_Cash_DPT_Admin,1.0,0.0
-5,2020-06,4,04_ACC_Cash_DPT_Admin,4,04_ACC_Cash_DPT_Admin,1.0,0.0
-6,2020-07,4,04_ACC_Cash_DPT_Admin,4,04_ACC_Cash_DPT_Admin,1.0,-0.0
+3,2020-04,4,04_ACC_Cash_DPT_Admin,4,04_ACC_Cash_DPT_Admin,1.0,0.0
+4,2020-05,4,04_ACC_Cash_DPT_Admin,4,04_ACC_Cash_DPT_Admin,1.0,-0.0
+5,2020-06,4,04_ACC_Cash_DPT_Admin,4,04_ACC_Cash_DPT_Admin,1.0,-0.0
+6,2020-07,4,04_ACC_Cash_DPT_Admin,4,04_ACC_Cash_DPT_Admin,1.0,0.0
 7,2020-08,4,04_ACC_Cash_DPT_Admin,4,04_ACC_Cash_DPT_Admin,1.0,-0.0
-8,2020-09,4,04_ACC_Cash_DPT_Admin,4,04_ACC_Cash_DPT_Admin,1.0,-0.0
+8,2020-09,4,04_ACC_Cash_DPT_Admin,4,04_ACC_Cash_DPT_Admin,1.0,0.0
 3,2020-04,4,04_ACC_Cash_DPT_Admin,5,05_ACC_Finished_Goods_DPT_Prod_A,1.0,0.3089
 4,2020-05,4,04_ACC_Cash_DPT_Admin,5,05_ACC_Finished_Goods_DPT_Prod_A,1.0,-0.252
 5,2020-06,4,04_ACC_Cash_DPT_Admin,5,05_ACC_Finished_Goods_DPT_Prod_A,1.0,-0.367

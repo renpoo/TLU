@@ -1,14 +1,14 @@
 [
   {
     "week": "2020-01",
-    "assets": 200013.85,
+    "assets": 1200013.8499999999,
     "liabilities": 149974.5,
-    "equity": 0.0,
-    "net_income": -3949960.65,
-    "total_liab_eq": -3799986.15,
+    "equity": 2000000.0,
+    "net_income": -949960.65,
+    "total_liab_eq": 1200013.85,
     "revenue": 143430.16,
-    "expense": 4093390.81,
-    "is_balanced": false,
+    "expense": 1093390.81,
+    "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable_DPT_Admin",
@@ -21,9 +21,19 @@
         143430.16
       ],
       [
+        "ACC_Cash",
+        "Asset",
+        1000000.0
+      ],
+      [
         "ACC_Cash_DPT_Admin",
         "Liability (Short/Overdraft)",
         64027.5
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        2000000.0
       ],
       [
         "ACC_Finished_Goods_DPT_Prod_A",
@@ -63,18 +73,8 @@
         22442.71
       ],
       [
-        "ACC_Cash",
-        "Expense",
-        1000000.0
-      ],
-      [
-        "ACC_Equity_Capital",
-        "Expense",
-        2000000.0
-      ],
-      [
         "ACC_Finished_Goods",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -84,7 +84,7 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -124,7 +124,7 @@
       ],
       [
         "ACC_Cash",
-        "Expense",
+        "Asset",
         1000000.0,
         0.0,
         1000000.0
@@ -138,16 +138,16 @@
       ],
       [
         "ACC_Equity_Capital",
-        "Expense",
-        2000000.0,
+        "Equity",
         0.0,
+        2000000.0,
         2000000.0
       ],
       [
         "ACC_Finished_Goods",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -173,9 +173,9 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -210,14 +210,14 @@
   },
   {
     "week": "2020-02",
-    "assets": 373712.18,
+    "assets": 1373712.18,
     "liabilities": 257745.24000000002,
-    "equity": 0.0,
-    "net_income": -3884033.0599999996,
-    "total_liab_eq": -3626287.8199999994,
+    "equity": 2000000.0,
+    "net_income": -884033.0599999999,
+    "total_liab_eq": 1373712.18,
     "revenue": 318180.88,
-    "expense": 4202213.9399999995,
-    "is_balanced": false,
+    "expense": 1202213.94,
+    "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable_DPT_Admin",
@@ -230,9 +230,19 @@
         282219.69
       ],
       [
+        "ACC_Cash",
+        "Asset",
+        1000000.0
+      ],
+      [
         "ACC_Cash_DPT_Admin",
         "Liability (Short/Overdraft)",
         107587.0
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        2000000.0
       ],
       [
         "ACC_Finished_Goods_DPT_Prod_A",
@@ -272,18 +282,8 @@
         60256.14
       ],
       [
-        "ACC_Cash",
-        "Expense",
-        1000000.0
-      ],
-      [
-        "ACC_Equity_Capital",
-        "Expense",
-        2000000.0
-      ],
-      [
         "ACC_Finished_Goods",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -293,7 +293,7 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -333,7 +333,7 @@
       ],
       [
         "ACC_Cash",
-        "Expense",
+        "Asset",
         1000000.0,
         0.0,
         1000000.0
@@ -347,16 +347,16 @@
       ],
       [
         "ACC_Equity_Capital",
-        "Expense",
-        2000000.0,
+        "Equity",
         0.0,
+        2000000.0,
         2000000.0
       ],
       [
         "ACC_Finished_Goods",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -382,9 +382,9 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -419,14 +419,14 @@
   },
   {
     "week": "2020-03",
-    "assets": 484773.62,
+    "assets": 1484773.6199999999,
     "liabilities": 313273.60999999987,
-    "equity": 0.0,
-    "net_income": -3828499.99,
-    "total_liab_eq": -3515226.3800000004,
+    "equity": 2000000.0,
+    "net_income": -828499.99,
+    "total_liab_eq": 1484773.6199999999,
     "revenue": 468585.33,
-    "expense": 4297085.32,
-    "is_balanced": false,
+    "expense": 1297085.32,
+    "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable_DPT_Admin",
@@ -439,9 +439,19 @@
         315545.19
       ],
       [
+        "ACC_Cash",
+        "Asset",
+        1000000.0
+      ],
+      [
         "ACC_Cash_DPT_Admin",
         "Liability (Short/Overdraft)",
         143887.87999999995
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        2000000.0
       ],
       [
         "ACC_Finished_Goods_DPT_Prod_A",
@@ -481,18 +491,8 @@
         90949.61
       ],
       [
-        "ACC_Cash",
-        "Expense",
-        1000000.0
-      ],
-      [
-        "ACC_Equity_Capital",
-        "Expense",
-        2000000.0
-      ],
-      [
         "ACC_Finished_Goods",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -502,7 +502,7 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -542,7 +542,7 @@
       ],
       [
         "ACC_Cash",
-        "Expense",
+        "Asset",
         1000000.0,
         0.0,
         1000000.0
@@ -556,16 +556,16 @@
       ],
       [
         "ACC_Equity_Capital",
-        "Expense",
-        2000000.0,
+        "Equity",
         0.0,
+        2000000.0,
         2000000.0
       ],
       [
         "ACC_Finished_Goods",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -591,9 +591,9 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -628,14 +628,14 @@
   },
   {
     "week": "2020-04",
-    "assets": 496987.0799999999,
+    "assets": 1496987.0799999998,
     "liabilities": 293119.7399999999,
-    "equity": 0.0,
-    "net_income": -3796132.66,
-    "total_liab_eq": -3503012.9200000004,
+    "equity": 2000000.0,
+    "net_income": -796132.6599999999,
+    "total_liab_eq": 1496987.08,
     "revenue": 552705.74,
-    "expense": 4348838.4,
-    "is_balanced": false,
+    "expense": 1348838.4,
+    "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable_DPT_Admin",
@@ -648,9 +648,19 @@
         227273.43999999994
       ],
       [
+        "ACC_Cash",
+        "Asset",
+        1000000.0
+      ],
+      [
         "ACC_Cash_DPT_Admin",
         "Liability (Short/Overdraft)",
         64039.30999999988
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        2000000.0
       ],
       [
         "ACC_Finished_Goods_DPT_Prod_A",
@@ -690,18 +700,8 @@
         109867.1
       ],
       [
-        "ACC_Cash",
-        "Expense",
-        1000000.0
-      ],
-      [
-        "ACC_Equity_Capital",
-        "Expense",
-        2000000.0
-      ],
-      [
         "ACC_Finished_Goods",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -711,7 +711,7 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -751,7 +751,7 @@
       ],
       [
         "ACC_Cash",
-        "Expense",
+        "Asset",
         1000000.0,
         0.0,
         1000000.0
@@ -765,16 +765,16 @@
       ],
       [
         "ACC_Equity_Capital",
-        "Expense",
-        2000000.0,
+        "Equity",
         0.0,
+        2000000.0,
         2000000.0
       ],
       [
         "ACC_Finished_Goods",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -800,9 +800,9 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -837,14 +837,14 @@
   },
   {
     "week": "2020-05",
-    "assets": 542773.08,
+    "assets": 1542773.08,
     "liabilities": 315959.3699999998,
-    "equity": 0.0,
-    "net_income": -3773186.2900000005,
-    "total_liab_eq": -3457226.920000001,
+    "equity": 2000000.0,
+    "net_income": -773186.2899999999,
+    "total_liab_eq": 1542773.0799999998,
     "revenue": 617711.86,
-    "expense": 4390898.15,
-    "is_balanced": false,
+    "expense": 1390898.15,
+    "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable_DPT_Admin",
@@ -857,9 +857,19 @@
         169763.72999999992
       ],
       [
+        "ACC_Cash",
+        "Asset",
+        1000000.0
+      ],
+      [
         "ACC_Cash_DPT_Admin",
         "Liability (Short/Overdraft)",
         72922.79999999987
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        2000000.0
       ],
       [
         "ACC_Finished_Goods_DPT_Prod_A",
@@ -899,18 +909,8 @@
         120697.46
       ],
       [
-        "ACC_Cash",
-        "Expense",
-        1000000.0
-      ],
-      [
-        "ACC_Equity_Capital",
-        "Expense",
-        2000000.0
-      ],
-      [
         "ACC_Finished_Goods",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -920,7 +920,7 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -960,7 +960,7 @@
       ],
       [
         "ACC_Cash",
-        "Expense",
+        "Asset",
         1000000.0,
         0.0,
         1000000.0
@@ -974,16 +974,16 @@
       ],
       [
         "ACC_Equity_Capital",
-        "Expense",
-        2000000.0,
+        "Equity",
         0.0,
+        2000000.0,
         2000000.0
       ],
       [
         "ACC_Finished_Goods",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -1009,9 +1009,9 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -1046,14 +1046,14 @@
   },
   {
     "week": "2020-06",
-    "assets": 623815.57,
+    "assets": 1623815.5699999996,
     "liabilities": 362214.71999999974,
-    "equity": 0.0,
-    "net_income": -3738399.1500000004,
-    "total_liab_eq": -3376184.4300000006,
+    "equity": 2000000.0,
+    "net_income": -738399.1500000001,
+    "total_liab_eq": 1623815.5699999996,
     "revenue": 704651.24,
-    "expense": 4443050.390000001,
-    "is_balanced": false,
+    "expense": 1443050.3900000001,
+    "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable_DPT_Admin",
@@ -1066,9 +1066,19 @@
         151758.79999999993
       ],
       [
+        "ACC_Cash",
+        "Asset",
+        1000000.0
+      ],
+      [
         "ACC_Cash_DPT_Admin",
         "Liability (Short/Overdraft)",
         103691.84999999986
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        2000000.0
       ],
       [
         "ACC_Finished_Goods_DPT_Prod_A",
@@ -1108,18 +1118,8 @@
         134195.36000000002
       ],
       [
-        "ACC_Cash",
-        "Expense",
-        1000000.0
-      ],
-      [
-        "ACC_Equity_Capital",
-        "Expense",
-        2000000.0
-      ],
-      [
         "ACC_Finished_Goods",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -1129,7 +1129,7 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -1169,7 +1169,7 @@
       ],
       [
         "ACC_Cash",
-        "Expense",
+        "Asset",
         1000000.0,
         0.0,
         1000000.0
@@ -1183,16 +1183,16 @@
       ],
       [
         "ACC_Equity_Capital",
-        "Expense",
-        2000000.0,
+        "Equity",
         0.0,
+        2000000.0,
         2000000.0
       ],
       [
         "ACC_Finished_Goods",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -1218,9 +1218,9 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -1255,14 +1255,14 @@
   },
   {
     "week": "2020-07",
-    "assets": 763196.25,
+    "assets": 1763196.25,
     "liabilities": 437252.86999999976,
-    "equity": 0.0,
-    "net_income": -3674056.62,
-    "total_liab_eq": -3236803.7500000005,
+    "equity": 2000000.0,
+    "net_income": -674056.6200000001,
+    "total_liab_eq": 1763196.2499999995,
     "revenue": 875874.8,
-    "expense": 4549931.42,
-    "is_balanced": false,
+    "expense": 1549931.4200000002,
+    "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable_DPT_Admin",
@@ -1275,9 +1275,19 @@
         245049.92999999993
       ],
       [
+        "ACC_Cash",
+        "Asset",
+        1000000.0
+      ],
+      [
         "ACC_Cash_DPT_Admin",
         "Liability (Short/Overdraft)",
         170518.1499999998
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        2000000.0
       ],
       [
         "ACC_Finished_Goods_DPT_Prod_A",
@@ -1317,18 +1327,8 @@
         169073.87000000002
       ],
       [
-        "ACC_Cash",
-        "Expense",
-        1000000.0
-      ],
-      [
-        "ACC_Equity_Capital",
-        "Expense",
-        2000000.0
-      ],
-      [
         "ACC_Finished_Goods",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -1338,7 +1338,7 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -1378,7 +1378,7 @@
       ],
       [
         "ACC_Cash",
-        "Expense",
+        "Asset",
         1000000.0,
         0.0,
         1000000.0
@@ -1392,16 +1392,16 @@
       ],
       [
         "ACC_Equity_Capital",
-        "Expense",
-        2000000.0,
+        "Equity",
         0.0,
+        2000000.0,
         2000000.0
       ],
       [
         "ACC_Finished_Goods",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -1427,9 +1427,9 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -1464,14 +1464,14 @@
   },
   {
     "week": "2020-08",
-    "assets": 895470.99,
+    "assets": 1895470.99,
     "liabilities": 502575.07999999984,
-    "equity": 0.0,
-    "net_income": -3607104.09,
-    "total_liab_eq": -3104529.01,
+    "equity": 2000000.0,
+    "net_income": -607104.0900000001,
+    "total_liab_eq": 1895470.9899999998,
     "revenue": 1060436.36,
-    "expense": 4667540.45,
-    "is_balanced": false,
+    "expense": 1667540.4500000002,
+    "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable_DPT_Admin",
@@ -1484,9 +1484,19 @@
         333393.61
       ],
       [
+        "ACC_Cash",
+        "Asset",
+        1000000.0
+      ],
+      [
         "ACC_Cash_DPT_Admin",
         "Liability (Short/Overdraft)",
         215061.8799999999
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        2000000.0
       ],
       [
         "ACC_Finished_Goods_DPT_Prod_A",
@@ -1526,18 +1536,8 @@
         207429.51
       ],
       [
-        "ACC_Cash",
-        "Expense",
-        1000000.0
-      ],
-      [
-        "ACC_Equity_Capital",
-        "Expense",
-        2000000.0
-      ],
-      [
         "ACC_Finished_Goods",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -1547,7 +1547,7 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -1587,7 +1587,7 @@
       ],
       [
         "ACC_Cash",
-        "Expense",
+        "Asset",
         1000000.0,
         0.0,
         1000000.0
@@ -1601,16 +1601,16 @@
       ],
       [
         "ACC_Equity_Capital",
-        "Expense",
-        2000000.0,
+        "Equity",
         0.0,
+        2000000.0,
         2000000.0
       ],
       [
         "ACC_Finished_Goods",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -1636,9 +1636,9 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -1673,14 +1673,14 @@
   },
   {
     "week": "2020-09",
-    "assets": 959009.9700000003,
+    "assets": 1959009.9700000002,
     "liabilities": 511334.7299999998,
-    "equity": 0.0,
-    "net_income": -3552324.7600000007,
-    "total_liab_eq": -3040990.0300000007,
+    "equity": 2000000.0,
+    "net_income": -552324.7599999998,
+    "total_liab_eq": 1959009.97,
     "revenue": 1203882.9500000002,
-    "expense": 4756207.710000001,
-    "is_balanced": false,
+    "expense": 1756207.71,
+    "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable_DPT_Admin",
@@ -1693,9 +1693,19 @@
         330460.6300000001
       ],
       [
+        "ACC_Cash",
+        "Asset",
+        1000000.0
+      ],
+      [
         "ACC_Cash_DPT_Admin",
         "Liability (Short/Overdraft)",
         163363.8899999999
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        2000000.0
       ],
       [
         "ACC_Finished_Goods_DPT_Prod_A",
@@ -1735,18 +1745,8 @@
         236371.89
       ],
       [
-        "ACC_Cash",
-        "Expense",
-        1000000.0
-      ],
-      [
-        "ACC_Equity_Capital",
-        "Expense",
-        2000000.0
-      ],
-      [
         "ACC_Finished_Goods",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -1756,7 +1756,7 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -1796,7 +1796,7 @@
       ],
       [
         "ACC_Cash",
-        "Expense",
+        "Asset",
         1000000.0,
         0.0,
         1000000.0
@@ -1810,16 +1810,16 @@
       ],
       [
         "ACC_Equity_Capital",
-        "Expense",
-        2000000.0,
+        "Equity",
         0.0,
+        2000000.0,
         2000000.0
       ],
       [
         "ACC_Finished_Goods",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -1845,9 +1845,9 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -1882,14 +1882,14 @@
   },
   {
     "week": "2020-10",
-    "assets": 969375.6200000003,
+    "assets": 1969375.62,
     "liabilities": 488988.4699999994,
-    "equity": 0.0,
-    "net_income": -3519612.8499999996,
-    "total_liab_eq": -3030624.3800000004,
+    "equity": 2000000.0,
+    "net_income": -519612.84999999986,
+    "total_liab_eq": 1969375.6199999996,
     "revenue": 1292631.9800000002,
-    "expense": 4812244.83,
-    "is_balanced": false,
+    "expense": 1812244.83,
+    "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable_DPT_Admin",
@@ -1902,9 +1902,19 @@
         235261.41000000015
       ],
       [
+        "ACC_Cash",
+        "Asset",
+        1000000.0
+      ],
+      [
         "ACC_Cash_DPT_Admin",
         "Liability (Short/Overdraft)",
         128618.5699999996
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        2000000.0
       ],
       [
         "ACC_Finished_Goods_DPT_Prod_A",
@@ -1944,18 +1954,8 @@
         253487.08000000002
       ],
       [
-        "ACC_Cash",
-        "Expense",
-        1000000.0
-      ],
-      [
-        "ACC_Equity_Capital",
-        "Expense",
-        2000000.0
-      ],
-      [
         "ACC_Finished_Goods",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -1965,7 +1965,7 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -2005,7 +2005,7 @@
       ],
       [
         "ACC_Cash",
-        "Expense",
+        "Asset",
         1000000.0,
         0.0,
         1000000.0
@@ -2019,16 +2019,16 @@
       ],
       [
         "ACC_Equity_Capital",
-        "Expense",
-        2000000.0,
+        "Equity",
         0.0,
+        2000000.0,
         2000000.0
       ],
       [
         "ACC_Finished_Goods",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -2054,9 +2054,9 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -2091,14 +2091,14 @@
   },
   {
     "week": "2020-11",
-    "assets": 992939.0200000003,
+    "assets": 1992939.0200000003,
     "liabilities": 490875.0399999997,
-    "equity": 0.0,
-    "net_income": -3497936.02,
-    "total_liab_eq": -3007060.9800000004,
+    "equity": 2000000.0,
+    "net_income": -497936.0199999998,
+    "total_liab_eq": 1992939.02,
     "revenue": 1349609.2200000002,
-    "expense": 4847545.24,
-    "is_balanced": false,
+    "expense": 1847545.24,
+    "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable_DPT_Admin",
@@ -2111,9 +2111,19 @@
         148417.9700000002
       ],
       [
+        "ACC_Cash",
+        "Asset",
+        1000000.0
+      ],
+      [
         "ACC_Cash_DPT_Admin",
         "Liability (Short/Overdraft)",
         83556.30999999982
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        2000000.0
       ],
       [
         "ACC_Finished_Goods_DPT_Prod_A",
@@ -2153,18 +2163,8 @@
         265350.19
       ],
       [
-        "ACC_Cash",
-        "Expense",
-        1000000.0
-      ],
-      [
-        "ACC_Equity_Capital",
-        "Expense",
-        2000000.0
-      ],
-      [
         "ACC_Finished_Goods",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -2174,7 +2174,7 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -2214,7 +2214,7 @@
       ],
       [
         "ACC_Cash",
-        "Expense",
+        "Asset",
         1000000.0,
         0.0,
         1000000.0
@@ -2228,16 +2228,16 @@
       ],
       [
         "ACC_Equity_Capital",
-        "Expense",
-        2000000.0,
+        "Equity",
         0.0,
+        2000000.0,
         2000000.0
       ],
       [
         "ACC_Finished_Goods",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -2263,9 +2263,9 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -2300,14 +2300,14 @@
   },
   {
     "week": "2020-12",
-    "assets": 1034482.2100000002,
+    "assets": 2034482.21,
     "liabilities": 524612.4699999997,
-    "equity": 0.0,
-    "net_income": -3490130.26,
-    "total_liab_eq": -2965517.79,
+    "equity": 2000000.0,
+    "net_income": -490130.26,
+    "total_liab_eq": 2034482.2099999997,
     "revenue": 1433745.11,
-    "expense": 4923875.37,
-    "is_balanced": false,
+    "expense": 1923875.37,
+    "is_balanced": true,
     "bs_items": [
       [
         "ACC_Accounts_Payable_DPT_Admin",
@@ -2320,9 +2320,19 @@
         138128.0
       ],
       [
+        "ACC_Cash",
+        "Asset",
+        1000000.0
+      ],
+      [
         "ACC_Cash_DPT_Admin",
         "Liability (Short/Overdraft)",
         133500.08999999985
+      ],
+      [
+        "ACC_Equity_Capital",
+        "Equity",
+        2000000.0
       ],
       [
         "ACC_Finished_Goods_DPT_Prod_A",
@@ -2362,18 +2372,8 @@
         279189.15
       ],
       [
-        "ACC_Cash",
-        "Expense",
-        1000000.0
-      ],
-      [
-        "ACC_Equity_Capital",
-        "Expense",
-        2000000.0
-      ],
-      [
         "ACC_Finished_Goods",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -2383,7 +2383,7 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
+        "Unknown",
         500000.0
       ],
       [
@@ -2423,7 +2423,7 @@
       ],
       [
         "ACC_Cash",
-        "Expense",
+        "Asset",
         1000000.0,
         0.0,
         1000000.0
@@ -2437,16 +2437,16 @@
       ],
       [
         "ACC_Equity_Capital",
-        "Expense",
-        2000000.0,
+        "Equity",
         0.0,
+        2000000.0,
         2000000.0
       ],
       [
         "ACC_Finished_Goods",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
@@ -2472,9 +2472,9 @@
       ],
       [
         "ACC_Raw_Materials",
-        "Expense",
-        500000.0,
+        "Unknown",
         0.0,
+        500000.0,
         500000.0
       ],
       [
