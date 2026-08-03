@@ -1,6 +1,6 @@
-node_idx,node_label,dominant_frequency,spectral_power
-0,00_Motor_Cortex,0.0167,22145193.6607
-1,01_Parietal_Lobe,0.0333,18166383.7271
-3,03_Temporal_Lobe,0.0333,18102128.4406
-2,02_Prefrontal_Cortex,0.0333,17973061.9294
-4,04_Visual_Cortex,0.0333,17753089.8219
+node_idx,node_label,account_category,dominant_frequency,spectral_power
+0,00_Motor_Cortex,Unknown,0.0167,22145193.6607
+1,01_Parietal_Lobe,Unknown,0.0333,18166383.7271
+3,03_Temporal_Lobe,Unknown,0.0333,18102128.4406
+2,02_Prefrontal_Cortex,Unknown,0.0333,17973061.9294
+4,04_Visual_Cortex,Unknown,0.0333,17753089.8219

@@ -2,15 +2,14 @@
 # ==========================================
 # _000_1_1_filter_dynamics_state.py
 # TLU System: Dynamics State Pipeline Filter
+# Version: 8.0.0 (Refactored with BaseFilter Architecture)
 # ==========================================
 import sys
-import csv
 import argparse
 import numpy as np
-from typing import List, Tuple
+from typing import List, Tuple, Dict, Any
 
-from src.filters.cli_parser import get_base_parser
-from src.filters.stream_processor import setup_pipeline, yield_time_slices
+from src.filters.base_filter import BaseFilter, HistoryBuffer
 from src.core.core_tensor_ops import compute_net_flux
 from src.core.core_kinematics import compute_derivatives, compute_higher_order_derivatives
 from src.core.core_dynamics import estimate_virtual_mass_and_viscosity, compute_external_force_residual
@@ -24,25 +23,11 @@ def run_dynamics_state_analysis(
 ) -> Tuple[List[list], np.ndarray, np.ndarray]:
     """!
     @brief [Pure Orchestration Function] Run dynamics state analysis.
-    @details Coordinates transformation from pure flux into secondary phase space attributes.
-
-    @param t_idx Current time step integer.
-    @param T_slice Current transition or flux matrix (Nodes x Nodes).
-    @param q_history List of historical state vectors.
-    @param v_history List of historical velocity vectors.
-
-    @return Tuple (Formatted records list, current flux, current velocity).
-
-    @pre
-        - `T_slice` correctly bounded geometrically.
-    @post
-        - Strictly evaluates variables without side effects.
-    @invariant
-        - Phase space representation bounds velocity and acceleration exactly as difference operators.
+    @details Legacy interface retained for backward compatibility with integration tests.
     """
     N = T_slice.shape[0]
     
-    # 1. Current pure flux (this becomes velocity v in v2.0)
+    # 1. Current pure flux (velocity v)
     v_current = compute_net_flux(T_slice)
     temp_v_hist = np.array(v_history + [v_current])
     
@@ -71,8 +56,8 @@ def run_dynamics_state_analysis(
     for i in range(N):
         records.append([
             t_idx, i, 
-            f"{X_current[i]:.4f}",  # Absolute coordinates (position) in phase space
-            f"{v_current[i]:.4f}",  # This is the net flux q
+            f"{X_current[i]:.4f}", 
+            f"{v_current[i]:.4f}", 
             f"{a_current[i]:.4f}", 
             f"{jerk_current[i]:.4f}",
             f"{snap_current[i]:.4f}",
@@ -83,35 +68,41 @@ def run_dynamics_state_analysis(
     
     return records, X_current, v_current
 
-def main():
-    parser = get_base_parser("TLU Dynamics State Filter")
-    parser.add_argument("--history_window", type=int, default=100)
-    
-    # Added to header as well
+
+class DynamicsStateFilter(BaseFilter):
+    cli_description = "TLU Dynamics State Filter"
     output_header = ["t_idx", "node_idx", "state_X", "velocity_v", "acceleration_a", "jerk_j", "snap_s", "inertia_M", "viscosity_C", "external_force_F"]
-    args, N, reader, writer = setup_pipeline(parser, output_header)
+    history_config = {"X": 100, "v": 100}
 
-    from src.filters.stream_processor import load_initial_state
-    import os
-    env_dir = os.environ.get("TARGET_ENV", "workspace")
-    X_initial = load_initial_state(env_dir, N)
+    def add_arguments(self, parser: argparse.ArgumentParser):
+        parser.add_argument("--history_window", type=int, default=100, help="History sliding window size")
 
-    X_history_window = []
-    v_history_window = []
-
-    for t_idx, T_slice in yield_time_slices(reader, N):
-        records, X_current, v_current = run_dynamics_state_analysis(
-            t_idx, T_slice, X_history_window, v_history_window, X_initial
-        )
+    def process_slice(
+        self, 
+        t_idx: int, 
+        T_slice: np.ndarray, 
+        history: HistoryBuffer,
+        X_initial: np.ndarray,
+        args: argparse.Namespace
+    ) -> Tuple[List[List[Any]], Dict[str, np.ndarray]]:
         
-        X_history_window.append(X_current)
-        v_history_window.append(v_current)
-        if len(X_history_window) > args.history_window:
-            X_history_window.pop(0)
-            v_history_window.pop(0)
-            
-        for rec in records:
-            writer.writerow(rec)
+        X_hist = history.get("X")
+        v_hist = history.get("v")
+
+        records, X_current, v_current = run_dynamics_state_analysis(
+            t_idx, T_slice, X_hist, v_hist, X_initial
+        )
+
+        state_updates = {
+            "X": X_current,
+            "v": v_current
+        }
+
+        return records, state_updates
+
+def main():
+    filter_app = DynamicsStateFilter()
+    filter_app.run()
 
 if __name__ == "__main__":
     main()

@@ -1,10 +1,10 @@
-node_idx,node_label,spectral_exponent_beta,noise_classification
-0,00_ACC_Accounts_Payable,-0.1219,White Noise
-1,01_ACC_Accounts_Receivable,1.4049,Pink Noise
-2,02_ACC_COGS,2.4443,Brown Noise
-3,03_ACC_Cash,0.1281,White Noise
-4,04_ACC_Inventory,1.6144,Brown Noise
-5,05_ACC_Payroll_Exp,0.5916,Pink Noise
-6,06_ACC_Rent_Exp,0.8289,Pink Noise
-7,07_ACC_Sales_Revenue,2.2116,Brown Noise
-8,08_ACC_Travel_Exp,-0.7878,White Noise
+node_idx,node_label,account_category,spectral_exponent_beta,noise_classification
+0,00_ACC_Accounts_Payable,Liability,-0.1219,White Noise
+1,01_ACC_Accounts_Receivable,Asset,1.4049,Pink Noise
+2,02_ACC_COGS,Expense,2.4443,Brown Noise
+3,03_ACC_Cash,Asset,0.1281,White Noise
+4,04_ACC_Inventory,Asset,1.6144,Brown Noise
+5,05_ACC_Payroll_Exp,Expense,0.5916,Pink Noise
+6,06_ACC_Rent_Exp,Expense,0.8289,Pink Noise
+7,07_ACC_Sales_Revenue,Revenue,2.2116,Brown Noise
+8,08_ACC_Travel_Exp,Expense,-0.7878,White Noise

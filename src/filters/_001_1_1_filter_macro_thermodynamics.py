@@ -2,17 +2,15 @@
 # ==========================================
 # _001_1_1_filter_macro_thermodynamics.py
 # TLU System: Macro Thermodynamics Filter
+# Version: 8.0.0 (Refactored with BaseFilter Architecture)
 # ==========================================
 import sys
-import csv
 import argparse
 import numpy as np
 import pandas as pd
-from typing import List, Tuple
+from typing import List, Tuple, Dict, Any
 
-from src.filters.cli_parser import get_base_parser
-from src.filters.stream_processor import setup_pipeline, yield_time_slices
-
+from src.filters.base_filter import BaseFilter, HistoryBuffer
 from src.core.core_thermodynamics import (
     compute_internal_energy,
     compute_work,
@@ -34,57 +32,32 @@ def run_thermodynamics_analysis(
 ) -> Tuple[List[list], np.ndarray, np.ndarray]:
     """!
     @brief [Pure Orchestration Function] Execute macro thermodynamic bounds.
-    @details Tracks global system energy balances defining core structural stability.
-
-    @param t_idx Current temporal state map sequence.
-    @param T_slice Total graph transition matrix.
-    @param q_history_window Historical tensor tracking pure flux vector shifts.
-    @param work_indices Valid boundaries tracking productive utility parameters.
-    @param heat_indices Valid boundaries evaluating lost boundary sinks.
-
-    @return Tuple (Global aggregated records block, raw generic flux).
-
-    @pre
-        - System arrays accurately decoupled without arbitrary dependencies.
-    @post
-        - Executes strictly non-negative energy metric extraction routines stably.
-    @invariant
-        - Tracks strictly conservation metrics aligned geometrically to classical statistical formulations.
+    @details Legacy interface retained for backward compatibility with integration tests.
     """
-    # 2. Pure flux (velocity v)
     v_current = compute_net_flux(T_slice)
     
-    # Calculate Absolute Balance X
     if len(X_history_window) == 0:
         X_current = X_initial + v_current
     else:
         X_current = X_history_window[-1] + v_current
 
-    # 1. Internal energy U (Total activity from absolute balance)
     U = compute_internal_energy(X_current)
-    
-    # Temporarily combine the current state for temperature calculation (assumes it will be popped by the caller)
     temp_X_hist = np.array(X_history_window + [X_current])
 
-    # 3. Effective work (W) and Dissipated heat (Q)
     W = compute_work(v_current, work_indices)
     Q_heat = compute_heat(v_current, heat_indices)
 
-    # 4. Macro entropy S
     P = compute_transition_matrix(T_slice)
     S = compute_macro_entropy(P)
 
-    # 5. Macro temperature T (Volatility)
     if len(temp_X_hist) > 1:
         T = compute_macro_temperature(temp_X_hist)
     else:
         T = 0.0
 
-    # 6. Free energy F = U - TS
-    gradT = 0.0 # Gradient is conceptually zero for macro indicators
+    gradT = 0.0
     F = compute_helmholtz_free_energy(U, T, S)
 
-    # Since it is an indicator for the entire network, output is only 1 row per time slice
     record = [
         t_idx, 
         f"{U:.4f}", f"{S:.4f}", f"{T:.4f}", 
@@ -93,59 +66,64 @@ def run_thermodynamics_analysis(
     
     return [record], v_current, X_current
 
-def main():
-    parser = get_base_parser("TLU Macro Thermodynamics Filter")
-    parser.add_argument("--temp_window", type=int, default=3, help="Time window width for temperature calculation")
-    parser.add_argument("--work_labels", type=str, default="", help="Node labels considered as effective work (W) (e.g., 'ACC_Sales,ACC_Profit')")
-    parser.add_argument("--heat_labels", type=str, default="", help="Node labels considered as dissipated heat (Q) (e.g., 'ACC_Waste,ACC_Loss')")
-    
+
+class MacroThermodynamicsFilter(BaseFilter):
+    cli_description = "TLU Macro Thermodynamics Filter"
     output_header = ["t_idx", "gross_activity_U", "entropy_S", "temperature_T", "work_W", "heat_Q", "grad_T", "free_energy_F"]
-    args, N, reader, writer = setup_pipeline(parser, output_header)
+    history_config = {"X": 3, "v": 3}
 
-    # [Domain resolution at I/O layer] Extract index from string using the latest _node_map.csv
-    work_indices = []
-    heat_indices = []
-    if args.work_labels or args.heat_labels:
-        try:
-            df_map = pd.read_csv(args.node_map)
-            label_to_idx = dict(zip(df_map['node_label'], df_map['node_idx']))
-            
-            if args.work_labels:
-                for lbl in args.work_labels.split(','):
-                    lbl = lbl.strip()
-                    if lbl in label_to_idx:
-                        work_indices.append(int(label_to_idx[lbl]))
-            
-            if args.heat_labels:
-                for lbl in args.heat_labels.split(','):
-                    lbl = lbl.strip()
-                    if lbl in label_to_idx:
-                        heat_indices.append(int(label_to_idx[lbl]))
-        except Exception as e:
-            print(f"[WARN] Failed to parse labels: {e}", file=sys.stderr)
+    def add_arguments(self, parser: argparse.ArgumentParser):
+        parser.add_argument("--temp_window", type=int, default=3, help="Time window width for temperature calculation")
+        parser.add_argument("--work_labels", type=str, default="", help="Node labels considered as effective work (W)")
+        parser.add_argument("--heat_labels", type=str, default="", help="Node labels considered as dissipated heat (Q)")
 
-    from src.filters.stream_processor import load_initial_state
-    import os
-    env_dir = os.environ.get("TARGET_ENV", "workspace")
-    X_initial = load_initial_state(env_dir, N)
-
-    v_history_window = []
-    X_history_window = []
-
-    for t_idx, T_slice in yield_time_slices(reader, N):
-        records, v_current, X_current = run_thermodynamics_analysis(
-            t_idx, T_slice, v_history_window, X_history_window, X_initial, work_indices, heat_indices
-        )
+    def process_slice(
+        self, 
+        t_idx: int, 
+        T_slice: np.ndarray, 
+        history: HistoryBuffer,
+        X_initial: np.ndarray,
+        args: argparse.Namespace
+    ) -> Tuple[List[List[Any]], Dict[str, np.ndarray]]:
         
-        # Safe update of history (Sliding window)
-        v_history_window.append(v_current)
-        X_history_window.append(X_current)
-        if len(v_history_window) > args.temp_window:
-            v_history_window.pop(0)
-            X_history_window.pop(0)
-            
-        for rec in records:
-            writer.writerow(rec)
+        work_indices = []
+        heat_indices = []
+        if args.work_labels or args.heat_labels:
+            try:
+                df_map = pd.read_csv(args.node_map)
+                label_to_idx = dict(zip(df_map['node_label'], df_map['node_idx']))
+                
+                if args.work_labels:
+                    for lbl in args.work_labels.split(','):
+                        lbl = lbl.strip()
+                        if lbl in label_to_idx:
+                            work_indices.append(int(label_to_idx[lbl]))
+                
+                if args.heat_labels:
+                    for lbl in args.heat_labels.split(','):
+                        lbl = lbl.strip()
+                        if lbl in label_to_idx:
+                            heat_indices.append(int(label_to_idx[lbl]))
+            except Exception as e:
+                print(f"[WARN] Failed to parse labels: {e}", file=sys.stderr)
+
+        v_hist = history.get("v")
+        X_hist = history.get("X")
+
+        records, v_current, X_current = run_thermodynamics_analysis(
+            t_idx, T_slice, v_hist, X_hist, X_initial, work_indices, heat_indices
+        )
+
+        state_updates = {
+            "v": v_current,
+            "X": X_current
+        }
+
+        return records, state_updates
+
+def main():
+    filter_app = MacroThermodynamicsFilter()
+    filter_app.run()
 
 if __name__ == "__main__":
     main()

@@ -56,20 +56,23 @@ class TestFilterDynamicsState(unittest.TestCase):
 
     def test_run_dynamics_state_analysis_jerk_snap(self):
         """Verify that jerk and snap are calculated correctly over multiple timesteps."""
-        N = 1
-        # Set up a historical flux sequence for a single node: v = [2.0, 5.0, 9.0, 14.0]
+        N = 2
+        # Set up a historical flux sequence for node 0: v = [2.0, 5.0, 9.0, 14.0]
         # v(t) = 14.0, v(t-1) = 9.0, v(t-2) = 5.0, v(t-3) = 2.0
         # a(t) = 14.0 - 9.0 = 5.0, a(t-1) = 9.0 - 5.0 = 4.0
         # j(t) = a(t) - a(t-1) = 5.0 - 4.0 = 1.0 (jerk)
         # s(t) = j(t) - j(t-1) -> need j(t-1) -> j(t-1) = a(t-1) - a(t-2) = 4.0 - (5.0 - 2.0) = 4.0 - 3.0 = 1.0
         # s(t) = 1.0 - 1.0 = 0.0 (snap)
         
-        X_history = [np.array([2.0]), np.array([7.0]), np.array([16.0])]
-        v_history = [np.array([2.0]), np.array([5.0]), np.array([9.0])]
-        X_initial = np.array([0.0])
+        X_history = [np.array([2.0, 0.0]), np.array([7.0, 0.0]), np.array([16.0, 0.0])]
+        v_history = [np.array([2.0, 0.0]), np.array([5.0, 0.0]), np.array([9.0, 0.0])]
+        X_initial = np.array([0.0, 0.0])
         
-        # Current timestep flux
-        T_slice = np.array([[14.0]]) # 1x1 flux matrix, net flux = 14.0
+        # Current timestep flux: node 1 sends 14.0 to node 0 (net flux for node 0 is +14.0)
+        T_slice = np.array([
+            [0.0, 0.0],
+            [14.0, 0.0]
+        ])
         t_idx = 3
         
         records, X_current, v_current = run_dynamics_state_analysis(
