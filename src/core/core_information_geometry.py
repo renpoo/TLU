@@ -31,42 +31,69 @@ def compute_shannon_entropy(P_matrix):
     
     return entropy
 
-def compute_kl_divergence(P_current, P_baseline):
+def detect_novel_routes(P_current: np.ndarray, P_baseline: np.ndarray) -> np.ndarray:
     """!
-    @brief Calculate the KL divergence between the current transition probability and the past baseline.
-    @details Computes the informational distance. Handles zeroes via masking.
+    @brief Detect novel routes (P_baseline == 0 and P_current > 0).
+    @details Identifies unprecedented flow transitions that represent potential anomalies.
+    
+    @param P_current Current transition probability matrix (Nodes x Nodes).
+    @param P_baseline Baseline transition probability matrix (Nodes x Nodes).
+    
+    @return Boolean matrix (Nodes x Nodes) where True indicates a novel route.
+    """
+    return (P_baseline == 0) & (P_current > 0)
+
+def compute_alpha_divergence(P_current: np.ndarray, P_baseline: np.ndarray, alpha: float = 0.0) -> np.ndarray:
+    """!
+    @brief Calculate generalized alpha-divergence (default alpha=0.0, Hellinger-type bounded divergence).
+    @details Solves the support mismatch bug (P_baseline=0, P_current>0).
+             For alpha=0.0 (Hellinger type), D_alpha = sum((sqrt(P) - sqrt(Q))^2, axis=1).
+             Always remains non-negative (>= 0.0) and bounded <= 2.0 per row.
+
+    @param P_current Current transition probability matrix (Nodes x Nodes).
+    @param P_baseline Baseline transition probability matrix (Nodes x Nodes).
+    @param alpha Divergence order parameter (default 0.0).
+
+    @return Alpha divergence vector per node (Nodes,).
+    """
+    if np.all(P_current == 0) and np.all(P_baseline == 0):
+        return np.zeros(P_current.shape[0], dtype=float)
+
+    if alpha == 0.0:
+        sqrt_P = np.sqrt(np.maximum(P_current, 0.0))
+        sqrt_Q = np.sqrt(np.maximum(P_baseline, 0.0))
+        return np.sum((sqrt_P - sqrt_Q) ** 2, axis=1)
+    else:
+        P_safe = np.maximum(P_current, 0.0)
+        Q_safe = np.maximum(P_baseline, 0.0)
+        term = (alpha * P_safe + (1.0 - alpha) * Q_safe - (P_safe ** alpha) * (Q_safe ** (1.0 - alpha)))
+        return np.sum(term, axis=1) / (alpha * (1.0 - alpha))
+
+def compute_kl_divergence(P_current: np.ndarray, P_baseline: np.ndarray, use_alpha_zero: bool = True) -> np.ndarray:
+    """!
+    @brief Calculate divergence between current transition probability and baseline.
+    @details By default (use_alpha_zero=True), delegates to compute_alpha_divergence(alpha=0.0)
+             to avoid support mismatch masking bugs and negative values.
+             If use_alpha_zero=False, computes standard KL divergence with epsilon smoothing for zero-support entries.
 
     @param P_current Current transition probability matrix (Nodes x Nodes).
     @param P_baseline Past baseline transition probability matrix (Nodes x Nodes).
+    @param use_alpha_zero Whether to use bounded alpha=0.0 divergence (default True).
 
-    @return KL divergence vector per node (Nodes,).
-
-    @pre
-        - Both `P_current` and `P_baseline` must be valid 2D numpy arrays.
-        - Shapes of `P_current` and `P_baseline` must match perfectly.
-    @post
-        - Returns a 1D numpy array of non-negative KL divergence values.
-    @invariant
-        - Information distance is robust to zero-probability states via masking.
+    @return Divergence vector per node (Nodes,).
     """
-    # Handling zero: If p=0 or q=0, p*log(p/q) is treated as 0
-    # np.log2(0) produces -inf, so mask it beforehand and substitute 0
+    if use_alpha_zero:
+        return compute_alpha_divergence(P_current, P_baseline, alpha=0.0)
     
-    # Zero matrix check (safety fallback)
     if np.all(P_current == 0) or np.all(P_baseline == 0):
         return np.zeros(P_current.shape[0], dtype=float)
+
+    eps = 1e-12
+    Q_safe = np.where(P_baseline > 0, P_baseline, eps)
+    P_safe = np.where(P_current > 0, P_current, 1.0)
     
-    # Mask zeros before calculation
-    # If the denominator becomes zero (P_baseline is 0), that term is treated as 0
-    # If the numerator becomes zero (P_current is 0), that term is treated as 0
-    mask = (P_current > 0) & (P_baseline > 0)
-    
-    kl_divergence = np.zeros(P_current.shape[0], dtype=float)
-    P_masked = np.where(mask, P_current, 1.0)
-    P_baseline_masked = np.where(mask, P_baseline, 1.0)
-    kl_divergence = np.sum(P_current * np.log2(P_masked / P_baseline_masked), axis=1)
-    
-    return kl_divergence
+    kl_terms = np.where(P_current > 0, P_current * np.log2(P_safe / Q_safe), 0.0)
+    return np.maximum(0.0, np.sum(kl_terms, axis=1))
 
 def compute_information_curvature(q_history_window: np.ndarray) -> np.ndarray:
     """!

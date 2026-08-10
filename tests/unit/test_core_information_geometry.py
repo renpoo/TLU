@@ -2,7 +2,7 @@
 # test_core_information_geometry.py
 import unittest
 import numpy as np
-from src.core.core_information_geometry import compute_shannon_entropy, compute_kl_divergence
+from src.core.core_information_geometry import compute_shannon_entropy, compute_kl_divergence, compute_alpha_divergence, detect_novel_routes
 
 class TestInformationGeometry(unittest.TestCase):
     def test_compute_shannon_entropy_basic(self):
@@ -71,9 +71,13 @@ class TestInformationGeometry(unittest.TestCase):
         # Node 1: 1.0*log2(1.0/0.5) + 0.0*log2(...) = 1.0*log2(2.0) + 0 = 1.0
         expected_kl = np.array([0.0, 1.0])
         
-        actual_kl = compute_kl_divergence(P_current, P_baseline)
-        
+        actual_kl = compute_kl_divergence(P_current, P_baseline, use_alpha_zero=False)
         np.testing.assert_array_almost_equal(actual_kl, expected_kl)
+
+        # Also test alpha=0.0 bounded divergence
+        alpha_kl = compute_kl_divergence(P_current, P_baseline, use_alpha_zero=True)
+        self.assertAlmostEqual(alpha_kl[0], 0.0)
+        self.assertGreater(alpha_kl[1], 0.0)
 
 
     def test_compute_kl_divergence_2(self):
@@ -92,7 +96,7 @@ class TestInformationGeometry(unittest.TestCase):
             [0.0, 0.0]  # Node 3: Past was also zero
         ])
         
-        kl_div = compute_kl_divergence(P_current, P_baseline)
+        kl_div = compute_kl_divergence(P_current, P_baseline, use_alpha_zero=False)
         
         # Node 0: Distribution perfectly matches, so distance is zero
         self.assertAlmostEqual(kl_div[0], 0.0)
@@ -108,6 +112,51 @@ class TestInformationGeometry(unittest.TestCase):
         
         # Node 3: Zero matrices against each other return zero
         self.assertAlmostEqual(kl_div[3], 0.0)
+
+    def test_support_mismatch_novel_route_regression(self):
+        """
+        Regression Test for Bug C-1/C-2:
+        P_baseline=0 and P_current>0 (unprecedented novel route) MUST NOT be masked to 0.
+        Must yield positive bounded divergence and never yield negative values.
+        """
+        # Node 0 has a brand new outgoing route (P_baseline was 0 for index 1, now 1.0)
+        P_current = np.array([
+            [0.0, 1.0],
+            [0.5, 0.5]
+        ])
+        P_baseline = np.array([
+            [1.0, 0.0],  # 100% route 0 in baseline; route 1 was 0.0!
+            [0.5, 0.5]
+        ])
+
+        # Test alpha divergence (alpha=0.0 Hellinger)
+        alpha_div = compute_alpha_divergence(P_current, P_baseline, alpha=0.0)
+        
+        # Node 0: (sqrt(0)-sqrt(1))^2 + (sqrt(1)-sqrt(0))^2 = 1.0 + 1.0 = 2.0 (Max divergence for disjoint distributions)
+        self.assertAlmostEqual(alpha_div[0], 2.0)
+        self.assertAlmostEqual(alpha_div[1], 0.0)
+        
+        # Ensure all values are non-negative
+        self.assertTrue(np.all(alpha_div >= 0.0))
+
+        # Test default compute_kl_divergence (uses alpha=0.0 by default)
+        kl_div = compute_kl_divergence(P_current, P_baseline)
+        self.assertTrue(np.all(kl_div >= 0.0))
+        self.assertAlmostEqual(kl_div[0], 2.0)
+
+    def test_detect_novel_routes(self):
+        P_current = np.array([
+            [0.0, 1.0],
+            [0.5, 0.5]
+        ])
+        P_baseline = np.array([
+            [1.0, 0.0],
+            [0.5, 0.5]
+        ])
+        novel = detect_novel_routes(P_current, P_baseline)
+        self.assertTrue(novel[0, 1])
+        self.assertFalse(novel[0, 0])
+        self.assertFalse(novel[1, 0])
 
 
 if __name__ == '__main__':
