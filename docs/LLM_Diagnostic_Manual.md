@@ -36,7 +36,7 @@ Apply the thresholds, limits, and mathematical definitions detailed in these gui
    * *Analysis:* B/S and P/L static balances, Z-score trends, and fat-tail risk evaluation using KDE skewness/kurtosis.
 2. **Dynamics & State Space (Prefix: `000_1`):**
    * *Clinical Metaphor:* Blood stasis, muscle stiffness, phase dynamics, sudden shock/knocks.
-   * *Analysis:* 3D state-space trajectories (3D ribbon plots), and higher-order derivatives (Jerk and Snap time-series trends). Identify structural tearing, transaction shocks, or seizure propagation waves using phase twists, focus locks, or sudden Jerk spikes.
+   * *Analysis:* 3D state-space trajectories ($X_t, v_t, a_t$), higher-order derivatives (Jerk $j_t$ and Snap $s_t$), and phase plane portraits. Identify structural tearing, transaction shocks, or seizure propagation waves using phase twists, focus locks, or sudden Jerk/Snap spikes.
 3. **Stiffness & PCA (Prefix: `000_2`):**
    * *Clinical Metaphor:* Joint stiffness, skeletal hardening, wear and tear.
    * *Analysis:* Stiffness matrix evolution over time, stiffness temporal difference ($\Delta K_t$), PC1 EVR shifts, and loading concentration mapping via eigenvector evolution.
@@ -45,7 +45,7 @@ Apply the thresholds, limits, and mathematical definitions detailed in these gui
    * *Analysis:* Macro/micro entropy, free energy T-S diagrams, lag matrices to locate delays, and 3D thermodynamic plots to detect temperature gradients.
 5. **Information Geometry & Forensics (Prefix: `002_1`, `002_2`):**
    * *Clinical Metaphor:* Broken meridians, infectious focus, active bleeding.
-   * *Analysis:* Conservation residual audits based on Kirchhoff's current laws, and spatiotemporal KL drift/Z-score walls on 3D micro manifolds.
+   * *Analysis:* Conservation residual audits based on Kirchhoff's current laws, alpha-divergence / KL drift, and novel route detection on 3D micro manifolds.
 6. **Robot Kinematics & Reachability (Prefix: `003_1`, `003_2`):**
    * *Clinical Metaphor:* Range of motion limits, singularities, flow directionality.
    * *Analysis:* Forward Kinematics (FK) reachable space, Inverse Kinematics (IK) tracking error optimization. Evaluate 1st, 2nd, and 3rd-order Jacobian trajectories to diagnose path lengths, circular Even-Odd alternating coherence, and terminal sinks.
@@ -72,7 +72,7 @@ When generating diagnostic reports, the LLM must objectively determine the statu
 | **Tier 2** | 🔴 **CRITICAL** | Cumulative Residual $\sum |\Delta_t| > 1.0$ and $\rho < 0.75$ | $Mean / Median$ divergence ratio $> 15\%$ | Meridian Bleeding / Mass Leak |
 | **Tier 3** | 🟡 **HIGH** | Spectral Radius $\rho \ge 0.75$ and $\Delta_t \le 1.0\times 10^{-6}$ | Even-Odd Alternating Coherence $\Phi_{eo} \ge 0.8$ | Flow Recirculation Lock |
 | **Tier 4** | 🔴 **CRITICAL** | Spectral Radius $\rho \ge 0.75$ and Cumulative Residual $\sum |\Delta_t| > 1.0$ | Free Energy $F$ persistently negative | Depleted Qi / Hemorrhage |
-| **Tier 5** | 🟡 **WARNING** | Transient Residual $\Delta_{t_1} > 1.0$ and next-step $\Delta_{t_2} \approx 0.0$ | Transient 3D KL Drift spike $> 10.0$ | Local Sprain / Stagnation |
+| **Tier 5** | 🟡 **WARNING** | Transient Residual $\Delta_{t_1} > 1.0$ and next-step $\Delta_{t_2} \approx 0.0$ | Transient 3D Alpha-Divergence / KL Drift spike $> 10.0$ | Local Sprain / Stagnation |
 
 ### 2.2 Quantitative Model Pollution (Boiled Frog Effect) Detection Rule
 Statistical Z-score models adapt to chronic, long-term anomalies, leading to detection failure (false negatives) over time.
