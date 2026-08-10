@@ -108,23 +108,52 @@ def compute_helmholtz_free_energy(U: float, T: float, S: float) -> float:
     """
     return U - T * S
 
-def compute_macro_temperature(X_history_window: np.ndarray) -> float:
+def compute_natural_parameter_temperature(
+    history_window: np.ndarray, 
+    lambda_reg: float = 1e-4
+) -> tuple[float, np.ndarray]:
+    """!
+    @brief Calculate macro and local temperature based on Exponential Family Natural Parameters (theta) and Fisher Information.
+    @details Implements SDL_001 natural parameter temperature redefinition T = 1 / ||theta||.
+             Uses regularized precision matrix (Fisher Information) for robust shrinkage estimation.
+
+    @param history_window Historical state or flux vectors (Time_steps x Nodes).
+    @param lambda_reg Tikhonov regularization scalar for Fisher matrix inversion.
+
+    @return Tuple of (macro_temperature_T: float, local_temperatures_T_i: np.ndarray).
+    """
+    if len(history_window) < 2:
+        N = history_window.shape[1] if history_window.ndim == 2 else 1
+        return 0.0, np.zeros(N, dtype=float)
+
+    from src.core.core_safe_linalg import compute_safe_pinv, compute_covariance_matrix, DEFAULT_RCOND
+    mean_vec = np.mean(history_window, axis=0)
+    cov_mat = compute_covariance_matrix(history_window)
+    
+    K_precision = compute_safe_pinv(cov_mat, rcond=DEFAULT_RCOND, lambda_reg=lambda_reg)
+    theta_local = np.abs(np.dot(K_precision, mean_vec))
+    
+    eps = 1e-8
+    local_T = 1.0 / (theta_local + eps)
+    macro_T = float(np.sum(local_T))
+    
+    return macro_T, local_T
+
+def compute_macro_temperature(X_history_window: np.ndarray, use_natural_parameter: bool = False) -> float:
     """!
     @brief Calculate the temperature T of the entire network.
-    @details T is the sum of the standard deviation of absolute balances across the network.
+    @details If use_natural_parameter=True, computes T using Fisher information natural parameters.
+             Otherwise, computes T as the sum of standard deviations across the network.
 
     @param X_history_window History window of absolute balance vectors.
+    @param use_natural_parameter Whether to use natural parameter theta estimation (default False for backward compatibility).
 
     @return Macroscopic temperature T.
-
-    @pre
-        - `X_history_window` must be an array of at least shape (m>=1, N).
-    @post
-        - Returns a strictly non-negative float.
-    @invariant
-        - Lowered to 1st degree order standard deviation to structurally align physical dimensions with U.
     """
-    # Fix: Changed from np.var (variance) to np.std (standard deviation) to lower dimension to 1st degree (circle)
+    if use_natural_parameter:
+        macro_T, _ = compute_natural_parameter_temperature(X_history_window)
+        return macro_T
+
     node_std = np.std(X_history_window, axis=0, ddof=0)
     T = float(np.sum(node_std))
     return T
@@ -151,27 +180,25 @@ def compute_local_internal_energy(X_current: np.ndarray) -> np.ndarray:
     """
     return np.abs(X_current)
 
-def compute_local_temperature(X_history_window: np.ndarray) -> np.ndarray:
+def compute_local_temperature(X_history_window: np.ndarray, use_natural_parameter: bool = False) -> np.ndarray:
     """!
     @brief Calculate the local temperature T_i at each node in the network.
-    @details Defines local T as the univariate standard deviation of absolute balances for that node.
+    @details If use_natural_parameter=True, computes local T using Fisher information natural parameters.
+             Otherwise, computes local T as the univariate standard deviation for that node.
 
     @param X_history_window Historical absolute balances (Time_steps x Nodes).
+    @param use_natural_parameter Whether to use natural parameter theta estimation (default False).
 
     @return A 1D numpy array of node temperatures.
-
-    @pre
-        - `X_history_window` must be a valid 2D array.
-    @post
-        - Automatically returns zero vectors if historical depth is insufficient (< 2).
-    @invariant
-        - Satisfies zero sum baseline shifts under stationary limits.
     """
-    # Return 0 if history is insufficient (only 1 step)
     if len(X_history_window) < 2:
-        return np.zeros(X_history_window.shape[1], dtype=float)
-        
-    # Fix: Changed from np.var (variance) to np.std (standard deviation)
+        N = X_history_window.shape[1] if X_history_window.ndim == 2 else 1
+        return np.zeros(N, dtype=float)
+
+    if use_natural_parameter:
+        _, local_T = compute_natural_parameter_temperature(X_history_window)
+        return local_T
+
     return np.std(X_history_window, axis=0, ddof=0)
 
 def compute_local_temperature_gradient(t_local: np.ndarray, T_slice: np.ndarray) -> np.ndarray:
