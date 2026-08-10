@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # core_kinematics.py
 import numpy as np
-from src.core.core_safe_linalg import compute_safe_pinv
+from src.core.core_safe_linalg import compute_safe_pinv, DEFAULT_RCOND
 
 def build_echo_matrix(P: np.ndarray, gamma: float, max_k: int) -> np.ndarray:
     """!
@@ -98,7 +98,7 @@ def solve_ik_with_safe_stiffness(J: np.ndarray, K_safe: np.ndarray, target_dr: f
         - Solves exact constrained least squares optimization.
     """
     # 1. Calculate the pseudo-inverse (flexibility/covariance) of the stiffness matrix K
-    K_inv = compute_safe_pinv(K_safe, rcond=1e-15, lambda_reg=suggest_lambda(K_safe, lambda_ratio))
+    K_inv = compute_safe_pinv(K_safe, rcond=DEFAULT_RCOND, lambda_reg=suggest_lambda(K_safe, lambda_ratio))
     
     # 2. Adjust Jacobian J shape (treat 1D vector as a matrix)
     if J.ndim == 1:
@@ -108,7 +108,7 @@ def solve_ik_with_safe_stiffness(J: np.ndarray, K_safe: np.ndarray, target_dr: f
     A = np.dot(J, np.dot(K_inv, J.T))
     
     # 4. Calculate safe inverse of A
-    A_inv = compute_safe_pinv(A, rcond=1e-15, lambda_reg=suggest_lambda(A, lambda_ratio))
+    A_inv = compute_safe_pinv(A, rcond=DEFAULT_RCOND, lambda_reg=suggest_lambda(A, lambda_ratio))
     
     # 5. Calculate optimal displacement dq_opt
     dr_vec = np.array([target_dr]) if np.isscalar(target_dr) else np.array(target_dr)

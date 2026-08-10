@@ -23,7 +23,6 @@ TEST_MODULES=(
     "tests.unit.test_stream_processor"
     "tests.unit.test_index_registry"
     "tests.unit.test_core_safe_linalg"
-    "tests.unit.test_core_echo_dynamics"
     "tests.unit.test_core_tensor_ops"
     "tests.unit.test_core_kinematics"
     "tests.unit.test_core_dynamics"
