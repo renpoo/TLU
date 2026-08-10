@@ -65,7 +65,9 @@ Below is a summary of the main mathematical and physical metrics obtained from t
 > [!NOTE]
 >
 > * **Conservation Residual:** Measures the discrepancy between inflow and outflow in the system based on Kirchhoff's current law (mass conservation) (maximum absolute value per step). It takes positive values only for off-book embezzlement or journal entry errors in the financial domain.
-> * **Spectral Radius ( $\rho$ ):** The maximum eigenvalue of the adjacency probability matrix. Recirculation loops reach warning levels at $\rho \ge 0.75, and saturate at `1.00` in closed recirculation systems (traffic, markets, biological networks) as a mathematical consequence (Perron-Frobenius theorem).
+> * **Spectral Radius ( $\rho$ ):** The maximum eigenvalue of the adjacency probability matrix. Recirculation loops reach warning levels at $\rho \ge 0.75$, and saturate at `1.00` in closed recirculation systems (traffic, markets, biological networks) as a mathematical consequence (Perron-Frobenius theorem).
+> * **Alpha-Divergence ($\mathbb{D}_\alpha$, $\alpha=0.0$ Hellinger type):** Measures spatiotemporal probability distribution drift on 3D manifolds, structurally avoiding support mismatch masking bugs and guaranteeing bounded non-negative divergence $\in [0, 2.0]$.
+> * **Natural Parameter Temperature ($T = 1 / \|\theta\|$):** Derived from Fisher Information precision shrinkage estimation to measure thermal agitation and systemic/local entropy dissipation.
 > * **Net Income / Equivalent:** Accounting net income at the final step, or the domain equivalent (e.g., cumulative change in potential energy relative to the initial state for traffic and biological networks).
 
 ---
