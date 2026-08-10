@@ -54,7 +54,7 @@ def run_structural_stiffness_analysis(
     if len(q_hist_arr) > 2:
         dq_history = np.diff(q_hist_arr, axis=0)
         covariance = csl.compute_covariance_matrix(dq_history)
-        K_safe = csl.compute_safe_pinv(covariance, rcond=1e-15, lambda_reg=1e-4)
+        K_safe = csl.compute_safe_pinv(covariance, rcond=csl.DEFAULT_RCOND, lambda_reg=csl.DEFAULT_LAMBDA_REG)
         R_partial = compute_partial_correlation(K_safe)
     else:
         K_safe = np.zeros((N, N))

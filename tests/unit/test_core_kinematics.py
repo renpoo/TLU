@@ -2,7 +2,7 @@
 # test_core_kinematics.py
 import unittest
 import numpy as np
-from src.core.core_kinematics import compute_derivatives
+from src.core.core_kinematics import compute_derivatives, build_echo_matrix
 
 class TestKinematics(unittest.TestCase):
     def test_compute_derivatives_basic(self):
@@ -45,6 +45,42 @@ class TestKinematics(unittest.TestCase):
         expected_a = np.array([0.0, 0.0])
         np.testing.assert_array_almost_equal(actual_v, expected_v)
         np.testing.assert_array_almost_equal(actual_a, expected_a)
+
+    def test_build_echo_matrix_basic(self):
+        """
+        Ported from test_core_echo_dynamics: Verify finite echo matrix computation.
+        """
+        P_matrix = np.array([
+            [0.0, 1.0],
+            [1.0, 0.0]
+        ])
+        gamma = 0.5
+        max_k = 2
+
+        expected_M_echo = np.array([
+            [1.25, 0.5],
+            [0.5,  1.25]
+        ])
+        actual_M_echo = build_echo_matrix(P_matrix, gamma, max_k)
+        np.testing.assert_array_almost_equal(actual_M_echo, expected_M_echo)
+
+    def test_build_echo_matrix_infinite_series_limit(self):
+        """
+        Ported from test_core_echo_dynamics: Infinite series approximation test.
+        """
+        P_matrix = np.array([
+            [0.5, 0.5],
+            [1.0, 0.0]
+        ])
+        gamma = 0.5
+        max_k = 50
+
+        expected_M_echo = np.array([
+            [1.6, 0.4],
+            [0.8, 1.2]
+        ])
+        actual_M_echo = build_echo_matrix(P_matrix, gamma, max_k)
+        np.testing.assert_array_almost_equal(actual_M_echo, expected_M_echo, decimal=5)
 
 if __name__ == '__main__':
     unittest.main()

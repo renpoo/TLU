@@ -2,7 +2,7 @@
 # core_control_theory.py
 import numpy as np
 import scipy.linalg as la
-from src.core.core_safe_linalg import compute_safe_pinv
+from src.core.core_safe_linalg import compute_safe_pinv, DEFAULT_RCOND, DEFAULT_LAMBDA_REG
 
 def build_state_space_matrices(transition_P: np.ndarray, controllable_indices: list[int]) -> tuple[np.ndarray, np.ndarray]:
     """!
@@ -63,7 +63,7 @@ def build_QR_matrices(N: int, num_inputs: int, weight_Q: float, weight_R: float,
     
     return Q, R
 
-def solve_lqr_gain(A: np.ndarray, B: np.ndarray, Q: np.ndarray, R: np.ndarray, rcond: float = 1e-15, lambda_reg: float = 0.0) -> np.ndarray:
+def solve_lqr_gain(A: np.ndarray, B: np.ndarray, Q: np.ndarray, R: np.ndarray, rcond: float = DEFAULT_RCOND, lambda_reg: float = DEFAULT_LAMBDA_REG) -> np.ndarray:
     """!
     @brief Calculate the optimal deterministic feedback geometric gain K block.
     @details Solves discrete algebraic Riccati equations while strictly mitigating rank deficiencies via pseudo inverse bounds.

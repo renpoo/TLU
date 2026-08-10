@@ -12,7 +12,7 @@ from typing import List, Tuple, Dict, Any
 
 from src.filters.base_filter import BaseFilter, HistoryBuffer
 from src.core.core_tensor_ops import compute_net_flux, compute_transition_matrix
-from src.core.core_safe_linalg import compute_covariance_matrix, compute_safe_pinv
+from src.core.core_safe_linalg import compute_covariance_matrix, compute_safe_pinv, DEFAULT_RCOND, DEFAULT_LAMBDA_REG
 from src.core.core_forensics import (
     check_conservation_law,
     compute_structural_drift,
@@ -57,12 +57,12 @@ def run_forensics_analysis(
     if len(v_history_window) > 1:
         v_mean = np.mean(v_history_window, axis=0)
         v_cov_matrix = compute_covariance_matrix(np.array(v_history_window))
-        v_K_precision = compute_safe_pinv(v_cov_matrix, rcond=1e-15, lambda_reg=1e-4)
+        v_K_precision = compute_safe_pinv(v_cov_matrix, rcond=DEFAULT_RCOND, lambda_reg=DEFAULT_LAMBDA_REG)
         z_score_v = compute_multivariate_anomaly(v_current, v_mean, v_K_precision)
         
         g_mean = np.mean(g_history_window, axis=0)
         g_cov_matrix = compute_covariance_matrix(np.array(g_history_window))
-        g_K_precision = compute_safe_pinv(g_cov_matrix, rcond=1e-15, lambda_reg=1e-4)
+        g_K_precision = compute_safe_pinv(g_cov_matrix, rcond=DEFAULT_RCOND, lambda_reg=DEFAULT_LAMBDA_REG)
         z_score_X = compute_multivariate_anomaly(g_current, g_mean, g_K_precision)
     else:
         z_score_v = 0.0
