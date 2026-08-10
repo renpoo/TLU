@@ -1,0 +1,47 @@
+# ==========================================
+# priority_rebalancing.yaml (new-rulesets)
+# TLU System: GUI Investment vs. Mathematical Validation Priority
+# Version: 1.0.0 (New)
+# Amends: AI_GUI_Debugging_Profiling_Protocol.md, XP_Autonomous_3in1_Role_Protocol.md
+# Author: Claude (Cowork, independent audit role) — 2026-08-07
+# ==========================================
+
+amendment_meta:
+  problem_statement: >
+    TLU-App-3/TLU-App-4向けの既存プロトコル(AI_GUI_Debugging_Profiling_Protocol.md,
+    XP_Autonomous_3in1_Role_Protocol.md)は、60FPS、入力レイテンシ10ms未満、
+    ピクセル単位の10段階視覚監査(k=10スプライン補間、視角elev=35/azim=-55の厳密一致等)
+    という、非常に高い基準を課している。一方で、監査(new-TLU-SDLs/SDL_011参照)により、
+    TLUの数理エンジン自体はまだ Level 0(合成データでの概念実証)段階であり、
+    ベースライン比較や実データ検証はこれからであることが判明した。
+    検証されていない結果を、極めて高精細なGUIで美しく描画することに資源を
+    投じることは、優先順位として逆転している。
+
+rebalancing_directive:
+  principle: "検証されていない結果を、美しく描画してはならない。"
+  rule: >
+    数理エンジンが new-TLU-SDLs/SDL_011_Academic_Lineage_and_Validation_Protocol.yaml の
+    Level 1(ベースライン比較によるアブレーション実験)に到達するまで、
+    TLU-App-3/TLU-App-4のGUI開発における $J_{\text{Visual}}$ (視覚的再現性目的関数)
+    および10段階監査プロトコルの適用を、以下のように緩和する。
+  concrete_changes:
+    - "10段階視覚監査は、Level 1到達までは必須ゲートではなく、任意のQAチェックリストとして扱う。"
+    - "$J_{\text{Visual}} \\ge \\text{Target}$ を Loop Termination の必須条件から一時的に外す
+       (XP_Autonomous_3in1_Role_Protocol.md 第4節の論理積から $J_{\text{Visual}}$ を除外)。"
+    - "GUI開発リソースは、Level 1到達に必要な検証ロジック(new-TLU-SDLs/SDL_011の
+       validation_protocol)の実装支援に優先的に振り向ける。"
+  what_remains_required: >
+    $J_{\text{Physics}}$ (Python原典との数値誤差 <1e-4)は引き続き必須とする。
+    これは「GUIが元の計算を正確に反映しているか」の問題であり、
+    「元の計算自体が正しいか」とは独立した、GUI固有の品質保証だからである。
+
+exception: >
+  井尻雄士門下との対話等、対外的なデモが必要な場合は、この限りではない。
+  ただし、その場合もデモ画面には new-TLU-SDLs/SDL_011 の epistemic_status_labeling
+  に従い、"概念実証段階(Level 0)" である旨を画面上に明示すること。
+  美しい画面が、実証水準についての誤解を生んではならない。
+
+review_trigger: >
+  数理エンジンがLevel 1に到達した時点で、本ドキュメントの制約は自動的に失効し、
+  AI_GUI_Debugging_Profiling_Protocol.md および XP_Autonomous_3in1_Role_Protocol.md の
+  原文の基準にフル復帰する。

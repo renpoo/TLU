@@ -1,0 +1,67 @@
+# ==========================================
+# precommit_enforcement_protocol.yaml (new-rulesets)
+# TLU System: pre-commit による開発支援ツールの強制配線
+# Version: 1.0.0 (New)
+# Author: Claude (Cowork, 独立監査ロール) — 2026-08-08
+# ==========================================
+
+amendment_meta:
+  problem_statement: >
+    2026-08-08の一連の監査で繰り返し確認したのは、「ツールや仕組みを提案・導入すること」と
+    「それが実際に実行され続けること」は別問題である、という点である。DbC契約、
+    TLU_Meta_Learning_Self_Reflection_Log.mdの再発防止策、TLU-App-4のテストスクリプト、
+    いずれも存在はしていたが、配線・実行されていなかった。同じ轍を、今回新たに推奨した
+    開発支援ツール群(ruff, mypy, vulture, radon, bandit, pip-audit, hypothesis, pandera等)
+    でも踏まないための、強制配線の仕組みが本ドキュメントである。
+
+directive: >
+  上記のツール群を「推奨」の状態に留めず、`pre-commit`フレームワークを介して
+  gitのコミット前フックとして強制する。これにより、開発者(Gemini)の記憶や善意に
+  依存せず、構造的に実行され続けることを保証する。
+
+pre_commit_config_outline:
+  location: ".pre-commit-config.yaml(リポジトリルート)"
+  hooks_python:
+    - id: "ruff"
+      stage: "コミット前・全コミットで実行"
+      scope: "src/core/, src/filters/"
+    - id: "mypy"
+      stage: "コミット前"
+      scope: "src/core/(まずはここから。src/filters/への拡大は段階的に)"
+    - id: "vulture"
+      stage: "コミット前(警告のみ、ビルド失敗にはしない初期段階)"
+      scope: "src/core/, src/filters/"
+    - id: "bandit"
+      stage: "コミット前"
+      scope: "src/ 全体"
+  hooks_typescript_app4:
+    - id: "eslint相当(TLU-App-4に未導入の場合は先に導入)"
+      stage: "コミット前"
+      scope: "TLU-App-4/src/"
+    - id: "anti_fabrication_pattern_ban(Math.sin/random検出)"
+      stage: "コミット前・本番ビルドでは失敗させる"
+      scope: "TLU-App-4/src/core/, TLU-App-4/src/adapters/"
+      note: "new-TLU-App-SDLs/anti_fabrication_enforcement_protocol.yaml rule_1と同一。ここに集約配線する。"
+  ci_layer:
+    directive: >
+      pre-commitはローカルでの強制であり、コミット時にフックを回避する運用上の抜け道
+      (git commit --no-verify等)が常に存在する。したがって、pre-commitと同じチェック内容を
+      GitHub Actions等のCI上でも独立に再実行し、pre-commitの回避がマージを妨げないという
+      誤りを防ぐ。radon・jscpd・hypothesis・pandera連携のテストスイート・coverage.py・
+      pyan3による呼び出しグラフ検証は、コミットのたびに回すには重いため、CI側(PR単位・週次)に
+      配置する。
+
+staged_rollout:
+  rationale: >
+    既存コードベースに一括で全ツールを強制すると、大量の既存違反でコミットができなくなる
+    (priority_rebalancing.yamlと同じ「検証されていないものに過剰投資しない」原則)。
+  phases:
+    phase_1: "ruff, banditのみ有効化(新規コードのみ対象、既存違反はbaseline化して無視)。"
+    phase_2: "vulture警告 + EXECUTION_PUNCHLIST.mdのTier A項目を消化した後、mypy(core/のみ)を有効化。"
+    phase_3: "全Tier B完了後、hypothesis・pandera・radonをCI(コミット前ではなくPR単位)に追加。"
+
+verification: >
+  次回監査で、.pre-commit-config.yamlが実在し、実際に.git/hooks/pre-commitから
+  呼び出されていることを確認する。「設定ファイルを書いた」ことと「実際にフックとして
+  機能している」ことは別であり、これも今回のカテゴリC1(自己申告と実態の突き合わせ、
+  audit_criteria_checklist.yaml参照)の対象とする。

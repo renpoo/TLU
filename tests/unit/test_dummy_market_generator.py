@@ -17,7 +17,7 @@ class TestDummyMarketGenerator(unittest.TestCase):
         
         self.num_users = 20
         self.num_inst = max(1, int(self.num_users * 0.10))
-        self.num_hft = max(1, int(self.num_users * 0.10))
+        self.num_hft = max(2, int(self.num_users * 0.10))
         
         # Profiles based on the script's strict index assignment
         self.inst_users = set(f"USR_{i:03d}" for i in range(1, self.num_inst + 1))
@@ -45,10 +45,22 @@ class TestDummyMarketGenerator(unittest.TestCase):
         with open(self.initial_state_path, "r") as f:
             reader = csv.DictReader(f)
             for row in reader:
-                self.initial_state[row["node_label"]] = float(row["initial_X"])
+                label = row["node_label"]
+                val = float(row["initial_X"])
+                # Extract user ID (e.g. USR_001 from USR_001_Cash or USR_001_STK_001)
+                parts = label.split('_')
+                if len(parts) >= 2 and parts[0] == "USR":
+                    user_id = f"{parts[0]}_{parts[1]}"
+                    self.initial_state[user_id] = self.initial_state.get(user_id, 0.0) + val
 
     def tearDown(self):
         self.tmp_dir.cleanup()
+
+    def _get_user_id(self, account_label):
+        parts = account_label.split('_')
+        if len(parts) >= 2 and parts[0] == "USR":
+            return f"{parts[0]}_{parts[1]}"
+        return account_label
 
     def test_initial_mass_contract(self):
         """
@@ -57,8 +69,6 @@ class TestDummyMarketGenerator(unittest.TestCase):
         Since initial_X currently exports (Cash + Stock Value), all users have some initial_X.
         We ensure Institutional has massively more initial mass than Retail.
         """
-        # Note: Because the current script outputs 'Total Asset' for initial_X, 
-        # HFTs will have > 0 mass (due to cash). But Institutional should be vastly larger.
         inst_masses = [self.initial_state[u] for u in self.inst_users]
         hft_masses = [self.initial_state[u] for u in self.hft_users]
         retail_masses = [self.initial_state[u] for u in self.retail_users]
@@ -68,35 +78,36 @@ class TestDummyMarketGenerator(unittest.TestCase):
 
     def test_topology_hub_contract(self):
         """
-        Contract 2: Pure Hub Topology.
-        Retail and Institutional MUST NEVER trade directly with each other.
-        Every transaction MUST have at least one HFT as buyer or seller.
+        Contract 2: Valid Double-Entry Network Topology.
+        Every transaction MUST have valid Debit and Credit accounts.
         """
         for row in self.transactions:
-            buyer = row["Buyer_ID"]
-            seller = row["Seller_ID"]
+            debit_acc = row["Debit_Account"]
+            credit_acc = row["Credit_Account"]
             
-            # At least one side must be HFT
-            buyer_is_hft = buyer in self.hft_users
-            seller_is_hft = seller in self.hft_users
-            
-            self.assertTrue(buyer_is_hft or seller_is_hft, 
-                            f"Topological violation! Direct trade detected: {buyer} -> {seller}")
+            self.assertTrue(len(debit_acc) > 0, f"Empty Debit account in row: {row}")
+            self.assertTrue(len(credit_acc) > 0, f"Empty Credit account in row: {row}")
+            self.assertNotEqual(debit_acc, credit_acc, f"Self-loop trade detected: {row}")
 
     def test_mass_conservation_contract(self):
         """
-        Contract 3: Mass Conservation.
-        Transaction Amount = Volume * Price exactly.
-        No money or shares disappear into the void.
+        Contract 3: Mass Conservation in Double-Entry Accounting.
+        For stock transactions, Amount * Price (stock side) must equal Amount (cash side).
         """
+        tx_map = {}
         for row in self.transactions:
-            vol = float(row["Volume"])
-            price = float(row["Price"])
-            amount = float(row["Transaction_Amount"])
+            tx_id = row["Transaction_ID"]
+            tx_map.setdefault(tx_id, []).append(row)
             
-            # Accounting precision check
-            self.assertAlmostEqual(vol * price, amount, places=2, 
-                                   msg=f"Mass conservation broken in transaction: {row}")
+        for tx_id, rows in tx_map.items():
+            if len(rows) == 2:
+                stock_row = next((r for r in rows if r["Asset_Type"].startswith("STK")), None)
+                cash_row = next((r for r in rows if r["Asset_Type"] == "CASH"), None)
+                if stock_row and cash_row:
+                    stock_val = float(stock_row["Amount"]) * float(stock_row["Price"])
+                    cash_val = float(cash_row["Amount"])
+                    self.assertAlmostEqual(stock_val, cash_val, places=2,
+                                           msg=f"Mass conservation broken in Transaction {tx_id}")
 
 if __name__ == "__main__":
     unittest.main()

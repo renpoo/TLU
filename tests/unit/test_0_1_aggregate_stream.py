@@ -93,7 +93,7 @@ class TestAggregateStream(unittest.TestCase):
         self.assertEqual(res.returncode, 0, res.stderr.decode('utf-8'))
         df = pd.read_csv(io.BytesIO(res.stdout))
         self.assertEqual(len(df), 1)
-        self.assertEqual(df.iloc[0]['time'], '2026')
+        self.assertEqual(str(df.iloc[0]['time']), '2026')
         self.assertEqual(df.iloc[0]['val'], 100)
 
     def test_custom_intervals_english(self):

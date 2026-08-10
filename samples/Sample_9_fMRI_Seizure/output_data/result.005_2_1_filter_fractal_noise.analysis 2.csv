@@ -1,0 +1,6 @@
+node_idx,node_label,account_category,spectral_exponent_beta,noise_classification
+0,00_Motor_Cortex,Unknown,2.2807,Brown Noise
+1,01_Parietal_Lobe,Unknown,2.2385,Brown Noise
+2,02_Prefrontal_Cortex,Unknown,2.2329,Brown Noise
+3,03_Temporal_Lobe,Unknown,1.981,Brown Noise
+4,04_Visual_Cortex,Unknown,2.1676,Brown Noise
