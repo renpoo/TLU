@@ -11,25 +11,18 @@ from typing import List, Tuple, Dict, Any
 
 from src.filters.base_filter import BaseFilter, HistoryBuffer
 from src.core.core_tensor_ops import compute_net_flux, compute_transition_matrix
+from src.core.core_information_geometry import compute_kl_divergence
 
 def compute_node_kl_divergence_vector(
         P_current: np.ndarray, 
-        P_history_window: List[np.ndarray], 
-        epsilon: float = 1e-9
+        P_history_window: List[np.ndarray]
 ) -> np.ndarray:
     N = P_current.shape[0]
     if len(P_history_window) == 0:
-        return np.zeros(N)
+        return np.zeros(N, dtype=float)
     
     P_mean_hist = np.mean(P_history_window, axis=0)
-    P_current_safe = P_current + epsilon
-    P_mean_hist_safe = P_mean_hist + epsilon
-    
-    ratio = P_current_safe / P_mean_hist_safe
-    kl_matrix = P_current_safe * np.log(ratio)
-    kl_vector = np.sum(kl_matrix, axis=1) 
-    
-    return np.maximum(kl_vector, 0.0)
+    return compute_kl_divergence(P_current, P_mean_hist)
 
 def compute_node_univariate_z_score_vector(
         q_current: np.ndarray, 
