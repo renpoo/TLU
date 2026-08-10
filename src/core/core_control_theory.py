@@ -92,12 +92,18 @@ def solve_lqr_gain(A: np.ndarray, B: np.ndarray, Q: np.ndarray, R: np.ndarray, r
     if B.shape[1] == 0 or np.all(B == 0):
         return np.zeros((0, A.shape[0]))
 
+    # Ensure R is strictly positive-definite via regularizing identity shift if singular/semi-definite
+    min_eig = np.min(np.linalg.eigvalsh(R)) if R.shape[0] == R.shape[1] else 0.0
+    if min_eig <= 1e-12:
+        R_safe = R + max(lambda_reg, 1e-6) * np.eye(R.shape[0], dtype=float)
+    else:
+        R_safe = R
+
     try:
-        S = la.solve_discrete_are(A, B, Q, R)
+        S = la.solve_discrete_are(A, B, Q, R_safe)
         Bp_S_B = np.dot(B.T, np.dot(S, B))
         
-        # Converted internally hardcoded 1e-15, 1e-6 into arguments
-        R_plus_Bp_S_B_inv = compute_safe_pinv(R + Bp_S_B, rcond=rcond, lambda_reg=lambda_reg)
+        R_plus_Bp_S_B_inv = compute_safe_pinv(R_safe + Bp_S_B, rcond=rcond, lambda_reg=lambda_reg)
         
         K_lqr = np.dot(R_plus_Bp_S_B_inv, np.dot(B.T, np.dot(S, A)))
         return K_lqr

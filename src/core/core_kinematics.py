@@ -27,7 +27,11 @@ def build_echo_matrix(P: np.ndarray, gamma: float, max_k: int) -> np.ndarray:
     current_P = np.eye(N)
     for k in range(1, max_k + 1):
         current_P = np.dot(current_P, P)
-        M_echo += (gamma ** k) * current_P
+        step_contrib = (gamma ** k) * current_P
+        M_echo += step_contrib
+        # A6: Stop rule for k >= 3 when propagation energy falls below numerical precision limit
+        if k >= 3 and np.max(np.abs(step_contrib)) < 1e-12:
+            break
     return M_echo
 
 def run_forward_simulation(P, dq_input, gamma, max_k):

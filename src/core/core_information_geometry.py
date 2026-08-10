@@ -25,11 +25,12 @@ def compute_shannon_entropy(P_matrix):
     if np.all(P_matrix == 0):
         return np.zeros(P_matrix.shape[0], dtype=float)
     
-    # Mask zeros before calculation
+    # Mask zeros beforehand to avoid log2(0) numerical warnings
     P_masked = np.where(P_matrix > 0, P_matrix, 1.0)
-    entropy = -np.sum(P_masked * np.log2(P_masked), axis=1)
+    entropy_terms = np.where(P_matrix > 0, P_matrix * np.log2(P_masked), 0.0)
+    entropy = -np.sum(entropy_terms, axis=1)
     
-    return entropy
+    return np.maximum(0.0, entropy)
 
 def detect_novel_routes(P_current: np.ndarray, P_baseline: np.ndarray) -> np.ndarray:
     """!
