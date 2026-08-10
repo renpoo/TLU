@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # core_tensor_ops.py
 import numpy as np
+from src.core.core_contracts import assert_stochastic_matrix
 
 def _compute_outflow(T_matrix):
     """!
@@ -58,4 +59,6 @@ def compute_transition_matrix(T_matrix):
     outflow = _compute_outflow(T_matrix)
     outflow_col = outflow[:, np.newaxis]
     P_matrix = np.zeros_like(T_matrix, dtype=float)
-    return np.divide(T_matrix, outflow_col, out=P_matrix, where=outflow_col != 0)
+    np.divide(T_matrix, outflow_col, out=P_matrix, where=outflow_col != 0)
+    assert_stochastic_matrix(P_matrix)
+    return P_matrix

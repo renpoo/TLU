@@ -3,6 +3,7 @@
 import numpy as np
 import scipy.linalg as la
 from src.core.core_safe_linalg import compute_safe_pinv
+from src.core.core_contracts import assert_positive_semi_definite
 
 def build_state_space_matrices(transition_P: np.ndarray, controllable_indices: list[int]) -> tuple[np.ndarray, np.ndarray]:
     """!
@@ -61,6 +62,10 @@ def build_QR_matrices(N: int, num_inputs: int, weight_Q: float, weight_R: float,
     safe_weight_R = max(weight_R, min_weight_R)
     R = np.eye(num_inputs, dtype=float) * safe_weight_R
     
+    assert_positive_semi_definite(Q)
+    if num_inputs > 0:
+        assert_positive_semi_definite(R)
+
     return Q, R
 
 def solve_lqr_gain(A: np.ndarray, B: np.ndarray, Q: np.ndarray, R: np.ndarray, rcond: float = 1e-15, lambda_reg: float = 0.0) -> np.ndarray:
