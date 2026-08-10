@@ -11,7 +11,8 @@ from src.core.core_thermodynamics import (
     compute_macro_temperature,
     compute_local_internal_energy,
     compute_local_temperature,
-    compute_local_temperature_gradient
+    compute_local_temperature_gradient,
+    compute_natural_parameter_temperature
 )
 
 class TestCoreThermodynamics(unittest.TestCase):
@@ -94,6 +95,25 @@ class TestCoreThermodynamics(unittest.TestCase):
         
         grad_t = compute_local_temperature_gradient(t_local, T_slice)
         np.testing.assert_array_almost_equal(grad_t, expected_grad_t)
+
+    def test_compute_natural_parameter_temperature(self):
+        q_history = np.array([
+            [10.0, -5.0],
+            [12.0, -4.0],
+            [11.0, -6.0]
+        ])
+        macro_T, local_T = compute_natural_parameter_temperature(q_history)
+        self.assertGreater(macro_T, 0.0)
+        self.assertEqual(len(local_T), 2)
+        self.assertTrue(np.all(local_T > 0.0))
+
+        # Test macro and local temperature with use_natural_parameter=True
+        T_macro_nat = compute_macro_temperature(q_history, use_natural_parameter=True)
+        self.assertAlmostEqual(T_macro_nat, macro_T)
+
+        T_local_nat = compute_local_temperature(q_history, use_natural_parameter=True)
+        np.testing.assert_array_almost_equal(T_local_nat, local_T)
+
 
 if __name__ == '__main__':
     unittest.main()
