@@ -4,13 +4,16 @@
 > **【Clinical Declaration by the SME Physician】**
 > Tensor-Link Utility (TLU) is a **"Universal Physics-Mathematics-Mathematics Engine"** that diagnoses network data from seemingly completely different domains—double-entry bookkeeping, urban traffic, financial markets, and neural brain fMRI—based on the physical laws of **Thermodynamics**, **Topology**, and **Kinematics**.
 >
-> This document serves as a comprehensive index and cross-verification catalog of 10 validation samples. It systematically explains how pathological anomalies hidden within systems waste energy, cause structural rigidity (thrombi/congestion), or violate mass conservation (embezzlement/hemorrhage) to drive systems toward thermodynamic "heat death," using clinical metaphors from Eastern medicine (Qi-Blood-Water, Meridians, and Acupoints).
+> This document serves as a comprehensive index and cross-verification catalog of 13 validation samples. It systematically explains how pathological anomalies hidden within systems waste energy, cause structural rigidity (thrombi/congestion), or violate mass conservation (embezzlement/hemorrhage) to drive systems toward thermodynamic "heat death," using clinical metaphors from Eastern medicine (Qi-Blood-Water, Meridians, and Acupoints).
+>
+> **【Epistemic Status & Verification Standard (SDL_011 Level 0 Disclosure)】**
+> All physical-mathematical models, cross-domain mappings, and diagnostic conclusions presented in this catalog represent **Level 0 Proof-of-Concept (PoC) on synthetic validation datasets**. They demonstrate theoretical viability under controlled mathematical models and require further empirical validation before live industrial or clinical deployment.
 
 ---
 
 ## 📂 Verification Samples & Individual Reports (Table of Contents)
 
-Below is the diagnostic catalog for all 10 samples included in the TLU environment. Click on a report title to access its detailed individual verification report (README.md).
+Below is the diagnostic catalog for all 13 samples included in the TLU environment. Click on a report title to access its detailed individual verification report (README.md).
 
 * **[🟢 Sample 0: Healthy / Healthy Metabolism](./Sample_0_Healthy/README.md)**
   * **Domain:** Financial (Ledger) | **Eastern Medicine Diagnosis:** Peace of Qi & Blood, Unobstructed Meridians

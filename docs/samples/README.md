@@ -2,7 +2,11 @@
 
 Tensor-Link Utility (TLU) is a physical mathematics engine designed to audit double-entry bookkeeping, urban traffic grids, financial markets, and brain fMRI signals under a unified framework of physical laws.
 
-This document serves as the guide directory and comparative verification registry for the 10 validation samples. Pathological anomalies within a system waste energy, trigger structural stiffness, or break conservation principles, eventually driving the network to thermodynamic death. Here we explain these dynamics using clinical metaphors from Eastern medicine.
+This document serves as the guide directory and comparative verification registry for the 13 validation samples. Pathological anomalies within a system waste energy, trigger structural stiffness, or break conservation principles, eventually driving the network to thermodynamic death. Here we explain these dynamics using clinical metaphors from Eastern medicine.
+
+> [!NOTE]
+> **【Epistemic Status & Verification Standard (SDL_011 Level 0 Disclosure)】**
+> All physical-mathematical models, cross-domain mappings, and diagnostic conclusions presented in this catalog represent **Level 0 Proof-of-Concept (PoC) on synthetic validation datasets**. They demonstrate theoretical viability under controlled mathematical models and require further empirical validation before live industrial or clinical deployment.
 
 ---
 
@@ -32,7 +36,7 @@ Detailed individual guides covering the physical mathematics and plot interpreta
 
 ## 📂 Validation Samples & Diagnostic Reports Registry
 
-A directory of the 10 validation samples built into the TLU environment. Click on a sample title to access its technical clinical report.
+A directory of the 13 validation samples built into the TLU environment. Click on a sample title to access its technical clinical report.
 
 * **[🟢 Sample 0: Healthy](./Sample_0_Healthy/README.md)**
   * **Domain:** Accounting | **Clinical Metaphor:** Harmonious Qi & Blood / Smooth Meridians
@@ -92,6 +96,9 @@ Maximum metrics computed across all samples by TLU physical filters:
 | **7** | **[Market Cash Flow](./Sample_7_Market_Cash_Flow/README.md)** | Market | 🟢 **NORMAL** | `1.00` | `0.00` | `19.97` | `399.76` | `-$15,315,870.03` | Steady Cash Convection |
 | **8** | **[fMRI Stroke](./Sample_8_fMRI_Stroke/README.md)** | Neural | 🔴 **CRITICAL** | `1.00` | `0.00` | `51.44` | `0.07` | `-$500,000.00` | Cerebral Blockage / Ischemia |
 | **9** | **[fMRI Seizure](./Sample_9_fMRI_Seizure/README.md)** | Neural | 🔴 **CRITICAL** | `1.00` | `0.00` | `24.04` | `0.00` | `-$500,000.00` | Global Hyper-synchrony |
+| **10** | **[ERP Traditional](./Sample_10_ERP_Traditional/README.md)** | ERP | 🟢 **NORMAL** | `0.00` | `0.00` | `0.00` | `0.00` | `+$0.00` | Congestion & Blood Stasis |
+| **11** | **[ERP Standard ABC](./Sample_11_ERP_ABC/README.md)** | ERP | 🟢 **NORMAL** | `0.00` | `0.00` | `0.00` | `0.00` | `+$0.00` | Harmonious Flow & Pulsation |
+| **12** | **[ERP Dynamic T-ABC](./Sample_12_ERP_TABC/README.md)** | ERP | 🟢 **NORMAL** | `0.00` | `0.00` | `0.00` | `0.00` | `+$0.00` | Yin-Yang Balance & Waste Expulsion |
 
 > [!NOTE]
 >
