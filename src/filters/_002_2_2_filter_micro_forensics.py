@@ -49,10 +49,19 @@ def evaluate_micro_anomaly_flags(
 ) -> List[int]:
     N = len(kl_vector)
     flags = []
+
+    if 'kl_drift_thresh' not in thresholds:
+        raise KeyError("DbC Violation: Missing required threshold parameter 'kl_drift_thresh'")
+    if 'z_score_thresh' not in thresholds:
+        raise KeyError("DbC Violation: Missing required threshold parameter 'z_score_thresh'")
+
+    kl_thresh = thresholds['kl_drift_thresh']
+    z_thresh = thresholds['z_score_thresh']
+
     for i in range(N):
-        is_kl_anomaly = kl_vector[i] > thresholds.get('kl_drift_thresh', 3.0)
-        is_z_X_anomaly = z_vector_g[i] > thresholds.get('z_score_thresh', 3.0)
-        is_z_v_anomaly = z_vector_v[i] > thresholds.get('z_score_thresh', 3.0)
+        is_kl_anomaly = kl_vector[i] > kl_thresh
+        is_z_X_anomaly = z_vector_g[i] > z_thresh
+        is_z_v_anomaly = z_vector_v[i] > z_thresh
         
         flags.append(1 if (is_kl_anomaly or is_z_X_anomaly or is_z_v_anomaly) else 0)
     return flags
