@@ -12,23 +12,27 @@ RUN apt-get update && \
     bc \
     coreutils \
     jq \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update && apt-get install -y \
     fonts-noto-cjk \
-    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-
-RUN rm -rf /root/.cache/matplotlib
 
 # コンテナ内の作業ディレクトリ（Immutable Zone）
 WORKDIR /app
+
+# 非rootユーザーの作成 (TLU Security Hardening)
+RUN useradd -m -u 1000 tluuser && \
+    chown -R tluuser:tluuser /app
 
 # 依存パッケージのインストール（requirements.txtが存在する場合）
 # TDDの高速化のため、依存解決レイヤーを先にキャッシュさせる
 COPY requirements.txt ./
 RUN pip install --no-cache-dir --upgrade pip && \
     if [ -s requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
+
+# ソースコードと成果物権限の設定
+COPY --chown=tluuser:tluuser . /app
+
+# 非rootユーザーへ切り替え
+USER tluuser
 
 # PYTHONPATHのパスを通し、srcディレクトリ内のモジュール解決を容易にする
 ENV PYTHONPATH=/app/src
