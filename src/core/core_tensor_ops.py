@@ -3,7 +3,7 @@
 import numpy as np
 from src.core.core_contracts import assert_stochastic_matrix
 
-def _compute_outflow(T_matrix):
+def _compute_outflow(T_matrix: np.ndarray) -> np.ndarray:
     """!
     @brief Helper: compute total outflow for each node.
     
@@ -12,7 +12,7 @@ def _compute_outflow(T_matrix):
     """
     return np.sum(T_matrix, axis=1)
 
-def _compute_inflow(T_matrix):
+def _compute_inflow(T_matrix: np.ndarray) -> np.ndarray:
     """!
     @brief Helper: compute total inflow for each node.
     
@@ -21,7 +21,7 @@ def _compute_inflow(T_matrix):
     """
     return np.sum(T_matrix, axis=0)
     
-def compute_net_flux(T_matrix):
+def compute_net_flux(T_matrix: np.ndarray) -> np.ndarray:
     """!
     @brief Calculate pure flux from the given transition tensor (matrix).
     @details Pure flux is defined as Inflow - Outflow mathematically.
@@ -39,7 +39,7 @@ def compute_net_flux(T_matrix):
     """
     return _compute_inflow(T_matrix) - _compute_outflow(T_matrix)
 
-def compute_transition_matrix(T_matrix):
+def compute_transition_matrix(T_matrix: np.ndarray) -> np.ndarray:
     """!
     @brief Calculate transition probability matrix (distribution ratio).
     @details Normalizes the transaction matrix by the total outflow of each source node.

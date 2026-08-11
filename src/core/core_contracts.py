@@ -13,7 +13,7 @@ import functools
 import numpy as np
 from typing import Callable, Any
 
-def assert_stochastic_matrix(mat: np.ndarray, tol: float = 1e-4):
+def assert_stochastic_matrix(mat: np.ndarray, tol: float = 1e-4) -> None:
     """!
     @brief DbC Invariant: Assert matrix is a valid Markov transition matrix (row sum = 1.0 for active rows).
     """
@@ -31,7 +31,7 @@ def assert_stochastic_matrix(mat: np.ndarray, tol: float = 1e-4):
         if not np.allclose(active_sums, 1.0, atol=tol):
             raise ValueError(f"DbC Violation: Active row sums must equal 1.0, got sums: {active_sums}")
 
-def assert_symmetric_matrix(mat: np.ndarray, tol: float = 1e-4):
+def assert_symmetric_matrix(mat: np.ndarray, tol: float = 1e-4) -> None:
     """!
     @brief DbC Invariant: Assert matrix is symmetric (A = A.T).
     """
@@ -42,7 +42,7 @@ def assert_symmetric_matrix(mat: np.ndarray, tol: float = 1e-4):
     if not np.allclose(mat, mat.T, atol=tol):
         raise ValueError("DbC Violation: Matrix is not symmetric (A != A.T)")
 
-def assert_positive_semi_definite(mat: np.ndarray, tol: float = 1e-7):
+def assert_positive_semi_definite(mat: np.ndarray, tol: float = 1e-7) -> None:
     """!
     @brief DbC Invariant: Assert matrix is positive semi-definite (eigenvalues >= -tol).
     """
