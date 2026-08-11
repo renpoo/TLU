@@ -23,7 +23,8 @@ def run_local_thermo_analysis(
         T_slice: np.ndarray, 
         v_history_window: List[np.ndarray],
         X_history_window: List[np.ndarray],
-        X_initial: np.ndarray
+        X_initial: np.ndarray,
+        use_natural_parameter: bool = False
 ) -> Tuple[List[list], np.ndarray, np.ndarray]:
     """!
     @brief [Pure Orchestration Function] Run local thermodynamic bounds.
@@ -45,7 +46,7 @@ def run_local_thermo_analysis(
     temp_X_hist = np.array(X_history_window + [X_current])
     
     if len(temp_X_hist) > 1:
-        t_local = compute_local_temperature(temp_X_hist)
+        t_local = compute_local_temperature(temp_X_hist, use_natural_parameter=use_natural_parameter)
     else:
         t_local = np.zeros(N)
 
@@ -68,6 +69,7 @@ class LocalThermodynamicsFilter(BaseFilter):
 
     def add_arguments(self, parser: argparse.ArgumentParser):
         parser.add_argument("--temp_window", type=int, default=3, help="Time window width for local temperature calculation")
+        parser.add_argument("--use_natural_parameter", action="store_true", help="Use natural parameter theta estimation for local temperature t_local")
 
     def process_slice(
         self, 
@@ -81,8 +83,9 @@ class LocalThermodynamicsFilter(BaseFilter):
         v_hist = history.get("v")
         X_hist = history.get("X")
 
+        use_nat = getattr(args, 'use_natural_parameter', False)
         records, v_current, X_current = run_local_thermo_analysis(
-            t_idx, T_slice, v_hist, X_hist, X_initial
+            t_idx, T_slice, v_hist, X_hist, X_initial, use_natural_parameter=use_nat
         )
 
         return records, {"v": v_current, "X": X_current}
