@@ -83,5 +83,21 @@ class TestFilterMicroForensics(unittest.TestCase):
         for rec in records:
             self.assertEqual(rec[5], 0)
 
+    def test_evaluate_micro_anomaly_flags_fail_fast(self):
+        """Verify that evaluate_micro_anomaly_flags raises KeyError when required thresholds are missing"""
+        from src.filters._002_2_2_filter_micro_forensics import evaluate_micro_anomaly_flags
+
+        kl_vec = np.array([0.5, 1.2])
+        z_g_vec = np.array([0.1, 0.2])
+        z_v_vec = np.array([0.1, 0.2])
+
+        # Missing 'kl_drift_thresh'
+        with self.assertRaises(KeyError):
+            evaluate_micro_anomaly_flags(kl_vec, z_g_vec, z_v_vec, {'z_score_thresh': 3.0})
+
+        # Missing 'z_score_thresh'
+        with self.assertRaises(KeyError):
+            evaluate_micro_anomaly_flags(kl_vec, z_g_vec, z_v_vec, {'kl_drift_thresh': 3.0})
+
 if __name__ == '__main__':
     unittest.main()
