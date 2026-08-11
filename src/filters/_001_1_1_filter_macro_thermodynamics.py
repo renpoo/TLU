@@ -28,7 +28,8 @@ def run_thermodynamics_analysis(
         X_history_window: List[np.ndarray],
         X_initial: np.ndarray,
         work_indices: List[int], 
-        heat_indices: List[int]
+        heat_indices: List[int],
+        use_natural_parameter: bool = False
 ) -> Tuple[List[list], np.ndarray, np.ndarray]:
     """!
     @brief [Pure Orchestration Function] Execute macro thermodynamic bounds.
@@ -51,7 +52,7 @@ def run_thermodynamics_analysis(
     S = compute_macro_entropy(P)
 
     if len(temp_X_hist) > 1:
-        T = compute_macro_temperature(temp_X_hist)
+        T = compute_macro_temperature(temp_X_hist, use_natural_parameter=use_natural_parameter)
     else:
         T = 0.0
 
@@ -76,6 +77,7 @@ class MacroThermodynamicsFilter(BaseFilter):
         parser.add_argument("--temp_window", type=int, default=3, help="Time window width for temperature calculation")
         parser.add_argument("--work_labels", type=str, default="", help="Node labels considered as effective work (W)")
         parser.add_argument("--heat_labels", type=str, default="", help="Node labels considered as dissipated heat (Q)")
+        parser.add_argument("--use_natural_parameter", action="store_true", help="Use natural parameter theta estimation for temperature T")
 
     def process_slice(
         self, 
@@ -110,8 +112,10 @@ class MacroThermodynamicsFilter(BaseFilter):
         v_hist = history.get("v")
         X_hist = history.get("X")
 
+        use_nat = getattr(args, 'use_natural_parameter', False)
         records, v_current, X_current = run_thermodynamics_analysis(
-            t_idx, T_slice, v_hist, X_hist, X_initial, work_indices, heat_indices
+            t_idx, T_slice, v_hist, X_hist, X_initial, work_indices, heat_indices,
+            use_natural_parameter=use_nat
         )
 
         state_updates = {

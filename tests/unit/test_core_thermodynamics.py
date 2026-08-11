@@ -114,6 +114,28 @@ class TestCoreThermodynamics(unittest.TestCase):
         T_local_nat = compute_local_temperature(q_history, use_natural_parameter=True)
         np.testing.assert_array_almost_equal(T_local_nat, local_T)
 
+    def test_filter_wiring_use_natural_parameter(self):
+        """Verify that macro and local thermodynamics filter orchestration functions respect use_natural_parameter=True"""
+        from src.filters._001_1_1_filter_macro_thermodynamics import run_thermodynamics_analysis
+        from src.filters._001_1_2_filter_local_thermodynamics import run_local_thermo_analysis
+
+        T_slice = np.array([[0.0, 10.0], [0.0, 0.0]])
+        X_hist = [np.array([10.0, -5.0]), np.array([12.0, -4.0])]
+        v_hist = [np.array([5.0, -5.0]), np.array([6.0, -6.0])]
+        X_init = np.array([5.0, 0.0])
+
+        rec_default, _, _ = run_thermodynamics_analysis(0, T_slice, v_hist, X_hist, X_init, [], [], use_natural_parameter=False)
+        rec_nat, _, _ = run_thermodynamics_analysis(0, T_slice, v_hist, X_hist, X_init, [], [], use_natural_parameter=True)
+        
+        # Temperature (index 3 in record) should differ when using natural parameter
+        self.assertNotEqual(rec_default[0][3], rec_nat[0][3])
+
+        rec_local_default, _, _ = run_local_thermo_analysis(0, T_slice, v_hist, X_hist, X_init, use_natural_parameter=False)
+        rec_local_nat, _, _ = run_local_thermo_analysis(0, T_slice, v_hist, X_hist, X_init, use_natural_parameter=True)
+
+        # Local temperature (index 4 in node 0 record) should differ
+        self.assertNotEqual(rec_local_default[0][4], rec_local_nat[0][4])
+
 
 if __name__ == '__main__':
     unittest.main()
