@@ -27,13 +27,12 @@ error.*.log
 samples/**/output_plots
 
 rulesets
+new-rulesets
 
 scratch
 scratch/**
 comparison
 
 TLU-SDLs
+new-TLU-SDLs
 TLU-App*
-!TLU-Audit-docs/*.md
-!tlu_dev_history/*.jsonl
-!tlu_dev_history/*.md
