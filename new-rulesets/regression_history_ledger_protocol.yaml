@@ -245,6 +245,160 @@ grounding_in_existing_infrastructure_2026_08_08:
         あるいは固定数値を書かずrun_record.countsを正とする記述に改める。
   punchlist_reference: "EXECUTION_PUNCHLIST.md Tier A に対応項目を追加(A14〜A17)。"
 
+
+# --------------------------------------------------
+# 実装との突き合わせ(2026-08-11) — 仕様の答え合わせ
+# --------------------------------------------------
+reconciliation_with_implementation_2026_08_11:
+  status: >
+    本仕様は Gemini によって実装され、稼働している。ただし**実装先は
+    `regression_history/journal.jsonl` ではなく `tlu_dev_history/journal.jsonl`** である。
+    命名変更の意図(範囲を回帰テストから開発履歴全般へ広げたのか、単なる別案か)は
+    未確認。Geminiへの確認事項とする。仕様側の `location` は、意図を確認した上で
+    実装に合わせるか、両者を併記するかを決める。
+
+  what_was_adopted:
+    - "record_type"
+    - "timestamp"
+    - "commit_hash"
+    - "tool"
+    - "counts (total/passed/failed)"
+
+  what_was_dropped_and_why_it_matters:
+    run_id: >
+      不採用。triage_record が実行記録ではなく issue_id で監査指摘を参照する設計に
+      なったため、実質的に不要になった。**仕様側の想定が誤っていた可能性が高い。**
+      Claudeは「実行結果に対する事後判定」を想定したが、実装は
+      「監査指摘に対する対応記録」として作られた。後者の方が
+      EXECUTION_PUNCHLIST.md と直結するぶん実用的である。
+    scope: >
+      不採用。**これは実害を生んでいる。**
+      counts.total が 47→47→46→10→35→46→46 と推移しているが、
+      10 と 35 が何を対象にした実行なのか判定できない。
+      サブセット実行か、退行か、別ツールかの区別がつかない。
+      「今回は全項目クリア」という報告は項目が違えば同じ主張ではない、という
+      チェックリスト版管理の問題(rirekishiki-checklist の論点)と構造が同一である。
+      **追加を推奨する。**
+    failures: >
+      不採用。全実行がgreenだったため書きようがなかった、というのが実情。
+      ただし**redが出たときの形式が未定義**であるため、最初の失敗時に
+      即興で形式が決まってしまう。先に決めておくべき。
+    artifact_link: >
+      不採用。申告を裏付ける一次証拠へのリンクとして必須にしたが、
+      branch + commit_hash があれば追跡は可能であり、
+      **Claudeの仕様が過剰だった可能性がある。** 公平のために記録しておく。
+      ただし「passed: 47 と書いてあるが本当に走ったのか」を
+      台帳単体で検証する手段は失われている。
+
+  what_the_implementation_added:
+    issue_id: >
+      **Claudeが思いつかなかった良い設計。** EXECUTION_PUNCHLIST.md の項目IDと
+      台帳が直接繋がる。2026-08-10にClaudeが判定欄の追加を提案したのと、
+      Geminiのissue_idは、互いを見ずに同じ必要性へ到達している。
+      二重盲検が機能した実例として記録する。
+    branch: "作業ブランチ。artifact_link の代替として機能する面がある。"
+    category: "test_coverage / math_fix / dbc_contract_wiring 等の分類。"
+    description: "自然言語での対応内容。"
+    files_modified: "変更ファイルの一覧。scope の代わりにはならない(実行対象ではなく変更対象のため)。"
+    status: "PASSED 等。counts と冗長だが、可読性のためと思われる。"
+
+  defects_found_in_the_implementation:
+    pending_commit_hash: >
+      `commit_hash: "pending"` のレコードが1件存在する(2026-08-11T06:40)。
+      コミット前にレコードが書かれたもので、**その1件だけ追跡可能性が切れている。**
+      対処案: (a) コミット後に確定値で訂正エントリを追記する、
+      (b) コミット後にのみ記録する運用にする。
+    timezone_inconsistency: >
+      timestamp の表記が `+09:00` と `Z` で混在している。
+      実際には時系列順に並んでいるが、**文字列としてソートすると順序が壊れる。**
+      追記専用台帳において順序は本質的な情報であるため、表記を統一すべき。
+      ISO 8601のUTC固定(`Z`)を推奨する。
+
+  meta_observation: >
+    仕様の約3割が実装時に削られ、実装側が6つのフィールドを足した。
+    この差分こそが「仕様が実装可能なものだったか」の最初の答え合わせである。
+    削られた箇所のうち、scope は追加を推奨するが、artifact_link は
+    Claude側の過剰仕様だった可能性を認める。
+    **仕様は実装によって検証される**という関係を、この節が記録している。
+
+
+# --------------------------------------------------
+# スキーマ改訂 v2 (2026-08-11) — counts を items[] へ格上げ
+# --------------------------------------------------
+schema_v2_dimensional_upgrade_2026_08_11:
+  origin: >
+    蓮風さんの提案。「counts の総計だけでなく count[] にしてしまえば、
+    小計は後からでも簡単に取れる」。
+    Claudeは当初 scope フィールドの追加を提案したが、**この案の方が優れている。**
+
+  why_items_is_better_than_scope: >
+    scope は結局ラベルであり、信じるしかない。scope: "src/core/" と total=10 が
+    あっても、どの10本かは分からない。
+    項目ごとの結果を配列で持てば、以下が全て導出できる。
+      - total       → len(items)
+      - passed/failed → items のうち verdict でフィルタした長さ
+      - scope       → 記録された item_id の集合そのものが「何を対象にしたか」を表す
+    さらに決定的なのは、**2回の実行の item_id 集合を差分すれば
+    「total=10 とは何だったのか」に即答できる**点である。
+    ラベルは信じるしかないが、項目の集合は事実そのものである。
+
+  what_becomes_unnecessary: >
+    仕様v1の `failures` フィールドは不要になる。
+    失敗は「verdict が failed である items の部分集合」として導出できるため。
+    **次元を上げると、周辺の付け足しが要らなくなる。**
+    1つの構造で済み、2つ持つ必要がない。
+
+  data_volume: >
+    テストID 47本 × 30バイト程度 = 約1.5KB/回。現行の約50バイトの30倍だが、
+    1日10回実行しても15KB、年間5MB。無視できる。
+    **容量は格上げを妨げる理由にならない。**
+
+  proposed_schema:
+    schema_version: >
+      **必須の新規フィールド。** "2" 等。
+      次元を格上げした時点で記録の意味が変わるため、
+      版を記録しないと段差をまたいだ比較が成立しない。
+      これは checklist_version(rirekishiki-checklist.md)と同型の要求である。
+    items: >
+      配列。各要素は最低限 {item_id, verdict} を持つ。
+      verdict は "passed" / "failed" / "skipped" の3値を想定するが、
+      実装側の判断で拡張してよい。
+      item_id は**名前が変わっても引き継ぐ安定した識別子**とすること
+      (rirekishiki-checklist.md の「項目IDの永続性」と同じ理由。
+      IDが変わると過去の記録と繋がらず、
+      「この項目は3回に1回失敗している」が言えなくなる)。
+    counts: >
+      **導出可能なため、原則として保存しない。**
+      ただし可読性のために残す判断もありうる。その場合は
+      「items から導出した冗長な値であり、食い違ったら items が正」と明記すること。
+
+  the_seam_problem: >
+    **過去の実行の項目別データは復元できない。**
+    格上げは前向きにしか効かず、台帳の途中に段差ができる。
+    段差より前は counts しかなく、後は items がある。
+    幸い **items から counts は導出できる**ため、
+    「全期間の total の推移」という粗い問いには段差をまたいで答えられる。
+    しかし「特定の item がいつから失敗しているか」は、格上げ点以降しか辿れない。
+    AUDIT_BASELINE.md または台帳自身に、格上げ点を明示すること。
+
+  next_dimension_if_needed: >
+    蓮風さんの指摘: 「count[][] でもいいよね。まだ、問題を生じたら」。
+    これが本質である。**二次元でも足りなければ三次元へ上げればよい。**
+    たとえば item ごとに実行環境・所要時間・入力データ世代の軸を足す、等。
+    ただし**問題が生じてから**上げる。事前に想定して全次元を設計しない。
+    どの次元が必要かは、答えられない問いに突き当たるまで分からないため。
+    この反復手続き自体をパタンとして記録した:
+    Meeting_of_Rediscovery_for_Daily_Life/rulesets/patterns/P15-kiroku-jigen-kakuage.md
+
+  other_fixes_bundled_here:
+    pending_commit_hash: >
+      commit_hash: "pending" のレコードを許容しない。
+      コミット後に記録するか、確定後に訂正エントリを追記する。
+    timestamp_normalization: >
+      ISO 8601 の UTC 固定(末尾 Z)に統一する。
+      現状 +09:00 と Z が混在しており、文字列ソートで順序が壊れる。
+      追記専用台帳において順序は本質的な情報である。
+
 verification: >
   次回監査で、regression_history/journal.jsonl が実在し、直近のコミット・CI実行に
   対応するrun_recordが実際に追記され続けているかを確認する。「台帳の仕組みを設計した」
