@@ -34,5 +34,6 @@ comparison
 
 TLU-SDLs
 TLU-App*
-TLU-Audit-docs
-tlu_dev_history/
+!TLU-Audit-docs/*.md
+!tlu_dev_history/*.jsonl
+!tlu_dev_history/*.md
