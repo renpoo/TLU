@@ -85,10 +85,24 @@ if [ ${MISSING_TESTS} -gt 0 ]; then
 fi
 echo "✅ Test module completeness check PASSED (all $(echo "${ALL_TEST_FILES}" | wc -l | tr -d ' ') test files included)."
 
-# 3. Sequential execution of tests
+# 3. Sequential execution of tests with individual status tracking
+PASSED_COUNT=0
+FAILED_COUNT=0
+FAILED_MODULES=()
+
 for module in "${TEST_MODULES[@]}"; do
     echo -e "\n[EXECUTING] ${module}"
+    set +e
     $TLU_PY -m "${module}"
+    res=$?
+    set -e
+    if [ $res -eq 0 ]; then
+        PASSED_COUNT=$((PASSED_COUNT + 1))
+    else
+        FAILED_COUNT=$((FAILED_COUNT + 1))
+        FAILED_MODULES+=("${module}")
+        echo "❌ [FAILED] Module ${module} exited with code ${res}"
+    fi
 done
 
 # 4. Record test execution to regression history ledger (tlu_dev_history/journal.jsonl)
@@ -97,15 +111,32 @@ CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "unknown")
 CURRENT_COMMIT=$(git rev-parse --short HEAD 2>/dev/null || echo "unknown")
 TOTAL_COUNT=${#TEST_MODULES[@]}
 
+if [ ${FAILED_COUNT} -eq 0 ]; then
+    OVERALL_STATUS="PASSED"
+else
+    OVERALL_STATUS="FAILED"
+fi
+
 LEDGER_DIR="$(dirname "$0")/../tlu_dev_history"
 LEDGER_FILE="${LEDGER_DIR}/journal.jsonl"
 
 if [ -d "${LEDGER_DIR}" ]; then
-    echo "{\"timestamp\": \"${TIMESTAMP}\", \"record_type\": \"run_record\", \"tool\": \"batch_unittest\", \"branch\": \"${CURRENT_BRANCH}\", \"commit_hash\": \"${CURRENT_COMMIT}\", \"counts\": {\"total\": ${TOTAL_COUNT}, \"passed\": ${TOTAL_COUNT}, \"failed\": 0}, \"status\": \"PASSED\"}" >> "${LEDGER_FILE}"
+    echo "{\"timestamp\": \"${TIMESTAMP}\", \"record_type\": \"run_record\", \"tool\": \"batch_unittest\", \"branch\": \"${CURRENT_BRANCH}\", \"commit_hash\": \"${CURRENT_COMMIT}\", \"counts\": {\"total\": ${TOTAL_COUNT}, \"passed\": ${PASSED_COUNT}, \"failed\": ${FAILED_COUNT}}, \"status\": \"${OVERALL_STATUS}\"}" >> "${LEDGER_FILE}"
     echo "📜 Recorded test run to ${LEDGER_FILE}"
 fi
 
 echo ""
 echo "=================================================="
-echo "✅ All tests completed successfully."
-echo "=================================================="
+if [ ${FAILED_COUNT} -eq 0 ]; then
+    echo "✅ All ${TOTAL_COUNT} tests completed successfully."
+    echo "=================================================="
+    exit 0
+else
+    echo "❌ Test suite completed with ${FAILED_COUNT} failure(s) out of ${TOTAL_COUNT} tests."
+    echo "Failed modules:"
+    for failed_mod in "${FAILED_MODULES[@]}"; do
+        echo "  - ${failed_mod}"
+    done
+    echo "=================================================="
+    exit 1
+fi
