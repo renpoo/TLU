@@ -13,6 +13,8 @@ from src.filters.base_filter import BaseFilter, HistoryBuffer
 from src.core.core_tensor_ops import compute_net_flux, compute_transition_matrix
 from src.core.core_information_geometry import compute_kl_divergence
 
+from src.core.core_topology import compute_univariate_z_score
+
 def compute_node_kl_divergence_vector(
         P_current: np.ndarray, 
         P_history_window: List[np.ndarray]
@@ -28,18 +30,7 @@ def compute_node_univariate_z_score_vector(
         q_current: np.ndarray, 
         q_history_window: List[np.ndarray]
 ) -> np.ndarray:
-    N = len(q_current)
-    if len(q_history_window) < 2:
-        return np.zeros(N)
-    
-    q_history_mat = np.array(q_history_window)
-    q_mean_hist = np.mean(q_history_mat, axis=0)
-    q_std_hist = np.std(q_history_mat, axis=0)
-    
-    deviation = q_current - q_mean_hist
-    z_scores = np.divide(deviation, q_std_hist, out=np.zeros_like(deviation), where=q_std_hist!=0)
-    
-    return np.abs(z_scores)
+    return compute_univariate_z_score(q_current, q_history_window, absolute_deviation=True)
 
 def evaluate_micro_anomaly_flags(
         kl_vector: np.ndarray, 
