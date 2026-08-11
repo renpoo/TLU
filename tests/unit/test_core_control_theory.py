@@ -80,5 +80,25 @@ class TestControlTheory(unittest.TestCase):
         # Since the gain is about 0.9, the input should be about 45.0 (tries to close the gap at once)
         self.assertTrue(u[0] > 40.0)
 
+    def test_solve_lqr_gain_linalg_error_fallback(self):
+        """
+        Verify that solve_lqr_gain catches scipy.linalg.LinAlgError gracefully, logs a warning,
+        and falls back to returning a zero gain matrix.
+        """
+        from unittest.mock import patch
+        import scipy.linalg as la
+
+        A = np.eye(2)
+        B = np.eye(2)
+        Q = np.eye(2)
+        R = np.eye(2)
+
+        with patch("scipy.linalg.solve_discrete_are", side_effect=la.LinAlgError("DARE failed to converge")):
+            with self.assertLogs("src.core.core_control_theory", level="WARNING") as cm:
+                K_lqr = solve_lqr_gain(A, B, Q, R)
+                self.assertEqual(K_lqr.shape, (2, 2))
+                np.testing.assert_array_equal(K_lqr, np.zeros((2, 2)))
+                self.assertTrue(any("LinAlgError" in log_msg for log_msg in cm.output))
+
 if __name__ == '__main__':
     unittest.main()

@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 # core_control_theory.py
+import logging
 import numpy as np
 import scipy.linalg as la
 from src.core.core_safe_linalg import compute_safe_pinv, DEFAULT_RCOND, DEFAULT_LAMBDA_REG
 from src.core.core_contracts import assert_positive_semi_definite
+
+logger = logging.getLogger(__name__)
 
 def build_state_space_matrices(transition_P: np.ndarray, controllable_indices: list[int]) -> tuple[np.ndarray, np.ndarray]:
     """!
@@ -108,7 +111,11 @@ def solve_lqr_gain(A: np.ndarray, B: np.ndarray, Q: np.ndarray, R: np.ndarray, r
         K_lqr = np.dot(R_plus_Bp_S_B_inv, np.dot(B.T, np.dot(S, A)))
         return K_lqr
         
-    except la.LinAlgError:
+    except la.LinAlgError as err:
+        logger.warning(
+            "LQR Discrete Riccati equation solver failed due to LinAlgError: %s. "
+            "Falling back to zero gain matrix.", err
+        )
         return np.zeros((B.shape[1], A.shape[0]))
 
 def compute_optimal_input(K_lqr: np.ndarray, current_state: np.ndarray, target_state: np.ndarray) -> np.ndarray:
