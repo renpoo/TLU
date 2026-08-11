@@ -69610,7 +69610,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 667150.87,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -69632,7 +69632,7 @@
         "node_label": "03_USR_002",
         "account_category": "Unknown",
         "local_internal_energy_u": 138001146.37,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -69687,7 +69687,7 @@
         "node_label": "08_USR_007",
         "account_category": "Unknown",
         "local_internal_energy_u": 1113384.46,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -69742,7 +69742,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 890474.29,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 111661.71,
         "local_grad_t": 1826538.155
       },
@@ -69753,7 +69753,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 367244616.05,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 75201.1,
         "local_grad_t": 398745.54
       },
@@ -69819,7 +69819,7 @@
         "node_label": "08_USR_007",
         "account_category": "Unknown",
         "local_internal_energy_u": 1380960.4,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 133787.97,
         "local_grad_t": 3794332.185
       },
@@ -69874,7 +69874,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 1263483.91,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 245995.1718,
         "local_grad_t": 26235092.8191
       },
@@ -69896,7 +69896,7 @@
         "node_label": "03_USR_002",
         "account_category": "Unknown",
         "local_internal_energy_u": 189245182.44,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 24805541.3386,
         "local_grad_t": -49261159.8829
       },
@@ -69940,7 +69940,7 @@
         "node_label": "07_USR_006",
         "account_category": "Unknown",
         "local_internal_energy_u": 462336.15,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 370692.5193,
         "local_grad_t": 2446384.0847
       },
@@ -70006,7 +70006,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 2750567.13,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 812273.3457,
         "local_grad_t": 24488764.1415
       },
@@ -70017,7 +70017,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 363607339.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 1735329.8837,
         "local_grad_t": -1979276.473
       },
@@ -70028,7 +70028,7 @@
         "node_label": "03_USR_002",
         "account_category": "Unknown",
         "local_internal_energy_u": 189065447.97,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 26257063.013,
         "local_grad_t": -51022742.7315
       },
@@ -70083,7 +70083,7 @@
         "node_label": "08_USR_007",
         "account_category": "Unknown",
         "local_internal_energy_u": 454652.83,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 369390.9535,
         "local_grad_t": 26644468.2853
       },
@@ -70138,7 +70138,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 2801183.43,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 859810.6367,
         "local_grad_t": 14874937.1227
       },
@@ -70149,7 +70149,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 403161604.67,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 16637961.1449,
         "local_grad_t": -15690875.9651
       },
@@ -70160,7 +70160,7 @@
         "node_label": "03_USR_002",
         "account_category": "Unknown",
         "local_internal_energy_u": 180413928.88,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 22324469.6291,
         "local_grad_t": -32208463.2655
       },
@@ -70204,7 +70204,7 @@
         "node_label": "07_USR_006",
         "account_category": "Unknown",
         "local_internal_energy_u": 1119109.24,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 274916.3031,
         "local_grad_t": 2254574.7606
       },
@@ -70270,7 +70270,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 3614707.12,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 848355.3069,
         "local_grad_t": 3380142.0466
       },
@@ -70281,7 +70281,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 389546458.32,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 17020521.592,
         "local_grad_t": -30206602.2109
       },
@@ -70292,7 +70292,7 @@
         "node_label": "03_USR_002",
         "account_category": "Unknown",
         "local_internal_energy_u": 180582317.99,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 4329471.6487,
         "local_grad_t": -6228564.5411
       },
@@ -70402,7 +70402,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 3696391.8,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 441147.3284,
         "local_grad_t": 20716542.0328
       },
@@ -70413,7 +70413,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 389765693.03,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 14332018.4639,
         "local_grad_t": -26159646.6908
       },
@@ -70534,7 +70534,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 4095359.36,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 470038.8438,
         "local_grad_t": 10656184.0149
       },
@@ -70545,7 +70545,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 389734980.32,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 5837280.2309,
         "local_grad_t": -9424797.0571
       },
@@ -70556,7 +70556,7 @@
         "node_label": "03_USR_002",
         "account_category": "Unknown",
         "local_internal_energy_u": 170310986.93,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 5122963.1698,
         "local_grad_t": -4591194.9369
       },
@@ -70622,7 +70622,7 @@
         "node_label": "09_USR_008",
         "account_category": "Unknown",
         "local_internal_energy_u": 1087596.09,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 255500.2673,
         "local_grad_t": 1738762.8702
       },
@@ -70666,7 +70666,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 4335124.43,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 293826.2495,
         "local_grad_t": 10044567.2393
       },
@@ -70677,7 +70677,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 389897440.41,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 125371.1374,
         "local_grad_t": 5461823.1967
       },
@@ -70798,7 +70798,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 5438730.92,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 646286.5956,
         "local_grad_t": 28657243.8533
       },
@@ -70820,7 +70820,7 @@
         "node_label": "03_USR_002",
         "account_category": "Unknown",
         "local_internal_energy_u": 230397169.55,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 27354776.3369,
         "local_grad_t": -51832510.5028
       },
@@ -70930,7 +70930,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 5483420.92,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 628857.0307,
         "local_grad_t": 31067746.5634
       },
@@ -70941,7 +70941,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 389991989.49,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 99900.7771,
         "local_grad_t": 1596481.177
       },
@@ -70985,7 +70985,7 @@
         "node_label": "06_USR_005",
         "account_category": "Unknown",
         "local_internal_energy_u": 1856899.74,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 1040383.3354,
         "local_grad_t": 41069254.2984
       },
@@ -71029,7 +71029,7 @@
         "node_label": "10_USR_009",
         "account_category": "Unknown",
         "local_internal_energy_u": 5428819.78,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 922382.5118,
         "local_grad_t": 7375212.8786
       },
@@ -71040,7 +71040,7 @@
         "node_label": "11_USR_010",
         "account_category": "Unknown",
         "local_internal_energy_u": 1204115.71,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 1013207.3378,
         "local_grad_t": 40766431.9841
       },
@@ -71062,7 +71062,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 6672392.54,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 826775.5905,
         "local_grad_t": 24562237.153
       },
@@ -71073,7 +71073,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 389935364.15,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 35160.1033,
         "local_grad_t": 10433378.9012
       },
@@ -71084,7 +71084,7 @@
         "node_label": "03_USR_002",
         "account_category": "Unknown",
         "local_internal_energy_u": 218493944.41,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 26412888.7198,
         "local_grad_t": -49786479.063
       },
@@ -71194,7 +71194,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 6696432.09,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 611931.2632,
         "local_grad_t": 5037170.332
       },
@@ -71205,7 +71205,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 390258170.95,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 128869.6173,
         "local_grad_t": 9267529.2108
       },
@@ -71216,7 +71216,7 @@
         "node_label": "03_USR_002",
         "account_category": "Unknown",
         "local_internal_energy_u": 218916082.22,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 5128553.3849,
         "local_grad_t": -7290062.0041
       },
@@ -71260,7 +71260,7 @@
         "node_label": "07_USR_006",
         "account_category": "Unknown",
         "local_internal_energy_u": 5713646.28,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 1995964.5713,
         "local_grad_t": 3666244.3488
       },
@@ -71271,7 +71271,7 @@
         "node_label": "08_USR_007",
         "account_category": "Unknown",
         "local_internal_energy_u": 3770977.55,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 207439.6556,
         "local_grad_t": 9031819.0959
       },
@@ -71326,7 +71326,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 7133769.45,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 613056.4004,
         "local_grad_t": 484665.9447
       },
@@ -71337,7 +71337,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 390340193.99,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 171414.0785,
         "local_grad_t": 2582409.4606
       },
@@ -71458,7 +71458,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 8133859.37,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 591976.1845,
         "local_grad_t": 6298282.6675
       },
@@ -71590,7 +71590,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 9530318.95,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 1089211.4292,
         "local_grad_t": 1816220.9504
       },
@@ -71601,7 +71601,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 377796959.74,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 6279019.1264,
         "local_grad_t": -7602590.4889
       },
@@ -71722,7 +71722,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 10106609.77,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 1166066.1305,
         "local_grad_t": 2045095.0138
       },
@@ -71733,7 +71733,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 377944604.48,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 5426847.2489,
         "local_grad_t": -7218741.5338
       },
@@ -71854,7 +71854,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 11337526.02,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 1151590.9327,
         "local_grad_t": -2437310.3313
       },
@@ -71865,7 +71865,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 377898146.66,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 99464.3724,
         "local_grad_t": 3270528.4509
       },
@@ -71876,7 +71876,7 @@
         "node_label": "03_USR_002",
         "account_category": "Unknown",
         "local_internal_energy_u": 217322515.2,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 1499871.5703,
         "local_grad_t": 469714.0552
       },
@@ -71986,7 +71986,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 12314079.87,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 1080774.3128,
         "local_grad_t": -1158337.9726
       },
@@ -72008,7 +72008,7 @@
         "node_label": "03_USR_002",
         "account_category": "Unknown",
         "local_internal_energy_u": 217350236.16,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 1228360.0596,
         "local_grad_t": 939040.1318
       },
@@ -72118,7 +72118,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 13307165.87,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 1184562.0702,
         "local_grad_t": -4932581.9397
       },
@@ -72129,7 +72129,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 378398726.38,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 273539.1303,
         "local_grad_t": 2380478.3669
       },
@@ -72140,7 +72140,7 @@
         "node_label": "03_USR_002",
         "account_category": "Unknown",
         "local_internal_energy_u": 217294589.99,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 41398.9438,
         "local_grad_t": 3076898.9266
       },
@@ -72250,7 +72250,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 13662839.09,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 907334.4928,
         "local_grad_t": -2512542.0861
       },
@@ -72261,7 +72261,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 378574430.55,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 267649.5199,
         "local_grad_t": 3013875.7789
       },
@@ -72382,7 +72382,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 14272830.1,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 710333.2659,
         "local_grad_t": -2936539.6206
       },
@@ -72393,7 +72393,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 378848859.6,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 164601.9957,
         "local_grad_t": 1585922.2097
       },
@@ -72404,7 +72404,7 @@
         "node_label": "03_USR_002",
         "account_category": "Unknown",
         "local_internal_energy_u": 217258093.56,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 39358.1856,
         "local_grad_t": 1836409.8299
       },
@@ -72437,7 +72437,7 @@
         "node_label": "06_USR_005",
         "account_category": "Unknown",
         "local_internal_energy_u": 221916.68,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 1609637.4645,
         "local_grad_t": -2390160.8535
       },
@@ -72514,7 +72514,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 15315870.03,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 761841.3493,
         "local_grad_t": -4389304.8884
       },
@@ -72525,7 +72525,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 378723693.14,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 168142.8955,
         "local_grad_t": 1673622.1802
       },
@@ -72536,7 +72536,7 @@
         "node_label": "03_USR_002",
         "account_category": "Unknown",
         "local_internal_energy_u": 217305117.8,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 33204.517,
         "local_grad_t": 1943498.9373
       },
@@ -72569,7 +72569,7 @@
         "node_label": "06_USR_005",
         "account_category": "Unknown",
         "local_internal_energy_u": 118410.66,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 929411.4788,
         "local_grad_t": 153820.911
       },
@@ -72646,7 +72646,7 @@
         "node_label": "01_ACC_Output_To_Outside",
         "account_category": "Unknown",
         "local_internal_energy_u": 15315870.03,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 707680.0213,
         "local_grad_t": 0.0
       },
@@ -72657,7 +72657,7 @@
         "node_label": "02_USR_001",
         "account_category": "Unknown",
         "local_internal_energy_u": 378819997.54,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 107141.253,
         "local_grad_t": 993947.5999
       },
@@ -72668,7 +72668,7 @@
         "node_label": "03_USR_002",
         "account_category": "Unknown",
         "local_internal_energy_u": 263112063.39,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 19835156.4316,
         "local_grad_t": -18818846.0306
       },
@@ -72701,7 +72701,7 @@
         "node_label": "06_USR_005",
         "account_category": "Unknown",
         "local_internal_energy_u": 264020.19,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 67507.2649,
         "local_grad_t": 20716452.3029
       },
@@ -72756,7 +72756,7 @@
         "node_label": "11_USR_010",
         "account_category": "Unknown",
         "local_internal_energy_u": 4727840.5,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 160336.2594,
         "local_grad_t": 887557.587
       }
@@ -173776,7 +173776,7 @@
         "t_idx": 1,
         "time_label": "2020-02",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 4.3039,
+        "kl_divergence_drift": 9.1534,
         "z_score_X": 0.0,
         "z_score_v": 0.0,
         "anomaly_flag": 1
@@ -173785,7 +173785,7 @@
         "t_idx": 2,
         "time_label": "2020-03",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 11.5055,
+        "kl_divergence_drift": 6.1357,
         "z_score_X": 0.7071,
         "z_score_v": 2.7256,
         "anomaly_flag": 1
@@ -173794,7 +173794,7 @@
         "t_idx": 3,
         "time_label": "2020-04",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 30.1137,
+        "kl_divergence_drift": 9.8148,
         "z_score_X": 0.5773,
         "z_score_v": 0.6091,
         "anomaly_flag": 1
@@ -173803,7 +173803,7 @@
         "t_idx": 4,
         "time_label": "2020-05",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 11.6496,
+        "kl_divergence_drift": 7.3742,
         "z_score_X": 399.7626,
         "z_score_v": 2.5435,
         "anomaly_flag": 1
@@ -173812,7 +173812,7 @@
         "t_idx": 5,
         "time_label": "2020-06",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 12.516,
+        "kl_divergence_drift": 7.5708,
         "z_score_X": 1.2948,
         "z_score_v": 1.8012,
         "anomaly_flag": 1
@@ -173821,7 +173821,7 @@
         "t_idx": 6,
         "time_label": "2020-07",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 14.9082,
+        "kl_divergence_drift": 7.3057,
         "z_score_X": 0.6899,
         "z_score_v": 2.732,
         "anomaly_flag": 1
@@ -173830,7 +173830,7 @@
         "t_idx": 7,
         "time_label": "2020-08",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 14.6194,
+        "kl_divergence_drift": 6.2438,
         "z_score_X": 2.4948,
         "z_score_v": 1.3365,
         "anomaly_flag": 1
@@ -173839,7 +173839,7 @@
         "t_idx": 8,
         "time_label": "2020-09",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 20.089,
+        "kl_divergence_drift": 6.5023,
         "z_score_X": 19.8743,
         "z_score_v": 0.5209,
         "anomaly_flag": 1
@@ -173848,7 +173848,7 @@
         "t_idx": 9,
         "time_label": "2020-10",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 10.8436,
+        "kl_divergence_drift": 5.092,
         "z_score_X": 1.1489,
         "z_score_v": 6.2464,
         "anomaly_flag": 1
@@ -173857,7 +173857,7 @@
         "t_idx": 10,
         "time_label": "2020-11",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 12.8992,
+        "kl_divergence_drift": 7.4383,
         "z_score_X": 1.1578,
         "z_score_v": 1.8105,
         "anomaly_flag": 1
@@ -173866,7 +173866,7 @@
         "t_idx": 11,
         "time_label": "2020-12",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 12.7916,
+        "kl_divergence_drift": 4.973,
         "z_score_X": 1.0856,
         "z_score_v": 1.7716,
         "anomaly_flag": 1
@@ -173875,7 +173875,7 @@
         "t_idx": 12,
         "time_label": "2021-01",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 18.8117,
+        "kl_divergence_drift": 6.1339,
         "z_score_X": 1.7535,
         "z_score_v": 0.8578,
         "anomaly_flag": 1
@@ -173884,7 +173884,7 @@
         "t_idx": 13,
         "time_label": "2021-02",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 7.7258,
+        "kl_divergence_drift": 3.4966,
         "z_score_X": 1.0659,
         "z_score_v": 0.5232,
         "anomaly_flag": 1
@@ -173893,7 +173893,7 @@
         "t_idx": 14,
         "time_label": "2021-03",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 8.9286,
+        "kl_divergence_drift": 4.3573,
         "z_score_X": 2.181,
         "z_score_v": 3.3366,
         "anomaly_flag": 1
@@ -173902,7 +173902,7 @@
         "t_idx": 15,
         "time_label": "2021-04",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 13.8274,
+        "kl_divergence_drift": 5.8974,
         "z_score_X": 1.2553,
         "z_score_v": 0.4728,
         "anomaly_flag": 1
@@ -173911,7 +173911,7 @@
         "t_idx": 16,
         "time_label": "2021-05",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 10.9549,
+        "kl_divergence_drift": 3.8924,
         "z_score_X": 3.7027,
         "z_score_v": 1.6279,
         "anomaly_flag": 1
@@ -173920,7 +173920,7 @@
         "t_idx": 17,
         "time_label": "2021-06",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 11.7411,
+        "kl_divergence_drift": 3.796,
         "z_score_X": 0.3818,
         "z_score_v": 0.9248,
         "anomaly_flag": 1
@@ -173929,7 +173929,7 @@
         "t_idx": 18,
         "time_label": "2021-07",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 9.8131,
+        "kl_divergence_drift": 3.2765,
         "z_score_X": 6.0284,
         "z_score_v": 0.7389,
         "anomaly_flag": 1
@@ -173938,7 +173938,7 @@
         "t_idx": 19,
         "time_label": "2021-08",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 4.716,
+        "kl_divergence_drift": 2.2498,
         "z_score_X": 1.5096,
         "z_score_v": 1.6089,
         "anomaly_flag": 1
@@ -173947,7 +173947,7 @@
         "t_idx": 20,
         "time_label": "2021-09",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 3.7895,
+        "kl_divergence_drift": 3.4288,
         "z_score_X": 2.2136,
         "z_score_v": 1.3182,
         "anomaly_flag": 1
@@ -173956,25 +173956,25 @@
         "t_idx": 21,
         "time_label": "2021-10",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 4.1084,
+        "kl_divergence_drift": 1.7984,
         "z_score_X": 0.4452,
         "z_score_v": 0.1032,
-        "anomaly_flag": 1
+        "anomaly_flag": 0
       },
       {
         "t_idx": 22,
         "time_label": "2021-11",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 3.1281,
+        "kl_divergence_drift": 1.4525,
         "z_score_X": 0.3724,
         "z_score_v": 1.0945,
-        "anomaly_flag": 1
+        "anomaly_flag": 0
       },
       {
         "t_idx": 23,
         "time_label": "2021-12",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 36.1212,
+        "kl_divergence_drift": 12.7997,
         "z_score_X": 5.7124,
         "z_score_v": 19.9701,
         "anomaly_flag": 1
@@ -174121,7 +174121,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 0.1717,
+        "local_kl_drift": 0.0957,
         "micro_anomaly_flag": 0
       },
       {
@@ -174143,7 +174143,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 0.0,
+        "local_kl_drift": 1.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -174154,8 +174154,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 20.3631,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.7646,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 1,
@@ -174165,7 +174165,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 0.5197,
+        "local_kl_drift": 0.0483,
         "micro_anomaly_flag": 0
       },
       {
@@ -174176,7 +174176,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 1.5527,
+        "local_kl_drift": 0.1338,
         "micro_anomaly_flag": 0
       },
       {
@@ -174187,7 +174187,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 0.019,
+        "local_kl_drift": 0.0084,
         "micro_anomaly_flag": 0
       },
       {
@@ -174198,8 +174198,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 2.1015,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.3006,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 1,
@@ -174209,8 +174209,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 20.7233,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 2.0,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 1,
@@ -174220,7 +174220,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 1.4971,
+        "local_kl_drift": 1.0391,
         "micro_anomaly_flag": 0
       },
       {
@@ -174231,8 +174231,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 12.8514,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 0.8214,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 1,
@@ -174242,8 +174242,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 14.2493,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 0.9415,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 2,
@@ -174253,7 +174253,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.3264,
         "z_score_v": 1.3251,
-        "local_kl_drift": 0.5852,
+        "local_kl_drift": 0.4333,
         "micro_anomaly_flag": 0
       },
       {
@@ -174275,7 +174275,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9425,
         "z_score_v": 0.9252,
-        "local_kl_drift": 0.7166,
+        "local_kl_drift": 0.0962,
         "micro_anomaly_flag": 0
       },
       {
@@ -174286,7 +174286,7 @@
         "account_category": "Unknown",
         "z_score_X": 35.2569,
         "z_score_v": 34.6144,
-        "local_kl_drift": 0.6794,
+        "local_kl_drift": 0.576,
         "micro_anomaly_flag": 1
       },
       {
@@ -174297,7 +174297,7 @@
         "account_category": "Unknown",
         "z_score_X": 10.8899,
         "z_score_v": 11.4962,
-        "local_kl_drift": 17.6389,
+        "local_kl_drift": 1.3592,
         "micro_anomaly_flag": 1
       },
       {
@@ -174308,7 +174308,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1291,
         "z_score_v": 1.1455,
-        "local_kl_drift": 0.0838,
+        "local_kl_drift": 0.04,
         "micro_anomaly_flag": 0
       },
       {
@@ -174319,7 +174319,7 @@
         "account_category": "Unknown",
         "z_score_X": 122.5026,
         "z_score_v": 2.3716,
-        "local_kl_drift": 0.0011,
+        "local_kl_drift": 0.0006,
         "micro_anomaly_flag": 1
       },
       {
@@ -174330,7 +174330,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.2097,
         "z_score_v": 4.4718,
-        "local_kl_drift": 3.8036,
+        "local_kl_drift": 1.7014,
         "micro_anomaly_flag": 1
       },
       {
@@ -174341,7 +174341,7 @@
         "account_category": "Unknown",
         "z_score_X": 27.107,
         "z_score_v": 20.5923,
-        "local_kl_drift": 1.6584,
+        "local_kl_drift": 0.6285,
         "micro_anomaly_flag": 1
       },
       {
@@ -174352,7 +174352,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3366,
         "z_score_v": 2.2337,
-        "local_kl_drift": 0.894,
+        "local_kl_drift": 0.707,
         "micro_anomaly_flag": 0
       },
       {
@@ -174363,7 +174363,7 @@
         "account_category": "Unknown",
         "z_score_X": 5.0979,
         "z_score_v": 1.9244,
-        "local_kl_drift": 0.4571,
+        "local_kl_drift": 0.3903,
         "micro_anomaly_flag": 1
       },
       {
@@ -174374,7 +174374,7 @@
         "account_category": "Unknown",
         "z_score_X": 1610.2788,
         "z_score_v": 2.0845,
-        "local_kl_drift": 0.3332,
+        "local_kl_drift": 0.2034,
         "micro_anomaly_flag": 1
       },
       {
@@ -174385,7 +174385,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.2934,
         "z_score_v": 1.2898,
-        "local_kl_drift": 0.0823,
+        "local_kl_drift": 0.0397,
         "micro_anomaly_flag": 0
       },
       {
@@ -174407,8 +174407,8 @@
         "account_category": "Unknown",
         "z_score_X": 1.2141,
         "z_score_v": 1.2158,
-        "local_kl_drift": 3.901,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.3823,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 3,
@@ -174418,7 +174418,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.671,
         "z_score_v": 0.6721,
-        "local_kl_drift": 0.3986,
+        "local_kl_drift": 0.3614,
         "micro_anomaly_flag": 0
       },
       {
@@ -174429,7 +174429,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3839,
         "z_score_v": 0.4927,
-        "local_kl_drift": 1.478,
+        "local_kl_drift": 0.625,
         "micro_anomaly_flag": 0
       },
       {
@@ -174440,8 +174440,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.3674,
         "z_score_v": 0.3482,
-        "local_kl_drift": 3.0852,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.2758,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 3,
@@ -174451,8 +174451,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.5458,
         "z_score_v": 2.3912,
-        "local_kl_drift": 4.1535,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.6598,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 3,
@@ -174462,7 +174462,7 @@
         "account_category": "Unknown",
         "z_score_X": 6.1354,
         "z_score_v": 2.9807,
-        "local_kl_drift": 0.5961,
+        "local_kl_drift": 0.4328,
         "micro_anomaly_flag": 1
       },
       {
@@ -174473,8 +174473,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.687,
         "z_score_v": 0.1696,
-        "local_kl_drift": 3.9213,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.7185,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 3,
@@ -174484,7 +174484,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.084,
         "z_score_v": 2.5654,
-        "local_kl_drift": 0.7689,
+        "local_kl_drift": 0.6085,
         "micro_anomaly_flag": 0
       },
       {
@@ -174495,7 +174495,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.3005,
         "z_score_v": 1.5545,
-        "local_kl_drift": 1.2545,
+        "local_kl_drift": 0.7972,
         "micro_anomaly_flag": 0
       },
       {
@@ -174506,7 +174506,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5432,
         "z_score_v": 4.787,
-        "local_kl_drift": 1.234,
+        "local_kl_drift": 0.9139,
         "micro_anomaly_flag": 1
       },
       {
@@ -174517,7 +174517,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.7271,
         "z_score_v": 2.7157,
-        "local_kl_drift": 0.0663,
+        "local_kl_drift": 0.0347,
         "micro_anomaly_flag": 0
       },
       {
@@ -174539,7 +174539,7 @@
         "account_category": "Unknown",
         "z_score_X": 25.3715,
         "z_score_v": 25.1217,
-        "local_kl_drift": 1.0879,
+        "local_kl_drift": 0.5058,
         "micro_anomaly_flag": 1
       },
       {
@@ -174550,8 +174550,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.8918,
         "z_score_v": 0.9839,
-        "local_kl_drift": 20.7233,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 2.0,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 4,
@@ -174561,7 +174561,7 @@
         "account_category": "Unknown",
         "z_score_X": 3.1876,
         "z_score_v": 0.899,
-        "local_kl_drift": 4.106,
+        "local_kl_drift": 0.3996,
         "micro_anomaly_flag": 1
       },
       {
@@ -174572,7 +174572,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3028,
         "z_score_v": 0.375,
-        "local_kl_drift": 0.517,
+        "local_kl_drift": 0.4128,
         "micro_anomaly_flag": 0
       },
       {
@@ -174583,7 +174583,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5252,
         "z_score_v": 1.9841,
-        "local_kl_drift": 1.1639,
+        "local_kl_drift": 0.7982,
         "micro_anomaly_flag": 0
       },
       {
@@ -174594,7 +174594,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.217,
         "z_score_v": 0.6694,
-        "local_kl_drift": 0.9204,
+        "local_kl_drift": 0.7377,
         "micro_anomaly_flag": 0
       },
       {
@@ -174605,7 +174605,7 @@
         "account_category": "Unknown",
         "z_score_X": 11.3063,
         "z_score_v": 4.3404,
-        "local_kl_drift": 0.3965,
+        "local_kl_drift": 0.2949,
         "micro_anomaly_flag": 1
       },
       {
@@ -174616,7 +174616,7 @@
         "account_category": "Unknown",
         "z_score_X": 508.4074,
         "z_score_v": 0.5092,
-        "local_kl_drift": 0.1692,
+        "local_kl_drift": 0.1114,
         "micro_anomaly_flag": 1
       },
       {
@@ -174627,7 +174627,7 @@
         "account_category": "Unknown",
         "z_score_X": 1291.0166,
         "z_score_v": 3.1306,
-        "local_kl_drift": 2.8282,
+        "local_kl_drift": 1.4158,
         "micro_anomaly_flag": 1
       },
       {
@@ -174638,7 +174638,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7667,
         "z_score_v": 0.4731,
-        "local_kl_drift": 0.8733,
+        "local_kl_drift": 0.6633,
         "micro_anomaly_flag": 0
       },
       {
@@ -174649,7 +174649,7 @@
         "account_category": "Unknown",
         "z_score_X": 3.0135,
         "z_score_v": 3.004,
-        "local_kl_drift": 0.0959,
+        "local_kl_drift": 0.0515,
         "micro_anomaly_flag": 1
       },
       {
@@ -174671,7 +174671,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.2417,
         "z_score_v": 1.3089,
-        "local_kl_drift": 1.1094,
+        "local_kl_drift": 0.8515,
         "micro_anomaly_flag": 0
       },
       {
@@ -174682,7 +174682,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5824,
         "z_score_v": 0.5361,
-        "local_kl_drift": 0.4055,
+        "local_kl_drift": 0.367,
         "micro_anomaly_flag": 0
       },
       {
@@ -174693,7 +174693,7 @@
         "account_category": "Unknown",
         "z_score_X": 47.4541,
         "z_score_v": 2.0352,
-        "local_kl_drift": 0.604,
+        "local_kl_drift": 0.4984,
         "micro_anomaly_flag": 1
       },
       {
@@ -174704,7 +174704,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5627,
         "z_score_v": 0.6054,
-        "local_kl_drift": 0.1695,
+        "local_kl_drift": 0.102,
         "micro_anomaly_flag": 0
       },
       {
@@ -174715,7 +174715,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.341,
         "z_score_v": 2.1073,
-        "local_kl_drift": 0.5009,
+        "local_kl_drift": 0.2919,
         "micro_anomaly_flag": 0
       },
       {
@@ -174726,7 +174726,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.9918,
         "z_score_v": 5.937,
-        "local_kl_drift": 19.7107,
+        "local_kl_drift": 1.6257,
         "micro_anomaly_flag": 1
       },
       {
@@ -174737,7 +174737,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5647,
         "z_score_v": 0.5335,
-        "local_kl_drift": 1.5808,
+        "local_kl_drift": 0.937,
         "micro_anomaly_flag": 0
       },
       {
@@ -174748,8 +174748,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.7074,
         "z_score_v": 0.1317,
-        "local_kl_drift": 2.2581,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.3101,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 5,
@@ -174759,7 +174759,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7075,
         "z_score_v": 0.1292,
-        "local_kl_drift": 0.9612,
+        "local_kl_drift": 0.7226,
         "micro_anomaly_flag": 0
       },
       {
@@ -174770,7 +174770,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7944,
         "z_score_v": 3.257,
-        "local_kl_drift": 1.1299,
+        "local_kl_drift": 0.8132,
         "micro_anomaly_flag": 1
       },
       {
@@ -174781,7 +174781,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.2909,
         "z_score_v": 0.2834,
-        "local_kl_drift": 0.0553,
+        "local_kl_drift": 0.0268,
         "micro_anomaly_flag": 0
       },
       {
@@ -174803,7 +174803,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3985,
         "z_score_v": 0.3705,
-        "local_kl_drift": 0.4055,
+        "local_kl_drift": 0.367,
         "micro_anomaly_flag": 0
       },
       {
@@ -174814,8 +174814,8 @@
         "account_category": "Unknown",
         "z_score_X": 1.9582,
         "z_score_v": 1.8389,
-        "local_kl_drift": 20.6246,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.8808,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 6,
@@ -174825,7 +174825,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5288,
         "z_score_v": 1.0343,
-        "local_kl_drift": 0.5034,
+        "local_kl_drift": 0.3107,
         "micro_anomaly_flag": 0
       },
       {
@@ -174836,7 +174836,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.894,
         "z_score_v": 2.0839,
-        "local_kl_drift": 0.4939,
+        "local_kl_drift": 0.3957,
         "micro_anomaly_flag": 0
       },
       {
@@ -174847,7 +174847,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.0802,
         "z_score_v": 8.0624,
-        "local_kl_drift": 1.5911,
+        "local_kl_drift": 0.9643,
         "micro_anomaly_flag": 1
       },
       {
@@ -174858,7 +174858,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.8044,
         "z_score_v": 3.2232,
-        "local_kl_drift": 0.5098,
+        "local_kl_drift": 0.4495,
         "micro_anomaly_flag": 1
       },
       {
@@ -174869,7 +174869,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.059,
         "z_score_v": 2.0861,
-        "local_kl_drift": 0.6325,
+        "local_kl_drift": 0.4521,
         "micro_anomaly_flag": 0
       },
       {
@@ -174880,7 +174880,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7061,
         "z_score_v": 0.7889,
-        "local_kl_drift": 0.5375,
+        "local_kl_drift": 0.4699,
         "micro_anomaly_flag": 0
       },
       {
@@ -174891,8 +174891,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.7065,
         "z_score_v": 0.1512,
-        "local_kl_drift": 5.5801,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.8455,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 6,
@@ -174902,7 +174902,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9415,
         "z_score_v": 1.9303,
-        "local_kl_drift": 0.1937,
+        "local_kl_drift": 0.1434,
         "micro_anomaly_flag": 0
       },
       {
@@ -174913,7 +174913,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.6235,
         "z_score_v": 2.632,
-        "local_kl_drift": 0.0319,
+        "local_kl_drift": 0.0161,
         "micro_anomaly_flag": 0
       },
       {
@@ -174935,7 +174935,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.416,
         "z_score_v": 0.3885,
-        "local_kl_drift": 0.4055,
+        "local_kl_drift": 0.367,
         "micro_anomaly_flag": 0
       },
       {
@@ -174946,7 +174946,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.3783,
         "z_score_v": 1.3861,
-        "local_kl_drift": 1.0967,
+        "local_kl_drift": 0.8442,
         "micro_anomaly_flag": 0
       },
       {
@@ -174957,7 +174957,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7506,
         "z_score_v": 0.1831,
-        "local_kl_drift": 0.1164,
+        "local_kl_drift": 0.105,
         "micro_anomaly_flag": 0
       },
       {
@@ -174968,7 +174968,7 @@
         "account_category": "Unknown",
         "z_score_X": 4.8101,
         "z_score_v": 5.2163,
-        "local_kl_drift": 0.111,
+        "local_kl_drift": 0.1069,
         "micro_anomaly_flag": 1
       },
       {
@@ -174979,7 +174979,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.4048,
         "z_score_v": 1.2132,
-        "local_kl_drift": 0.7002,
+        "local_kl_drift": 0.5908,
         "micro_anomaly_flag": 0
       },
       {
@@ -174990,7 +174990,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7869,
         "z_score_v": 0.4849,
-        "local_kl_drift": 0.2441,
+        "local_kl_drift": 0.1751,
         "micro_anomaly_flag": 0
       },
       {
@@ -175001,7 +175001,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9659,
         "z_score_v": 0.1882,
-        "local_kl_drift": 1.8543,
+        "local_kl_drift": 1.1777,
         "micro_anomaly_flag": 0
       },
       {
@@ -175012,7 +175012,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7075,
         "z_score_v": 2.1981,
-        "local_kl_drift": 1.0947,
+        "local_kl_drift": 0.843,
         "micro_anomaly_flag": 0
       },
       {
@@ -175023,7 +175023,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7072,
         "z_score_v": 0.8029,
-        "local_kl_drift": 0.8666,
+        "local_kl_drift": 0.5118,
         "micro_anomaly_flag": 0
       },
       {
@@ -175034,7 +175034,7 @@
         "account_category": "Unknown",
         "z_score_X": 1314.6705,
         "z_score_v": 2.8276,
-        "local_kl_drift": 3.612,
+        "local_kl_drift": 1.5063,
         "micro_anomaly_flag": 1
       },
       {
@@ -175045,7 +175045,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8969,
         "z_score_v": 0.8999,
-        "local_kl_drift": 0.1607,
+        "local_kl_drift": 0.0822,
         "micro_anomaly_flag": 0
       },
       {
@@ -175067,7 +175067,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7179,
         "z_score_v": 0.7176,
-        "local_kl_drift": 0.4055,
+        "local_kl_drift": 0.367,
         "micro_anomaly_flag": 0
       },
       {
@@ -175078,7 +175078,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0001,
         "z_score_v": 0.9045,
-        "local_kl_drift": 1.0675,
+        "local_kl_drift": 0.7364,
         "micro_anomaly_flag": 0
       },
       {
@@ -175089,7 +175089,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7203,
         "z_score_v": 0.1984,
-        "local_kl_drift": 0.1453,
+        "local_kl_drift": 0.0579,
         "micro_anomaly_flag": 0
       },
       {
@@ -175100,7 +175100,7 @@
         "account_category": "Unknown",
         "z_score_X": 3.1018,
         "z_score_v": 3.0541,
-        "local_kl_drift": 0.0683,
+        "local_kl_drift": 0.063,
         "micro_anomaly_flag": 1
       },
       {
@@ -175111,7 +175111,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.1732,
         "z_score_v": 1.8483,
-        "local_kl_drift": 0.6535,
+        "local_kl_drift": 0.5501,
         "micro_anomaly_flag": 0
       },
       {
@@ -175122,7 +175122,7 @@
         "account_category": "Unknown",
         "z_score_X": 3.1208,
         "z_score_v": 3.1952,
-        "local_kl_drift": 2.0841,
+        "local_kl_drift": 1.0188,
         "micro_anomaly_flag": 1
       },
       {
@@ -175133,7 +175133,7 @@
         "account_category": "Unknown",
         "z_score_X": 11753.4885,
         "z_score_v": 9.7011,
-        "local_kl_drift": 4.1128,
+        "local_kl_drift": 1.5551,
         "micro_anomaly_flag": 1
       },
       {
@@ -175144,7 +175144,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.2338,
         "z_score_v": 4.8735,
-        "local_kl_drift": 0.3923,
+        "local_kl_drift": 0.2424,
         "micro_anomaly_flag": 1
       },
       {
@@ -175155,7 +175155,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.2754,
         "z_score_v": 4.1852,
-        "local_kl_drift": 3.276,
+        "local_kl_drift": 0.8324,
         "micro_anomaly_flag": 1
       },
       {
@@ -175166,7 +175166,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7076,
         "z_score_v": 1.142,
-        "local_kl_drift": 1.5585,
+        "local_kl_drift": 0.9969,
         "micro_anomaly_flag": 0
       },
       {
@@ -175177,7 +175177,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.5673,
         "z_score_v": 1.5446,
-        "local_kl_drift": 0.0407,
+        "local_kl_drift": 0.0204,
         "micro_anomaly_flag": 0
       },
       {
@@ -175199,8 +175199,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.4609,
         "z_score_v": 0.4604,
-        "local_kl_drift": 3.3563,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 0.1945,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 9,
@@ -175210,7 +175210,7 @@
         "account_category": "Unknown",
         "z_score_X": 17.9701,
         "z_score_v": 16.5317,
-        "local_kl_drift": 1.0919,
+        "local_kl_drift": 0.8414,
         "micro_anomaly_flag": 1
       },
       {
@@ -175221,7 +175221,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0052,
         "z_score_v": 0.3362,
-        "local_kl_drift": 0.0316,
+        "local_kl_drift": 0.03,
         "micro_anomaly_flag": 0
       },
       {
@@ -175232,7 +175232,7 @@
         "account_category": "Unknown",
         "z_score_X": 16.6224,
         "z_score_v": 17.1483,
-        "local_kl_drift": 11.7484,
+        "local_kl_drift": 0.7534,
         "micro_anomaly_flag": 1
       },
       {
@@ -175243,7 +175243,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.9301,
         "z_score_v": 2.9678,
-        "local_kl_drift": 0.1338,
+        "local_kl_drift": 0.0653,
         "micro_anomaly_flag": 0
       },
       {
@@ -175254,7 +175254,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0001,
         "z_score_v": 1.9908,
-        "local_kl_drift": 0.4555,
+        "local_kl_drift": 0.2444,
         "micro_anomaly_flag": 0
       },
       {
@@ -175265,7 +175265,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7068,
         "z_score_v": 0.8727,
-        "local_kl_drift": 0.8603,
+        "local_kl_drift": 0.5667,
         "micro_anomaly_flag": 0
       },
       {
@@ -175276,7 +175276,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.3709,
         "z_score_v": 1.0629,
-        "local_kl_drift": 0.4239,
+        "local_kl_drift": 0.2742,
         "micro_anomaly_flag": 0
       },
       {
@@ -175287,7 +175287,7 @@
         "account_category": "Unknown",
         "z_score_X": 3.0228,
         "z_score_v": 2.3762,
-        "local_kl_drift": 3.8418,
+        "local_kl_drift": 1.3955,
         "micro_anomaly_flag": 1
       },
       {
@@ -175298,7 +175298,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7004,
         "z_score_v": 0.4791,
-        "local_kl_drift": 1.0422,
+        "local_kl_drift": 0.706,
         "micro_anomaly_flag": 0
       },
       {
@@ -175309,7 +175309,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.0261,
         "z_score_v": 2.0153,
-        "local_kl_drift": 0.2682,
+        "local_kl_drift": 0.1461,
         "micro_anomaly_flag": 0
       },
       {
@@ -175331,7 +175331,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5032,
         "z_score_v": 0.5031,
-        "local_kl_drift": 0.0,
+        "local_kl_drift": 1.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -175342,7 +175342,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8471,
         "z_score_v": 0.9462,
-        "local_kl_drift": 1.094,
+        "local_kl_drift": 0.7932,
         "micro_anomaly_flag": 0
       },
       {
@@ -175353,7 +175353,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.706,
         "z_score_v": 1.9822,
-        "local_kl_drift": 0.0187,
+        "local_kl_drift": 0.0172,
         "micro_anomaly_flag": 0
       },
       {
@@ -175364,7 +175364,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.1327,
         "z_score_v": 0.4644,
-        "local_kl_drift": 0.2286,
+        "local_kl_drift": 0.2156,
         "micro_anomaly_flag": 0
       },
       {
@@ -175375,7 +175375,7 @@
         "account_category": "Unknown",
         "z_score_X": 32.6896,
         "z_score_v": 1.377,
-        "local_kl_drift": 0.8409,
+        "local_kl_drift": 0.6865,
         "micro_anomaly_flag": 1
       },
       {
@@ -175386,7 +175386,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8051,
         "z_score_v": 1.0136,
-        "local_kl_drift": 1.7508,
+        "local_kl_drift": 1.1017,
         "micro_anomaly_flag": 0
       },
       {
@@ -175397,7 +175397,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7067,
         "z_score_v": 0.2752,
-        "local_kl_drift": 0.7261,
+        "local_kl_drift": 0.4349,
         "micro_anomaly_flag": 0
       },
       {
@@ -175408,8 +175408,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.0952,
         "z_score_v": 0.9062,
-        "local_kl_drift": 3.5994,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.6687,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 10,
@@ -175419,7 +175419,7 @@
         "account_category": "Unknown",
         "z_score_X": 5.5043,
         "z_score_v": 6.9773,
-        "local_kl_drift": 0.0,
+        "local_kl_drift": 1.0,
         "micro_anomaly_flag": 1
       },
       {
@@ -175430,7 +175430,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.708,
         "z_score_v": 0.1317,
-        "local_kl_drift": 0.4145,
+        "local_kl_drift": 0.3743,
         "micro_anomaly_flag": 0
       },
       {
@@ -175441,7 +175441,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.5173,
         "z_score_v": 2.5006,
-        "local_kl_drift": 0.036,
+        "local_kl_drift": 0.0178,
         "micro_anomaly_flag": 0
       },
       {
@@ -175463,7 +175463,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.5034,
         "z_score_v": 2.5047,
-        "local_kl_drift": 0.5026,
+        "local_kl_drift": 0.1111,
         "micro_anomaly_flag": 0
       },
       {
@@ -175474,7 +175474,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.4788,
         "z_score_v": 0.4291,
-        "local_kl_drift": 1.0927,
+        "local_kl_drift": 0.8419,
         "micro_anomaly_flag": 0
       },
       {
@@ -175485,7 +175485,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.2264,
         "z_score_v": 1.5812,
-        "local_kl_drift": 0.0257,
+        "local_kl_drift": 0.0249,
         "micro_anomaly_flag": 0
       },
       {
@@ -175496,7 +175496,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.7152,
         "z_score_v": 1.0167,
-        "local_kl_drift": 0.2382,
+        "local_kl_drift": 0.2244,
         "micro_anomaly_flag": 0
       },
       {
@@ -175507,8 +175507,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.7028,
         "z_score_v": 0.0269,
-        "local_kl_drift": 3.0259,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.4064,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 11,
@@ -175518,7 +175518,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.4936,
         "z_score_v": 1.5568,
-        "local_kl_drift": 0.6765,
+        "local_kl_drift": 0.5388,
         "micro_anomaly_flag": 0
       },
       {
@@ -175529,7 +175529,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.707,
         "z_score_v": 0.4212,
-        "local_kl_drift": 0.9002,
+        "local_kl_drift": 0.613,
         "micro_anomaly_flag": 0
       },
       {
@@ -175540,7 +175540,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8847,
         "z_score_v": 0.704,
-        "local_kl_drift": 0.3883,
+        "local_kl_drift": 0.2782,
         "micro_anomaly_flag": 0
       },
       {
@@ -175551,7 +175551,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.5688,
         "z_score_v": 3.201,
-        "local_kl_drift": 1.6034,
+        "local_kl_drift": 0.621,
         "micro_anomaly_flag": 1
       },
       {
@@ -175562,7 +175562,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3018,
         "z_score_v": 0.4073,
-        "local_kl_drift": 0.4061,
+        "local_kl_drift": 0.2954,
         "micro_anomaly_flag": 0
       },
       {
@@ -175573,7 +175573,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9822,
         "z_score_v": 0.9539,
-        "local_kl_drift": 0.0765,
+        "local_kl_drift": 0.0373,
         "micro_anomaly_flag": 0
       },
       {
@@ -175595,7 +175595,7 @@
         "account_category": "Unknown",
         "z_score_X": 5.9937,
         "z_score_v": 5.9936,
-        "local_kl_drift": 2.7856,
+        "local_kl_drift": 1.1699,
         "micro_anomaly_flag": 1
       },
       {
@@ -175606,7 +175606,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5715,
         "z_score_v": 0.5188,
-        "local_kl_drift": 0.4049,
+        "local_kl_drift": 0.3665,
         "micro_anomaly_flag": 0
       },
       {
@@ -175617,7 +175617,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.0305,
         "z_score_v": 2.3556,
-        "local_kl_drift": 0.09,
+        "local_kl_drift": 0.0128,
         "micro_anomaly_flag": 0
       },
       {
@@ -175628,7 +175628,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5124,
         "z_score_v": 0.6674,
-        "local_kl_drift": 0.2329,
+        "local_kl_drift": 0.2166,
         "micro_anomaly_flag": 0
       },
       {
@@ -175639,7 +175639,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6329,
         "z_score_v": 0.6312,
-        "local_kl_drift": 0.7473,
+        "local_kl_drift": 0.5639,
         "micro_anomaly_flag": 0
       },
       {
@@ -175650,7 +175650,7 @@
         "account_category": "Unknown",
         "z_score_X": 6.0748,
         "z_score_v": 2.3064,
-        "local_kl_drift": 1.9405,
+        "local_kl_drift": 1.242,
         "micro_anomaly_flag": 1
       },
       {
@@ -175661,7 +175661,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6551,
         "z_score_v": 0.6911,
-        "local_kl_drift": 1.1563,
+        "local_kl_drift": 0.8781,
         "micro_anomaly_flag": 0
       },
       {
@@ -175672,7 +175672,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.3328,
         "z_score_v": 3.0466,
-        "local_kl_drift": 1.3104,
+        "local_kl_drift": 0.8614,
         "micro_anomaly_flag": 1
       },
       {
@@ -175683,8 +175683,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.0383,
         "z_score_v": 0.1763,
-        "local_kl_drift": 2.2702,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 0.4036,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 12,
@@ -175694,7 +175694,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.6385,
         "z_score_v": 5.5373,
-        "local_kl_drift": 2.0317,
+        "local_kl_drift": 0.3816,
         "micro_anomaly_flag": 1
       },
       {
@@ -175705,7 +175705,7 @@
         "account_category": "Unknown",
         "z_score_X": 3.5564,
         "z_score_v": 3.6431,
-        "local_kl_drift": 0.0699,
+        "local_kl_drift": 0.0387,
         "micro_anomaly_flag": 1
       },
       {
@@ -175727,7 +175727,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0965,
         "z_score_v": 0.0961,
-        "local_kl_drift": 1.0986,
+        "local_kl_drift": 0.512,
         "micro_anomaly_flag": 0
       },
       {
@@ -175738,8 +175738,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.8697,
         "z_score_v": 0.8619,
-        "local_kl_drift": 4.0817,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 0.5445,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 13,
@@ -175749,7 +175749,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.1858,
         "z_score_v": 0.4225,
-        "local_kl_drift": 0.0081,
+        "local_kl_drift": 0.0074,
         "micro_anomaly_flag": 0
       },
       {
@@ -175760,7 +175760,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5481,
         "z_score_v": 0.5063,
-        "local_kl_drift": 0.0363,
+        "local_kl_drift": 0.0036,
         "micro_anomaly_flag": 0
       },
       {
@@ -175771,7 +175771,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7225,
         "z_score_v": 1.0669,
-        "local_kl_drift": 1.0198,
+        "local_kl_drift": 0.6638,
         "micro_anomaly_flag": 0
       },
       {
@@ -175782,7 +175782,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9306,
         "z_score_v": 1.0783,
-        "local_kl_drift": 0.4017,
+        "local_kl_drift": 0.3217,
         "micro_anomaly_flag": 0
       },
       {
@@ -175793,7 +175793,7 @@
         "account_category": "Unknown",
         "z_score_X": 3.3906,
         "z_score_v": 3.9291,
-        "local_kl_drift": 0.8156,
+        "local_kl_drift": 0.5226,
         "micro_anomaly_flag": 1
       },
       {
@@ -175804,7 +175804,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.1971,
         "z_score_v": 0.0443,
-        "local_kl_drift": 0.8704,
+        "local_kl_drift": 0.5138,
         "micro_anomaly_flag": 0
       },
       {
@@ -175815,7 +175815,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1553,
         "z_score_v": 0.9596,
-        "local_kl_drift": 0.8162,
+        "local_kl_drift": 0.2896,
         "micro_anomaly_flag": 0
       },
       {
@@ -175826,7 +175826,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6905,
         "z_score_v": 0.6432,
-        "local_kl_drift": 0.1177,
+        "local_kl_drift": 0.0791,
         "micro_anomaly_flag": 0
       },
       {
@@ -175837,7 +175837,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.2835,
         "z_score_v": 1.2397,
-        "local_kl_drift": 0.0738,
+        "local_kl_drift": 0.0376,
         "micro_anomaly_flag": 0
       },
       {
@@ -175859,7 +175859,7 @@
         "account_category": "Unknown",
         "z_score_X": 81.3774,
         "z_score_v": 81.4622,
-        "local_kl_drift": 20.6391,
+        "local_kl_drift": 1.909,
         "micro_anomaly_flag": 1
       },
       {
@@ -175870,7 +175870,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8051,
         "z_score_v": 0.8001,
-        "local_kl_drift": 0.3384,
+        "local_kl_drift": 0.1347,
         "micro_anomaly_flag": 0
       },
       {
@@ -175881,7 +175881,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.1138,
         "z_score_v": 0.0498,
-        "local_kl_drift": 0.0053,
+        "local_kl_drift": 0.005,
         "micro_anomaly_flag": 0
       },
       {
@@ -175903,7 +175903,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6546,
         "z_score_v": 0.5669,
-        "local_kl_drift": 0.2815,
+        "local_kl_drift": 0.1814,
         "micro_anomaly_flag": 0
       },
       {
@@ -175914,7 +175914,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6492,
         "z_score_v": 0.2985,
-        "local_kl_drift": 0.4926,
+        "local_kl_drift": 0.3718,
         "micro_anomaly_flag": 0
       },
       {
@@ -175925,7 +175925,7 @@
         "account_category": "Unknown",
         "z_score_X": 11.8404,
         "z_score_v": 12.1333,
-        "local_kl_drift": 4.387,
+        "local_kl_drift": 1.2334,
         "micro_anomaly_flag": 1
       },
       {
@@ -175936,7 +175936,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5504,
         "z_score_v": 0.5806,
-        "local_kl_drift": 0.3674,
+        "local_kl_drift": 0.2623,
         "micro_anomaly_flag": 0
       },
       {
@@ -175947,7 +175947,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.3276,
         "z_score_v": 0.4569,
-        "local_kl_drift": 0.169,
+        "local_kl_drift": 0.1621,
         "micro_anomaly_flag": 0
       },
       {
@@ -175958,7 +175958,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6592,
         "z_score_v": 0.6088,
-        "local_kl_drift": 0.0857,
+        "local_kl_drift": 0.0555,
         "micro_anomaly_flag": 0
       },
       {
@@ -175969,7 +175969,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.5016,
         "z_score_v": 1.5183,
-        "local_kl_drift": 0.0772,
+        "local_kl_drift": 0.0404,
         "micro_anomaly_flag": 0
       },
       {
@@ -175991,7 +175991,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6925,
         "z_score_v": 0.6919,
-        "local_kl_drift": 1.0955,
+        "local_kl_drift": 0.8435,
         "micro_anomaly_flag": 0
       },
       {
@@ -176002,8 +176002,8 @@
         "account_category": "Unknown",
         "z_score_X": 2.162,
         "z_score_v": 2.1685,
-        "local_kl_drift": 6.6821,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 0.5417,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 15,
@@ -176013,7 +176013,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0265,
         "z_score_v": 0.0447,
-        "local_kl_drift": 0.5957,
+        "local_kl_drift": 0.0756,
         "micro_anomaly_flag": 0
       },
       {
@@ -176024,7 +176024,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.53,
         "z_score_v": 0.5175,
-        "local_kl_drift": 0.0249,
+        "local_kl_drift": 0.0071,
         "micro_anomaly_flag": 0
       },
       {
@@ -176035,7 +176035,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.7367,
         "z_score_v": 4.1689,
-        "local_kl_drift": 0.8035,
+        "local_kl_drift": 0.4749,
         "micro_anomaly_flag": 1
       },
       {
@@ -176046,8 +176046,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.58,
         "z_score_v": 0.1091,
-        "local_kl_drift": 3.8413,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.6727,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 15,
@@ -176057,7 +176057,7 @@
         "account_category": "Unknown",
         "z_score_X": 3.4451,
         "z_score_v": 2.5865,
-        "local_kl_drift": 0.7799,
+        "local_kl_drift": 0.4928,
         "micro_anomaly_flag": 1
       },
       {
@@ -176068,7 +176068,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0424,
         "z_score_v": 0.0978,
-        "local_kl_drift": 0.4285,
+        "local_kl_drift": 0.3854,
         "micro_anomaly_flag": 0
       },
       {
@@ -176079,7 +176079,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5238,
         "z_score_v": 0.7201,
-        "local_kl_drift": 1.9388,
+        "local_kl_drift": 1.2261,
         "micro_anomaly_flag": 0
       },
       {
@@ -176090,7 +176090,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7606,
         "z_score_v": 0.8654,
-        "local_kl_drift": 0.1435,
+        "local_kl_drift": 0.1373,
         "micro_anomaly_flag": 0
       },
       {
@@ -176101,7 +176101,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.9739,
         "z_score_v": 1.9455,
-        "local_kl_drift": 0.1435,
+        "local_kl_drift": 0.0745,
         "micro_anomaly_flag": 0
       },
       {
@@ -176123,7 +176123,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7161,
         "z_score_v": 0.7156,
-        "local_kl_drift": 0.4039,
+        "local_kl_drift": 0.3657,
         "micro_anomaly_flag": 0
       },
       {
@@ -176134,7 +176134,7 @@
         "account_category": "Unknown",
         "z_score_X": 5.3392,
         "z_score_v": 5.3604,
-        "local_kl_drift": 1.5712,
+        "local_kl_drift": 0.9234,
         "micro_anomaly_flag": 1
       },
       {
@@ -176145,7 +176145,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5722,
         "z_score_v": 0.5478,
-        "local_kl_drift": 0.494,
+        "local_kl_drift": 0.0873,
         "micro_anomaly_flag": 0
       },
       {
@@ -176156,7 +176156,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6064,
         "z_score_v": 0.6163,
-        "local_kl_drift": 1.1024,
+        "local_kl_drift": 0.2042,
         "micro_anomaly_flag": 0
       },
       {
@@ -176167,7 +176167,7 @@
         "account_category": "Unknown",
         "z_score_X": 3.1397,
         "z_score_v": 1.9662,
-        "local_kl_drift": 0.9297,
+        "local_kl_drift": 0.5659,
         "micro_anomaly_flag": 1
       },
       {
@@ -176178,7 +176178,7 @@
         "account_category": "Unknown",
         "z_score_X": 9.9589,
         "z_score_v": 4.7784,
-        "local_kl_drift": 0.6416,
+        "local_kl_drift": 0.3552,
         "micro_anomaly_flag": 1
       },
       {
@@ -176189,7 +176189,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7572,
         "z_score_v": 1.1156,
-        "local_kl_drift": 0.8329,
+        "local_kl_drift": 0.4637,
         "micro_anomaly_flag": 0
       },
       {
@@ -176200,7 +176200,7 @@
         "account_category": "Unknown",
         "z_score_X": 14.2731,
         "z_score_v": 15.8859,
-        "local_kl_drift": 0.0446,
+        "local_kl_drift": 0.0238,
         "micro_anomaly_flag": 1
       },
       {
@@ -176211,7 +176211,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.0935,
         "z_score_v": 1.785,
-        "local_kl_drift": 1.4203,
+        "local_kl_drift": 0.8192,
         "micro_anomaly_flag": 0
       },
       {
@@ -176233,7 +176233,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.885,
         "z_score_v": 0.901,
-        "local_kl_drift": 0.0244,
+        "local_kl_drift": 0.0125,
         "micro_anomaly_flag": 0
       },
       {
@@ -176255,7 +176255,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.677,
         "z_score_v": 0.6779,
-        "local_kl_drift": 0.4039,
+        "local_kl_drift": 0.3657,
         "micro_anomaly_flag": 0
       },
       {
@@ -176266,7 +176266,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7598,
         "z_score_v": 0.7591,
-        "local_kl_drift": 0.8214,
+        "local_kl_drift": 0.6736,
         "micro_anomaly_flag": 0
       },
       {
@@ -176277,7 +176277,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7435,
         "z_score_v": 0.7437,
-        "local_kl_drift": 0.0784,
+        "local_kl_drift": 0.041,
         "micro_anomaly_flag": 0
       },
       {
@@ -176288,7 +176288,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6892,
         "z_score_v": 0.6786,
-        "local_kl_drift": 0.1123,
+        "local_kl_drift": 0.0614,
         "micro_anomaly_flag": 0
       },
       {
@@ -176299,7 +176299,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.6421,
         "z_score_v": 1.3321,
-        "local_kl_drift": 1.0482,
+        "local_kl_drift": 0.7637,
         "micro_anomaly_flag": 0
       },
       {
@@ -176310,7 +176310,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.1701,
         "z_score_v": 0.4614,
-        "local_kl_drift": 0.0982,
+        "local_kl_drift": 0.0522,
         "micro_anomaly_flag": 0
       },
       {
@@ -176321,7 +176321,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3774,
         "z_score_v": 0.2539,
-        "local_kl_drift": 0.9701,
+        "local_kl_drift": 0.5224,
         "micro_anomaly_flag": 0
       },
       {
@@ -176332,7 +176332,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.4566,
         "z_score_v": 3.222,
-        "local_kl_drift": 4.4017,
+        "local_kl_drift": 1.1818,
         "micro_anomaly_flag": 1
       },
       {
@@ -176343,7 +176343,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9459,
         "z_score_v": 0.8526,
-        "local_kl_drift": 0.172,
+        "local_kl_drift": 0.1142,
         "micro_anomaly_flag": 0
       },
       {
@@ -176354,7 +176354,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3948,
         "z_score_v": 0.3302,
-        "local_kl_drift": 0.0077,
+        "local_kl_drift": 0.0075,
         "micro_anomaly_flag": 0
       },
       {
@@ -176365,7 +176365,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3267,
         "z_score_v": 0.3401,
-        "local_kl_drift": 0.0661,
+        "local_kl_drift": 0.0336,
         "micro_anomaly_flag": 0
       },
       {
@@ -176387,7 +176387,7 @@
         "account_category": "Unknown",
         "z_score_X": 6.571,
         "z_score_v": 6.573,
-        "local_kl_drift": 0.8714,
+        "local_kl_drift": 0.0526,
         "micro_anomaly_flag": 1
       },
       {
@@ -176398,7 +176398,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.793,
         "z_score_v": 0.7933,
-        "local_kl_drift": 0.5854,
+        "local_kl_drift": 0.5075,
         "micro_anomaly_flag": 0
       },
       {
@@ -176409,7 +176409,7 @@
         "account_category": "Unknown",
         "z_score_X": 5.5133,
         "z_score_v": 5.5591,
-        "local_kl_drift": 0.3266,
+        "local_kl_drift": 0.0977,
         "micro_anomaly_flag": 1
       },
       {
@@ -176420,7 +176420,7 @@
         "account_category": "Unknown",
         "z_score_X": 24.0171,
         "z_score_v": 23.6497,
-        "local_kl_drift": 0.2012,
+        "local_kl_drift": 0.1424,
         "micro_anomaly_flag": 1
       },
       {
@@ -176431,7 +176431,7 @@
         "account_category": "Unknown",
         "z_score_X": 12.4082,
         "z_score_v": 6.4385,
-        "local_kl_drift": 0.9674,
+        "local_kl_drift": 0.6628,
         "micro_anomaly_flag": 1
       },
       {
@@ -176442,8 +176442,8 @@
         "account_category": "Unknown",
         "z_score_X": 1.1173,
         "z_score_v": 2.0471,
-        "local_kl_drift": 3.9167,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.0699,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 18,
@@ -176453,7 +176453,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.3027,
         "z_score_v": 1.4075,
-        "local_kl_drift": 0.4721,
+        "local_kl_drift": 0.3903,
         "micro_anomaly_flag": 0
       },
       {
@@ -176464,7 +176464,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0481,
         "z_score_v": 0.9916,
-        "local_kl_drift": 0.346,
+        "local_kl_drift": 0.2667,
         "micro_anomaly_flag": 0
       },
       {
@@ -176475,7 +176475,7 @@
         "account_category": "Unknown",
         "z_score_X": 35.6333,
         "z_score_v": 33.4333,
-        "local_kl_drift": 0.0559,
+        "local_kl_drift": 0.0496,
         "micro_anomaly_flag": 1
       },
       {
@@ -176486,7 +176486,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.1656,
         "z_score_v": 0.0728,
-        "local_kl_drift": 0.0085,
+        "local_kl_drift": 0.0033,
         "micro_anomaly_flag": 0
       },
       {
@@ -176497,7 +176497,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.0962,
         "z_score_v": 2.0832,
-        "local_kl_drift": 0.132,
+        "local_kl_drift": 0.066,
         "micro_anomaly_flag": 0
       },
       {
@@ -176519,7 +176519,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.2957,
         "z_score_v": 1.2964,
-        "local_kl_drift": 0.0175,
+        "local_kl_drift": 0.0174,
         "micro_anomaly_flag": 0
       },
       {
@@ -176530,7 +176530,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6259,
         "z_score_v": 0.6269,
-        "local_kl_drift": 0.3966,
+        "local_kl_drift": 0.3598,
         "micro_anomaly_flag": 0
       },
       {
@@ -176541,7 +176541,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0374,
         "z_score_v": 0.0275,
-        "local_kl_drift": 0.0579,
+        "local_kl_drift": 0.0456,
         "micro_anomaly_flag": 0
       },
       {
@@ -176552,7 +176552,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.1451,
         "z_score_v": 1.9927,
-        "local_kl_drift": 0.1392,
+        "local_kl_drift": 0.1307,
         "micro_anomaly_flag": 0
       },
       {
@@ -176563,7 +176563,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7917,
         "z_score_v": 1.2724,
-        "local_kl_drift": 0.8041,
+        "local_kl_drift": 0.4533,
         "micro_anomaly_flag": 0
       },
       {
@@ -176574,7 +176574,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7586,
         "z_score_v": 0.6575,
-        "local_kl_drift": 0.4826,
+        "local_kl_drift": 0.3977,
         "micro_anomaly_flag": 0
       },
       {
@@ -176585,7 +176585,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9976,
         "z_score_v": 1.0927,
-        "local_kl_drift": 0.4217,
+        "local_kl_drift": 0.3194,
         "micro_anomaly_flag": 0
       },
       {
@@ -176596,7 +176596,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1546,
         "z_score_v": 1.0328,
-        "local_kl_drift": 0.7974,
+        "local_kl_drift": 0.4355,
         "micro_anomaly_flag": 0
       },
       {
@@ -176607,7 +176607,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7001,
         "z_score_v": 0.6683,
-        "local_kl_drift": 0.0306,
+        "local_kl_drift": 0.024,
         "micro_anomaly_flag": 0
       },
       {
@@ -176618,7 +176618,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0302,
         "z_score_v": 1.084,
-        "local_kl_drift": 0.0009,
+        "local_kl_drift": 0.0004,
         "micro_anomaly_flag": 0
       },
       {
@@ -176629,7 +176629,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9118,
         "z_score_v": 0.9184,
-        "local_kl_drift": 0.1112,
+        "local_kl_drift": 0.0591,
         "micro_anomaly_flag": 0
       },
       {
@@ -176651,7 +176651,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0716,
         "z_score_v": 0.0725,
-        "local_kl_drift": 0.0,
+        "local_kl_drift": 1.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -176662,8 +176662,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.6584,
         "z_score_v": 0.6586,
-        "local_kl_drift": 11.0973,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 0.6862,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 20,
@@ -176673,7 +176673,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5016,
         "z_score_v": 0.5093,
-        "local_kl_drift": 0.507,
+        "local_kl_drift": 0.1323,
         "micro_anomaly_flag": 0
       },
       {
@@ -176684,7 +176684,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8567,
         "z_score_v": 0.8899,
-        "local_kl_drift": 0.4753,
+        "local_kl_drift": 0.0733,
         "micro_anomaly_flag": 0
       },
       {
@@ -176695,7 +176695,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0939,
         "z_score_v": 1.256,
-        "local_kl_drift": 1.0338,
+        "local_kl_drift": 0.6391,
         "micro_anomaly_flag": 0
       },
       {
@@ -176706,7 +176706,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.2536,
         "z_score_v": 0.153,
-        "local_kl_drift": 0.2657,
+        "local_kl_drift": 0.1658,
         "micro_anomaly_flag": 0
       },
       {
@@ -176717,7 +176717,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0061,
         "z_score_v": 1.0108,
-        "local_kl_drift": 0.0218,
+        "local_kl_drift": 0.0181,
         "micro_anomaly_flag": 0
       },
       {
@@ -176728,7 +176728,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3051,
         "z_score_v": 0.4912,
-        "local_kl_drift": 0.8363,
+        "local_kl_drift": 0.5753,
         "micro_anomaly_flag": 0
       },
       {
@@ -176739,7 +176739,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6823,
         "z_score_v": 0.6323,
-        "local_kl_drift": 0.0334,
+        "local_kl_drift": 0.027,
         "micro_anomaly_flag": 0
       },
       {
@@ -176750,7 +176750,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0201,
         "z_score_v": 0.9344,
-        "local_kl_drift": 0.1476,
+        "local_kl_drift": 0.0526,
         "micro_anomaly_flag": 0
       },
       {
@@ -176761,7 +176761,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8828,
         "z_score_v": 0.865,
-        "local_kl_drift": 0.2618,
+        "local_kl_drift": 0.1349,
         "micro_anomaly_flag": 0
       },
       {
@@ -176783,7 +176783,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.158,
         "z_score_v": 0.1595,
-        "local_kl_drift": 0.4318,
+        "local_kl_drift": 0.055,
         "micro_anomaly_flag": 0
       },
       {
@@ -176794,7 +176794,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.1567,
         "z_score_v": 2.1568,
-        "local_kl_drift": 0.2101,
+        "local_kl_drift": 0.1994,
         "micro_anomaly_flag": 0
       },
       {
@@ -176805,7 +176805,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.2393,
         "z_score_v": 1.2229,
-        "local_kl_drift": 0.073,
+        "local_kl_drift": 0.0691,
         "micro_anomaly_flag": 0
       },
       {
@@ -176816,7 +176816,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0009,
         "z_score_v": 0.0442,
-        "local_kl_drift": 0.0138,
+        "local_kl_drift": 0.0136,
         "micro_anomaly_flag": 0
       },
       {
@@ -176827,7 +176827,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5184,
         "z_score_v": 0.0443,
-        "local_kl_drift": 1.0109,
+        "local_kl_drift": 0.7935,
         "micro_anomaly_flag": 0
       },
       {
@@ -176838,7 +176838,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.2832,
         "z_score_v": 1.2039,
-        "local_kl_drift": 0.2469,
+        "local_kl_drift": 0.1832,
         "micro_anomaly_flag": 0
       },
       {
@@ -176849,7 +176849,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5634,
         "z_score_v": 0.5843,
-        "local_kl_drift": 0.2226,
+        "local_kl_drift": 0.0591,
         "micro_anomaly_flag": 0
       },
       {
@@ -176860,7 +176860,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.2518,
         "z_score_v": 0.1111,
-        "local_kl_drift": 0.3378,
+        "local_kl_drift": 0.2605,
         "micro_anomaly_flag": 0
       },
       {
@@ -176871,7 +176871,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7364,
         "z_score_v": 0.7863,
-        "local_kl_drift": 0.0158,
+        "local_kl_drift": 0.0124,
         "micro_anomaly_flag": 0
       },
       {
@@ -176882,7 +176882,7 @@
         "account_category": "Unknown",
         "z_score_X": 4.3538,
         "z_score_v": 5.0117,
-        "local_kl_drift": 0.0234,
+        "local_kl_drift": 0.0175,
         "micro_anomaly_flag": 1
       },
       {
@@ -176893,7 +176893,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0961,
         "z_score_v": 1.1089,
-        "local_kl_drift": 0.0894,
+        "local_kl_drift": 0.0451,
         "micro_anomaly_flag": 0
       },
       {
@@ -176915,7 +176915,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.3831,
         "z_score_v": 1.3837,
-        "local_kl_drift": 0.4055,
+        "local_kl_drift": 0.0337,
         "micro_anomaly_flag": 0
       },
       {
@@ -176926,7 +176926,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.2226,
         "z_score_v": 1.2225,
-        "local_kl_drift": 0.2101,
+        "local_kl_drift": 0.1994,
         "micro_anomaly_flag": 0
       },
       {
@@ -176937,7 +176937,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.1708,
         "z_score_v": 0.1615,
-        "local_kl_drift": 0.0626,
+        "local_kl_drift": 0.0558,
         "micro_anomaly_flag": 0
       },
       {
@@ -176948,7 +176948,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.2672,
         "z_score_v": 1.2766,
-        "local_kl_drift": 0.009,
+        "local_kl_drift": 0.0089,
         "micro_anomaly_flag": 0
       },
       {
@@ -176959,7 +176959,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.2001,
         "z_score_v": 1.3684,
-        "local_kl_drift": 1.0033,
+        "local_kl_drift": 0.789,
         "micro_anomaly_flag": 0
       },
       {
@@ -176970,7 +176970,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1896,
         "z_score_v": 1.1894,
-        "local_kl_drift": 0.0322,
+        "local_kl_drift": 0.0317,
         "micro_anomaly_flag": 0
       },
       {
@@ -176981,7 +176981,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.2618,
         "z_score_v": 0.2827,
-        "local_kl_drift": 0.007,
+        "local_kl_drift": 0.0037,
         "micro_anomaly_flag": 0
       },
       {
@@ -176992,7 +176992,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.4458,
         "z_score_v": 0.5046,
-        "local_kl_drift": 0.3479,
+        "local_kl_drift": 0.2811,
         "micro_anomaly_flag": 0
       },
       {
@@ -177003,7 +177003,7 @@
         "account_category": "Unknown",
         "z_score_X": 3.4383,
         "z_score_v": 3.4989,
-        "local_kl_drift": 0.0005,
+        "local_kl_drift": 0.0003,
         "micro_anomaly_flag": 1
       },
       {
@@ -177014,7 +177014,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.342,
         "z_score_v": 1.3224,
-        "local_kl_drift": 0.0042,
+        "local_kl_drift": 0.0039,
         "micro_anomaly_flag": 0
       },
       {
@@ -177025,7 +177025,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6032,
         "z_score_v": 0.6119,
-        "local_kl_drift": 0.184,
+        "local_kl_drift": 0.085,
         "micro_anomaly_flag": 0
       },
       {
@@ -177047,7 +177047,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0713,
         "z_score_v": 0.0707,
-        "local_kl_drift": 0.0,
+        "local_kl_drift": 0.6667,
         "micro_anomaly_flag": 0
       },
       {
@@ -177058,7 +177058,7 @@
         "account_category": "Unknown",
         "z_score_X": 669.6057,
         "z_score_v": 669.5431,
-        "local_kl_drift": 0.0,
+        "local_kl_drift": 1.0,
         "micro_anomaly_flag": 1
       },
       {
@@ -177069,7 +177069,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3662,
         "z_score_v": 0.3709,
-        "local_kl_drift": 0.013,
+        "local_kl_drift": 0.0089,
         "micro_anomaly_flag": 0
       },
       {
@@ -177080,7 +177080,7 @@
         "account_category": "Unknown",
         "z_score_X": 45.1821,
         "z_score_v": 47.52,
-        "local_kl_drift": 4.6974,
+        "local_kl_drift": 1.5585,
         "micro_anomaly_flag": 1
       },
       {
@@ -177091,7 +177091,7 @@
         "account_category": "Unknown",
         "z_score_X": 6.8681,
         "z_score_v": 0.961,
-        "local_kl_drift": 0.0,
+        "local_kl_drift": 1.0,
         "micro_anomaly_flag": 1
       },
       {
@@ -177102,8 +177102,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.4046,
         "z_score_v": 0.3849,
-        "local_kl_drift": 3.4476,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.638,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 23,
@@ -177113,7 +177113,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.6448,
         "z_score_v": 3.046,
-        "local_kl_drift": 3.3176,
+        "local_kl_drift": 1.5899,
         "micro_anomaly_flag": 1
       },
       {
@@ -177124,8 +177124,8 @@
         "account_category": "Unknown",
         "z_score_X": 1.4855,
         "z_score_v": 1.539,
-        "local_kl_drift": 4.7293,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.8073,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 23,
@@ -177135,8 +177135,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.6412,
         "z_score_v": 0.6455,
-        "local_kl_drift": 5.5106,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.862,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 23,
@@ -177146,8 +177146,8 @@
         "account_category": "Unknown",
         "z_score_X": 0.4979,
         "z_score_v": 0.4575,
-        "local_kl_drift": 3.1378,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.5835,
+        "micro_anomaly_flag": 0
       }
     ]
   },

@@ -25237,7 +25237,7 @@
         "node_label": "00_ACC_Accounts_Payable",
         "account_category": "Liability",
         "local_internal_energy_u": 55952.86,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -25248,7 +25248,7 @@
         "node_label": "01_ACC_Accounts_Receivable",
         "account_category": "Asset",
         "local_internal_energy_u": 136333.87,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -25259,7 +25259,7 @@
         "node_label": "02_ACC_COGS",
         "account_category": "Expense",
         "local_internal_energy_u": 52213.24,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -25281,7 +25281,7 @@
         "node_label": "04_ACC_Inventory",
         "account_category": "Asset",
         "local_internal_energy_u": 503739.62,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -25292,7 +25292,7 @@
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 18973.66,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -25303,7 +25303,7 @@
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 6683.35,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -25314,7 +25314,7 @@
         "node_label": "07_ACC_Sales_Revenue",
         "account_category": "Revenue",
         "local_internal_energy_u": 136333.87,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -25325,7 +25325,7 @@
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 6024.7,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -25336,7 +25336,7 @@
         "node_label": "09_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -25347,7 +25347,7 @@
         "node_label": "00_ACC_Accounts_Payable",
         "account_category": "Liability",
         "local_internal_energy_u": 62876.97,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 3462.055,
         "local_grad_t": 27448.91
       },
@@ -25358,7 +25358,7 @@
         "node_label": "01_ACC_Accounts_Receivable",
         "account_category": "Asset",
         "local_internal_energy_u": 283301.78,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 73483.955,
         "local_grad_t": -39245.345
       },
@@ -25369,7 +25369,7 @@
         "node_label": "02_ACC_COGS",
         "account_category": "Expense",
         "local_internal_energy_u": 116993.03,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 32389.895,
         "local_grad_t": -21245.805
       },
@@ -25391,7 +25391,7 @@
         "node_label": "04_ACC_Inventory",
         "account_category": "Asset",
         "local_internal_energy_u": 481451.44,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 11144.09,
         "local_grad_t": 13563.77
       },
@@ -25402,7 +25402,7 @@
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 37218.87,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 9122.605,
         "local_grad_t": 14106.325
       },
@@ -25413,7 +25413,7 @@
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 12052.11,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 2684.38,
         "local_grad_t": 20544.55
       },
@@ -25424,7 +25424,7 @@
         "node_label": "07_ACC_Sales_Revenue",
         "account_category": "Revenue",
         "local_internal_energy_u": 305321.14,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 84493.635,
         "local_grad_t": -11009.68
       },
@@ -25435,7 +25435,7 @@
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 15320.45,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 4647.875,
         "local_grad_t": 18581.055
       },
@@ -25446,7 +25446,7 @@
         "node_label": "09_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -25457,7 +25457,7 @@
         "node_label": "00_ACC_Accounts_Payable",
         "account_category": "Liability",
         "local_internal_energy_u": 79039.56,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 9673.3789,
         "local_grad_t": 13580.2956
       },
@@ -25468,7 +25468,7 @@
         "node_label": "01_ACC_Accounts_Receivable",
         "account_category": "Asset",
         "local_internal_energy_u": 317771.11,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 78674.557,
         "local_grad_t": -26509.512
       },
@@ -25479,7 +25479,7 @@
         "node_label": "02_ACC_COGS",
         "account_category": "Expense",
         "local_internal_energy_u": 172080.01,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 48988.7052,
         "local_grad_t": -35720.8049
       },
@@ -25501,7 +25501,7 @@
         "node_label": "04_ACC_Inventory",
         "account_category": "Asset",
         "local_internal_energy_u": 472111.51,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 13267.9003,
         "local_grad_t": 32126.2835
       },
@@ -25512,7 +25512,7 @@
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 52000.91,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 13508.0044,
         "local_grad_t": 6151.1487
       },
@@ -25523,7 +25523,7 @@
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 17855.72,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 4562.2524,
         "local_grad_t": 15096.9006
       },
@@ -25534,7 +25534,7 @@
         "node_label": "07_ACC_Sales_Revenue",
         "account_category": "Revenue",
         "local_internal_energy_u": 405779.91,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 111180.4491,
         "local_grad_t": -32505.8921
       },
@@ -25545,7 +25545,7 @@
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 18884.49,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 5421.0244,
         "local_grad_t": 14238.1287
       },
@@ -25556,7 +25556,7 @@
         "node_label": "09_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -25567,7 +25567,7 @@
         "node_label": "00_ACC_Accounts_Payable",
         "account_category": "Liability",
         "local_internal_energy_u": 94326.88,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 14869.2904,
         "local_grad_t": 4706.2751
       },
@@ -25578,7 +25578,7 @@
         "node_label": "01_ACC_Accounts_Receivable",
         "account_category": "Asset",
         "local_internal_energy_u": 260609.44,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 68435.1835,
         "local_grad_t": 5662.5583
       },
@@ -25589,7 +25589,7 @@
         "node_label": "02_ACC_COGS",
         "account_category": "Expense",
         "local_internal_energy_u": 199081.43,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 56256.6032,
         "local_grad_t": -42142.549
       },
@@ -25611,7 +25611,7 @@
         "node_label": "04_ACC_Inventory",
         "account_category": "Asset",
         "local_internal_energy_u": 504695.97,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 14114.0542,
         "local_grad_t": 42897.7851
       },
@@ -25622,7 +25622,7 @@
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 70834.92,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 19066.5687,
         "local_grad_t": 1264.2329
       },
@@ -25633,7 +25633,7 @@
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 23161.03,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 6176.5468,
         "local_grad_t": 14154.2548
       },
@@ -25644,7 +25644,7 @@
         "node_label": "07_ACC_Sales_Revenue",
         "account_category": "Revenue",
         "local_internal_energy_u": 456260.39,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 122202.1237,
         "local_grad_t": -53766.9402
       },
@@ -25655,7 +25655,7 @@
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 25110.6,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 6907.2906,
         "local_grad_t": 13423.511
       },
@@ -25666,7 +25666,7 @@
         "node_label": "09_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -25677,7 +25677,7 @@
         "node_label": "00_ACC_Accounts_Payable",
         "account_category": "Liability",
         "local_internal_energy_u": 67397.55,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 12158.3026,
         "local_grad_t": 19211.7636
       },
@@ -25688,7 +25688,7 @@
         "node_label": "01_ACC_Accounts_Receivable",
         "account_category": "Asset",
         "local_internal_energy_u": 240214.28,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 28785.9456,
         "local_grad_t": 52100.7183
       },
@@ -25699,7 +25699,7 @@
         "node_label": "02_ACC_COGS",
         "account_category": "Expense",
         "local_internal_energy_u": 224858.6,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 39989.9837,
         "local_grad_t": -18643.28
       },
@@ -25721,7 +25721,7 @@
         "node_label": "04_ACC_Inventory",
         "account_category": "Asset",
         "local_internal_energy_u": 527068.1,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 21346.7037,
         "local_grad_t": 9454.8789
       },
@@ -25732,7 +25732,7 @@
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 86574.97,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 18678.8765,
         "local_grad_t": 3502.7886
       },
@@ -25743,7 +25743,7 @@
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 27833.76,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 5893.2826,
         "local_grad_t": 16288.3825
       },
@@ -25754,7 +25754,7 @@
         "node_label": "07_ACC_Sales_Revenue",
         "account_category": "Revenue",
         "local_internal_energy_u": 547491.47,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 87490.9443,
         "local_grad_t": -58704.9988
       },
@@ -25765,7 +25765,7 @@
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 33188.76,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 6784.4453,
         "local_grad_t": 15397.2198
       },
@@ -25776,7 +25776,7 @@
         "node_label": "09_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -25787,7 +25787,7 @@
         "node_label": "00_ACC_Accounts_Payable",
         "account_category": "Liability",
         "local_internal_energy_u": 98913.22,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 12509.1509,
         "local_grad_t": 21224.6974
       },
@@ -25798,7 +25798,7 @@
         "node_label": "01_ACC_Accounts_Receivable",
         "account_category": "Asset",
         "local_internal_energy_u": 237650.75,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 32260.1013,
         "local_grad_t": 29507.9277
       },
@@ -25809,7 +25809,7 @@
         "node_label": "02_ACC_COGS",
         "account_category": "Expense",
         "local_internal_energy_u": 255259.84,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 30800.0122,
         "local_grad_t": -1952.1722
       },
@@ -25831,7 +25831,7 @@
         "node_label": "04_ACC_Inventory",
         "account_category": "Asset",
         "local_internal_energy_u": 550299.29,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 28847.84,
         "local_grad_t": -14386.5169
       },
@@ -25842,7 +25842,7 @@
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 104641.65,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 19426.4352,
         "local_grad_t": -2031.276
       },
@@ -25853,7 +25853,7 @@
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 33057.88,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 5622.9815,
         "local_grad_t": 11772.1776
       },
@@ -25864,7 +25864,7 @@
         "node_label": "07_ACC_Sales_Revenue",
         "account_category": "Revenue",
         "local_internal_energy_u": 602371.14,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 76632.9711,
         "local_grad_t": -44372.8698
       },
@@ -25875,7 +25875,7 @@
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 42793.76,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 8962.5492,
         "local_grad_t": 8432.6099
       },
@@ -25886,7 +25886,7 @@
         "node_label": "09_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -25897,7 +25897,7 @@
         "node_label": "00_ACC_Accounts_Payable",
         "account_category": "Liability",
         "local_internal_energy_u": 115572.91,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 17301.1292,
         "local_grad_t": -1464.1144
       },
@@ -25908,7 +25908,7 @@
         "node_label": "01_ACC_Accounts_Receivable",
         "account_category": "Asset",
         "local_internal_energy_u": 301326.86,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 25491.3446,
         "local_grad_t": 56350.7675
       },
@@ -25919,7 +25919,7 @@
         "node_label": "02_ACC_COGS",
         "account_category": "Expense",
         "local_internal_energy_u": 318217.55,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 44453.4121,
         "local_grad_t": -25327.7232
       },
@@ -25941,7 +25941,7 @@
         "node_label": "04_ACC_Inventory",
         "account_category": "Asset",
         "local_internal_energy_u": 551109.13,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 19125.6888,
         "local_grad_t": 23503.1636
       },
@@ -25952,7 +25952,7 @@
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 125364.37,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 20347.848,
         "local_grad_t": -6335.3927
       },
@@ -25963,7 +25963,7 @@
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 39716.47,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 6157.778,
         "local_grad_t": 7854.6772
       },
@@ -25974,7 +25974,7 @@
         "node_label": "07_ACC_Sales_Revenue",
         "account_category": "Revenue",
         "local_internal_energy_u": 714039.1,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 93321.0015,
         "local_grad_t": -67829.6569
       },
@@ -25985,7 +25985,7 @@
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 51696.44,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 9996.267,
         "local_grad_t": 4016.1883
       },
@@ -25996,7 +25996,7 @@
         "node_label": "09_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -26007,7 +26007,7 @@
         "node_label": "00_ACC_Accounts_Payable",
         "account_category": "Liability",
         "local_internal_energy_u": 104521.79,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 17894.5532,
         "local_grad_t": 295.1106
       },
@@ -26018,7 +26018,7 @@
         "node_label": "01_ACC_Accounts_Receivable",
         "account_category": "Asset",
         "local_internal_energy_u": 358380.51,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 49743.1012,
         "local_grad_t": 37398.6098
       },
@@ -26029,7 +26029,7 @@
         "node_label": "02_ACC_COGS",
         "account_category": "Expense",
         "local_internal_energy_u": 386525.26,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 62066.7307,
         "local_grad_t": -51386.2244
       },
@@ -26051,7 +26051,7 @@
         "node_label": "04_ACC_Inventory",
         "account_category": "Asset",
         "local_internal_energy_u": 532272.71,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 10680.5063,
         "local_grad_t": 58600.2713
       },
@@ -26062,7 +26062,7 @@
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 144241.16,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 21665.4931,
         "local_grad_t": 3738.2176
       },
@@ -26073,7 +26073,7 @@
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 44660.17,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 6398.2831,
         "local_grad_t": 19005.4276
       },
@@ -26084,7 +26084,7 @@
         "node_label": "07_ACC_Sales_Revenue",
         "account_category": "Revenue",
         "local_internal_energy_u": 838266.32,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 111481.1016,
         "local_grad_t": -61738.0003
       },
@@ -26095,7 +26095,7 @@
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 60718.66,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 10230.6092,
         "local_grad_t": 15173.1015
       },
@@ -26106,7 +26106,7 @@
         "node_label": "09_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -26117,7 +26117,7 @@
         "node_label": "00_ACC_Accounts_Payable",
         "account_category": "Liability",
         "local_internal_energy_u": 99981.84,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 6595.2783,
         "local_grad_t": 19489.3147
       },
@@ -26128,7 +26128,7 @@
         "node_label": "01_ACC_Accounts_Receivable",
         "account_category": "Asset",
         "local_internal_energy_u": 354002.98,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 48873.0618,
         "local_grad_t": 52271.61
       },
@@ -26139,7 +26139,7 @@
         "node_label": "02_ACC_COGS",
         "account_category": "Expense",
         "local_internal_energy_u": 439741.83,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 69594.3539,
         "local_grad_t": -61866.0252
       },
@@ -26161,7 +26161,7 @@
         "node_label": "04_ACC_Inventory",
         "account_category": "Asset",
         "local_internal_energy_u": 540543.71,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 7728.3287,
         "local_grad_t": 60732.9749
       },
@@ -26172,7 +26172,7 @@
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 165411.68,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 22498.4166,
         "local_grad_t": 2453.1261
       },
@@ -26183,7 +26183,7 @@
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 48016.41,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 5630.8364,
         "local_grad_t": 19320.7063
       },
@@ -26194,7 +26194,7 @@
         "node_label": "07_ACC_Sales_Revenue",
         "account_category": "Revenue",
         "local_internal_energy_u": 933374.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 125066.191,
         "local_grad_t": -76193.1291
       },
@@ -26205,7 +26205,7 @@
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 68183.66,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 9533.3686,
         "local_grad_t": 15418.1741
       },
@@ -26216,7 +26216,7 @@
         "node_label": "09_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -26227,7 +26227,7 @@
         "node_label": "00_ACC_Accounts_Payable",
         "account_category": "Liability",
         "local_internal_energy_u": 94893.99,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 7632.2439,
         "local_grad_t": 7962.2437
       },
@@ -26238,7 +26238,7 @@
         "node_label": "01_ACC_Accounts_Receivable",
         "account_category": "Asset",
         "local_internal_energy_u": 298856.56,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 28106.256,
         "local_grad_t": 61367.2828
       },
@@ -26249,7 +26249,7 @@
         "node_label": "02_ACC_COGS",
         "account_category": "Expense",
         "local_internal_energy_u": 469628.53,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 57549.2997,
         "local_grad_t": -47442.6382
       },
@@ -26271,7 +26271,7 @@
         "node_label": "04_ACC_Inventory",
         "account_category": "Asset",
         "local_internal_energy_u": 558831.67,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 10106.6615,
         "local_grad_t": 44968.2205
       },
@@ -26282,7 +26282,7 @@
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 183925.46,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 22016.0682,
         "local_grad_t": -8895.9982
       },
@@ -26293,7 +26293,7 @@
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 54445.19,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 5353.7635,
         "local_grad_t": 7766.3064
       },
@@ -26304,7 +26304,7 @@
         "node_label": "07_ACC_Sales_Revenue",
         "account_category": "Revenue",
         "local_internal_energy_u": 989606.85,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 104459.7248,
         "local_grad_t": -76353.4688
       },
@@ -26315,7 +26315,7 @@
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 75151.9,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 8717.7566,
         "local_grad_t": 4402.3133
       },
@@ -26326,7 +26326,7 @@
         "node_label": "09_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -26337,7 +26337,7 @@
         "node_label": "00_ACC_Accounts_Payable",
         "account_category": "Liability",
         "local_internal_energy_u": 95492.66,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 3882.8809,
         "local_grad_t": 29158.1475
       },
@@ -26348,7 +26348,7 @@
         "node_label": "01_ACC_Accounts_Receivable",
         "account_category": "Asset",
         "local_internal_energy_u": 253852.45,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 43000.7303,
         "local_grad_t": 6231.2537
       },
@@ -26359,7 +26359,7 @@
         "node_label": "02_ACC_COGS",
         "account_category": "Expense",
         "local_internal_energy_u": 495656.32,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 40577.7309,
         "local_grad_t": -22176.8394
       },
@@ -26381,7 +26381,7 @@
         "node_label": "04_ACC_Inventory",
         "account_category": "Asset",
         "local_internal_energy_u": 580121.88,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 18400.8915,
         "local_grad_t": 7658.8288
       },
@@ -26392,7 +26392,7 @@
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 201617.96,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 21333.3821,
         "local_grad_t": -2810.3643
       },
@@ -26403,7 +26403,7 @@
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 60424.07,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 6054.6354,
         "local_grad_t": 12468.3824
       },
@@ -26414,7 +26414,7 @@
         "node_label": "07_ACC_Sales_Revenue",
         "account_category": "Revenue",
         "local_internal_energy_u": 1036050.92,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 73709.6965,
         "local_grad_t": -30708.9662
       },
@@ -26425,7 +26425,7 @@
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 79768.45,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 7206.8344,
         "local_grad_t": 11316.1834
       },
@@ -26436,7 +26436,7 @@
         "node_label": "09_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -26447,7 +26447,7 @@
         "node_label": "00_ACC_Accounts_Payable",
         "account_category": "Liability",
         "local_internal_energy_u": 119400.24,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 9986.2414,
         "local_grad_t": 21005.3537
       },
@@ -26458,7 +26458,7 @@
         "node_label": "01_ACC_Accounts_Receivable",
         "account_category": "Asset",
         "local_internal_energy_u": 255033.24,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 40937.0808,
         "local_grad_t": -3663.6198
       },
@@ -26469,7 +26469,7 @@
         "node_label": "02_ACC_COGS",
         "account_category": "Expense",
         "local_internal_energy_u": 527935.32,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 32516.1481,
         "local_grad_t": -10581.9925
       },
@@ -26491,7 +26491,7 @@
         "node_label": "04_ACC_Inventory",
         "account_category": "Asset",
         "local_internal_energy_u": 598814.65,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 21934.1555,
         "local_grad_t": -1365.9215
       },
@@ -26502,7 +26502,7 @@
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 218556.39,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 19807.2765,
         "local_grad_t": -763.5954
       },
@@ -26513,7 +26513,7 @@
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 61977.36,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 5506.1367,
         "local_grad_t": 13537.5444
       },
@@ -26524,7 +26524,7 @@
         "node_label": "07_ACC_Sales_Revenue",
         "account_category": "Revenue",
         "local_internal_energy_u": 1094143.89,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 59166.8606,
         "local_grad_t": -18229.7799
       },
@@ -26535,7 +26535,7 @@
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
         "local_internal_energy_u": 84353.66,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 5975.1658,
         "local_grad_t": 13068.5153
       },
@@ -26546,7 +26546,7 @@
         "node_label": "09_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       }
@@ -60772,7 +60772,7 @@
         "t_idx": 1,
         "time_label": "2020-02",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": -0.3353,
+        "kl_divergence_drift": 0.3246,
         "z_score_X": 0.0,
         "z_score_v": 0.0,
         "anomaly_flag": 0
@@ -60781,7 +60781,7 @@
         "t_idx": 2,
         "time_label": "2020-03",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 1.2212,
+        "kl_divergence_drift": 0.6387,
         "z_score_X": 0.7071,
         "z_score_v": 0.8836,
         "anomaly_flag": 0
@@ -60790,7 +60790,7 @@
         "t_idx": 3,
         "time_label": "2020-04",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.6726,
+        "kl_divergence_drift": 0.3916,
         "z_score_X": 0.5774,
         "z_score_v": 2.5735,
         "anomaly_flag": 0
@@ -60799,7 +60799,7 @@
         "t_idx": 4,
         "time_label": "2020-05",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.1782,
+        "kl_divergence_drift": 0.0618,
         "z_score_X": 1.3573,
         "z_score_v": 1.8471,
         "anomaly_flag": 0
@@ -60808,7 +60808,7 @@
         "t_idx": 5,
         "time_label": "2020-06",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.3066,
+        "kl_divergence_drift": 0.1518,
         "z_score_X": 1.4328,
         "z_score_v": 0.912,
         "anomaly_flag": 0
@@ -60817,7 +60817,7 @@
         "t_idx": 6,
         "time_label": "2020-07",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.1545,
+        "kl_divergence_drift": 0.1039,
         "z_score_X": 1.9087,
         "z_score_v": 3.4123,
         "anomaly_flag": 1
@@ -60826,7 +60826,7 @@
         "t_idx": 7,
         "time_label": "2020-08",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.1851,
+        "kl_divergence_drift": 0.1141,
         "z_score_X": 1.0937,
         "z_score_v": 1.5023,
         "anomaly_flag": 0
@@ -60835,7 +60835,7 @@
         "t_idx": 8,
         "time_label": "2020-09",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0657,
+        "kl_divergence_drift": 0.024,
         "z_score_X": 1.9702,
         "z_score_v": 2.1489,
         "anomaly_flag": 0
@@ -60844,7 +60844,7 @@
         "t_idx": 9,
         "time_label": "2020-10",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0057,
+        "kl_divergence_drift": 0.0019,
         "z_score_X": 1.9167,
         "z_score_v": 2.7396,
         "anomaly_flag": 0
@@ -60853,7 +60853,7 @@
         "t_idx": 10,
         "time_label": "2020-11",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0153,
+        "kl_divergence_drift": 0.0052,
         "z_score_X": 0.9786,
         "z_score_v": 1.6605,
         "anomaly_flag": 0
@@ -60862,7 +60862,7 @@
         "t_idx": 11,
         "time_label": "2020-12",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0664,
+        "kl_divergence_drift": 0.0229,
         "z_score_X": 1.1267,
         "z_score_v": 3.8721,
         "anomaly_flag": 1
@@ -61020,8 +61020,8 @@
         "account_category": "Asset",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 5.4616,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 0.3246,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 1,
@@ -61130,7 +61130,7 @@
         "account_category": "Asset",
         "z_score_X": 6.1573,
         "z_score_v": 6.947,
-        "local_kl_drift": 0.8465,
+        "local_kl_drift": 0.6387,
         "micro_anomaly_flag": 1
       },
       {
@@ -61240,7 +61240,7 @@
         "account_category": "Asset",
         "z_score_X": 2.2297,
         "z_score_v": 2.2033,
-        "local_kl_drift": 0.4662,
+        "local_kl_drift": 0.3916,
         "micro_anomaly_flag": 0
       },
       {
@@ -61350,7 +61350,7 @@
         "account_category": "Asset",
         "z_score_X": 0.2068,
         "z_score_v": 0.2516,
-        "local_kl_drift": 0.1235,
+        "local_kl_drift": 0.0618,
         "micro_anomaly_flag": 0
       },
       {
@@ -61460,7 +61460,7 @@
         "account_category": "Asset",
         "z_score_X": 1.4053,
         "z_score_v": 1.4074,
-        "local_kl_drift": 0.2125,
+        "local_kl_drift": 0.1518,
         "micro_anomaly_flag": 0
       },
       {
@@ -61570,7 +61570,7 @@
         "account_category": "Asset",
         "z_score_X": 3.4552,
         "z_score_v": 3.7583,
-        "local_kl_drift": 0.1071,
+        "local_kl_drift": 0.1039,
         "micro_anomaly_flag": 1
       },
       {
@@ -61680,7 +61680,7 @@
         "account_category": "Asset",
         "z_score_X": 1.0361,
         "z_score_v": 0.927,
-        "local_kl_drift": 0.1283,
+        "local_kl_drift": 0.1141,
         "micro_anomaly_flag": 0
       },
       {
@@ -61790,7 +61790,7 @@
         "account_category": "Asset",
         "z_score_X": 1.3457,
         "z_score_v": 1.3153,
-        "local_kl_drift": 0.0455,
+        "local_kl_drift": 0.024,
         "micro_anomaly_flag": 0
       },
       {
@@ -61900,7 +61900,7 @@
         "account_category": "Asset",
         "z_score_X": 3.1519,
         "z_score_v": 2.9521,
-        "local_kl_drift": 0.004,
+        "local_kl_drift": 0.0019,
         "micro_anomaly_flag": 1
       },
       {
@@ -62010,7 +62010,7 @@
         "account_category": "Asset",
         "z_score_X": 0.6966,
         "z_score_v": 0.7451,
-        "local_kl_drift": 0.0106,
+        "local_kl_drift": 0.0052,
         "micro_anomaly_flag": 0
       },
       {
@@ -62120,7 +62120,7 @@
         "account_category": "Asset",
         "z_score_X": 0.8135,
         "z_score_v": 0.7797,
-        "local_kl_drift": 0.0461,
+        "local_kl_drift": 0.0229,
         "micro_anomaly_flag": 0
       },
       {
@@ -62244,7 +62244,7 @@
         "node_idx": 5,
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
-        "optimal_input_u": 12870.9886,
+        "optimal_input_u": 12870.3637,
         "state_error_x": 18973.66
       },
       {
@@ -62253,7 +62253,7 @@
         "node_idx": 6,
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
-        "optimal_input_u": 4533.7231,
+        "optimal_input_u": 4533.503,
         "state_error_x": 6683.35
       },
       {
@@ -62271,7 +62271,7 @@
         "node_idx": 8,
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
-        "optimal_input_u": 4086.9208,
+        "optimal_input_u": 4086.7223,
         "state_error_x": 6024.7
       },
       {
@@ -62307,7 +62307,7 @@
         "node_idx": 2,
         "node_label": "02_ACC_COGS",
         "account_category": "Expense",
-        "optimal_input_u": 3008.7009,
+        "optimal_input_u": 3008.7019,
         "state_error_x": 64779.79
       },
       {
@@ -62334,7 +62334,7 @@
         "node_idx": 5,
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
-        "optimal_input_u": 11892.0882,
+        "optimal_input_u": 11891.278,
         "state_error_x": 18245.21
       },
       {
@@ -62343,7 +62343,7 @@
         "node_idx": 6,
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
-        "optimal_input_u": 3499.3167,
+        "optimal_input_u": 3499.0783,
         "state_error_x": 5368.76
       },
       {
@@ -62361,7 +62361,7 @@
         "node_idx": 8,
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
-        "optimal_input_u": 6058.8987,
+        "optimal_input_u": 6058.4859,
         "state_error_x": 9295.75
       },
       {
@@ -62424,7 +62424,7 @@
         "node_idx": 5,
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
-        "optimal_input_u": 3085.942,
+        "optimal_input_u": 3085.7788,
         "state_error_x": 14782.04
       },
       {
@@ -62433,7 +62433,7 @@
         "node_idx": 6,
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
-        "optimal_input_u": 1211.5786,
+        "optimal_input_u": 1211.5146,
         "state_error_x": 5803.61
       },
       {
@@ -62451,7 +62451,7 @@
         "node_idx": 8,
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
-        "optimal_input_u": 744.0394,
+        "optimal_input_u": 744.0001,
         "state_error_x": 3564.04
       },
       {
@@ -62514,7 +62514,7 @@
         "node_idx": 5,
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -11025.6497,
+        "optimal_input_u": -11025.0235,
         "state_error_x": 18834.01
       },
       {
@@ -62523,7 +62523,7 @@
         "node_idx": 6,
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -3105.7905,
+        "optimal_input_u": -3105.6141,
         "state_error_x": 5305.31
       },
       {
@@ -62541,7 +62541,7 @@
         "node_idx": 8,
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -3644.8376,
+        "optimal_input_u": -3644.6306,
         "state_error_x": 6226.11
       },
       {
@@ -62577,7 +62577,7 @@
         "node_idx": 2,
         "node_label": "02_ACC_COGS",
         "account_category": "Expense",
-        "optimal_input_u": -1598.7232,
+        "optimal_input_u": -1598.7196,
         "state_error_x": 25777.17
       },
       {
@@ -62604,7 +62604,7 @@
         "node_idx": 5,
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -4090.4575,
+        "optimal_input_u": -4090.1496,
         "state_error_x": 15740.05
       },
       {
@@ -62613,7 +62613,7 @@
         "node_idx": 6,
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -1214.3293,
+        "optimal_input_u": -1214.2379,
         "state_error_x": 4672.73
       },
       {
@@ -62631,7 +62631,7 @@
         "node_idx": 8,
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -2099.318,
+        "optimal_input_u": -2099.16,
         "state_error_x": 8078.16
       },
       {
@@ -62694,7 +62694,7 @@
         "node_idx": 5,
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -5967.1397,
+        "optimal_input_u": -5966.8888,
         "state_error_x": 18066.68
       },
       {
@@ -62703,7 +62703,7 @@
         "node_idx": 6,
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -1725.4445,
+        "optimal_input_u": -1725.372,
         "state_error_x": 5224.12
       },
       {
@@ -62721,7 +62721,7 @@
         "node_idx": 8,
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -3172.3802,
+        "optimal_input_u": -3172.2467,
         "state_error_x": 9605.0
       },
       {
@@ -62784,7 +62784,7 @@
         "node_idx": 5,
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -254.7837,
+        "optimal_input_u": -254.7695,
         "state_error_x": 20722.72
       },
       {
@@ -62793,7 +62793,7 @@
         "node_idx": 6,
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -81.8667,
+        "optimal_input_u": -81.8621,
         "state_error_x": 6658.59
       },
       {
@@ -62811,7 +62811,7 @@
         "node_idx": 8,
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -109.4575,
+        "optimal_input_u": -109.4514,
         "state_error_x": 8902.68
       },
       {
@@ -62874,7 +62874,7 @@
         "node_idx": 5,
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
-        "optimal_input_u": 5882.3207,
+        "optimal_input_u": 5881.9497,
         "state_error_x": 18876.79
       },
       {
@@ -62883,7 +62883,7 @@
         "node_idx": 6,
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
-        "optimal_input_u": 1540.5389,
+        "optimal_input_u": 1540.4417,
         "state_error_x": 4943.7
       },
       {
@@ -62901,7 +62901,7 @@
         "node_idx": 8,
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
-        "optimal_input_u": 2811.4733,
+        "optimal_input_u": 2811.296,
         "state_error_x": 9022.22
       },
       {
@@ -62964,7 +62964,7 @@
         "node_idx": 5,
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -2863.1531,
+        "optimal_input_u": -2862.973,
         "state_error_x": 21170.52
       },
       {
@@ -62973,7 +62973,7 @@
         "node_idx": 6,
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -453.9061,
+        "optimal_input_u": -453.8776,
         "state_error_x": 3356.24
       },
       {
@@ -62991,7 +62991,7 @@
         "node_idx": 8,
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -1009.5849,
+        "optimal_input_u": -1009.5214,
         "state_error_x": 7465.0
       },
       {
@@ -63054,7 +63054,7 @@
         "node_idx": 5,
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -5831.1545,
+        "optimal_input_u": -5830.798,
         "state_error_x": 18513.78
       },
       {
@@ -63063,7 +63063,7 @@
         "node_idx": 6,
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -2024.8274,
+        "optimal_input_u": -2024.7036,
         "state_error_x": 6428.78
       },
       {
@@ -63081,7 +63081,7 @@
         "node_idx": 8,
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -2194.7373,
+        "optimal_input_u": -2194.6031,
         "state_error_x": 6968.24
       },
       {
@@ -63144,7 +63144,7 @@
         "node_idx": 5,
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -7233.1356,
+        "optimal_input_u": -7232.7059,
         "state_error_x": 17692.5
       },
       {
@@ -63153,7 +63153,7 @@
         "node_idx": 6,
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -2444.3154,
+        "optimal_input_u": -2444.1702,
         "state_error_x": 5978.88
       },
       {
@@ -63171,7 +63171,7 @@
         "node_idx": 8,
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -1887.3609,
+        "optimal_input_u": -1887.2487,
         "state_error_x": 4616.55
       },
       {
@@ -63234,7 +63234,7 @@
         "node_idx": 5,
         "node_label": "05_ACC_Payroll_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -6954.4403,
+        "optimal_input_u": -6954.1186,
         "state_error_x": 16938.43
       },
       {
@@ -63243,7 +63243,7 @@
         "node_idx": 6,
         "node_label": "06_ACC_Rent_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -637.7369,
+        "optimal_input_u": -637.7074,
         "state_error_x": 1553.29
       },
       {
@@ -63261,7 +63261,7 @@
         "node_idx": 8,
         "node_label": "08_ACC_Travel_Exp",
         "account_category": "Expense",
-        "optimal_input_u": -1882.5575,
+        "optimal_input_u": -1882.4705,
         "state_error_x": 4585.21
       },
       {

@@ -1,6 +1,0 @@
-node_idx,node_label,account_category,dominant_frequency,spectral_power
-3,03_Temporal_Lobe,Unknown,0.0167,2189763494.5576
-4,04_Visual_Cortex,Unknown,0.0167,142253953.4184
-1,01_Parietal_Lobe,Unknown,0.0167,142244526.4108
-0,00_Motor_Cortex,Unknown,0.0167,142097827.4835
-2,02_Prefrontal_Cortex,Unknown,0.0167,141441220.8801

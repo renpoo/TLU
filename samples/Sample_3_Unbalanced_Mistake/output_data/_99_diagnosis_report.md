@@ -1,7 +1,7 @@
 # TLU Meta-Diagnosis Report (Descriptive Statistics V3)
 
 **Target Environment:** `samples/Sample_3_Unbalanced_Mistake`
-**Date Analyzed:** 2026-08-11 06:30:02
+**Date Analyzed:** 2026-08-11 16:56:08
 
 ## 1. Final Diagnosis
 
@@ -24,7 +24,7 @@ The table below details the descriptive statistics computed individually for all
 | Dynamics: velocity_v | -0.0000 | 4413.4150 | 0.0000 (21/132, 15.9%) | -124227.2200 | 95968.3000 | 220195.5200 | 22675.9200 | 36387.1053 | -0.9068 | 2.3474 | 3 |
 | Dynamics: viscosity_C | 28144.9790 | 14184.9305 | 100000.0000 (12/132, 9.1%) | 0.0000 | 100000.0000 | 100000.0000 | 41720.1769 | 30419.1315 | 1.1812 | 0.3545 | 0 |
 | Forensics: conservation_residual | 117.7400 | 0.0000 | 0.0000 (9/12, 75.0%) | 0.0000 | 906.2900 | 906.2900 | 41.6450 | 269.4042 | 2.3636 | 4.3580 | 0 |
-| Forensics: kl_divergence_drift | 0.2259 | 0.0242 | -0.3180 (1/12, 8.3%) | -0.3178 | 1.8723 | 2.1901 | 0.1211 | 0.5704 | 2.2362 | 4.0422 | 0 |
+| Forensics: kl_divergence_drift | 0.1581 | 0.0207 | 0.0000 (1/12, 8.3%) | 0.0000 | 1.2957 | 1.2957 | 0.0582 | 0.3711 | 2.7005 | 5.7875 | 1 |
 | Stability: spectral_radius | 0.0000 | 0.0000 | 0.0000 (12/12, 100.0%) | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | nan | nan | 0 |
 | Stiffness: partial_corr | 0.1095 | 0.0000 | 0.0000 (514/1452, 35.4%) | -1.0000 | 1.0000 | 2.0000 | 0.8404 | 0.6309 | -0.1162 | -0.8881 | 0 |
 | Stiffness: stiffness_k | -0.0000 | 0.0000 | 0.0000 (1452/1452, 100.0%) | -0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.3132 | 34.3378 | 38 |

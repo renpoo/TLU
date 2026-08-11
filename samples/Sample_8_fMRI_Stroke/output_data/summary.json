@@ -100935,7 +100935,7 @@
         "t_idx": 1,
         "time_label": "2024-01-01 10:00:10",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0018,
+        "kl_divergence_drift": 0.0006,
         "z_score_X": 0.0,
         "z_score_v": 0.0,
         "anomaly_flag": 0
@@ -100944,7 +100944,7 @@
         "t_idx": 2,
         "time_label": "2024-01-01 10:00:20",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0011,
+        "kl_divergence_drift": 0.0004,
         "z_score_X": 0.0,
         "z_score_v": 0.177,
         "anomaly_flag": 0
@@ -100953,7 +100953,7 @@
         "t_idx": 3,
         "time_label": "2024-01-01 10:00:30",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0011,
+        "kl_divergence_drift": 0.0004,
         "z_score_X": 0.0,
         "z_score_v": 1.0378,
         "anomaly_flag": 0
@@ -100962,7 +100962,7 @@
         "t_idx": 4,
         "time_label": "2024-01-01 10:00:40",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0011,
+        "kl_divergence_drift": 0.0004,
         "z_score_X": 0.0,
         "z_score_v": 1.7893,
         "anomaly_flag": 0
@@ -100971,7 +100971,7 @@
         "t_idx": 5,
         "time_label": "2024-01-01 10:00:50",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0012,
+        "kl_divergence_drift": 0.0004,
         "z_score_X": 0.0,
         "z_score_v": 24.0377,
         "anomaly_flag": 1
@@ -100980,7 +100980,7 @@
         "t_idx": 6,
         "time_label": "2024-01-01 10:01:00",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0013,
+        "kl_divergence_drift": 0.0005,
         "z_score_X": 0.0,
         "z_score_v": 11.7703,
         "anomaly_flag": 1
@@ -100989,7 +100989,7 @@
         "t_idx": 7,
         "time_label": "2024-01-01 10:01:10",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0009,
+        "kl_divergence_drift": 0.0003,
         "z_score_X": 0.0,
         "z_score_v": 2.19,
         "anomaly_flag": 0
@@ -100998,7 +100998,7 @@
         "t_idx": 8,
         "time_label": "2024-01-01 10:01:20",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0012,
+        "kl_divergence_drift": 0.0004,
         "z_score_X": 0.0,
         "z_score_v": 4.4686,
         "anomaly_flag": 1
@@ -101007,7 +101007,7 @@
         "t_idx": 9,
         "time_label": "2024-01-01 10:01:30",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0009,
+        "kl_divergence_drift": 0.0003,
         "z_score_X": 0.0,
         "z_score_v": 1.1947,
         "anomaly_flag": 0
@@ -101016,7 +101016,7 @@
         "t_idx": 10,
         "time_label": "2024-01-01 10:01:40",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0013,
+        "kl_divergence_drift": 0.0005,
         "z_score_X": 0.0,
         "z_score_v": 1.3293,
         "anomaly_flag": 0
@@ -101025,7 +101025,7 @@
         "t_idx": 11,
         "time_label": "2024-01-01 10:01:50",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0011,
+        "kl_divergence_drift": 0.0004,
         "z_score_X": 0.0001,
         "z_score_v": 2.5626,
         "anomaly_flag": 0
@@ -101034,7 +101034,7 @@
         "t_idx": 12,
         "time_label": "2024-01-01 10:02:00",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0012,
+        "kl_divergence_drift": 0.0004,
         "z_score_X": 0.0001,
         "z_score_v": 2.4538,
         "anomaly_flag": 0
@@ -101043,7 +101043,7 @@
         "t_idx": 13,
         "time_label": "2024-01-01 10:02:10",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.002,
+        "kl_divergence_drift": 0.0007,
         "z_score_X": 0.0,
         "z_score_v": 2.8189,
         "anomaly_flag": 0
@@ -101052,7 +101052,7 @@
         "t_idx": 14,
         "time_label": "2024-01-01 10:02:20",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0024,
+        "kl_divergence_drift": 0.0008,
         "z_score_X": 0.0,
         "z_score_v": 3.6828,
         "anomaly_flag": 1
@@ -101061,7 +101061,7 @@
         "t_idx": 15,
         "time_label": "2024-01-01 10:02:30",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0017,
+        "kl_divergence_drift": 0.0006,
         "z_score_X": 0.0,
         "z_score_v": 1.3907,
         "anomaly_flag": 0
@@ -101070,7 +101070,7 @@
         "t_idx": 16,
         "time_label": "2024-01-01 10:02:40",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0029,
+        "kl_divergence_drift": 0.001,
         "z_score_X": 0.0,
         "z_score_v": 2.2769,
         "anomaly_flag": 0
@@ -101079,7 +101079,7 @@
         "t_idx": 17,
         "time_label": "2024-01-01 10:02:50",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0076,
+        "kl_divergence_drift": 0.0026,
         "z_score_X": 0.0,
         "z_score_v": 1.4007,
         "anomaly_flag": 0
@@ -101088,7 +101088,7 @@
         "t_idx": 18,
         "time_label": "2024-01-01 10:03:00",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0113,
+        "kl_divergence_drift": 0.0039,
         "z_score_X": 0.0001,
         "z_score_v": 3.7943,
         "anomaly_flag": 1
@@ -101097,7 +101097,7 @@
         "t_idx": 19,
         "time_label": "2024-01-01 10:03:10",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0092,
+        "kl_divergence_drift": 0.0032,
         "z_score_X": 0.0,
         "z_score_v": 1.4558,
         "anomaly_flag": 0
@@ -101106,7 +101106,7 @@
         "t_idx": 20,
         "time_label": "2024-01-01 10:03:20",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0019,
+        "kl_divergence_drift": 0.0006,
         "z_score_X": 0.0,
         "z_score_v": 1.991,
         "anomaly_flag": 0
@@ -101115,7 +101115,7 @@
         "t_idx": 21,
         "time_label": "2024-01-01 10:03:30",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0038,
+        "kl_divergence_drift": 0.0013,
         "z_score_X": 0.0,
         "z_score_v": 0.7517,
         "anomaly_flag": 0
@@ -101124,7 +101124,7 @@
         "t_idx": 22,
         "time_label": "2024-01-01 10:03:40",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0019,
+        "kl_divergence_drift": 0.0007,
         "z_score_X": 0.0,
         "z_score_v": 2.4217,
         "anomaly_flag": 0
@@ -101133,7 +101133,7 @@
         "t_idx": 23,
         "time_label": "2024-01-01 10:03:50",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0019,
+        "kl_divergence_drift": 0.0007,
         "z_score_X": 0.0,
         "z_score_v": 1.4376,
         "anomaly_flag": 0
@@ -101142,7 +101142,7 @@
         "t_idx": 24,
         "time_label": "2024-01-01 10:04:00",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0017,
+        "kl_divergence_drift": 0.0006,
         "z_score_X": 0.0,
         "z_score_v": 1.9913,
         "anomaly_flag": 0
@@ -101151,7 +101151,7 @@
         "t_idx": 25,
         "time_label": "2024-01-01 10:04:10",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0015,
+        "kl_divergence_drift": 0.0005,
         "z_score_X": 0.0,
         "z_score_v": 2.4149,
         "anomaly_flag": 0
@@ -101160,7 +101160,7 @@
         "t_idx": 26,
         "time_label": "2024-01-01 10:04:20",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0024,
+        "kl_divergence_drift": 0.0008,
         "z_score_X": 0.0,
         "z_score_v": 2.0286,
         "anomaly_flag": 0
@@ -101169,7 +101169,7 @@
         "t_idx": 27,
         "time_label": "2024-01-01 10:04:30",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0019,
+        "kl_divergence_drift": 0.0007,
         "z_score_X": 0.0001,
         "z_score_v": 2.833,
         "anomaly_flag": 0
@@ -101178,7 +101178,7 @@
         "t_idx": 28,
         "time_label": "2024-01-01 10:04:40",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0018,
+        "kl_divergence_drift": 0.0006,
         "z_score_X": 0.0,
         "z_score_v": 1.9781,
         "anomaly_flag": 0
@@ -101187,7 +101187,7 @@
         "t_idx": 29,
         "time_label": "2024-01-01 10:04:50",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0011,
+        "kl_divergence_drift": 0.0004,
         "z_score_X": 0.0,
         "z_score_v": 1.1763,
         "anomaly_flag": 0
@@ -101196,7 +101196,7 @@
         "t_idx": 30,
         "time_label": "2024-01-01 10:05:00",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 1.2882,
+        "kl_divergence_drift": 0.6204,
         "z_score_X": 0.0012,
         "z_score_v": 51.4361,
         "anomaly_flag": 1
@@ -101205,7 +101205,7 @@
         "t_idx": 31,
         "time_label": "2024-01-01 10:05:10",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 1.2287,
+        "kl_divergence_drift": 0.5898,
         "z_score_X": 0.0124,
         "z_score_v": 6.3066,
         "anomaly_flag": 1
@@ -101214,7 +101214,7 @@
         "t_idx": 32,
         "time_label": "2024-01-01 10:05:20",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 1.1869,
+        "kl_divergence_drift": 0.5706,
         "z_score_X": 0.0192,
         "z_score_v": 5.0346,
         "anomaly_flag": 1
@@ -101223,7 +101223,7 @@
         "t_idx": 33,
         "time_label": "2024-01-01 10:05:30",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 1.1363,
+        "kl_divergence_drift": 0.545,
         "z_score_X": 0.0252,
         "z_score_v": 3.8593,
         "anomaly_flag": 1
@@ -101232,7 +101232,7 @@
         "t_idx": 34,
         "time_label": "2024-01-01 10:05:40",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 1.0875,
+        "kl_divergence_drift": 0.5198,
         "z_score_X": 0.0283,
         "z_score_v": 3.8446,
         "anomaly_flag": 1
@@ -101241,7 +101241,7 @@
         "t_idx": 35,
         "time_label": "2024-01-01 10:05:50",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 1.0486,
+        "kl_divergence_drift": 0.5007,
         "z_score_X": 0.0284,
         "z_score_v": 3.6776,
         "anomaly_flag": 1
@@ -101250,7 +101250,7 @@
         "t_idx": 36,
         "time_label": "2024-01-01 10:06:00",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 1.0136,
+        "kl_divergence_drift": 0.4834,
         "z_score_X": 0.0257,
         "z_score_v": 2.7071,
         "anomaly_flag": 0
@@ -101259,7 +101259,7 @@
         "t_idx": 37,
         "time_label": "2024-01-01 10:06:10",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.9784,
+        "kl_divergence_drift": 0.4661,
         "z_score_X": 0.0201,
         "z_score_v": 1.6796,
         "anomaly_flag": 0
@@ -101268,7 +101268,7 @@
         "t_idx": 38,
         "time_label": "2024-01-01 10:06:20",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.9396,
+        "kl_divergence_drift": 0.4457,
         "z_score_X": 0.0163,
         "z_score_v": 1.953,
         "anomaly_flag": 0
@@ -101277,7 +101277,7 @@
         "t_idx": 39,
         "time_label": "2024-01-01 10:06:30",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.9145,
+        "kl_divergence_drift": 0.434,
         "z_score_X": 0.0131,
         "z_score_v": 0.8877,
         "anomaly_flag": 0
@@ -101286,7 +101286,7 @@
         "t_idx": 40,
         "time_label": "2024-01-01 10:06:40",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.8848,
+        "kl_divergence_drift": 0.4196,
         "z_score_X": 0.0122,
         "z_score_v": 1.4646,
         "anomaly_flag": 0
@@ -101295,7 +101295,7 @@
         "t_idx": 41,
         "time_label": "2024-01-01 10:06:50",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.8501,
+        "kl_divergence_drift": 0.4011,
         "z_score_X": 0.0143,
         "z_score_v": 1.6616,
         "anomaly_flag": 0
@@ -101304,7 +101304,7 @@
         "t_idx": 42,
         "time_label": "2024-01-01 10:07:00",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.8249,
+        "kl_divergence_drift": 0.3889,
         "z_score_X": 0.0163,
         "z_score_v": 1.8007,
         "anomaly_flag": 0
@@ -101313,7 +101313,7 @@
         "t_idx": 43,
         "time_label": "2024-01-01 10:07:10",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.806,
+        "kl_divergence_drift": 0.3805,
         "z_score_X": 0.0194,
         "z_score_v": 1.5745,
         "anomaly_flag": 0
@@ -101322,7 +101322,7 @@
         "t_idx": 44,
         "time_label": "2024-01-01 10:07:20",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.7753,
+        "kl_divergence_drift": 0.3643,
         "z_score_X": 0.0204,
         "z_score_v": 1.5041,
         "anomaly_flag": 0
@@ -101331,7 +101331,7 @@
         "t_idx": 45,
         "time_label": "2024-01-01 10:07:30",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.7579,
+        "kl_divergence_drift": 0.3561,
         "z_score_X": 0.0207,
         "z_score_v": 2.3834,
         "anomaly_flag": 0
@@ -101340,7 +101340,7 @@
         "t_idx": 46,
         "time_label": "2024-01-01 10:07:40",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.7397,
+        "kl_divergence_drift": 0.3479,
         "z_score_X": 0.0182,
         "z_score_v": 2.1994,
         "anomaly_flag": 0
@@ -101349,7 +101349,7 @@
         "t_idx": 47,
         "time_label": "2024-01-01 10:07:50",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.7209,
+        "kl_divergence_drift": 0.3379,
         "z_score_X": 0.0166,
         "z_score_v": 2.7987,
         "anomaly_flag": 0
@@ -101358,7 +101358,7 @@
         "t_idx": 48,
         "time_label": "2024-01-01 10:08:00",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.7112,
+        "kl_divergence_drift": 0.3344,
         "z_score_X": 0.0161,
         "z_score_v": 3.5129,
         "anomaly_flag": 1
@@ -101367,7 +101367,7 @@
         "t_idx": 49,
         "time_label": "2024-01-01 10:08:10",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.6789,
+        "kl_divergence_drift": 0.3174,
         "z_score_X": 0.0166,
         "z_score_v": 2.5538,
         "anomaly_flag": 0
@@ -101376,7 +101376,7 @@
         "t_idx": 50,
         "time_label": "2024-01-01 10:08:20",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.6728,
+        "kl_divergence_drift": 0.3157,
         "z_score_X": 0.0203,
         "z_score_v": 1.1717,
         "anomaly_flag": 0
@@ -101385,7 +101385,7 @@
         "t_idx": 51,
         "time_label": "2024-01-01 10:08:30",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.6452,
+        "kl_divergence_drift": 0.3008,
         "z_score_X": 0.0273,
         "z_score_v": 1.4839,
         "anomaly_flag": 0
@@ -101394,7 +101394,7 @@
         "t_idx": 52,
         "time_label": "2024-01-01 10:08:40",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.6305,
+        "kl_divergence_drift": 0.2937,
         "z_score_X": 0.034,
         "z_score_v": 1.8598,
         "anomaly_flag": 0
@@ -101403,7 +101403,7 @@
         "t_idx": 53,
         "time_label": "2024-01-01 10:08:50",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.6151,
+        "kl_divergence_drift": 0.2864,
         "z_score_X": 0.0436,
         "z_score_v": 3.061,
         "anomaly_flag": 1
@@ -101412,7 +101412,7 @@
         "t_idx": 54,
         "time_label": "2024-01-01 10:09:00",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.599,
+        "kl_divergence_drift": 0.2783,
         "z_score_X": 0.054,
         "z_score_v": 2.5488,
         "anomaly_flag": 0
@@ -101421,7 +101421,7 @@
         "t_idx": 55,
         "time_label": "2024-01-01 10:09:10",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.5838,
+        "kl_divergence_drift": 0.2707,
         "z_score_X": 0.0615,
         "z_score_v": 2.9127,
         "anomaly_flag": 0
@@ -101430,7 +101430,7 @@
         "t_idx": 56,
         "time_label": "2024-01-01 10:09:20",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.5723,
+        "kl_divergence_drift": 0.2654,
         "z_score_X": 0.0664,
         "z_score_v": 2.903,
         "anomaly_flag": 0
@@ -101439,7 +101439,7 @@
         "t_idx": 57,
         "time_label": "2024-01-01 10:09:30",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.5602,
+        "kl_divergence_drift": 0.2592,
         "z_score_X": 0.066,
         "z_score_v": 2.0959,
         "anomaly_flag": 0
@@ -101448,7 +101448,7 @@
         "t_idx": 58,
         "time_label": "2024-01-01 10:09:40",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.5475,
+        "kl_divergence_drift": 0.2529,
         "z_score_X": 0.0621,
         "z_score_v": 1.6905,
         "anomaly_flag": 0
@@ -101457,7 +101457,7 @@
         "t_idx": 59,
         "time_label": "2024-01-01 10:09:50",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.5352,
+        "kl_divergence_drift": 0.2468,
         "z_score_X": 0.0575,
         "z_score_v": 1.4579,
         "anomaly_flag": 0
@@ -101527,7 +101527,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -101538,7 +101538,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -101549,7 +101549,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -101560,7 +101560,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 0.0005,
+        "local_kl_drift": 0.0003,
         "micro_anomaly_flag": 0
       },
       {
@@ -101582,7 +101582,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.942,
         "z_score_v": 0.942,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -101593,7 +101593,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.7655,
         "z_score_v": 1.765,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -101604,7 +101604,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9871,
         "z_score_v": 0.9872,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -101637,7 +101637,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.4905,
         "z_score_v": 0.4915,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -101681,7 +101681,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.3847,
         "z_score_v": 1.3844,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -101692,7 +101692,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.9202,
         "z_score_v": 1.9214,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -101725,7 +101725,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.4665,
         "z_score_v": 0.4655,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -101736,7 +101736,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3134,
         "z_score_v": 0.3131,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -101747,7 +101747,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.3375,
         "z_score_v": 2.3386,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -101758,7 +101758,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.9128,
         "z_score_v": 1.9122,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -101791,7 +101791,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.2977,
         "z_score_v": 0.298,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -101802,7 +101802,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.826,
         "z_score_v": 1.8257,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -101813,7 +101813,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1536,
         "z_score_v": 1.1524,
-        "local_kl_drift": 0.0006,
+        "local_kl_drift": 0.0003,
         "micro_anomaly_flag": 0
       },
       {
@@ -101824,7 +101824,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5776,
         "z_score_v": 0.5786,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -101835,7 +101835,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.7881,
         "z_score_v": 1.7872,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -101857,7 +101857,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.4857,
         "z_score_v": 0.4853,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -101868,7 +101868,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3001,
         "z_score_v": 0.2989,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -101879,7 +101879,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.2836,
         "z_score_v": 0.2835,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -101901,7 +101901,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1237,
         "z_score_v": 1.1238,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -101912,7 +101912,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.1243,
         "z_score_v": 0.124,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -101945,7 +101945,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.2956,
         "z_score_v": 0.2956,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -101956,7 +101956,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.2304,
         "z_score_v": 2.2308,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -101967,7 +101967,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.1857,
         "z_score_v": 0.1858,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -101978,7 +101978,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3806,
         "z_score_v": 0.381,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -102000,7 +102000,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7683,
         "z_score_v": 0.7687,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102011,7 +102011,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8788,
         "z_score_v": 0.8783,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -102022,7 +102022,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9617,
         "z_score_v": 0.9608,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102033,7 +102033,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3777,
         "z_score_v": 0.3781,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102044,7 +102044,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.2206,
         "z_score_v": 1.2228,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -102055,7 +102055,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.2403,
         "z_score_v": 0.2402,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -102088,7 +102088,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.1052,
         "z_score_v": 2.1058,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -102099,7 +102099,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.067,
         "z_score_v": 1.0696,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102121,7 +102121,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.3888,
         "z_score_v": 2.3871,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -102132,7 +102132,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.1917,
         "z_score_v": 2.1891,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102143,7 +102143,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.7911,
         "z_score_v": 1.7919,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -102154,7 +102154,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0511,
         "z_score_v": 1.0523,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102176,7 +102176,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5425,
         "z_score_v": 0.5421,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102187,7 +102187,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.585,
         "z_score_v": 0.5849,
-        "local_kl_drift": 0.0006,
+        "local_kl_drift": 0.0003,
         "micro_anomaly_flag": 0
       },
       {
@@ -102209,7 +102209,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.4555,
         "z_score_v": 0.4572,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -102220,7 +102220,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.3455,
         "z_score_v": 1.3464,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102253,7 +102253,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9622,
         "z_score_v": 0.9623,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102264,7 +102264,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0031,
         "z_score_v": 1.0042,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102275,7 +102275,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6409,
         "z_score_v": 0.6417,
-        "local_kl_drift": 0.0005,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102286,7 +102286,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.8401,
         "z_score_v": 1.8376,
-        "local_kl_drift": 0.0005,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102308,7 +102308,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.1064,
         "z_score_v": 0.1067,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102319,7 +102319,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3051,
         "z_score_v": 0.3048,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102330,7 +102330,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9891,
         "z_score_v": 0.99,
-        "local_kl_drift": 0.0005,
+        "local_kl_drift": 0.0003,
         "micro_anomaly_flag": 0
       },
       {
@@ -102352,7 +102352,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8118,
         "z_score_v": 0.8109,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102363,7 +102363,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6706,
         "z_score_v": 0.6708,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102374,7 +102374,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.7537,
         "z_score_v": 1.7563,
-        "local_kl_drift": 0.0008,
+        "local_kl_drift": 0.0004,
         "micro_anomaly_flag": 0
       },
       {
@@ -102385,7 +102385,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.612,
         "z_score_v": 1.6134,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102407,7 +102407,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.4972,
         "z_score_v": 0.4963,
-        "local_kl_drift": 0.0011,
+        "local_kl_drift": 0.0006,
         "micro_anomaly_flag": 0
       },
       {
@@ -102418,7 +102418,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6804,
         "z_score_v": 0.6801,
-        "local_kl_drift": 0.0017,
+        "local_kl_drift": 0.0009,
         "micro_anomaly_flag": 0
       },
       {
@@ -102429,7 +102429,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5403,
         "z_score_v": 0.5416,
-        "local_kl_drift": 0.0014,
+        "local_kl_drift": 0.0007,
         "micro_anomaly_flag": 0
       },
       {
@@ -102440,7 +102440,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.2239,
         "z_score_v": 0.2239,
-        "local_kl_drift": 0.0007,
+        "local_kl_drift": 0.0004,
         "micro_anomaly_flag": 0
       },
       {
@@ -102451,7 +102451,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8277,
         "z_score_v": 0.8274,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102462,7 +102462,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.8371,
         "z_score_v": 1.835,
-        "local_kl_drift": 0.0014,
+        "local_kl_drift": 0.0007,
         "micro_anomaly_flag": 0
       },
       {
@@ -102473,7 +102473,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.4826,
         "z_score_v": 0.4828,
-        "local_kl_drift": 0.0012,
+        "local_kl_drift": 0.0006,
         "micro_anomaly_flag": 0
       },
       {
@@ -102484,7 +102484,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.9531,
         "z_score_v": 2.9572,
-        "local_kl_drift": 0.0026,
+        "local_kl_drift": 0.0013,
         "micro_anomaly_flag": 0
       },
       {
@@ -102495,7 +102495,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.777,
         "z_score_v": 0.7777,
-        "local_kl_drift": 0.0013,
+        "local_kl_drift": 0.0007,
         "micro_anomaly_flag": 0
       },
       {
@@ -102506,7 +102506,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8872,
         "z_score_v": 0.8871,
-        "local_kl_drift": 0.0013,
+        "local_kl_drift": 0.0007,
         "micro_anomaly_flag": 0
       },
       {
@@ -102517,7 +102517,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.2194,
         "z_score_v": 0.2195,
-        "local_kl_drift": 0.0007,
+        "local_kl_drift": 0.0003,
         "micro_anomaly_flag": 0
       },
       {
@@ -102528,7 +102528,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0511,
         "z_score_v": 0.0514,
-        "local_kl_drift": 0.0005,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102539,7 +102539,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7369,
         "z_score_v": 0.7375,
-        "local_kl_drift": 0.002,
+        "local_kl_drift": 0.001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102550,7 +102550,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.4581,
         "z_score_v": 0.4587,
-        "local_kl_drift": 0.0025,
+        "local_kl_drift": 0.0013,
         "micro_anomaly_flag": 0
       },
       {
@@ -102561,7 +102561,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.4091,
         "z_score_v": 1.4088,
-        "local_kl_drift": 0.0007,
+        "local_kl_drift": 0.0003,
         "micro_anomaly_flag": 0
       },
       {
@@ -102583,7 +102583,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6585,
         "z_score_v": 0.6587,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102616,7 +102616,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.529,
         "z_score_v": 0.5289,
-        "local_kl_drift": 0.0008,
+        "local_kl_drift": 0.0004,
         "micro_anomaly_flag": 0
       },
       {
@@ -102627,7 +102627,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5765,
         "z_score_v": 0.5759,
-        "local_kl_drift": 0.0008,
+        "local_kl_drift": 0.0004,
         "micro_anomaly_flag": 0
       },
       {
@@ -102638,7 +102638,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.4298,
         "z_score_v": 0.43,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102649,7 +102649,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.2002,
         "z_score_v": 0.201,
-        "local_kl_drift": 0.0009,
+        "local_kl_drift": 0.0005,
         "micro_anomaly_flag": 0
       },
       {
@@ -102660,7 +102660,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3024,
         "z_score_v": 0.3024,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102671,7 +102671,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.2839,
         "z_score_v": 0.284,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102693,7 +102693,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3896,
         "z_score_v": 0.3894,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102704,7 +102704,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.8203,
         "z_score_v": 1.8219,
-        "local_kl_drift": 0.0005,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102715,7 +102715,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.6137,
         "z_score_v": 1.6146,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -102726,7 +102726,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3616,
         "z_score_v": 0.3612,
-        "local_kl_drift": 0.0005,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102737,7 +102737,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9056,
         "z_score_v": 0.9054,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102748,7 +102748,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.1811,
         "z_score_v": 0.1813,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -102770,7 +102770,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1092,
         "z_score_v": 1.11,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102781,7 +102781,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.4665,
         "z_score_v": 0.466,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102803,7 +102803,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.1078,
         "z_score_v": 0.1075,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102814,7 +102814,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9311,
         "z_score_v": 0.9322,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102825,7 +102825,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5819,
         "z_score_v": 0.5824,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102836,7 +102836,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.505,
         "z_score_v": 0.5048,
-        "local_kl_drift": 0.0005,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102858,7 +102858,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9816,
         "z_score_v": 0.9817,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102869,7 +102869,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.3304,
         "z_score_v": 1.3325,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102880,7 +102880,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8511,
         "z_score_v": 0.8516,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102891,7 +102891,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.1211,
         "z_score_v": 2.1195,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -102902,7 +102902,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.1435,
         "z_score_v": 0.1437,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102913,7 +102913,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.1968,
         "z_score_v": 0.1966,
-        "local_kl_drift": 0.0005,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102935,7 +102935,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.024,
         "z_score_v": 0.0238,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102946,7 +102946,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.65,
         "z_score_v": 1.6474,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102957,7 +102957,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.641,
         "z_score_v": 1.6401,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -102968,7 +102968,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.5181,
         "z_score_v": 1.5178,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102979,7 +102979,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.2726,
         "z_score_v": 2.2768,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -102990,7 +102990,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.5573,
         "z_score_v": 1.5584,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -103012,7 +103012,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.3242,
         "z_score_v": 1.3244,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -103023,7 +103023,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.4231,
         "z_score_v": 0.4231,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -103045,7 +103045,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8942,
         "z_score_v": 0.8948,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -103056,7 +103056,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.2338,
         "z_score_v": 0.2338,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -103067,7 +103067,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9899,
         "z_score_v": 0.9902,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -103078,7 +103078,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.646,
         "z_score_v": 0.646,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -103122,7 +103122,7 @@
         "account_category": "Unknown",
         "z_score_X": 51.0436,
         "z_score_v": 51.0472,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 1
       },
       {
@@ -103133,7 +103133,7 @@
         "account_category": "Unknown",
         "z_score_X": 17.1223,
         "z_score_v": 17.1172,
-        "local_kl_drift": 0.2254,
+        "local_kl_drift": 0.1573,
         "micro_anomaly_flag": 1
       },
       {
@@ -103144,7 +103144,7 @@
         "account_category": "Unknown",
         "z_score_X": 12.3582,
         "z_score_v": 12.3696,
-        "local_kl_drift": 0.2209,
+        "local_kl_drift": 0.1531,
         "micro_anomaly_flag": 1
       },
       {
@@ -103155,7 +103155,7 @@
         "account_category": "Unknown",
         "z_score_X": 17.2912,
         "z_score_v": 17.3083,
-        "local_kl_drift": 0.2225,
+        "local_kl_drift": 0.1542,
         "micro_anomaly_flag": 1
       },
       {
@@ -103166,7 +103166,7 @@
         "account_category": "Unknown",
         "z_score_X": 14.569,
         "z_score_v": 14.5428,
-        "local_kl_drift": 0.224,
+        "local_kl_drift": 0.1557,
         "micro_anomaly_flag": 1
       },
       {
@@ -103177,7 +103177,7 @@
         "account_category": "Unknown",
         "z_score_X": 6.3108,
         "z_score_v": 6.1667,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 1
       },
       {
@@ -103188,7 +103188,7 @@
         "account_category": "Unknown",
         "z_score_X": 6.2972,
         "z_score_v": 6.3305,
-        "local_kl_drift": 0.2129,
+        "local_kl_drift": 0.1473,
         "micro_anomaly_flag": 1
       },
       {
@@ -103199,7 +103199,7 @@
         "account_category": "Unknown",
         "z_score_X": 5.7371,
         "z_score_v": 5.7716,
-        "local_kl_drift": 0.2098,
+        "local_kl_drift": 0.1448,
         "micro_anomaly_flag": 1
       },
       {
@@ -103210,7 +103210,7 @@
         "account_category": "Unknown",
         "z_score_X": 5.4209,
         "z_score_v": 5.4534,
-        "local_kl_drift": 0.2146,
+        "local_kl_drift": 0.1492,
         "micro_anomaly_flag": 1
       },
       {
@@ -103221,7 +103221,7 @@
         "account_category": "Unknown",
         "z_score_X": 5.6976,
         "z_score_v": 5.7292,
-        "local_kl_drift": 0.214,
+        "local_kl_drift": 0.1483,
         "micro_anomaly_flag": 1
       },
       {
@@ -103243,7 +103243,7 @@
         "account_category": "Unknown",
         "z_score_X": 4.491,
         "z_score_v": 4.5311,
-        "local_kl_drift": 0.2065,
+        "local_kl_drift": 0.1436,
         "micro_anomaly_flag": 1
       },
       {
@@ -103254,7 +103254,7 @@
         "account_category": "Unknown",
         "z_score_X": 4.0454,
         "z_score_v": 4.0852,
-        "local_kl_drift": 0.2033,
+        "local_kl_drift": 0.1408,
         "micro_anomaly_flag": 1
       },
       {
@@ -103265,7 +103265,7 @@
         "account_category": "Unknown",
         "z_score_X": 4.5873,
         "z_score_v": 4.6302,
-        "local_kl_drift": 0.2056,
+        "local_kl_drift": 0.1422,
         "micro_anomaly_flag": 1
       },
       {
@@ -103276,7 +103276,7 @@
         "account_category": "Unknown",
         "z_score_X": 3.7687,
         "z_score_v": 3.8041,
-        "local_kl_drift": 0.2072,
+        "local_kl_drift": 0.144,
         "micro_anomaly_flag": 1
       },
       {
@@ -103298,7 +103298,7 @@
         "account_category": "Unknown",
         "z_score_X": 3.4677,
         "z_score_v": 3.5124,
-        "local_kl_drift": 0.1984,
+        "local_kl_drift": 0.1377,
         "micro_anomaly_flag": 1
       },
       {
@@ -103309,7 +103309,7 @@
         "account_category": "Unknown",
         "z_score_X": 3.4056,
         "z_score_v": 3.4525,
-        "local_kl_drift": 0.1958,
+        "local_kl_drift": 0.1354,
         "micro_anomaly_flag": 1
       },
       {
@@ -103320,7 +103320,7 @@
         "account_category": "Unknown",
         "z_score_X": 3.3687,
         "z_score_v": 3.4138,
-        "local_kl_drift": 0.1963,
+        "local_kl_drift": 0.1356,
         "micro_anomaly_flag": 1
       },
       {
@@ -103331,7 +103331,7 @@
         "account_category": "Unknown",
         "z_score_X": 3.7733,
         "z_score_v": 3.8222,
-        "local_kl_drift": 0.197,
+        "local_kl_drift": 0.1362,
         "micro_anomaly_flag": 1
       },
       {
@@ -103353,7 +103353,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.7256,
         "z_score_v": 2.7725,
-        "local_kl_drift": 0.1896,
+        "local_kl_drift": 0.131,
         "micro_anomaly_flag": 0
       },
       {
@@ -103364,7 +103364,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.6857,
         "z_score_v": 2.7346,
-        "local_kl_drift": 0.1887,
+        "local_kl_drift": 0.1306,
         "micro_anomaly_flag": 0
       },
       {
@@ -103375,7 +103375,7 @@
         "account_category": "Unknown",
         "z_score_X": 3.2143,
         "z_score_v": 3.2702,
-        "local_kl_drift": 0.1882,
+        "local_kl_drift": 0.1296,
         "micro_anomaly_flag": 1
       },
       {
@@ -103386,7 +103386,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.6863,
         "z_score_v": 2.733,
-        "local_kl_drift": 0.1873,
+        "local_kl_drift": 0.1287,
         "micro_anomaly_flag": 0
       },
       {
@@ -103397,7 +103397,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.5536,
         "z_score_v": 2.324,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -103408,7 +103408,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.3065,
         "z_score_v": 2.3565,
-        "local_kl_drift": 0.1813,
+        "local_kl_drift": 0.1248,
         "micro_anomaly_flag": 0
       },
       {
@@ -103419,7 +103419,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.1862,
         "z_score_v": 2.2366,
-        "local_kl_drift": 0.1806,
+        "local_kl_drift": 0.1244,
         "micro_anomaly_flag": 0
       },
       {
@@ -103430,7 +103430,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.9223,
         "z_score_v": 1.967,
-        "local_kl_drift": 0.1833,
+        "local_kl_drift": 0.1266,
         "micro_anomaly_flag": 0
       },
       {
@@ -103441,7 +103441,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.5775,
         "z_score_v": 2.6329,
-        "local_kl_drift": 0.1816,
+        "local_kl_drift": 0.1248,
         "micro_anomaly_flag": 0
       },
       {
@@ -103452,7 +103452,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.0286,
         "z_score_v": 1.8016,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -103463,7 +103463,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.5639,
         "z_score_v": 1.6071,
-        "local_kl_drift": 0.1737,
+        "local_kl_drift": 0.1191,
         "micro_anomaly_flag": 0
       },
       {
@@ -103474,7 +103474,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.5431,
         "z_score_v": 1.5883,
-        "local_kl_drift": 0.1745,
+        "local_kl_drift": 0.1201,
         "micro_anomaly_flag": 0
       },
       {
@@ -103485,7 +103485,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.8407,
         "z_score_v": 1.8918,
-        "local_kl_drift": 0.1777,
+        "local_kl_drift": 0.1227,
         "micro_anomaly_flag": 0
       },
       {
@@ -103496,7 +103496,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.978,
         "z_score_v": 2.0309,
-        "local_kl_drift": 0.1764,
+        "local_kl_drift": 0.1214,
         "micro_anomaly_flag": 0
       },
       {
@@ -103507,7 +103507,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.4868,
         "z_score_v": 1.28,
-        "local_kl_drift": 0.0005,
+        "local_kl_drift": 0.0003,
         "micro_anomaly_flag": 0
       },
       {
@@ -103518,7 +103518,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.3051,
         "z_score_v": 1.3483,
-        "local_kl_drift": 0.1673,
+        "local_kl_drift": 0.1143,
         "micro_anomaly_flag": 0
       },
       {
@@ -103529,7 +103529,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1083,
         "z_score_v": 1.1493,
-        "local_kl_drift": 0.1687,
+        "local_kl_drift": 0.1161,
         "micro_anomaly_flag": 0
       },
       {
@@ -103540,7 +103540,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.2924,
         "z_score_v": 1.3376,
-        "local_kl_drift": 0.1715,
+        "local_kl_drift": 0.1184,
         "micro_anomaly_flag": 0
       },
       {
@@ -103551,7 +103551,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.19,
         "z_score_v": 1.2314,
-        "local_kl_drift": 0.1702,
+        "local_kl_drift": 0.1171,
         "micro_anomaly_flag": 0
       },
       {
@@ -103562,7 +103562,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1767,
         "z_score_v": 0.9797,
-        "local_kl_drift": 0.0006,
+        "local_kl_drift": 0.0003,
         "micro_anomaly_flag": 0
       },
       {
@@ -103573,7 +103573,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9398,
         "z_score_v": 0.9783,
-        "local_kl_drift": 0.1623,
+        "local_kl_drift": 0.1108,
         "micro_anomaly_flag": 0
       },
       {
@@ -103584,7 +103584,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.057,
         "z_score_v": 1.1014,
-        "local_kl_drift": 0.1593,
+        "local_kl_drift": 0.1084,
         "micro_anomaly_flag": 0
       },
       {
@@ -103595,7 +103595,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0411,
         "z_score_v": 1.085,
-        "local_kl_drift": 0.1623,
+        "local_kl_drift": 0.1111,
         "micro_anomaly_flag": 0
       },
       {
@@ -103606,7 +103606,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6942,
         "z_score_v": 0.7265,
-        "local_kl_drift": 0.1668,
+        "local_kl_drift": 0.1152,
         "micro_anomaly_flag": 0
       },
       {
@@ -103617,7 +103617,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9504,
         "z_score_v": 0.7616,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -103628,7 +103628,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7505,
         "z_score_v": 0.7873,
-        "local_kl_drift": 0.1597,
+        "local_kl_drift": 0.1092,
         "micro_anomaly_flag": 0
       },
       {
@@ -103639,7 +103639,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6909,
         "z_score_v": 0.7287,
-        "local_kl_drift": 0.1588,
+        "local_kl_drift": 0.1092,
         "micro_anomaly_flag": 0
       },
       {
@@ -103650,7 +103650,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6736,
         "z_score_v": 0.7108,
-        "local_kl_drift": 0.1585,
+        "local_kl_drift": 0.1087,
         "micro_anomaly_flag": 0
       },
       {
@@ -103661,7 +103661,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7514,
         "z_score_v": 0.7884,
-        "local_kl_drift": 0.1565,
+        "local_kl_drift": 0.1067,
         "micro_anomaly_flag": 0
       },
       {
@@ -103672,7 +103672,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8924,
         "z_score_v": 0.6947,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -103683,7 +103683,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7162,
         "z_score_v": 0.7551,
-        "local_kl_drift": 0.154,
+        "local_kl_drift": 0.1055,
         "micro_anomaly_flag": 0
       },
       {
@@ -103694,7 +103694,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8222,
         "z_score_v": 0.8675,
-        "local_kl_drift": 0.1496,
+        "local_kl_drift": 0.1018,
         "micro_anomaly_flag": 0
       },
       {
@@ -103705,7 +103705,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5524,
         "z_score_v": 0.5885,
-        "local_kl_drift": 0.1546,
+        "local_kl_drift": 0.1059,
         "micro_anomaly_flag": 0
       },
       {
@@ -103716,7 +103716,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5186,
         "z_score_v": 0.5512,
-        "local_kl_drift": 0.1547,
+        "local_kl_drift": 0.1062,
         "micro_anomaly_flag": 0
       },
       {
@@ -103727,7 +103727,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0527,
         "z_score_v": 0.815,
-        "local_kl_drift": 0.0007,
+        "local_kl_drift": 0.0003,
         "micro_anomaly_flag": 0
       },
       {
@@ -103738,7 +103738,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7745,
         "z_score_v": 0.8186,
-        "local_kl_drift": 0.1431,
+        "local_kl_drift": 0.0965,
         "micro_anomaly_flag": 0
       },
       {
@@ -103749,7 +103749,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9669,
         "z_score_v": 1.0211,
-        "local_kl_drift": 0.1497,
+        "local_kl_drift": 0.1029,
         "micro_anomaly_flag": 0
       },
       {
@@ -103760,7 +103760,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7304,
         "z_score_v": 0.7757,
-        "local_kl_drift": 0.1458,
+        "local_kl_drift": 0.0987,
         "micro_anomaly_flag": 0
       },
       {
@@ -103771,7 +103771,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5852,
         "z_score_v": 0.6225,
-        "local_kl_drift": 0.15,
+        "local_kl_drift": 0.1027,
         "micro_anomaly_flag": 0
       },
       {
@@ -103782,7 +103782,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1988,
         "z_score_v": 0.9185,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -103793,7 +103793,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0174,
         "z_score_v": 1.0741,
-        "local_kl_drift": 0.1437,
+        "local_kl_drift": 0.0978,
         "micro_anomaly_flag": 0
       },
       {
@@ -103804,7 +103804,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9243,
         "z_score_v": 0.9814,
-        "local_kl_drift": 0.1447,
+        "local_kl_drift": 0.0992,
         "micro_anomaly_flag": 0
       },
       {
@@ -103815,7 +103815,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7525,
         "z_score_v": 0.8021,
-        "local_kl_drift": 0.1397,
+        "local_kl_drift": 0.0941,
         "micro_anomaly_flag": 0
       },
       {
@@ -103826,7 +103826,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7408,
         "z_score_v": 0.7867,
-        "local_kl_drift": 0.1434,
+        "local_kl_drift": 0.0976,
         "micro_anomaly_flag": 0
       },
       {
@@ -103837,7 +103837,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.4224,
         "z_score_v": 1.0818,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -103848,7 +103848,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1232,
         "z_score_v": 1.1886,
-        "local_kl_drift": 0.1376,
+        "local_kl_drift": 0.0933,
         "micro_anomaly_flag": 0
       },
       {
@@ -103859,7 +103859,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9514,
         "z_score_v": 1.0139,
-        "local_kl_drift": 0.1382,
+        "local_kl_drift": 0.0941,
         "micro_anomaly_flag": 0
       },
       {
@@ -103870,7 +103870,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0181,
         "z_score_v": 1.0821,
-        "local_kl_drift": 0.1409,
+        "local_kl_drift": 0.0961,
         "micro_anomaly_flag": 0
       },
       {
@@ -103881,7 +103881,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9433,
         "z_score_v": 1.0008,
-        "local_kl_drift": 0.1416,
+        "local_kl_drift": 0.0969,
         "micro_anomaly_flag": 0
       },
       {
@@ -103892,7 +103892,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.4697,
         "z_score_v": 1.0947,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -103903,7 +103903,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9994,
         "z_score_v": 1.0645,
-        "local_kl_drift": 0.1375,
+        "local_kl_drift": 0.0938,
         "micro_anomaly_flag": 0
       },
       {
@@ -103914,7 +103914,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0634,
         "z_score_v": 1.1352,
-        "local_kl_drift": 0.1313,
+        "local_kl_drift": 0.0886,
         "micro_anomaly_flag": 0
       },
       {
@@ -103925,7 +103925,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9023,
         "z_score_v": 0.9661,
-        "local_kl_drift": 0.1348,
+        "local_kl_drift": 0.0916,
         "micro_anomaly_flag": 0
       },
       {
@@ -103936,7 +103936,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1013,
         "z_score_v": 1.1699,
-        "local_kl_drift": 0.1334,
+        "local_kl_drift": 0.0902,
         "micro_anomaly_flag": 0
       },
       {
@@ -103958,7 +103958,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8325,
         "z_score_v": 0.8946,
-        "local_kl_drift": 0.1329,
+        "local_kl_drift": 0.0904,
         "micro_anomaly_flag": 0
       },
       {
@@ -103969,7 +103969,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1082,
         "z_score_v": 1.1871,
-        "local_kl_drift": 0.1314,
+        "local_kl_drift": 0.0891,
         "micro_anomaly_flag": 0
       },
       {
@@ -103980,7 +103980,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8668,
         "z_score_v": 0.9334,
-        "local_kl_drift": 0.1314,
+        "local_kl_drift": 0.0892,
         "micro_anomaly_flag": 0
       },
       {
@@ -103991,7 +103991,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1211,
         "z_score_v": 1.1956,
-        "local_kl_drift": 0.1296,
+        "local_kl_drift": 0.0874,
         "micro_anomaly_flag": 0
       },
       {
@@ -104013,7 +104013,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0006,
         "z_score_v": 1.0747,
-        "local_kl_drift": 0.1261,
+        "local_kl_drift": 0.0851,
         "micro_anomaly_flag": 0
       },
       {
@@ -104024,7 +104024,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6908,
         "z_score_v": 0.7549,
-        "local_kl_drift": 0.1258,
+        "local_kl_drift": 0.085,
         "micro_anomaly_flag": 0
       },
       {
@@ -104035,7 +104035,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.751,
         "z_score_v": 0.8163,
-        "local_kl_drift": 0.1308,
+        "local_kl_drift": 0.0893,
         "micro_anomaly_flag": 0
       },
       {
@@ -104046,7 +104046,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7709,
         "z_score_v": 0.8337,
-        "local_kl_drift": 0.13,
+        "local_kl_drift": 0.0884,
         "micro_anomaly_flag": 0
       },
       {
@@ -104057,7 +104057,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1541,
         "z_score_v": 0.7661,
-        "local_kl_drift": 0.0016,
+        "local_kl_drift": 0.0008,
         "micro_anomaly_flag": 0
       },
       {
@@ -104068,7 +104068,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8074,
         "z_score_v": 0.8766,
-        "local_kl_drift": 0.1263,
+        "local_kl_drift": 0.0858,
         "micro_anomaly_flag": 0
       },
       {
@@ -104079,7 +104079,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3502,
         "z_score_v": 0.4009,
-        "local_kl_drift": 0.1268,
+        "local_kl_drift": 0.0865,
         "micro_anomaly_flag": 0
       },
       {
@@ -104090,7 +104090,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8829,
         "z_score_v": 0.9588,
-        "local_kl_drift": 0.1231,
+        "local_kl_drift": 0.083,
         "micro_anomaly_flag": 0
       },
       {
@@ -104101,7 +104101,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7281,
         "z_score_v": 0.7926,
-        "local_kl_drift": 0.1219,
+        "local_kl_drift": 0.0818,
         "micro_anomaly_flag": 0
       },
       {
@@ -104112,7 +104112,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1177,
         "z_score_v": 0.7147,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -104123,7 +104123,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.3961,
         "z_score_v": 0.4478,
-        "local_kl_drift": 0.1237,
+        "local_kl_drift": 0.0843,
         "micro_anomaly_flag": 0
       },
       {
@@ -104134,7 +104134,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6365,
         "z_score_v": 0.7048,
-        "local_kl_drift": 0.1223,
+        "local_kl_drift": 0.0829,
         "micro_anomaly_flag": 0
       },
       {
@@ -104145,7 +104145,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9952,
         "z_score_v": 1.0816,
-        "local_kl_drift": 0.1231,
+        "local_kl_drift": 0.0832,
         "micro_anomaly_flag": 0
       },
       {
@@ -104156,7 +104156,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5388,
         "z_score_v": 0.5969,
-        "local_kl_drift": 0.1235,
+        "local_kl_drift": 0.0839,
         "micro_anomaly_flag": 0
       },
       {
@@ -104167,7 +104167,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1492,
         "z_score_v": 0.716,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -104178,7 +104178,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9028,
         "z_score_v": 0.9849,
-        "local_kl_drift": 0.1139,
+        "local_kl_drift": 0.0761,
         "micro_anomaly_flag": 0
       },
       {
@@ -104189,7 +104189,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.4965,
         "z_score_v": 0.5607,
-        "local_kl_drift": 0.1192,
+        "local_kl_drift": 0.0809,
         "micro_anomaly_flag": 0
       },
       {
@@ -104200,7 +104200,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5846,
         "z_score_v": 0.6531,
-        "local_kl_drift": 0.1198,
+        "local_kl_drift": 0.0812,
         "micro_anomaly_flag": 0
       },
       {
@@ -104211,7 +104211,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.5734,
         "z_score_v": 0.6365,
-        "local_kl_drift": 0.1174,
+        "local_kl_drift": 0.0791,
         "micro_anomaly_flag": 0
       },
       {
@@ -104222,7 +104222,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.3991,
         "z_score_v": 0.8803,
-        "local_kl_drift": 0.0004,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -104233,7 +104233,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.758,
         "z_score_v": 0.8363,
-        "local_kl_drift": 0.1172,
+        "local_kl_drift": 0.0796,
         "micro_anomaly_flag": 0
       },
       {
@@ -104244,7 +104244,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7074,
         "z_score_v": 0.7869,
-        "local_kl_drift": 0.1167,
+        "local_kl_drift": 0.0793,
         "micro_anomaly_flag": 0
       },
       {
@@ -104255,7 +104255,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8888,
         "z_score_v": 0.9785,
-        "local_kl_drift": 0.1147,
+        "local_kl_drift": 0.0771,
         "micro_anomaly_flag": 0
       },
       {
@@ -104266,7 +104266,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7998,
         "z_score_v": 0.8794,
-        "local_kl_drift": 0.1173,
+        "local_kl_drift": 0.0796,
         "micro_anomaly_flag": 0
       },
       {
@@ -104277,7 +104277,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.8547,
         "z_score_v": 1.1905,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -104288,7 +104288,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0149,
         "z_score_v": 1.1126,
-        "local_kl_drift": 0.1121,
+        "local_kl_drift": 0.0754,
         "micro_anomaly_flag": 0
       },
       {
@@ -104299,7 +104299,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0447,
         "z_score_v": 1.1485,
-        "local_kl_drift": 0.1107,
+        "local_kl_drift": 0.0743,
         "micro_anomaly_flag": 0
       },
       {
@@ -104310,7 +104310,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0406,
         "z_score_v": 1.1444,
-        "local_kl_drift": 0.1112,
+        "local_kl_drift": 0.0746,
         "micro_anomaly_flag": 0
       },
       {
@@ -104321,7 +104321,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1958,
         "z_score_v": 1.3037,
-        "local_kl_drift": 0.1132,
+        "local_kl_drift": 0.0764,
         "micro_anomaly_flag": 0
       },
       {
@@ -104343,7 +104343,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.4143,
         "z_score_v": 1.5418,
-        "local_kl_drift": 0.1083,
+        "local_kl_drift": 0.0726,
         "micro_anomaly_flag": 0
       },
       {
@@ -104354,7 +104354,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.3164,
         "z_score_v": 1.4421,
-        "local_kl_drift": 0.1082,
+        "local_kl_drift": 0.0726,
         "micro_anomaly_flag": 0
       },
       {
@@ -104365,7 +104365,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.166,
         "z_score_v": 1.2829,
-        "local_kl_drift": 0.11,
+        "local_kl_drift": 0.0741,
         "micro_anomaly_flag": 0
       },
       {
@@ -104376,7 +104376,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.2436,
         "z_score_v": 1.3599,
-        "local_kl_drift": 0.1103,
+        "local_kl_drift": 0.0742,
         "micro_anomaly_flag": 0
       },
       {
@@ -104387,7 +104387,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.6604,
         "z_score_v": 1.7084,
-        "local_kl_drift": 0.0003,
+        "local_kl_drift": 0.0002,
         "micro_anomaly_flag": 0
       },
       {
@@ -104398,7 +104398,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.7192,
         "z_score_v": 1.8717,
-        "local_kl_drift": 0.1059,
+        "local_kl_drift": 0.0711,
         "micro_anomaly_flag": 0
       },
       {
@@ -104409,7 +104409,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.2369,
         "z_score_v": 1.3632,
-        "local_kl_drift": 0.1059,
+        "local_kl_drift": 0.0712,
         "micro_anomaly_flag": 0
       },
       {
@@ -104420,7 +104420,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.5303,
         "z_score_v": 1.6765,
-        "local_kl_drift": 0.1075,
+        "local_kl_drift": 0.0723,
         "micro_anomaly_flag": 0
       },
       {
@@ -104431,7 +104431,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.6921,
         "z_score_v": 1.8432,
-        "local_kl_drift": 0.1067,
+        "local_kl_drift": 0.0717,
         "micro_anomaly_flag": 0
       },
       {
@@ -104442,7 +104442,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.9885,
         "z_score_v": 1.9075,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -104453,7 +104453,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.8135,
         "z_score_v": 1.9777,
-        "local_kl_drift": 0.1043,
+        "local_kl_drift": 0.07,
         "micro_anomaly_flag": 0
       },
       {
@@ -104464,7 +104464,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.781,
         "z_score_v": 1.9488,
-        "local_kl_drift": 0.1022,
+        "local_kl_drift": 0.0683,
         "micro_anomaly_flag": 0
       },
       {
@@ -104475,7 +104475,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.51,
         "z_score_v": 1.6606,
-        "local_kl_drift": 0.1045,
+        "local_kl_drift": 0.0702,
         "micro_anomaly_flag": 0
       },
       {
@@ -104486,7 +104486,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.8053,
         "z_score_v": 1.9695,
-        "local_kl_drift": 0.1039,
+        "local_kl_drift": 0.0696,
         "micro_anomaly_flag": 0
       },
       {
@@ -104508,7 +104508,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.8347,
         "z_score_v": 2.0057,
-        "local_kl_drift": 0.1009,
+        "local_kl_drift": 0.0674,
         "micro_anomaly_flag": 0
       },
       {
@@ -104519,7 +104519,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.5179,
         "z_score_v": 1.6731,
-        "local_kl_drift": 0.1011,
+        "local_kl_drift": 0.0677,
         "micro_anomaly_flag": 0
       },
       {
@@ -104530,7 +104530,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.875,
         "z_score_v": 2.0565,
-        "local_kl_drift": 0.1003,
+        "local_kl_drift": 0.0669,
         "micro_anomaly_flag": 0
       },
       {
@@ -104541,7 +104541,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.583,
         "z_score_v": 1.7379,
-        "local_kl_drift": 0.1024,
+        "local_kl_drift": 0.0688,
         "micro_anomaly_flag": 0
       },
       {
@@ -104563,7 +104563,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.4446,
         "z_score_v": 1.5951,
-        "local_kl_drift": 0.0982,
+        "local_kl_drift": 0.0655,
         "micro_anomaly_flag": 0
       },
       {
@@ -104574,7 +104574,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.8422,
         "z_score_v": 2.0254,
-        "local_kl_drift": 0.0982,
+        "local_kl_drift": 0.0657,
         "micro_anomaly_flag": 0
       },
       {
@@ -104585,7 +104585,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.579,
         "z_score_v": 1.7451,
-        "local_kl_drift": 0.0998,
+        "local_kl_drift": 0.0669,
         "micro_anomaly_flag": 0
       },
       {
@@ -104596,7 +104596,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.4168,
         "z_score_v": 1.5664,
-        "local_kl_drift": 0.1003,
+        "local_kl_drift": 0.0672,
         "micro_anomaly_flag": 0
       },
       {
@@ -104607,7 +104607,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.5589,
         "z_score_v": 1.4716,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -104618,7 +104618,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.3909,
         "z_score_v": 1.5442,
-        "local_kl_drift": 0.0989,
+        "local_kl_drift": 0.0663,
         "micro_anomaly_flag": 0
       },
       {
@@ -104629,7 +104629,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1596,
         "z_score_v": 1.301,
-        "local_kl_drift": 0.0956,
+        "local_kl_drift": 0.0637,
         "micro_anomaly_flag": 0
       },
       {
@@ -104640,7 +104640,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.4252,
         "z_score_v": 1.5868,
-        "local_kl_drift": 0.0961,
+        "local_kl_drift": 0.064,
         "micro_anomaly_flag": 0
       },
       {
@@ -104651,7 +104651,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.2539,
         "z_score_v": 1.3983,
-        "local_kl_drift": 0.0975,
+        "local_kl_drift": 0.0651,
         "micro_anomaly_flag": 0
       },
       {
@@ -104673,7 +104673,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9191,
         "z_score_v": 1.0454,
-        "local_kl_drift": 0.096,
+        "local_kl_drift": 0.0643,
         "micro_anomaly_flag": 0
       },
       {
@@ -104684,7 +104684,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0602,
         "z_score_v": 1.2007,
-        "local_kl_drift": 0.0951,
+        "local_kl_drift": 0.0635,
         "micro_anomaly_flag": 0
       },
       {
@@ -104695,7 +104695,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.06,
         "z_score_v": 1.2017,
-        "local_kl_drift": 0.094,
+        "local_kl_drift": 0.0623,
         "micro_anomaly_flag": 0
       },
       {
@@ -104706,7 +104706,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.1057,
         "z_score_v": 1.2457,
-        "local_kl_drift": 0.0944,
+        "local_kl_drift": 0.0628,
         "micro_anomaly_flag": 0
       },
       {
@@ -104717,7 +104717,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.9446,
         "z_score_v": 0.9414,
-        "local_kl_drift": 0.0001,
+        "local_kl_drift": 0.0,
         "micro_anomaly_flag": 0
       },
       {
@@ -104728,7 +104728,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.9139,
         "z_score_v": 1.0455,
-        "local_kl_drift": 0.0919,
+        "local_kl_drift": 0.061,
         "micro_anomaly_flag": 0
       },
       {
@@ -104739,7 +104739,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.8441,
         "z_score_v": 0.9748,
-        "local_kl_drift": 0.0921,
+        "local_kl_drift": 0.0612,
         "micro_anomaly_flag": 0
       },
       {
@@ -104750,7 +104750,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7455,
         "z_score_v": 0.8699,
-        "local_kl_drift": 0.0926,
+        "local_kl_drift": 0.0616,
         "micro_anomaly_flag": 0
       },
       {
@@ -104761,7 +104761,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7291,
         "z_score_v": 0.8466,
-        "local_kl_drift": 0.0943,
+        "local_kl_drift": 0.063,
         "micro_anomaly_flag": 0
       }
     ]
@@ -104774,7 +104774,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 412.1394,
+        "optimal_input_u": 412.1222,
         "state_error_x": 63.72
       },
       {
@@ -104819,7 +104819,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 406.826,
+        "optimal_input_u": 406.8088,
         "state_error_x": 5.11
       },
       {
@@ -104864,7 +104864,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 400.9933,
+        "optimal_input_u": 400.9764,
         "state_error_x": 6.81
       },
       {
@@ -104909,7 +104909,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 403.1695,
+        "optimal_input_u": 403.1526,
         "state_error_x": 38.6
       },
       {
@@ -104954,7 +104954,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 394.4914,
+        "optimal_input_u": 394.4748,
         "state_error_x": 18.11
       },
       {
@@ -104999,7 +104999,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 388.5688,
+        "optimal_input_u": 388.5523,
         "state_error_x": 47.76
       },
       {
@@ -105044,7 +105044,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 385.2892,
+        "optimal_input_u": 385.2728,
         "state_error_x": 57.94
       },
       {
@@ -105089,7 +105089,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 398.6674,
+        "optimal_input_u": 398.6506,
         "state_error_x": 21.1
       },
       {
@@ -105134,7 +105134,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 398.97,
+        "optimal_input_u": 398.953,
         "state_error_x": 8.62
       },
       {
@@ -105179,7 +105179,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 395.1217,
+        "optimal_input_u": 395.105,
         "state_error_x": 2.4
       },
       {
@@ -105224,7 +105224,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 393.5944,
+        "optimal_input_u": 393.5776,
         "state_error_x": 36.94
       },
       {
@@ -105269,7 +105269,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 392.1663,
+        "optimal_input_u": 392.1497,
         "state_error_x": 34.43
       },
       {
@@ -105314,7 +105314,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 403.2602,
+        "optimal_input_u": 403.2434,
         "state_error_x": 64.91
       },
       {
@@ -105359,7 +105359,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 405.6131,
+        "optimal_input_u": 405.5958,
         "state_error_x": 18.87
       },
       {
@@ -105404,7 +105404,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 385.6748,
+        "optimal_input_u": 385.6583,
         "state_error_x": 99.67
       },
       {
@@ -105449,7 +105449,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 405.765,
+        "optimal_input_u": 405.7478,
         "state_error_x": 33.29
       },
       {
@@ -105494,7 +105494,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 387.0072,
+        "optimal_input_u": 386.9906,
         "state_error_x": 40.65
       },
       {
@@ -105539,7 +105539,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 403.3111,
+        "optimal_input_u": 403.2942,
         "state_error_x": 28.9
       },
       {
@@ -105584,7 +105584,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 378.6912,
+        "optimal_input_u": 378.6754,
         "state_error_x": 67.65
       },
       {
@@ -105629,7 +105629,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 407.0002,
+        "optimal_input_u": 406.983,
         "state_error_x": 4.79
       },
       {
@@ -105674,7 +105674,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 398.6293,
+        "optimal_input_u": 398.6124,
         "state_error_x": 22.73
       },
       {
@@ -105719,7 +105719,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 399.0378,
+        "optimal_input_u": 399.021,
         "state_error_x": 29.54
       },
       {
@@ -105764,7 +105764,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 399.0874,
+        "optimal_input_u": 399.0709,
         "state_error_x": 40.83
       },
       {
@@ -105809,7 +105809,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 408.6044,
+        "optimal_input_u": 408.5871,
         "state_error_x": 33.43
       },
       {
@@ -105854,7 +105854,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 383.1692,
+        "optimal_input_u": 383.1529,
         "state_error_x": 76.25
       },
       {
@@ -105899,7 +105899,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 400.9161,
+        "optimal_input_u": 400.8992,
         "state_error_x": 17.82
       },
       {
@@ -105944,7 +105944,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 402.1419,
+        "optimal_input_u": 402.1251,
         "state_error_x": 1.33
       },
       {
@@ -105989,7 +105989,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 396.878,
+        "optimal_input_u": 396.8613,
         "state_error_x": 63.95
       },
       {
@@ -106034,7 +106034,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 399.4349,
+        "optimal_input_u": 399.4179,
         "state_error_x": 54.76
       },
       {
@@ -106079,7 +106079,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": 395.5875,
+        "optimal_input_u": 395.5709,
         "state_error_x": 43.18
       },
       {
@@ -106124,7 +106124,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -589.3499,
+        "optimal_input_u": -589.3031,
         "state_error_x": 2217.83
       },
       {
@@ -106169,7 +106169,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -735.5909,
+        "optimal_input_u": -735.5326,
         "state_error_x": 2502.12
       },
       {
@@ -106214,7 +106214,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -817.3195,
+        "optimal_input_u": -817.2545,
         "state_error_x": 2659.03
       },
       {
@@ -106259,7 +106259,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -887.958,
+        "optimal_input_u": -887.8875,
         "state_error_x": 2793.2
       },
       {
@@ -106304,7 +106304,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -834.7826,
+        "optimal_input_u": -834.7164,
         "state_error_x": 2701.46
       },
       {
@@ -106349,7 +106349,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -719.1126,
+        "optimal_input_u": -719.0556,
         "state_error_x": 2471.33
       },
       {
@@ -106394,7 +106394,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -568.6002,
+        "optimal_input_u": -568.5551,
         "state_error_x": 2150.69
       },
       {
@@ -106439,7 +106439,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -350.2596,
+        "optimal_input_u": -350.2318,
         "state_error_x": 1733.59
       },
       {
@@ -106484,7 +106484,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -226.922,
+        "optimal_input_u": -226.9041,
         "state_error_x": 1478.79
       },
       {
@@ -106529,7 +106529,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -116.506,
+        "optimal_input_u": -116.4967,
         "state_error_x": 1286.77
       },
       {
@@ -106574,7 +106574,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -100.4351,
+        "optimal_input_u": -100.4272,
         "state_error_x": 1235.66
       },
       {
@@ -106619,7 +106619,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -145.5528,
+        "optimal_input_u": -145.5413,
         "state_error_x": 1365.62
       },
       {
@@ -106664,7 +106664,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -222.6562,
+        "optimal_input_u": -222.6385,
         "state_error_x": 1482.18
       },
       {
@@ -106709,7 +106709,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -319.713,
+        "optimal_input_u": -319.6876,
         "state_error_x": 1660.08
       },
       {
@@ -106754,7 +106754,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -326.128,
+        "optimal_input_u": -326.1022,
         "state_error_x": 1698.26
       },
       {
@@ -106799,7 +106799,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -328.1023,
+        "optimal_input_u": -328.0763,
         "state_error_x": 1693.28
       },
       {
@@ -106844,7 +106844,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -253.6425,
+        "optimal_input_u": -253.6224,
         "state_error_x": 1536.0
       },
       {
@@ -106889,7 +106889,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -229.4279,
+        "optimal_input_u": -229.4097,
         "state_error_x": 1442.88
       },
       {
@@ -106934,7 +106934,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -178.4139,
+        "optimal_input_u": -178.3998,
         "state_error_x": 1405.29
       },
       {
@@ -106979,7 +106979,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -185.861,
+        "optimal_input_u": -185.8462,
         "state_error_x": 1417.12
       },
       {
@@ -107024,7 +107024,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -269.5116,
+        "optimal_input_u": -269.4902,
         "state_error_x": 1585.4
       },
       {
@@ -107069,7 +107069,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -431.5707,
+        "optimal_input_u": -431.5365,
         "state_error_x": 1897.3
       },
       {
@@ -107114,7 +107114,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -559.4514,
+        "optimal_input_u": -559.407,
         "state_error_x": 2144.49
       },
       {
@@ -107159,7 +107159,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -728.3254,
+        "optimal_input_u": -728.2676,
         "state_error_x": 2462.69
       },
       {
@@ -107204,7 +107204,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -852.8787,
+        "optimal_input_u": -852.811,
         "state_error_x": 2718.47
       },
       {
@@ -107249,7 +107249,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -875.1909,
+        "optimal_input_u": -875.1215,
         "state_error_x": 2775.06
       },
       {
@@ -107294,7 +107294,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -829.633,
+        "optimal_input_u": -829.5671,
         "state_error_x": 2704.35
       },
       {
@@ -107339,7 +107339,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -730.3478,
+        "optimal_input_u": -730.2898,
         "state_error_x": 2480.5
       },
       {
@@ -107384,7 +107384,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -595.3789,
+        "optimal_input_u": -595.3317,
         "state_error_x": 2216.41
       },
       {
@@ -107429,7 +107429,7 @@
         "node_idx": 0,
         "node_label": "00_Motor_Cortex",
         "account_category": "Unknown",
-        "optimal_input_u": -475.0784,
+        "optimal_input_u": -475.0407,
         "state_error_x": 1984.17
       },
       {
