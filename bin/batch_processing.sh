@@ -86,14 +86,28 @@ fi
 # 3. Sequential execution of each analysis process
 ELAPSED_TIMES=()
 total_start=$(date +%s)
+PASSED_COUNT=0
+FAILED_COUNT=0
+FAILED_SCRIPTS=()
 
 for script in "${SCRIPTS[@]}"; do
     echo -e "\n[EXECUTING] ${script}"
     start_time=$(date +%s)
+    set +e
     bash "${ORCH_DIR}/${script}"
+    res=$?
+    set -e
     end_time=$(date +%s)
     elapsed=$((end_time - start_time))
     ELAPSED_TIMES+=($elapsed)
+
+    if [ $res -eq 0 ]; then
+        PASSED_COUNT=$((PASSED_COUNT + 1))
+    else
+        FAILED_COUNT=$((FAILED_COUNT + 1))
+        FAILED_SCRIPTS+=("${script}")
+        echo "❌ [FAILED] Script ${script} exited with code ${res}"
+    fi
 done
 
 find . -name "* 2.md" -delete
@@ -113,6 +127,26 @@ $TLU_PY -m src.utils._99_export_json_summary
 
 total_elapsed=$((total_end - total_start))
 
+# 4. Record execution to regression history ledger (tlu_dev_history/journal.jsonl)
+TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "unknown")
+CURRENT_COMMIT=$(git rev-parse --short HEAD 2>/dev/null || echo "unknown")
+TOTAL_COUNT=${#SCRIPTS[@]}
+
+if [ ${FAILED_COUNT} -eq 0 ]; then
+    OVERALL_STATUS="PASSED"
+else
+    OVERALL_STATUS="FAILED"
+fi
+
+LEDGER_DIR="$(dirname "$0")/../tlu_dev_history"
+LEDGER_FILE="${LEDGER_DIR}/journal.jsonl"
+
+if [ -d "${LEDGER_DIR}" ]; then
+    echo "{\"timestamp\": \"${TIMESTAMP}\", \"record_type\": \"run_record\", \"tool\": \"batch_processing\", \"target_env\": \"${TARGET_ENV:-default}\", \"branch\": \"${CURRENT_BRANCH}\", \"commit_hash\": \"${CURRENT_COMMIT}\", \"counts\": {\"total\": ${TOTAL_COUNT}, \"passed\": ${PASSED_COUNT}, \"failed\": ${FAILED_COUNT}}, \"status\": \"${OVERALL_STATUS}\"}" >> "${LEDGER_FILE}"
+    echo "📜 Recorded batch processing run to ${LEDGER_FILE}"
+fi
+
 echo -e "\n=================================================="
 echo "      TLU Batch Processing Execution Summary      "
 echo "=================================================="
@@ -122,6 +156,13 @@ done
 printf "%-50s : %d sec\n" "run_meta_diagnosis.sh" "$diag_elapsed"
 echo "--------------------------------------------------"
 echo "Total Calculation Time: $total_elapsed sec"
+echo "Status: ${OVERALL_STATUS} (${PASSED_COUNT}/${TOTAL_COUNT} passed)"
 echo "=================================================="
 
-echo -e "\nBatch processing completed successfully."
+if [ ${FAILED_COUNT} -eq 0 ]; then
+    echo -e "\nBatch processing completed successfully."
+    exit 0
+else
+    echo -e "\n❌ Batch processing completed with ${FAILED_COUNT} failure(s)."
+    exit 1
+fi
