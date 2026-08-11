@@ -175,7 +175,7 @@ t_idx,time_label,node_idx,node_label,account_category,optimal_input_u,state_erro
 11,2020-12,8,08_USR_009,Unknown,0.0,1957667.3
 11,2020-12,9,09_USR_010,Unknown,0.0,797.59
 11,2020-12,10,10_STK_001,Unknown,0.0,0.0
-11,2020-12,11,11_STK_002,Unknown,0.0,0.0
+11,2020-12,11,11_STK_002,Unknown,-0.0,0.0
 11,2020-12,12,12_STK_003,Unknown,0.0,0.0
 11,2020-12,13,13_STK_004,Unknown,0.0,0.0
 11,2020-12,14,14_STK_005,Unknown,0.0,0.0

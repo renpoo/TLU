@@ -58747,7 +58747,7 @@
         "node_label": "00_ACC_Accounts_Payable_DPT_Admin",
         "account_category": "Liability",
         "local_internal_energy_u": 75433.08,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -58758,7 +58758,7 @@
         "node_label": "01_ACC_Accounts_Receivable_DPT_Admin",
         "account_category": "Asset",
         "local_internal_energy_u": 143430.16,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -58769,7 +58769,7 @@
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
         "local_internal_energy_u": 68432.69,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -58780,7 +58780,7 @@
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
         "local_internal_energy_u": 22442.71,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -58802,7 +58802,7 @@
         "node_label": "05_ACC_Finished_Goods_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 40741.12,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -58813,7 +58813,7 @@
         "node_label": "06_ACC_Finished_Goods_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 15842.57,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -58846,7 +58846,7 @@
         "node_label": "09_ACC_Sales_Revenue_DPT_Sales",
         "account_category": "Revenue",
         "local_internal_energy_u": 143430.16,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -58857,7 +58857,7 @@
         "node_label": "10_ACC_Work_In_Process_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -58868,7 +58868,7 @@
         "node_label": "11_ACC_Work_In_Process_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -58879,7 +58879,7 @@
         "node_label": "12_ACC_Cash",
         "account_category": "Asset",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -58890,7 +58890,7 @@
         "node_label": "13_ACC_Raw_Materials",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -58901,7 +58901,7 @@
         "node_label": "14_ACC_Finished_Goods",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -58912,7 +58912,7 @@
         "node_label": "15_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 2000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -58923,7 +58923,7 @@
         "node_label": "00_ACC_Accounts_Payable_DPT_Admin",
         "account_category": "Liability",
         "local_internal_energy_u": 120231.59,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 22399.255,
         "local_grad_t": -13312.395
       },
@@ -58934,7 +58934,7 @@
         "node_label": "01_ACC_Accounts_Receivable_DPT_Admin",
         "account_category": "Asset",
         "local_internal_energy_u": 282219.69,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 69394.765,
         "local_grad_t": -29634.42
       },
@@ -58945,7 +58945,7 @@
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
         "local_internal_energy_u": 140683.45,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 36125.38,
         "local_grad_t": -12414.235
       },
@@ -58956,7 +58956,7 @@
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
         "local_internal_energy_u": 60256.14,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 18906.715,
         "local_grad_t": -12649.97
       },
@@ -58978,7 +58978,7 @@
         "node_label": "05_ACC_Finished_Goods_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 88163.41,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 23711.145,
         "local_grad_t": -34387.525
       },
@@ -58989,7 +58989,7 @@
         "node_label": "06_ACC_Finished_Goods_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 3329.08,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 6256.745,
         "local_grad_t": 757.01
       },
@@ -59022,7 +59022,7 @@
         "node_label": "09_ACC_Sales_Revenue_DPT_Sales",
         "account_category": "Revenue",
         "local_internal_energy_u": 318180.88,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 87375.36,
         "local_grad_t": -17980.595
       },
@@ -59033,7 +59033,7 @@
         "node_label": "10_ACC_Work_In_Process_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 55197.26
       },
@@ -59044,7 +59044,7 @@
         "node_label": "11_ACC_Work_In_Process_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 37742.86
       },
@@ -59055,7 +59055,7 @@
         "node_label": "12_ACC_Cash",
         "account_category": "Asset",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59066,7 +59066,7 @@
         "node_label": "13_ACC_Raw_Materials",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59077,7 +59077,7 @@
         "node_label": "14_ACC_Finished_Goods",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59088,7 +59088,7 @@
         "node_label": "15_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 2000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59099,7 +59099,7 @@
         "node_label": "00_ACC_Accounts_Payable_DPT_Admin",
         "account_category": "Liability",
         "local_internal_energy_u": 94749.68,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 18346.5567,
         "local_grad_t": 21972.4206
       },
@@ -59110,7 +59110,7 @@
         "node_label": "01_ACC_Accounts_Receivable_DPT_Admin",
         "account_category": "Asset",
         "local_internal_energy_u": 315545.19,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 74533.1441,
         "local_grad_t": 16449.4548
       },
@@ -59121,7 +59121,7 @@
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
         "local_internal_energy_u": 203593.73,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 55223.1658,
         "local_grad_t": -2172.4564
       },
@@ -59132,7 +59132,7 @@
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
         "local_internal_energy_u": 90949.61,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 28018.1289,
         "local_grad_t": -20592.3719
       },
@@ -59154,7 +59154,7 @@
         "node_label": "05_ACC_Finished_Goods_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 169228.43,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 53050.7094,
         "local_grad_t": -103337.5589
       },
@@ -59165,7 +59165,7 @@
         "node_label": "06_ACC_Finished_Goods_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 1846.49,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 7425.757,
         "local_grad_t": 6332.2614
       },
@@ -59198,7 +59198,7 @@
         "node_label": "09_ACC_Sales_Revenue_DPT_Sales",
         "account_category": "Revenue",
         "local_internal_energy_u": 468585.33,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 132868.0203,
         "local_grad_t": -58334.8762
       },
@@ -59209,7 +59209,7 @@
         "node_label": "10_ACC_Work_In_Process_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 111716.2433
       },
@@ -59220,7 +59220,7 @@
         "node_label": "11_ACC_Work_In_Process_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 66091.2909
       },
@@ -59231,7 +59231,7 @@
         "node_label": "12_ACC_Cash",
         "account_category": "Asset",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59242,7 +59242,7 @@
         "node_label": "13_ACC_Raw_Materials",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59253,7 +59253,7 @@
         "node_label": "14_ACC_Finished_Goods",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59264,7 +59264,7 @@
         "node_label": "15_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 2000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59275,7 +59275,7 @@
         "node_label": "00_ACC_Accounts_Payable_DPT_Admin",
         "account_category": "Liability",
         "local_internal_energy_u": 138984.89,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 24208.2603,
         "local_grad_t": 16960.7876
       },
@@ -59286,7 +59286,7 @@
         "node_label": "01_ACC_Accounts_Receivable_DPT_Admin",
         "account_category": "Asset",
         "local_internal_energy_u": 227273.44,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 65114.0317,
         "local_grad_t": 59005.3707
       },
@@ -59297,7 +59297,7 @@
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
         "local_internal_energy_u": 237853.96,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 64597.7072,
         "local_grad_t": 19611.6098
       },
@@ -59308,7 +59308,7 @@
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
         "local_internal_energy_u": 109867.1,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 33097.6611,
         "local_grad_t": -26630.4043
       },
@@ -59330,7 +59330,7 @@
         "node_label": "05_ACC_Finished_Goods_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 262357.01,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 84209.3171,
         "local_grad_t": -187361.445
       },
@@ -59341,7 +59341,7 @@
         "node_label": "06_ACC_Finished_Goods_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 7356.63,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 6467.2567,
         "local_grad_t": 14364.6898
       },
@@ -59374,7 +59374,7 @@
         "node_label": "09_ACC_Sales_Revenue_DPT_Sales",
         "account_category": "Revenue",
         "local_internal_energy_u": 552705.74,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 155818.374,
         "local_grad_t": -90704.3423
       },
@@ -59385,7 +59385,7 @@
         "node_label": "10_ACC_Work_In_Process_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 149586.6253
       },
@@ -59396,7 +59396,7 @@
         "node_label": "11_ACC_Work_In_Process_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 71844.565
       },
@@ -59407,7 +59407,7 @@
         "node_label": "12_ACC_Cash",
         "account_category": "Asset",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59418,7 +59418,7 @@
         "node_label": "13_ACC_Raw_Materials",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59429,7 +59429,7 @@
         "node_label": "14_ACC_Finished_Goods",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59440,7 +59440,7 @@
         "node_label": "15_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 2000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59451,7 +59451,7 @@
         "node_label": "00_ACC_Accounts_Payable_DPT_Admin",
         "account_category": "Liability",
         "local_internal_energy_u": 135414.38,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 17418.8319,
         "local_grad_t": 25539.2948
       },
@@ -59462,7 +59462,7 @@
         "node_label": "01_ACC_Accounts_Receivable_DPT_Admin",
         "account_category": "Asset",
         "local_internal_energy_u": 169763.73,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 55411.8246,
         "local_grad_t": 32756.5359
       },
@@ -59473,7 +59473,7 @@
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
         "local_internal_energy_u": 266741.28,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 46961.5811,
         "local_grad_t": 47778.9979
       },
@@ -59484,7 +59484,7 @@
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
         "local_internal_energy_u": 120697.46,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 22935.4969,
         "local_grad_t": -9267.6999
       },
@@ -59506,7 +59506,7 @@
         "node_label": "05_ACC_Finished_Goods_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 339410.78,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 94740.579,
         "local_grad_t": -236299.6028
       },
@@ -59517,7 +59517,7 @@
         "node_label": "06_ACC_Finished_Goods_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 33598.57,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 13667.7971,
         "local_grad_t": -17107.3412
       },
@@ -59550,7 +59550,7 @@
         "node_label": "09_ACC_Sales_Revenue_DPT_Sales",
         "account_category": "Revenue",
         "local_internal_energy_u": 617711.86,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 112049.9268,
         "local_grad_t": -56638.1022
       },
@@ -59561,7 +59561,7 @@
         "node_label": "10_ACC_Work_In_Process_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 155117.5375
       },
@@ -59572,7 +59572,7 @@
         "node_label": "11_ACC_Work_In_Process_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 74044.7556
       },
@@ -59583,7 +59583,7 @@
         "node_label": "12_ACC_Cash",
         "account_category": "Asset",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59594,7 +59594,7 @@
         "node_label": "13_ACC_Raw_Materials",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59605,7 +59605,7 @@
         "node_label": "14_ACC_Finished_Goods",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59616,7 +59616,7 @@
         "node_label": "15_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 2000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59627,7 +59627,7 @@
         "node_label": "00_ACC_Accounts_Payable_DPT_Admin",
         "account_category": "Liability",
         "local_internal_energy_u": 125589.49,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 17410.8071,
         "local_grad_t": 18667.6912
       },
@@ -59638,7 +59638,7 @@
         "node_label": "01_ACC_Accounts_Receivable_DPT_Admin",
         "account_category": "Asset",
         "local_internal_energy_u": 151758.8,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 63837.7448,
         "local_grad_t": -9853.5397
       },
@@ -59649,7 +59649,7 @@
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
         "local_internal_energy_u": 307094.58,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 38022.1415,
         "local_grad_t": 55216.2167
       },
@@ -59660,7 +59660,7 @@
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
         "local_internal_energy_u": 134195.36,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 15819.9936,
         "local_grad_t": 5054.2334
       },
@@ -59682,7 +59682,7 @@
         "node_label": "05_ACC_Finished_Goods_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 421313.41,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 93238.3582,
         "local_grad_t": -240817.3115
       },
@@ -59693,7 +59693,7 @@
         "node_label": "06_ACC_Finished_Goods_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 50743.36,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 20874.2269,
         "local_grad_t": -45927.0655
       },
@@ -59726,7 +59726,7 @@
         "node_label": "09_ACC_Sales_Revenue_DPT_Sales",
         "account_category": "Revenue",
         "local_internal_energy_u": 704651.24,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 86571.4176,
         "local_grad_t": -22733.6728
       },
@@ -59737,7 +59737,7 @@
         "node_label": "10_ACC_Work_In_Process_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 146727.6637
       },
@@ -59748,7 +59748,7 @@
         "node_label": "11_ACC_Work_In_Process_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 74363.5323
       },
@@ -59759,7 +59759,7 @@
         "node_label": "12_ACC_Cash",
         "account_category": "Asset",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59770,7 +59770,7 @@
         "node_label": "13_ACC_Raw_Materials",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59781,7 +59781,7 @@
         "node_label": "14_ACC_Finished_Goods",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59792,7 +59792,7 @@
         "node_label": "15_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 2000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59803,7 +59803,7 @@
         "node_label": "00_ACC_Accounts_Payable_DPT_Admin",
         "account_category": "Liability",
         "local_internal_energy_u": 117988.2,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 8257.671,
         "local_grad_t": 47851.4715
       },
@@ -59814,7 +59814,7 @@
         "node_label": "01_ACC_Accounts_Receivable_DPT_Admin",
         "account_category": "Asset",
         "local_internal_energy_u": 245049.93,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 38746.9802,
         "local_grad_t": 85546.9929
       },
@@ -59825,7 +59825,7 @@
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
         "local_internal_energy_u": 378546.96,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 52830.8637,
         "local_grad_t": 23194.2077
       },
@@ -59836,7 +59836,7 @@
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
         "local_internal_energy_u": 169073.87,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 22295.7162,
         "local_grad_t": -2565.5278
       },
@@ -59858,7 +59858,7 @@
         "node_label": "05_ACC_Finished_Goods_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 459245.84,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 76025.0714,
         "local_grad_t": -174384.4218
       },
@@ -59869,7 +59869,7 @@
         "node_label": "06_ACC_Finished_Goods_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 58900.48,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 19730.1883,
         "local_grad_t": -36034.9203
       },
@@ -59902,7 +59902,7 @@
         "node_label": "09_ACC_Sales_Revenue_DPT_Sales",
         "account_category": "Revenue",
         "local_internal_energy_u": 875874.8,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 121263.0248,
         "local_grad_t": -82516.0446
       },
@@ -59913,7 +59913,7 @@
         "node_label": "10_ACC_Work_In_Process_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 140391.8849
       },
@@ -59924,7 +59924,7 @@
         "node_label": "11_ACC_Work_In_Process_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 84097.0019
       },
@@ -59935,7 +59935,7 @@
         "node_label": "12_ACC_Cash",
         "account_category": "Asset",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59946,7 +59946,7 @@
         "node_label": "13_ACC_Raw_Materials",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59957,7 +59957,7 @@
         "node_label": "14_ACC_Finished_Goods",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59968,7 +59968,7 @@
         "node_label": "15_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 2000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -59979,7 +59979,7 @@
         "node_label": "00_ACC_Accounts_Payable_DPT_Admin",
         "account_category": "Liability",
         "local_internal_energy_u": 103581.86,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 11627.4663,
         "local_grad_t": 60045.3411
       },
@@ -59990,7 +59990,7 @@
         "node_label": "01_ACC_Accounts_Receivable_DPT_Admin",
         "account_category": "Asset",
         "local_internal_energy_u": 333393.61,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 71705.1131,
         "local_grad_t": 81817.665
       },
@@ -60001,7 +60001,7 @@
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
         "local_internal_energy_u": 458058.82,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 72865.0638,
         "local_grad_t": -13291.2406
       },
@@ -60012,7 +60012,7 @@
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
         "local_internal_energy_u": 207429.51,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 33630.181,
         "local_grad_t": -22856.8121
       },
@@ -60034,7 +60034,7 @@
         "node_label": "05_ACC_Finished_Goods_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 501128.62,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 59573.8231,
         "local_grad_t": -105212.1401
       },
@@ -60045,7 +60045,7 @@
         "node_label": "06_ACC_Finished_Goods_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 60948.76,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 10773.3688,
         "local_grad_t": 1954.3401
       },
@@ -60078,7 +60078,7 @@
         "node_label": "09_ACC_Sales_Revenue_DPT_Sales",
         "account_category": "Revenue",
         "local_internal_energy_u": 1060436.36,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 169590.5125,
         "local_grad_t": -97885.3994
       },
@@ -60089,7 +60089,7 @@
         "node_label": "10_ACC_Work_In_Process_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 142874.0969
       },
@@ -60100,7 +60100,7 @@
         "node_label": "11_ACC_Work_In_Process_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 94073.6426
       },
@@ -60111,7 +60111,7 @@
         "node_label": "12_ACC_Cash",
         "account_category": "Asset",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60122,7 +60122,7 @@
         "node_label": "13_ACC_Raw_Materials",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60133,7 +60133,7 @@
         "node_label": "14_ACC_Finished_Goods",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60144,7 +60144,7 @@
         "node_label": "15_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 2000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60155,7 +60155,7 @@
         "node_label": "00_ACC_Accounts_Payable_DPT_Admin",
         "account_category": "Liability",
         "local_internal_energy_u": 150510.45,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 17012.3146,
         "local_grad_t": 31603.7727
       },
@@ -60166,7 +60166,7 @@
         "node_label": "01_ACC_Accounts_Receivable_DPT_Admin",
         "account_category": "Asset",
         "local_internal_energy_u": 330460.63,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 74471.8819,
         "local_grad_t": 79002.1039
       },
@@ -60177,7 +60177,7 @@
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
         "local_internal_energy_u": 518215.92,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 79810.8293,
         "local_grad_t": -23438.7413
       },
@@ -60188,7 +60188,7 @@
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
         "local_internal_energy_u": 236371.89,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 38614.7919,
         "local_grad_t": -34737.7594
       },
@@ -60210,7 +60210,7 @@
         "node_label": "05_ACC_Finished_Goods_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 573247.52,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 56372.088,
         "local_grad_t": -89038.7239
       },
@@ -60221,7 +60221,7 @@
         "node_label": "06_ACC_Finished_Goods_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 55301.82,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 3877.0324,
         "local_grad_t": 27250.4052
       },
@@ -60254,7 +60254,7 @@
         "node_label": "09_ACC_Sales_Revenue_DPT_Sales",
         "account_category": "Revenue",
         "local_internal_energy_u": 1203882.95,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 188308.6063,
         "local_grad_t": -113836.7245
       },
@@ -60265,7 +60265,7 @@
         "node_label": "10_ACC_Work_In_Process_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 122000.4899
       },
@@ -60276,7 +60276,7 @@
         "node_label": "11_ACC_Work_In_Process_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 69505.4344
       },
@@ -60287,7 +60287,7 @@
         "node_label": "12_ACC_Cash",
         "account_category": "Asset",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60298,7 +60298,7 @@
         "node_label": "13_ACC_Raw_Materials",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60309,7 +60309,7 @@
         "node_label": "14_ACC_Finished_Goods",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60320,7 +60320,7 @@
         "node_label": "15_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 2000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60331,7 +60331,7 @@
         "node_label": "00_ACC_Accounts_Payable_DPT_Admin",
         "account_category": "Liability",
         "local_internal_energy_u": 128731.61,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 17120.4932,
         "local_grad_t": 26219.022
       },
@@ -60342,7 +60342,7 @@
         "node_label": "01_ACC_Accounts_Receivable_DPT_Admin",
         "account_category": "Asset",
         "local_internal_energy_u": 235261.41,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 46027.7302,
         "local_grad_t": 96369.0701
       },
@@ -60353,7 +60353,7 @@
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
         "local_internal_energy_u": 555775.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 66996.8961,
         "local_grad_t": 11227.154
       },
@@ -60364,7 +60364,7 @@
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
         "local_internal_energy_u": 253487.08,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 31993.8075,
         "local_grad_t": -27074.6387
       },
@@ -60386,7 +60386,7 @@
         "node_label": "05_ACC_Finished_Goods_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 665373.67,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 78224.0501,
         "local_grad_t": -167181.1702
       },
@@ -60397,7 +60397,7 @@
         "node_label": "06_ACC_Finished_Goods_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 68740.54,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 4919.1688,
         "local_grad_t": 17730.3851
       },
@@ -60430,7 +60430,7 @@
         "node_label": "09_ACC_Sales_Revenue_DPT_Sales",
         "account_category": "Revenue",
         "local_internal_energy_u": 1292631.98,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 157660.0345,
         "local_grad_t": -111632.3043
       },
@@ -60441,7 +60441,7 @@
         "node_label": "10_ACC_Work_In_Process_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 138684.0585
       },
@@ -60452,7 +60452,7 @@
         "node_label": "11_ACC_Work_In_Process_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 65379.1772
       },
@@ -60463,7 +60463,7 @@
         "node_label": "12_ACC_Cash",
         "account_category": "Asset",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60474,7 +60474,7 @@
         "node_label": "13_ACC_Raw_Materials",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60485,7 +60485,7 @@
         "node_label": "14_ACC_Finished_Goods",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60496,7 +60496,7 @@
         "node_label": "15_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 2000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60507,7 +60507,7 @@
         "node_label": "00_ACC_Accounts_Payable_DPT_Admin",
         "account_category": "Liability",
         "local_internal_energy_u": 150056.45,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 19241.821,
         "local_grad_t": 38398.1348
       },
@@ -60518,7 +60518,7 @@
         "node_label": "01_ACC_Accounts_Receivable_DPT_Admin",
         "account_category": "Asset",
         "local_internal_energy_u": 148417.97,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 76484.771,
         "local_grad_t": 4256.3957
       },
@@ -60529,7 +60529,7 @@
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
         "local_internal_energy_u": 580727.52,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 46203.322,
         "local_grad_t": 51191.7529
       },
@@ -60540,7 +60540,7 @@
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
         "local_internal_energy_u": 265350.19,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 21776.0925,
         "local_grad_t": -10883.2633
       },
@@ -60562,7 +60562,7 @@
         "node_label": "05_ACC_Finished_Goods_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 760243.23,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 97395.0749,
         "local_grad_t": -245391.8232
       },
@@ -60573,7 +60573,7 @@
         "node_label": "06_ACC_Finished_Goods_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 84277.82,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 10892.8292,
         "local_grad_t": -10312.3157
       },
@@ -60606,7 +60606,7 @@
         "node_label": "09_ACC_Sales_Revenue_DPT_Sales",
         "account_category": "Revenue",
         "local_internal_energy_u": 1349609.22,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 109107.6347,
         "local_grad_t": -32622.8637
       },
@@ -60617,7 +60617,7 @@
         "node_label": "10_ACC_Work_In_Process_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 174276.8517
       },
@@ -60628,7 +60628,7 @@
         "node_label": "11_ACC_Work_In_Process_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 87774.606
       },
@@ -60639,7 +60639,7 @@
         "node_label": "12_ACC_Cash",
         "account_category": "Asset",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60650,7 +60650,7 @@
         "node_label": "13_ACC_Raw_Materials",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60661,7 +60661,7 @@
         "node_label": "14_ACC_Finished_Goods",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60672,7 +60672,7 @@
         "node_label": "15_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 2000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60683,7 +60683,7 @@
         "node_label": "00_ACC_Accounts_Payable_DPT_Admin",
         "account_category": "Liability",
         "local_internal_energy_u": 122380.81,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 12566.879,
         "local_grad_t": 30761.8801
       },
@@ -60694,7 +60694,7 @@
         "node_label": "01_ACC_Accounts_Receivable_DPT_Admin",
         "account_category": "Asset",
         "local_internal_energy_u": 138128.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 77571.2688,
         "local_grad_t": -42883.4165
       },
@@ -60705,7 +60705,7 @@
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
         "local_internal_energy_u": 619685.1,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 36945.2308,
         "local_grad_t": 53829.8979
       },
@@ -60716,7 +60716,7 @@
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
         "local_internal_energy_u": 279189.15,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 15729.8203,
         "local_grad_t": -3112.4808
       },
@@ -60738,7 +60738,7 @@
         "node_label": "05_ACC_Finished_Goods_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 809933.74,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 90775.1287,
         "local_grad_t": -144605.0266
       },
@@ -60749,7 +60749,7 @@
         "node_label": "06_ACC_Finished_Goods_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 86420.47,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 12617.3395,
         "local_grad_t": -9504.8587
       },
@@ -60760,7 +60760,7 @@
         "node_label": "07_ACC_Mfg_Overhead_Exp_DPT_Mfg_Support",
         "account_category": "Expense",
         "local_internal_energy_u": 25001.12,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 9967.1222,
         "local_grad_t": 18556.0606
       },
@@ -60782,7 +60782,7 @@
         "node_label": "09_ACC_Sales_Revenue_DPT_Sales",
         "account_category": "Revenue",
         "local_internal_energy_u": 1433745.11,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 83735.9384,
         "local_grad_t": -6164.6695
       },
@@ -60793,7 +60793,7 @@
         "node_label": "10_ACC_Work_In_Process_DPT_Prod_A",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 146670.7667
       },
@@ -60804,7 +60804,7 @@
         "node_label": "11_ACC_Work_In_Process_DPT_Prod_B",
         "account_category": "Unknown",
         "local_internal_energy_u": 0.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 68512.9775
       },
@@ -60815,7 +60815,7 @@
         "node_label": "12_ACC_Cash",
         "account_category": "Asset",
         "local_internal_energy_u": 1000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60826,7 +60826,7 @@
         "node_label": "13_ACC_Raw_Materials",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60837,7 +60837,7 @@
         "node_label": "14_ACC_Finished_Goods",
         "account_category": "Unknown",
         "local_internal_energy_u": 500000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       },
@@ -60848,7 +60848,7 @@
         "node_label": "15_ACC_Equity_Capital",
         "account_category": "Equity",
         "local_internal_energy_u": 2000000.0,
-        "local_entropy_s": -0.0,
+        "local_entropy_s": 0.0,
         "local_temperature_t": 0.0,
         "local_grad_t": 0.0
       }
@@ -143902,7 +143902,7 @@
         "t_idx": 1,
         "time_label": "2020-02",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": -0.1078,
+        "kl_divergence_drift": 1.2184,
         "z_score_X": 0.0,
         "z_score_v": 0.0,
         "anomaly_flag": 0
@@ -143911,16 +143911,16 @@
         "t_idx": 2,
         "time_label": "2020-03",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 2.0203,
+        "kl_divergence_drift": 0.3742,
         "z_score_X": 0.7071,
         "z_score_v": 1.5428,
-        "anomaly_flag": 1
+        "anomaly_flag": 0
       },
       {
         "t_idx": 3,
         "time_label": "2020-04",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.5978,
+        "kl_divergence_drift": 0.0381,
         "z_score_X": 0.5774,
         "z_score_v": 3.5581,
         "anomaly_flag": 1
@@ -143929,7 +143929,7 @@
         "t_idx": 4,
         "time_label": "2020-05",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.1911,
+        "kl_divergence_drift": 0.0646,
         "z_score_X": 1.636,
         "z_score_v": 1.0242,
         "anomaly_flag": 0
@@ -143938,7 +143938,7 @@
         "t_idx": 5,
         "time_label": "2020-06",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0225,
+        "kl_divergence_drift": 0.0078,
         "z_score_X": 0.9985,
         "z_score_v": 0.9062,
         "anomaly_flag": 0
@@ -143947,7 +143947,7 @@
         "t_idx": 6,
         "time_label": "2020-07",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.1021,
+        "kl_divergence_drift": 0.0351,
         "z_score_X": 1.2735,
         "z_score_v": 6.5147,
         "anomaly_flag": 1
@@ -143956,7 +143956,7 @@
         "t_idx": 7,
         "time_label": "2020-08",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0047,
+        "kl_divergence_drift": 0.0016,
         "z_score_X": 0.7095,
         "z_score_v": 1.1163,
         "anomaly_flag": 0
@@ -143965,7 +143965,7 @@
         "t_idx": 8,
         "time_label": "2020-09",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.3331,
+        "kl_divergence_drift": 0.1177,
         "z_score_X": 2.3803,
         "z_score_v": 3.4729,
         "anomaly_flag": 1
@@ -143974,7 +143974,7 @@
         "t_idx": 9,
         "time_label": "2020-10",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.0343,
+        "kl_divergence_drift": 0.012,
         "z_score_X": 1.3524,
         "z_score_v": 1.7142,
         "anomaly_flag": 0
@@ -143983,7 +143983,7 @@
         "t_idx": 10,
         "time_label": "2020-11",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.014,
+        "kl_divergence_drift": 0.0049,
         "z_score_X": 1.1638,
         "z_score_v": 1.0615,
         "anomaly_flag": 0
@@ -143992,7 +143992,7 @@
         "t_idx": 11,
         "time_label": "2020-12",
         "conservation_residual": 0.0,
-        "kl_divergence_drift": 0.18,
+        "kl_divergence_drift": 1.0623,
         "z_score_X": 24.0982,
         "z_score_v": 1.2444,
         "anomaly_flag": 1
@@ -144194,8 +144194,8 @@
         "account_category": "Asset",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 20.7233,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 1.0,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 1,
@@ -144227,8 +144227,8 @@
         "account_category": "Asset",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 3.0564,
-        "micro_anomaly_flag": 1
+        "local_kl_drift": 0.1878,
+        "micro_anomaly_flag": 0
       },
       {
         "t_idx": 1,
@@ -144260,7 +144260,7 @@
         "account_category": "Expense",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 0.0375,
+        "local_kl_drift": 0.0188,
         "micro_anomaly_flag": 0
       },
       {
@@ -144271,7 +144271,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.0,
         "z_score_v": 0.0,
-        "local_kl_drift": 0.0223,
+        "local_kl_drift": 0.0119,
         "micro_anomaly_flag": 0
       },
       {
@@ -144370,7 +144370,7 @@
         "account_category": "Asset",
         "z_score_X": 1.0,
         "z_score_v": 46.4525,
-        "local_kl_drift": 0.6931,
+        "local_kl_drift": 0.0858,
         "micro_anomaly_flag": 1
       },
       {
@@ -144403,7 +144403,7 @@
         "account_category": "Asset",
         "z_score_X": 1.0,
         "z_score_v": 1.7093,
-        "local_kl_drift": 0.6871,
+        "local_kl_drift": 0.2776,
         "micro_anomaly_flag": 0
       },
       {
@@ -144436,7 +144436,7 @@
         "account_category": "Expense",
         "z_score_X": 0.9988,
         "z_score_v": 0.3357,
-        "local_kl_drift": 0.0009,
+        "local_kl_drift": 0.0004,
         "micro_anomaly_flag": 0
       },
       {
@@ -144447,7 +144447,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.0001,
         "z_score_v": 6.2704,
-        "local_kl_drift": 0.0193,
+        "local_kl_drift": 0.0104,
         "micro_anomaly_flag": 1
       },
       {
@@ -144546,7 +144546,7 @@
         "account_category": "Asset",
         "z_score_X": 0.7071,
         "z_score_v": 3.8047,
-        "local_kl_drift": 0.4055,
+        "local_kl_drift": 0.0337,
         "micro_anomaly_flag": 1
       },
       {
@@ -144579,7 +144579,7 @@
         "account_category": "Asset",
         "z_score_X": 0.7071,
         "z_score_v": 10.8871,
-        "local_kl_drift": 0.0034,
+        "local_kl_drift": 0.0017,
         "micro_anomaly_flag": 1
       },
       {
@@ -144612,7 +144612,7 @@
         "account_category": "Expense",
         "z_score_X": 0.7078,
         "z_score_v": 1.4544,
-        "local_kl_drift": 0.0048,
+        "local_kl_drift": 0.0024,
         "micro_anomaly_flag": 0
       },
       {
@@ -144623,7 +144623,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7074,
         "z_score_v": 0.5099,
-        "local_kl_drift": 0.0006,
+        "local_kl_drift": 0.0003,
         "micro_anomaly_flag": 0
       },
       {
@@ -144755,7 +144755,7 @@
         "account_category": "Asset",
         "z_score_X": 0.0299,
         "z_score_v": 0.157,
-        "local_kl_drift": 0.0751,
+        "local_kl_drift": 0.0372,
         "micro_anomaly_flag": 0
       },
       {
@@ -144788,7 +144788,7 @@
         "account_category": "Expense",
         "z_score_X": 2.947,
         "z_score_v": 2.2864,
-        "local_kl_drift": 0.0261,
+        "local_kl_drift": 0.013,
         "micro_anomaly_flag": 0
       },
       {
@@ -144799,7 +144799,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.4335,
         "z_score_v": 0.777,
-        "local_kl_drift": 0.0312,
+        "local_kl_drift": 0.0144,
         "micro_anomaly_flag": 0
       },
       {
@@ -144931,7 +144931,7 @@
         "account_category": "Asset",
         "z_score_X": 1.1717,
         "z_score_v": 0.8538,
-        "local_kl_drift": 0.0146,
+        "local_kl_drift": 0.0073,
         "micro_anomaly_flag": 0
       },
       {
@@ -144964,7 +144964,7 @@
         "account_category": "Expense",
         "z_score_X": 1.2247,
         "z_score_v": 1.5321,
-        "local_kl_drift": 0.0009,
+        "local_kl_drift": 0.0004,
         "micro_anomaly_flag": 0
       },
       {
@@ -144975,7 +144975,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.6736,
         "z_score_v": 0.049,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 0
       },
       {
@@ -145107,7 +145107,7 @@
         "account_category": "Asset",
         "z_score_X": 1.5658,
         "z_score_v": 1.6773,
-        "local_kl_drift": 0.0323,
+        "local_kl_drift": 0.0162,
         "micro_anomaly_flag": 0
       },
       {
@@ -145140,7 +145140,7 @@
         "account_category": "Expense",
         "z_score_X": 0.0286,
         "z_score_v": 0.4397,
-        "local_kl_drift": 0.0217,
+        "local_kl_drift": 0.0109,
         "micro_anomaly_flag": 0
       },
       {
@@ -145151,7 +145151,7 @@
         "account_category": "Unknown",
         "z_score_X": 5.23,
         "z_score_v": 1.1375,
-        "local_kl_drift": 0.0167,
+        "local_kl_drift": 0.008,
         "micro_anomaly_flag": 1
       },
       {
@@ -145283,7 +145283,7 @@
         "account_category": "Asset",
         "z_score_X": 0.6788,
         "z_score_v": 0.3789,
-        "local_kl_drift": 0.0012,
+        "local_kl_drift": 0.0006,
         "micro_anomaly_flag": 0
       },
       {
@@ -145316,7 +145316,7 @@
         "account_category": "Expense",
         "z_score_X": 0.6946,
         "z_score_v": 0.3969,
-        "local_kl_drift": 0.002,
+        "local_kl_drift": 0.001,
         "micro_anomaly_flag": 0
       },
       {
@@ -145459,7 +145459,7 @@
         "account_category": "Asset",
         "z_score_X": 4.3461,
         "z_score_v": 6.6691,
-        "local_kl_drift": 0.1527,
+        "local_kl_drift": 0.0776,
         "micro_anomaly_flag": 1
       },
       {
@@ -145492,7 +145492,7 @@
         "account_category": "Expense",
         "z_score_X": 0.3465,
         "z_score_v": 0.0396,
-        "local_kl_drift": 0.058,
+        "local_kl_drift": 0.0292,
         "micro_anomaly_flag": 0
       },
       {
@@ -145503,7 +145503,7 @@
         "account_category": "Unknown",
         "z_score_X": 2.2379,
         "z_score_v": 1.5056,
-        "local_kl_drift": 0.0201,
+        "local_kl_drift": 0.0108,
         "micro_anomaly_flag": 0
       },
       {
@@ -145635,7 +145635,7 @@
         "account_category": "Asset",
         "z_score_X": 1.1991,
         "z_score_v": 1.0623,
-        "local_kl_drift": 0.0171,
+        "local_kl_drift": 0.0086,
         "micro_anomaly_flag": 0
       },
       {
@@ -145668,7 +145668,7 @@
         "account_category": "Expense",
         "z_score_X": 3.7217,
         "z_score_v": 3.2933,
-        "local_kl_drift": 0.0002,
+        "local_kl_drift": 0.0001,
         "micro_anomaly_flag": 1
       },
       {
@@ -145679,7 +145679,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.4378,
         "z_score_v": 1.304,
-        "local_kl_drift": 0.0064,
+        "local_kl_drift": 0.0033,
         "micro_anomaly_flag": 0
       },
       {
@@ -145811,7 +145811,7 @@
         "account_category": "Asset",
         "z_score_X": 1.2441,
         "z_score_v": 0.7413,
-        "local_kl_drift": 0.0075,
+        "local_kl_drift": 0.0038,
         "micro_anomaly_flag": 0
       },
       {
@@ -145855,7 +145855,7 @@
         "account_category": "Unknown",
         "z_score_X": 0.7519,
         "z_score_v": 0.2011,
-        "local_kl_drift": 0.0022,
+        "local_kl_drift": 0.0011,
         "micro_anomaly_flag": 0
       },
       {
@@ -145987,7 +145987,7 @@
         "account_category": "Asset",
         "z_score_X": 14.558,
         "z_score_v": 13.4449,
-        "local_kl_drift": 0.1143,
+        "local_kl_drift": 0.0573,
         "micro_anomaly_flag": 1
       },
       {
@@ -146020,7 +146020,7 @@
         "account_category": "Expense",
         "z_score_X": 27.6287,
         "z_score_v": 19.9921,
-        "local_kl_drift": 0.0,
+        "local_kl_drift": 1.0,
         "micro_anomaly_flag": 1
       },
       {
@@ -146031,7 +146031,7 @@
         "account_category": "Unknown",
         "z_score_X": 1.814,
         "z_score_v": 1.5316,
-        "local_kl_drift": 0.0105,
+        "local_kl_drift": 0.005,
         "micro_anomaly_flag": 0
       },
       {
@@ -146184,7 +146184,7 @@
         "node_idx": 7,
         "node_label": "07_ACC_Mfg_Overhead_Exp_DPT_Mfg_Support",
         "account_category": "Expense",
-        "optimal_input_u": -31701.8564,
+        "optimal_input_u": -31700.0273,
         "state_error_x": 2515.41
       },
       {
@@ -146283,7 +146283,7 @@
         "node_idx": 2,
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
-        "optimal_input_u": -1220.1659,
+        "optimal_input_u": -1220.1613,
         "state_error_x": 72250.76
       },
       {
@@ -146292,7 +146292,7 @@
         "node_idx": 3,
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
-        "optimal_input_u": -121.8292,
+        "optimal_input_u": -121.8291,
         "state_error_x": 37813.43
       },
       {
@@ -146328,7 +146328,7 @@
         "node_idx": 7,
         "node_label": "07_ACC_Mfg_Overhead_Exp_DPT_Mfg_Support",
         "account_category": "Expense",
-        "optimal_input_u": -32662.6448,
+        "optimal_input_u": -32661.2706,
         "state_error_x": 1241.06
       },
       {
@@ -146427,7 +146427,7 @@
         "node_idx": 2,
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
-        "optimal_input_u": -4921.5442,
+        "optimal_input_u": -4921.5286,
         "state_error_x": 62910.28
       },
       {
@@ -146436,7 +146436,7 @@
         "node_idx": 3,
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
-        "optimal_input_u": -576.3226,
+        "optimal_input_u": -576.3205,
         "state_error_x": 30693.47
       },
       {
@@ -146472,7 +146472,7 @@
         "node_idx": 7,
         "node_label": "07_ACC_Mfg_Overhead_Exp_DPT_Mfg_Support",
         "account_category": "Expense",
-        "optimal_input_u": -35989.1373,
+        "optimal_input_u": -35986.6843,
         "state_error_x": 1267.63
       },
       {
@@ -146571,7 +146571,7 @@
         "node_idx": 2,
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
-        "optimal_input_u": -3838.137,
+        "optimal_input_u": -3838.1227,
         "state_error_x": 34260.23
       },
       {
@@ -146580,7 +146580,7 @@
         "node_idx": 3,
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
-        "optimal_input_u": -547.1851,
+        "optimal_input_u": -547.1833,
         "state_error_x": 18917.49
       },
       {
@@ -146616,7 +146616,7 @@
         "node_idx": 7,
         "node_label": "07_ACC_Mfg_Overhead_Exp_DPT_Mfg_Support",
         "account_category": "Expense",
-        "optimal_input_u": -73462.9286,
+        "optimal_input_u": -73459.2329,
         "state_error_x": 1424.64
       },
       {
@@ -146715,7 +146715,7 @@
         "node_idx": 2,
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
-        "optimal_input_u": -3896.5362,
+        "optimal_input_u": -3896.5207,
         "state_error_x": 28887.32
       },
       {
@@ -146724,7 +146724,7 @@
         "node_idx": 3,
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
-        "optimal_input_u": -770.7569,
+        "optimal_input_u": -770.7552,
         "state_error_x": 10830.36
       },
       {
@@ -146760,7 +146760,7 @@
         "node_idx": 7,
         "node_label": "07_ACC_Mfg_Overhead_Exp_DPT_Mfg_Support",
         "account_category": "Expense",
-        "optimal_input_u": -50137.336,
+        "optimal_input_u": -50134.2693,
         "state_error_x": 2342.07
       },
       {
@@ -146859,7 +146859,7 @@
         "node_idx": 2,
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
-        "optimal_input_u": -4442.2594,
+        "optimal_input_u": -4442.2441,
         "state_error_x": 40353.3
       },
       {
@@ -146868,7 +146868,7 @@
         "node_idx": 3,
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
-        "optimal_input_u": -914.6808,
+        "optimal_input_u": -914.6763,
         "state_error_x": 13497.9
       },
       {
@@ -146904,7 +146904,7 @@
         "node_idx": 7,
         "node_label": "07_ACC_Mfg_Overhead_Exp_DPT_Mfg_Support",
         "account_category": "Expense",
-        "optimal_input_u": -50944.7041,
+        "optimal_input_u": -50941.4215,
         "state_error_x": 1698.96
       },
       {
@@ -147003,7 +147003,7 @@
         "node_idx": 2,
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
-        "optimal_input_u": -1894.4513,
+        "optimal_input_u": -1894.4439,
         "state_error_x": 71452.38
       },
       {
@@ -147012,7 +147012,7 @@
         "node_idx": 3,
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
-        "optimal_input_u": -497.5162,
+        "optimal_input_u": -497.5146,
         "state_error_x": 34878.51
       },
       {
@@ -147048,7 +147048,7 @@
         "node_idx": 7,
         "node_label": "07_ACC_Mfg_Overhead_Exp_DPT_Mfg_Support",
         "account_category": "Expense",
-        "optimal_input_u": -18431.0509,
+        "optimal_input_u": -18429.8281,
         "state_error_x": 550.14
       },
       {
@@ -147147,7 +147147,7 @@
         "node_idx": 2,
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
-        "optimal_input_u": -2103.3998,
+        "optimal_input_u": -2103.3922,
         "state_error_x": 79511.86
       },
       {
@@ -147156,7 +147156,7 @@
         "node_idx": 3,
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
-        "optimal_input_u": -583.8056,
+        "optimal_input_u": -583.8028,
         "state_error_x": 38355.64
       },
       {
@@ -147192,7 +147192,7 @@
         "node_idx": 7,
         "node_label": "07_ACC_Mfg_Overhead_Exp_DPT_Mfg_Support",
         "account_category": "Expense",
-        "optimal_input_u": -12858.6215,
+        "optimal_input_u": -12857.7721,
         "state_error_x": 258.47
       },
       {
@@ -147291,7 +147291,7 @@
         "node_idx": 2,
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
-        "optimal_input_u": -3129.7571,
+        "optimal_input_u": -3129.7459,
         "state_error_x": 60157.1
       },
       {
@@ -147300,7 +147300,7 @@
         "node_idx": 3,
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
-        "optimal_input_u": -321.1877,
+        "optimal_input_u": -321.187,
         "state_error_x": 28942.38
       },
       {
@@ -147336,7 +147336,7 @@
         "node_idx": 7,
         "node_label": "07_ACC_Mfg_Overhead_Exp_DPT_Mfg_Support",
         "account_category": "Expense",
-        "optimal_input_u": -56191.256,
+        "optimal_input_u": -56188.3551,
         "state_error_x": 432.22
       },
       {
@@ -147435,7 +147435,7 @@
         "node_idx": 2,
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
-        "optimal_input_u": -5205.4359,
+        "optimal_input_u": -5205.4184,
         "state_error_x": 37559.08
       },
       {
@@ -147444,7 +147444,7 @@
         "node_idx": 3,
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
-        "optimal_input_u": -908.2057,
+        "optimal_input_u": -908.2019,
         "state_error_x": 17115.19
       },
       {
@@ -147480,7 +147480,7 @@
         "node_idx": 7,
         "node_label": "07_ACC_Mfg_Overhead_Exp_DPT_Mfg_Support",
         "account_category": "Expense",
-        "optimal_input_u": -50101.3872,
+        "optimal_input_u": -50098.0312,
         "state_error_x": 1362.85
       },
       {
@@ -147579,7 +147579,7 @@
         "node_idx": 2,
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
-        "optimal_input_u": -4883.6605,
+        "optimal_input_u": -4883.643,
         "state_error_x": 24952.52
       },
       {
@@ -147588,7 +147588,7 @@
         "node_idx": 3,
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
-        "optimal_input_u": -934.3159,
+        "optimal_input_u": -934.311,
         "state_error_x": 11863.11
       },
       {
@@ -147624,7 +147624,7 @@
         "node_idx": 7,
         "node_label": "07_ACC_Mfg_Overhead_Exp_DPT_Mfg_Support",
         "account_category": "Expense",
-        "optimal_input_u": -64527.0108,
+        "optimal_input_u": -64523.3291,
         "state_error_x": 1515.22
       },
       {
@@ -147723,7 +147723,7 @@
         "node_idx": 2,
         "node_label": "02_ACC_COGS_DPT_Prod_A",
         "account_category": "Expense",
-        "optimal_input_u": -2413.8076,
+        "optimal_input_u": -2413.7992,
         "state_error_x": 38957.58
       },
       {
@@ -147732,7 +147732,7 @@
         "node_idx": 3,
         "node_label": "03_ACC_COGS_DPT_Prod_B",
         "account_category": "Expense",
-        "optimal_input_u": -244.3124,
+        "optimal_input_u": -244.3131,
         "state_error_x": 13838.96
       },
       {
@@ -147768,7 +147768,7 @@
         "node_idx": 7,
         "node_label": "07_ACC_Mfg_Overhead_Exp_DPT_Mfg_Support",
         "account_category": "Expense",
-        "optimal_input_u": -590.0104,
+        "optimal_input_u": -589.968,
         "state_error_x": 23533.59
       },
       {
