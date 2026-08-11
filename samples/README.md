@@ -32,22 +32,31 @@ Below is the diagnostic catalog for all 10 samples included in the TLU environme
   * **Overview:** Intersection deadlock caused by vehicle inflow overload. Cars move but do not progress (a type of thermal death identical to wash trading).
 * **[🟡 Sample 6: Market Bipartite / Bipartite Graph](./Sample_6_Market_Stock_Flow/README.md)**
   * **Domain:** Stock Market | **Eastern Medicine Diagnosis:** Market Meridian Recirculation, Recirculation Lock
-  * **Overview:** Circular trading between a specific bot cluster and a specific ticker. Edge stress vanishes, hijacking the market via hyper-synchronization.
+  * **Overview:** Circular trading between a specific bot cluster and a specific ticker. Edge stress vanishes, hijacking the market via hyper-synchronization (Spectral Radius = 1.0000, HIGH).
 * **[🟡 Sample 7: Market Users / Fund Transfer Topology](./Sample_7_Market_Cash_Flow/README.md)**
   * **Domain:** Stock Market | **Eastern Medicine Diagnosis:** Collusive Syndicate, Dark Undercurrent Recirculation
-  * **Overview:** Collusive syndicate using direct transfers between multiple accounts. Renders abnormal towers on the 3D KL Drift plot.
+  * **Overview:** Collusive syndicate using direct transfers between multiple accounts. Renders abnormal towers on the 3D KL Drift plot (Spectral Radius = 1.0000, HIGH).
 * **[🔴 Sample 8: fMRI Stroke / Cerebral Infarction](./Sample_8_fMRI_Stroke/README.md)**
   * **Domain:** Biological Brain Function | **Eastern Medicine Diagnosis:** Brain Meridian Obstruction, Local Qi-Blood Depletion
   * **Overview:** BOLD signal inflow to the motor cortex is 95% blocked at TR=150 (`t=30`). The rapid loss of active mass paralyzes stiffness (analogous to financial embezzlement).
 * **[🔴 Sample 9: fMRI Seizure / Epileptic Seizure](./Sample_9_fMRI_Seizure/README.md)**
   * **Domain:** Biological Brain Function | **Eastern Medicine Diagnosis:** Brain Meridian Hyper-synchronization, Qi-Blood Runaway
-  * **Overview:** Whole-brain phase lock driven by forced synchronization of sine waves originating from the temporal lobe. Detects hyper-synchronization in statistical blind spots (where the PCA explanation ratio remains unchanged) using physical properties.
+  * **Overview:** Whole-brain phase lock driven by forced synchronization of sine waves originating from the temporal lobe. Detects hyper-synchronization in statistical blind spots using physical properties.
+* **[🟢 Sample 10: ERP Traditional / Labor-Hours Allocation](./Sample_10_ERP_Traditional/README.md)**
+  * **Domain:** ERP Accounting | **Eastern Medicine Diagnosis:** Congestion & Blood Stasis
+  * **Overview:** Traditional direct labor-hours allocation resulting in 89.0% cost over-concentration on Product A.
+* **[🟢 Sample 11: ERP Standard ABC / Multi-Pool Allocation](./Sample_11_ERP_ABC/README.md)**
+  * **Domain:** ERP Accounting | **Eastern Medicine Diagnosis:** Harmonious Flow & Pulsation
+  * **Overview:** Standard ABC allocation restoring true 1:1 resource consumption across machine, setup, and inspection activities.
+* **[🟢 Sample 12: ERP Dynamic T-ABC / Thermodynamic Allocation](./Sample_12_ERP_TABC/README.md)**
+  * **Domain:** ERP Accounting | **Eastern Medicine Diagnosis:** Yin-Yang Balance & Waste Expulsion
+  * **Overview:** Dynamically isolates irreversible process friction loss alpha(t) computed from daily activity volatility.
 
 ---
 
 ## ⚖️ Cross-Verification Matrix
 
-Below is a summary of the main mathematical and physical metrics obtained from the Physics-Mathematics-Mathematics Engine and forensic filters for all 10 validation samples.
+Below is a summary of the main mathematical and physical metrics obtained from the Physics-Mathematics-Mathematics Engine and forensic filters for all 13 validation samples.
 
 | ID | Sample Name (Report Link) | Domain | Judgment | Max Spectral Radius ( $\rho$ ) | Max Conservation Residual (Max Residual) | Max Flow Z-Score ( $Z_v$ ) | Max State Z-Score ( $Z_X$ ) | Net Income / Equivalent | Eastern Medicine Metaphor |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- | :--- |
@@ -61,6 +70,9 @@ Below is a summary of the main mathematical and physical metrics obtained from t
 | **7** | **[Market Users / Fund Transfer Topology](./Sample_7_Market_Cash_Flow/README.md)** | Market | 🟡 **HIGH** | `1.00` | `0.00` | `80.53` | `3.39` | `$0.00` | Collusive Syndicate, Dark Undercurrent Recirculation |
 | **8** | **[fMRI Stroke / Cerebral Infarction](./Sample_8_fMRI_Stroke/README.md)** | Biological | 🔴 **CRITICAL** | `1.00` | `0.00` | `51.44` | `0.07` | `-$500,000.00` | Brain Meridian Obstruction, Local Qi-Blood Depletion |
 | **9** | **[fMRI Seizure / Epileptic Seizure](./Sample_9_fMRI_Seizure/README.md)** | Biological | 🔴 **CRITICAL** | `1.00` | `0.00` | `24.04` | `0.00` | `-$500,000.00` | Brain Meridian Hyper-synchronization, Qi-Blood Runaway |
+| **10** | **[ERP Traditional / Labor-Hours Allocation](./Sample_10_ERP_Traditional/README.md)** | ERP | 🟢 **NORMAL** | `0.00` | `0.00` | `0.00` | `0.00` | `+$0.00` | Congestion & Blood Stasis |
+| **11** | **[ERP Standard ABC / Multi-Pool Allocation](./Sample_11_ERP_ABC/README.md)** | ERP | 🟢 **NORMAL** | `0.00` | `0.00` | `0.00` | `0.00` | `+$0.00` | Harmonious Flow & Pulsation |
+| **12** | **[ERP Dynamic T-ABC / Thermodynamic Allocation](./Sample_12_ERP_TABC/README.md)** | ERP | 🟢 **NORMAL** | `0.00` | `0.00` | `0.00` | `0.00` | `+$0.00` | Yin-Yang Balance & Waste Expulsion |
 
 > [!NOTE]
 >
