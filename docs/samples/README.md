@@ -56,12 +56,12 @@ A directory of the 13 validation samples built into the TLU environment. Click o
 * **[🔴 Sample 5: Kyoto Traffic](./Sample_5_Kyoto_Traffic/README.md)**
   * **Domain:** Urban Traffic | **Clinical Metaphor:** Meridian Blockage / Qi & Blood Stagnation
   * **Summary:** Local capacity restrictions trigger upstream gridlocks. Vehicles continue to burn fuel (high temperature) but average flow drops to zero.
-* **[🟢 Sample 6: Market Stock Flow](./Sample_6_Market_Stock_Flow/README.md)**
-  * **Domain:** Stock Market | **Clinical Metaphor:** Stock Fluid Equilibrium / Steady Convection
-  * **Summary:** Closed system where total shares are conserved. It exhibits steady convection and remains stable under market volatility.
-* **[🟢 Sample 7: Market Cash Flow](./Sample_7_Market_Cash_Flow/README.md)**
-  * **Domain:** Stock Market | **Clinical Metaphor:** Cash Fluid Equilibrium / Steady Convection
-  * **Summary:** Closed settlement network where total cash is conserved. Stable flow is maintained against transaction fluctuations.
+* **[🟡 Sample 6: Market Stock Flow](./Sample_6_Market_Stock_Flow/README.md)**
+  * **Domain:** Stock Market | **Clinical Metaphor:** Market Meridian Recirculation / Recirculation Lock
+  * **Summary:** Circular trading between a specific bot cluster and a specific ticker. Edge stress vanishes, hijacking the market via hyper-synchronization (Spectral Radius = 1.0000, HIGH).
+* **[🟡 Sample 7: Market Cash Flow](./Sample_7_Market_Cash_Flow/README.md)**
+  * **Domain:** Stock Market | **Clinical Metaphor:** Collusive Syndicate / Dark Undercurrent Recirculation
+  * **Summary:** Collusive syndicate using direct transfers between multiple accounts. Renders abnormal towers on the 3D KL Drift plot (Spectral Radius = 1.0000, HIGH).
 * **[🔴 Sample 8: fMRI Stroke](./Sample_8_fMRI_Stroke/README.md)**
   * **Domain:** Brain fMRI | **Clinical Metaphor:** Cerebral Blockage / Local Qi Depletion
   * **Summary:** BOLD signal flow to the motor cortex drops by 95% at t=30. The loss of active mass triggers local stiffness lock and paralysis.
