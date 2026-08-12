@@ -34,8 +34,10 @@ scratch/**
 comparison
 
 TLU-SDLs
-new-TLU-SDLs
-TLU-App*
+
+_retired
+
 
 TLU-Audit-docs
+TLU-dialog-logs
 tlu_dev_history
